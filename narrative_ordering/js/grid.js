@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 var grid_width = 600
 var grid_margin = 70
 
 
-=======
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 var save_q4_answers = () => {
 
     position = document.getElementById('circle').getAttribute("transform")
@@ -12,27 +9,17 @@ var save_q4_answers = () => {
     position = position.match(/\(([^)]+)\)/)[1].split(",")
 
     var x = d3.scaleLinear()
-<<<<<<< HEAD
         .domain([-3, 3])
         .range([grid_margin, grid_width - grid_margin]);
 
     var y = d3.scaleLinear()
         .domain([3, -3])
         .range([grid_margin, grid_width - grid_margin]);
-=======
-        .domain([-10, 10])
-        .range([50, 350]);
-
-    var y = d3.scaleLinear()
-        .domain([10, -10])
-        .range([50, 350]);
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
     var position_invert = []
     position_invert.push(x.invert(position[0]))
     position_invert.push(y.invert(position[1]))
 
-<<<<<<< HEAD
     if (document.getElementById('grid_reason').value != '') {
         new_answer = {
             'index': questions[current_question]['original_index'],
@@ -60,31 +47,12 @@ var save_q4_answers = () => {
         error.style.color = 'red'
         d.append(error)
     }
-=======
-
-    new_answer = {
-        'index': questions[current_question]['original_index'],
-        'expressiveness': position_invert[0],
-        'learnability': position_invert[1],
-        'grid_reason': document.getElementById('grid_reason').value,
-        'elapsed_time': Date.now() - cur_start_time,
-        'ques_index': questions[current_question]['ques_index'],
-        'pattern': questions[current_question]['pattern'],
-    }
-    user_answers.push(new_answer)
-    user_data['answers'] = user_answers
-    db.collection(incomplete_collection).add(user_data)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 }
 
 var init_grid = () => {
     document.body.innerHTML = ''
     d = document.createElement('div')
-<<<<<<< HEAD
     text = '<p><strong>Question 3: Grid</strong></p> <br> <p>Place the red button to where you feel right with.</p>'
-=======
-    text = '<b>Overall evaluation</b> <br> <b>Place the red button to where you feel right with.'
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
     d.innerHTML = text
     d.style.textAlign = 'left'
     d.style.margin = '2%'
@@ -97,11 +65,7 @@ var init_grid = () => {
     document.body.append(d_2)
 
     d_3 = document.createElement('div')
-<<<<<<< HEAD
     d_3.innerHTML = 'Please write down your reason: <br>'
-=======
-    d_3.innerHTML = 'Please provide your reason: <br>'
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
     d_3.style.textAlign = 'left'
     d_3.style.margin = '2%'
     d_3.style.display = 'inline-block'
@@ -115,12 +79,6 @@ var init_grid = () => {
 
     d_3.append(textarea)
 
-<<<<<<< HEAD
-=======
-    var grid_width = 600
-    var grid_margin = 70
-
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
     var svg = d3.select("#grid").append("svg")
         .attr("width", grid_width)
         .attr("height", grid_width)
@@ -146,7 +104,6 @@ var init_grid = () => {
         .call(xaxis)
 
     svg.append("text")
-<<<<<<< HEAD
         .attr("transform", "translate(" + grid_width / 2 + "," + (grid_margin - 20) + ")")
         .style("text-anchor", "middle")
         .text("Learnt");
@@ -155,16 +112,6 @@ var init_grid = () => {
         .attr("transform", "translate(" + grid_width / 2 + "," + (grid_width - grid_margin + 20) + ")")
         .style("text-anchor", "middle")
         .text("Didn't learn");
-=======
-        .attr("transform", "translate(" + grid_width / 2 + ",10)")
-        .style("text-anchor", "middle")
-        .text("Learn a lot");
-
-    svg.append("text")
-        .attr("transform", "translate(" + grid_width / 2 + "," + (grid_width - grid_margin) + ")")
-        .style("text-anchor", "middle")
-        .text("Learn nothing");
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
 
     svg
@@ -176,21 +123,13 @@ var init_grid = () => {
         .attr("transform", "translate(" + (grid_width - grid_margin) + "," + (grid_width / 2 + 20) + ")")
         .attr("dy", "1em")
         .style("text-anchor", "middle")
-<<<<<<< HEAD
         .text("Liked it");
-=======
-        .text("Expressive");
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
     svg.append("text")
         .attr("transform", "translate(" + grid_margin + "," + (grid_width / 2 + 20) + ")")
         .attr("dy", "1em")
         .style("text-anchor", "middle")
-<<<<<<< HEAD
         .text("Disliked it");
-=======
-        .text("Not Expressive");
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
 
 
@@ -240,13 +179,8 @@ var init_grid = () => {
         d3.select("#x-pointer").attr("y1", pos_y());
         d3.select("#x-pointer").attr("x2", pos_x());
         d3.select("#x-pointer").attr("y2", pos_y());
-<<<<<<< HEAD
         d3.select("#xpos").text("like: " + Math.round(x.invert(pos_x()) * 10) / 10);
         d3.select("#ypos").text("learn: " + Math.round(y.invert(pos_y()) * 10) / 10);
-=======
-        d3.select("#xpos").text("expressiveness: " + Math.round(x.invert(pos_x()) * 10) / 10);
-        d3.select("#ypos").text("learnability: " + Math.round(y.invert(pos_y()) * 10) / 10);
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         d3.select("#xpos").attr("transform", "translate(" + pos_x() + "," + pos_y() + ")");
         d3.select("#ypos").attr("transform", "translate(" + pos_x() + "," + pos_y() + ")");
         d3.select("#y-pointer").attr("x1", pos_x());
@@ -262,15 +196,10 @@ var init_grid = () => {
     svg.append('circle')
         .attr("transform", "translate(" + grid_width / 2 + "," + grid_width / 2 + ")")
         .attr("id", "circle")
-<<<<<<< HEAD
         .attr("r", "15")
         .attr("stroke", "red")
         .attr("stroke-width", "5px")
         .attr("fill", "transparent")
-=======
-        .attr("r", "10")
-        .attr("fill", "red")
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         .call(drag)
 
     svg.append('text')
@@ -298,16 +227,6 @@ var init_grid = () => {
         // btn.style.fontSize = 'large'
     btn.onclick = () => {
         save_q4_answers()
-<<<<<<< HEAD
-=======
-        if (current_question < questions.length - 1) {
-            current_question++
-            next_question()
-        } else {
-            user_data['full_questions_time'] = Date.now() - test_start_time
-            init_survey()
-        }
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
     }
     document.body.append(btn)
 }

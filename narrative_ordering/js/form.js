@@ -25,7 +25,6 @@
   	    // "img": {
   	    //     "title": "Which story do you prefer?"
   	    // },
-<<<<<<< HEAD
   	    "literacy_1": {
   	        "type": "string",
   	        "title": "Have you ever read timelines before?",
@@ -36,12 +35,6 @@
   	        "type": "string",
   	        "title": "Have you ever read line charts before?",
   	        "enum": ['Yes', 'No'],
-=======
-  	    "preference": {
-  	        "type": "string",
-  	        "title": "Which story do you prefer?",
-  	        "enum": ['Story One', 'Story Two'],
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
   	        'required': true
   	    },
   	    "strategy": {
@@ -83,16 +76,12 @@
   	                    'type': 'radio',
   	                    'hideNone': true
   	                },
-<<<<<<< HEAD
   	                "literacy_1": {
   	                    'sort': function(a, b) { return 0 },
   	                    'type': 'radio',
   	                    'hideNone': true
   	                },
   	                "literacy_2": {
-=======
-  	                "preference": {
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
   	                    'sort': function(a, b) { return 0 },
   	                    'type': 'radio',
   	                    'hideNone': true
@@ -125,10 +114,6 @@
   	                            val = $('#form').alpaca('get');
   	                            //存数据-property
   	                            for (prop of Object.keys(form_properties)) {
-<<<<<<< HEAD
-=======
-  	                                debugger;
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
   	                                //如果是放图片的，略过
   	                                // if (prop == 'img') continue;
   	                                if (val.getValue()[prop] != undefined) user_data[prop] = val.getValue()[prop]

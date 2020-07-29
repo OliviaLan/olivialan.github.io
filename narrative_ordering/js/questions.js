@@ -1,15 +1,10 @@
 questions = [{
-<<<<<<< HEAD
         'text': 'The Life of Company X',
-=======
-        'text': 'Story One: The Life of Company X',
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         'upper_text': 'This visualization shows a made up history timeline.',
         // 'options': ['912', '915', '917', '918', '924', '929'],
         'dataset': 'history',
         // 'answer': '917',
         // 'question_type': 1,
-<<<<<<< HEAD
         // 'ques_index': 0,
         // 'type_index': 'a0',
     },
@@ -23,21 +18,6 @@ questions = [{
         // 'ques_index': 1,
         // 'type_index': 'a1',
         // 'nps': ['aaa', 'bbb', 'ccc', 'ddd', 'eee', 'fff'],
-=======
-        'ques_index': 0,
-        // 'type_index': 'a0',
-    },
-    {
-        'text': 'Story Two: Population',
-        'upper_text': 'This visualization shows a made up history timeline.',
-        // 'options': ['921', '924', '925', '927', '929', '933'],
-        'dataset': 'stock',
-        // 'answer': '929',
-        // 'question_type': 1,
-        'ques_index': 1,
-        // 'type_index': 'a1',
-        'nps': ['aaa', 'bbb', 'ccc', 'ddd', 'eee', 'fff'],
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
     },
 ]
 

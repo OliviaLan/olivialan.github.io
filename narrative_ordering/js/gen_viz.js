@@ -36,41 +36,21 @@ function gen_question(text, pattern, dataset) {
 
     var path = "./datasets/";
     if (dataset == "history") {
-<<<<<<< HEAD
-        path += "history_anchor.csv";
-        // if (pattern == "1") path += "history_chronology.csv";
-        // else if (pattern == "2") path += "history_trace.csv";
-        // else if (pattern == "3") path += "history_trailer.csv";
-        // else if (pattern == "4") path += "history_recurrence.csv";
-        // else if (pattern == "5") path += "history_halfway.csv";
-        // else if (pattern == "6") path += "history_anchor.csv";
+        // path += "history_anchor.csv";
+        if (pattern == "1") path += "history_chronology.csv";
+        else if (pattern == "2") path += "history_trace.csv";
+        else if (pattern == "3") path += "history_trailer.csv";
+        else if (pattern == "4") path += "history_recurrence.csv";
+        else if (pattern == "5") path += "history_halfway.csv";
+        else if (pattern == "6") path += "history_anchor.csv";
     } else if (dataset == "population") {
-        path += "line_anchor.csv";
-        // if (pattern == "1") path += "line_chronology.csv";
-        // else if (pattern == "2") path += "line_trace.csv";
-        // else if (pattern == "3") path += "line_trailer.csv";
-        // else if (pattern == "4") path += "line_recurrence.csv";
-        // else if (pattern == "5") path += "line_halfway.csv";
-        // else if (pattern == "6") path += "line_anchor.csv";
-=======
-        if (pattern == "1") path += "history1.csv";
-        else if (pattern == "2") path += "history2.csv";
-        else if (pattern == "3") path += "history3.csv";
-        else if (pattern == "4") path += "history4.csv";
-        else if (pattern == "5") path += "history1.csv";
-        else if (pattern == "6") path += "history6.csv";
-        else if (pattern == "7") path += "history7.csv";
-        else if (pattern == "8") path += "history8.csv";
-    } else if (dataset == "stock") {
-        if (pattern == "1") path += "line1.csv";
-        else if (pattern == "2") path += "line.csv";
-        else if (pattern == "3") path += "line.csv";
-        else if (pattern == "4") path += "line.csv";
-        else if (pattern == "5") path += "line.csv";
-        else if (pattern == "6") path += "line.csv";
-        else if (pattern == "7") path += "line.csv";
-        else if (pattern == "8") path += "line.csv";
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
+        // path += "line_anchor.csv";
+        if (pattern == "1") path += "line_chronology.csv";
+        else if (pattern == "2") path += "line_trace.csv";
+        else if (pattern == "3") path += "line_trailer.csv";
+        else if (pattern == "4") path += "line_recurrence.csv";
+        else if (pattern == "5") path += "line_halfway.csv";
+        else if (pattern == "6") path += "line_anchor.csv";
     }
     // else if (dataset == "story3") path += "plants.csv";
     // else if (dataset == "story4") path += "schedule.csv";
@@ -85,11 +65,7 @@ function gen_question(text, pattern, dataset) {
         divquestion.setAttribute("id", "replayable")
         divquestion.style.position = 'relative'
         divquestion.style.height = height + 'px'
-<<<<<<< HEAD
         divquestion.style.marginTop = '3%'
-=======
-        divquestion.style.marginTop = '5%'
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             //在大div里生成一个svg
         var svg = d3
             .select(divquestion)
@@ -111,48 +87,25 @@ function gen_question(text, pattern, dataset) {
 
         //user_data['assigned_question_type'] == 3 这个是为了判断true/false，如果为true，vis会是clickable的
         if (dataset == 'history') {
-<<<<<<< HEAD
-            create_anchor_timeline(svg, data, datalimit)
-                // if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
-                // else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
-                // else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
-                // else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
-                // else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
-                // else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
-                // else if (pattern == "7") create_parting_timeline(svg, data, datalimit);
-                // else if (pattern == "8") create_anchor_timeline(svg, data, datalimit);
-        } else if (dataset == 'population') {
-            create_anchor_line(svg, data, datalimit)
-                // if (pattern == "1") create_chronological_line(svg, data, datalimit);
-                // else if (pattern == "2") create_trace_line(svg, data, datalimit);
-                // else if (pattern == "3") create_trailer_line(svg, data, datalimit);
-                // else if (pattern == "4") create_recurrence_line(svg, data, datalimit);
-                // else if (pattern == "5") create_halfway_line(svg, data, datalimit);
-                // else if (pattern == "6") create_anchor_line(svg, data, datalimit);
-                // else if (pattern == "7") create_parting_line(svg, data, datalimit);
-                // else if (pattern == "8") create_anchor_line(svg, data, datalimit);
-=======
-            create_anchor_timeline(svg, data, datalimit);
-            // if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
-            // else if (pattern == "2") create_trailer_timeline(svg, data, datalimit);
-            // else if (pattern == "3") create_recapping_timeline(svg, data, datalimit);
-            // else if (pattern == "4") create_trace_timeline(svg, data, datalimit);
-            // else if (pattern == "5") create_retrograde_timeline(svg, data, datalimit);
-            // else if (pattern == "6") create_halfway_timeline(svg, data, datalimit);
+            // create_anchor_timeline(svg, data, datalimit)
+            if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
+            else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
+            else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
+            else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
+            else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
+            else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
             // else if (pattern == "7") create_parting_timeline(svg, data, datalimit);
             // else if (pattern == "8") create_anchor_timeline(svg, data, datalimit);
-        } else if (dataset == 'stock') {
-            create_anchor_line(svg, data, datalimit);
-            // if (pattern == "1") create_chronological_line(svg, data, datalimit);
-            // else if (pattern == "2") create_trailer_line(svg, data, datalimit);
-            // else if (pattern == "3") create_recapping_line(svg, data, datalimit);
-            // else if (pattern == "4") create_trace_line(svg, data, datalimit);
-            // else if (pattern == "5") create_retrograde_line(svg, data, datalimit);
-            // else if (pattern == "6") create_halfway_line(svg, data, datalimit);
+        } else if (dataset == 'population') {
+            // create_anchor_line(svg, data, datalimit)
+            if (pattern == "1") create_chronological_line(svg, data, datalimit);
+            else if (pattern == "2") create_trace_line(svg, data, datalimit);
+            else if (pattern == "3") create_trailer_line(svg, data, datalimit);
+            else if (pattern == "4") create_recurrence_line(svg, data, datalimit);
+            else if (pattern == "5") create_halfway_line(svg, data, datalimit);
+            else if (pattern == "6") create_anchor_line(svg, data, datalimit);
             // else if (pattern == "7") create_parting_line(svg, data, datalimit);
             // else if (pattern == "8") create_anchor_line(svg, data, datalimit);
-            //create_turnahead_line
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         }
         // else if (dataset == 'story3') {
         //     if (pattern == "1") create_chronological_timeline(svg, data, nps, datalimit);
@@ -181,11 +134,7 @@ function gen_question(text, pattern, dataset) {
         b.id = 'story_finish'
 
         b.onclick = () => {
-<<<<<<< HEAD
             init_recall()
-=======
-            init_emotion()
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         }
 
         document.body.append(b)
@@ -206,13 +155,8 @@ var create_chronological_line = (svg, data, datalimit) => {
 
     console.log("chronological")
 
-<<<<<<< HEAD
     var margin = { top: 100, right: 20, bottom: 20, left: 70 },
         width = 940 - margin.left - margin.right,
-=======
-    var margin = { top: 100, right: 70, bottom: 20, left: 70 },
-        width = 960 - margin.left - margin.right,
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         height = 500 - margin.top - margin.bottom;
 
     var parseTime = d3.timeParse("%Y");
@@ -305,11 +249,7 @@ var create_chronological_line = (svg, data, datalimit) => {
         // .text(data[counter].np);
 
         t.selectAll("tspan.text_" + counter)
-<<<<<<< HEAD
             .data(d => data[counter].np.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
@@ -319,16 +259,12 @@ var create_chronological_line = (svg, data, datalimit) => {
                 return this.parentElement.x.baseVal[0].value
             })
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             });
-=======
-            .attr("dy", 20);
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
     }
 
@@ -374,27 +310,19 @@ var create_chronological_line = (svg, data, datalimit) => {
 
         t
             .selectAll("tspan.text_" + counter)
-<<<<<<< HEAD
             .data(d => data[counter].np.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
             .style("font-size", curems + "em")
             .attr("x", 0)
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             })
-=======
-            .attr("dy", 20)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .transition()
             .delay(delay)
             .duration(500)
@@ -453,13 +381,8 @@ var create_chronological_line = (svg, data, datalimit) => {
 
     setTimeout(function() {
         document.getElementById('story_finish').style.display = "block"
-<<<<<<< HEAD
             // clearvis()
     }, delay + 2000)
-=======
-        clearvis()
-    }, delay + 1000)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
 }
 
@@ -467,13 +390,8 @@ var create_trailer_line = (svg, data, datalimit) => {
 
     console.log("trailer")
 
-<<<<<<< HEAD
     var margin = { top: 100, right: 20, bottom: 20, left: 70 },
         width = 940 - margin.left - margin.right,
-=======
-    var margin = { top: 20, right: 20, bottom: 50, left: 70 },
-        width = 960 - margin.left - margin.right,
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         height = 500 - margin.top - margin.bottom;
 
     var parseTime = d3.timeParse("%Y");
@@ -559,11 +477,7 @@ var create_trailer_line = (svg, data, datalimit) => {
         focus.attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
 
         t.selectAll("tspan.text_" + counter + "_trailer")
-<<<<<<< HEAD
             .data(d => data[counter].np.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter + "_trailer")
@@ -573,7 +487,6 @@ var create_trailer_line = (svg, data, datalimit) => {
                 return this.parentElement.x.baseVal[0].value
             })
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
@@ -584,9 +497,6 @@ var create_trailer_line = (svg, data, datalimit) => {
                 }
                 return -10
             });
-=======
-            .attr("dy", 20);
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
     }
 
@@ -612,11 +522,7 @@ var create_trailer_line = (svg, data, datalimit) => {
             .style("display", "none")
 
         t.selectAll("tspan.text_" + counter + "_trailer")
-<<<<<<< HEAD
             .data(d => data[counter].np.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter + "_trailer")
@@ -626,7 +532,6 @@ var create_trailer_line = (svg, data, datalimit) => {
                 return this.parentElement.x.baseVal[0].value
             })
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
@@ -637,9 +542,6 @@ var create_trailer_line = (svg, data, datalimit) => {
                 }
                 return -10
             })
-=======
-            .attr("dy", 20)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .attr("opacity", 0)
             .transition()
             .delay(3000)
@@ -665,11 +567,7 @@ var create_trailer_line = (svg, data, datalimit) => {
             .ease(d3.easeLinear)
             .delay(function() {
                 if (counter > 0) {
-<<<<<<< HEAD
                     if (data[counter - 1].np2) return delay = delay + interval
-=======
-                    if (data[counter - 1].np) return delay = delay + interval
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
                     else return delay = delay + 500
                 } else return delay = delay + interval * 2
             })
@@ -707,38 +605,23 @@ var create_trailer_line = (svg, data, datalimit) => {
 
         t
             .selectAll("tspan.text_" + counter)
-<<<<<<< HEAD
             .data(d => data[counter].np2.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
             .style("font-size", curems + "em")
             .attr("x", 0)
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np2.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             })
-=======
-            .attr("dy", 20)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .transition()
             .delay(delay)
             .duration(500)
             .text(function(d, i) { return d });
-<<<<<<< HEAD
-=======
-        // .style('opacity', 1)
-        // .duration(2000)
-        // .style('opacity', 0)
-
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
         x.domain(d3.extent(data, function(d) {
             return d.date;
@@ -767,36 +650,21 @@ var create_trailer_line = (svg, data, datalimit) => {
 
     setTimeout(function() {
         document.getElementById('story_finish').style.display = "block"
-<<<<<<< HEAD
     }, delay + 2000)
-=======
-    }, delay + 1000)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
 
 
 }
 
-<<<<<<< HEAD
 var create_recurrence_line = (svg, data, datalimit) => {
 
     console.log("recurrence")
-=======
-var create_recapping_line = (svg, data, datalimit) => {
-
-    console.log("recapping")
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         // hahaha = []
         // hahaha.push(data[9])
         // hahaha.push(data[10])
 
-<<<<<<< HEAD
     var margin = { top: 100, right: 20, bottom: 20, left: 70 },
         width = 940 - margin.left - margin.right,
-=======
-    var margin = { top: 20, right: 20, bottom: 50, left: 70 },
-        width = 960 - margin.left - margin.right,
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         height = 500 - margin.top - margin.bottom;
 
     var parseTime = d3.timeParse("%Y");
@@ -883,11 +751,7 @@ var create_recapping_line = (svg, data, datalimit) => {
             .attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
 
         t.selectAll("tspan.text_" + counter)
-<<<<<<< HEAD
             .data(d => data[counter].np.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
@@ -897,16 +761,12 @@ var create_recapping_line = (svg, data, datalimit) => {
                 return this.parentElement.x.baseVal[0].value
             })
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             });
-=======
-            .attr("dy", 20);
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
 
     }
@@ -933,11 +793,7 @@ var create_recapping_line = (svg, data, datalimit) => {
     //         .style("display", "none")
 
     //     t.selectAll("tspan.text_" + counter + "_again")
-<<<<<<< HEAD
     //         .data(d => data[counter].np.split("\\n"))
-=======
-    //         .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
     //         .enter()
     //         .append("tspan")
     //         .attr("class", "text_" + counter + "_again")
@@ -982,16 +838,7 @@ var create_recapping_line = (svg, data, datalimit) => {
             .ease(d3.easeLinear)
             // .delay(counter * 500)
             // .delay(10000 - counter * 500)
-<<<<<<< HEAD
             .delay(function() { delay = delay + interval })
-=======
-            .delay(function() {
-                if (counter > 0) {
-                    if (data[counter - 1].np) return delay = delay + interval
-                    else return delay = delay + 500
-                } else return delay = delay + interval * 2
-            })
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .duration(500)
             .attr("x2", x(data[1].date))
             .attr("y2", y(data[1].close));
@@ -1012,27 +859,19 @@ var create_recapping_line = (svg, data, datalimit) => {
 
         t
             .selectAll("tspan.text_" + counter)
-<<<<<<< HEAD
             .data(d => data[counter].np.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
             .style("font-size", curems + "em")
             .attr("x", 0)
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             })
-=======
-            .attr("dy", 20)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .transition()
             .delay(delay)
             .duration(500)
@@ -1078,16 +917,12 @@ var create_recapping_line = (svg, data, datalimit) => {
             .transition()
             .ease(d3.easeLinear)
             // .delay(10000 + counter * 500)
-<<<<<<< HEAD
             .delay(function() {
                 if (counter > 0) {
                     if (data[counter - 1].np2) return delay = delay + interval
                     else return delay = delay + 500
                 } else return delay = delay + interval
             })
-=======
-            .delay(function() { return delay = delay + interval })
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .duration(500)
             .attr("x2", x(data[1].date))
             .attr("y2", y(data[1].close));
@@ -1120,27 +955,19 @@ var create_recapping_line = (svg, data, datalimit) => {
 
         t
             .selectAll("tspan.text_" + counter + "_again")
-<<<<<<< HEAD
             .data(d => data[counter].np2.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter + "_again")
             .style("font-size", curems + "em")
             .attr("x", 0)
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np2.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             })
-=======
-            .attr("dy", 20)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .transition()
             .delay(delay)
             .duration(500)
@@ -1189,13 +1016,8 @@ var create_trace_line = (svg, data, datalimit) => {
 
     console.log("trace")
 
-<<<<<<< HEAD
     var margin = { top: 100, right: 20, bottom: 20, left: 70 },
         width = 940 - margin.left - margin.right,
-=======
-    var margin = { top: 20, right: 20, bottom: 50, left: 70 },
-        width = 960 - margin.left - margin.right,
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         height = 500 - margin.top - margin.bottom;
 
     var parseTime = d3.timeParse("%Y");
@@ -1281,11 +1103,7 @@ var create_trace_line = (svg, data, datalimit) => {
         focus.attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
 
         t.selectAll("tspan.text_" + counter + "_trace")
-<<<<<<< HEAD
             .data(d => data[counter].np.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter + "_trace")
@@ -1295,16 +1113,12 @@ var create_trace_line = (svg, data, datalimit) => {
                 return this.parentElement.x.baseVal[0].value
             })
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             });
-=======
-            .attr("dy", 20);
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
     }
 
@@ -1326,11 +1140,7 @@ var create_trace_line = (svg, data, datalimit) => {
             .ease(d3.easeLinear)
             .delay(function() {
                 if (counter > 0) {
-<<<<<<< HEAD
                     if (data[counter - 1].np2) return delay = delay + interval
-=======
-                    if (data[counter - 1].np) return delay = delay + interval
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
                     else return delay = delay + 500
                 } else return delay = delay + interval
             })
@@ -1365,31 +1175,21 @@ var create_trace_line = (svg, data, datalimit) => {
             .style("display", "none")
 
 
-<<<<<<< HEAD
 
         t.selectAll("tspan.text_" + counter)
             .data(d => data[counter].np2.split("\\n"))
-=======
-        t
-            .selectAll("tspan.text_" + counter)
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
             .style("font-size", curems + "em")
             .attr("x", 0)
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np2.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             })
-=======
-            .attr("dy", 20)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .transition()
             .delay(delay)
             .duration(500)
@@ -1423,17 +1223,12 @@ var create_trace_line = (svg, data, datalimit) => {
 
     setTimeout(function() {
         document.getElementById('story_finish').style.display = "block"
-<<<<<<< HEAD
     }, delay + 2000)
-=======
-    }, delay + 1000)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
 
 }
 
 
-<<<<<<< HEAD
 // var create_retrograde_line = (svg, data, datalimit) => {
 
 //     var margin = { top: 20, right: 20, bottom: 50, left: 70 },
@@ -1637,223 +1432,13 @@ var create_trace_line = (svg, data, datalimit) => {
 
 
 // }
-=======
-var create_retrograde_line = (svg, data, datalimit) => {
-
-    var margin = { top: 20, right: 20, bottom: 50, left: 70 },
-        width = 960 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
-
-    var parseTime = d3.timeParse("%Y");
-
-    // var xLine = d3.scaleLinear()
-    //     .domain([0, 9])
-    //     .range([0, width]);
-
-    // X scale will use the index of our data
-    var x = d3.scaleTime().range([0, width]);
-    // 6. Y scale will use the randomly generate number 
-    var y = d3.scaleLinear().range([height, 0]);
-
-    // var valueline = d3.line()
-    //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
-    //     .y(function(d) { return y(d.close); }) // set the y values for the line generator 
-
-    var linegraph = svg
-        .append("g")
-        .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
-    // .append("g")
-    // .attr("transform", "translate(" + 0 + "," + height * 0.5 + ")");
-
-    data.forEach(function(d) {
-        d.date = parseTime(d.date);
-        d.close = +d.close;
-    });
-
-    // Scale the range of the data
-    x.domain(d3.extent(data, function(d) { return d.date; }));
-    y.domain([0, d3.max(data, function(d) { return d.close; })]);
-
-    var realGDPline = linegraph.append("line")
-        .attr("class", "line")
-        .style("stroke", "transparent");
-
-    var focus = linegraph.append("g")
-        .attr("fill", "black");
-
-    focus.append("circle")
-        .attr("r", 5);
-
-    var t = focus.append("text")
-        .attr("x", 0)
-        .attr("dy", "-0.7em");
-
-    var counter = data.length - 1;
-
-    var lineGen = d3.line()
-        .x(function(d, i) {
-            return x(i <= counter ? d.date : data[counter].date);
-        })
-        .y(function(d, i) {
-            return y(i <= counter ? d.close : data[counter].close);
-        })
-
-    var pathLine = linegraph.append('path').datum(data)
-        .attr('d', lineGen)
-        .classed('line', true)
-
-    // Add the x Axis
-    linegraph.append("g")
-        .attr("class", "xAxis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x));
-
-    // Add the y Axis
-    linegraph.append("g")
-        .attr("class", "yAxis")
-        .call(d3.axisLeft(y));
-
-    function start() {
-        counter = data.length - 1;
-
-        realGDPline
-            .attr("x1", x(data[counter].date))
-            .attr("y1", y(data[counter].close))
-            .attr("x2", x(data[counter].date))
-            .attr("y2", y(data[counter].close));
-
-        focus.attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-        t.selectAll("tspan.text_" + counter)
-            .data(d => data[counter].np.split("."))
-            .enter()
-            .append("tspan")
-            .attr("class", "text_" + counter)
-            .text(d => d)
-            .style("font-size", curems + "em")
-            .attr("x", function() {
-                return this.parentElement.x.baseVal[0].value
-            })
-            .attr("dx", 10)
-            .attr("dy", 20);
-
-    }
-
-    start();
-
-    var delay = 0;
-
-    for (counter = data.length - 2; counter > -1; counter--) {
-        movefocus(counter)
-    }
-
-
-    function movefocus(counter) {
-
-        // counter++;
-        var d = data[counter]
-            // debugger;
-
-
-        realGDPline
-            .transition()
-            .ease(d3.easeLinear)
-            .delay(function() {
-                if (data[counter + 1].np) return delay = delay + 2000
-                else return delay = delay + 500
-            })
-            .duration(500)
-            .attr("x2", x(data[1].date))
-            .attr("y2", y(data[1].close));
-
-        pathLine
-            .transition()
-            .ease(d3.easeLinear)
-            .delay(delay)
-            .duration(500)
-            // .delay(10000 - counter * 500)
-            .attr('d', lineGen)
-
-
-        focus
-            .transition()
-            .delay(delay)
-            // .delay(10000 - counter * 500)
-            .duration(500)
-            .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-
-        t.selectAll("tspan.text_" + (counter + 1))
-            .transition()
-            .delay(delay)
-            .style("display", "none")
-
-        t
-            .selectAll("tspan.text_" + counter)
-            .data(d => data[counter].np.split("."))
-            .enter()
-            .append("tspan")
-            .attr("class", "text_" + counter)
-            .style("font-size", curems + "em")
-            .attr("x", 0)
-            .attr("dx", 10)
-            .attr("dy", 20)
-            .transition()
-            .delay(delay)
-            .duration(500)
-            .text(function(d, i) { return d });
-
-
-        // focus
-        //     .transition()
-        //     .delay(counter * 500)
-        //     .duration(500)
-
-        x.domain(d3.extent(data, function(d) {
-            return d.date;
-        }));
-        y.domain([0, d3.max(data, function(d) {
-            return d.close;
-        })]);
-
-        linegraph.selectAll(".xAxis")
-            .transition()
-            .delay(function() {
-                return data.length * 2000 - 2000 * counter;
-            })
-            // .delay(10000 - counter * 500)
-            .duration(500)
-            .call(d3.axisBottom(x));
-
-        // Add the y Axis
-        linegraph.selectAll(".yAxis")
-            .transition()
-            .delay(delay)
-            // .delay(10000 - counter * 500)
-            .duration(500)
-            .call(d3.axisLeft(y));
-
-
-    }
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, delay + 1000)
-
-
-}
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
 var create_halfway_line = (svg, data, datalimit) => {
 
     console.log("halfway-back")
 
-<<<<<<< HEAD
     var margin = { top: 100, right: 20, bottom: 20, left: 70 },
         width = 940 - margin.left - margin.right,
-=======
-    var margin = { top: 20, right: 20, bottom: 50, left: 70 },
-        width = 960 - margin.left - margin.right,
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         height = 500 - margin.top - margin.bottom;
 
     var parseTime = d3.timeParse("%Y");
@@ -1939,11 +1524,7 @@ var create_halfway_line = (svg, data, datalimit) => {
         focus.attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
 
         t.selectAll("tspan.text_" + counter + "_half")
-<<<<<<< HEAD
             .data(d => data[counter].np.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter + "_half")
@@ -1953,16 +1534,12 @@ var create_halfway_line = (svg, data, datalimit) => {
                 return this.parentElement.x.baseVal[0].value
             })
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             });
-=======
-            .attr("dy", 20);
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
 
     }
@@ -1985,11 +1562,7 @@ var create_halfway_line = (svg, data, datalimit) => {
             .ease(d3.easeLinear)
             .delay(function() {
                 if (counter > 0) {
-<<<<<<< HEAD
                     if (data[counter - 1].np2) return delay = delay + interval
-=======
-                    if (data[counter - 1].np) return delay = delay + interval
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
                     else return delay = delay + 500
                 } else return delay = delay + interval
             })
@@ -2026,27 +1599,19 @@ var create_halfway_line = (svg, data, datalimit) => {
 
         t
             .selectAll("tspan.text_" + counter)
-<<<<<<< HEAD
             .data(d => data[counter].np2.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
             .style("font-size", curems + "em")
             .attr("x", 0)
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np2.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             })
-=======
-            .attr("dy", 20)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .transition()
             .delay(delay)
             .duration(500)
@@ -2084,8 +1649,6 @@ var create_halfway_line = (svg, data, datalimit) => {
 }
 
 
-<<<<<<< HEAD
-// var create_parting_line = (svg, data, datalimit) => {
 
 //     console.log("parting")
 //         // hahaha = []
@@ -2449,22 +2012,9 @@ var create_halfway_line = (svg, data, datalimit) => {
 var create_anchor_line = (svg, data, datalimit) => {
 
     console.log("anchored travel")
-=======
-var create_parting_line = (svg, data, datalimit) => {
-
-    console.log("parting")
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         // hahaha = []
-        // hahaha.push(data[9])
-        // hahaha.push(data[10])
-
-<<<<<<< HEAD
     var margin = { top: 100, right: 20, bottom: 20, left: 70 },
         width = 940 - margin.left - margin.right,
-=======
-    var margin = { top: 20, right: 20, bottom: 50, left: 70 },
-        width = 960 - margin.left - margin.right,
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         height = 500 - margin.top - margin.bottom;
 
     var parseTime = d3.timeParse("%Y");
@@ -2512,7 +2062,6 @@ var create_parting_line = (svg, data, datalimit) => {
         .attr("x", 0)
         .attr("dy", "-0.7em");
 
-<<<<<<< HEAD
     var breaking = 6;
     var counter = breaking;
 
@@ -2520,47 +2069,24 @@ var create_parting_line = (svg, data, datalimit) => {
         .x(function(d, i) {
             if (counter > breaking) {
                 if (i <= counter) return x(d.date)
-=======
-    var counter = 5;
-
-    var lineGen = d3.line()
-        .x(function(d, i) {
-            if (counter >= 5) {
-                if (i < 5) return x(data[5].date)
-                else if (5 <= i && i <= counter) return x(d.date)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
                 else if (i > counter) return x(data[counter].date)
             }
             // debugger;
             // return xScaleGDP(i <= counter ? d.date : dataGDP[counter].date);
-<<<<<<< HEAD
             else if (counter <= breaking) {
                 if (i <= counter) return x(data[counter].date)
                 else if (i > breaking) return x(data[breaking].date)
-=======
-            else if (counter < 5) {
-                if (i <= counter) return x(data[counter].date)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
                 else return x(d.date);
             }
         })
         .y(function(d, i) {
             // return yScaleGDP(i <= counter ? d.GDPreal : dataGDP[counter].GDPreal);
-<<<<<<< HEAD
             if (counter > breaking) {
                 if (i <= counter) return y(d.close)
                 else if (i > counter) return y(data[counter].close)
             } else if (counter <= breaking) {
                 if (i <= counter) return y(data[counter].close)
                 else if (i > breaking) return y(data[breaking].close)
-=======
-            if (counter >= 5) {
-                if (i < 5) return y(data[5].close)
-                else if (5 <= i && i <= counter) return y(d.close)
-                else if (i > counter) return y(data[counter].close)
-            } else if (counter < 5) {
-                if (i <= counter) return y(data[counter].close)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
                 else return y(d.close);
             }
         })
@@ -2582,11 +2108,7 @@ var create_parting_line = (svg, data, datalimit) => {
 
     function start() {
 
-<<<<<<< HEAD
         counter = breaking;
-=======
-        counter = 5;
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
         realGDPline
             .attr("x1", x(data[counter].date))
@@ -2596,26 +2118,17 @@ var create_parting_line = (svg, data, datalimit) => {
 
         focus.attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
 
-<<<<<<< HEAD
         t.selectAll("tspan.text_" + counter + "_anchor")
             .data(d => data[counter].np.split("\\n"))
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter + "_anchor")
-=======
-        t.selectAll("tspan.text_" + counter + "_parting")
-            .data(d => data[counter].np.split("."))
-            .enter()
-            .append("tspan")
-            .attr("class", "text_" + counter + "_parting")
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .text(d => d)
             .style("font-size", curems + "em")
             .attr("x", function() {
                 return this.parentElement.x.baseVal[0].value
             })
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
@@ -2623,18 +2136,11 @@ var create_parting_line = (svg, data, datalimit) => {
                 } else return -10
             });
 
-=======
-            .attr("dy", 20);
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
     }
 
     function start2() {
 
-<<<<<<< HEAD
         counter = breaking;
-=======
-        counter = 5;
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
         realGDPline
             .attr("x1", x(data[counter].date))
@@ -2647,22 +2153,14 @@ var create_parting_line = (svg, data, datalimit) => {
             .delay(function() { return delay = delay + interval })
             .attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
 
-<<<<<<< HEAD
         t.selectAll("tspan.text_0")
-=======
-        t.selectAll("tspan.text_11")
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .transition()
             .delay(delay)
             .style("display", "none")
 
 
         t.selectAll("tspan.text_" + counter)
-<<<<<<< HEAD
             .data(d => data[counter].np2.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
@@ -2672,378 +2170,12 @@ var create_parting_line = (svg, data, datalimit) => {
                 return this.parentElement.x.baseVal[0].value
             })
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np2.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             })
-=======
-            .attr("dy", 20)
-            .attr("opacity", 0)
-            .transition()
-            .delay(delay)
-            .duration(500)
-            .attr("opacity", 1)
-            .text(function(d, i) { return d });
-
-    }
-
-
-    start();
-
-    var delay = 0
-
-    for (counter = 6; counter < data.length; counter++) {
-        movefocus(counter)
-    }
-
-    start2()
-
-    for (counter = 4; counter > -1; counter--) {
-        movefocus_forward(counter)
-    }
-
-
-    function movefocus(counter) {
-
-        // counter++;
-        var d = data[counter]
-
-
-        realGDPline
-            .transition()
-            .ease(d3.easeLinear)
-            // .delay(counter * 500)
-            // .delay(10000 - counter * 500)
-            .delay(function() {
-                if (data[counter - 1].np) return delay = delay + interval
-                else return delay = delay + 500
-            })
-            .duration(500)
-            .attr("x2", x(data[1].date))
-            .attr("y2", y(data[1].close));
-
-        pathLine
-            .transition()
-            .ease(d3.easeLinear)
-            .delay(delay)
-            .duration(500)
-            // .delay(counter * 500)
-            // .delay(10000 - counter * 500)
-            .attr('d', lineGen)
-
-
-        focus
-            .transition()
-            // .delay(counter * 500)
-            // .delay(10000 - counter * 500)
-            .delay(delay)
-            .duration(500)
-            .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-
-        t.selectAll("tspan.text_5_parting")
-            .transition()
-            .delay(delay)
-            .style("display", "none")
-
-
-        t.selectAll("tspan.text_" + (counter - 1))
-            .transition()
-            .delay(delay)
-            .style("display", "none")
-
-        t
-            .selectAll("tspan.text_" + counter)
-            .data(d => data[counter].np.split("."))
-            .enter()
-            .append("tspan")
-            .attr("class", "text_" + counter)
-            .style("font-size", curems + "em")
-            .attr("x", 0)
-            .attr("dx", 10)
-            .attr("dy", 20)
-            .transition()
-            .delay(delay)
-            .duration(500)
-            .text(function(d, i) { return d });
-
-
-
-        x.domain(d3.extent(data, function(d) {
-            return d.date;
-        }));
-        y.domain([0, d3.max(data, function(d) {
-            return d.close;
-        })]);
-
-        linegraph.selectAll(".xAxis")
-            .transition()
-            // .delay(counter * 500)
-            // .delay(10000 - counter * 500)
-            .delay(delay)
-            .duration(500)
-            .call(d3.axisBottom(x));
-
-        // Add the y Axis
-        linegraph.selectAll(".yAxis")
-            .transition()
-            // .delay(counter * 500)
-            // .delay(10000 - counter * 500)
-            .delay(delay)
-            .duration(490)
-            .call(d3.axisLeft(y));
-
-
-    }
-
-    function movefocus_forward(counter) {
-
-        // counter++;
-        var d = data[counter]
-
-
-        realGDPline
-            .transition()
-            .ease(d3.easeLinear)
-            // .delay(10000 + counter * 500)
-            .delay(function() {
-                if (data[counter + 1].np) return delay = delay + interval
-                else return delay = delay + 500
-            })
-            .duration(500)
-            .attr("x2", x(data[1].date))
-            .attr("y2", y(data[1].close));
-
-        pathLine
-            .transition()
-            .ease(d3.easeLinear)
-            .duration(500)
-            .delay(delay)
-            // .delay(10000 + counter * 500)
-            .attr('d', lineGen)
-
-
-        focus
-            .transition()
-            // .delay(10000 + counter * 500)
-            .delay(delay)
-            .duration(500)
-            .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-
-
-        t.selectAll("tspan.text_" + (counter + 1))
-            .transition()
-            .delay(delay)
-            .style("display", "none")
-
-        t
-            .selectAll("tspan.text_" + counter)
-            .data(d => data[counter].np.split("."))
-            .enter()
-            .append("tspan")
-            .attr("class", "text_" + counter)
-            .style("font-size", curems + "em")
-            .attr("x", 0)
-            .attr("dx", 10)
-            .attr("dy", 20)
-            .transition()
-            .delay(delay)
-            .duration(500)
-            .text(function(d, i) { return d });
-
-
-
-        x.domain(d3.extent(data, function(d) {
-            return d.date;
-        }));
-        y.domain([0, d3.max(data, function(d) {
-            return d.close;
-        })]);
-
-        linegraph.selectAll(".xAxis")
-            .transition()
-            // .delay(10000 + counter * 500)
-            .delay(delay)
-            .duration(500)
-            .call(d3.axisBottom(x));
-
-        // Add the y Axis
-        linegraph.selectAll(".yAxis")
-            .transition()
-            // .delay(10000 + counter * 500)
-            .delay(delay)
-            .duration(500)
-            .call(d3.axisLeft(y));
-    }
-
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, delay + 1000)
-
-}
-
-var create_anchor_line = (svg, data, datalimit) => {
-
-    console.log("anchored travel")
-        // hahaha = []
-        // hahaha.push(data[9])
-        // hahaha.push(data[10])
-
-    var margin = { top: 20, right: 20, bottom: 50, left: 70 },
-        width = 960 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
-
-    var parseTime = d3.timeParse("%Y");
-
-    // var xLine = d3.scaleLinear()
-    //     .domain([0, 9])
-    //     .range([0, width]);
-
-    // X scale will use the index of our data
-    var x = d3.scaleTime().range([0, width]);
-    // 6. Y scale will use the randomly generate number 
-    var y = d3.scaleLinear().range([height, 0]);
-
-    // var valueline = d3.line()
-    //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
-    //     .y(function(d) { return y(d.close); }) // set the y values for the line generator 
-
-    var linegraph = svg
-        .append("g")
-        .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
-    // .append("g")
-    // .attr("transform", "translate(" + 0 + "," + height * 0.5 + ")");
-
-    data.forEach(function(d) {
-        d.date = parseTime(d.date);
-        d.close = +d.close;
-    });
-
-    // Scale the range of the data
-    x.domain(d3.extent(data, function(d) { return d.date; }));
-    y.domain([0, d3.max(data, function(d) { return d.close; })]);
-
-    var realGDPline = linegraph.append("line")
-        .attr("class", "line")
-        .style("stroke", "transparent");
-
-    var focus = linegraph.append("g")
-        .attr("fill", "black");
-
-    focus.append("circle")
-        .attr("r", 5);
-
-    var t = focus.append("text")
-        .attr("x", 0)
-        .attr("dy", "-0.7em");
-
-    var counter = 5;
-
-    var lineGen = d3.line()
-        .x(function(d, i) {
-            if (counter > 5) {
-                if (i <= counter) return x(d.date)
-                else if (i > counter) return x(data[counter].date)
-            }
-            // debugger;
-            // return xScaleGDP(i <= counter ? d.date : dataGDP[counter].date);
-            else if (counter <= 5) {
-                if (i <= counter) return x(data[counter].date)
-                else if (i > 5) return x(data[5].date)
-                else return x(d.date);
-            }
-        })
-        .y(function(d, i) {
-            // return yScaleGDP(i <= counter ? d.GDPreal : dataGDP[counter].GDPreal);
-            if (counter > 5) {
-                if (i <= counter) return y(d.close)
-                else if (i > counter) return y(data[counter].close)
-            } else if (counter <= 5) {
-                if (i <= counter) return y(data[counter].close)
-                else if (i > 5) return y(data[5].close)
-                else return y(d.close);
-            }
-        })
-
-    var pathLine = linegraph.append('path').datum(data)
-        .attr('d', lineGen)
-        .classed('line', true)
-
-    // Add the x Axis
-    linegraph.append("g")
-        .attr("class", "xAxis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x));
-
-    // Add the y Axis
-    linegraph.append("g")
-        .attr("class", "yAxis")
-        .call(d3.axisLeft(y));
-
-    function start() {
-
-        counter = 5;
-
-        realGDPline
-            .attr("x1", x(data[counter].date))
-            .attr("y1", y(data[counter].close))
-            .attr("x2", x(data[counter].date))
-            .attr("y2", y(data[counter].close));
-
-        focus.attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-        t.selectAll("tspan.text_" + counter + "_anchor")
-            .data(d => data[counter].np.split("."))
-            .enter()
-            .append("tspan")
-            .attr("class", "text_" + counter + "_anchor")
-            .text(d => d)
-            .style("font-size", curems + "em")
-            .attr("x", function() {
-                return this.parentElement.x.baseVal[0].value
-            })
-            .attr("dx", 10)
-            .attr("dy", 20);
-
-    }
-
-    function start2() {
-
-        counter = 5;
-
-        realGDPline
-            .attr("x1", x(data[counter].date))
-            .attr("y1", y(data[counter].close))
-            .attr("x2", x(data[counter].date))
-            .attr("y2", y(data[counter].close));
-
-        focus
-            .transition()
-            .delay(function() { return delay = delay + interval })
-            .attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-        t.selectAll("tspan.text_0")
-            .transition()
-            .delay(delay)
-            .style("display", "none")
-
-
-        t.selectAll("tspan.text_" + counter)
-            .data(d => data[counter].np.split("."))
-            .enter()
-            .append("tspan")
-            .attr("class", "text_" + counter)
-            .text(d => d)
-            .style("font-size", curems + "em")
-            .attr("x", function() {
-                return this.parentElement.x.baseVal[0].value
-            })
-            .attr("dx", 10)
-            .attr("dy", 20)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .attr("opacity", 0)
             .transition()
             .delay(delay)
@@ -3055,11 +2187,7 @@ var create_anchor_line = (svg, data, datalimit) => {
 
     function start3() {
 
-<<<<<<< HEAD
         counter = breaking;
-=======
-        counter = 5;
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
         realGDPline
             .attr("x1", x(data[counter].date))
@@ -3079,11 +2207,7 @@ var create_anchor_line = (svg, data, datalimit) => {
 
 
         t.selectAll("tspan.text_" + counter + "_anchor2")
-<<<<<<< HEAD
             .data(d => data[counter].np3.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter + "_anchor2")
@@ -3093,16 +2217,12 @@ var create_anchor_line = (svg, data, datalimit) => {
                 return this.parentElement.x.baseVal[0].value
             })
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np3.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             })
-=======
-            .attr("dy", 20)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .attr("opacity", 0)
             .transition()
             .delay(delay)
@@ -3117,21 +2237,13 @@ var create_anchor_line = (svg, data, datalimit) => {
 
     start();
 
-<<<<<<< HEAD
     for (counter = breaking - 1; counter > -1; counter--) {
-=======
-    for (counter = 4; counter > -1; counter--) {
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         movefocus(counter)
     }
 
     start2()
 
-<<<<<<< HEAD
     for (counter = breaking + 1; counter < data.length; counter++) {
-=======
-    for (counter = 6; counter < data.length; counter++) {
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         movefocus_forward(counter)
     }
 
@@ -3173,11 +2285,7 @@ var create_anchor_line = (svg, data, datalimit) => {
             .duration(500)
             .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
 
-<<<<<<< HEAD
         t.selectAll("tspan.text_" + breaking + "_anchor")
-=======
-        t.selectAll("tspan.text_5_anchor")
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .transition()
             .delay(delay)
             .style("display", "none")
@@ -3190,27 +2298,19 @@ var create_anchor_line = (svg, data, datalimit) => {
 
         t
             .selectAll("tspan.text_" + counter)
-<<<<<<< HEAD
             .data(d => data[counter].np.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
             .style("font-size", curems + "em")
             .attr("x", 0)
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             })
-=======
-            .attr("dy", 20)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .transition()
             .delay(delay)
             .duration(500)
@@ -3286,27 +2386,19 @@ var create_anchor_line = (svg, data, datalimit) => {
 
         t
             .selectAll("tspan.text_" + counter)
-<<<<<<< HEAD
             .data(d => data[counter].np2.split("\\n"))
-=======
-            .data(d => data[counter].np.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
             .style("font-size", curems + "em")
             .attr("x", 0)
             .attr("dx", 10)
-<<<<<<< HEAD
             .attr("dy", function(d, i) {
                 if (data[counter].np2.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
                 } else return -10
             })
-=======
-            .attr("dy", 20)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             .transition()
             .delay(delay)
             .duration(500)
@@ -3410,11 +2502,7 @@ var create_chronological_timeline = (svg, data, datalimit) => {
         .attr("y", 60 * curems)
 
     t.selectAll("tspan.text")
-<<<<<<< HEAD
         .data(d => d.Event.split("\\n"))
-=======
-        .data(d => d.Event.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         .enter()
         .append("tspan")
         .attr("class", "text")
@@ -3636,11 +2724,7 @@ var create_trailer_timeline = (svg, data, datalimit) => {
         .attr("y", 60 * curems)
 
     t.selectAll("tspan.text")
-<<<<<<< HEAD
         .data(d => d.Event.split("\\n"))
-=======
-        .data(d => d.Event.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         .enter()
         .append("tspan")
         .attr("class", "text")
@@ -3836,11 +2920,7 @@ var create_trailer_timeline = (svg, data, datalimit) => {
 
 }
 
-<<<<<<< HEAD
 var create_recurrence_timeline = (svg, data, datalimit) => {
-=======
-var create_recapping_timeline = (svg, data, datalimit) => {
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
     // LINE
 
     // startdate = data[0].Year
@@ -3849,11 +2929,7 @@ var create_recapping_timeline = (svg, data, datalimit) => {
     // } else if (startdate.includes('Spring')) {} else {
     //     data = make_history_proportional(data)
     // }
-<<<<<<< HEAD
     console.log("recurrence")
-=======
-    console.log("recapping")
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
     linegraph = svg
         .append("g")
@@ -3911,11 +2987,7 @@ var create_recapping_timeline = (svg, data, datalimit) => {
         .attr("y", 60 * curems)
 
     t.selectAll("tspan.text")
-<<<<<<< HEAD
         .data(d => d.Event.split("\\n"))
-=======
-        .data(d => d.Event.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         .enter()
         .append("tspan")
         .attr("class", "text")
@@ -3931,13 +3003,8 @@ var create_recapping_timeline = (svg, data, datalimit) => {
         .style("opacity", 0)
         .transition()
         .delay(function(d, i) {
-<<<<<<< HEAD
             if (d.Event != '') return delay = delay + interval
             else return delay = delay + 500
-=======
-            if (d.Year != '') return delay = delay + interval
-            else return delay = delay + 0
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         })
         .duration(500)
         .style("opacity", 1)
@@ -4069,13 +3136,8 @@ var create_recapping_timeline = (svg, data, datalimit) => {
         .style("opacity", 0)
         .transition()
         .delay(function(d, i) {
-<<<<<<< HEAD
             if (d.Event != '') return delay = delay + interval
             else return delay = delay + 500
-=======
-            if (d.Year != '') return delay = delay + interval
-            else return delay = delay + 0
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         })
         .duration(500)
         .style("opacity", 1)
@@ -4111,11 +3173,7 @@ var create_recapping_timeline = (svg, data, datalimit) => {
         });
     setTimeout(function() {
         document.getElementById('story_finish').style.display = "block"
-<<<<<<< HEAD
     }, delay + 2000)
-=======
-    }, delay + 1000)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
 }
 
@@ -4190,11 +3248,7 @@ var create_trace_timeline = (svg, data, datalimit) => {
         .attr("y", 60 * curems)
 
     t.selectAll("tspan.text")
-<<<<<<< HEAD
         .data(d => d.Event.split("\\n"))
-=======
-        .data(d => d.Event.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         .enter()
         .append("tspan")
         .attr("class", "text")
@@ -4371,13 +3425,8 @@ var create_trace_timeline = (svg, data, datalimit) => {
 
     setTimeout(function() {
         document.getElementById('story_finish').style.display = "block"
-<<<<<<< HEAD
             // clearvis()
     }, delay + 2000)
-=======
-        clearvis()
-    }, delay + 1000)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 }
 
 var create_retrograde_timeline = (svg, data, datalimit) => {
@@ -4442,11 +3491,7 @@ var create_retrograde_timeline = (svg, data, datalimit) => {
         .attr("y", 60 * curems)
 
     t.selectAll("tspan.text")
-<<<<<<< HEAD
         .data(d => d.Event.split("\\n"))
-=======
-        .data(d => d.Event.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         .enter()
         .append("tspan")
         .attr("class", "text")
@@ -4671,11 +3716,7 @@ var create_halfway_timeline = (svg, data, datalimit) => {
             "x",
             function(d, i) {
                 var j = 0;
-<<<<<<< HEAD
                 if (i == 0) j = 6;
-=======
-                if (i == 0) j = data.length / 2 + 1;
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
                 else j = i - 1
                 return width * 0.1 +
                     (0.5 * (width * 0.8)) / (data.length - 1) +
@@ -4686,11 +3727,7 @@ var create_halfway_timeline = (svg, data, datalimit) => {
         .attr("y", 60 * curems)
 
     t.selectAll("tspan.text")
-<<<<<<< HEAD
         .data(d => d.Event.split("\\n"))
-=======
-        .data(d => d.Event.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         .enter()
         .append("tspan")
         .attr("class", "text")
@@ -4823,11 +3860,7 @@ var create_halfway_timeline = (svg, data, datalimit) => {
             "x",
             function(d, i) {
                 var j = 0;
-<<<<<<< HEAD
                 if (i == 0) j = 6;
-=======
-                if (i == 0) j = data.length / 2 + 1;
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
                 else j = i - 1
                 return width * 0.1 +
                     (0.5 * (width * 0.8)) / (data.length - 1) +
@@ -4862,11 +3895,7 @@ var create_halfway_timeline = (svg, data, datalimit) => {
         .attr("stroke-width", (d, i) => d.Event == '' ? 1 : 3)
         .attr("d", function(d, i) {
             var j = 0;
-<<<<<<< HEAD
             if (i == 0) j = 6;
-=======
-            if (i == 0) j = data.length / 2 + 1;
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             else j = i - 1
             return line([{
                     x: width * 0.1 +
@@ -4884,7 +3913,6 @@ var create_halfway_timeline = (svg, data, datalimit) => {
         });
     setTimeout(function() {
         document.getElementById('story_finish').style.display = "block"
-<<<<<<< HEAD
     }, delay + 2000)
 
 }
@@ -5148,269 +4176,6 @@ var create_halfway_timeline = (svg, data, datalimit) => {
 //     }, delay + 1000)
 
 // }
-=======
-    }, delay + 1000)
-
-}
-
-var create_parting_timeline = (svg, data, datalimit) => {
-
-    // LINE
-
-    // startdate = data[0].Year
-    // if (startdate.includes('Mon')) {
-    //     data = make_schedule_proportional(data)
-    // } else if (startdate.includes('Spring')) {} else {
-    //     data = make_history_proportional(data)
-    // }
-    console.log("parting")
-
-    linegraph = svg
-        .append("g")
-        .attr("transform", "translate(" + 0 + "," + height * 0.5 + ")");
-
-    svg
-        .append("svg:defs")
-        .append("svg:marker")
-        .attr("id", "triangle")
-        .attr("refX", 6)
-        .attr("refY", 6)
-        .attr("markerWidth", 50)
-        .attr("markerHeight", 50)
-        .attr("markerUnits", "userSpaceOnUse")
-        .attr("orient", "auto")
-        .append("path")
-        .attr("d", "M 0 0 12 6 0 12 3 6")
-        .style("fill", "black");
-
-    //主线
-    l = linegraph
-        .append("path")
-        .attr("stroke", "black")
-        .attr("stroke-width", 3)
-        .attr(
-            "d",
-            line([{ x: width * 0.1, y: 20 }, { x: width - width * 0.1, y: 20 }])
-        )
-        .attr("marker-start", "url(#triangle)")
-        .attr("marker-end", "url(#triangle)");
-
-    delay = 0;
-
-    //事件标签
-    t = linegraph
-        .selectAll(".labeltext")
-        .data(data)
-        .enter()
-        .append("text")
-        .attr("text-anchor", "middle")
-        .attr("class", "labeltext hahaha")
-        .attr("id", d => "ev1_" + d.Year.replace(/ /g, ""))
-        .attr(
-            "x",
-            function(d, i) {
-                var j = 0;
-                if (i < 10) j = data.length - 1 - 10 + i;
-                else j = data.length - 1 - i;
-                return width * 0.1 +
-                    (0.5 * (width * 0.8)) / (data.length - 1) +
-                    (j * (width * 0.8)) / (data.length - 1)
-
-            }
-        )
-        .attr("y", 60 * curems)
-
-    t.selectAll("tspan.text")
-        .data(d => d.Event.split("."))
-        .enter()
-        .append("tspan")
-        .attr("class", "text")
-        .text(d => d)
-        .style("font-size", curems + "em")
-        .attr("x", function() {
-            return this.parentElement.x.baseVal[0].value
-        })
-        .attr("dx", 0)
-        .attr("dy", 20);
-
-    t
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d, i) {
-            if (d.Year != '') return delay = delay + interval
-            else return delay = delay + 0
-        })
-        .duration(500)
-        .style("opacity", 1)
-        .transition()
-        .delay(interval - 1000)
-        .style("opacity", 0);
-
-    // t = linegraph
-    //     .selectAll(".labeltext")
-    //     .data(data)
-    //     .enter()
-    //     .append("text")
-    //     .attr("text-anchor", "middle")
-    //     .attr("class", "labeltext hahaha")
-    //     .attr("id", d => "ev1_" + d.Year.replace(/ /g, ""))
-    //     .attr(
-    //         "x",
-    //         function(d, i) {
-    //             var j = 0;
-    //             if (i < 11) j = 13 + i;
-    //             else j = 24 - i;
-    //             return width * 0.1 +
-    //                 (0.5 * (width * 0.8)) / (data.length - 1) +
-    //                 (j * (width * 0.8)) / (data.length - 1)
-
-    //         }
-    //     )
-    //     .attr("y", (d, i) => data.filter(e => e.Event != '').indexOf(d) % 2 != 0 ? 60 * curems : 100 * curems)
-    //     .style("font-size", curems + "em")
-    //     .text(function(d, i) {
-    //             if (d.Event) {
-    //                 if (i == 0) return "Once upon a time, " + d.Event;
-    //                 if (i == data.length - 1) return "To sum up, " + d.Event;
-    //                 else if (i == data.length - 1) return "Finally, " + d.Event;
-    //                 else return "Then, " + d.Event;
-    //             }
-    //         }
-    //         // d.Event.split(" ")
-    //         // .slice(0, Math.round(d.Event.split(" ").length / 2))
-    //         // .join(" ")
-    //     )
-    //     .style("opacity", 0)
-    //     .transition()
-    //     .delay(function(d, i) {
-    //         if (d.Year != '') return delay = delay + 3000
-    //         else return delay = delay + 0
-    //     })
-    //     .duration(500)
-    //     .style("opacity", 1)
-    //     .transition()
-    //     .delay(3000)
-    //     .style("opacity", 0)
-
-
-
-    delay = 0;
-
-    // //虚线
-    // t = linegraph.selectAll('.dashedline')
-    //     .data(data)
-    //     .enter()
-    //     .append('path')
-    //     .attr('stroke', '#bbb')
-    //     .attr("class", "hahaha")
-    //     .attr('stroke-width', 2)
-    //     .style("stroke-dasharray", ("7, 3"))
-    //     .attr('d', function(d, i) {
-    //         if (data.filter(e => e.Event != '').indexOf(d) % 2 != 0 || d.Event == '') return []
-    //         else {
-    //             var j = 0;
-    //             if (i < 11) j = 13 + i;
-    //             else j = 24 - i;
-    //             return line([{
-    //                     x: width * 0.1 +
-    //                         (0.5 * (width * 0.8)) / (data.length - 1) +
-    //                         (j * (width * 0.8)) / (data.length - 1),
-    //                     y: 25
-    //                 },
-    //                 {
-    //                     x: width * 0.1 +
-    //                         (0.5 * (width * 0.8)) / (data.length - 1) +
-    //                         (j * (width * 0.8)) / (data.length - 1),
-    //                     y: 65
-    //                 }
-    //             ])
-
-
-    //         }
-    //     })
-    //     .style("opacity", 0)
-    //     .transition()
-    //     .delay(function(d, i) {
-    //         if (d.Year != '') return delay = delay + 3000
-    //         else return delay = delay + 0
-    //     })
-    //     .style("opacity", 1)
-    //     // .transition()
-    //     // .style("opacity", 0)
-
-
-    // delay = 0;
-
-    //时间标签
-    t = linegraph
-        .selectAll(".yeartext")
-        .data(data)
-        .enter()
-        .append("text")
-        .attr("class", "yeartext hahaha")
-        .attr("id", d => "yr_" + d.Year.replace(/ /g, ""))
-        .attr(
-            "x",
-            function(d, i) {
-                var j = 0;
-                if (i < 10) j = data.length - 1 - 10 + i;
-                else j = data.length - 1 - i;
-                return width * 0.1 +
-                    (0.5 * (width * 0.8)) / (data.length - 1) +
-                    (j * (width * 0.8)) / (data.length - 1)
-
-            }
-        )
-        .attr("text-anchor", "middle")
-        .attr("y", (d, i) => d.Year.split(" ").length > 1 ? -15 : 0)
-        .attr("font-weight", "bold")
-        .style("font-size", curems + "em")
-        .text(d => d.Year.split(" ")[0])
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d, i) {
-            if (d.Year != '') return delay = delay + interval
-            else return delay = delay + 0
-        })
-        .duration(500)
-        .style("opacity", 1)
-        .transition()
-        .delay(interval - 1000)
-        .style("opacity", 0)
-
-    //刻度
-    t = linegraph
-        .selectAll(".tick")
-        .data(data)
-        .enter()
-        .append("path")
-        .attr("stroke", "black")
-        .attr("stroke-width", (d, i) => d.Event == '' ? 1 : 3)
-        .attr("d", function(d, i) {
-            // debugger;
-            var j = 0;
-            if (i < 10) j = data.length - 1 - 10 + i;
-            else j = data.length - 1 - i;
-            return line([{
-                    x: width * 0.1 +
-                        (0.5 * (width * 0.8)) / (data.length - 1) +
-                        (j * (width * 0.8)) / (data.length - 1),
-                    y: 25
-                },
-                {
-                    x: width * 0.1 +
-                        (0.5 * (width * 0.8)) / (data.length - 1) +
-                        (j * (width * 0.8)) / (data.length - 1),
-                    y: 15
-                }
-            ])
-        });
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, delay + 1000)
-
-}
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
 
 var create_anchor_timeline = (svg, data, datalimit) => {
@@ -5456,11 +4221,8 @@ var create_anchor_timeline = (svg, data, datalimit) => {
         .attr("marker-end", "url(#triangle)");
 
     delay = 0;
-<<<<<<< HEAD
     var breaking = 7;
 
-=======
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
     //事件标签
     t = linegraph
@@ -5475,13 +4237,8 @@ var create_anchor_timeline = (svg, data, datalimit) => {
             "x",
             function(d, i) {
                 var j = 0;
-<<<<<<< HEAD
                 if (i < breaking) j = data.length - breaking - i;
                 else if (i == data.length - 1) j = data.length - breaking;
-=======
-                if (i < 14) j = 13 - i;
-                else if (i == data.length - 1) j = 13;
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
                 else j = i - 1;
                 return width * 0.1 +
                     (0.5 * (width * 0.8)) / (data.length - 2) +
@@ -5492,11 +4249,7 @@ var create_anchor_timeline = (svg, data, datalimit) => {
         .attr("y", 60 * curems)
 
     t.selectAll("tspan.text")
-<<<<<<< HEAD
         .data(d => d.Event.split("\\n"))
-=======
-        .data(d => d.Event.split("."))
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         .enter()
         .append("tspan")
         .attr("class", "text")
@@ -5628,13 +4381,8 @@ var create_anchor_timeline = (svg, data, datalimit) => {
             "x",
             function(d, i) {
                 var j = 0;
-<<<<<<< HEAD
                 if (i < breaking) j = data.length - breaking - i;
                 else if (i == data.length - 1) j = data.length - breaking;
-=======
-                if (i < 14) j = 13 - i;
-                else if (i == data.length - 1) j = 13;
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
                 else j = i - 1;
                 return width * 0.1 +
                     (0.5 * (width * 0.8)) / (data.length - 2) +
@@ -5670,13 +4418,8 @@ var create_anchor_timeline = (svg, data, datalimit) => {
         .attr("d", function(d, i) {
             // debugger;
             var j = 0;
-<<<<<<< HEAD
             if (i < breaking) j = data.length - breaking - i;
             else if (i == data.length - 1) j = data.length - breaking;
-=======
-            if (i < 14) j = 13 - i;
-            else if (i == data.length - 1) j = 13;
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             else j = i - 1;
             return line([{
                     x: width * 0.1 +
@@ -5694,11 +4437,7 @@ var create_anchor_timeline = (svg, data, datalimit) => {
         });
     setTimeout(function() {
         document.getElementById('story_finish').style.display = "block"
-<<<<<<< HEAD
     }, delay + 2000)
-=======
-    }, delay + 1000)
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
 
 }
 

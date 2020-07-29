@@ -82,11 +82,7 @@ var init_end = () => {
     if (PRODUCTION && mID != test_mID) {
         db.collection(complete_collection).add(final_user_data)
             .then(function(docRef) {
-<<<<<<< HEAD
                 console.log(complete_collection + "Document written with ID: ", docRef.id);
-=======
-                console.log("Document written with ID: ", docRef.id);
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             })
             .catch(function(error) {
                 console.error("Error adding document: ", error);
@@ -94,11 +90,7 @@ var init_end = () => {
 
         db.collection(experiment_replacement).add(final_user_data)
             .then(function(docRef) {
-<<<<<<< HEAD
                 console.log(experiment_replacement + "Document written with ID: ", docRef.id);
-=======
-                console.log("Document written with ID: ", docRef.id);
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
             })
             .catch(function(error) {
                 console.error("Error adding document: ", error);
@@ -186,11 +178,7 @@ var init_firebase = () => {
 var save_mid = () => {
     db.collection(mid_collection).add(user_data)
         .then(function(docRef) {
-<<<<<<< HEAD
             console.log(mid_collection + "Document written with ID: ", docRef.id);
-=======
-            console.log("Document written with ID: ", docRef.id);
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         })
         .catch(function(error) {
             console.error("Error adding document: ", error);
@@ -198,11 +186,7 @@ var save_mid = () => {
 
     db.collection(replacement_mid_collection).add(user_data)
         .then(function(docRef) {
-<<<<<<< HEAD
             console.log(replacement_mid_collection + "Document written with ID: ", docRef.id);
-=======
-            console.log("Document written with ID: ", docRef.id);
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         })
         .catch(function(error) {
             console.error("Error adding document: ", error);
@@ -278,12 +262,8 @@ async function find_mid() {
 async function choose_assigned_pattern_type() {
     assigned_types = []
     d = await get_firebase_data(mid_collection, false)
-<<<<<<< HEAD
         //一共六种pattern，i=5
     for (i = 0; i < 5; i++) {
-=======
-    for (i = 0; i < 7; i++) {
->>>>>>> 1f47442253a19d731b071aa5ac6371bf945759c4
         num_of_this_type = d.filter(p => p['assigned_pattern_type'].includes(i + 2)).length
         assigned_types.push(num_of_this_type)
     }
