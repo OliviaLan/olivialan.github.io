@@ -1,0 +1,387 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Echarts</title>
+    <script src="echarts.min.js"></script>
+    <script src="china.js"></script>
+    <!--要异步加载json的时候要记得引用：-->
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <style>
+        body {
+            background-color: #252525;
+        }
+        
+        #main {
+            height: 760px;
+            width: 90%;
+            margin: 40px;
+            background-color: #252525;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main"></div>
+    <script>
+        var data_2000 = [{
+            'name': '南昌市第五医院',
+            'value': [115.91593400000001, 28.631859999999996, 1000]
+        }, {
+            'name': '昆明西昌路医院',
+            'value': [102.69305200000001, 25.042453999999999, 500]
+        }]
+
+
+
+        //1.定义一个div，并指示将chart放进去
+        var myChart = echarts.init(document.getElementById("main"));
+
+        var options = {
+
+            baseOption: {
+                timeline: {
+                    data: ['2000',
+                        '2001',
+                        '2002',
+                        '2003',
+                        '2004',
+                        '2005',
+                        '2006',
+                        '2007',
+                        '2008',
+                        '2009',
+                        '2010',
+                        '2011',
+                        '2012',
+                        '2013',
+                        '2014',
+                        '2015',
+                        '2016',
+                        '2017'
+                    ],
+                    show: true,
+                    top: 95,
+                    left: 370,
+                    lineStyle: {
+                        show: false,
+                    },
+                    symbolSize: 0,
+                    autoPlay: true,
+                    playInterval: 800,
+                    loop: true,
+                    label: {
+                        normal: {
+                            show: false,
+                        },
+                    },
+                    checkpointStyle: {
+                        color: "transparent",
+                        borderColor: "transparent",
+                    },
+                    controlStyle: {
+                        showPrevBtn: false,
+                        showNextBtn: false,
+                        itemSize: 40,
+                        normal: {
+                            color: '#fff',
+                            borderColor: '#fff',
+                            borderWidth: 1.5,
+                        },
+                        emphasis: {
+                            color: '#ffce22',
+                            borderColor: '#ffce22',
+                            borderWidth: 1.5,
+                        },
+
+                    }
+                },
+                title: {
+                    left: 100,
+                    top: 50,
+                    textStyle: {
+                        color: '#fff',
+                        fontWeight: "bold",
+                        fontSize: 100,
+                    },
+                    subtext: " * 圆点表示当年新注册的莆田医院。注册资本越大，圆点越大。",
+                    subtextStyle: {
+                        fontSize: 16,
+                    },
+                    itemGap: 20,
+                },
+
+                geo: {
+                    map: 'china',
+                    label: {
+                        emphasis: {
+                            show: false
+                        }
+                    },
+                    layoutSize: 10,
+                    top: 160,
+                    left: 0,
+                    zoom: 0.8,
+                    itemStyle: {
+                        normal: {
+                            areaColor: '#6092a5',
+                            borderColor: '#111',
+                        },
+                        emphasis: {
+                            areaColor: '#6092c5'
+                        }
+                    },
+                    silent: true
+
+                },
+                //backgroundColor: '#373737',
+                grid: [{
+                    x: '67%',
+                    y: '40%',
+                    width: '18%',
+                    height: '48%',
+                    show: false,
+                }, {
+                    x: '90%',
+                    y: '40%',
+                    width: '28%',
+                    height: '48%',
+                    show: false,
+                }],
+
+                yAxis: [{
+                    type: 'category',
+                    axisLabel: {
+                        interval: 0,
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisLine: {
+                        show: false,
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    data: ['广东',
+                        '上海',
+                        '江苏',
+                        '浙江',
+                        '山东',
+                        '福建',
+                        '江西',
+                        '北京',
+                        '山西',
+                        '重庆',
+                        '湖南',
+                        '四川',
+                        '河南',
+                        '云南',
+
+                    ],
+                    splitLine: {
+                        show: false
+                    },
+                    gridIndex: 0,
+                    inverse: true,
+
+                }, {
+                    type: 'category',
+                    axisLabel: {
+                        interval: 0,
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    axisLine: {
+                        show: false,
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    data: ['黑龙江',
+                        '湖北',
+                        '贵州',
+                        '河北',
+                        '天津',
+                        '西藏',
+                        '安徽',
+                        '吉林',
+                        '辽宁',
+                        '内蒙古',
+                        '新疆',
+                        '甘肃',
+                        '广西',
+                        '宁夏',
+                        '陕西',
+                    ],
+                    splitLine: {
+                        show: false
+                    },
+                    gridIndex: 1,
+                    inverse: true,
+                }],
+
+                xAxis: [{
+                    type: 'value',
+                    min: -2,
+                    max: 55,
+                    show: false,
+                    gridIndex: 0,
+                }, {
+                    type: 'value',
+                    min: -2,
+                    max: 55,
+                    show: false,
+                    gridIndex: 1,
+                }],
+
+                series: [{
+                    name: '莆田',
+                    type: 'scatter',
+                    coordinateSystem: 'geo',
+                    data: data_2000,
+                    // label: {
+                    //     emphasis: {
+                    //         show: true,
+                    //         formatter: '{b}',
+                    //     },
+                    // },
+
+                    itemStyle: {
+                        normal: {
+                            color: {
+                                type: 'radial',
+                                x: 0.5,
+                                y: 0.5,
+                                r: 0.7,
+                                colorStops: [{
+                                    offset: 0.2,
+                                    color: "white"
+                                }, {
+                                    offset: 0.5,
+                                    color: "#323c48"
+                                }],
+                                //globalCoord: false
+                            }
+                        }
+                    },
+                    blendMode: 'lighter',
+                    silent: true,
+                }, {
+                    name: '各省数量1',
+                    type: 'bar',
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    itemStyle: {
+                        normal: {
+                            color: '#fff'
+                        }
+                    },
+                    data: null,
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight',
+                            textStyle: {
+                                color: '#373737'
+                            }
+                        },
+                    },
+                }, {
+                    name: '各省数量2',
+                    type: 'bar',
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    itemStyle: {
+                        normal: {
+                            color: '#fff'
+                        }
+                    },
+                    data: null,
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight',
+                            textStyle: {
+                                color: '#373737',
+                            },
+                        },
+                    },
+                }],
+
+                visualMap: [{
+                    type: 'continuous', // 连续型
+                    min: 0, // 值域最小值，必须参数
+                    max: 5000, // 值域最大值，必须参数
+                    calculable: true, // 是否启用值域漫游
+                    show: false,
+                    inRange: {
+                        symbolSize: [5, 20]
+                    },
+                    itemWidth: 20,
+                    textStyle: {
+                        color: 'black' // 值域控件的文本颜色
+                    }
+                    // }, {
+                    //     type: 'continuous', // 连续型
+                    //     min: 0, // 值域最小值，必须参数
+                    //     max: 53, // 值域最大值，必须参数
+                    //     calculable: true, // 是否启用值域漫游
+                    //     show: false,
+                    //     inRange: {
+                    //         color: ['#323c48', '#003333'],
+                    //         // 指定数值从低到高时的颜色变化
+                    //     },
+                    //     itemWidth: 20,
+                    //     textStyle: {
+                    //         color: 'black' // 值域控件的文本颜色
+                    //     }
+                }]
+
+
+            },
+            options: null,
+            // options: [{
+            //     title: {
+            //         text: '2000year'
+            //     },
+            //     series: [{
+            //         data: data_2000
+            //     }]
+            // }, {
+            //     title: {
+            //         text: '2001year'
+            //     },
+            //     series: [{
+            //         data: data_2001
+            //     }]
+            // }]
+
+        }
+        var all_data;
+        $.getJSON("all_years.json", function(res) {
+            debugger;
+            all_data = res;
+            options.options = res;
+            myChart.setOption(options)
+        })
+
+
+
+
+        // $.getJSON("all_years.json", function(res) {
+        //     alert(len(res[2001]))
+        // })
+
+
+        // 也可以直接异步加载！！！
+        // $.getJSON("aaa.json", function(res) {
+        //     var myChart = echarts.init(document.getElementById("main"));
+        //     myChart.setOption(res);
+        // })
+    </script>
+</body>
+
+</html>

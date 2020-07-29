@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>那些被玻尿酸改变的年轻人</title>
+    <!-- Echarts-->
+    <script src="echarts.min.js"></script>
+    <!-- Bootstrap & jquery-->
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="bootstrap-select.min.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="data.js"></script>
+    <script src="fullPage.js-master/dist/jquery.fullpage.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files  -->
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-select.min.css">
+    <link rel="stylesheet" href="fullPage.js-master/dist/jquery.fullpage.css">
+
+    <style>
+        h3 {
+            color: #e51873;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        #aa {
+            width: 100%;
+            height: 700px;
+            margin: 0%;
+            background-image: url("./img/bg2.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            -moz-background-size: 100% 100%;
+        }
+        
+        #result {
+            color: gray;
+            font-size: 14px;
+            text-shadow: 1rem;
+            text-align: center;
+            width: 370px;
+            height: 420px;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            display: block;
+            margin-top: 30px;
+            margin-left: 85px
+            /* margin-right: auto;
+                margin-left: auto */
+        }
+        
+        #search {
+            background-color: #6092a5;
+            border-color: rgba(100, 100, 100, 0.1);
+            width: 120px;
+            margin-top: 50px;
+            box-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
+            margin-left: 85px;
+        }
+        
+        .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+            width: 120px;
+            /* margin:20px */
+        }
+        
+        .btn-group>.btn:first-child {
+            margin-left: 85px;
+            -webkit-margin-top-collapse: 10px;
+            margin-top: 50px;
+            box-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
+            /* margin-left: 20px */
+            /* 它跟上面的search是同步变化的 */
+        }
+        
+        .bootstrap-select.btn-group .dropdown-menu {
+            margin-left: 85px
+        }
+        
+        .test {
+            color: #252525;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+            /* line-height: 1.6rem; */
+        }
+        
+        select {
+            padding: 20% 10% 10% 0;
+        }
+        
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn.active.focus {
+            outline: none;
+            border-color: palevioletred;
+            box-shadow: none;
+            background-color: palevioletred !important;
+            color: white
+        }
+        
+        .col-sm-10 {
+            float: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .col-sm-9 {
+            float: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            if (!((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i).test(navigator.userAgent))) {} else {
+                location.href = "./boniaosuan-phone1/index.html";
+            }
+        })
+        $(function() {
+
+            $("#yw-tb").hide();
+            $("#yw-bar").hide();
+
+            $("#rby-tb").hide();
+            $("#rby-bar").hide();
+
+            $("#afl-tb").hide();
+            $("#afl-bar").hide();
+
+            $("#rl-tb").hide();
+            $("#rl-bar").hide();
+
+            $("#qyd-tb").hide();
+            $("#qyd-bar").hide();
+
+            $("#alw-tb").hide();
+            $("#alw-bar").hide();
+
+            $("#sy-tb").hide();
+            $("#sy-bar").hide();
+
+            $("#fsl-tb").hide();
+            $("#fsl-bar").hide();
+
+            $("#xfl-tb").hide();
+            $("#xfl-bar").hide();
+
+            $("#ym-tb").hide();
+            $("#ym-bar").hide();
+
+            $("#jl-tb").hide();
+            $("#jl-bar").hide();
+
+            $("#abf-tb").hide();
+            $("#abf-bar").hide();
+
+            $("#blz-tb").hide();
+            $("#blz-bar").hide();
+
+            $("#fmd-tb").hide();
+            $("#fmd-bar").hide();
+
+            $("#bnd-tb").hide();
+            $("#bnd-bar").hide();
+
+            $("#ta-tb").hide();
+            $("#ta-bar").hide();
+
+            $("#sl-tb").hide();
+            $("#sl-bar").hide();
+
+            $("#nlms-tb").hide();
+            $("#nlms-bar").hide();
+        })
+    </script>
+
+
+</head>
+
+<body style="font-size:16px;line-height:2.0">
+
+
+    <!-- 封面 -->
+    <div class="row" id="cover">
+        <img src="./img/封面.jpg" class="img-responsive" alt="响应式图像">
+    </div>
+
+    <!-- 导语 -->
+    <div class="container">
+        <div class="row">
+
+            <div class="text-center" style="margin-top:100px">
+
+                <p style="font-size:18px;font-weight:bold;color:#e51873">“当你好看的时候，发现身边好人都多了。”</p>
+                <p>这是今年医美APP平台新氧主张女性做出“勇敢改变”的一句宣传标语，也是这个构建在颜值经济基础上的医美产业的信仰。</p>
+            </div>
+            <!-- <div class="col-sm-4" style="margin-top:20px;padding-left:60px;padding-right:60px">
+                        <img src="./img/网红.png" class="img-responsive" alt="响应式图像">
+                    </div> -->
+        </div>
+    </div>
+    </div>
+    <hr>
+    <!-- 第一部分 -->
+    <h3 style="margin-top:100px;text-align:center">一、颜值经济当道，医美消费迅增</h3>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-sm-12" style="margin-top:20px">
+
+                <p>这个时代对颜值的崇拜似乎赋予了变美无与伦比的正当性，同时人们不再只满足于活在美颜相机中，希望自己在现实中也能光彩照人。各类整形项目推荐与用户的整形日记各占据了新氧、更美等医美APP的半壁江山。在新氧上，每天有上千篇日记被分享至社区，而被推荐到首页的日记，动辄有上千条评论与十万次以上的点击。那些美女们并不介意剖出自己整容前后的照片给大家观看、评论，这是她们一路“变美”或是“逆袭”的见证，她们甚至不介意周围的人知道她们整容，反而更多的人因受到她们的影响而接触医美。</p>
+                <p><strong>医美早已称不上是一个小众的产业</strong>，新氧公众号在新榜近50万公众号中排名稳定在二十几名，微博大V整形医生修志夫有280万粉丝。事实上，医美产业的火爆从网红经济崛起时就开始了，2017年更是它如日中天的一年：普通消费者开始取代明星、网红成为消费主力，在线医美平台悦美与新氧分别获得了C轮与D轮融资，<strong>中国也成了仅次于美国的全球第二大医美市场。</strong></p>
+                <br>
+                <p>“想跟玻尿酸谈一场永远不分手的恋爱。”当我们找到poa(化名)时，她刚在自己的新氧发表栏里更新了这则状态。</p>
+            </div>
+            <div class="col-sm-6" style="margin-top:20px">
+
+                <p>poa，24岁，新氧北京用户，从2016年4月接触微整，到2017年12月，她前后完成了包括玻尿酸丰眉弓、垫下巴等五个微整形项目，并依借着及时分享和回复积聚了80000+新氧粉丝。</p>
+                <p>和很多其他接触了玻尿酸的女孩一般，如今poa的生活已经离不开玻尿酸，除了不断尝试把玻尿酸打在自己还不够满意的部位，她也要不断补打玻尿酸来维持效果。</p>
+                <p>玻尿酸的正式名称是<strong>透明质酸（hyaluronic acid）</strong>，1934年由美国哥伦比亚大学眼科教授Meyer等首先从牛眼玻璃体中分离出来，目前在临床上玻尿酸主要被用于眼科手术的粘弹液以及退化性关节炎的治疗。</p>
+                <p>在医疗美容领域，玻尿酸几乎是接受度最高也最受欢迎的微整项目之一，它的主要功能是<strong>去皱、填充、塑形</strong>，可以用于丰太阳穴、丰眉弓、隆鼻、卧蚕、下巴等多个部位。由于人体自身含有一定的玻尿酸，因此被认为“可以被人体自身代谢”，玻尿酸的效果不是永久的，一般注射一次可以维持6-10个月。</p>
+            </div>
+            <div class="col-sm-6" align="center">
+                <img src="./img/boa.jpg" class="img-responsive" alt="响应式图像" style="margin-top:30px">
+                <p style="text-align:center;color:gray">(图：poa术前、术后对比)</p>
+            </div>
+            <div class="col-sm-12" style="margin-top:20px">
+                <p>“打完下巴后，虽然感觉到吸收了一些，但是形状依然是歪的，不对称而且感觉特别硬，几个绿豆大小的硬块在下巴上，当时太不满意了，太郁闷了！”poa第一次打玻尿酸的回忆并不算美好，但如今的她俨然已经是个玻尿酸小达人，整容这条路并不好走，她定期会在新氧上直播或发布日记，希望通过分享自己的经历和心路历程，能够或多或少帮助到粉丝。</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <h3 style="margin-top:100px;text-align:center">二、消费群体洞察，渐趋于大众化</h3>
+    <hr>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-sm-6" style="margin-top:20px">
+                <p>在中国，医美的消费者以年轻人为主，根据医美APP新氧2017年8月发布的《2017年医美行业白皮书》，<strong>35岁以下的消费者占据了96%，其中25岁以下的消费者占到了总体的53%。</strong>而根据笔者对某医美电商中玻尿酸用户的统计，18岁以下的消费者约占15%。从线上数据来看，医美消费者最大的特点是低龄化。另外男性与未成年人分别占到7%与15%。</p>
+                <p>我们对新氧上所有发表过与玻尿酸有关的用户进行了分析，做了一个简单的用户画像：<strong>他们以女生为主，年龄大多在30岁以下，以北京、广东、四川、上海等省份居多。</strong></span>
+                </p>
+                <br>
+                <p>早在几年前，双眼皮手术就在一些大城市流行起来，许多女生高考后第一件事就是割双眼皮。如今，随着医美知识的普及，不少高中生已经开始了微整，同时大学生微整的比例也在不断扩大。</p>
+            </div>
+
+            <div class="col-sm-6" align="center">
+                <img src="./img/用户词云.jpg" class="img-responsive" alt="响应式图像" style="margin-top:0px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" style="margin-top:20px">
+                <p>今年大三的刘小丽（化名），在第一次割完双眼皮以后，又注射了玻尿酸并进行了鼻综合手术，术后两个月的她面部已经非常自然，但尝到了甜头的她仍计划着循序渐进地对脸上多个部位进行“微调”，“我怕改变得太快，男票接受不了”。</p>
+                <p>“身边的同学们看见我做完之后，都动心了，看她们的样子就觉得好笑，一个个都动了整形的心思。”刘小丽不无得意地说道。整容是很容易传染的，在代价并不是那么高的时候，很多人都没有办法抗拒变美的诱惑。</p>
+                <br>
+
+            </div>
+            <div class="col-sm-6" align="center">
+                <img src="./img/玫瑰图.jpg" class="img-responsive" alt="响应式图像" style="margin-top:0px">
+            </div>
+
+            <div class="col-sm-6" style="margin-top:50px">
+                <p><strong>甚至男性也越来越多地参与到整形活动中来。</strong>在深圳工作，他第一次整形是在老婆的强烈要求下，他的老婆认为他的鼻子不够挺，看上去不够精神。在做了玻尿酸隆鼻以后，Jason觉得很满意，并计划再垫一下下巴，显得更man一些。</p>
+                <p>颜值即正义的时代，在明星与网红的带动下，人们对于整形的接受度在不断提高，而越来越多的靠整形变美的案例，更让整形在各个圈层迅速传播。最开始是在平面模特、网络主播等对外貌要求比较高的圈子里流行，而如今，医美正飞快地向普通人群乃至学生群体传播。新氧白皮书显示，2015年医美消费者多为明星、网红，而<strong>到了2017年，医美消费主力已经变成了普通人——白领、学生或是家庭主妇。</strong></p>
+            </div>
+
+        </div>
+    </div>
+
+    <h3 style="margin-top:100px;text-align:center">三、医美江湖的暴利与洗牌</h3>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" style="margin-top:50px">
+                <p>医美曾经是个信息严重不对称的产业，广告铺天盖地，价格扑朔迷离，通过投放广告迎得生意，医疗机构又分走大部分利益。打一支玻尿酸，往往要跟医院兜圈砍价，即便如此，消费者依然注射的是“天价液体”，每一个客户都是印钞机。2017年7月，专卖玻尿酸的公司爱美客拟IPO，招股说明书显示其毛利率87%，高昂的利润引发关注。</p>
+                <p>以玻尿酸产品“宝尼达”为例，主要原料仅约137元，出厂价达2200元，毛利率高达98%。尽管生产商获利巨大，<strong>但产业链中最大的利润其实属于销售环节。</strong>医院以2200元出厂价购得玻尿酸后，最终销售价可达10000元以上。而低价位的产品，诸如海薇，单只的渠道利润也达到1300元左右。</p>
+            </div>
+
+            <div class="col-sm-9" align="center" style="margin-top:50px">
+                <img src="./img/差价.jpg" class="img-responsive" alt="响应式图像">
+            </div>
+            <div class="col-sm-12" style="margin-top:50px">
+                <p>消费刺激生产，更创造了万亿级的利润空间。与此同时，医美这个市场正越来越多的暴露于阳光下。2013年到2014年诞生的一批医美APP改变了这个行业，互联网让药物与服务的价格变得透明，各平台整容日记的推出让整容信息变得更为畅通，比起公交车上的整形广告，<strong>如今网络社区的口碑传播变得更为重要。</strong></p>
+                <p>“我们是正规的整形机构，有国家卫生部门颁发的证书，在国家税务部门登记在册的，这样子才是对顾客安全负责的环境。”北京JH美容诊所的乔医生说到，“多看看，多考虑，可以理解”。与JH美容诊所相似，各医疗美容机构如同经营淘宝店一般在新氧等社区经营自己的口碑，认真回答用户的各种问题，甚至一旦有新用户注册了账号，刚刚设置了标签，就会有几家医美机构来关注你，将你看作潜在顾客。</p>
+                <p><strong>对生产商也是如此。</strong>从各个品牌的销量和价格来看，玻尿酸市场的竞争十分激烈，但笑傲江湖的并不多。海薇、伊婉、润百颜的销量遥遥领先，均价在1000-3000元之间，其次是位于第二梯队的爱芙莱和瑞蓝。</p>
+                <br>
+            </div>
+            <div class="col-sm-9" align="center" style="margin-top:50px">
+                <img src=" ./img/散点图.jpg " class="img-responsive " alt="响应式图像">
+            </div>
+        </div>
+    </div>
+
+
+
+    <h3 style="margin-top:100px;text-align:center">四、励志颜值革命，医美热海造浪</h3>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" style="margin-top:50px">
+                <p>整形是会“上瘾”的，很多人都曾经多次整形。</p>
+                <p>“一开始的时候我也有点担心，怕效果不好什么的。开始是注射玻尿酸，到后面胆子越来越大，脸上能动的地方基本都动了。”一位来自重庆的用户在新氧上直播自己整容的心路历程时说道。</p>
+                <p>“微整这个东西一开始就停不下来。就是好看！美！但是老是打针担心副作用，所以现在在考虑去做假体。其实做完之后各种评论都有，有人说畸形，有人说比以前好看，但是每个人有每个人的梦想吧。”除了假体之外，poa也计划着对自己脸上其他地方进行微整，准备过一阵再去做一个面部提拉，“我还想整，把自己整成网红那样的！我想说我一直在美的道路上，我对象也知道，他什么都没说。”</p>
+                <p>对于这一代年轻人来说，追求美是天经地义的一件事。而她们对于追求美的途径显然也更加开放：<strong>既然美颜、化妆都可以被认可，为什么微整不可以？</strong>截止今年底，新氧APP号称用户2000万，更美APP用户2200万，“变美”的想法就像一个个小火苗在每一个用户心头蔓延，产生着神秘的力量。</p>
+            </div>
+
+            <div class="col-sm-9" align="center" style="margin-top:30px">
+                <img src=" ./img/纪录片.jpg " class="img-responsive " alt="响应式图像">
+                <br>
+                <p style="text-align:center;color:gray">图：纪录片《勇敢改变》</p>
+            </div>
+
+            <div class="col-sm-12" style="margin-top:30px">
+                <p>“励志”这样的语汇，在大多数人眼中，可能不会与医美产生什么样的联系。但在商家有意无意的包装、群体间的相互传播与自我加强下，“整容很励志”这样的观念越来越被医美群体所认同。在新氧、更美这样的医美平台上诸多的整形分享中，“逆袭”、“蜕变”、“在变美的道路上努力”这样的语汇不断出现。在很多医美人群的眼中，整容不是捷径，它甚至很励志：通过自己的“付出”与“努力”，慢慢改变自己。</p>
+                <p>靠医美逆袭不是没有代价的。在高昂的手术与药物费用之外，用户还要忍受恢复期的疼痛、红肿、增生、忌口等问题，甚至是他人异样的眼光。</p>
+            </div>
+            <div class="col-sm-9" align="center" style="margin-top:0px">
+                <img src="./img/纪录片3.png" class="img-responsive" alt="响应式图像">
+                <br>
+                <p style="text-align:center;color:gray">纪录片主人公之一：“整容比你们想象的惨多了。”</p>
+            </div>
+            <div class="col-sm-12" style="margin-top:50px;margin-bottom:50px">
+                <p>“不要再问我痛不痛。又担心效果，又害怕痛的，我劝你在家躺着比较好，别去麻烦别人医生。没有付出就想回报，我也想，谁不是一点一点熬过来的，比如我也熬出来了。”某医美社区的一位达人在日记里如是分享。</p>
+                <p>“身边的朋友看我现在变得这么好看都非常羡慕我。我依旧记得你们当初嘲笑我恢复期的样子，不是有那么一句话么，要想美先变鬼，每个美女都是这么演变而来的~”另一位达人在忍受了他人的嘲讽后终于靠颜值扬眉吐气。</p>
+            </div>
+            <div class="col-sm-9" align="center" style="margin-top:0px">
+                <img src="./img/纪录片2.png" class="img-responsive" alt="响应式图像">
+                <br>
+                <p style="text-align:center;color:gray">纪录片主人公之二：“我有点整容上瘾了，但是我不care。”</p>
+            </div>
+            <div class="col-sm-12" style="margin-top:50px;margin-bottom:0px">
+                <p>医美项目也需要前期大量做功课，投入时间和精力。“不可逆的项目要慎重再慎重，修复不可能修复到原来的样子。我瘦脸针咨询了3个医生，玻尿酸去了4家医院，毕竟是自己的脸要慎重对待。”姗姗今年22岁，最近刚刚做了玻尿酸隆鼻。</p>
+                <p>正是因为整容需要付出，需要忍受各种生理、心理上的疼痛，这也加强了医美消费者对整容正当性的认同。在医美社区运营的推动下，越来越多的医美消费者愿意在网上分享自己的经历，<strong>他们喜欢将这样的经历归结为“改变命运”，把自己在整容路上忍受的痛苦称作是一种“努力”。</strong></p>
+                <p>“我努力减肥，我成功了，你觉得是励志。我考试复习很久，我成功了，你觉得是励志。但是我花费了很多金钱精力，痛苦的恢复期，这些我都一路走过来，却没有人说这是一种励志，却有人说这是一种捷径，我就想说，哪有人的捷径是这样走的。”在新氧与36氪推出的纪录片中，一位整容女孩发出了这样的声音。</p>
+                <div class="col-sm-9" align="center" style="margin-top:0px">
+                    <br>
+                    <img src="./img/ad2.jpg" class="img-responsive" alt="响应式图像">
+                    <br>
+                    <p style="text-align:center;color:gray">医美APP更美发布的励志海报</p>
+                </div>
+                <br>
+                <br>
+                <p>这些令人眼花缭乱的整容故事，是个体变美的酸甜苦辣，不断地打破人们对微整群体的刻板印象。随着社会对于医疗美容接受程度的日益提高，它已经变成了化妆品消费的延伸和升级。医美行业的运营遵循着这样的商业逻辑：不断告诉消费者追求美貌的正当性，并借助“励志”的标签，使医美活动取得作为一个使人变美的途径的正当性。同时，互联网+医疗的大背景与各大医美平台的出现，既保证了基础医疗一贯的需求刚性，强劲驱动着医美消费者的消费升级，在颜值经济背后，医美行业的发展也将持续升温。当然，行业内部也需要直面机构资质不足、规章不明等乱象，如何让消费者理性、安全变美，也是医美行业在造浪同时应思考的问题，应承担的责任。</p>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <hr>
+    <div class="row  text-center" style="margin-top:100px;margin-bottom:80px">
+        <p style="font-size:24px;font-weight:bold;color:#e51873">BONUS!</p>
+        <p>读完文章，是不是对整容有了新的认识？</p>
+        <p>如果你意犹未尽，想进一步了解玻尿酸产品</p>
+        <p>或想知道哪些医院有注射资质</p>
+        <button class="btn btn-default" id="quchaxun" style="color:#e51873">我们都为您整理好了公开信息，点我！</button>
+
+    </div>
+    <script>
+        $(function() { // Routine format; put all your jQuery initialisation inside
+
+            $('#quchaxun').click(function() {
+                location.href = "index3.html";
+            });
+        }); // Routine format; put all your jQuery initialisation inside
+    </script>
+
+
+</body>
+
+</html>

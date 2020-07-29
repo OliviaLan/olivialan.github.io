@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<!-- 不删除该句无法加载css -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3.v4.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/textures@1.2.0/dist/textures.js"></script>
+    <script src="d3.v4.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="d3.sankey.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+
+</head>
+
+<body>
+    <!-- 两个overlap的div -->
+    <!-- <div id="wholeback" style="position: relative; width: 100%; height:600px;">
+        <div id="photowall" style="width: 100%; height: 600px; position: absolute;"> -->
+    <!-- <img src="" id="pic0" class="ads">
+            <img src="" id="pic1" class="ads">
+            <img src="" id="pic2" class="ads">
+            <img src="" id="pic3" class="ads">
+            <img src="" id="pic4" class="ads">
+            <img src="" id="pic5" class="ads">
+            <img src="" id="pic6" class="ads">
+            <img src="" id="pic7" class="ads">
+            <img src="" id="pic8" class="ads">
+            <img src="" id="pic9" class="ads">
+            <img src="" id="pic10" class="ads">
+            <img src="" id="pic11" class="ads">
+            <img src="" id="pic12" class="ads">
+            <img src="" id="pic13" class="ads">
+            <img src="" id="pic14" class="ads">
+            <img src="" id="pic15" class="ads">
+            <img src="" id="pic16" class="ads">
+            <img src="" id="pic17" class="ads">
+            <img src="" id="pic18" class="ads">
+            <img src="" id="pic19" class="ads">
+            <img src="" id="pic20" class="ads">
+            <img src="" id="pic21" class="ads">
+            <img src="" id="pic22" class="ads">
+            <img src="" id="pic23" class="ads">
+            <img src="" id="pic24" class="ads">
+            <img src="" id="pic25" class="ads">
+            <img src="" id="pic26" class="ads">
+            <img src="" id="pic27" class="ads">
+            <img src="" id="pic28" class="ads">
+            <img src="" id="pic29" class="ads">
+            <img src="" id="pic30" class="ads">
+            <img src="" id="pic31" class="ads">
+            <img src="" id="pic32" class="ads">
+            <img src="" id="pic33" class="ads">
+            <img src="" id="pic34" class="ads">
+            <img src="" id="pic35" class="ads">
+            <img src="" id="pic36" class="ads">
+            <img src="" id="pic37" class="ads">
+            <img src="" id="pic38" class="ads">
+            <img src="" id="pic39" class="ads">
+            <img src="" id="pic40" class="ads">
+            <img src="" id="pic41" class="ads">
+            <img src="" id="pic42" class="ads">
+            <img src="" id="pic43" class="ads">
+            <img src="" id="pic44" class="ads">
+            <img src="" id="pic45" class="ads">
+            <img src="" id="pic46" class="ads"> -->
+    <!-- </div> -->
+    <img src="img/toutu.png" style="width:100%;"></img>
+
+    <!-- <div id="background" style=" width: 100%; height: 600px; position: absolute;"></div>
+        <div id="title">The Evolution of Putian Network</div>
+        <div id="subtitle">China, Private Hospital, 3 Families</div> -->
+
+    <!-- <div style="position: relative; font-family: Times New Roman; text-align:center; padding-top:70px">
+            <button onclick="myFunction()" class="button">Play me!</button>
+        </div> -->
+    </div>
+
+
+    <!-- <div  style="position: relative; display:block; clear: both; margin-bottom: 100px; "> -->
+    <div style="display:block; clear: both; margin-bottom: 0px; color:white;">
+        <p>
+            <span style="font-size: 32px;">Putian</span> is a prefecture-level city in Fujian province, located in southern China. Compared to other Chinese cities, Putian has a small population and is not a leader in development. However, Putian people
+            are good at doing business, especially in the medical industry. At the same time, they always attach great importance to kinship relations when establishing their careers, and thus have formed a huge capital network in the medical industry.
+            According to a previous report[1], the Putian families own over 8,600 private hospitals, accounting for more than 80% of all private hospitals in China.
+        </p>
+
+        <h1>Tracking Putian family</h1>
+        <p>
+            The crisis at the Putian Family started with <a href="https://en.wikipedia.org/wiki/Death_of_Wei_Zexi">a medical accident.</a>
+        </p>
+        <div style="padding-top: 20px; padding-bottom: 0px;">
+            <div style="display: inline-block; width:40%; padding-left:10%; text-align: center;vertical-align:middle; color:grey">
+                <img src="img/wei.jpg" style="width:100%;"></img>
+                On April 13, 2016, Wei's parents were sitting outside the funeral parlor (photo credit to Caixin.com).
+            </div>
+            <div style="display: inline-block; width:35%; padding-left:5%; vertical-align:middle">
+                In 2015, a university student named Wei Zexi died at the Second Hospital of the Beijing Armed Police Corps because of overtreatment. This hospital was originally run by the military system, which, usually means trustworthy; however, it leased some departments
+                to private individuals – so, in this case, the renter is a Putian family. This has soon aroused heated discussion among the masses. Putian families was thought to be the killer behind Wei's death, and their hospitals were irregular, deceptive
+                and evil. However, while people are angry, fear or extremely curious about Putian families, they are difficult to access or truly understand them.
+            </div>
+            <div style="clear:both"></div>
+        </div>
+
+        <p>
+            Later, a Chinese media called <a href="https://www.ifeng.com/">iFeng</a> uncovered a list of Putian hospitals. There are 400 hospitals on this list. This list has provided a basis for us to understand the actual situation of these hospitals
+            and the capital forces behind them. Since 2017, we have continuously tracked the relevant data and news of the Putian families, and used data analysis and visualization to unveil the mystery of the them.
+            <a href="https://olivialan.github.io/putian/index.html">In our first article</a>, we focused on their capital network in a rather broad sense, that is, what do the whole network look like macroscopically? Are there any important clusters,
+            key nodes or salient patterns inside? In this article, we go further deeper, and mainly discuss how those big families (as well as their hospitals) evolve through all these years. In other words, how do they survive? Or why they don't.
+
+        </p>
+
+        <h1>Overall Portrait</h1>
+
+        <p>
+            Among the 412 hospitals, 300 can be searched on <a href="https://www.tianyancha.com/">Tianyancha.com</a>, an online business tool for Chinese companies. We then scraped all the historical information of those companies, and outline the portraits
+            of Putian hospitals roughly using a sankey diagram. As shown below, those hospitals are both dynamic and differentiated.
+        </p>
+
+        <div id="sankey">
+            <button class="pausebutton" onclick="pauseAni()" style="position: absolute;"></button>
+            <button class="replaybutton" onclick="playAni()" style="position: absolute;"></button>
+            <canvas id="sankeycanvas"> </canvas>
+            <svg id="sankeysvg"></svg>
+        </div>
+
+        <p>
+            From a geographical point of view, most of them are located in the southeastern China (Zhejiang, Shanghai, and Guangdong province, especially). Many years ago, Chen Deliang, the originator of Putian Medical Gang, led his students and grandchildren from
+            Fujian to Guangdong, Shandong, Henan, Beijing, Inner Mongolia, and Heilongjiang, and traveled all over the country. After the inspection of the original capital, the Putian hospital showed Significant regional characteristics, from the early
+            establishment of bases in the north, are turning to the more economically active southern regions.
+        </p>
+        <img src="img/street2.png" style="width:80%;padding-left: 10%;"></img>
+
+        <p>
+            To survive or to die, that is a question. The "evolution" stories of Putian families are full of fascination: some extend their business aggressively, some chase for technology and innovation; some families merge together, some families are torn apart;
+            some hospitals were eliminated by market competition, while some became winners under the law of the jungle. In this game of money, the capital is always surging under the shadows.
+
+        </p>
+
+        <h1>Capital Network of 3 Families</h1>
+
+        <p>
+            Years ago, we have done a report about Putian network. Results show that 3 families are especially strong in the whole network, i.e., Family Zhan, Family Lin and Family Chen. Years later, how do they perform?
+        </p>
+        <!-- <div style="display: inline-block; width:100%; text-align:center">
+            <img src="img/banner5.png" style="width:70%;vertical-align:middle"></img>
+        </div> -->
+
+
+
+        <div style="padding-top: 100px; padding-bottom: 50px;">
+            <div style="display: inline-block; width:50%; padding-left: 10%;">
+                <img src="img/zhan2.png" style="width:100%;vertical-align:middle"></img>
+            </div>
+            <!-- <div style="display: inline-block; width:60%;vertical-align:middle">
+            </div>
+            <div style="clear:both"></div> -->
+        </div>
+        <p>
+            Zhan Guotuan was one of the eight apprentices who first followed Chen Deliang to go out and have the most business savvy, and put the Putian medical model to the extreme. He was the first person in the industry to do TV commercials, and first cooperated
+            with public hospitals to contract departments to get rid of the image of "traveling doctor" and become the "big brother" in Putian Medical Network.
+        </p>
+        <p>
+            There are inextricable links between the members of the Zhan family and the cause. The core members are Zhan Yupeng, Zhan Guotuan, Zhan Guoying, Zhan Guolian, and Zhan Yangbin. Among them, Zhan Guotuan, Zhan Guoying, Zhan Guolian are brothers, and Zhan
+            Yangbin is a cousin Zhan Yupeng is the uncle of Zhan Guotuan.
+        </p>
+
+        <p>
+            After being spotted by Wang Hai, the "China's first person to crack down on fakes" in 1998, the health management department began to clean up a large number of travel doctors. The Zhan family represented by the Zhan Guotuan was heavily attacked by public
+            opinion. The strength of the Zhan family in Putian Youyi had to converge. In this silence, Zhan Guotuan left Singapore and set up Singapore Zhongyu Medical Group and Singapore International Medical Industry Management Group Co., Ltd. to eliminate
+            the original sin with new foreign clothes.
+        </p>
+
+
+        <div style="position: relative;width: 100%; height:800px;">
+            <div class="graph_title">Huaheng Medical Group
+                <button onclick="myrefresh()" class="button2" title="if you feel lagging, please refresh the browers"></button>
+            </div>
+
+            <div class="graph_legend">
+                <!-- <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="purple"></circle></svg>company
+                <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="orange"></circle></svg>orange
+                <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="red"></circle></svg>boss -->
+            </div>
+            <!-- <div id="huaheng" style="text-align: center; height:500px;  visibility: hidden"></div> -->
+
+
+            <div id="huaheng" style="text-align: center; height:500px; "></div>
+            <div id="handle_huaheng" style="text-align: center;">
+
+            </div>
+        </div>
+
+        <div class="textOffSlider">
+            <p>
+                In 2001, Zhan Guotuan reorganized and established Shanghai Huaheng Investment (Group) Co., Ltd., with three major institutions: Shanghai Hengyu Industrial Co., Ltd., Shanghai Xinzhong Advertising Co., Ltd. and Zhejiang Xin'an International Hospital Co.,
+                Ltd. The Zhan Guotuan family has consciously weakened its investment in hospitals. In terms of investment relations, it is difficult to see other hospital series directly related to it except Xinan International Hospital.
+            </p>
+        </div>
+
+        <div style="padding-top: 100px; padding-bottom: 50px;">
+            <div style="display: inline-block; width:40%; padding-left: 10%;">
+                <img src="img/huaheng.png" style="width:100%;vertical-align:middle"></img>
+            </div>
+            <div style="display: inline-block; width:40%;vertical-align:middle">
+                <p style="padding-bottom: 30px;">
+                    xxxxxxx
+                </p>
+                <br>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+
+        <p>
+            Unlike his cousin Zhan Guotuan, Zhan Yangbin continued to make efforts in the medical industry, shifting from traditional STD hospitals focusing on sexually transmitted diseases and infertility to higher levels of "gold content" such as brain and ophthalmology.
+            There are roughly two ways to go ashore. People's physical examination and "blue series", "blue series" are blue hospitals that start with "blue", such as blue health brain, blue shield brain, and blue cross.
+        </p>
+        <p>
+            In 2005, Zhan Yangbin established the Beijing People's Hospital Investment Company, and later set up a number of medical examination institutions in Tianjin, Zhengzhou, and Chongqing, with Beijing as the center. In the process, external capital forces
+            are gradually infiltrating. Investment bosses He Boquan, Zhang Ligang, Yunfeng Investment, Alibaba Ventures, and Aikang Guobin's health checkups have become the largest shareholders of Beijing's medical checkup clinic.
+        </p>
+
+        <div style="position: relative;width: 100%; height:800px; ">
+            <div class="graph_title"> Blue Cross Medical Group
+                <button onclick="myrefresh()" class="button2" title="if you feel lagging, please refresh the browers"></button>
+            </div>
+            <div class="graph_legend">
+                <!-- <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="purple"></circle></svg>company
+                <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="orange"></circle></svg>orange
+                <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="red"></circle></svg>boss -->
+            </div>
+            <!-- <div id="lanshizi" style="text-align: center; height:500px;  visibility: hidden"></div> -->
+            <div id="lanshizi" style="text-align: center; height:500px;"></div>
+            <div id="handle_lanshizi" style="text-align: center;"></div>
+        </div>
+        <p>
+            Following the medical examination industry, Zhan Yangbin started to work in the direction of brain science, linking deeper with external capital. From the perspective of equity, Zhan Yangbin is more like a follower than a leader. He is closely connected
+            with the New Hope Liu Yonghao family and connects with Zhuo Liqiang. He indirectly holds blue shields and blue crosses through Shanghai Lansheng Brain Hospital , Blue Health, Blue Stone and other medical resources, and most of these hospitals
+            were established after 2018.
+        </p>
+        <div style="padding-top: 100px; padding-bottom: 50px;">
+            <div style="display: inline-block; width:40%; padding-left: 10%;">
+                <img src="img/lanshizi.png" style="width:100%;vertical-align:middle"></img>
+            </div>
+            <div style="display: inline-block; width:40%;vertical-align:middle">
+                <p style="padding-bottom: 30px;">
+                    In addition, Zhan Yangbin also invested in Beijing Yeshang Golf Club, Shanghai Hehui Investment Management Co., Ltd. and Medical Credit Financial Information Services (Shanghai) Co., Ltd. The former two are the connection points between the kinsmen of
+                    the Putian family, and the medical letter as a medical loan is a new attempt by Zhan Yangbin in the capital market after the rise of P2P.
+                </p>
+                <p>
+                    His uncle, Zhan Yupeng, also acquired Singaporean citizenship and formed Singapore's Zhongjun Medical Group. Its Kun Ru Mary series had planned to go public in 2012 and has entered the stage of listing counseling, but has since returned to silence.
+                </p>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+
+        <div style="padding-top: 100px; padding-bottom: 50px;">
+            <div style="display: inline-block; width:50%; padding-left: 10%;">
+                <img src="img/lin2.png" style="width:100%;vertical-align:middle"></img>
+            </div>
+            <!-- <div style="display: inline-block; width:40%;vertical-align:middle">
+                <p style="padding-bottom: 30px;">
+                    The representative figures of the Lin family in Putian are Lin Zhizhong and Lin Yuming. </p>
+                <p style="padding-bottom: 30px;">
+                    In the Putian generation, Lin Zhizhong realized the malpractices of the old model earlier, and successfully transformed, forming two major medical patterns of "fraternity-benevolence" and "big-day-big", which have been gradually transferred to the children
+                    and are being realized between generations inherited. His brother Lin Zhicheng set up Tianzhi Group with Guangzhou as its base camp, with dozens of private hospitals under his control. The number is not large, but the scale is large.
+                </p>
+            </div> -->
+            <div style="clear:both"></div>
+        </div>
+        <p>
+            The representative figures of the Lin family in Putian are Lin Zhizhong and Lin Yuming. </p>
+        <p>
+            In the Putian generation, Lin Zhizhong realized the malpractices of the old model earlier, and successfully transformed, forming two major medical patterns of "fraternity-benevolence" and "big-day-big", which have been gradually transferred to the children
+            and are being realized between generations inherited. His brother Lin Zhicheng set up Tianzhi Group with Guangzhou as its base camp, with dozens of private hospitals under his control. The number is not large, but the scale is large.
+        </p>
+
+        <p>
+            In terms of seniority, Lin Yuming is a junior in the Putian Department of Hospitals, and even Lin Yuming said that he belongs to the second generation of the Putian Department. However, the rising star, the founder of the Bosheng Group, claims to be a
+            company in Putian's medical care to try a brand chain business; the famous representative show is the Shanxi Modern Women's Hospital, within five years, the scale has expanded to municipalities and capital cities. Hemei Medical, which it established,
+            entered the Hong Kong main board market in July 2015.
+        </p>
+
+
+        <div style="position: relative;width: 100%; height:800px;">
+            <div class="graph_title"> Harmonicare Medical Group
+                <button onclick="myrefresh()" class="button2" title="if you feel lagging, please refresh the browers"></button>
+            </div>
+            <div class="graph_legend">
+                <!-- <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="purple"></circle></svg>company
+            <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="orange"></circle></svg>orange
+            <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="red"></circle></svg>boss -->
+            </div>
+            <!-- <div id="hemei" style="text-align: center; height:500px;  visibility: hidden"></div> -->
+            <div id="hemei" style="text-align: center; height:500px; "></div>
+            <div id="handle_hemei" style="text-align: center;"></div>
+        </div>
+        <p>
+            Just as this "dark horse" swelled all the way, Shenzhen and the United States Women's and Pediatric Hospital under Hemei Medical, at the end of 2018, were involved in the <a href="https://en.wikipedia.org/wiki/He_Jiankui">"gene-edited baby" case</a>.
+            On December 30, 2019, the "gene-edited baby" case was sentenced in the first instance of the Shenzhen Nanshan District Court. He Jiankui, Zhang Renli, Qin Jinzhou and others were convicted of illegal medical practice for illegally carrying
+            out human embryo gene editing and reproductive medical activities for reproductive purposes.
+        </p>
+        <div style="padding-top: 100px; padding-bottom: 50px;">
+            <div style="display: inline-block; width:40%; padding-left: 10%;">
+                <img src="img/hemei.png" style="width:100%;vertical-align:middle"></img>
+            </div>
+            <div style="display: inline-block; width:40%;vertical-align:middle">
+                <p style="padding-bottom: 30px;">
+                    The days of Hemei Medical also seem to be difficult. Before the IPO, according to the prospectus, the performance growth was very rapid-"Thanks to the expansion of scale effects and the improvement of company management efficiency, the sales and management
+                    expenses of Hemei Healthcare have decreased year by year. Significant growth over the past three years. "
+                </p>
+                <p>
+                    At the time of listing, it was said that on the first day of its international placement, it had been snapped up by four major internationally renowned investment funds. By the deadline of the public offering, Hemei Medical had obtained 7.7 times over-purchase,
+                    priced at a maximum of HK $ 7.55. However, the appearance was high, and the stock price has since fallen. By the time of trading suspension in March 2019, it had fallen to HK $ 2.04 per share.
+                </p>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <p>
+            At the same time, according to the 2018 annual report, it lost 200 million yuan. Since then, Lin Yuming has begun to "sell and sell." In April 2018, Hemei Medical sold 92% of its Shenzhen Hemei Women's and Pediatric Hospital for 63 million yuan. Three
+            months later, Hemei Medical also said that it would transfer the entire equity of Wuhan Modern Hospital, Chongqing Wanzhou Hospital and Chongqing Metropolitan Hospital for 22 million yuan. The latest news is that Ren Jinhui, vice president
+            and chief financial officer of Hemei Medical Group, resigned.
+        </p>
+        <p>
+            When Hemei Medical went public, it showed strong capital energy behind it. According to the prospectus, CDH Investment through CDH Jiangen, a wholly-owned CDH Harmony, which holds 13.66% of the listed company's equity; CCB International Medical Fund,
+            through the parent company's wholly-owned holding company Mighty Sky 8 % Equity. Bomei Medical, the predecessor of Hemei Medical, has a more direct bond with CDH and CCB International: CDH Phase I and CDH Yuanbo hold 10.66% and 3.00% of the
+            shares of Bosson Medical respectively, and CCB International Medical 8% of the shares. But now, Hemei is still that Hemei, but the capital is long gone.
+
+        </p>
+
+
+        <div style="padding-top: 100px; padding-bottom: 50px;">
+            <div style="display: inline-block; width:50%; padding-left: 10%;">
+                <img src="img/chen2.png" style="width:100%;vertical-align:middle"></img>
+            </div>
+            <!-- <div style="display: inline-block; width:40%;vertical-align:middle">
+            </div>
+            <div style="clear:both"></div> -->
+        </div>
+        <p>
+            On January 2nd, the white paper of the medical beauty industry in 2019 released by Gomei App shows that the market size of pure medical beauty in China in 2019 will reach USD 256 billion, with an average growth rate of about 30% in the past five years.
+            It can be said that the medical beauty industry is the world of the Putian Department, and the Putian Department is dominated by the Chen family. For example, Chen Jinxiu belongs to the “Mei Lai Department”, “Hua Lai Department”, “Zhu Xin
+            Department”, “Huan Hua Department”, Chen Guoxiong ’s “Art Galaxy”, “Media”, and Chen Jin Zhang ’s “Medicine”
+        </p>
+
+        <p>
+            Although for many years, under the management of the family, the interests of many parties have been intertwined, the Chen family has continued to plan a large territory and tried to land on the capital market again and again. Chen Jinxiu and Chen Jinzhang
+            are in the same vein, while Chen Guoxiong is Chen Jinzhang's nephew.
+        </p>
+
+        <div style="position: relative;width: 100%; height:800px; ">
+            <div class="graph_title">Yestar medical Group
+                <button onclick="myrefresh()" class="button2" title="if you feel lagging, please refresh the browers"></button>
+            </div>
+            <div class="graph_legend">
+                <!-- <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="purple"></circle></svg>company
+                <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="orange"></circle></svg>orange
+                <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="red"></circle></svg>boss -->
+            </div>
+            <!-- <div id="yixing" style="text-align: center; height:500px;  visibility: hidden"></div> -->
+            <div id="yixing" style="text-align: center; height:500px; "></div>
+            <div id="handle_yixing" style="text-align: center;"></div>
+        </div>
+
+        <p>
+            Chen Guoxiong and Chen Guoxing's two brothers, Yixing, are considered to be the second largest medical beauty group in China. Yixing Medical Beauty submitted a prospectus to the Hong Kong Stock Exchange in July 2018 and tried to impact the Hong Kong stock
+            market. "China's first chain of medical beauty institutions", but since then Yixing Medical Beauty has withdrawn its IPO application. </p>
+        <div style="padding-top: 100px; padding-bottom: 50px;">
+            <div style="display: inline-block; width:35%; padding-left: 10%;">
+                <img src="img/yixing.png" style="width:100%;vertical-align:middle"></img>
+            </div>
+            <div style="display: inline-block; width:50%;vertical-align:middle">
+                <p style="padding-bottom: 30px;">
+                    There is also a key figure in Yixing Medical Beauty-Lin Changqing, who is the brother-in-law / brother of the Chen brothers. The prospectus showed that before the reorganization, Chen Guoxiong, Chen Guoxing and Lin Changqing respectively held 35%, 45%
+                    and 20% of Yixing Medical Beauty; after the reorganization, the shareholding structure was more complicated, but Lin Changqing still held certain shares.
+                </p>
+                <p>
+                    It is worth noting that Yixing Medical Beauty is deeply trapped in the infringement quagmire, which may be one of the key obstacles to its listing. The reputation problem that it is facing at all times is a sharp sword hanging on the head of a listed
+                    company. The prospectus showed that the Group had 30 medical advertising violations, 77 disputes over portrait rights, and 4 medical accidents. Tianyan's investigation revealed that Yixing Medical Beauty's institutions in various places
+                    were sued by actors Zhao Yazhi, Liu Yuxin, Jin Qiaoqiao, and Zhou Weitong for disputes over the right to portraits. Yixing Medical Beauty has also been frequently sued for abusing the portraits of others. The spending on fines and
+                    disputes in 2017 amounted to RMB 3.31 million.
+                </p>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+
+        <p>
+            One possible reason for Yixing Medical Beauty's withdrawal of the IPO may be that they have found another capital path: cooperate with uncle Chen Jinzhang and land on the science and technology board with the help of Medici.
+        </p>
+        <p>
+            Data show that Medici was established in February 2004 as a drug research and development outsourcing service company (CRO) with a registered capital of 46.5 million yuan. GEM listing dream. Today, we all have the same goal. On November 5, 2019, Medici
+            landed on the science and technology board with an issue price of 41.5 yuan and an opening price of 66.66 yuan, an increase of 60.6%. The prospectus shows that Medici has a total of 13 shareholders, and the largest shareholder is Chairman
+            Chen Jinzhang, with a shareholding of 20.91%. The second, third, and fifth largest shareholders are Chen Jianhuang, Chen Chunlai, and Chen Guoxing, and their shareholding ratios are 13.21%, 10.66%, and 7.12%, respectively. At the same time,
+            Lin Changqing also appeared in this capital map.</p>
+
+
+
+        <div style="position: relative;width: 100%; height:800px; ">
+            <div class="graph_title">Mylike Medical Group
+                <button onclick="myrefresh()" class="button2" title="if you feel lagging, please refresh the browers"></button>
+            </div>
+            <div class="graph_legend">
+                <!-- <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="purple"></circle></svg>company
+            <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="orange"></circle></svg>orange
+            <svg width="20" height="10"><circle cx="10" cy="5" r="5" fill="red"></circle></svg>boss -->
+            </div>
+            <!-- <div id="meilai" style="text-align: center;  height:500; visibility: hidden"></div> -->
+            <div id="meilai" style="text-align: center;  height:500; "></div>
+            <div id="handle_meilai" style="text-align: center;"></div>
+        </div>
+        <p>
+            From the perspective of model, Chen Jinxiu formed a chain control model represented by "Huamei / Mailai / Hualai / Zixin" throughout the country with the help of the Tomato Group and the central Meilai Medical Cosmetic Hospital as the origin. At the same
+            time, it also invests in hospitals based on regional investment management companies (Guangzhou Meilai, Fujian Meilai, Xiamen Huayi Museum, Sichuan Zhongfu, Chengdu Wanyin). At present, obvious hospital clusters have been formed in Guangshen,
+            Sichuan, Chongqing, Fujian and other places.
+        </p>
+        <div style="padding-top: 100px; padding-bottom: 50px;">
+            <div style="display: inline-block; width:35%; padding-left: 10%;">
+                <img src="img/meilai.png" style="width:100%;vertical-align:middle"></img>
+            </div>
+            <div style="display: inline-block; width:50%;vertical-align:middle">
+                <p style="padding-bottom: 30px;">
+                    Interestingly, Chen Jinxiu used Shanghai Meilai Investment Management Company to achieve absolute control over Meilai Medical Aesthetic Hospital, thereby controlling other chain systems in the country. He also did not hesitate to give equity incentives,
+                    such as cooperating with Ye Zhiyang in Guangzhou Meilai and with Zhan Jiansheng In cooperation with Xiamen Huayi Museum, it seems that it must be the "Putian Family". Although there are different agents in each region, they have not
+                    really enjoyed the capital dividend. They are relatively distributed around the network and form a regional management. It can be said that the power of outsiders is used to give the same rights. </p>
+                <p>
+                    Perhaps the Putian Hospital, which was once barbaric, is trying to integrate with modern enterprise management, but the maintenance of blood and kinship is still the inherent growth motivation of this big family.
+                </p>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+
+
+        <div style="display:block; clear: both; margin-bottom: 100px; color:white;">
+            <h1>Conclusion</h1>
+            <p>
+                Life is hard
+            </p>
+            <h2>Data Source:</h2>
+            <p style=" padding-top: 10px;">1. iFeng list<br>2. Tianyancha.com
+                <br>3. Prospectus & annual business report
+                <br>4. 2018 China Medical Beauty Industry White Paper
+                <br> 5. Photo credit:
+                <br>· Google & Baidu street view
+                <br>· Homepages of hospitals
+                <br>· Caixin.com
+                <br>6. Related reports:
+                <br>·《谁在掌控中国民营医院》: <a href="http://www.bjzqw.com/lanmu/rdht/shgj/2006/1225/1196.html">http://www.bjzqw.com/lanmu/rdht/shgj/2006/1225/1196.html</a>
+                <br>·《刘永好：不急着兑现新希望的“千亿梦”，先扶女儿上马》:
+                <a href="https://www.huxiu.com/article/169564.html">https://www.huxiu.com/article/169564.html</a>
+                <br>·《和美医疗逆势操作 国内最大私立妇产医院港股上市》:
+                <a href="https://new.qq.com/rain/a/20150707020608">https://new.qq.com/rain/a/20150707020608</a>
+            </p>
+            <h2>Authors</h2>
+            <p style="color:grey; padding-top: 10px;">Leave anonymous</a>
+            </p>
+        </div>
+        <div style="width:100%; ">
+            <img src="img/banner2.png" style="width:100%;opacity:0.3"></img>
+        </div>
+
+
+    </div>
+
+    <!-- <script> 
+        load_page("js/a") //线上js放置的位置 我们项目是生成在dist目录下 
+    </script> -->
+
+    <!-- <script> -->
+    <script type="text/javascript">
+        // 画legend
+        const texture_3 = textures
+            .lines()
+            .size(8)
+            .orientation("3/8")
+            .stroke('black')
+            .background("white");
+
+        var legend = d3.selectAll(".graph_legend")
+            .append('svg')
+            .attr('height', "50px")
+            .attr('width', "320px")
+
+        legend.append("circle").attr("cx", 10).attr("cy", 10).attr("r", 6).style("fill", "#3EBFED")
+        legend.append("circle").attr("cx", 110).attr("cy", 10).attr("r", 6).style("fill", "#FFDA44")
+        legend.call(texture_3).append("circle").attr("cx", 193).attr("cy", 10).attr("r", 6).style("fill", texture_3.url())
+        legend.append("text").attr("x", 25).attr("y", 10).text("company").style("font-size", "14px").style("fill", "white").attr("alignment-baseline", "middle")
+        legend.append("text").attr("x", 125).attr("y", 10).text("person").style("font-size", "14px").style("fill", "white").attr("alignment-baseline", "middle")
+        legend.append("text").attr("x", 208).attr("y", 10).text("key performer").style("font-size", "14px").style("fill", "white").attr("alignment-baseline", "middle")
+
+
+
+        //通用功能
+        function display(id, state) {
+            //graph动态删除开关
+            var target = document.getElementById(id);
+            target.style.visibility = state;
+        }
+
+        function myrefresh() {
+            window.location.reload();
+        }
+
+
+        function history() {
+            window.history.go(0);
+        }
+
+        //setTimeout('myrefresh()',1000); //指定1秒刷新一次
+
+        //调用graph绘制 
+
+        draw_graph("huaheng", 1999, "huaheng.json", ["詹国团", "詹国营", "詹国团"], ["上海华衡投资（集团）有限公司"], "1")
+        draw_graph("lanshizi", 2008, "lanshizi.json", ["卓立强"], [], "2")
+        draw_graph("hemei", 2005, "hemei.json", "林玉明", ["和美医疗控股有限公司", "贵阳和美妇产医院有限公司"], "3")
+        draw_graph("yixing", 2002, "yixing.json", ["陈国兴", "陈国雄"], ["上海美迪亚医院投资集团有限公司", "艺星医疗美容集团股份有限公司"], "4")
+        draw_graph("meilai", 2005, "meilai.json", ["陈金秀"], ["美莱医学美容医院有限公司"], "5")
+
+
+        function draw_graph(pid, beginner, data, boss, agency, number) {
+            var width = 960
+            var height = 500
+            var id = "#" + pid;
+
+            var svgG = d3.select(id)
+                .append('svg')
+                .attr("width", width)
+                .attr("height", height)
+                // width = +svg.attr("width"),
+                // height = +svg.attr("height");
+
+            /////// SLIDER ///////
+            var L = 10;
+            var slider_size = 0.75 * width;
+            var left_margin = 0.5 * (width - slider_size);
+            var x = d3.scaleLinear()
+                .domain([0, 10])
+                .range([left_margin, slider_size + left_margin])
+                .clamp(true);
+
+            var handlename = "#handle_" + pid; //对应的集团slider
+            //  var slider = sliderName;
+            //  sliderName == d3.select(handlename)
+            var slider = d3.select(handlename) //另一个slider不能点击
+                .append("svg")
+                .attr("width", width)
+
+
+            slider.append("line")
+                .attr("class", "track")
+                .attr("x1", x.range()[0])
+                .attr("x2", x.range()[1])
+                .attr("transform", "translate(15,50)")
+                .select(function() {
+                    return this.parentNode.appendChild(this.cloneNode(true));
+                })
+                .attr("class", "track-inset")
+                .select(function() {
+                    return this.parentNode.appendChild(this.cloneNode(true));
+                })
+                .attr("class", "track-overlay")
+                .call(d3.drag() ///drag handle
+                    .on("start.interrupt", function() {
+                        //slider.interrupt();
+                        slider.interrupt();
+                    })
+                    .on("start drag", function() {
+                        //返回新的handle x
+                        return hue(x.invert(d3.event.x));
+                    }));
+
+
+            var years = d3.range(beginner, 2020, 1)
+            var dx = L / (years.length - 1)
+            var xticks = d3.range(0, L + dx, dx)
+
+            slider.insert("g", ".track-overlay")
+                .attr("class", "ticks")
+                .attr("transform", "translate(0," + 25 + ")")
+                .selectAll("text")
+                .data(xticks)
+                .enter().append("text")
+                .attr("x", x)
+                .attr("font-color", "white")
+                .attr("text-anchor", "middle")
+                .attr("transform", "translate(15,50)")
+                .text(function(d, i) {
+                    return years[i];
+                });
+
+
+            var handle = slider.insert("circle", ".track-overlay")
+                .attr("id", "handle" + number)
+                .attr("r", 9)
+                .attr("cx", x.range()[0])
+                .attr("transform", "translate(15,50)"); //initial position to zero
+
+
+            function hue(h) { //what is hue
+                handle.attr("cx", x(h)); //更新handle位置
+            }
+
+
+            //node拖拽函数
+            function dragstarted(d) {
+                if (!d3.event.active) simulation.alphaTarget(0).restart();
+                d.fx = d.x;
+                d.fy = d.y;
+            }
+
+            function dragged(d) {
+                d.fx = d3.event.x;
+                d.fy = d3.event.y;
+            }
+
+            function dragended(d) {
+                if (!d3.event.active) {
+                    simulation.alphaTarget(0);
+                }
+                d.fx = null;
+                d.fy = null;
+
+
+            }
+            /////// GRAPH ////////
+            d3.json(data, function(error, graph) {
+                    if (error) throw error;
+                    //user-defined parameters
+                    var maxDistance = 300, //max distance between two nodes
+                        minDistance = 10, //min distance betwween two nodes
+                        maxRadius = 30, //max radius of circle
+                        minRadius = 8, //min radius of circle
+                        minLinkwidth = 0, //min width of link
+                        maxLinkwidth = 6 //max width of link
+
+                    var [maxConnect, maxFraction] = getnetworkProp(graph);
+                    // var [maxConnect, maxFraction] = [10, 10]
+
+                    var nodes = graph.nodes,
+                        nodeById = d3.map(nodes, function(d) {
+                            return d.id;
+                        }),
+                        links = graph.links,
+                        value = links.map(function(d) {
+                            return d.value
+                        }),
+                        l = []
+                    links.forEach(function(link) {
+                        var s = nodeById.get(link.source),
+                            t = nodeById.get(link.target),
+                            v = link.value,
+                            y = link.year;
+
+                        l.push({
+                            source: s,
+                            target: t,
+                            year: y,
+                            value: v
+                        });
+                    });
+
+                    links = l
+
+                    simulation = d3.forceSimulation(nodes)
+                        .force("charge", d3.forceManyBody().strength(-100).theta(0.8).distanceMax(150))
+                        .force("link", d3.forceLink(links).distance(200))
+                        .force("center", d3.forceCenter(50, 0))
+                        .on("tick", ticked);
+
+
+
+                    var g = svgG.append("g").attr("transform", "translate(" + width / 2 + "," + 0.45 * height + ")"),
+                        link = g.append("g").attr("stroke", "white").attr("stroke-width", 0.5).selectAll(".link"),
+                        node = g.append("g").attr("stroke", "white").attr("stroke-width", 0.5).selectAll(".node");
+
+                    restart();
+
+                    d3.interval(function() {
+                        restart();
+                    }, 800)
+
+                    function restart() {
+                        var current_year = years[Math.round(x.invert(jQuery("#handle" + number).attr("cx")) / dx)];
+                        // debugger;
+                        //get "radius" of each node for current_year
+                        var fraction = graph.nodes.map(function(d) {
+                            return d.fraction
+                        }).map(function(d) {
+                            return d[String(current_year)];
+                        })
+                        var tooltip = d3.select("body").append("div")
+                            .attr("class", "tooltip")
+                            .style("opacity", 0);
+                        const texture_1 = textures
+                            .lines()
+                            .size(10)
+                            .orientation("3/8")
+                            .stroke('black')
+                            .background("#FFDA44");
+
+                        const texture_2 = textures
+                            .lines()
+                            .size(15)
+                            .orientation("3/8")
+                            .stroke('black')
+                            .background("#3EBFED");
+
+                        // Apply the general update pattern to the nodes.
+                        node = node.data(nodes, function(d) {
+                            return d.id;
+                        });
+                        node.exit().remove();
+                        node = node.enter()
+                            .call(texture_1)
+                            .call(texture_2)
+                            .append("circle")
+                            .attr("class", "node" + number)
+                            // .style('fill', texture.url())
+                            .style("fill", function(d) {
+                                if (boss.includes(d.label)) {
+                                    //                                 debugger;
+                                    return texture_1.url()
+                                } else if (agency.includes(d.label)) {
+                                    return texture_2.url()
+                                } else if (d.type == "Company") {
+                                    return '#3EBFED'
+                                } else {
+                                    return "#FFDA44"
+                                }
+                            })
+                            .attr("stroke", "white")
+                            .attr("stroke-width", "1px")
+                            .on("mouseover", function(d) {
+                                tooltip.transition()
+                                    .duration(200)
+                                    .style("opacity", 1);
+                                if (boss.includes(d.label)) {
+                                    tooltip.html("<div style='background-color:white; border-radius: 10px; padding:10px;'><div style='display:inline-block;'><img style = " + "height:80px;vertical-align:middle" + " src = " + d.img + " > </img><div style='color:black; display: inline-block; vertical-align:middle; padding-right:0px'>" + d.intro + "</div><div>")
+                                        .style("background", "transparent")
+                                        .style("left", (d3.event.pageX) + "px")
+                                        .style("top", (d3.event.pageY - 28) + "px");
+                                } else {
+                                    tooltip.html(d.label)
+                                        .style("background", "white")
+                                        .style("left", (d3.event.pageX) + "px")
+                                        .style("top", (d3.event.pageY - 28) + "px");
+                                }
+                            })
+                            .on("mouseout", function(d) {
+                                tooltip.transition()
+                                    .duration(500)
+                                    .style("opacity", 0);
+                            })
+                            .merge(node)
+                            .call(d3.drag()
+                                .on("start", dragstarted)
+                                .on("drag", dragged)
+                                .on("end", dragended));
+                        node.append("title")
+                            .text(function(d) {
+                                return d.id;
+                            });
+                        //apply transition to radii of nodes
+                        node.transition()
+                            .duration(500)
+                            // .attr("r", function(d) {
+                            //     return Math.max(minRadius, d.fraction[current_year.toString()] / maxFraction * maxRadius);
+                            // })
+                            .attr("r", function(d) {
+                                if (d.fraction[current_year.toString()] == "") {
+                                    return 0
+                                } else {
+                                    return Number(d.fraction[current_year.toString()]) * 1.5
+                                }
+                            })
+                            // Apply the general update pattern to the links
+                        links_filtered = links.filter(function(d) {
+                            return d.year == current_year;
+                        });
+                        link = link.data(links_filtered, function(d) {
+                            return d.source.id + "-" + d.target.id;
+                        });
+                        link.exit().remove();
+                        link = link.enter()
+                            .append("line")
+                            .attr("class", "link")
+                            .merge(link);
+                        //define transition to width of edges
+                        link.transition()
+                            .duration(500)
+                            // .attr("stroke-width", function(d, i) {
+                            //     return Math.max(minLinkwidth, d.value / maxConnect * maxLinkwidth);
+                            // })
+                            .attr("stroke-color", "grey")
+                            .attr("stroke-width", 0.5)
+                            // Update and restart the simulation.
+                        simulation.nodes(nodes);
+                        simulation.force("link").links(links)
+                        simulation.force("link", d3.forceLink(links)
+                            .distance(100)
+                            // .distance(function(d) {
+                            //     if (d.year == current_year) {
+                            //         return Math.min(maxConnect / d.value * minDistance, maxDistance);
+                            //     } else {
+                            //         return maxDistance;
+                            //     }
+                            // })
+                        )
+                        simulation.alpha(0.1).restart();
+                    }
+                    //this function defines position of nodes and links
+                    //at each "simulation time step"
+                    function ticked() {
+                        node.attr("cx", function(d) {
+                                return d.x;
+
+                            })
+                            .attr("cy", function(d) {
+                                return d.y;
+                            })
+                        link.attr("x1", function(d) {
+                                return d.source.x;
+                            })
+                            .attr("y1", function(d) {
+                                return d.source.y;
+                            })
+                            .attr("x2", function(d) {
+                                return d.target.x;
+                            })
+                            .attr("y2", function(d) {
+                                return d.target.y;
+                            });
+                    }
+                })
+                // this function calculates properties of network
+                // (i.e., max connection between nodes, max fraction value of node)
+            function getnetworkProp(graph) {
+                //1) max connection between nodes
+                var maxConnect = Math.max.apply(Math, graph.links.map(function(d) {
+                    return d.value;
+                })); //max connection between nodes
+                //2) max fraction value (used to draw nodes radii)
+                var maxFraction = 0;
+                var arr, obj, maxf;
+                for (i = 0; i < graph.nodes.length; i++) {
+                    obj = graph.nodes[i].fraction
+                    arr = Object.keys(obj).map(function(key) {
+                        return obj[key];
+                    });
+                    maxf = Math.max.apply(null, arr);
+                    maxFraction = Math.max(maxFraction, maxf);
+                }
+                return [maxConnect, maxFraction];
+            }
+        }
+    </script>
+
+    <script>
+        //draw pic
+        /*
+        function myFunction() {
+            var pics = Array.from(new Array(90).keys());
+            //支持用户多次点击按钮，所以每次要清空一下
+            for (p = 0; p < 47; p++) {
+                document.getElementById("pic" + p).src = "";
+            }
+            var counter = 0
+            setInterval(function showPic() {
+                if (counter < 47) {
+                    //在list里面随机抽一张图片显示，并在列表里删除它
+                    var index = Math.floor(Math.random() * pics.length)
+                    var pic = pics[index];
+                    document.getElementById("pic" + counter).src = "ads/9-" + pic + ".jpg";
+                    var posx = counter % 10 == 0 ? 0 : counter % 10 * 150 + Math.random() * 100;
+                    var posy = Math.floor(counter / 10) * 120;
+                    //基本均衡获取0到n的随机整数，其中获取最小值和最大值的几率少一半
+                    // var posx = Math.round(Math.random()* (screen.width-160));
+                    // var posy = Math.round(Math.random()*400);
+                    document.getElementById("pic" + counter).style.left = posx + 'px';
+                    document.getElementById("pic" + counter).style.top = posy + 'px';
+                    // debugger;
+                    pics.splice(index, 1)
+                    counter = counter + 1
+                    console.log(pics);
+                    console.log(index);
+                }
+            }, 20)
+        }*/
+
+        /*
+                //draw particle
+                //设置粒子的宽高
+                var widthP = screen.width;
+                var heightP = 1000; //600
+                var scale = {
+                    x: d3.scale.linear().domain([0, 1]).range([0, widthP]),
+                    y: d3.scale.linear().domain([0, 1]).range([heightP, 0]),
+                    // 圆的半径范围
+                    r: d3.scale.linear().domain([0, 1]).range([1, 6]),
+                    // 圆的透明度范围
+                    a: d3.scale.linear().domain([0, 1]).range([.1, .4])
+                };
+
+                var canvasP = d3.select("#background").append("canvas")
+                    .attr("width", widthP)
+                    .attr("height", heightP);
+
+
+                var context = canvasP.node().getContext("2d");
+                //控制点的数量  
+                var particles = d3.range(300)
+                    .map(function() {
+                        return {
+                            x: Math.random(),
+                            y: Math.random(),
+                            r: Math.random(),
+                            t: Math.random() * 2 * Math.PI
+                        };
+                    });
+                draw(particles);
+                setInterval(function() {
+                    particles = tick(particles);
+                    // 控制点的运动速度
+                    draw(particles);
+                }, 6);
+                //由于数据加载，粒子运动速度可能减速
+
+                // 给每一个生成的粒子一个随机的位置，同时判断是否超出画布
+                function tick(particles) {
+                    return particles.map(function(d) {
+                        d.t += Math.random() * .5 - .25;
+                        d.x += .001 * Math.cos(d.t);
+                        d.y += .001 * Math.sin(d.t);
+                        d.r += Math.random() * .01 - .005;
+                        if (d.x < 0 || d.x > widthP) {
+                            d.x = .5;
+                            d.r = .1;
+                        }
+                        if (d.y < 0 || d.y > heightP) {
+                            d.y = .5;
+                            d.r = .1;
+                        }
+                        if (d.r <= 0) d.r = .1;
+                        return d;
+                    });
+                }
+
+                function draw(particles) {
+                    context.clearRect(0, 0, widthP, heightP);
+                    particles.forEach(function(d) {
+                        var x = scale.x(d.x),
+                            y = scale.y(d.y),
+                            r = scale.r(d.r),
+                            a = scale.a(d.r);
+                        context.beginPath()
+                        context.arc(x, y, r, 0, 2 * Math.PI);
+                        //粒子的颜色
+                        context.fillStyle = "rgba(100, 100, 255," + a + ")";
+                        // context.fillStyle = "rgba(255, 255, 255," + a + ")";
+                        context.fill();
+                    });
+                }
+
+        */
+
+
+        //add sankey
+        //canvas size
+        var margin = {
+            top: 1,
+            right: 3,
+            bottom: 1,
+            left: 0
+        };
+        width = window.innerWidth * 0.78;
+        height = 600; //svg大小
+
+        //number format and color
+        var formatNumber = d3.format(",.0f"),
+            format = function(d) {
+                return formatNumber(d) + " TWh";
+            },
+            //color = d3.schemeCategory10(); //版本变更
+            color = d3.scaleOrdinal(d3.schemeCategory20);
+
+        var svg = d3.select("#sankeysvg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .style("color", "transparent") ////影响canvas显示
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        //sankey node style 
+        var sankey = d3.sankey()
+            .nodeWidth(15) //node宽度
+            .nodePadding(10)
+            .size([width, height]);
+
+        //sankey line
+        var path = sankey.link();
+
+        //频率
+        var freqCounter = 1;
+
+        //extra 
+        function getpointData() {
+            $.getJSON("points.json", function(data, status) {
+                if (status == 'success') {
+                    //console.log("if success"+status);
+                    pointdata = data;
+
+                    return pointdata;
+                } else {
+                    //console.log("没有读取到本地文件："+status);
+                    return false;
+                }
+            })
+        }
+        // var pointdata = getpointData();//get extra sankey data
+
+        //nodejs 服务器解决json跨域问题
+        ///////SANKEY//////
+        d3.json("lifeline.json", function(error, energy) {
+            if (error) throw error;
+            //sankey layout
+            sankey
+                .nodes(energy.nodes)
+                .links(energy.links)
+                .layout(32);
+
+            //sankey link
+            var link = svg.append("g").selectAll(".link")
+                .data(energy.links)
+                .enter()
+                .append("path")
+                .attr("class", "linksankey") ///class different from graph
+                .attr("d", path)
+                //.style("fill", "white")
+                // .style("storke","white")
+                // .style("opacity",0)
+                .style("stroke-width", function(d) {
+                    return Math.max(6, d.dy);
+                }) //宽度最小6
+                .sort(function(a, b) {
+                    return b.dy - a.dy;
+                });
+
+            //link title
+            link.append("title")
+                .text(function(d) {
+                    return d.source.name + " → " + d.target.name + "\n" + format(d.value);
+                });
+            //test drag
+
+            const drag = d3.drag()
+                .on("start", function() {
+                    this.parentNode.appendChild(this);
+                })
+                .on("drag", dragmove);
+
+
+            // 调用call是手动调用函数并将选择集作为第一个参数
+            // sankey node
+            var node = svg.append("g").selectAll(".node")
+                .data(energy.nodes)
+                .enter().append("g")
+                .attr("class", "node")
+                .attr("transform", function(d) {
+                    return "translate(" + d.x + "," + d.y + ")";
+                })
+                //.call(d3.behavior.drag()
+                .call(drag)
+                // .origin(function(d) { return d; })
+                // .on("dragstart", function() { this.parentNode.appendChild(this); })
+                // .on("drag", dragmove));
+
+
+            // sankey rect
+            node.append("rect")
+                .attr("height", function(d) {
+                    return d.dy;
+                })
+                .attr("width", sankey.nodeWidth())
+                //颜色
+                .style("fill", function(d) {
+                    // return d.color = color(d.name.replace(/ .*/, ""));
+                    return d.color
+                })
+                // .style("fill", "black") //transparent or black
+                .style("stroke", "white")
+                .append("title")
+                .text(function(d) {
+                    return d.name + "\n" + format(d.value);
+                });
+
+            // sankey text
+            node.append("text")
+                .attr("x", -6)
+                .attr("y", function(d) {
+                    return d.dy / 2;
+                })
+                .attr("dy", ".35em")
+                .attr("text-anchor", "end")
+                .attr("transform", null)
+                .attr("font-size", 10) //text size 
+                .attr("font-family", "STXihei") //text family
+                .text(function(d) {
+                    return d.name;
+                })
+                .filter(function(d) {
+                    return d.x < width / 2;
+                })
+                .attr("x", 6 + sankey.nodeWidth())
+                .attr("text-anchor", "start");
+
+            // drag rect
+            function dragmove(d) {
+                d3.select(this).attr("transform", "translate(" + d.x + "," + (d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))) + ")");
+                sankey.relayout();
+                link.attr("d", path);
+            }
+
+
+            var linkExtent = d3.extent(energy.links, function(d) {
+                return d.value
+            });
+            var frequencyScale = d3.scaleLinear().domain(linkExtent).range([1, 100]); //[[0.05, 1]
+            // node size 
+
+            var particleSize = d3.scaleLinear().domain(linkExtent).range([1, 5]); //版本变化
+            var particleColorArray = new Array();
+
+            // link style
+            energy.links.forEach(function(link) {
+                particleColorArray.length = 0;
+                link.freq = frequencyScale(link.value);
+                //particle size
+                link.particleSize = particleSize(link.value);
+                link.particleColor = d3.scaleLinear().domain([1, 1000]).range([link.source.color, link.target.color]);
+                particleColorArray.push(link.target.color);
+                link.particleColorArray = particleColorArray;
+            })
+
+            //timer
+            var t = d3.timer(tick, 1000); //设置等待时间
+            var particles = [];
+            var elapsed_outer = false; //记录动画流逝的时间
+
+            //play controller
+            pauseAni = function() {
+                t.stop();
+            }
+            playAni = function() {
+                t.restart(tick, 1000);
+            }
+
+
+            //new tick
+            function tick(elapsed, time) {
+                particles = particles.filter(function(d) {
+                    return d.current < d.path.getTotalLength()
+                });
+                d3.selectAll("path.linksankey")
+                    .each(
+                        function(d) { 
+                            for  (var  x  =  0;  x  <  (d.value) / 2;  x++)  { 
+                                var offset = (Math.random() - .5) * (d.dy - 4);
+                                if (Math.random() < d.freq) {
+                                    var length = this.getTotalLength();
+                                    particles.push({
+                                            link: d,
+                                            time: elapsed,
+                                            offset: offset,
+                                            path: this,
+                                            length: length,
+                                            animateTime: length,
+                                            speed: 0.5 + (Math.random())
+                                        }) //speed
+                                }
+                            }
+                        });
+                particleEdgeCanvasPath(elapsed);
+            }
+
+
+            //主动给source分层按照各自的时间开始播放
+            //new particle
+            function particleEdgeCanvasPath(elapsed) {
+
+                var ele = document.getElementById("sankeycanvas");
+                ele.width = width; //
+                ele.height = 700; //==div大小
+                var context = d3.select("#sankeycanvas").node().getContext("2d")
+                context.clearRect(0, 0, 1000, 600); // ==svg大小
+
+
+                context.fillStyle = "gray"; //
+                context.lineWidth = "1px";
+                for (var x = 0; x < 1300; x++) { //仅仅只用200数据
+                    // for (var x in particles) {
+                    //init the starttime
+                    var currentTime = elapsed - particles[x].time;
+                    var currentType = particles[x].link.source.type;
+                    //particles[x].current = currentTime * 0.15 * particles[x].speed ;
+                    //更改运动阶段
+                    particles[x].current = (currentTime - (currentType - 1) * 2500) * 0.1 * particles[x].speed;
+                    var currentPos = particles[x].path.getPointAtLength(particles[x].current); //pos
+                    context.beginPath();
+                    context.fillStyle = particles[x].link.particleColor(0);
+                    // 控制为单一颜色
+                    // context.fillStyle = "#FFDA44"; //"#79CDCD";主题色
+                    //更改显示聚集
+                    if (particles[x].current > 0) { //不绘制还未出现的点
+                        context.rect(currentPos.x,  currentPos.y  +  particles[x].offset * 0.8,  2,  2);
+                        context.fill();
+                    }
+
+                }
+            }
+
+
+        });
+    </script>
+
+</body>
+
+</html>

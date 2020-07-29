@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寻路上海滩</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/plugins/TweenMax.min.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/plugins/animation.gsap.min.js"></script>
+    <script src="js/plugins/debug.addIndicators.min.js"></script>
+    <script src="js/d3.v3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src='js/map.js'></script>
+</head>
+
+<body>
+    <img src="img/toutu2.jpeg" style="width:100%">
+    <div id='daoyu' style="margin:auto">
+        <!-- <h2>起始：路网勾勒的城市记忆</h2> -->
+        <br>
+        <p style="font-style: italic;text-align: left;padding-top: 50px;color:gray">“租界以上海为最大，而马路亦以上海为最多，且最讲究。沪上市面之盛，半皆由马路之便也。”</p>
+        <!-- <p style="font-style: italic;text-align: left;">沪上市面之盛，半皆由马路之便也。</p> -->
+        <p style="font-style: italic;text-align: right;padding-bottom: 50px;color:gray">——《上海市自治志》,1896年刊于《申报》</p>
+    </div>
+    <div class="section">
+        <p> 观察城市，道路无疑是一个很好的切入点。作为市政的一部分，城市道路的数量和长度极大程度显示城市的发展状况。 如今的上海，辖16区，面积超过6300平方千米，是一座“超级城市”。今人可能难以想象，几百年前，这里还是一片小渔村。
+        </p><br>
+        <p> 1291年，元朝批准设立上海县，是上海建县之始。1843年，上海正式开埠之后，以城外城形式的不断扩张，改革开放之后，又划入大片土地归属上海。<strong>道路，正是上海历史最忠实的见证者。</strong>
+        </p><br>
+        <p>
+            在描绘出所有道路之后，我们得以辨识这座城市的经络：
+        </p>
+        <img class="mobile resize" style="padding: 30px" src="img/上海16区.png">
+        <!-- trigger 1 2 3 4 :定住开场静态地图，切换 -->
+        <div id="trigger1"></div>
+        <div id="pin1">
+            <div style="position: absolute"><img src="img/centrality-center.png" style="width:100%;float:left"></div>
+            <div style="position: absolute"><img src="img/centrality-node2.png" style="width:100%;float:left" class="before_4"></div>
+            <div style="position: absolute"><img src="img/上海7区-length.png" style="width:100%;float:left" class="before_3"></div>
+            <div style="position: absolute"><img src="img/上海16区-length2.png" style="width:100%;float:left" class="before_2"></div>
+            <div style="position: absolute"><img src="img/上海16区.png" style="width:100%;float:left" class="before_1"></div>
+        </div>
+        <div id="pin1_words">
+            <h4>1</h4>
+            <p>
+                如今的上海市区，由<strong>黄浦江</strong>分隔，分为<strong>浦东和浦西</strong>。可以看出，路网最密的地方都集中于黄浦江沿岸，而浦西又较浦东更为稠密。
+            </p><br>
+            <p>这一块正是主城区所在之处，坐落着上海最核心的七个区（黄埔、静安、徐汇、普陀、长宁、虹口、杨浦），因此又被称为<strong>“中心七区”。</strong>相比之下，广大的“郊区”，路网则稀疏许多。
+            </p>
+            <br>
+            <div id="trigger2"></div>
+            <h4>2</h4>
+            <img class="mobile resize" style="padding: 30px" src="img/上海16区-length2.png">
+            <p>接着，<strong>按照道路的长短</strong>，赋予颜色。颜色越红，则道路越短；颜色越紫，道路越长。一般来说，城市中集聚的短路，多数意味着社区、巷弄等。如果一个区域只有很长的道路，则很可能缺乏烟火气。
+            </p><br> 着色之后，中心七区显现的更加明显。大量的短路分布在浦西地带，连接成片，指向上海真正的繁华所在。
+            </p>
+            <br>
+            <div id="trigger3"></div>
+            <h4>3</h4>
+            <img class="mobile resize" style="padding: 10px" src="img/上海7区-length.png">
+            <p>这就是“中心七区”。将视线聚焦于此，再次分析道路长短。可以发现短路又最最集中于沿江的腹地，以及浦江北岸的个别区域。
+            </p><br>
+            <p><strong>大量的弄堂和小社区</strong>，构筑出了一幅奇特的地理景观，也指示着其中埋藏的历史轨迹。</p>
+            <br>
+            <h4>4</h4>
+            <div id="trigger4"></div>
+            <img class="mobile resize" style="padding: 10px" src="img/centrality-node2.png">
+            <p>
+                道路的连接方式也十分有趣。如果将路的汇合处当作一个节点，我们可以分析出<strong>节点的枢纽程度</strong>。同样，颜色越红，代表枢纽性质越强，四通八达；颜色越紫，则枢纽性质越弱，比较封闭。
+            </p>
+            <br>
+            <p>在对节点着色之后，隐隐已能看出路网如何互相勾连，而道路又如何作为城市的骨骼存在。</p>
+            <br>
+            <h4>5</h4>
+            <div id="trigger100"></div>
+            <img class="mobile resize" style="padding: 10px" src="img/centrality-center.png">
+            <p>
+                最后，<strong>再将节点的颜色赋予道路</strong>，纵贯城区的高架路和环线（橙色道路）立刻显现，它们将中心城区再度分割成几块。而之前分析过的“短路聚集区”，在此也显得较为封闭（呈现蓝紫色）。
+            </p>
+            <br>
+            <p>一部上海路网扩张的过程，不但是上海发展的历史，更是一个城市功能区域的空间性转移的体现。
+            </p><br>
+            <p>如果说对路网的观察，只是了解上海发展的第一步，接下来，不妨让我们由今视昔，沿上海的母亲河——“黄埔江”，来领略一个更为具象的大上海变迁之路。</p>
+            <br>
+        </div>
+    </div>
+    <div id="scroll_begin" style="clear:both;"></div>
+
+    <img class="mobile" style="width:100%" src="img/banner1.jpeg">
+    <!-- <h2 class="mobile_hidden">一、县城记忆</h2> -->
+    <!-- trigger5:定住动画div、控制小船 -->
+    <div id="trigger5"></div>
+    <div id="pin2">
+        <img class="before_map" id="map" src="img/map1.jpeg" style="position: absolute;width:1200px">
+        <img class="before_map" id="ship" src="img/ship.png" style="position: absolute;left:300px;top:460px">
+    </div>
+    <div class="section">
+        <!-- div避免文字滚上来 -->
+        <div class="scroll"></div>
+        <br>
+        <p>
+            从十六铺码头下船，不远处就是上海老县城。</p>
+        <br>
+        <p>有座消失了106年的城墙，曾围起上海明清之前的风风雨雨；一条填河而造的路，则勾连起老上海城厢的民俗风情。
+        </p><br>
+        <p>
+            <strong>今天上海市区的中华路、人民路，解放前叫“中华路”和“民国路”，在1912年（辛亥革命第二年）以前，那些更为漫长的历史长河中，则是以“城墙”为载体而存在。</strong> 很少有年轻人知道，上海也是有过城墙的，如今残存30多米的大镜阁，也许可以一瞥历史的本来面目。自上海建县以来，并不曾有过修筑城墙的负担，一来滨海城镇，极少受到战争困扰；二来当地居民多为渔民，有了城墙，出海打渔反而极不方便。明朝初年，朱元璋为抑制流窜海边的农民军活动，曾实行“海禁”政策，下令沿海百姓必须向内地迁移，禁止或限制沿海的海上运输，此举阻碍了日本商人的生财之道，也促使其与流落至此的农民军从“武装经商”发展为“武装掠夺”。
+        </p> <br class="mobile_hidden">
+    </div>
+    <div class="col-sm-6 left">
+        <div style="text-align: center;margin:20px">
+            <p style='color:#505ab5;font-size:24px;font-weight: bold '>上海县城</p>
+            <p>*点击道路查看前世今生</p>
+        </div>
+        <div id="clickable_1"></div>
+        <br class="mobile_hidden">
+    </div>
+
+    <div class="col-sm-6 right">
+        <br><br class="mobile_hidden">
+        <p>
+            “倭乱”随航海技术的发展而愈发激烈。明嘉靖三十二年（1553年），世界进入大航海时代，上海则饱受着倭寇最严重的骚扰。仅上半年，上海县遭倭寇三次洗劫，掠夺无数财产。为应对侵犯，上海县民仅用3月时间，沿墙周筑起长9里，高二丈四尺的城墙，建成长1620丈、宽6丈、深一丈七尺的城濠，辟城门6座，设水门3座。<strong>一道城墙保障了城内居民免于倭寇袭击，却也将刚刚萌芽的国际贸易拒之门外，可谓“成也城墙，败也城墙”。</strong>
+        </p> <br>
+        <p>
+            老城墙所开6门，分别为朝宗门（大东门）、宝带门（小东门）、跨龙门（大南门）、朝阳门（小南门）、仪凤门（老西门）和晏海门（老北门）。尽管如今城门不在，却也未全部消失，上海唯一一条环线公交线路11路，路线为"老西门─老西门"，仍日复一日播报着老城墙曾有过的痕迹。
+        </p><br>
+    </div>
+    <div style="clear:both"></div>
+
+    <div class="section">
+        <p><strong>如果说城墙代表了古中国“安定”的城市理想，那么会馆则见证上海走向开放与繁荣。</strong>清康熙年间，上海的封闭状态大有改变，一商业组织明显增多。1654年（清同治年间），上海诞生了第一个移民同乡组织——关山东公所（关东+山东商帮）。1685年（康熙二十四年），清政府颁布“弛海禁”政策，放宽对沿海运输的禁令，海上贸易恢复，沿海各省商帮人士来沪经营手工业、棉纺织业、沙船业等，上海逐渐成为<strong>“江海之通津，东南之都会”。</strong>各地来沪移民和流动商人为联络同行和同乡情感，建立了一批同乡同业组织，大多都在老县城周边。
+        </p> <br class="mobile">
+        <img class="mobile_hidden" src="img/huiguan.png" style="width:100%;padding: 20px">
+        <img class="mobile resize" src="img/huiguan_mobile.png">
+        <br class="mobile">
+        <p>据不完全统计，从关山东公所建立此后的三百年间，上海曾有会馆（公所）400余个，绝大多数由各地商帮集资所建，上海开埠前，会馆（公所）大多雕龙画栋，立有碑碣，用于供奉祭祀、联络乡情和调节同乡同业矛盾纠纷，带有浓烈的封建地方保护主义色彩。地域认同所形成某种难以言明的情感，使得机构内的人员能够自发遵守会规并恪尽职责，而其在遭遇社会结构猛烈变动的清朝中后期，则更为异化和繁荣。</p>
+        <p><br><strong>上海老城厢附近的同乡组织，大多<strong>既通同乡之谊，又设行业之规，</strong>以便灵活应对城市经济、社会和政治变迁所带来的压力。 而开埠后所建会馆（公所）则融合中西方建筑风格，性质也逐渐转为资本主义行业组织，并参与到上海的城市建设当中，</strong>在动荡不安的年代加强民族工商业发展、抵制外国侵略者起到重要作用。
+        </p><br>
+    </div>
+    <!-- <div style="clear:both;margin-top:50px"> -->
+    </div>
+    <br>
+
+
+    <img class="mobile" style="width:100%" src="img/banner2.jpeg">
+    <!-- <h2 class="mobile_hidden">二、租界乱世</h2> -->
+    <!-- trigger5:定住动画div、控制小船 -->
+    <div id="trigger6"></div>
+    <div id="pin3" style="display: block">
+        <img class="before_map" src="img/map2.jpeg" style="position: absolute;;width:1200px">
+        <img class="before_map" id="ship_2" src="img/ship.png" style="position: absolute;left:500px;top:360px">
+    </div>
+
+    <div class="section">
+        <!-- div避免文字滚上来 -->
+        <div class="scroll"></div>
+        <br>
+        <p>
+            离开上海县城，沿下游行至白带子一般的外滩，这是英国人最早登陆的地方。签订《南京条约》的次年，英国首任驻沪领事抵达上海约定开埠，盖章上海正式对外开放，封建被撬开一个口子，打上殖民的烙印。此后，上海县城式微，十里洋场渐兴。
+        </p><br>
+        <p> <strong>租界始于1845年与英国签署的《一八四五年上海土地章程》，在百年内不断扩张，并成为“国中之国”，</strong>它独立于中国行政体系之外，是耻辱的象征，被迫植入西方城市管理理念和制度，却又意外开启现代城市之路，为上海成为国际都市埋下伏笔。
+        </p><br class="mobile_hidden">
+    </div>
+
+    <div class="col-sm-6 left">
+        <img src="img/zujie.gif">
+    </div>
+    <div class="col-sm-6 right">
+        <br class="mobile_hidden">
+        <p>
+            最初租界南端为<strong>洋泾浜</strong>，是近代上海进入闹市的通航河道，也是华洋分居和两种社会制度的分界，1849年法租界成立后，又成为英法租界的分界河。1915年，洋泾浜填平为路。改革开放之后，又建成“延安路高架桥”。由一条河，变成一条路，又成为一条高架路，这不仅是一条路的历史，更映照一部城市的发展史。
+        </p>
+        <br>
+        <p>1854年，英租界将“码头道路委员会”改组为<strong>“工部局”</strong>，成为租界市政权威机构，公共租界成立后，<strong>原则上确定以中国省名为南北纵向马路名称，如四川路、江西路等；以中国省以下地名为东西横向马路路名，如苏州路、香港路、南京路等。</strong></p>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <!-- 只在手机版出现 -->
+    <div class="col-sm-6 left">
+        <br>
+        <p> 时值今日，上海的道路命名依然保留了工部局这一特色。根据OpenStreetMap的数据，除去无名称的道路和巷弄，上海中心城区共有1555条道路。<strong>经统计，这些道路中，以“省”命名的有55条，以“城市”命名的有233条。</strong>“省”连东西，“市”贯南北，上海的街道摊开，俨然成为一张清晰的中国地图。
+        </p><br class="mobile_hidden">
+        <img class="mobile resize" src="img/name2.png">
+        <p>这些道路最初的命名看似毫无规律，实则使用的省市（县）名主要是英美势力所及的长江流域地名，<strong>从南京路到九江路、汉口路、福州路、广东路</strong>（注：五马路可能出现了广州和广东的混淆，英文的“canton 兼有两者之意”），<strong>无一不是强迫中国清政府开放的通商口岸</strong>。例如，南京路作为英国人向上海纵深推进的第一条路，其命名灵感来源于1842年的中英《南京条约》。也是从这个条约开始，英国人获得在华五口通商自由，获得建立居留地的特权。如此贴上中国标签的命名法，是“入乡随俗”，也是“鸠占鹊巢”。
+        </p><br class="mobile_hidden">
+    </div>
+
+    <div class="col-sm-6 right">
+        <img id='hidden' class="mobile_hidden" src="img/name.png">
+    </div>
+    <div class='clear'></div>
+
+    <div class="col-sm-6 left">
+        <div style="text-align: center;margin:20px">
+            <p style='color:#505ab5;font-size:24px;font-weight: bold; '>老租界区</p>
+            <p>*点击道路查看前世今生</p>
+        </div>
+        <div id="clickable_2"></div>
+    </div>
+    <!-- <div style="display:inline-block; width:40%; vertical-align: top; margin-left: 100px"> -->
+    <div class="col-sm-6 right" id="mobile_words">
+        <br>
+        <p><strong> 人们习惯将南京路称作“大马路”。向南排布的几条路，则依次是二马到七马路。</strong> 七条马路建成了，更多的道路修筑了，工厂拔地而起，商店琳琅满目，卖报小童东奔西走，跑马场洋人如织。电影海报，印有上海佳媛的日历，开张大吉的花篮，大减价的横幅......这个时期的上海，像被注入鸦片一般，满眼兴奋，脚下似有无数条路，琅琅闯闯向前急奔。
+        </p><br>
+        <p>在这个野蛮生长的租界里，满是冒险家的乐园，疯狂的金钱游戏和纸醉金迷的夜夜歌舞。留声机里周璇的四季调子从春数到冬，挑的是好景致，讲的都是好故事，殊不知，这座自荒滩成长起来的新城，霓虹仅是它的皮囊，战争可以摧毁皮囊，但毒辣的资本依旧维系着筋骨。
+        </p>
+    </div>
+    <div class='clear'></div>
+    <div class='section'>
+        <p>
+            <strong> 在这一区域，外商企业与日俱增，尤其是早期的金融、进出口类企业</strong> ，更是密集的扎堆在七条马路及外滩周围。各国资本竞相追逐，上海滩日益熙熙攘攘。根据现存资料显示，1843-1949年，上海共计出现过35个国籍2748家洋商企业。<strong> 早期登陆上海的，仅有几家“吃螃蟹”的英商。随着国门大开，外资在1860年代后纷至沓来，形成小高潮。这一时期，英国资本占据绝对主力。及至1900年后，美资开始发力，增长迅速，尤其在1920年代盛极一时。到1930年代，俄资、日资大量进入。抗战全面爆发后，其他国家相继撤出，唯日本势力急剧扩张。</strong>此后，尽管国民政府努力招商引资，外资小有回暖，但已不复当年盛况。
+        </p>
+        </p>
+        <img class="mobile_hidden" src="img/waishang2.png" style="width:100%;padding: 20px">
+        <img class="mobile resize" src="img/waishang_mobile.png">
+        <br>
+        <p>
+            <strong>从总量上看，日资、英资最多，俄（包括苏联）、美次之，而较早进入中国的法德，势力却并不强。</strong>可以说，一战后日资的快速涌入，改变了原本的列强格局。第二次世界大战，公共租界北区和东区被日军控制，这部分后被称为“公共租界日本区”，人称“日租界”。大马路到七马路的租界核心地带，也出现了诸多日本商贾及居留者。<strong>事实上，外商势力的增减，也间接反映了侵略者们在华利益的较量。</strong>日本对中国的侵略长达三十余年，直到1943年，日本为做出跟中国友好的姿态，把租界交还给汪伪政府，而美国因太平洋战争同中国处于同一阵营，英美也表示将租界交还中国，尽管此时租界并不被英美所掌控，而所谓交还，也不过一种争取国际舆论的表态。无论如何，租界名义上又回到中国人手中，而真正被中国人管理，则是1945年日本战败。
+        </p><br>
+        <p>
+            从1845年11月设立租界，至1943年8月汪伪政权收回，历时近百年的上海租界史宣告结束。而这百年租界史，不仅仅是一部屈辱史，更是一部发展史，繁华于表面，耻辱于内里。从华洋混居到华洋分隔再到华洋杂处，租界的发展，使得上海开始接受先进的市政管理，建立现代工厂制度，用技术革新撬动城市高速运转，成为国际都会的典范。但这背后，却也充斥着被战争摧毁的家园、华人与狗不得入内的羞辱和无数国人反抗的鲜血。
+        </p>
+    </div>
+    </div>
+    <div style="clear:both;margin-top:50px">
+    </div>
+
+
+    <img class="mobile" style="width:100%" src="img/banner3.jpeg">
+    <!-- <h2 class="mobile_hidden">三、实业兴国</h2> -->
+    <!-- trigger5:定住动画div、控制小船 -->
+    <div id="trigger7"></div>
+    <div id="pin4" style="display: block">
+        <img class="before_map" src="img/map3.jpeg" style="position: absolute;;width:1200px">
+        <img class="before_map" id="ship_3" src="img/ship.png" style="position: absolute;left:500px;top:200px">
+    </div>
+
+    <div class="section">
+        <!-- div避免文字滚上来 -->
+        <div class="scroll"></div>
+        <br>
+        <p>
+            一面是纸醉金迷的旧上海，另一面则是实业救国的改良与革命。接踵而来的不平等条约，终于迫使近代中国开始重新审视整个世界，开启一段属于它的工业革命。顺黄浦江下游前行，回溯浦西沿岸，依稀看见近现代上海发展的工业群像。
+        </p><br>
+    </div>
+    <div class='clear'>
+    </div>
+    <div class="col-sm-6 left">
+        <div style="text-align:center;margin:20px">
+            <p style='color:#505ab5;font-size:24px;font-weight: bold;'>老工业区</p>
+            <p>*点击道路查看前世今生</p>
+        </div>
+        <div id="clickable_3"></div>
+    </div>
+    <br>
+    <div class="col-sm-6 right" id="mobile_words">
+        <p> <strong>面对“数千年未有之变局”，清政府内诸如曾国藩、李鸿章，左宗棠之流痛定思痛，率先开启工业化道路。</strong>杨树浦路，则见证了洋务运动的开启，也见证了实业兴国的思潮兴起、蔓延，及至星火燎原。华商洋商，群雄并起，在商业的交锋中，又将中国推向一个全新的时代。1918年，军工路筑起后，更多现代化工厂落地于此。它们历经民营、合营、国营，随着改革开放，或成为中国行业的排头企业，或在A股成功上市，或及时转型，向科技创业领域发展。
+        </p><br>
+        <p><strong>不过，对于这个区域，最值得一提的还是棉纺织厂。</strong>1878年，李鸿章着手筹备<strong>上海机器织布局</strong>，历经10余年终于开业，成为我国第一家近代化机器棉纺织企业。可惜的是仅3年便毁于大火，但棉纺市场的超额利润已被业界渐晓，此后簇涌而来数家企业，成为上海近代企业的中流砥柱。</p><br>
+    </div>
+    <div class='clear'>
+    </div>
+    <div class="section">
+        <p>在传统农耕文化中，棉纺织业是重要的组成部分，也是最易发生生产力变革的行业之一。比如英国工业革命的开端，即以珍妮纺纱机的出现为标志，自此引发技术革新的连锁反应。<strong>最早的纺织局出现在杨树浦路并非一时之意。</strong>上海机器织布局定址由实业家任郑观应与厂方所聘美国工程师丹科（A.D.Danforth）所定。杨树浦路沿江滨，地面宽阔，位置方便但土地价格便宜，不在租界不用交税金，而且李鸿章还争取专利10年，税厘优惠，而且距招商局北栈码头不远，转运便利;且地租便宜，1880年每亩只需50银元。同时，政府大开方便之门，集多方力量给予支持，比如独享专利10年，上海销售不负税厘，内地销售则优于外商，甚至不许华商另设工厂等等。</p><br>
+        <p>此后，以李鸿章为核心凝聚诸如上海道台唐松岩、津海关道盛宣怀、候补道台朱鸿度、下属黄佐卿等人创办的民族企业数家继起。但多为官僚、买办或具备官方资源的巨商，缺乏对新式工业的了解。<strong>在甲午战争失败之后，这些纱厂不得不与大举进入的外商进行激烈角逐，受资本薄弱，资金短缺、生产技术相对落后、专才缺失和管理具有浓厚的官僚做法影响，多数经营惨淡。</strong></p><br>
+        <img class="mobile_hidden" src="img/factory4.png" style="width:100%;padding: 20px">
+        <img class="mobile resize" src="img/factory_mobile.png">
+        <p><strong>1897年，上海有9家纱厂，其中7家分布在杨树浦路</strong>，呈集聚状态，华商、英商成为主要投资者，与苏州河边的日商形成对比。随着战争逐渐胶着和资本涌入，大量纱厂兴建，且集聚区从杨树浦路移至苏州河岸，截至1932年，苏州河地区纱厂有29家，超过杨树浦路20家纱厂。随着日资进入，民族企业被逐渐吞食，短短数十年时间，日资棉纺厂形成八大系统、九大工厂，并最终指向日本江州财阀、三井财阀、内外棉纺织株式会社和大日本纺织株式会社四大资本。抗日战争胜利后，这些工厂通过合并、分拆和转型划入国营企业继续经营，为建国后居民生活和物质需求提供保障。</p><br>
+
+        <p>
+            这只是上海工业的冰山一角。改革开放后，上海因势利导，借开放政策再次迎来发展高潮，并形成具备区域特质的“浦东模式”。在短短不到20年内，谚语里的“宁要浦西一张床，不要浦东一间房”的场景，随着金茂大厦、证券交易所、国际会议中心等建筑的兴起，已成为昨日历史。
+        </p><br>
+        <p>
+            细数浦东的发展路径，其一，投资建成南浦大桥、杨浦大桥、外高桥港区一期等十大基础设施和陆家嘴、外高桥、金桥、张江四大功能社区，构成现代城市和功能建筑群的基本框架；其二，走开发公司主导的开发区建设，大量吸引高端外资，开放之初，浦东即成立陆家嘴金融贸易区、金桥出口加工区、外高桥保税区3个开发公司，多渠道吸引投资资金，以“十五”为例，累计引进国内大企业28家，投资项目3600多个；吸引外商直投项目约7000个，直投实际到位资金超108 亿美元，占上海总量的40%，刺激上海经济从基础设施投资、工业投资转向产业投资、金融投资。其三，在政府治理过程中，遵循“小政府、大社会”的管理思路，实施企业属地化政策，对辖区内国有企业、民营企业和外资企业一视同仁，在同一竞争机制下优胜劣汰，借助较为完备的企业出清机制，实现产业结构调整和新旧动能转化，达到良性循环。
+        </p><br>
+        <p>追溯上海几百年历史，局内人看不破，局外人扼腕叹息。于历史洪流中，上海被裹挟前进，非其自主选择，却又恰当其分嵌入每一段发展历程，成为其中的佼佼者。</p>
+    </div>
+    <div class="section" style="margin-top:50px">
+        <h5 style="color:#a6a6a6">参考文献</h5>
+        <p style="color:#a6a6a6;font-size: 13px">
+            1.上海市地方志办公室, 上海地名志, http://www.shtong.gov.cn/newsite/node2/node2245/node70862/index.html.
+            <br> 2.刘云耕, 1998. 上海市路名大全. 上海人民出版社.
+            <br>3.史梅定, 2001. 上海租界志. 上海社會科學院出版社.
+            <br> 4.王垂芳, 2007. 洋商史: 上海, 1843-1956. 上海社会科学院出版社.
+            <br>5.黄光域, 1995. 外国在华工商企业辞典. 四川人民出版社.
+            <br>6.彭国躍, 2007. 上海の道路命名年表: 社会言語学的命名論の基礎研究. 人文学研究所報, 40, pp.33-43.
+            <br>7.袁燮铭, 1988, 工部局与上海早期路政. 上海社会科学院学术季刊, 4, 77-85.
+            <br>8.吴焕良, 2011. 近代上海棉纱业空间研究 (1899-1936). 复旦大学博士学位论文.
+            <br>9.刘栋梁, 2010. 二战前上海日本棉纺织企业述评. 东北师范大学硕士学位论文.
+    </div>
+
+    <div class="section">
+        <p style='text-align: center;font-size: 14px;color:gray;padding-top: 100px'>
+            ◎作者：蓝星宇 梁银妍 叶霄麒 </p>
+    </div>
+    <img src="img/footer.jpeg" style="width:100%">
+
+    <script>
+        $(function() {
+            if ($(window).width() >= 1000) {
+                var controller = new ScrollMagic.Controller();
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger1",
+                        duration: 1300,
+                        //offset: 300,
+                        triggerHook: 0.05,
+                    })
+                    .setPin("#pin1")
+                    // .addIndicators({
+                    //     name: "1"
+                    // })
+                    .addTo(controller);
+            }
+        });
+        $(function() {
+            if ($(window).width() >= 1000) {
+                var controller = new ScrollMagic.Controller();
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger2",
+                        triggerHook: 0.1,
+                    })
+                    .setClassToggle(".before_1", "after")
+                    // .addIndicators({
+                    //     name: "2"
+                    // })
+                    .addTo(controller);
+            }
+        });
+        $(function() {
+            if ($(window).width() >= 1000) {
+                var controller = new ScrollMagic.Controller();
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger3",
+                        triggerHook: 0.2,
+                    })
+                    .setClassToggle(".before_2", "after")
+                    .addTo(controller);
+            }
+        });
+        $(function() {
+            if ($(window).width() >= 1000) {
+                var controller = new ScrollMagic.Controller();
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger4",
+                        triggerHook: 0.2,
+                    })
+                    .setClassToggle(".before_3", "after")
+                    .addTo(controller);
+            }
+        });
+        $(function() {
+            if ($(window).width() >= 1000) {
+                var controller = new ScrollMagic.Controller();
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger100",
+                        triggerHook: 0.2,
+                    })
+                    .setClassToggle(".before_4", "after")
+                    .addTo(controller);
+            }
+        });
+        $(function() {
+            if ($(window).width() >= 1000) {
+                var controller = new ScrollMagic.Controller();
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger5",
+                        duration: 1500,
+                        triggerHook: 0.05,
+                    })
+                    .setPin("#pin2")
+                    // .addIndicators({
+                    //     name: "part 1"
+                    // })
+                    .addTo(controller);
+            }
+        });
+        $(function() {
+            if ($(window).width() >= 1000) {
+                var flightpath = {
+                    entry: {
+                        type: 'soft',
+                        curviness: 2.2,
+                        autoRotate: true,
+                        values: [{
+                            x: 0,
+                            y: 0
+                        }, {
+                            x: 150,
+                            y: 0
+                        }, {
+                            x: 200,
+                            y: -100
+                        }, {
+                            x: 190,
+                            y: -105
+                        }, ]
+                    }
+
+                };
+                // init controller
+                var controller = new ScrollMagic.Controller();
+                // create tween
+                var tween = new TimelineMax()
+                    .add(TweenMax.to($("#ship"), 3, {
+                        css: {
+                            bezier: flightpath.entry
+                        },
+                        ease: Power1.easeInOut
+                    }));
+
+                // build scene
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger5",
+                        duration: 1500,
+                        triggerHook: 0.05,
+                    })
+                    .setTween(tween)
+                    .addTo(controller);
+            }
+        });
+        $(function() {
+            if ($(window).width() >= 1000) {
+                var controller = new ScrollMagic.Controller();
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger6",
+                        duration: 1500,
+                        triggerHook: 0.05,
+                    })
+                    .setPin("#pin3")
+                    // .addIndicators({
+                    //     name: "part 2"
+                    // })
+                    .addTo(controller);
+            }
+        });
+        $(function() {
+            if ($(window).width() >= 1000) {
+                var flightpath = {
+                    entry: {
+                        type: 'soft',
+                        curviness: 2.2,
+                        autoRotate: true,
+                        values: [{
+                            x: 0,
+                            y: 0
+                        }, {
+                            x: 50,
+                            y: -50
+                        }, {
+                            x: 50,
+                            y: -120
+                        }, {
+                            x: 0,
+                            y: -200
+                        }, {
+                            x: -10,
+                            y: -200
+                        }]
+                    }
+
+                };
+                // init controller
+                var controller = new ScrollMagic.Controller();
+                // create tween
+                var tween = new TimelineMax()
+                    .add(TweenMax.to($("#ship_2"), 3, {
+                        css: {
+                            bezier: flightpath.entry
+                        },
+                        ease: Power1.easeInOut
+                    }));
+
+                // build scene
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger6",
+                        duration: 1500,
+                        triggerHook: 0.05,
+                    })
+                    .setTween(tween)
+                    .addTo(controller);
+            }
+        });
+
+        $(function() {
+            if ($(window).width() >= 1000) {
+                var controller = new ScrollMagic.Controller();
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger7",
+                        duration: 1500,
+                        triggerHook: 0.05,
+                    })
+                    .setPin("#pin4")
+                    // .addIndicators({
+                    //     name: "5"
+                    // })
+                    .addTo(controller);
+            }
+        });
+        $(function() {
+            if ($(window).width() >= 1000) {
+                var flightpath = {
+                    entry: {
+                        type: 'soft',
+                        curviness: 1.2,
+                        autoRotate: true,
+                        values: [{
+                            x: 0,
+                            y: 0
+                        }, {
+                            x: 10,
+                            y: -10
+                        }, {
+                            x: 0,
+                            y: -130
+                        }, {
+                            x: 100,
+                            y: -150
+                        }, {
+                            x: 240,
+                            y: -140
+                        }, {
+                            x: 241,
+                            y: -150
+                        }]
+                    }
+
+                };
+                // init controller
+                var controller = new ScrollMagic.Controller();
+                // create tween
+                var tween = new TimelineMax()
+                    .add(TweenMax.to($("#ship_3"), 3, {
+                        css: {
+                            bezier: flightpath.entry
+                        },
+                        ease: Power1.easeInOut
+                    }));
+
+                // build scene
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger7",
+                        duration: 1500,
+                        triggerHook: 0.05,
+                    })
+                    .setTween(tween)
+                    .addTo(controller);
+            }
+        });
+        // $(function() {
+        //     var controller = new ScrollMagic.Controller();
+        //     var scene = new ScrollMagic.Scene({
+        //             triggerElement: "#trigger6",
+        //             triggerHook: 0.1,
+        //         })
+        //         .setClassToggle(".before_map", "after_map")
+        //         // .addIndicators({
+        //         //     name: "hidden"
+        //         // })
+        //         .addTo(controller)
+        //         .on("enter", function() {
+        //             scene = scene.destroy();
+        //         });
+        // });
+    </script>
+</body>
+
+</html>

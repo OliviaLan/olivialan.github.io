@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Echarts</title>
+    <script src="echarts.js"></script>
+    <script src="echarts-gl.min.js"></script>
+    <!-- <script src="china.js"></script> -->
+    <!--要异步加载json的时候要记得引用：-->
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <style>
+        body {
+            background-color: black;
+        }
+        
+        #main {
+            height: 760px;
+            width: 90%;
+            margin: 40px;
+            background-color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main" style="width:100%; height:600px"></div>
+
+    <script>
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // var ROOT_PATH = "https://echarts.apache.org/examples/";
+        $.getJSON("covid2.json", function(data) {
+
+            debugger;
+
+            //这里是判断第三项是否为负，然后对第三项开方
+            data = data.filter(function(dataItem) {
+                return dataItem[2] > 0;
+            }).map(function(dataItem) {
+                return [dataItem[0], dataItem[1], Math.sqrt(dataItem[2])];
+            });
+
+
+            var options = {
+
+                backgroundColor: '#000',
+                globe: {
+                    baseTexture: "world.jpg",
+                    heightTexture: "world.jpg",
+                    shading: 'lambert',
+                    environment: 'star.jpg',
+                    light: {
+                        main: {
+                            intensity: 2
+                        }
+                    },
+                    viewControl: {
+                        autoRotate: false
+                    }
+                },
+                visualMap: {
+                    max: 40,
+                    calculable: true,
+                    realtime: false,
+                    inRange: {
+                        colorLightness: [0.2, 0.9]
+                    },
+                    textStyle: {
+                        color: '#fff'
+                    },
+                    controller: {
+                        inRange: {
+                            color: 'orange'
+                        }
+                    },
+                    outOfRange: {
+                        colorAlpha: 0
+                    }
+                },
+                series: [{
+                    type: 'bar3D',
+                    coordinateSystem: 'globe',
+                    data: data,
+                    barSize: 0.9,
+                    minHeight: 0.2,
+                    silent: true,
+                    itemStyle: {
+                        color: 'brown'
+                    }
+                }],
+            }
+            myChart.setOption(options);
+
+        })
+    </script>
+
+</body>
+
+</html>

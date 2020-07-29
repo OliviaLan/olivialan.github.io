@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>林夕 vs 黄伟文</title>
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js">
+    </script>
+    <script type="text/javascript" src="js/echarts.js">
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            var str1 = "[";
+            var str2 = "[";
+            var m = 0;
+            var yyy = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            for (var k = 0; k < changeColor.length; k++) {
+                if (changeColor[k] == 1) {
+                    m++;
+                    str1 += '{"name":"' + "" + '","type":"line","data":yyy}' + ",";
+                    str2 += '{"name":"' + "" + '","type":"line","data":yyy}' + ",";
+                }
+            }
+            if (m > 0) {
+                str1 = str1.substring(0, str1.length - 1);
+                str2 = str2.substring(0, str2.length - 1);
+            }
+            str1 += "]"
+            str2 += "]"
+            showLine(eval('(' + str1 + ')'), eval('(' + str2 + ')'))
+        })
+        var changeColor = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+        var x = [1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015]
+        var y11 = [0, 0, 0, 0, 0, 0, 1, 1, 2, 4, 4, 0, 0, 0, 0, 9, 11, 18, 11, 11, 11, 11, 5, 4, 5, 0, 2, 2]
+        var y12 = [0, 0, 0, 0, 0, 0, 0, 2, 3, 5, 5, 1, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        var y21 = [0, 0, 0, 0, 0, 0, 0, 0, 2, 7, 11, 8, 4, 4, 13, 13, 9, 6, 11, 9, 3, 2, 2, 2, 2, 0, 1, 0]
+        var y22 = [0, 0, 0, 0, 0, 0, 0, 0, 6, 8, 6, 2, 0, 4, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        var y31 = [0, 1, 8, 0, 0, 4, 11, 9, 2, 17, 8, 8, 14, 9, 3, 8, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0];
+        var y32 = [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        var y41 = [0, 0, 1, 1, 0, 1, 1, 3, 3, 16, 14, 12, 11, 3, 7, 0, 8, 6, 5, 1, 3, 0, 0, 1, 0, 0, 0, 0]
+        var y42 = [0, 0, 0, 0, 0, 0, 0, 0, 6, 8, 6, 2, 0, 4, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        var y51 = [0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 6, 3, 7, 11, 19, 8, 10, 4, 4, 3, 2, 4, 1, 2, 1, 4, 2, 0]
+        var y52 = [0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 7, 3, 8, 28, 12, 11, 0, 14, 16, 4, 2, 6, 6, 3, 1, 0, 0, 0]
+        var y61 = [2, 0, 3, 0, 3, 0, 0, 1, 2, 6, 2, 11, 6, 8, 9, 4, 8, 1, 6, 5, 1, 1, 0, 1, 1, 0, 1, 0]
+        var y62 = [0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 1, 2, 3, 2, 4, 4, 7, 5, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0]
+        var y71 = [0, 0, 0, 0, 0, 0, 0, 3, 3, 4, 6, 7, 12, 5, 14, 10, 6, 0, 8, 0, 1, 0, 1, 1, 0, 1, 0, 0]
+        var y72 = [0, 0, 0, 0, 0, 0, 0, 2, 5, 2, 0, 2, 1, 6, 8, 6, 20, 2, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+        var y81 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 15, 9, 16, 11, 5, 4, 0, 0, 0, 0, 1, 0, 0, 0]
+        var y82 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 9, 10, 10, 4, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+        var y91 = [0, 0, 1, 0, 1, 1, 2, 2, 4, 2, 3, 2, 4, 13, 11, 2, 7, 1, 0, 0, 1, 0, 0, 2, 0, 3, 2, 0]
+        var y92 = [0, 0, 0, 0, 0, 0, 4, 2, 2, 10, 2, 4, 12, 10, 0, 4, 4, 0, 0, 1, 0, 4, 0, 0, 0, 1, 1, 0]
+        var y101 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 15, 6, 10, 6, 2, 5, 1, 6, 3, 0, 0, 2, 1, 1, 0]
+        var y102 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 3, 6, 10, 5, 5, 3, 2, 4, 7, 3, 1, 3, 3, 0]
+        var y111 = [0, 0, 1, 0, 1, 2, 1, 2, 1, 5, 2, 4, 1, 5, 0, 12, 6, 0, 10, 2, 1, 1, 1, 0, 0, 2, 1, 0]
+        var y112 = [0, 0, 0, 0, 0, 0, 0, 0, 1, 5, 10, 0, 4, 5, 0, 0, 3, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0]
+        var y121 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 7, 9, 5, 9, 7, 5, 2, 5, 3, 2, 0, 3, 0, 0, 0, 0, 0, 0]
+        var y122 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 6, 8, 10, 2, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        var y131 = [0, 0, 0, 0, 2, 7, 6, 3, 3, 5, 2, 0, 5, 0, 1, 5, 1, 0, 7, 0, 2, 0, 1, 2, 0, 1, 0, 0]
+        var y132 = [0, 0, 0, 0, 0, 1, 0, 2, 2, 0, 2, 0, 6, 0, 4, 6, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 1, 0]
+        var y141 = [0, 0, 0, 0, 0, 1, 0, 1, 0, 3, 6, 3, 5, 3, 7, 5, 0, 0, 0, 0, 5, 0, 0, 1, 1, 0, 3, 0]
+        var y142 = [0, 0, 0, 0, 0, 0, 2, 6, 4, 9, 4, 2, 4, 4, 8, 2, 2, 0, 0, 0, 10, 0, 0, 6, 0, 0, 1, 0]
+        var y151 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+        var y152 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 9, 9, 2, 13, 5, 7, 6, 9, 2, 2, 0, 1, 0, 0]
+        var yarr1 = [y11, y21, y31, y41, y51, y61, y71, y81, y91, y101, y111, y121, y131, y141, y151];
+        var yarr2 = [y12, y22, y32, y42, y52, y62, y72, y82, y92, y102, y112, y122, y132, y142, y152];
+        var nameArr = ['古巨基', "杨千嬅", "王菲", '黎明', "陈奕迅", "许志安", "陈慧琳", "Twins", "郑秀文", "容祖儿", "梁汉文", "谢霆锋", "黄耀明", "苏永康", "何韵诗"]
+
+        function showLine(y1, y2) {
+            var myChart1 = echarts.init(document.getElementById('main2'));
+            var option1 = {
+                tooltip: {
+                    show: true,
+                    padding: 3,
+                    formatter: '{a}:{c}',
+                    backgroundColor: "white",
+                    textStyle: {
+                        color: "grey",
+                        fontSize: 12,
+                    }
+                },
+                legend: {
+                    data: ['作词量']
+                },
+                xAxis: [{
+                    type: 'category',
+                    data: x,
+                    name: "林夕",
+                    splitNumber: 5,
+                    splitLine: {
+                        show: false
+                    }, //去除网格线
+
+                    axisTick: {
+                        show: false,
+                    }
+                }],
+                yAxis: [{
+                    type: 'value',
+                    max: 20,
+                    splitLine: {
+                        show: false
+                    }, //去除网格线
+                    splitArea: {
+                        show: true
+                    }, //保留网格区域
+                    axisTick: {
+                        show: false,
+                    }
+                }],
+                series: y1
+            };
+            myChart1.setOption(option1);
+            var myChart2 = echarts.init(document.getElementById('main1'));
+            var option2 = {
+                tooltip: {
+                    show: true,
+                    padding: 3,
+                    formatter: '{a}:{c}',
+                    backgroundColor: "white",
+                    textStyle: {
+                        color: "grey",
+                        fontSize: 12,
+                    }
+                },
+                legend: {
+                    data: ['作词量']
+                },
+                xAxis: [{
+                    type: 'category',
+                    data: x,
+                    name: "黄伟文",
+                    axisTick: {
+                        show: false,
+                    }
+
+                }],
+                yAxis: [{
+                    type: 'value',
+                    max: 20,
+                    splitLine: {
+                        show: false
+                    }, //去除网格线
+                    splitArea: {
+                        show: true
+                    }, //保留网格区域
+                    axisTick: {
+                        show: false,
+                    }
+                }],
+                series: y2
+            };
+            // 为echarts对象加载数据
+            myChart2.setOption(option2);
+        }
+
+        function openLine(i) {
+            if (changeColor[i] == 0) {
+                changeColor[i] = 1;
+                document.getElementById("id" + i).style.background = "#ffd9dc";
+            } else {
+                changeColor[i] = 0;
+                document.getElementById("id" + i).style.background = "#f2f2f2";
+            }
+            var str1 = "[";
+            var str2 = "[";
+            var m = 0;
+            for (var k = 0; k < changeColor.length; k++) {
+                if (changeColor[k] == 1) {
+                    m++;
+                    str1 += '{"name":"' + nameArr[k] + '","type":"line","data":yarr1[' + k + ']}' + ",";
+                    str2 += '{"name":"' + nameArr[k] + '","type":"line","data":yarr2[' + k + ']}' + ",";
+                }
+            }
+            if (m > 0) {
+                str1 = str1.substring(0, str1.length - 1);
+                str2 = str2.substring(0, str2.length - 1);
+            }
+            str1 += "]"
+            str2 += "]"
+            showLine(eval('(' + str1 + ')'), eval('(' + str2 + ')'))
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <img id='toutu' src="aaa.jpg"></img>
+    </div>
+
+    <div style="margin:100px;text-align:center">
+        <p style="font-size:24px"><strong>说起港乐，有两个人一定绕不过去。</strong></p>
+        <br>
+        <p>常言道：“林夕向左，黄伟文向右”。</p>
+        <p>这一左一右，便撑起了近三十年香港流行音乐的天空。</p>
+        <br>
+        <p>乐迷们总爱比较两人的差别，</p>
+        <p>在歌词里寻找着别出心裁和蛛丝马迹，</p>
+        <br>
+        <p>于是，我爬取了两人绝大多数的歌词文本进行分析，</p>
+        <p>这样的他们，是你心中的模样吗？</p>
+    </div>
+
+
+    <div class="charts--container">
+
+        <div class="chart">
+            <h3 class="chart--subHeadline">PART 1</h3>
+            <h2 class="chart--headline">写作总量</h2>
+            <div id="pieChart">
+                <svg id="pieChartSVG" style="height:400px">
+                    <defs>
+                        <filter id='pieChartInsetShadow'>
+                        <feOffset dx='0' dy='0'/>
+                        <feGaussianBlur stdDeviation='3' result='offset-blur' />
+                        <feComposite operator='out' in='SourceGraphic' in2='offset-blur' result='inverse' />
+                        <feFlood flood-color='black' flood-opacity='1' result='color' />
+                        <feComposite operator='in' in='color' in2='inverse' result='shadow' />
+                        <feComposite operator='over' in='shadow' in2='SourceGraphic' />
+                        </filter>
+                        <filter id="pieChartDropShadow">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
+                        <feOffset in="blur" dx="0" dy="3" result="offsetBlur" />
+                        <feMerge>
+                            <feMergeNode />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+            <p>林夕的高产，人尽皆知。巅峰时期，一年可以写作超过200首歌曲。</p>
+            <p>凭借这样庞大的作品库，真是想不出名都难。</p>
+            <p>相较之下，黄伟文的产量较少。但在词人里也是佼佼者了。</p>
+        </div>
+        <br>
+        <div style="width:800px;margin:0 auto;text-align:center;padding:30px;">
+        </div>
+
+
+        <div class="left-side" style="display:inline-block;width:40%;text-align:center;margin:20px;font-size:24px;">
+            黄伟文历年产量（1985-2015）
+        </div>
+
+        <div class="right-side" style="display:inline-block;width:45%;text-align:center;margin:20px;font-size:24px;">
+            林夕历年产量（1985-2015）
+        </div>
+
+        <div class="two-column">
+            <table>
+                <tr height="300px">
+                    <td width="600px">
+                        <div id="lineChart" style="margin-left:50px;">
+                            <svg id="lineChartSVG1" class="lineChart--svg">
+                  <defs>
+                    <linearGradient id="lineChart--gradientBackgroundArea1" x1="0" x2="0" y1="0" y2="1">
+                      <stop class="lineChart--gradientBackgroundArea--top" offset="0%" />
+                      <stop class="lineChart--gradientBackgroundArea--bottom" offset="100%" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                        </div>
+                    </td>
+                    <td width="600px">
+                        <div id="lineChart1">
+                            <svg id="lineChartSVG1" class="lineChart--svg">
+                  <defs>
+                    <linearGradient id="lineChart--gradientBackgroundArea1" x1="0" x2="0" y1="0" y2="1">
+                      <stop class="lineChart--gradientBackgroundArea--top" offset="0%" />
+                      <stop class="lineChart--gradientBackgroundArea--bottom" offset="100%" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+
+
+        </div>
+
+        <div style="width:800px;margin:0 auto;text-align:center;padding:30px;">
+        </div>
+
+        <div style="width:800px;margin:0 auto;text-align:center;padding:50px;">
+            <p>分年来看。林夕出道较早。</p>
+            <p>1985年，他为钟镇涛创作《曾经》，进而出道。</p>
+            <p>反观黄伟文，1993年才有词作发表，可以算得林夕的晚辈了。</p>
+            <p>但从图中可见，二人的“黄金期”都在2000年左右。</p>
+        </div>
+
+
+        <h3 class="chart--subHeadline">PART 2</h3>
+        <h2 class="chart--headline">乐坛沉浮</h2>
+        <div style="width:800px;margin:0 auto;text-align:center;padding:50px;">
+            <p>通过统计与二人合作过的歌手，大概可以发现一些有趣的现象，</p>
+            <p>老牌歌手，与林夕合作更多。如张国荣、张学友等。</p>
+            <p>林夕与张国荣可谓惺惺相惜，而黄伟文和张国荣则没有合作。</p>
+            <p><strong>杨千嬅</strong>是最得青睐的歌手，<strong>陈奕迅</strong>紧随其后。</p>
+            <p><strong>王菲</strong>与林合作多，与黄则很少合作。<strong>何韵诗</strong>正好反之。</p>
+
+        </div>
+
+        <div class="two-column" style="background-color:#f2f2f2">
+            <div class="left-side" style="display:inline-block;width:45%;text-align:left;margin:20px">
+                <img src="黄伟文-singers.jpg" style="width:550px"></img>
+            </div>
+
+            <div class="right-side chart" style="display:inline-block;width:45%;text-align:right;margin:20px">
+                <img src="林夕-singers.jpg" style="width:550px"></img>
+            </div>
+
+        </div>
+
+        <div style="width:100%;margin:0 auto;text-align:center;padding:50px;">
+            <p>我们选出了与二人合作最多的15位歌手，</p>
+            <p>发现他们无一例外是香港籍。</p>
+            <br>
+            <p><strong>你可以在这里点击姓名，查看他们与林黄二人的合作数量。</strong></p>
+            <p><strong>线条是累加的，第二次点击按钮即可清除。</strong></p>
+
+        </div>
+
+
+        <div>
+            <table style="background-color:#f2f2f2">
+                <tr height="300px">
+                    <td width="600px">
+                        <div id="main1" style="height:300px;width:500px;"></div>
+                    </td>
+                    <td width="70px">
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none" type="button" id="id0" value="古巨基" onclick="openLine(0)"></div>
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none" type="button" id="id1" value="杨千嬅" onclick="openLine(1)"></div>
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none" type="button" id="id2" value="王菲" onclick="openLine(2)"></div>
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none" type="button" id="id3" value="黎明" onclick="openLine(3)"></div>
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none" type="button" id="id4" value="陈奕迅" onclick="openLine(4)"></div>
+
+                    </td>
+                    <td width="70px">
+                        <div><input class="input" style="width:55px;background-color:#f2f2f2;border:0ch;outline:none" type="button" id="id5" value="许志安" onclick="openLine(5)"></div>
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none;outline:none" type="button" id="id6" value="陈慧琳" onclick="openLine(6)"></div>
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none;outline:none" type="button" id="id7" value="Twins" onclick="openLine(7)"></div>
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none;outline:none" type="button" id="id8" value="郑秀文" onclick="openLine(8)"></div>
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none;outline:none" type="button" id="id9" value="容祖儿" onclick="openLine(9)"></div>
+                    </td>
+                    <td width="70px">
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none" type="button" id="id10" value="梁汉文" onclick="openLine(10)"></div>
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none" type="button" id="id11" value="谢霆锋" onclick="openLine(11)"></div>
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none" type="button" id="id12" value="黄耀明" onclick="openLine(12)"></div>
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none" type="button" id="id13" value="苏永康" onclick="openLine(13)"></div>
+                        <div><input style="width:55px;background-color:#f2f2f2;border:0ch;outline:none" type="button" id="id14" value="何韵诗" onclick="openLine(14)"></div>
+                    </td>
+                    <td width="600px">
+                        <div id="main2" style="height:300px;width:500px"></div>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+
+
+        </div>
+
+        <div style="width:800px;margin:0 auto;text-align:center;padding:30px;">
+        </div>
+
+        <h3 class="chart--subHeadline">PART 3</h3>
+        <h2 class="chart--headline">文本分析</h2>
+        <div style="width:800px;margin:0 auto;text-align:center;padding:50px;">
+            <p>我抓取了中文网站上所有二人填词的歌曲，并进行分词。</p>
+
+            <p>从整体情况来看，林黄二人没有明显的差距。</p>
+            <p>无论是名词、动词还是形容词，都有不少<strong>重合的高频词汇。</strong></p>
+            <br>
+            <p>但综合来看，林夕词中的文气似乎更多，情绪更为忧郁。</p>
+            <p>黄伟文则更少有抽象的描述，尽管他的歌词中也充满了无奈、悲伤等负面的情绪。</p>
+        </div>
+
+        <div class="two-column" style="background-color:#f2f2f2">
+            <div class="left-side" style="display:inline-block;width:45%;text-align:left;margin:20px">
+                <img src="黄伟文-words.jpg" style="width:550px"></img>
+            </div>
+
+            <div class="right-side chart" style="display:inline-block;width:45%;text-align:right;margin:20px">
+                <img src="林夕-words.jpg" style="width:550px"></img>
+            </div>
+        </div>
+        <br>
+        <div style="width:800px;margin:0 auto;text-align:center;padding:50px;">
+            <p>上世纪90年代，二人写作了大量凄惨苦绝的情歌。</p>
+            <p>这不仅是他们自身经历的真实写照，</p>
+            <p>也反映了当时香港青年中普遍弥漫的虚无、低落情绪。</p>
+            <br>
+            <p>这段时期，林夕的词作幽怨婉转、如泣如诉。</p>
+            <p>而黄伟文笔下的爱情则极致而疯狂，“以血洗血”。</p>
+            </p>
+            <br>
+            <p>张国荣逝世之后，林夕亦得过抑郁症，</p>
+            <p>他怪罪自己写词太过抑郁，没能好好开导哥哥。</p>
+            <p>近年来，林夕钻研佛理，写出了《大爱》这样豁达的作品。</p>
+            <p>而黄伟文的许多作品，也转向积极乐观。</p>
+
+        </div>
+
+        <!-- <div class="two-column">
+            <div class="left-side" style="display:inline-block;width:45%;margin:20px">
+                <div>
+                    <video width="240" height="36" controls="">
+                                                <source src="第一天 - 孙燕姿.mp3" type="video/mp4">
+                                            </video>
+                </div>
+
+                <img src="huangweiwen-adj.svg" style="width:550px"></img>
+            </div>
+
+            <div class="right-side chart" style="display:inline-block;width:45%;margin:20px">
+                <div>
+                    <video width="240" height="36" controls="">
+                                                <source src="第一天 - 孙燕姿.mp3" type="video/mp4">
+                                            </video>
+                </div>
+
+                <img src="linxi-adj.svg" style="width:550px"></img>
+            </div>
+        </div> -->
+
+
+
+
+        <div style="width:800px;margin:0 auto;text-align:center;padding:30px;">
+        </div>
+
+        <h2 class="chart--headline">色彩分析</h2>
+        <div style="width:800px;margin:0 auto;text-align:center;padding:50px;">
+            <p>对歌词中出现的所有颜色进行计数后发现，</p>
+            <p>林黄二人都最常使用 <strong>黑、白、红</strong> 三种颜色。</p>
+            <br>
+            <p>但林夕使用白色的比重更大，</p>
+            <p>而黄伟文使用黑红的比重更大。</p>
+            <p>或许这能从侧面印证林夕忧郁柔情，而黄伟文热烈鬼马的特质。</p>
+            <br>
+            <p>（图中色卡，表示不同颜色词出现的比重）</p>
+
+
+        </div>
+
+        <div class="two-column" style="background-color:#f2f2f2">
+            <div class="left-side" style="width:100%;display:inline-block;width:45%;text-align:left;margin:20px">
+                <img src="黄伟文-color.jpg" style="width:550px"></img>
+            </div>
+
+            <div class="right-side chart" style="display:inline-block;width:45%;text-align:right;margin:20px">
+                <img src="林夕-color.jpg" style="width:550px"></img>
+            </div>
+        </div>
+
+        <div style="width:800px;margin:0 auto;text-align:center;padding:30px;">
+        </div>
+        <h2 class="chart--headline">韵脚分析</h2>
+        <div class="two-column">
+            <div class="left-side" style="display:inline-block;width:45%;text-align:center;margin:20px;font-size:60px;">
+                aa
+                <br>
+                <div style="font-size:16px;width:400px;margin-left:100px"><br>
+                    <p>通过分析所有歌词的“尾词”,</p>
+                    <p>发现黄伟文最有特色的是对”aa“韵脚的使用。</p>
+                    <p>典型的用字如”吧“，”吗“等，</p>
+                    <p>都给人一种娓娓道来，循循善诱的对话感。</div>
+            </div>
+
+            <div class="right-side" style="display:inline-block;width:45%;text-align:center;margin:20px;font-size:60px;">
+                oi, ok, au
+                <br>
+                <div style="font-size:16px;width:400px;margin-left:100px">
+                    <br>
+                    <p>林夕的用韵则更加复杂,</p>
+                    <p>除了很常用oi（爱）作为韵脚，</p>
+                    <p>他也常常使用ok，au来结尾。</p>
+                    <p>平均感，和分寸感，令林夕不吝为诗人。</div>
+            </div>
+            <div style="display:inline-block;width:45%;margin:20px">
+
+                <div>
+                    <video width="240" height="36" controls="">
+                                        <source src="Shine - 曼谷玛利亚.mp3" type="video/mp4">
+                                    </video>
+                </div>
+                <br> " 同样都叫玛利亚 同样都信玛利亚<br> 同样得到温饱 一样每天修甲购物吗<br> 为何一个注定半生 看脚下陆沉曼谷<br> 又有一个却直飞东京 沿路买奢华 "<br>
+                <br>—— Shine 《曼谷玛利亚》
+                <br>
+                <br>
+                <br>
+                <div>
+                    <video width="240" height="36" controls="">
+                                            <source src="郑秀文 - 荒漠甘泉.mp3" type="video/mp4">
+                                        </video>
+                </div>
+
+                <br> " 不必天天等雨洒日日但愿密云吧<br> 要你这里变泽国尚有太多方法呀
+                <br> 筑起水管通你家地下就是热泉吧<br>
+                <br>—— 郑秀文 《荒漠甘泉》
+
+                <br>
+            </div>
+
+            <div style="display:inline-block;width:45%;margin:20px">
+                <div>
+                    <video width="240" height="36" controls="">
+                                            <source src="張國榮 - 玻璃之情.mp3" type="video/mp4">
+                                        </video>
+                </div>
+                <br>" 多少亲爱的　原来亦只亲不爱<br> 多少恋爱史　如遗物那样存在
+                <br> 一声声最爱　给压力压坏未来
+                <br> 但是我跟你　轻快地快活下来 "
+                <br>
+                <br>—— 张国荣 《玻璃之情》
+                <br>
+                <br>
+                <br>
+                <div>
+                    <video width="240" height="36" controls="">
+                                                <source src="陈奕迅 - 一丝不挂.mp3" type="video/mp4">
+                                            </video>
+                </div>
+
+                <br> " 谁当初想摆脱被围绕左右<br> 过后谁人被遥控于世界尽头
+                <br> 勒到呼吸困难才知变扯线木偶<br>这根线其实说到底 谁拿捏在手<br>
+                <br>—— 陈奕迅 《一丝不挂》
+
+                <br>
+            </div>
+        </div>
+
+
+        <h3 class="chart--subHeadline">PART 4</h3>
+
+        <h2 class="chart--headline">不止写情歌</h2>
+        <div class="two-column">
+
+            <div style="width:800px;margin:0 auto;text-align:center;padding:50px;">
+                <p>如果说林黄的创作题材只限于情歌，</p>
+                <p>那是有失公允的。</p>
+                <br>
+                <p>1997年以前，林夕创作了不少讽刺政治的露骨词作，</p>
+                <p>香港回归之后，这类作品几乎绝迹。</p>
+                <p>但近年来，又写出了《六月飞霜》这样评论香港时局的作品。</p>
+                <br/>
+                <p>黄伟文除了1993年为软硬天师写作《中国制造》，很少直言政治。</p>
+                <p>他的政治大概是对同性恋话题的推动。</p>
+                <p>有趣的是，两人虽都为著名的同性恋词人，</p>
+                <p>对此事的公开态度倒是大异其趣。</p>
+
+
+
+            </div>
+
+            <div class="left-side" style="display:inline-block;width:40%;text-align:center;margin:20px;font-size:30px;">
+                黄：同性题材即政治表达
+            </div>
+
+            <div class="right-side" style="display:inline-block;width:45%;text-align:center;margin:20px;font-size:30px;">
+                林：执着隐晦的政治讽喻
+            </div>
+            <div style="width:100%;margin:10px">
+                <div style=" width:100%">
+                    <img src="时间轴.png "></img>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div style="margin:100px;font-size:30px; ">
+            <p>近年来，二人加速减产。</p>
+            <p>不少歌曲也是为配合电影、电视剧而作，</p>
+
+            <p>有粉丝说，这大概也是一个时代的离去。</p>
+            <br>
+            <p>就让港乐的悲情、叛逆，不安、躁动，</p>
+            <p>附着那一代人的记忆，</p>
+            <p>在词句里被永远印刻下来吧。</p>
+
+            <br>
+            <p><strong>设计／开发：蓝星宇</strong></p>
+            <p>数据来源：虾米音乐，知乎网友整理</p>
+
+        </div>
+
+        <!-- <div class="left-side " style="width:30%;display:inline-block;margin-left:200px;font-size:30px ">
+            【一个图】
+        </div>
+
+        <div class="right-side " style="display:inline-block;margin-right:300px;font-size:15px;text-align:center ">
+            开发／设计：蓝星宇
+        </div> -->
+
+
+        <!--最后放一个查询系统-->
+
+    </div>
+
+    </div>
+
+
+    <script src='js/d3.v3.min.js'></script>
+
+    <script src="js/index.js "></script>
+
+</body>
+
+</html>

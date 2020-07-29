@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<!-- 不删除该句无法加载css -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3.v4.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/textures@1.2.0/dist/textures.js"></script>
+    <script src="d3.v4.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="d3.sankey.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+
+    <script src="test/echarts.js"></script>
+    <!-- <script src="china.js"></script> -->
+    <!--要异步加载json的时候要记得引用：-->
+    <script type="text/javascript" src="test/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="drawMeilai.js"></script>
+    <script type="text/javascript" src="drawLanshizi.js"></script>
+    <script type="text/javascript" src="drawHemei.js"></script>
+    <script type="text/javascript" src="drawHuaheng.js"></script>
+    <script type="text/javascript" src="drawYixing.js"></script>
+</head>
+
+
+<body>
+
+    <img src="img/toutu.png" style="width:100%;"></img>
+    </div>
+    <div style="display:block; clear: both; margin-bottom: 0px; color:white;">
+        <p>
+            <span style="font-size: 32px;">Putian</span> is a prefecture-level city in Fujian province, located in southern China. Compared to other Chinese cities, Putian has a small population and is not a leader in development. However, Putian people
+            are good at doing business, especially in the medical industry. At the same time, they always attach great importance to kinship relations when establishing their careers, and thus have formed a huge capital network in the medical industry.
+            According to a <a href="https://www.jiemian.com/article/632855.html">previous report</a>, the Putian families own over 8,600 private hospitals, accounting for more than 80% of all private hospitals in China.
+        </p>
+        <!-- <h1>Tracking Putian family</h1> -->
+        <p>
+            The crisis at the Putian Family started with <a href="https://en.wikipedia.org/wiki/Death_of_Wei_Zexi">a medical accident.</a>
+        </p>
+        <div style="padding-top: 20px; padding-bottom: 0px;">
+            <div style="display: inline-block; width:40%; padding-left:10%; text-align: center;vertical-align:middle; color:grey; font-size:14px">
+                <img src="img/wei.jpg" style="width:100%;"></img>
+                On April 13, 2016, Wei's parents were sitting<br>outside the funeral parlor (photo credit to Caixin.com)
+            </div>
+            <div style="display: inline-block; width:35%; padding-left:5%; vertical-align:middle">
+                In 2016, Beijing Armed Police Force Second Hospital was put under great controversy after Wei Zexi, a college student received discredited treatment and died. The hospital had long been considered as professional and reliable as it was originally a military
+                hospital in China. However, it was later found that the hospital had contracted some of the departments to private hospitals and the contractor who led to Wei Zexi’s death was a Putian-linked hospital. After the incident, a huge network
+                of Putian-linked hospitals was brought to the spotlight and faced with public outrage. The public felt angry, scared, and curious about the Putian system, but actually they knew little about it. </div>
+            <div style="clear:both"></div>
+        </div>
+
+        <p>
+            After Wei Zexi’s death, <a href="http://finance.ifeng.com/a/20160504/14362132_0.shtml">China Business News</a> published a long list of Putian-linked hospitals. The list didn’t cover all the related hospitals but was already the most detailed
+            one based by evidence. How does the Putian founders hide their fraudulence along the way and build such a huge private medical care network? How do they use the game of capital to survive from a crisis and how does they capitalize on medical
+            and technological advances to prosper?
+        </p>
+
+        <h1>Overall Portrait</h1>
+
+        <p>
+            Among the 441 hospitals, 368 can be searched on <a href="https://www.tianyancha.com/">Tianyancha.com</a>, an online business tool for Chinese companies. We then scraped all the historical information of those companies, and outline the portraits
+            of Putian hospitals roughly using a sankey diagram. As shown below, those hospitals are both dynamic and differentiated.
+        </p>
+
+        <div id="sankey">
+            <button class="pausebutton" onclick="pauseAni()" style="position: absolute;"></button>
+            <button class="replaybutton" onclick="playAni()" style="position: absolute;"></button>
+            <canvas id="sankeycanvas"> </canvas>
+            <svg id="sankeysvg"></svg>
+            <div class="sankey_legend"></div>
+        </div>
+
+        <p>
+            From a geographical point of view, most of them are located in the southeastern China (Zhejiang, Shanghai, and Guangdong province, especially). Many years ago, Chen Deliang, the originator of Putian Medical Gang, led his students and grandchildren from
+            Fujian to Guangdong, Shandong, Henan, Beijing, Inner Mongolia, and Heilongjiang, and traveled all over the country. After the inspection of the original capital, the Putian hospital showed Significant regional characteristics, from the early
+            establishment of bases in the north, are turning to the more economically active southern regions.
+        </p>
+        <img src="img/street2.png" style="width:80%;padding-left: 10%;"></img>
+
+        <p>
+            The story of the four main Putian families is a game of the survival of the fittest – you evolve or die. The whole story is never boring: the main business is transformed and extended, families and companies merge and separate, capital comes and goes…After
+            Wei Zexi’s death, public attention gradually faded away. But the game of the Putian groups is still going on. </p>
+
+        <h1>Capital Network of 3 Families</h1>
+
+        <p>
+            As shown by a <a href="https://olivialan.github.io/putian/index.html">previous report</a>, 3 families are particularly powerful in Putian network, i.e., family Zhan, family Lin and family Chen. In the following section, we will closely examine
+            these 3 families and 5 big medical groups owned by them.
+        </p>
+        <!-- <div style="display: inline-block; width:100%; text-align:center">
+            <img src="img/banner5.png" style="width:70%;vertical-align:middle"></img>
+        </div> -->
+
+
+
+        <div style="padding-top: 80px; padding-bottom: 50px;">
+            <div style="display: inline-block; width:60%; padding-left: 20%;">
+                <img src="img/section1.png" style="width:100%;vertical-align:middle"></img>
+            </div>
+            <!-- <div style="display: inline-block; width:60%;vertical-align:middle">
+            </div>
+            <div style="clear:both"></div> -->
+        </div>
+        <p>
+            Zhan Guotuan was one of the eight apprentices of Chen Deliang in the early stage and also the most business-savvy one. He was the first in the industry to do TV commercials and contract departments from public hospitals, in an attempt to get rid of the
+            bad reputation of unlicensed doctors. In this way, he became the leading figure of the Putian medical network.
+        </p>
+        <p>
+            Wang Hai, “China's first person to crack down on frauds as individuals" started to uncover Putian hospitals in 1998, after which Chinese authorities also outlawed a large number of unlicensed doctors, strongly hitting the Zhan family led by Zhan Guotuan.
+            Zhan Guotuan decided to leave for Singapore and set up Singapore Zhongyu Medical Group and Singapore International Medical Industry Management Group Co., Ltd., trying to rebrand his group as a foreign company.
+        </p>
+
+        <p>
+            In 2001, Zhan Guotuan went back to China and founded Shanghai Huaheng Investment (Group) Co., Ltd., with three major subsidiaries: Shanghai Hengyu Industrial Co., Ltd., Shanghai Xinzhong Advertising Co., Ltd. and Zhejiang Xin'an International Hospital
+            Co., Ltd. The Zhan family purposely lowered the percentage of hospital investment in the portfolio. Zhan invested in no other hospitals except Xin'an International Hospital and Taicang Xin'an Rehabilitation Hospital.
+        </p>
+
+
+        <div class="graphlayout">
+            <div id="huaheng" style="text-align: center; height:550px; "></div>
+            <div id="handle_huaheng" style="text-align: center;">
+            </div>
+        </div>
+
+
+        <div style="padding-top: 120px; padding-bottom: 50px;">
+            <div style="display: inline-block; width:40%; padding-left: 10%;">
+                <img src="img/huaheng.png" style="width:100%;vertical-align:middle"></img>
+            </div>
+            <div style="display: inline-block; width:40%;vertical-align:middle">
+                <p style="padding-bottom: 30px;"><br> But this didn’t not mean that Zhan family decided to give up its hospital resources. According to reports, the Zhan family controls a number of hospitals named with Mary or Xinan. When the Zhan family returned to China, they adopted
+                    a more complicated way to conceal their investment options. This is Putian’s style, low-key and decentralized.
+                </p>
+                <br>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+
+        <p>
+            Unlike Zhan Guotuan, his cousin Zhan Yangbin still focuses on the medical industry, shifting from traditional STD hospitals to “higher levels”. Blue Cross Brain Hospital is one example. </p>
+        <p>
+            In 2005, Zhan Yangbin established the Beijing People's Hospital Investment Company, and later set up a number of medical examination institutions in Tianjin, Zhengzhou, and Chongqing, with Beijing as the center. In the process, external capital forces
+            are gradually infiltrating. Investment bosses He Boquan, Zhang Ligang, Yunfeng Investment, Alibaba Ventures, and Aikang Guobin's health checkups have become the largest shareholders of Beijing's medical checkup clinic.
+        </p>
+
+        <div class="graphlayout">
+            <div id="lanshizi" style="text-align: center; height:600px;"></div>
+            <div id="handle_lanshizi" style="text-align: center;"></div>
+        </div>
+
+        <div style="padding-top: 150px; padding-bottom: 50px;">
+            <div style="display: inline-block; width:40%; padding-left: 10%;">
+                <img src="img/lanshizi.png" style="width:100%;vertical-align:middle"></img>
+            </div>
+            <div style="display: inline-block; width:40%;vertical-align:middle">
+                <p>The CEO of the Blue Cross Brain Hospital is Zhuo Liqiang and a large percentage of share is held by Zhan Yangbin and Liu Yonghao, the owner of New Hope, a large Chinese agricultural company. The Liu Yonghao family has always been close
+                    to the Zhan family. In the early years, Liu Yonghao even shared the same room with Zhan Guotuan.
+                </p>
+                <p style="padding-bottom: 30px;">
+                    In 2016, Liu Yonghao started to invest in brain hospitals and Zhan family was also attracted by the business opportunities. And in 2018 and 2019, the number of similar brain hospitals surged.
+                </p>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+
+        <div style="padding-top: 80px; padding-bottom: 50px;">
+            <div style="display: inline-block; ">
+                <img src="img/section2.png" style="width:60%;padding-left: 20%;vertical-align:middle"></img>
+            </div>
+
+            <!-- <div style="display: inline-block; width:40%;vertical-align:middle">
+                <p style="padding-bottom: 30px;">
+                    The representative figures of the Lin family in Putian are Lin Zhizhong and Lin Yuming. </p>
+                <p style="padding-bottom: 30px;">
+                    In the Putian generation, Lin Zhizhong realized the malpractices of the old model earlier, and successfully transformed, forming two major medical patterns of "fraternity-benevolence" and "big-day-big", which have been gradually transferred to the children
+                    and are being realized between generations inherited. His brother Lin Zhicheng set up Tianzhi Group with Guangzhou as its base camp, with dozens of private hospitals under his control. The number is not large, but the scale is large.
+                </p>
+            </div> -->
+            <div style="clear:both"></div>
+        </div>
+        <p>
+            Lin Yuming is a representative figure of the Lin family and also the leading one of Putian’s second generation. He owns Harmonicare Medical that focuses on high-end women and children brands.
+        </p>
+        <p>
+            Harmonicare Medical got listed in the Hong Kong exchange in July 2015, a time when Chinese government launched the two-child policy and when women and children hospitals were increasingly popular. In March 2018, Lin Yuming said at the performance conference,
+            "Besides focusing on its main business, Harmonicare Medical will invest in innovative and derivative businesses to build a health ecosystem, including value-added services ranging from genetic screening to postpartum rehabilitation and medical
+            beauty."
+        </p>
+
+
+        <div class="graphlayout">
+            <div id="hemei" style="text-align: center; height:650px; "></div>
+            <div id="handle_hemei" style="text-align: center;"></div>
+        </div>
+        <p>
+            However, in the end of 2018, Shenzhen Harmonicare Medical and Pediatric Hospital, a subsidiary of Harmonicare Medical, was involved in the scandal of gene editing baby. On December 30, 2019, the case was heard in Shenzhen Nanshan District Court. He Jiankui,
+            who edited a baby’s gene was charged with illegal medical practice and sentenced to three years in prison.
+        </p>
+        <div style="padding-top: 100px; padding-bottom: 50px;">
+            <div style="display: inline-block; width:40%; padding-left: 10%;">
+                <img src="img/hemei.png" style="width:100%;vertical-align:middle"></img>
+            </div>
+            <div style="display: inline-block; width:40%;vertical-align:middle">
+                <p style="padding-bottom: 30px;">
+                    As a result, Harmonicare Medical saw its stock price plummet. When it was listed, four major renowned international investment funds showed great interest and on the day of public offering, Harmonicare Medical was 7.7 times overbought, priced at HK $
+                    7.55. However, the stock price kept falling after the IPO. By the time of trading suspension in March 2019, it had fallen to HK $ 2.04 per share. </p>
+                <p>
+                    At the time of listing, it was said that on the first day of its international placement, it had been snapped up by four major internationally renowned investment funds. By the deadline of the public offering, Harmonicare Medical had obtained 7.7 times
+                    over-purchase, priced at a maximum of HK $ 7.55. However, the appearance was high, and the stock price has since fallen. By the time of trading suspension in March 2019, it had fallen to HK $ 2.04 per share.
+                </p>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <p>
+            According to the 2018 annual report, Harmonicare Medical lost 200 million yuan. Since then, Lin Yuming kept selling his companies." In April 2018, Harmonicare Medical sold 92% of its Shenzhen Harmonicare Women and Children Hospital for 63 million yuan.
+            Three months later, Harmonicare Medical also said that it would transfer the entire equity of Wuhan Modern Hospital, Chongqing Wanzhou Hospital and Chongqing Metropolitan Hospital for 22 million yuan. The latest news is that Ren Meihui, vice
+            president and CFO of Harmonicare Medical Group, resigned.
+        </p>
+        <p>
+            When Harmonicare Medical went public, it showed strong potential to attract investment. But now, Harmonicare is still here, but the capital has long gone.
+        </p>
+
+
+        <div style="padding-top: 100px; padding-bottom:0px;">
+            <img src="img/section3.png" style="width:60%;margin-left:20%;vertical-align:middle"></img>
+            <!-- <div style="display: inline-block; width:40%;vertical-align:middle">
+            </div>
+            <div style="clear:both"></div> -->
+            <p>
+                On January 2nd, 2020, the medical beauty industry white paper issued by Gengmei APP showed that the medical beauty industry was worth 256 billion yuan, with an average growth rate of about 30% in the past five years. It is expected that by 2025, the whole
+                industry will be over trillion yuan. It is fair to say that the medical beauty industry is dominated by the Putian network, and the Chen family more specifically. </p>
+
+            <p>
+                The frist group worth mentioned is Yestar Group, controlled by Chen Guoxiong, Chen Guoxing and Lin Changqing, siblings and cousins within the Chen family. They work closely together with Yestar Medical Cosmetology Group as the core business. From 2014
+                to 2017, the whole Yestar group expanded rapidly and became the second largest medical beauty group in China. In addition to the medical beauty industry, the group also invests in medical beauty technology, aesthetic culture promotion,
+                and medical devices.
+            </p>
+
+            <div class="graphlayout">
+                <div id="yixing" style="text-align: center; height:680px; "></div>
+                <div id="handle_yixing" style="text-align: center;"></div>
+            </div>
+
+            <p style="padding-top: 250px;">
+                As the Yestar Group develops, the Chen family is planning to attract more capital. In July 2018, Yestar Medical Beauty submitted a prospectus to the Hong Kong Stock Exchange in an attempt to enter into the Hong Kong stock market. If it had succeeded then,
+                it would have become a the first Chinese medical beauty group going public. But in the end Yestar Medical Beauty withdrew its IPO application.
+            </p>
+            <p>
+                It is worth noting that Yestar Medical Beauty was deeply trapped in multiple infringement scandals. The damaged reputation might be one of the obstacles to its listing. The prospectus showed that the Group had 30 rule violations in medical advertising,
+                77 disputes over portrait rights, and 4 medical accidents. Tianyancha.com, a Chinese credit reporting agency, revealed that Yestar Medical Beauty were sued by actors Zhao Yazhi, Liu Yuxin, Jin Qiaoqiao, and Zhou Weitong for disputes over
+                portrait right. The spending on fines and disputes in 2017 amounted to RMB 3.31 million.
+            </p>
+
+            <div style="padding-top: 100px; padding-bottom: 50px;">
+                <div style="display: inline-block; width:35%; padding-left: 10%;">
+                    <img src="img/yixing.png" style="width:100%;vertical-align:middle"></img>
+                </div>
+                <div style="display: inline-block; width:50%;vertical-align:middle">
+                    <p style="padding-bottom: 30px;">
+                        Another explanation is that they have found another investment channel: to land on the Sci-Tech innovation board with the help of Medici, a company owned by Chen Jinzhang, Chen Guoxiong and Chen Guoxing’s uncle. On November 5, 2019, Medici landed on the
+                        science and technology board with an issue price of 41.5 yuan and an opening price of 66.66 yuan, an increase of 60.6%. The prospectus showed that Medici has a total of 13 shareholders, and the largest shareholder is Chairman Chen
+                        Jinzhang, with a shareholding of 20.91%. The second, third, and fifth largest shareholders are Chen Jianhuang, Chen Chunlai, and Chen Guoxing, and their shareholding ratios are 13.21%, 10.66%, and 7.12%, respectively. </p>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+
+            <p>
+                Chen Jinxiu's Mylike Group is China's largest medical beauty group. First the group started Mylike Medical beauty Hospitals and gradually formed a franchise chain comprising Huanmei / Melai / Huailai / Zixin hospitals. At the same time, it also invests
+                in hospitals through its regional investment management companies (Guangzhou Mylike, Fujian Mylike, Xiamen Huayi, Sichuan Zhongfu, Chengdu Wanyin). At present, the group has clusters of hospitals in Guangshen, Sichuan, Chongqing, and Fujian.
+            </p>
+
+
+
+            <div class="graphlayout">
+                <div id="meilai" style="text-align: center; height:690px"></div>
+                <div id="handle_meilai" style="text-align: center;"></div>
+            </div>
+            <div style="padding-top: 280px; padding-bottom: 50px;">
+                <div style="display: inline-block; width:35%; padding-left: 10%;">
+                    <img src="img/meilai.png" style="width:100%;vertical-align:middle"></img>
+                </div>
+                <div style="display: inline-block; width:50%;vertical-align:middle">
+                    <p style="padding-bottom: 30px;">
+                        Thanks to regional investments and franchising, Chen Jinxiu's Mylike hospitals expanded rapidly and spread around the country quickly around 2010. Interestingly, although Chen Jinxiu dominates, he is generous in sharing certain equity incentives with
+                        partners, mostly between 5% -20%, if they belong to the Putian network. For example, he founded Guangzhou Mylike in cooperation with Ye Zhiyang, Xiamen Huayi Medical Beauty Hospital with Zhan Jiansheng. In fact, different from
+                        core investors, agents of region franchises are only managing the operation, but they have not really enjoyed the capital dividend. It can be said that the Chen family take advantage of outsiders and only share power with his Putian
+                        fellows.
+                        <p>
+                            Though Putian Hospitals have been trying to embrace modern enterprise management, but in essence, it is still a family business powered by kinship and relationship.
+                        </p>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+
+
+            <div style="display:block; clear: both; margin-bottom: 100px; color:white;">
+                <h1>Conclusion</h1>
+                <p>
+                    With rises and falls, only these three families are still powerful among the previous four, and Putian's hospital resources are being redistributed. Through these stories, it is not difficult to find that facing government regulations and public scrutiny,
+                    Putian families have made various attempts to cover their “sin”, such as rebranding themselves as foreign companies, the so-called industrial upgrading, and a high-tech approach. Tricks vary, but one thing doesn’t change: the Putian
+                    families are always confident that they can squeeze a fortune from China’s medical industry.
+                </p>
+                <p>
+                    Despite the controversy and even PR crises, Putian families are always ambitious to win in the capital market, which motivates them to evolve and find opportunities faster than competitors. In this way, their wealth keeps accumulating.
+                </p>
+                <p>
+                    The story is not yet coming to an end. The protagonists of the story may change one day, but the kingdom is still there. We will continue to pay attention to the latest news about Putian, with a question always in mind: Who will pay for their sin?
+                </p>
+                <h2>Data Source:</h2>
+                <p style=" padding-top: 10px;">1. China Business News list: <a href="http://finance.ifeng.com/a/20160504/14362132_0.shtml">http://finance.ifeng.com/a/20160504/14362132_0.shtml</a>
+                    <br>2. Tianyancha.com: <a href="http://www.tianyancha.com">http://www.tianyancha.com</a>
+                    <br>3. Prospectus & annual business report (Harmonicare stock code: 01509.HK)
+                    <br>4. 2019 China Medical Beauty Industry White Paper: <a href="http://finance.eastmoney.com/a/202001021344408274.html">http://finance.eastmoney.com/a/202001021344408274.html</a>
+                    <br> 5. Google & Baidu street view
+                    <br>6. Related reports:
+                    <br>·《谁在掌控中国民营医院》: <a href="http://www.bjzqw.com/lanmu/rdht/shgj/2006/1225/1196.html">http://www.bjzqw.com/lanmu/rdht/shgj/2006/1225/1196.html</a>
+                    <br>·《要命的莆田系，为何能蛮占全国80%民营医疗市场》:
+                    <a href="https://www.jiemian.com/article/632855.html">https://www.jiemian.com/article/632855.html</a>
+                    <br>·《刘永好：不急着兑现新希望的“千亿梦”，先扶女儿上马》:
+                    <a href="https://www.huxiu.com/article/169564.html">https://www.huxiu.com/article/169564.html</a>
+                    <br>·《和美医疗逆势操作 国内最大私立妇产医院港股上市》:
+                    <a href="https://new.qq.com/rain/a/20150707020608">https://new.qq.com/rain/a/20150707020608</a>
+                </p>
+                <h2>Authors</h2>
+                <p style="color:grey; padding-top: 10px;">leave anonymous</p>
+            </div>
+            <div style="width:100%; ">
+                <img src="img/banner2.png" style="width:100%;opacity:0.3"></img>
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+            width2 = window.innerWidth * 0.78
+
+            var legend2 = d3.selectAll(".sankey_legend")
+                .append('svg')
+                .attr('height', "60px")
+                .attr('width', window.innerWidth)
+
+            legend2.append("circle").attr("cx", width2 / 6 * 2 - 60).attr("cy", 50).attr("r", 6).style("fill", "#3EBFED")
+            legend2.append("circle").attr("cx", width2 / 6 * 5 - 80).attr("cy", 50).attr("r", 6).style("fill", "#FFDA44")
+
+            legend2.append("text").attr("x", width2 / 6 * 2 - 40).attr("y", 50).text("Birth records").style("font-size", "14px").style("fill", "#3EBFED").attr("alignment-baseline", "middle")
+            legend2.append("text").attr("x", width2 / 6 * 5 - 60).attr("y", 50).text("Growth records").style("font-size", "14px").style("fill", "#FFDA44").attr("alignment-baseline", "middle")
+
+            legend2.append("text").attr("x", width2 / 6 - 50).attr("y", 10).text("established year").style("font-size", "14px").style("fill", "#3EBFED").attr("alignment-baseline", "middle")
+            legend2.append("text").attr("x", width2 / 6 * 2 - 30).attr("y", 10).text("location").style("font-size", "14px").style("fill", "#3EBFED").attr("alignment-baseline", "middle")
+            legend2.append("text").attr("x", width2 / 6 * 3 - 90).attr("y", 10).text("registered capital (in RMB)").style("font-size", "14px").style("fill", "#3EBFED").attr("alignment-baseline", "middle")
+            legend2.append("text").attr("x", width2 / 6 * 4 - 70).attr("y", 10).text("administrative penalties").style("font-size", "14px").style("fill", "#FFDA44").attr("alignment-baseline", "middle")
+            legend2.append("text").attr("x", width2 / 6 * 5 - 30).attr("y", 10).text("lawsuits").style("font-size", "14px").style("fill", "#FFDA44").attr("alignment-baseline", "middle")
+            legend2.append("text").attr("x", width2 / 6 * 6 - 50).attr("y", 10).text("current status").style("font-size", "14px").style("fill", "#FFDA44").attr("alignment-baseline", "middle")
+
+
+
+
+
+            //控制桑基图的播放与暂停
+            var sankeypause = false;
+            var scrollFunc = function(e) {
+                    e = e || window.event;
+
+                    var scrollY = 0;
+                    // if (document.body && document.body.scrollTop) {
+                    //     scrollY = document.body.scrollTop;
+                    // } else if (document.body) {
+                    //     scrollY = document.body.scrollTop;
+                    // }
+
+                    // if (scrollY < 1000) {
+                    //     //未到桑基图，暂停
+                    //     if (!sankeypause) {
+                    //         pauseAni();
+                    //         sankeypause = true;
+                    //         return;
+                    //     }
+                    // }
+
+                    // if (scrollY > 1000 && scrollY < 3000) {
+                    //     //到/返回桑基图，开始播放
+                    //     if (sankeypause) {
+                    //         playAni();
+                    //         sankeypause = false;
+                    //         return;
+                    //     }
+                    // }
+
+                    // if (scrollY > 3000) { //建议3000
+                    //     //离开桑基图，暂停
+                    //     if (!sankeypause) {
+                    //         pauseAni();
+                    //         sankeypause = true;
+                    //         return;
+                    //     }
+                    // }
+
+
+                }
+                //给页面绑定滑轮滚动事件 
+            if (document.addEventListener) { //firefox 
+                document.addEventListener('DOMMouseScroll', scrollFunc, false);
+            }
+            //滚动滑轮触发scrollFunc方法 //ie 谷歌 
+            window.onmousewheel = document.onmousewheel = scrollFunc;
+
+            //add sankey
+            //canvas size
+            var margin = {
+                top: 1,
+                right: 3,
+                bottom: 1,
+                left: 0
+            };
+            width = window.innerWidth * 0.78;
+            height = 600; //svg大小
+
+            //number format and color
+            var formatNumber = d3.format(",.0f"),
+                format = function(d) {
+                    return formatNumber(d) + " TWh";
+                },
+                //color = d3.schemeCategory10(); //版本变更
+                color = d3.scaleOrdinal(d3.schemeCategory20);
+
+            var svg = d3.select("#sankeysvg")
+                .attr("width", width)
+                .attr("height", height)
+                .append("g")
+                .style("color", "transparent") ////影响canvas显示
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            //sankey node style 
+            var sankey = d3.sankey()
+                .nodeWidth(15) //node宽度
+                .nodePadding(10)
+                .size([width, height]);
+
+            //sankey line
+            var path = sankey.link();
+
+            //频率
+            var freqCounter = 1;
+
+
+            //nodejs 服务器解决json跨域问题
+            ///////SANKEY//////
+            d3.json("lifeline.json", function(error, energy) {
+                if (error) throw error;
+                //sankey layout
+                sankey
+                    .nodes(energy.nodes)
+                    .links(energy.links)
+                    .layout(32);
+
+                //sankey link
+                var link = svg.append("g").selectAll(".link")
+                    .data(energy.links)
+                    .enter()
+                    .append("path")
+                    .attr("class", "linksankey") ///class different from graph
+                    .attr("d", path)
+                    //.style("fill", "white")
+                    // .style("storke","white")
+                    // .style("opacity",0)
+                    .style("stroke-width", function(d) {
+                        return Math.max(6, d.dy);
+                    }) //宽度最小6
+                    .sort(function(a, b) {
+                        return b.dy - a.dy;
+                    });
+
+                //link title
+                link.append("title")
+                    .text(function(d) {
+                        return d.source.name + " → " + d.target.name + "\n" + format(d.value);
+                    });
+                //test drag
+
+                const drag = d3.drag()
+                    .on("start", function() {
+                        this.parentNode.appendChild(this);
+                    })
+                    .on("drag", dragmove);
+
+
+                // 调用call是手动调用函数并将选择集作为第一个参数
+                // sankey node
+                var node = svg.append("g").selectAll(".node")
+                    .data(energy.nodes)
+                    .enter().append("g")
+                    .attr("class", "node")
+                    .attr("transform", function(d) {
+
+                        //d.y = d.y+Math.random()*50;
+                        //d.x = d.x+Math.random()*50;
+
+                        return "translate(" + d.x + "," + d.y + ")";
+                    })
+                    //.call(d3.behavior.drag()
+                    .call(drag)
+                    // .origin(function(d) { return d; })
+                    // .on("dragstart", function() { this.parentNode.appendChild(this); })
+                    // .on("drag", dragmove));
+
+
+                // sankey rect
+                node.append("rect")
+                    .attr("height", function(d) {
+                        //d.dy = d.dy*0.5;//缩短后 canva不同步
+                        return d.dy;
+                    })
+                    .attr("width", sankey.nodeWidth())
+                    .style("fill", function(d) {
+                        //d.color = color(d.name.replace(/ .*/, ""))
+                        //d.color = color(d.type)
+                        return d.color;
+                    })
+                    .style("fill", "black") //transparent or black
+                    .style("stroke", "white")
+                    .append("title")
+                    .text(function(d) {
+                        return d.name + "\n" + format(d.value);
+                    });
+
+                // sankey text
+                node.append("text")
+                    .attr("x", -6)
+                    .attr("y", function(d) {
+                        return d.dy / 2;
+                    })
+                    .attr("dy", ".35em")
+                    .attr("text-anchor", "end")
+                    .attr("transform", null)
+                    .attr("font-size", 10) //text size 
+                    .attr("font-family", "STXihei") //text family
+                    .text(function(d) {
+                        return d.name;
+                    })
+                    .filter(function(d) {
+                        return d.x < width / 2;
+                    })
+                    .attr("x", 6 + sankey.nodeWidth())
+                    .attr("text-anchor", "start");
+
+                //timer
+                var t = d3.timer(tick, 1000); //设置等待时间
+                var particles = [];
+                var elapsed_outer = 0; //记录动画流逝的时间
+
+
+                // drag rect
+                function dragmove(d) {
+                    d3.select(this).attr("transform", "translate(" + d.x + "," + (d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))) + ")");
+                    sankey.relayout();
+                    link.attr("d", path);
+                    particleEdgeCanvasPath(elapsed_outer); //粒子重布局
+                }
+
+
+                var linkExtent = d3.extent(energy.links, function(d) {
+                    return d.value
+                });
+                var frequencyScale = d3.scaleLinear().domain(linkExtent).range([1, 100]); //[[0.05, 1]
+                // node size 
+
+                var particleSize = d3.scaleLinear().domain(linkExtent).range([1, 5]); //版本变化
+                var particleColorArray = new Array();
+
+                // link style
+                energy.links.forEach(function(link) {
+                    particleColorArray.length = 0;
+                    link.freq = frequencyScale(link.value);
+                    //particle size
+                    link.particleSize = particleSize(link.value);
+                    link.particleColor = d3.scaleLinear().domain([1, 1000]).range([link.source.color, link.target.color]);
+                    particleColorArray.push(link.target.color);
+                    link.particleColorArray = particleColorArray;
+                })
+
+
+                //play controller
+                pauseAni = function() {
+                    t.stop();
+                }
+                playAni = function() {
+                    t.restart(tick, 1000);
+                }
+
+
+                //new tick
+                function tick(elapsed, time) {
+                    particles = particles.filter(function(d) {
+                        return d.current < d.path.getTotalLength()
+                    });
+                    //console.log(particles.length)
+                    //why particles
+                    d3.selectAll("path.linksankey")
+                        .each(
+                            function(d) {
+                                //console.log(d.source.value) 扩大极差 1+Math.sqrt(d.source.value)
+                                //铺满
+                                for (var x = 0; x < (d.value) / 10; x++) { //why 2  数据绑定
+                                    //console.log(d.value,d.source.value,d.target.value)
+
+                                    var offset = (Math.random() - .5) * (d.dy - 4); //随机高度差按照宽度分布
+                                    //console.log(d.dy)
+                                    //var offset = Math.random();//粒子随机高度差为0
+                                    if (Math.random() < d.freq) {
+                                        var length = this.getTotalLength(); //path length   粒子与path长度也有关
+
+                                        particles.push({
+                                                link: d,
+                                                time: elapsed,
+                                                offset: offset,
+                                                path: this,
+                                                length: length,
+                                                animateTime: length,
+                                                speed: 0.5 + (Math.random())
+                                            }) //speed
+                                    }
+                                }
+                            });
+                    elapsed_outer = elapsed;
+                    particleEdgeCanvasPath(elapsed);
+                }
+
+
+                //主动给source分层按照各自的时间开始播放
+                //new particle
+                function particleEdgeCanvasPath(elapsed) {
+
+
+                    var ele = document.getElementById("sankeycanvas");
+                    ele.width = width; //
+                    ele.height = 700; //==div大小
+                    var context = d3.select("#sankeycanvas").node().getContext("2d")
+                    context.clearRect(0, 0, 1000, 600); // ==svg大小
+
+
+                    context.fillStyle = "gray"; //
+                    context.lineWidth = "1px";
+                    //for (var x = 0; x < 357; x++) { //仅仅只用200数据
+                    for (var x in particles) {
+                        //init the starttime
+                        //console.log(particles);
+                        var currentTime = elapsed - particles[x].time;
+                        var currentType = particles[x].link.source.type;
+                        //particles[x].current = currentTime * 0.15 * particles[x].speed ;
+                        //更改运动阶段
+                        particles[x].current = (currentTime - (currentType - 1) * 2500) * 0.05 * particles[x].speed;
+
+                        var currentPos = particles[x].path.getPointAtLength(particles[x].current); //pos
+                        //console.log(currentPos)
+                        context.beginPath();
+                        context.fillStyle = particles[x].link.particleColor(0);
+                        // 控制为单一颜色
+                        //context.fillStyle = "#FFDA44"; //"#79CDCD";主题色
+                        //更改显示聚集
+                        if (particles[x].current > 0) { //不绘制还未出现的点
+                            //context.rect(currentPos.x, currentPos.y + particles[x].offset, 2, 2);
+                            context.rect(currentPos.x, currentPos.y + particles[x].offset * 0.8, 2.5, 2.5);
+                            context.fill();
+                        }
+
+                    }
+                }
+
+
+            });
+        </script>
+
+        <script>
+            draw_meilai();
+            draw_lanshizi();
+            draw_hemei();
+            draw_hueheng();
+            draw_yixing();
+        </script>
+
+</body>
+
+</html>

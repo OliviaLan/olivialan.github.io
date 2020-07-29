@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=1, minimum-scale=0.5, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="title" content="蓝星宇的问卷">
+    <title>蓝星宇的问卷</title>
+
+    <script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+    <link href="https://dp5pnij3net95.cloudfront.net/widget/quiz/build/main.min.css?7905f33f4f8866bb5419" rel="stylesheet">
+
+    <script type="text/javascript">
+        $(function() {
+            var trueSum = parseInt(document.cookie.split("=")[1]);
+            document.getElementById("trueSum").innerText = trueSum;
+            var score = parseInt(trueSum / 12 * 100);
+            document.getElementById("score").innerText = score;
+            if (trueSum == 0) {
+                document.getElementById("result").innerText = "你的运气很棒，你该去抽奖！";
+                document.getElementById("result2").innerText = "中奖了告诉我！";
+            } else if (trueSum > 0 && trueSum <= 3) {
+                document.getElementById("result").innerText = "我猜你是00后！";
+                document.getElementById("result2").innerText = "少上网，多看书！";
+            } else if (trueSum > 3 && trueSum <= 6) {
+                document.getElementById("result").innerText = "得分一般，";
+                document.getElementById("result2").innerText = "再接再厉噢～";
+            } else if (trueSum > 6 && trueSum <= 9) {
+                document.getElementById("result").innerText = "你很喜欢听歌！";
+                document.getElementById("result2").innerText = "受我一拜！";
+            } else if (trueSum > 9 && trueSum <= 11) {
+                document.getElementById("result").innerText = "你暴露年龄了！";
+                document.getElementById("result2").innerText = "你击败了全国90%的网友！";
+            } else if (trueSum == 11) {
+                document.getElementById("result").innerText = "你对华语歌曲很了解！";
+                document.getElementById("result2").innerText = "看来是铁粉噢～～";
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="App-component is-loaded" data-reactid=".0">
+            <noscript data-reactid=".0.$0"></noscript>
+            <div class="Quiz-component is-loaded" data-reactid=".0.1">
+                <div class=" page-enter" data-reactid=".0.1.$2">
+                    <div class="Quiz-content" data-reactid=".0.1.$2.$0">
+                        <div class="SetContent-block" data-reactid=".0.1.$2.$0.$0"></div>
+                        <div class="Quiz-content-inner" data-reactid=".0.1.$2.$0.$1">
+                            <noscript data-reactid=".0.1.$2.$0.$1.1:$0"></noscript>
+                            <div class="AutoSubmit-component is-loaded" data-reactid=".0.1.$2.$0.$1.1:$1"></div>
+                            <div class="QuizResult-component is-loaded" data-reactid=".0.1.$2.$0.$1.1:2">
+                                <div id="result-359187992" class="QuizResult-content" data-reactid=".0.1.$2.$0.$1.1:2.1:$0">
+                                    <section class="QuizResult-info QuizResult-info" data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0">
+                                        <section class="QuizResult-text" data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1">
+                                            <h2 class="QuizResult-text-score" data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.0">
+                                                <span class="translate-component is-loaded" data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.0.$0"><span
+													data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.0.$0.0" id="trueSum"></span><span data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.0.$0.1">/</span><span data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.0.$0.2">12</span></span>
+                                                <span
+                                                    data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.0.1:0"> ·
+                                                    </span><span class="translate-component is-loaded" data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.0.1:$1"><span
+													data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.0.1:$1.0">得分
+												</span><span data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.0.1:$1.1" id="score"></span><span data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.0.1:$1.2">%</span></span>
+                                            </h2>
+                                            <h1 class="QuizResult-text-title" data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.$1">
+                                                <span class="translate-component is-loaded" data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.$1.0"><span
+													data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.$1.0.0">测试结果：</span><span data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.$1.0.1" id="result"></span></span>
+                                            </h1>
+                                            <article class="QuizResult-text-description" data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.$2">
+
+
+                                                <article class="QuizResult-text-description-text" data-reactid=".0.1.$2.$0.$1.1:2.1:$0.0.$1.$2.1" id="result2"></article>
+                                            </article>
+                                        </section>
+                                    </section>
+                                </div>
+                                <div class="QuizResult-footer" data-reactid=".0.1.$2.$0.$1.1:2.1:$2">
+                                    <button class="UISubmit-component is-loaded QuizResult-footer-retake-button" role="link" aria-label="Retake quiz" data-reactid=".0.1.$2.$0.$1.1:2.1:$2.0" onclick="location.href='content1.html'">
+										<span class="translate-component is-loaded"
+											data-reactid=".0.1.$2.$0.$1.1:2.1:$2.0.1"><span
+											data-reactid=".0.1.$2.$0.$1.1:2.1:$2.0.1.0" >重新答题</span></span>
+									</button>
+
+                                </div>
+                                <noscript data-reactid=".0.1.$2.$0.$1.1:2.$2"></noscript>
+                                <noscript data-reactid=".0.1.$2.$0.$1.1:2.$3"></noscript>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="SetContent-block" data-reactid=".0.1.$2.1"></div>
+                    <noscript data-reactid=".0.1.$2.$2"></noscript>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

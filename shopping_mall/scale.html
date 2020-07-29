@@ -1,0 +1,357 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Echarts</title>
+    <script src="echarts.common.min.js"></script>
+    <!--要异步加载json的时候要记得引用：-->
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+        
+        #main1 {
+            height: 660px;
+            width: 80%;
+            margin: auto;
+            background-color: #f2f2f2;
+        }
+        
+        #main2 {
+            height: 460px;
+            width: 80%;
+            margin: auto;
+            background-color: #f2f2f2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main1"></div>
+    <div id="main2"></div>
+
+    <script>
+        //1.定义一个div，并指示将chart放进去
+        var myChart = echarts.init(document.getElementById("main1"));
+
+        var option = {
+            title: [{
+                text: '商场各类店铺数量占比',
+                x: '25%',
+                textAlign: 'center',
+                align: 'right',
+                top: 50,
+                textStyle: {
+                    fontSize: 25,
+                    fontWeight: 'bold',
+                }
+            }, {
+                text: '商场各类店铺销售额占比',
+                x: '75%',
+                textAlign: 'center',
+                align: 'right',
+                top: 50,
+                textStyle: {
+                    fontSize: 25,
+                    fontWeight: 'bold',
+                }
+            }],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: "cross",
+                    label: {
+                        show: false,
+                        formatter: function(params) {
+                            if (params.seriesData.length === 0) {
+                                window.mouseCurValue = params.value;
+                            }
+                        },
+                    },
+                    crossStyle: {
+                        color: 'white',
+                        width: 2
+                    }
+                },
+                formatter: function(params) {
+                    let res = "",
+                        sum = 0;
+                    for (let i = 0; i < params.length; i++) {
+                        let series = params[i];
+                        sum += Number(series.data);
+                        if (sum >= window.mouseCurValue) {
+                            res = series.axisValue + '年' + "<br/>" + series.marker + series.seriesName + ": " + series.data + '%' + "<br/>";
+                            break;
+                        }
+                    }
+                    return res;
+                },
+            },
+            axisPointer: {
+                show: true,
+                lineStyle: {
+                    type: 'dashed'
+                },
+                label: {
+                    show: true,
+                    margin: 6,
+                    backgroundColor: '#556',
+                    textStyle: {
+                        color: '#fff'
+                    }
+                },
+                link: [{
+                    yAxisId: ['哈哈', '嘿嘿'],
+                }]
+            },
+            xAxis: [{
+                type: 'category',
+                boundaryGap: false,
+                id: '哈哈',
+                name: '年份',
+                nameLocation: 'end',
+                nameGap: 20,
+                gridId: '哈哈',
+                data: ['2014', '2015', '2016']
+            }, {
+                type: 'category',
+                boundaryGap: false,
+                id: '嘿嘿',
+                name: '年份',
+                nameLocation: 'end',
+                nameGap: 20,
+                gridId: '嘿嘿',
+                data: ['2014', '2015', '2016']
+            }, ],
+            yAxis: [{
+                id: '哈哈',
+                name: '百分比（%）',
+                nameLocation: 'end',
+                gridId: '哈哈',
+                max: 100,
+            }, {
+                id: '嘿嘿',
+                name: '百分比（%）',
+                nameLocation: 'end',
+                gridId: '嘿嘿',
+                max: 100,
+            }, ],
+
+            legend: {
+                data: ['餐饮', '普通服饰', '儿童', '美容', '快时尚', '珠宝', '休闲娱乐', '电器', '其他']
+            },
+            grid: [{
+                id: '哈哈',
+                top: 140,
+                x: '7%',
+                y: '7%',
+                width: '38%',
+                height: '60%'
+            }, {
+                top: 140,
+                id: '嘿嘿',
+                x2: '7%',
+                y: '7%',
+                width: '38%',
+                height: '60%'
+            }, ],
+            series: [
+                //先是左边的堆叠图，店铺数量
+                {
+                    name: '电器',
+                    xAxisId: '哈哈',
+                    yAxisId: '哈哈',
+                    type: 'line',
+                    stack: '个数',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [1.62, 1.69, 2.22]
+                }, {
+                    name: '休闲娱乐',
+                    xAxisId: '哈哈',
+                    yAxisId: '哈哈',
+                    type: 'line',
+                    stack: '个数',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [2.02, 2.03, 1.90]
+                }, {
+                    name: '珠宝',
+                    xAxisId: '哈哈',
+                    yAxisId: '哈哈',
+                    type: 'line',
+                    stack: '个数',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [4.05, 5.07, 5.38]
+                }, {
+                    name: '快时尚',
+                    xAxisId: '哈哈',
+                    yAxisId: '哈哈',
+                    type: 'line',
+                    stack: '个数',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [4.05, 3.38, 3.16]
+                }, {
+                    name: '美容',
+                    xAxisId: '哈哈',
+                    yAxisId: '哈哈',
+                    type: 'line',
+                    stack: '个数',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [5.67, 7.09, 7.28]
+                }, {
+                    name: '儿童',
+                    xAxisId: '哈哈',
+                    yAxisId: '哈哈',
+                    type: 'line',
+                    stack: '个数',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [7.29, 8.45, 9.81]
+                }, {
+                    name: '其他',
+                    xAxisId: '哈哈',
+                    yAxisId: '哈哈',
+                    type: 'line',
+                    stack: '个数',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [14.17, 12.84, 11.71]
+                }, {
+                    name: '餐饮',
+                    xAxisId: '哈哈',
+                    yAxisId: '哈哈',
+                    type: 'line',
+                    stack: '个数',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [29.96, 27.03, 26.58]
+                }, {
+                    name: '普通服饰',
+                    xAxisId: '哈哈',
+                    yAxisId: '哈哈',
+                    type: 'line',
+                    stack: '个数',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [31.17, 32.43, 31.96]
+                },
+
+                //接着是右边的图，堆叠销量
+                {
+                    name: '美容',
+                    type: 'line',
+                    xAxisId: '嘿嘿',
+                    yAxisId: '嘿嘿',
+                    stack: '销量',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [1.33, 1.78, 2.37]
+                }, {
+                    name: '电器',
+                    type: 'line',
+                    xAxisId: '嘿嘿',
+                    yAxisId: '嘿嘿',
+                    stack: '销量',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [2.02, 2.80, 2.36]
+                }, {
+                    name: '儿童',
+                    type: 'line',
+                    xAxisId: '嘿嘿',
+                    yAxisId: '嘿嘿',
+                    stack: '销量',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [4.82, 6.03, 7.20]
+                }, {
+                    name: '珠宝',
+                    type: 'line',
+                    xAxisId: '嘿嘿',
+                    yAxisId: '嘿嘿',
+                    stack: '销量',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [5.14, 5.30, 4.46]
+                }, {
+                    name: '休闲娱乐',
+                    type: 'line',
+                    xAxisId: '嘿嘿',
+                    yAxisId: '嘿嘿',
+                    stack: '销量',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [5.48, 5.46, 4.42]
+                }, {
+                    name: '其他',
+                    type: 'line',
+                    xAxisId: '嘿嘿',
+                    yAxisId: '嘿嘿',
+                    stack: '销量',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [6.38, 6.00, 6.08]
+                }, {
+                    name: '快时尚',
+                    type: 'line',
+                    xAxisId: '嘿嘿',
+                    yAxisId: '嘿嘿',
+                    stack: '销量',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [13.58, 13.16, 13.55]
+                }, {
+                    name: '普通服饰',
+                    type: 'line',
+                    xAxisId: '嘿嘿',
+                    yAxisId: '嘿嘿',
+                    stack: '销量',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [27.55, 27.26, 28.57]
+                }, {
+                    name: '餐饮',
+                    type: 'line',
+                    xAxisId: '嘿嘿',
+                    yAxisId: '嘿嘿',
+                    stack: '销量',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [33.70, 32.22, 30.98]
+                },
+
+            ],
+
+        };
+
+        myChart.setOption(option);
+    </script>
+
+
+</body>
+
+</html>

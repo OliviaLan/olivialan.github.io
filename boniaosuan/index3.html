@@ -1,0 +1,2906 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>那些被玻尿酸改变的年轻人</title>
+    <!-- Echarts-->
+    <script src="echarts.min.js"></script>
+    <!-- Bootstrap & jquery-->
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="bootstrap-select.min.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="data.js"></script>
+    <script src="fullPage.js-master/dist/jquery.fullpage.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files  -->
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-select.min.css">
+    <link rel="stylesheet" href="fullPage.js-master/dist/jquery.fullpage.css">
+
+    <style>
+        #aa {
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-position: center;
+            -moz-background-size: 100% 100%;
+        }
+        
+        #result {
+            color: gray;
+            font-size: 14px;
+            text-shadow: 1rem;
+            text-align: center;
+            width: 610px;
+            height: 300px;
+            background-color: aliceblue;
+            border-radius: 5px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            display: block;
+            margin: 0 auto;
+            /* margin-right: auto;
+                margin-left: auto */
+        }
+        
+        #search {
+            background-color: #6092a5;
+            border-color: rgba(100, 100, 100, 0.1);
+            width: 200px;
+            margin-top: 50px;
+            box-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
+            /* margin-left: 20px */
+            /* 它跟下面btn-group是同步变化的 */
+        }
+        
+        .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+            width: 200px;
+            /* margin:20px */
+        }
+        
+        .btn-group>.btn:first-child {
+            -webkit-margin-top-collapse: 10px;
+            margin-top: 50px;
+            box-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
+            /* margin-left: 20px */
+            /* 它跟上面的search是同步变化的 */
+        }
+        
+        .test {
+            color: #252525;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+            /* line-height: 1.6rem; */
+        }
+        
+        select {
+            padding: 20% 10% 10% 0;
+        }
+        
+        .col-sm-10 {
+            float: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .col-sm-9 {
+            float: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+    <script>
+        $(function() {
+
+            $("#yw-tb").hide();
+            $("#yw-bar").hide();
+
+            $("#rby-tb").hide();
+            $("#rby-bar").hide();
+
+            $("#afl-tb").hide();
+            $("#afl-bar").hide();
+
+            $("#rl-tb").hide();
+            $("#rl-bar").hide();
+
+            $("#qyd-tb").hide();
+            $("#qyd-bar").hide();
+
+            $("#alw-tb").hide();
+            $("#alw-bar").hide();
+
+            $("#sy-tb").hide();
+            $("#sy-bar").hide();
+
+            $("#fsl-tb").hide();
+            $("#fsl-bar").hide();
+
+            $("#xfl-tb").hide();
+            $("#xfl-bar").hide();
+
+            $("#ym-tb").hide();
+            $("#ym-bar").hide();
+
+            $("#jl-tb").hide();
+            $("#jl-bar").hide();
+
+            $("#abf-tb").hide();
+            $("#abf-bar").hide();
+
+            $("#blz-tb").hide();
+            $("#blz-bar").hide();
+
+            $("#fmd-tb").hide();
+            $("#fmd-bar").hide();
+
+            $("#bnd-tb").hide();
+            $("#bnd-bar").hide();
+
+            $("#ta-tb").hide();
+            $("#ta-bar").hide();
+
+            $("#sl-tb").hide();
+            $("#sl-bar").hide();
+
+            $("#nlms-tb").hide();
+            $("#nlms-bar").hide();
+        })
+    </script>
+
+
+</head>
+
+<body style="font-size:16px;line-height:2.0">
+
+    <div class="section" style="background-image:url('./img/bg3.png');background-repeat:no-repeat; background-size:100% 100%">
+
+        <div class="container">
+            <h3 style="text-align:center;margin-top:50px;color:midnightblue">各品牌玻尿酸产品及价格查询</h3>
+            <p style="text-align:center;font-size:12px;color:grey">数据来源：官方网站、比价网站及代购报价</p>
+            <div class="row  text-center" style="margin-top:30px">
+                <button type="button" class="btn btn-default btn-md" id="nlms">纽拉美斯</button>
+                <button type="button" class="btn btn-default btn-md" id="alw">艾莉薇</button>
+                <button type="button" class="btn btn-default btn-md" id="yw">伊婉</button>
+                <button type="button" class="btn btn-default btn-md" id="rl">瑞蓝</button>
+                <button type="button" class="btn btn-default btn-md" id="ta">泰奥</button>
+                <button type="button" class="btn btn-default btn-md" id="sl">丝丽</button>
+                <button type="button" class="btn btn-default btn-md" id="qyd">乔雅登</button>
+                <button type="button" class="btn btn-default btn-md" id="fsl">法思丽</button>
+                <button type="button" class="btn btn-default btn-md" id="blz">贝丽姿</button>
+                <button type="button" class="btn btn-default btn-md" id="fmd">芙媄登</button>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row  text-center" style="margin-top:10px">
+                <button type="button" class="btn btn-default btn-md" id="bnd">宝尼达</button>
+                <button type="button" class="btn btn-default btn-md" id="xfl">欣菲聆</button>
+                <button type="button" class="btn btn-default btn-md" id="rby">润百颜</button>
+                <button type="button" class="btn btn-default btn-md" id="hw">海薇</button>
+                <button type="button" class="btn btn-default btn-md" id="sy">舒颜</button>
+                <button type="button" class="btn btn-default btn-md" id="ym">逸美</button>
+                <button type="button" class="btn btn-default btn-md" id="afl">爱芙莱</button>
+
+            </div>
+        </div>
+        <script>
+            $(function() {
+                $('#hw').click(function() {
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#hw-tb").show();
+                    $("#hw-bar").show();
+                    Hw();
+                });
+                $('#yw').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#yw-tb").show();
+                    $("#yw-bar").show();
+                    Yw();
+                });
+                $('#rby').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#rby-tb").show();
+                    $("#rby-bar").show();
+                    Rby();
+                });
+                $('#afl').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#afl-tb").show();
+                    $("#afl-bar").show();
+                    Afl();
+                });
+                $('#rl').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#rl-tb").show();
+                    $("#rl-bar").show();
+                    Rl();
+                });
+                $('#qyd').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#qyd-tb").show();
+                    $("#qyd-bar").show();
+                    Qyd();
+                });
+                $('#alw').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#alw-tb").show();
+                    $("#alw-bar").show();
+                    Alw();
+                });
+                $('#sy').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#sy-tb").show();
+                    $("#sy-bar").show();
+                    Sy();
+                });
+                $('#fsl').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#fsl-tb").show();
+                    $("#fsl-bar").show();
+                    Fsl();
+                });
+                $('#xfl').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#xfl-tb").show();
+                    $("#xfl-bar").show();
+                    Xfl();
+                });
+                $('#ym').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#ym-tb").show();
+                    $("#ym-bar").show();
+                    Ym();
+                });
+                $('#jl').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#jl-tb").show();
+                    $("#jl-bar").show();
+                    Jl();
+                });
+                $('#abf').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#abf-tb").show();
+                    $("#abf-bar").show();
+                    Abf();
+                });
+                $('#blz').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#blz-tb").show();
+                    $("#blz-bar").show();
+                    Blz();
+                });
+                $('#fmd').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#fmd-tb").show();
+                    $("#fmd-bar").show();
+                    Fmd();
+                });
+                $('#bnd').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#bnd-tb").show();
+                    $("#bnd-bar").show();
+                    Bnd();
+                });
+                $('#ta').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#ta-tb").show();
+                    $("#ta-bar").show();
+                    Ta();
+                });
+                $('#sl').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#sl-tb").show();
+                    $("#sl-bar").show();
+                    Sl();
+                });
+                $('#nlms').click(function() {
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").show();
+                    $("#nlms-bar").show();
+                    Nlms();
+                });
+            }); // Routine format; put all your jQuery initialisation inside
+        </script>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" style="height:430px" id="hw-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="yw-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="rby-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="afl-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="rl-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="qyd-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="alw-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="sy-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="fsl-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="xfl-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="ym-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="jl-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="abf-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="blz-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="fmd-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="bnd-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="ta-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="sl-bar">
+                </div>
+                <div class="col-md-6" style="height:430px" id="nlms-bar">
+                </div>
+
+
+                <div class="col-md-6">
+                    <table class="table table-hover" style="margin-top:50px" id="hw-tb">
+                        <caption style="text-align:center;font-size:16px;color:#252525;font-weight:bold">海薇（国产）
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>大分子</td>
+                                <td>填充定型</td>
+                                <td>466元</td>
+                                <td>暂无</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:0px" id="yw-tb">
+                        <caption style="text-align:center;font-size:16px;color:#252525;font-weight:bold">伊婉（韩国）
+                            <br><span style="text-align:center;font-size:12px;color:darksea#48bdce"> * 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr class="success">
+                                <td>CLASSIC S</td>
+                                <td>中分子</td>
+                                <td>抚平细纹</td>
+                                <td>1774元</td>
+                                <td>259美金</td>
+                            </tr>
+                            <tr class="success">
+                                <td>VOLUME S</td>
+                                <td>大分子</td>
+                                <td>面部塑形</td>
+                                <td>2980元</td>
+                                <td>380美金</td>
+
+                            </tr>
+                            <tr class="success">
+                                <td>CLASSIC PLUS</td>
+                                <td>中分子</td>
+                                <td>抚平细纹（麻醉版）</td>
+                                <td>3200元</td>
+                                <td>200美金</td>
+
+                            </tr>
+                            <tr class="success">
+                                <td>VOLUME PLUS</td>
+                                <td>大分子</td>
+                                <td>面部塑形（麻醉版）</td>
+                                <td>3400元</td>
+                                <td>380美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>YVOIRE Contour</td>
+                                <td>中分子</td>
+                                <td>眉间/眼部皱纹</td>
+                                <td>2048元</td>
+                                <td>299美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>YVOIRE Hydro</td>
+                                <td>小分子</td>
+                                <td>填充下巴/八字皱纹</td>
+                                <td>2048元</td>
+                                <td>380美金</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:50px" id="rby-tb">
+                        <caption style="text-align:center;font-size:16px;color:#252525;font-weight:bold">润百颜（国产）
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>大分子</td>
+                                <td>除皱/填充定型</td>
+                                <td>650元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:50px" id="afl-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">艾芙莱（国产）
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr class="success">
+                                <td>0.5ml装</td>
+                                <td>小分子</td>
+                                <td>皮下浅层</td>
+                                <td>600元</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="success">
+                                <td>1ml装</td>
+                                <td>中分子</td>
+                                <td>皮下深层</td>
+                                <td>1280元</td>
+                                <td>暂无</td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:0px" id="rl-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">瑞蓝（韩国）
+                            <br><span style="font-size:12px;color:darksea#48bdce;text-align:center"> * 标绿表示已获我国批文</span>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr>
+                                <td>瑞蓝1</td>
+                                <td>小分子</td>
+                                <td>泪沟/卧蚕</td>
+                                <td>1340元</td>
+                                <td>190美金</td>
+                            </tr>
+                            <tr class="success">
+                                <td>瑞蓝2</td>
+                                <td>中分子</td>
+                                <td>皱纹/丰唇</td>
+                                <td>3000元（官方）<br> 1800元（水货）</td>
+                                <td>115美金</td>
+                            </tr>
+
+                            <tr>
+                                <td>瑞蓝3</td>
+                                <td>大分子</td>
+                                <td>抬头纹/法令纹</td>
+                                <td>1250元</td>
+                                <td>185美金</td>
+                            </tr>
+                            <tr>
+                                <td>瑞蓝4</td>
+                                <td>最大分子</td>
+                                <td>大面积填充</td>
+                                <td>1450元</td>
+                                <td>209美金</td>
+                            </tr>
+                            <tr>
+                                <td>瑞蓝5</td>
+                                <td>小分子</td>
+                                <td>嫩肤补水</td>
+                                <td>1100元</td>
+                                <td>209美金</td>
+                            </tr>
+                            <tr>
+                                <td>瑞蓝6</td>
+                                <td>小分子</td>
+                                <td>丰唇</td>
+                                <td>1139元</td>
+                                <td>159美金</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:0px" id="qyd-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">乔雅登（美国）
+                            <br><span style="font-size:12px;color:darksea#48bdce;text-align:center"> * 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr>
+                                <td>乔雅登1</td>
+                                <td>小分子</td>
+                                <td>丰唇专用</td>
+                                <td>1450元</td>
+                                <td>255美金</td>
+                            </tr>
+                            <tr>
+                                <td>乔雅登2</td>
+                                <td>小分子</td>
+                                <td>泪沟/卧蚕/眼周</td>
+                                <td>1380元</td>
+                                <td>229美金</td>
+                            </tr>
+
+                            <tr>
+                                <td>乔雅登3</td>
+                                <td>中分子</td>
+                                <td>额头/太阳穴/苹果肌</td>
+                                <td>1800元</td>
+                                <td>325美金</td>
+                            </tr>
+                            <tr>
+                                <td>乔雅登4</td>
+                                <td>大分子</td>
+                                <td>鼻子/下巴/眉骨</td>
+                                <td>1850元</td>
+                                <td>329美金</td>
+                            </tr>
+                            <tr>
+                                <td>乔雅登5</td>
+                                <td>大分子</td>
+                                <td>鼻子/下巴</td>
+                                <td>2000元</td>
+                                <td>429美金</td>
+                            </tr>
+                            <tr class="success">
+                                <td>雅致</td>
+                                <td>小分子</td>
+                                <td>抚平轻度皱纹</td>
+                                <td>12800元（官方）<br>2900元（水货）</td>
+                                <td>319美金</td>
+                            </tr>
+                            <tr class="success">
+                                <td>极致</td>
+                                <td>大分子</td>
+                                <td>极强塑形效果</td>
+                                <td>14800元（官方）<br>2900元（水货）</td>
+                                <td>319美金</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:50px" id="alw-tb">
+
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">艾莉薇（韩国）
+                            <br><span style="font-size:12px;color:darksea#48bdce;text-align:center"> * 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr>
+                                <td>Light</td>
+                                <td>小分子</td>
+                                <td>祛除细小皱纹</td>
+                                <td>4000元</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="success">
+                                <td>Deep Line</td>
+                                <td>中分子</td>
+                                <td>中重度鼻唇沟</td>
+                                <td>4680元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                            <tr>
+                                <td>Ultra Volume</td>
+                                <td>大分子</td>
+                                <td>丰额头/垫下巴</td>
+                                <td>3400元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:50px" id="sy-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">舒颜（国产）
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>中分子</td>
+                                <td>垫下巴</td>
+                                <td>1000元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:50px" id="fsl-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">法丝丽（台湾）
+                            <br><span style="font-size:12px;color:darksea#48bdce;text-align:center"> * 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>中分子</td>
+                                <td>中深度鼻唇沟</td>
+                                <td>2000元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:50px" id="xfl-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">欣菲聆（国产）
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>大分子</td>
+                                <td>抬头纹/法令纹</td>
+                                <td>500元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:50px" id="ym-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">逸美（国产）
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr class="success">
+                                <td>Vigor</td>
+                                <td>小分子</td>
+                                <td>细纹/面部补水</td>
+                                <td>605元</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="success">
+                                <td>Nature</td>
+                                <td>中分子</td>
+                                <td>中度皱纹/塑形</td>
+                                <td>1050元</td>
+                                <td>暂无</td>
+
+                            </tr>
+                            <tr class="success">
+                                <td>逸美1.0</td>
+                                <td>中分子</td>
+                                <td>深度皱纹/塑形</td>
+                                <td>1360元</td>
+                                <td>暂无</td>
+
+                            </tr>
+                            <tr class="success">
+                                <td>逸美2.0</td>
+                                <td>大分子</td>
+                                <td>强塑型</td>
+                                <td>1980元</td>
+                                <td>暂无</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:50px" id="jl-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">姣兰（国产）
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>小分子</td>
+                                <td>眼周唇部填充</td>
+                                <td>3800元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:50px" id="abf-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">爱贝芙（台湾）
+                            <span style="font-size:12px;color:darksea#48bdce;text-align:center"> * 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr>
+                                <td>统一</td>
+                                <td>中分子</td>
+                                <td>除皱/隆鼻/丰唇沟</td>
+                                <td>13800元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:50px" id="blz-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">贝丽姿（台湾）
+                            <br><span style="font-size:12px;color:darksea#48bdce;text-align:center"> * 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>中分子</td>
+                                <td>丰苹果肌</td>
+                                <td>2000元</td>
+                                <td>305美金</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:50px" id="fmd-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">芙镁登（台湾）
+                            <br><span style="font-size:12px;color:darksea#48bdce;text-align:center"> * 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>中分子</td>
+                                <td>中深度鼻唇沟</td>
+                                <td>1000元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:50px" id="bnd-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">宝尼达（国产）
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>中分子</td>
+                                <td>长期填充皱纹</td>
+                                <td>1000元</td>
+                                <td>11800</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:0px" id="ta-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">泰奥（瑞士）
+                            <br><span style="font-size:12px;color:darksea#48bdce;text-align:center"> * 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr>
+                                <td>RHA 1</td>
+                                <td>小分子</td>
+                                <td>细纹/浅皱纹</td>
+                                <td>1113元</td>
+                                <td>253美金</td>
+                            </tr>
+                            <tr>
+                                <td>RHA 2（熊猫针）</td>
+                                <td>小分子</td>
+                                <td>泪沟/黑眼圈/卧蚕</td>
+                                <td>1830元</td>
+                                <td>259美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>RHA 3</td>
+                                <td>中分子</td>
+                                <td>抚平深度皱纹</td>
+                                <td>1791元</td>
+                                <td>264美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>RHA 4</td>
+                                <td>大分子</td>
+                                <td>面部填充塑形</td>
+                                <td>1908元</td>
+                                <td>274美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>Fist line</td>
+                                <td>小分子</td>
+                                <td>脸部各处细纹</td>
+                                <td>1402元</td>
+                                <td>195美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>Deep line</td>
+                                <td>中分子</td>
+                                <td>法令纹/太阳穴/面部填充</td>
+                                <td>1713元</td>
+                                <td>259美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>Kiss</td>
+                                <td>小分子</td>
+                                <td>唇/嘴部提升</td>
+                                <td>1791元</td>
+                                <td>269美金</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:0px" id="sl-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">丝丽（法国）
+                            <br><span style="font-size:12px;color:darksea#48bdce;text-align:center"> * 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr>
+                                <td>丝丽S</td>
+                                <td>小分子</td>
+                                <td>泪沟/卧蚕/嘴唇</td>
+                                <td>1050元</td>
+                                <td>179美金</td>
+                            </tr>
+                            <tr>
+                                <td>丝丽M</td>
+                                <td>中分子</td>
+                                <td>额头/太阳穴/苹果肌</td>
+                                <td>1500元</td>
+                                <td>212美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>丝丽L</td>
+                                <td>中分子</td>
+                                <td>额头/太阳穴/法令纹</td>
+                                <td>1550元</td>
+                                <td>279美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>丝丽XL</td>
+                                <td>大分子</td>
+                                <td>下巴/鼻子/眉骨</td>
+                                <td>1700元</td>
+                                <td>329美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>丝丽XXL</td>
+                                <td>大分子</td>
+                                <td>隆鼻子/垫下巴</td>
+                                <td>1750元</td>
+                                <td>379美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>丝丽Lips</td>
+                                <td>小分子</td>
+                                <td>丰唇专用</td>
+                                <td>1100元</td>
+                                <td>179美金</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:50px" id="nlms-tb">
+                        <caption style="font-size:16px;color:black;font-weight:bold;text-align:center">纽拉美斯（韩国）
+                            <br><span style="font-size:12px;color:darksea#48bdce;text-align:center"> * 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:13px">
+                            <tr>
+                                <td>1号</td>
+                                <td>小分子</td>
+                                <td>皱纹/面部水光</td>
+                                <td>960元</td>
+                                <td>146美金</td>
+                            </tr>
+                            <tr>
+                                <td>2号</td>
+                                <td>小分子</td>
+                                <td>丰唇</td>
+                                <td>1180元</td>
+                                <td>179美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>3号</td>
+                                <td>中分子</td>
+                                <td>面部软组织填充</td>
+                                <td>1450元</td>
+                                <td>220美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>4号</td>
+                                <td>大分子</td>
+                                <td>隆鼻子/垫下巴</td>
+                                <td>1660元</td>
+                                <td>252美金</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var myChart = echarts.init(document.getElementById('hw-bar'));
+            option = {
+
+                tooltip: {
+                    formatter: '{b0}: {c0}',
+                    backgroundColor: "black"
+                },
+
+                xAxis: {
+                    data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                    name: "品牌",
+                    axisLabel: {
+                        interval: 0,
+                        rotate: 40
+                    },
+                },
+                yAxis: {
+                    splitLine: {
+                        show: false
+                    }, //改设置不显示坐标区域内的y轴分割线
+                    name: "价格(中位数)：元",
+                },
+                grid: {
+                    top: 50,
+                    left: 10,
+                    containLabel: true
+                },
+
+                series: [{
+                    name: 'prices',
+                    type: 'bar',
+                    data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                    itemStyle: {
+                        //通常情况下：
+                        normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                            color: function(params) {
+                                var colorList = ['#48bdce', '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                return colorList[params.dataIndex];
+                            }
+                        },
+                        //鼠标悬停时：
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    },
+                }],
+                　　　　　 //控制边距　
+            };
+            myChart.setOption(option);
+
+            function Hw() {
+                var myChart = echarts.init(document.getElementById('hw-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#48bdce', '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+            }
+
+            function Xfl() {
+                var myChart = echarts.init(document.getElementById('xfl-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#48bdce', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+            }
+
+            function Rby() {
+                var myChart = echarts.init(document.getElementById('rby-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#48bdce', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Sy() {
+                var myChart = echarts.init(document.getElementById('sy-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', '#48bdce', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option)
+            }
+
+            function Fmd() {
+                var myChart = echarts.init(document.getElementById('fmd-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", '#48bdce', "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Afl() {
+                var myChart = echarts.init(document.getElementById('afl-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#48bdce', '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Ym() {
+                var myChart = echarts.init(document.getElementById('ym-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#48bdce', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Nlms() {
+                var myChart = echarts.init(document.getElementById('nlms-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#48bdce', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Sl() {
+                var myChart = echarts.init(document.getElementById('sl-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', '#48bdce', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Ta() {
+                var myChart = echarts.init(document.getElementById('ta-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", '#48bdce', "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Yw() {
+                var myChart = echarts.init(document.getElementById('yw-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#48bdce', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Fsl() {
+                var myChart = echarts.init(document.getElementById('fsl-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#48bdce', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Blz() {
+                var myChart = echarts.init(document.getElementById('blz-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#48bdce', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Rl() {
+                var myChart = echarts.init(document.getElementById('rl-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", '#48bdce', "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Jl() {
+                var myChart = echarts.init(document.getElementById('jl-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#48bdce', '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Alw() {
+                var myChart = echarts.init(document.getElementById('alw-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", '#f2f2f2', '#48bdce', '#f2f2f2', '#f2f2f2', ];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Bnd() {
+                var myChart = echarts.init(document.getElementById('bnd-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#48bdce', '#f2f2f2'];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Qyd() {
+                var myChart = echarts.init(document.getElementById('qyd-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#48bdce'];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+
+            function Abf() {
+                var myChart = echarts.init(document.getElementById('abfs-bar'));
+                option = {
+                    tooltip: {
+                        formatter: '{b0}: {c0}',
+                        backgroundColor: "black"
+                    },
+
+                    xAxis: {
+                        data: ["海薇", "欣菲聆", "润百颜", "舒颜", "芙媄登", "爱芙莱", "逸美", "纽拉美斯", "丝丽", "泰奥", "伊婉", "法思丽", "贝丽姿", "瑞蓝", "艾莉薇", "宝尼达", "乔雅登"],
+                        name: "品牌",
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        },
+                    },
+                    yAxis: {
+                        splitLine: {
+                            show: false
+                        }, //改设置不显示坐标区域内的y轴分割线
+                        name: "价格(中位数)：元",
+                    },
+                    grid: {
+                        top: 50,
+                        left: 10,
+                        containLabel: true
+                    },
+                    series: [{
+                        name: 'prices',
+                        type: 'bar',
+                        data: [466, 500, 650, 1000, 1000, 1280, 1360, 1450, 1500, 1700, 1774, 2000, 2000, 3000, 4680, 11800, 12800],
+                        itemStyle: {
+                            //通常情况下：
+                            normal: {　　　　　　　　　　　　 //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                                color: function(params) {
+                                    var colorList = ['#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', "#f2f2f2", "#f2f2f2", '#f2f2f2', '#f2f2f2', '#f2f2f2', "#f2f2f2", "#48bdce"];
+                                    return colorList[params.dataIndex];
+                                }
+                            },
+                            //鼠标悬停时：
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+                    }],
+                    　　　　　 //控制边距　
+                };
+                myChart.setOption(option);
+
+            }
+        </script>
+
+    </div>
+
+    <!-- 查询2 -->
+    <div id="aa">
+        <div class="container">
+            <h3 style="text-align:center;margin-top:50px;color:midnightblue">在你的城市 哪些医院有资质注射这些玻尿酸？</h3>
+            <p style="text-align:center;font-size:12px;color:grey">数据来源：品牌官网
+                <br>目前仅有三家品牌公开授权医院名单，将持续增补...</p>
+
+            <div class="text-center">
+                <select class="selectpicker" id="prov" data-size="8">
+                        </select>
+
+                <select class="selectpicker" id="county">
+                        </select>
+                <button type="button" class="btn btn-primary" id="search">我要搜索</button>
+
+            </div>
+            <br>
+            <div id='result'><br><br><br><br>选择地区、品牌<br>搜索哪些医院获得玻尿酸产品授权<br>搜索之后将显示医院名单
+            </div>
+            <script>
+                Object.keys(list).forEach(function(i) {
+                    $('#prov').append($('<option>' + i + '</option>)'));
+                });
+
+                aha();
+
+                $('#prov').on('hidden.bs.select', function() {
+                    aha();
+                });
+
+                function aha() {
+                    var prov = $('#prov').val();
+                    var county = Object.keys(list[prov]);
+                    $('#county').children().remove();
+                    county.forEach(function(i) {
+                        $('#county').append($('<option>' + i + '</option>)'));
+                    });
+                    $('#county').selectpicker('refresh');
+                    $('#county').selectpicker('val');
+
+                }
+
+
+                $('#search').on('click', function() {
+
+                    var prov = $('#prov').val();
+                    var county = $('#county').val();
+                    var resultList = list[prov][county]
+
+                    console.log(list[prov][county]);
+
+                    $('#result').html(""); //清空原本text
+                    resultList.forEach(function(i) {
+                        // $('#result').append(i + '<br>');
+                        $('#result').append('<p class="test">' + i + '</p>');
+
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row  text-center" style="margin-top:50px;margin-bottom:80px">
+        <button class="btn btn-default" id="huiqu" style="color:#6092a5">查询完毕～还想看新闻，点我！</button>
+
+    </div>
+
+    <script>
+        $(function() { // Routine format; put all your jQuery initialisation inside
+            $('#huiqu').click(function() {
+                location.href = "index.html";
+            });
+
+        }); // Routine format; put all your jQuery initialisation inside
+    </script>
+</body>
+
+</html>

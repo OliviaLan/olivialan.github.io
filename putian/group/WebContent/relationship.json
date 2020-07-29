@@ -1,0 +1,12033 @@
+{
+    "type": "force",
+    "categories": [
+        {
+            "name": "抱团1"
+        },
+        {
+            "name": "抱团2"
+        },
+        {
+            "name": "抱团3"
+        },
+        {
+            "name": "抱团4"
+        },
+        {
+            "name": "抱团5"
+        },
+        {
+        	"name": "其它"
+        }
+    ],
+    "nodes":[
+  {
+    "name": "徐秋建",
+    "category": 5
+  },
+  {
+    "name": "陈德龙",
+    "category": 5
+  },
+  {
+    "name": "郑建新",
+    "category": 5
+  },
+  {
+    "name": "陈延洲",
+    "category": 5
+  },
+  {
+    "name": "陈进达",
+    "category": 5
+  },
+  {
+    "name": "吴伟星",
+    "category": 5
+  },
+  {
+    "name": "游顺秀",
+    "category": 5
+  },
+  {
+    "name": "肖云峰",
+    "category": 5
+  },
+  {
+    "name": "蔡回枝",
+    "category": 5
+  },
+  {
+    "name": "郑国庆",
+    "category": 5
+  },
+  {
+    "name": "郑建发",
+    "category": 5
+  },
+  {
+    "name": "郑美凤",
+    "category": 5
+  },
+  {
+    "name": "高示俊",
+    "category": 5
+  },
+  {
+    "name": "陈金祥",
+    "category": 5
+  },
+  {
+    "name": "陈元粦",
+    "category": 2
+  },
+  {
+    "name": "卓志展",
+    "category": 2
+  },
+  {
+    "name": "詹国连",
+    "category": 2
+  },
+  {
+    "name": "陈建清",
+    "category": 2
+  },
+  {
+    "name": "刘彤",
+    "category": 5
+  },
+  {
+    "name": "李鸿岩",
+    "category": 5
+  },
+  {
+    "name": "张新民",
+    "category": 5
+  },
+  {
+    "name": "林金宗",
+    "category": 1
+  },
+  {
+    "name": "胡嘉军",
+    "category": 1
+  },
+  {
+    "name": "苏国忠",
+    "category": 1
+  },
+  {
+    "name": "何文华",
+    "category": 3
+  },
+  {
+    "name": "张娟",
+    "category": 3
+  },
+  {
+    "name": "杨国先",
+    "category": 3
+  },
+  {
+    "name": "杨国强",
+    "category": 3
+  },
+  {
+    "name": "杨文秀",
+    "category": 3
+  },
+  {
+    "name": "杨永泉",
+    "category": 3
+  },
+  {
+    "name": "杨青山",
+    "category": 3
+  },
+  {
+    "name": "林雄心",
+    "category": 3
+  },
+  {
+    "name": "柳国明",
+    "category": 3
+  },
+  {
+    "name": "王建华",
+    "category": 3
+  },
+  {
+    "name": "吴德新",
+    "category": 3
+  },
+  {
+    "name": "杨美先",
+    "category": 3
+  },
+  {
+    "name": "林雅英",
+    "category": 3
+  },
+  {
+    "name": "吴庆元",
+    "category": 3
+  },
+  {
+    "name": "张金华",
+    "category": 2
+  },
+  {
+    "name": "林永贵",
+    "category": 2
+  },
+  {
+    "name": "郭素珠",
+    "category": 2
+  },
+  {
+    "name": "陈文魁",
+    "category": 2
+  },
+  {
+    "name": "林茹",
+    "category": 2
+  },
+  {
+    "name": "游东升",
+    "category": 2
+  },
+  {
+    "name": "张桂平",
+    "category": 5
+  },
+  {
+    "name": "张康黎",
+    "category": 5
+  },
+  {
+    "name": "林新疆",
+    "category": 0
+  },
+  {
+    "name": "詹国太",
+    "category": 0
+  },
+  {
+    "name": "卓志强",
+    "category": 5
+  },
+  {
+    "name": "陈建煌",
+    "category": 5
+  },
+  {
+    "name": "林华东",
+    "category": 5
+  },
+  {
+    "name": "卓国金",
+    "category": 1
+  },
+  {
+    "name": "刘韩啸",
+    "category": 1
+  },
+  {
+    "name": "张建军",
+    "category": 5
+  },
+  {
+    "name": "贾香伶",
+    "category": 5
+  },
+  {
+    "name": "郑志芳",
+    "category": 1
+  },
+  {
+    "name": "郑志雄",
+    "category": 1
+  },
+  {
+    "name": "黄光标",
+    "category": 2
+  },
+  {
+    "name": "黄德锋",
+    "category": 2
+  },
+  {
+    "name": "黄金雄",
+    "category": 2
+  },
+  {
+    "name": "肖志敏",
+    "category": 5
+  },
+  {
+    "name": "郑何水",
+    "category": 5
+  },
+  {
+    "name": "林金华",
+    "category": 5
+  },
+  {
+    "name": "林金富",
+    "category": 5
+  },
+  {
+    "name": "陈松",
+    "category": 5
+  },
+  {
+    "name": "卓朝阳",
+    "category": 5
+  },
+  {
+    "name": "游金棋",
+    "category": 5
+  },
+  {
+    "name": "游金豹",
+    "category": 5
+  },
+  {
+    "name": "吴建成",
+    "category": 2
+  },
+  {
+    "name": "林国强",
+    "category": 2
+  },
+  {
+    "name": "陈金秀",
+    "category": 2
+  },
+  {
+    "name": "詹建昇",
+    "category": 2
+  },
+  {
+    "name": "卓国华",
+    "category": 5
+  },
+  {
+    "name": "卓建山",
+    "category": 5
+  },
+  {
+    "name": "林志勇",
+    "category": 5
+  },
+  {
+    "name": "林茂森",
+    "category": 5
+  },
+  {
+    "name": "詹国庆",
+    "category": 5
+  },
+  {
+    "name": "何莉",
+    "category": 5
+  },
+  {
+    "name": "王鸿山",
+    "category": 5
+  },
+  {
+    "name": "邹双仁",
+    "category": 1
+  },
+  {
+    "name": "林清辉",
+    "category": 5
+  },
+  {
+    "name": "苏金芳",
+    "category": 5
+  },
+  {
+    "name": "王爱东",
+    "category": 1
+  },
+  {
+    "name": "雷会勇",
+    "category": 1
+  },
+  {
+    "name": "黄玉华",
+    "category": 1
+  },
+  {
+    "name": "林寿庸",
+    "category": 5
+  },
+  {
+    "name": "林志平",
+    "category": 5
+  },
+  {
+    "name": "李马号",
+    "category": 5
+  },
+  {
+    "name": "尚雅丽",
+    "category": 5
+  },
+  {
+    "name": "林开伦",
+    "category": 5
+  },
+  {
+    "name": "李永",
+    "category": 5
+  },
+  {
+    "name": "王贤毅",
+    "category": 5
+  },
+  {
+    "name": "刘福强",
+    "category": 5
+  },
+  {
+    "name": "林玉明",
+    "category": 4
+  },
+  {
+    "name": "吴亚平",
+    "category": 5
+  },
+  {
+    "name": "游添春",
+    "category": 5
+  },
+  {
+    "name": "游福坤",
+    "category": 5
+  },
+  {
+    "name": "詹国栋",
+    "category": 2
+  },
+  {
+    "name": "叶志阳",
+    "category": 2
+  },
+  {
+    "name": "陈俊诚",
+    "category": 5
+  },
+  {
+    "name": "陈剑平",
+    "category": 5
+  },
+  {
+    "name": "庞敏",
+    "category": 5
+  },
+  {
+    "name": "卢文军",
+    "category": 5
+  },
+  {
+    "name": "许红梅",
+    "category": 5
+  },
+  {
+    "name": "王强",
+    "category": 5
+  },
+  {
+    "name": "黄文杰",
+    "category": 5
+  },
+  {
+    "name": "崔桂荣",
+    "category": 5
+  },
+  {
+    "name": "姜萌",
+    "category": 5
+  },
+  {
+    "name": "赵莉",
+    "category": 5
+  },
+  {
+    "name": "梁齐",
+    "category": 5
+  },
+  {
+    "name": "蔡亚彬",
+    "category": 2
+  },
+  {
+    "name": "吴雨霞",
+    "category": 2
+  },
+  {
+    "name": "张玉丽",
+    "category": 2
+  },
+  {
+    "name": "詹进建",
+    "category": 2
+  },
+  {
+    "name": "詹进亮",
+    "category": 2
+  },
+  {
+    "name": "汤博文",
+    "category": 2
+  },
+  {
+    "name": "龚拥军",
+    "category": 5
+  },
+  {
+    "name": "黄光盛",
+    "category": 2
+  },
+  {
+    "name": "黄国栋",
+    "category": 2
+  },
+  {
+    "name": "黄德新",
+    "category": 2
+  },
+  {
+    "name": "姜军",
+    "category": 5
+  },
+  {
+    "name": "佟立坤",
+    "category": 5
+  },
+  {
+    "name": "詹国章",
+    "category": 5
+  },
+  {
+    "name": "詹明洪",
+    "category": 5
+  },
+  {
+    "name": "肖国满",
+    "category": 5
+  },
+  {
+    "name": "吴国成",
+    "category": 5
+  },
+  {
+    "name": "陈庆棋",
+    "category": 5
+  },
+  {
+    "name": "张月美",
+    "category": 5
+  },
+  {
+    "name": "许荔涵",
+    "category": 5
+  },
+  {
+    "name": "陈征",
+    "category": 5
+  },
+  {
+    "name": "魏国华",
+    "category": 5
+  },
+  {
+    "name": "林宗琰",
+    "category": 5
+  },
+  {
+    "name": "林明凯",
+    "category": 5
+  },
+  {
+    "name": "黄维杰",
+    "category": 5
+  },
+  {
+    "name": "陈焕宁",
+    "category": 5
+  },
+  {
+    "name": "王国勇",
+    "category": 5
+  },
+  {
+    "name": "王文海",
+    "category": 5
+  },
+  {
+    "name": "何炳华",
+    "category": 4
+  },
+  {
+    "name": "苏瑞珍",
+    "category": 5
+  },
+  {
+    "name": "苏瑞高",
+    "category": 5
+  },
+  {
+    "name": "苏行云",
+    "category": 5
+  },
+  {
+    "name": "苏雪花",
+    "category": 5
+  },
+  {
+    "name": "刘瑞元",
+    "category": 5
+  },
+  {
+    "name": "林晓军",
+    "category": 5
+  },
+  {
+    "name": "刘丽琼",
+    "category": 5
+  },
+  {
+    "name": "李金园",
+    "category": 5
+  },
+  {
+    "name": "简佩桃",
+    "category": 5
+  },
+  {
+    "name": "陈谦",
+    "category": 5
+  },
+  {
+    "name": "庞德云",
+    "category": 5
+  },
+  {
+    "name": "何冠西",
+    "category": 5
+  },
+  {
+    "name": "张嘉暖",
+    "category": 5
+  },
+  {
+    "name": "苏其远",
+    "category": 5
+  },
+  {
+    "name": "陈益梅",
+    "category": 5
+  },
+  {
+    "name": "陈立功",
+    "category": 5
+  },
+  {
+    "name": "龚玉兴",
+    "category": 5
+  },
+  {
+    "name": "郑国忠",
+    "category": 5
+  },
+  {
+    "name": "胡东华",
+    "category": 5
+  },
+  {
+    "name": "陈智强",
+    "category": 5
+  },
+  {
+    "name": "林玉盛",
+    "category": 4
+  },
+  {
+    "name": "林美华",
+    "category": 4
+  },
+  {
+    "name": "刘鲁明",
+    "category": 2
+  },
+  {
+    "name": "袁吕平",
+    "category": 2
+  },
+  {
+    "name": "陈俊熙",
+    "category": 2
+  },
+  {
+    "name": "陈国瑞",
+    "category": 2
+  },
+  {
+    "name": "陈淑平",
+    "category": 2
+  },
+  {
+    "name": "陈玉辉",
+    "category": 2
+  },
+  {
+    "name": "徐志坚",
+    "category": 5
+  },
+  {
+    "name": "李峰",
+    "category": 4
+  },
+  {
+    "name": "林玉国",
+    "category": 4
+  },
+  {
+    "name": "占飞雄",
+    "category": 5
+  },
+  {
+    "name": "曹遂如",
+    "category": 5
+  },
+  {
+    "name": "张斌",
+    "category": 5
+  },
+  {
+    "name": "王爱萍",
+    "category": 5
+  },
+  {
+    "name": "苏金耀",
+    "category": 4
+  },
+  {
+    "name": "苏金家",
+    "category": 4
+  },
+  {
+    "name": "苏元钗",
+    "category": 4
+  },
+  {
+    "name": "苏金国",
+    "category": 4
+  },
+  {
+    "name": "林志程",
+    "category": 0
+  },
+  {
+    "name": "王迪",
+    "category": 0
+  },
+  {
+    "name": "杜莲香",
+    "category": 5
+  },
+  {
+    "name": "陈一鸣",
+    "category": 5
+  },
+  {
+    "name": "陈志诚",
+    "category": 5
+  },
+  {
+    "name": "林丽艳",
+    "category": 0
+  },
+  {
+    "name": "林新伟",
+    "category": 0
+  },
+  {
+    "name": "林琼香",
+    "category": 0
+  },
+  {
+    "name": "陈丽萍",
+    "category": 0
+  },
+  {
+    "name": "汪良明",
+    "category": 5
+  },
+  {
+    "name": "王魁元",
+    "category": 5
+  },
+  {
+    "name": "袁欣",
+    "category": 5
+  },
+  {
+    "name": "林国煌",
+    "category": 5
+  },
+  {
+    "name": "陈丽华",
+    "category": 5
+  },
+  {
+    "name": "林玉栋",
+    "category": 5
+  },
+  {
+    "name": "陈茂泉",
+    "category": 5
+  },
+  {
+    "name": "田庆荣",
+    "category": 5
+  },
+  {
+    "name": "胡继川",
+    "category": 2
+  },
+  {
+    "name": "苏国喜",
+    "category": 2
+  },
+  {
+    "name": "黄建东",
+    "category": 2
+  },
+  {
+    "name": "黄德龙",
+    "category": 2
+  },
+  {
+    "name": "黄志强",
+    "category": 2
+  },
+  {
+    "name": "黄玉凤",
+    "category": 2
+  },
+  {
+    "name": "詹建洪",
+    "category": 2
+  },
+  {
+    "name": "詹建峰",
+    "category": 2
+  },
+  {
+    "name": "詹建扬",
+    "category": 2
+  },
+  {
+    "name": "詹玉鹏",
+    "category": 2
+  },
+  {
+    "name": "周瑞云",
+    "category": 2
+  },
+  {
+    "name": "吴剑煌",
+    "category": 2
+  },
+  {
+    "name": "李秀萍",
+    "category": 2
+  },
+  {
+    "name": "林光利",
+    "category": 2
+  },
+  {
+    "name": "王金火",
+    "category": 2
+  },
+  {
+    "name": "林长青",
+    "category": 5
+  },
+  {
+    "name": "蔡金海",
+    "category": 5
+  },
+  {
+    "name": "占万龙",
+    "category": 5
+  },
+  {
+    "name": "林琳琳",
+    "category": 5
+  },
+  {
+    "name": "陈国兴",
+    "category": 4
+  },
+  {
+    "name": "詹妍",
+    "category": 4
+  },
+  {
+    "name": "陈国雄",
+    "category": 4
+  },
+  {
+    "name": "程慧斌",
+    "category": 4
+  },
+  {
+    "name": "林毓斌",
+    "category": 5
+  },
+  {
+    "name": "苏志强",
+    "category": 5
+  },
+  {
+    "name": "詹瑞金",
+    "category": 5
+  },
+  {
+    "name": "林瑞太",
+    "category": 5
+  },
+  {
+    "name": "陈新喜",
+    "category": 5
+  },
+  {
+    "name": "孔杨",
+    "category": 5
+  },
+  {
+    "name": "林国祥",
+    "category": 5
+  },
+  {
+    "name": "陈金坚",
+    "category": 5
+  },
+  {
+    "name": "魏荣达",
+    "category": 5
+  },
+  {
+    "name": "薛朝华",
+    "category": 5
+  },
+  {
+    "name": "黄琦斌",
+    "category": 5
+  },
+  {
+    "name": "胡群峰",
+    "category": 1
+  },
+  {
+    "name": "卓国勇",
+    "category": 1
+  },
+  {
+    "name": "李文献",
+    "category": 1
+  },
+  {
+    "name": "吴国营",
+    "category": 5
+  },
+  {
+    "name": "刘国武",
+    "category": 5
+  },
+  {
+    "name": "曾子显",
+    "category": 5
+  },
+  {
+    "name": "刘俊",
+    "category": 3
+  },
+  {
+    "name": "吴勇汉",
+    "category": 3
+  },
+  {
+    "name": "温志荣",
+    "category": 3
+  },
+  {
+    "name": "吴勇斌",
+    "category": 3
+  },
+  {
+    "name": "陈广政",
+    "category": 3
+  },
+  {
+    "name": "吴勇山",
+    "category": 3
+  },
+  {
+    "name": "王斌",
+    "category": 5
+  },
+  {
+    "name": "林建芬",
+    "category": 2
+  },
+  {
+    "name": "黄国明",
+    "category": 2
+  },
+  {
+    "name": "林元豹",
+    "category": 2
+  },
+  {
+    "name": "陈雪清",
+    "category": 5
+  },
+  {
+    "name": "朱哲勇",
+    "category": 5
+  },
+  {
+    "name": "唐国芳",
+    "category": 5
+  },
+  {
+    "name": "陈建新",
+    "category": 5
+  },
+  {
+    "name": "郑坚江",
+    "category": 5
+  },
+  {
+    "name": "郑江",
+    "category": 5
+  },
+  {
+    "name": "何锡万",
+    "category": 5
+  },
+  {
+    "name": "郑志鹏",
+    "category": 5
+  },
+  {
+    "name": "游顺雄",
+    "category": 5
+  },
+  {
+    "name": "柯德荣",
+    "category": 5
+  },
+  {
+    "name": "林国彪",
+    "category": 2
+  },
+  {
+    "name": "林玉辉",
+    "category": 2
+  },
+  {
+    "name": "苏玉照",
+    "category": 2
+  },
+  {
+    "name": "詹国团",
+    "category": 2
+  },
+  {
+    "name": "詹国营",
+    "category": 2
+  },
+  {
+    "name": "詹美爱",
+    "category": 2
+  },
+  {
+    "name": "林珍金",
+    "category": 2
+  },
+  {
+    "name": "游秀琴",
+    "category": 2
+  },
+  {
+    "name": "孙学仁",
+    "category": 5
+  },
+  {
+    "name": "游文华",
+    "category": 5
+  },
+  {
+    "name": "朱金财",
+    "category": 2
+  },
+  {
+    "name": "罗朝明",
+    "category": 5
+  },
+  {
+    "name": "徐丽玉",
+    "category": 2
+  },
+  {
+    "name": "朱金丁",
+    "category": 2
+  },
+  {
+    "name": "林金土",
+    "category": 2
+  },
+  {
+    "name": "朱丽群",
+    "category": 2
+  },
+  {
+    "name": "吴嘉伟",
+    "category": 2
+  },
+  {
+    "name": "吴建仁",
+    "category": 2
+  },
+  {
+    "name": "李彤彤",
+    "category": 2
+  },
+  {
+    "name": "林国雄",
+    "category": 2
+  },
+  {
+    "name": "林建飞",
+    "category": 2
+  },
+  {
+    "name": "詹金灶",
+    "category": 2
+  },
+  {
+    "name": "李寿伙",
+    "category": 5
+  },
+  {
+    "name": "卓国洪",
+    "category": 1
+  },
+  {
+    "name": "吴建新",
+    "category": 1
+  },
+  {
+    "name": "吴荣达",
+    "category": 1
+  },
+  {
+    "name": "卓国星",
+    "category": 1
+  },
+  {
+    "name": "陈志键",
+    "category": 1
+  },
+  {
+    "name": "林永汉",
+    "category": 5
+  },
+  {
+    "name": "吴明枫",
+    "category": 5
+  },
+  {
+    "name": "宋大成",
+    "category": 5
+  },
+  {
+    "name": "李庆灶",
+    "category": 5
+  },
+  {
+    "name": "林元清",
+    "category": 5
+  },
+  {
+    "name": "王丽英",
+    "category": 5
+  },
+  {
+    "name": "陈庆龙",
+    "category": 5
+  },
+  {
+    "name": "黄凯",
+    "category": 5
+  },
+  {
+    "name": "赵昭华",
+    "category": 5
+  },
+  {
+    "name": "李国强",
+    "category": 5
+  },
+  {
+    "name": "李国柏",
+    "category": 5
+  },
+  {
+    "name": "黄瑞钦",
+    "category": 5
+  },
+  {
+    "name": "林兆晞",
+    "category": 2
+  },
+  {
+    "name": "林群",
+    "category": 2
+  },
+  {
+    "name": "李德林",
+    "category": 5
+  },
+  {
+    "name": "郑爱平",
+    "category": 5
+  },
+  {
+    "name": "吴爱平",
+    "category": 5
+  },
+  {
+    "name": "吴秋云",
+    "category": 5
+  },
+  {
+    "name": "吴永兵",
+    "category": 5
+  },
+  {
+    "name": "刘金太",
+    "category": 5
+  },
+  {
+    "name": "张蒂",
+    "category": 5
+  },
+  {
+    "name": "张英品",
+    "category": 5
+  },
+  {
+    "name": "詹亚强",
+    "category": 4
+  },
+  {
+    "name": "詹国城",
+    "category": 4
+  },
+  {
+    "name": "卓明进",
+    "category": 5
+  },
+  {
+    "name": "黄冬英",
+    "category": 5
+  },
+  {
+    "name": "朱良吉",
+    "category": 5
+  },
+  {
+    "name": "黄英",
+    "category": 5
+  },
+  {
+    "name": "林国珍",
+    "category": 5
+  },
+  {
+    "name": "范志高",
+    "category": 5
+  },
+  {
+    "name": "郑国华",
+    "category": 5
+  },
+  {
+    "name": "卓建国",
+    "category": 5
+  },
+  {
+    "name": "李志冰",
+    "category": 5
+  },
+  {
+    "name": "吴梓明",
+    "category": 5
+  },
+  {
+    "name": "陈黎明",
+    "category": 5
+  },
+  {
+    "name": "黄素娟",
+    "category": 5
+  },
+  {
+    "name": "肖文汉",
+    "category": 5
+  },
+  {
+    "name": "郑建铭",
+    "category": 5
+  },
+  {
+    "name": "郑的章",
+    "category": 5
+  },
+  {
+    "name": "郑建山",
+    "category": 5
+  },
+  {
+    "name": "陈国新",
+    "category": 5
+  },
+  {
+    "name": "李生毅",
+    "category": 5
+  },
+  {
+    "name": "谢巨凡",
+    "category": 5
+  },
+  {
+    "name": "郑的福",
+    "category": 5
+  },
+  {
+    "name": "施国杰",
+    "category": 5
+  },
+  {
+    "name": "林瑞勇",
+    "category": 5
+  },
+  {
+    "name": "林建贤",
+    "category": 1
+  },
+  {
+    "name": "林建潘",
+    "category": 1
+  },
+  {
+    "name": "徐俊峰",
+    "category": 5
+  },
+  {
+    "name": "王胜磊",
+    "category": 5
+  },
+  {
+    "name": "林寿旺",
+    "category": 5
+  },
+  {
+    "name": "陈国凤",
+    "category": 5
+  },
+  {
+    "name": "林丽英",
+    "category": 4
+  },
+  {
+    "name": "林秀烟",
+    "category": 4
+  },
+  {
+    "name": "陈秀凤",
+    "category": 4
+  },
+  {
+    "name": "龚雨",
+    "category": 4
+  },
+  {
+    "name": "林新兴",
+    "category": 4
+  },
+  {
+    "name": "陈木兰",
+    "category": 4
+  },
+  {
+    "name": "徐大才",
+    "category": 4
+  },
+  {
+    "name": "林琼",
+    "category": 5
+  },
+  {
+    "name": "林臻",
+    "category": 5
+  },
+  {
+    "name": "肖暹",
+    "category": 5
+  },
+  {
+    "name": "陈金章",
+    "category": 4
+  },
+  {
+    "name": "林建良",
+    "category": 4
+  },
+  {
+    "name": "苏金秀",
+    "category": 4
+  },
+  {
+    "name": "陈文粦",
+    "category": 4
+  },
+  {
+    "name": "张晓玉",
+    "category": 4
+  },
+  {
+    "name": "林振华",
+    "category": 4
+  },
+  {
+    "name": "王海波",
+    "category": 4
+  },
+  {
+    "name": "何长福",
+    "category": 4
+  },
+  {
+    "name": "曾真",
+    "category": 4
+  },
+  {
+    "name": "程智斌",
+    "category": 4
+  },
+  {
+    "name": "詹建光",
+    "category": 4
+  },
+  {
+    "name": "赵建坤",
+    "category": 2
+  },
+  {
+    "name": "林国阳",
+    "category": 5
+  },
+  {
+    "name": "陈志强",
+    "category": 2
+  },
+  {
+    "name": "卓建武",
+    "category": 2
+  },
+  {
+    "name": "游金保",
+    "category": 2
+  },
+  {
+    "name": "翁国勇",
+    "category": 2
+  },
+  {
+    "name": "黄金富",
+    "category": 5
+  },
+  {
+    "name": "林美容",
+    "category": 4
+  },
+  {
+    "name": "陈建萍",
+    "category": 2
+  },
+  {
+    "name": "柯向阳",
+    "category": 2
+  },
+  {
+    "name": "陈国洪",
+    "category": 2
+  },
+  {
+    "name": "卓立强",
+    "category": 2
+  },
+  {
+    "name": "黄建海",
+    "category": 5
+  },
+  {
+    "name": "陈山",
+    "category": 2
+  },
+  {
+    "name": "陈建辉",
+    "category": 5
+  },
+  {
+    "name": "林瑞泉",
+    "category": 5
+  },
+  {
+    "name": "郑洪",
+    "category": 5
+  },
+  {
+    "name": "郑华梅",
+    "category": 5
+  },
+  {
+    "name": "刘志盛",
+    "category": 5
+  },
+  {
+    "name": "林志洪",
+    "category": 5
+  },
+  {
+    "name": "陈志煌",
+    "category": 2
+  },
+  {
+    "name": "陈美香",
+    "category": 2
+  },
+  {
+    "name": "李开添",
+    "category": 2
+  },
+  {
+    "name": "陈庆寿",
+    "category": 0
+  },
+  {
+    "name": "黄格林",
+    "category": 2
+  },
+  {
+    "name": "卓群峰",
+    "category": 5
+  },
+  {
+    "name": "黄国林",
+    "category": 5
+  },
+  {
+    "name": "陈福斌",
+    "category": 5
+  },
+  {
+    "name": "王根生",
+    "category": 5
+  },
+  {
+    "name": "苏继荣",
+    "category": 5
+  },
+  {
+    "name": "黄文其",
+    "category": 1
+  },
+  {
+    "name": "占国兴",
+    "category": 5
+  },
+  {
+    "name": "卓国芳",
+    "category": 5
+  },
+  {
+    "name": "王文龙",
+    "category": 5
+  },
+  {
+    "name": "王朝",
+    "category": 5
+  },
+  {
+    "name": "詹加龙",
+    "category": 1
+  },
+  {
+    "name": "詹换平",
+    "category": 1
+  },
+  {
+    "name": "于涛",
+    "category": 5
+  },
+  {
+    "name": "徐可",
+    "category": 5
+  },
+  {
+    "name": "徐忠友",
+    "category": 5
+  },
+  {
+    "name": "朱倩茹",
+    "category": 5
+  },
+  {
+    "name": "苏荣华",
+    "category": 5
+  },
+  {
+    "name": "詹建萍",
+    "category": 5
+  },
+  {
+    "name": "李树战",
+    "category": 5
+  },
+  {
+    "name": "陈帆",
+    "category": 5
+  },
+  {
+    "name": "高海云",
+    "category": 5
+  },
+  {
+    "name": "陈本亭",
+    "category": 5
+  },
+  {
+    "name": "付天俊",
+    "category": 5
+  },
+  {
+    "name": "李金良",
+    "category": 5
+  },
+  {
+    "name": "黄开飞",
+    "category": 1
+  },
+  {
+    "name": "柯元芳",
+    "category": 1
+  },
+  {
+    "name": "周义隆",
+    "category": 1
+  },
+  {
+    "name": "黄开添",
+    "category": 1
+  },
+  {
+    "name": "苏金清",
+    "category": 1
+  },
+  {
+    "name": "胡剑莲",
+    "category": 5
+  },
+  {
+    "name": "汪阿毛",
+    "category": 5
+  },
+  {
+    "name": "汪浙军",
+    "category": 5
+  },
+  {
+    "name": "陆景平",
+    "category": 5
+  },
+  {
+    "name": "陈志雄",
+    "category": 5
+  },
+  {
+    "name": "张金寿",
+    "category": 4
+  },
+  {
+    "name": "陈国涛",
+    "category": 4
+  },
+  {
+    "name": "林志忠",
+    "category": 0
+  },
+  {
+    "name": "林丽君",
+    "category": 0
+  },
+  {
+    "name": "林新潮",
+    "category": 0
+  },
+  {
+    "name": "林新强",
+    "category": 0
+  },
+  {
+    "name": "林新平",
+    "category": 0
+  },
+  {
+    "name": "林爱香",
+    "category": 0
+  },
+  {
+    "name": "林建芳",
+    "category": 0
+  },
+  {
+    "name": "林淑花",
+    "category": 0
+  },
+  {
+    "name": "苏世杰",
+    "category": 0
+  },
+  {
+    "name": "唐宝平",
+    "category": 0
+  },
+  {
+    "name": "陈国林",
+    "category": 0
+  },
+  {
+    "name": "蔡金兴",
+    "category": 4
+  },
+  {
+    "name": "黄志勇",
+    "category": 1
+  },
+  {
+    "name": "李金山",
+    "category": 5
+  },
+  {
+    "name": "陈新发",
+    "category": 5
+  },
+  {
+    "name": "陈新贤",
+    "category": 5
+  },
+  {
+    "name": "詹阳斌",
+    "category": 2
+  },
+  {
+    "name": "游亚金",
+    "category": 2
+  },
+  {
+    "name": "林剑华",
+    "category": 2
+  },
+  {
+    "name": "李小青",
+    "category": 2
+  },
+  {
+    "name": "林美钦",
+    "category": 2
+  },
+  {
+    "name": "詹嘉豪",
+    "category": 1
+  },
+  {
+    "name": "游黎飞",
+    "category": 5
+  },
+  {
+    "name": "刘开泉",
+    "category": 1
+  },
+  {
+    "name": "詹嘉武",
+    "category": 1
+  },
+  {
+    "name": "洪鹭青",
+    "category": 1
+  },
+  {
+    "name": "陈东海",
+    "category": 1
+  },
+  {
+    "name": "林爱清",
+    "category": 0
+  },
+  {
+    "name": "林雪静",
+    "category": 0
+  },
+  {
+    "name": "游宗清",
+    "category": 5
+  },
+  {
+    "name": "祝朋军",
+    "category": 5
+  },
+  {
+    "name": "詹彼德",
+    "category": 5
+  },
+  {
+    "name": "黄海燕",
+    "category": 2
+  },
+  {
+    "name": "陈美蓉",
+    "category": 2
+  },
+  {
+    "name": "詹阳程",
+    "category": 2
+  },
+  {
+    "name": "占阳珊",
+    "category": 2
+  },
+  {
+    "name": "李祥山",
+    "category": 1
+  },
+  {
+    "name": "黄樑云",
+    "category": 1
+  },
+  {
+    "name": "詹开林",
+    "category": 1
+  },
+  {
+    "name": "陈清冰",
+    "category": 1
+  },
+  {
+    "name": "翁金栋",
+    "category": 5
+  },
+  {
+    "name": "林金动",
+    "category": 5
+  },
+  {
+    "name": "许乌烘",
+    "category": 5
+  },
+  {
+    "name": "黄元聪",
+    "category": 5
+  },
+  {
+    "name": "林梅兰",
+    "category": 5
+  },
+  {
+    "name": "林瑞兴",
+    "category": 5
+  },
+  {
+    "name": "陈娟",
+    "category": 5
+  },
+  {
+    "name": "陈波",
+    "category": 2
+  },
+  {
+    "name": "吴元良",
+    "category": 1
+  },
+  {
+    "name": "沈雪峰",
+    "category": 1
+  },
+  {
+    "name": "李金同",
+    "category": 5
+  },
+  {
+    "name": "吴丽琴",
+    "category": 5
+  },
+  {
+    "name": "陈建洪",
+    "category": 5
+  },
+  {
+    "name": "邹梅洪",
+    "category": 5
+  },
+  {
+    "name": "林先敏",
+    "category": 5
+  },
+  {
+    "name": "杨丽新",
+    "category": 5
+  },
+  {
+    "name": "林黎明",
+    "category": 5
+  },
+  {
+    "name": "吴建忠",
+    "category": 5
+  },
+  {
+    "name": "胡阳",
+    "category": 5
+  },
+  {
+    "name": "吴福先",
+    "category": 5
+  },
+  {
+    "name": "陈建成",
+    "category": 5
+  },
+  {
+    "name": "林志通",
+    "category": 4
+  },
+  {
+    "name": "林楚乾",
+    "category": 5
+  },
+  {
+    "name": "叶玉娟",
+    "category": 5
+  },
+  {
+    "name": "林鸿雁",
+    "category": 5
+  },
+  {
+    "name": "杨献东",
+    "category": 4
+  },
+  {
+    "name": "李金圆",
+    "category": 2
+  },
+  {
+    "name": "李爱金",
+    "category": 2
+  },
+  {
+    "name": "苏瑞福",
+    "category": 5
+  },
+  {
+    "name": "苏雪平",
+    "category": 5
+  },
+  {
+    "name": "詹建升",
+    "category": 2
+  },
+  {
+    "name": "詹珍金",
+    "category": 5
+  },
+  {
+    "name": "詹文焰",
+    "category": 5
+  },
+  {
+    "name": "宋杨杨",
+    "category": 5
+  },
+  {
+    "name": "王晓泸",
+    "category": 5
+  },
+  {
+    "name": "白士勋",
+    "category": 5
+  },
+  {
+    "name": "陈亚淙",
+    "category": 5
+  },
+  {
+    "name": "陈志镇",
+    "category": 5
+  },
+  {
+    "name": "黄朝棋",
+    "category": 5
+  },
+  {
+    "name": "林建舟",
+    "category": 5
+  },
+  {
+    "name": "黄建平",
+    "category": 5
+  },
+  {
+    "name": "李方新",
+    "category": 2
+  },
+  {
+    "name": "黄俊伟",
+    "category": 5
+  },
+  {
+    "name": "肖建宇",
+    "category": 5
+  },
+  {
+    "name": "林淑梅",
+    "category": 4
+  },
+  {
+    "name": "林婷婷",
+    "category": 4
+  },
+  {
+    "name": "凌明圣",
+    "category": 4
+  },
+  {
+    "name": "郜翀",
+    "category": 4
+  },
+  {
+    "name": "郭小鹏",
+    "category": 4
+  },
+  {
+    "name": "林明开",
+    "category": 4
+  },
+  {
+    "name": "林明雄",
+    "category": 4
+  },
+  {
+    "name": "周莉",
+    "category": 4
+  },
+  {
+    "name": "周斌",
+    "category": 4
+  },
+  {
+    "name": "林宗金",
+    "category": 4
+  },
+  {
+    "name": "林吓连",
+    "category": 5
+  },
+  {
+    "name": "卓国潘",
+    "category": 1
+  },
+  {
+    "name": "阮维锋",
+    "category": 1
+  },
+  {
+    "name": "蔡锋清",
+    "category": 5
+  },
+  {
+    "name": "柯建珊",
+    "category": 5
+  },
+  {
+    "name": "黄志红",
+    "category": 5
+  },
+  {
+    "name": "苏文忠",
+    "category": 5
+  },
+  {
+    "name": "苏文良",
+    "category": 5
+  },
+  {
+    "name": "林天雄",
+    "category": 5
+  },
+  {
+    "name": "陈春光",
+    "category": 5
+  },
+  {
+    "name": "林远敏",
+    "category": 5
+  },
+  {
+    "name": "杨亚雄",
+    "category": 5
+  },
+  {
+    "name": "胡琼",
+    "category": 5
+  },
+  {
+    "name": "林军兵",
+    "category": 5
+  },
+  {
+    "name": "陈国勇",
+    "category": 5
+  },
+  {
+    "name": "卓智福",
+    "category": 2
+  },
+  {
+    "name": "卓加发",
+    "category": 5
+  },
+  {
+    "name": "陈春霖",
+    "category": 5
+  },
+  {
+    "name": "林玉荣",
+    "category": 5
+  },
+  {
+    "name": "蔡伟",
+    "category": 5
+  },
+  {
+    "name": "占小妹",
+    "category": 5
+  },
+  {
+    "name": "崔以泰",
+    "category": 5
+  },
+  {
+    "name": "陈建锋",
+    "category": 5
+  },
+  {
+    "name": "刘宣明",
+    "category": 5
+  },
+  {
+    "name": "潘文群",
+    "category": 5
+  },
+  {
+    "name": "黄珍棋",
+    "category": 5
+  },
+  {
+    "name": "吴德平",
+    "category": 5
+  },
+  {
+    "name": "朱海霞",
+    "category": 4
+  },
+  {
+    "name": "詹宗阳",
+    "category": 4
+  },
+  {
+    "name": "林金后",
+    "category": 5
+  },
+  {
+    "name": "郑俊青",
+    "category": 5
+  },
+  {
+    "name": "张福荣",
+    "category": 5
+  },
+  {
+    "name": "林宗灶",
+    "category": 5
+  },
+  {
+    "name": "林宗其",
+    "category": 5
+  },
+  {
+    "name": "李国防",
+    "category": 5
+  },
+  {
+    "name": "游的忠",
+    "category": 5
+  },
+  {
+    "name": "林宗尚",
+    "category": 5
+  },
+  {
+    "name": "苏建潘",
+    "category": 5
+  },
+  {
+    "name": "王峰",
+    "category": 5
+  },
+  {
+    "name": "吕雪梅",
+    "category": 5
+  },
+  {
+    "name": "吴奇斌",
+    "category": 5
+  },
+  {
+    "name": "陈意雄",
+    "category": 5
+  },
+  {
+    "name": "游再寿",
+    "category": 5
+  },
+  {
+    "name": "林明杰",
+    "category": 4
+  },
+  {
+    "name": "林育宏",
+    "category": 4
+  },
+  {
+    "name": "王为民",
+    "category": 4
+  },
+  {
+    "name": "林宗太",
+    "category": 5
+  },
+  {
+    "name": "詹光俊",
+    "category": 5
+  },
+  {
+    "name": "詹清锋",
+    "category": 5
+  },
+  {
+    "name": "黄苍锦",
+    "category": 5
+  },
+  {
+    "name": "高星",
+    "category": 5
+  },
+  {
+    "name": "任德盛",
+    "category": 5
+  },
+  {
+    "name": "陈志腾",
+    "category": 5
+  },
+  {
+    "name": "梁顺珍",
+    "category": 5
+  },
+  {
+    "name": "阮龙勇",
+    "category": 5
+  },
+  {
+    "name": "陈国梅",
+    "category": 5
+  },
+  {
+    "name": "陈建阳",
+    "category": 5
+  },
+  {
+    "name": "卓茂林",
+    "category": 5
+  },
+  {
+    "name": "陈俊山",
+    "category": 5
+  },
+  {
+    "name": "德吉央宗",
+    "category": 5
+  },
+  {
+    "name": "陈国家",
+    "category": 2
+  },
+  {
+    "name": "黄珍勇",
+    "category": 2
+  },
+  {
+    "name": "陈玉云",
+    "category": 5
+  },
+  {
+    "name": "郑元树",
+    "category": 5
+  },
+  {
+    "name": "朱建东",
+    "category": 2
+  },
+  {
+    "name": "蒋志毅",
+    "category": 2
+  },
+  {
+    "name": "吴建生",
+    "category": 5
+  },
+  {
+    "name": "林金汉",
+    "category": 5
+  },
+  {
+    "name": "丁松泉",
+    "category": 2
+  },
+  {
+    "name": "曾献志",
+    "category": 2
+  },
+  {
+    "name": "李冬其",
+    "category": 2
+  },
+  {
+    "name": "蔡兵洪",
+    "category": 2
+  },
+  {
+    "name": "林建成",
+    "category": 5
+  },
+  {
+    "name": "黄国华",
+    "category": 5
+  },
+  {
+    "name": "陈金国",
+    "category": 5
+  },
+  {
+    "name": "林碧峰",
+    "category": 5
+  },
+  {
+    "name": "卓元杰",
+    "category": 1
+  },
+  {
+    "name": "詹建武",
+    "category": 5
+  },
+  {
+    "name": "林金銮",
+    "category": 5
+  },
+  {
+    "name": "许朝星",
+    "category": 5
+  },
+  {
+    "name": "林滚",
+    "category": 5
+  },
+  {
+    "name": "苏少杰",
+    "category": 5
+  },
+  {
+    "name": "苏飞鹏",
+    "category": 5
+  },
+  {
+    "name": "林宗海",
+    "category": 5
+  },
+  {
+    "name": "蔡金明",
+    "category": 5
+  },
+  {
+    "name": "徐玉森",
+    "category": 0
+  },
+  {
+    "name": "林权",
+    "category": 4
+  },
+  {
+    "name": "黄建成",
+    "category": 5
+  },
+  {
+    "name": "陈德芳",
+    "category": 5
+  },
+  {
+    "name": "徐玉林",
+    "category": 4
+  },
+  {
+    "name": "秦建平",
+    "category": 5
+  },
+  {
+    "name": "苗苗",
+    "category": 5
+  },
+  {
+    "name": "林诚坤",
+    "category": 5
+  },
+  {
+    "name": "吴子荣",
+    "category": 5
+  },
+  {
+    "name": "吴天宗",
+    "category": 5
+  },
+  {
+    "name": "陈燕林",
+    "category": 5
+  },
+  {
+    "name": "苏光耀",
+    "category": 5
+  },
+  {
+    "name": "吴洪鸣",
+    "category": 5
+  },
+  {
+    "name": "伍林",
+    "category": 5
+  },
+  {
+    "name": "张泽军",
+    "category": 5
+  },
+  {
+    "name": "苏文芳",
+    "category": 5
+  },
+  {
+    "name": "吴启俊",
+    "category": 5
+  },
+  {
+    "name": "林炳祥",
+    "category": 5
+  },
+  {
+    "name": "傅东军",
+    "category": 5
+  },
+  {
+    "name": "刘德芳",
+    "category": 5
+  },
+  {
+    "name": "张晓泽",
+    "category": 5
+  },
+  {
+    "name": "黄建庭",
+    "category": 5
+  },
+  {
+    "name": "黎军",
+    "category": 5
+  },
+  {
+    "name": "陆建武",
+    "category": 5
+  },
+  {
+    "name": "蒋忠远",
+    "category": 5
+  },
+  {
+    "name": "丛志刚",
+    "category": 5
+  },
+  {
+    "name": "王培舟",
+    "category": 5
+  },
+  {
+    "name": "王玉芹",
+    "category": 5
+  },
+  {
+    "name": "吴洪绪",
+    "category": 1
+  },
+  {
+    "name": "戴莉",
+    "category": 5
+  },
+  {
+    "name": "郭文明",
+    "category": 5
+  },
+  {
+    "name": "张晓丹",
+    "category": 5
+  },
+  {
+    "name": "成立兵",
+    "category": 5
+  },
+  {
+    "name": "杨光富",
+    "category": 3
+  },
+  {
+    "name": "林元楷",
+    "category": 2
+  },
+  {
+    "name": "江雯娟",
+    "category": 5
+  },
+  {
+    "name": "王志红",
+    "category": 5
+  },
+  {
+    "name": "丁立奇",
+    "category": 5
+  },
+  {
+    "name": "赵建萍",
+    "category": 0
+  },
+  {
+    "name": "詹建昌",
+    "category": 5
+  },
+  {
+    "name": "方先",
+    "category": 1
+  },
+  {
+    "name": "吴建裕",
+    "category": 5
+  },
+  {
+    "name": "蒋林",
+    "category": 5
+  },
+  {
+    "name": "刘刚",
+    "category": 5
+  },
+  {
+    "name": "林勇斌",
+    "category": 5
+  },
+  {
+    "name": "陈思",
+    "category": 5
+  },
+  {
+    "name": "吴东升",
+    "category": 1
+  },
+  {
+    "name": "刁国峰",
+    "category": 5
+  },
+  {
+    "name": "吴廷文",
+    "category": 4
+  },
+  {
+    "name": "苏建清",
+    "category": 4
+  },
+  {
+    "name": "林建军",
+    "category": 4
+  },
+  {
+    "name": "李文凤",
+    "category": 4
+  },
+  {
+    "name": "林雨",
+    "category": 2
+  },
+  {
+    "name": "魏杭",
+    "category": 2
+  },
+  {
+    "name": "黄卫民",
+    "category": 5
+  },
+  {
+    "name": "邓成桂",
+    "category": 5
+  },
+  {
+    "name": "刘培",
+    "category": 5
+  },
+  {
+    "name": "江金山",
+    "category": 2
+  },
+  {
+    "name": "阮柯巧",
+    "category": 2
+  },
+  {
+    "name": "朱寄群",
+    "category": 2
+  },
+  {
+    "name": "方明庆",
+    "category": 2
+  },
+  {
+    "name": "杨春法",
+    "category": 2
+  },
+  {
+    "name": "汤源武",
+    "category": 2
+  },
+  {
+    "name": "甘勇",
+    "category": 4
+  },
+  {
+    "name": "苏金汉",
+    "category": 4
+  },
+  {
+    "name": "栾华",
+    "category": 5
+  },
+  {
+    "name": "许文兴",
+    "category": 5
+  },
+  {
+    "name": "龚江茂",
+    "category": 5
+  },
+  {
+    "name": "王剑",
+    "category": 5
+  },
+  {
+    "name": "刘国城",
+    "category": 5
+  },
+  {
+    "name": "邓国杰",
+    "category": 5
+  },
+  {
+    "name": "麦嘉霖",
+    "category": 5
+  },
+  {
+    "name": "黄峰泉",
+    "category": 5
+  },
+  {
+    "name": "潘清祥",
+    "category": 0
+  },
+  {
+    "name": "陈建华",
+    "category": 4
+  },
+  {
+    "name": "吴天和",
+    "category": 0
+  },
+  {
+    "name": "苏剑华",
+    "category": 5
+  },
+  {
+    "name": "李国云",
+    "category": 5
+  },
+  {
+    "name": "涂孝明",
+    "category": 0
+  },
+  {
+    "name": "林绍华",
+    "category": 5
+  },
+  {
+    "name": "李君琳",
+    "category": 0
+  },
+  {
+    "name": "苏宜凡",
+    "category": 5
+  },
+  {
+    "name": "林志华",
+    "category": 4
+  },
+  {
+    "name": "桌国新",
+    "category": 5
+  },
+  {
+    "name": "黄清锋",
+    "category": 2
+  },
+  {
+    "name": "陈汉章",
+    "category": 4
+  },
+  {
+    "name": "范舟",
+    "category": 5
+  },
+  {
+    "name": "张梦婷",
+    "category": 5
+  },
+  {
+    "name": "吴洪豹",
+    "category": 3
+  },
+  {
+    "name": "游国太",
+    "category": 5
+  },
+  {
+    "name": "苏裕洪",
+    "category": 5
+  },
+  {
+    "name": "黄国成",
+    "category": 5
+  },
+  {
+    "name": "林启良",
+    "category": 1
+  },
+  {
+    "name": "林国腾",
+    "category": 1
+  },
+  {
+    "name": "刘福全",
+    "category": 5
+  },
+  {
+    "name": "林凡",
+    "category": 5
+  },
+  {
+    "name": "苏文金",
+    "category": 5
+  },
+  {
+    "name": "吴琳",
+    "category": 2
+  },
+  {
+    "name": "林元俊",
+    "category": 2
+  },
+  {
+    "name": "陈建明",
+    "category": 5
+  },
+  {
+    "name": "李兴华",
+    "category": 5
+  },
+  {
+    "name": "凌春波",
+    "category": 5
+  },
+  {
+    "name": "林荣森",
+    "category": 5
+  },
+  {
+    "name": "陈济芬",
+    "category": 5
+  },
+  {
+    "name": "杨坚",
+    "category": 2
+  },
+  {
+    "name": "黄天铸",
+    "category": 2
+  },
+  {
+    "name": "林国瑞",
+    "category": 2
+  },
+  {
+    "name": "陈清剑",
+    "category": 5
+  },
+  {
+    "name": "吴国付",
+    "category": 5
+  },
+  {
+    "name": "游庆洪",
+    "category": 1
+  },
+  {
+    "name": "刘恒兴",
+    "category": 2
+  },
+  {
+    "name": "张秀德",
+    "category": 5
+  },
+  {
+    "name": "李志龙",
+    "category": 5
+  },
+  {
+    "name": "李元生",
+    "category": 5
+  },
+  {
+    "name": "李金耀",
+    "category": 5
+  },
+  {
+    "name": "郑建峰",
+    "category": 5
+  },
+  {
+    "name": "王永太",
+    "category": 5
+  },
+  {
+    "name": "陈元和",
+    "category": 1
+  },
+  {
+    "name": "刘雪娟",
+    "category": 5
+  },
+  {
+    "name": "陈美华",
+    "category": 4
+  },
+  {
+    "name": "张少白",
+    "category": 4
+  },
+  {
+    "name": "龚宇",
+    "category": 4
+  },
+  {
+    "name": "曾广荀",
+    "category": 4
+  },
+  {
+    "name": "陈敏",
+    "category": 5
+  },
+  {
+    "name": "李娟",
+    "category": 5
+  },
+  {
+    "name": "吴易璨",
+    "category": 5
+  },
+  {
+    "name": "刑亚东",
+    "category": 4
+  },
+  {
+    "name": "周璐",
+    "category": 5
+  },
+  {
+    "name": "陶琳",
+    "category": 5
+  },
+  {
+    "name": "李军霞",
+    "category": 5
+  },
+  {
+    "name": "韩笑冰",
+    "category": 5
+  },
+  {
+    "name": "柳菲菲",
+    "category": 5
+  },
+  {
+    "name": "向红敏",
+    "category": 5
+  },
+  {
+    "name": "黄金树",
+    "category": 2
+  },
+  {
+    "name": "黄开饶",
+    "category": 4
+  },
+  {
+    "name": "潘国华",
+    "category": 4
+  },
+  {
+    "name": "苏金模",
+    "category": 2
+  },
+  {
+    "name": "詹珊珊",
+    "category": 2
+  },
+  {
+    "name": "陈凌",
+    "category": 2
+  },
+  {
+    "name": "黄庆飞",
+    "category": 2
+  },
+  {
+    "name": "林淑金",
+    "category": 5
+  },
+  {
+    "name": "林国锋",
+    "category": 5
+  },
+  {
+    "name": "胡珍敬",
+    "category": 5
+  },
+  {
+    "name": "陈建坤",
+    "category": 5
+  },
+  {
+    "name": "陈耀明",
+    "category": 5
+  },
+  {
+    "name": "徐祖贤",
+    "category": 5
+  },
+  {
+    "name": "林伟明",
+    "category": 5
+  },
+  {
+    "name": "杨振富",
+    "category": 5
+  },
+  {
+    "name": "叶小建",
+    "category": 5
+  },
+  {
+    "name": "潘庆荣",
+    "category": 5
+  },
+  {
+    "name": "栗豪",
+    "category": 2
+  },
+  {
+    "name": "占文营",
+    "category": 1
+  },
+  {
+    "name": "肖亚珠",
+    "category": 5
+  },
+  {
+    "name": "林丹",
+    "category": 5
+  },
+  {
+    "name": "林福兵",
+    "category": 5
+  },
+  {
+    "name": "张晓鹏",
+    "category": 5
+  },
+  {
+    "name": "周义明",
+    "category": 1
+  },
+  {
+    "name": "柯国良",
+    "category": 1
+  },
+  {
+    "name": "肖秀建",
+    "category": 5
+  },
+  {
+    "name": "张卓",
+    "category": 5
+  },
+  {
+    "name": "李俊雄",
+    "category": 5
+  },
+  {
+    "name": "詹国平",
+    "category": 2
+  },
+  {
+    "name": "黄开山",
+    "category": 1
+  },
+  {
+    "name": "林翠云",
+    "category": 0
+  },
+  {
+    "name": "朱敏",
+    "category": 2
+  },
+  {
+    "name": "李永刚",
+    "category": 2
+  },
+  {
+    "name": "杜娟",
+    "category": 5
+  },
+  {
+    "name": "郑奇峰",
+    "category": 5
+  },
+  {
+    "name": "陈庭芳",
+    "category": 2
+  },
+  {
+    "name": "陈志东",
+    "category": 2
+  },
+  {
+    "name": "赵兴力",
+    "category": 4
+  },
+  {
+    "name": "林鸿镇",
+    "category": 5
+  },
+  {
+    "name": "林南生",
+    "category": 2
+  },
+  {
+    "name": "吴耿乙",
+    "category": 2
+  },
+  {
+    "name": "郑志坚",
+    "category": 2
+  },
+  {
+    "name": "林宗喜",
+    "category": 5
+  },
+  {
+    "name": "吴金才",
+    "category": 2
+  },
+  {
+    "name": "卓国林",
+    "category": 5
+  },
+  {
+    "name": "王冠",
+    "category": 5
+  },
+  {
+    "name": "张艳红",
+    "category": 0
+  },
+  {
+    "name": "林鸿松",
+    "category": 5
+  },
+  {
+    "name": "蔡金尾",
+    "category": 5
+  },
+  {
+    "name": "黄舜强",
+    "category": 2
+  },
+  {
+    "name": "毛江涛",
+    "category": 4
+  },
+  {
+    "name": "刘凯",
+    "category": 4
+  },
+  {
+    "name": "王艳",
+    "category": 4
+  },
+  {
+    "name": "鞠占富",
+    "category": 4
+  },
+  {
+    "name": "高菲菲",
+    "category": 5
+  },
+  {
+    "name": "林卡",
+    "category": 5
+  },
+  {
+    "name": "柳韬",
+    "category": 5
+  },
+  {
+    "name": "陈少华",
+    "category": 5
+  },
+  {
+    "name": "詹宇辉",
+    "category": 5
+  },
+  {
+    "name": "林俊兴",
+    "category": 5
+  },
+  {
+    "name": "苑瑞华",
+    "category": 5
+  },
+  {
+    "name": "李庆章",
+    "category": 5
+  },
+  {
+    "name": "苏俊杉",
+    "category": 5
+  },
+  {
+    "name": "郑梅华",
+    "category": 4
+  },
+  {
+    "name": "童晓文",
+    "category": 2
+  },
+  {
+    "name": "崔美松",
+    "category": 5
+  },
+  {
+    "name": "范银龙",
+    "category": 5
+  },
+  {
+    "name": "林金耀",
+    "category": 4
+  },
+  {
+    "name": "曾哲民",
+    "category": 4
+  },
+  {
+    "name": "李纯煌",
+    "category": 5
+  },
+  {
+    "name": "王燕",
+    "category": 5
+  },
+  {
+    "name": "高海峰",
+    "category": 5
+  },
+  {
+    "name": "陈瑞其",
+    "category": 1
+  },
+  {
+    "name": "邵丽叶",
+    "category": 5
+  },
+  {
+    "name": "李亮",
+    "category": 0
+  },
+  {
+    "name": "赵选明",
+    "category": 0
+  },
+  {
+    "name": "王俊杰",
+    "category": 5
+  },
+  {
+    "name": "李宗穗",
+    "category": 5
+  },
+  {
+    "name": "王晚梅",
+    "category": 5
+  },
+  {
+    "name": "陈平",
+    "category": 5
+  },
+  {
+    "name": "郑宗煌",
+    "category": 5
+  },
+  {
+    "name": "张朝阳",
+    "category": 5
+  },
+  {
+    "name": "何恩慧",
+    "category": 5
+  },
+  {
+    "name": "何玉枚",
+    "category": 2
+  },
+  {
+    "name": "吴清水",
+    "category": 5
+  },
+  {
+    "name": "黄文锋",
+    "category": 5
+  }
+],
+    "links":[
+  {
+    "source": "徐秋建",
+    "target": "陈德龙",
+    "value": "股东"
+  },
+  {
+    "source": "郑建新",
+    "target": "郑的章",
+    "value": "股东"
+  },
+  {
+    "source": "郑建新",
+    "target": "郑建铭",
+    "value": "股东"
+  },
+  {
+    "source": "郑建新",
+    "target": "肖文汉",
+    "value": "股东"
+  },
+  {
+    "source": "郑建新",
+    "target": "黄素娟",
+    "value": "股东"
+  },
+  {
+    "source": "郑建新",
+    "target": "陈延洲",
+    "value": "股东"
+  },
+  {
+    "source": "吴伟星",
+    "target": "高示俊",
+    "value": "股东"
+  },
+  {
+    "source": "吴伟星",
+    "target": "郑美凤",
+    "value": "股东"
+  },
+  {
+    "source": "吴伟星",
+    "target": "郑建发",
+    "value": "股东"
+  },
+  {
+    "source": "吴伟星",
+    "target": "郑国庆",
+    "value": "股东"
+  },
+  {
+    "source": "吴伟星",
+    "target": "蔡回枝",
+    "value": "股东"
+  },
+  {
+    "source": "吴伟星",
+    "target": "肖云峰",
+    "value": "股东"
+  },
+  {
+    "source": "吴伟星",
+    "target": "游顺秀",
+    "value": "股东"
+  },
+  {
+    "source": "游顺秀",
+    "target": "高示俊",
+    "value": "股东"
+  },
+  {
+    "source": "游顺秀",
+    "target": "郑美凤",
+    "value": "股东"
+  },
+  {
+    "source": "游顺秀",
+    "target": "郑建发",
+    "value": "股东"
+  },
+  {
+    "source": "游顺秀",
+    "target": "郑国庆",
+    "value": "股东"
+  },
+  {
+    "source": "游顺秀",
+    "target": "蔡回枝",
+    "value": "股东"
+  },
+  {
+    "source": "游顺秀",
+    "target": "肖云峰",
+    "value": "股东"
+  },
+  {
+    "source": "肖云峰",
+    "target": "高示俊",
+    "value": "股东"
+  },
+  {
+    "source": "肖云峰",
+    "target": "郑美凤",
+    "value": "股东"
+  },
+  {
+    "source": "肖云峰",
+    "target": "郑建发",
+    "value": "股东"
+  },
+  {
+    "source": "肖云峰",
+    "target": "郑国庆",
+    "value": "股东"
+  },
+  {
+    "source": "肖云峰",
+    "target": "蔡回枝",
+    "value": "股东"
+  },
+  {
+    "source": "蔡回枝",
+    "target": "高示俊",
+    "value": "股东"
+  },
+  {
+    "source": "蔡回枝",
+    "target": "郑美凤",
+    "value": "股东"
+  },
+  {
+    "source": "蔡回枝",
+    "target": "郑建发",
+    "value": "股东"
+  },
+  {
+    "source": "蔡回枝",
+    "target": "郑国庆",
+    "value": "股东"
+  },
+  {
+    "source": "郑国庆",
+    "target": "高示俊",
+    "value": "股东"
+  },
+  {
+    "source": "郑国庆",
+    "target": "郑美凤",
+    "value": "股东"
+  },
+  {
+    "source": "郑国庆",
+    "target": "郑建发",
+    "value": "股东"
+  },
+  {
+    "source": "郑建发",
+    "target": "高示俊",
+    "value": "股东"
+  },
+  {
+    "source": "郑建发",
+    "target": "郑美凤",
+    "value": "股东"
+  },
+  {
+    "source": "郑美凤",
+    "target": "高示俊",
+    "value": "股东"
+  },
+  {
+    "source": "陈元粦",
+    "target": "陈建清",
+    "value": "股东"
+  },
+  {
+    "source": "陈元粦",
+    "target": "詹国连",
+    "value": "股东"
+  },
+  {
+    "source": "陈元粦",
+    "target": "卓志展",
+    "value": "股东"
+  },
+  {
+    "source": "卓志展",
+    "target": "陈建清",
+    "value": "股东"
+  },
+  {
+    "source": "卓志展",
+    "target": "詹国连",
+    "value": "股东"
+  },
+  {
+    "source": "詹国连",
+    "target": "詹金灶",
+    "value": "股东"
+  },
+  {
+    "source": "詹国连",
+    "target": "游秀琴",
+    "value": "股东"
+  },
+  {
+    "source": "詹国连",
+    "target": "李秀萍",
+    "value": "股东"
+  },
+  {
+    "source": "詹国连",
+    "target": "林珍金",
+    "value": "股东"
+  },
+  {
+    "source": "詹国连",
+    "target": "詹美爱",
+    "value": "股东"
+  },
+  {
+    "source": "詹国连",
+    "target": "詹国营",
+    "value": "股东"
+  },
+  {
+    "source": "詹国连",
+    "target": "陈玉辉",
+    "value": "股东"
+  },
+  {
+    "source": "詹国连",
+    "target": "陈淑平",
+    "value": "股东"
+  },
+  {
+    "source": "詹国连",
+    "target": "陈国瑞",
+    "value": "股东"
+  },
+  {
+    "source": "詹国连",
+    "target": "陈俊熙",
+    "value": "股东"
+  },
+  {
+    "source": "詹国连",
+    "target": "陈建清",
+    "value": "股东"
+  },
+  {
+    "source": "刘彤",
+    "target": "张新民",
+    "value": "股东"
+  },
+  {
+    "source": "刘彤",
+    "target": "李鸿岩",
+    "value": "股东"
+  },
+  {
+    "source": "李鸿岩",
+    "target": "张新民",
+    "value": "股东"
+  },
+  {
+    "source": "林金宗",
+    "target": "黄文其",
+    "value": "股东"
+  },
+  {
+    "source": "林金宗",
+    "target": "卓国金",
+    "value": "股东"
+  },
+  {
+    "source": "林金宗",
+    "target": "李文献",
+    "value": "股东"
+  },
+  {
+    "source": "林金宗",
+    "target": "邹双仁",
+    "value": "股东"
+  },
+  {
+    "source": "林金宗",
+    "target": "郑志雄",
+    "value": "股东"
+  },
+  {
+    "source": "林金宗",
+    "target": "郑志芳",
+    "value": "股东"
+  },
+  {
+    "source": "林金宗",
+    "target": "苏国忠",
+    "value": "股东"
+  },
+  {
+    "source": "林金宗",
+    "target": "胡嘉军",
+    "value": "股东"
+  },
+  {
+    "source": "胡嘉军",
+    "target": "苏国忠",
+    "value": "股东"
+  },
+  {
+    "source": "苏国忠",
+    "target": "郑志雄",
+    "value": "股东"
+  },
+  {
+    "source": "苏国忠",
+    "target": "郑志芳",
+    "value": "股东"
+  },
+  {
+    "source": "何文华",
+    "target": "王建华",
+    "value": "股东"
+  },
+  {
+    "source": "何文华",
+    "target": "柳国明",
+    "value": "股东"
+  },
+  {
+    "source": "何文华",
+    "target": "林雄心",
+    "value": "股东"
+  },
+  {
+    "source": "何文华",
+    "target": "杨青山",
+    "value": "股东"
+  },
+  {
+    "source": "何文华",
+    "target": "杨永泉",
+    "value": "股东"
+  },
+  {
+    "source": "何文华",
+    "target": "杨文秀",
+    "value": "股东"
+  },
+  {
+    "source": "何文华",
+    "target": "杨国强",
+    "value": "股东"
+  },
+  {
+    "source": "何文华",
+    "target": "杨国先",
+    "value": "股东"
+  },
+  {
+    "source": "何文华",
+    "target": "张娟",
+    "value": "股东"
+  },
+  {
+    "source": "张娟",
+    "target": "王建华",
+    "value": "股东"
+  },
+  {
+    "source": "张娟",
+    "target": "柳国明",
+    "value": "股东"
+  },
+  {
+    "source": "张娟",
+    "target": "林雄心",
+    "value": "股东"
+  },
+  {
+    "source": "张娟",
+    "target": "杨青山",
+    "value": "股东"
+  },
+  {
+    "source": "张娟",
+    "target": "杨永泉",
+    "value": "股东"
+  },
+  {
+    "source": "张娟",
+    "target": "杨文秀",
+    "value": "股东"
+  },
+  {
+    "source": "张娟",
+    "target": "杨国强",
+    "value": "股东"
+  },
+  {
+    "source": "张娟",
+    "target": "杨国先",
+    "value": "股东"
+  },
+  {
+    "source": "杨国先",
+    "target": "王建华",
+    "value": "股东"
+  },
+  {
+    "source": "杨国先",
+    "target": "柳国明",
+    "value": "股东"
+  },
+  {
+    "source": "杨国先",
+    "target": "林雄心",
+    "value": "股东"
+  },
+  {
+    "source": "杨国先",
+    "target": "杨青山",
+    "value": "股东"
+  },
+  {
+    "source": "杨国先",
+    "target": "杨永泉",
+    "value": "股东"
+  },
+  {
+    "source": "杨国先",
+    "target": "杨文秀",
+    "value": "股东"
+  },
+  {
+    "source": "杨国先",
+    "target": "杨国强",
+    "value": "股东"
+  },
+  {
+    "source": "杨国强",
+    "target": "王建华",
+    "value": "股东"
+  },
+  {
+    "source": "杨国强",
+    "target": "柳国明",
+    "value": "股东"
+  },
+  {
+    "source": "杨国强",
+    "target": "林雄心",
+    "value": "股东"
+  },
+  {
+    "source": "杨国强",
+    "target": "杨青山",
+    "value": "股东"
+  },
+  {
+    "source": "杨国强",
+    "target": "杨永泉",
+    "value": "股东"
+  },
+  {
+    "source": "杨国强",
+    "target": "杨文秀",
+    "value": "股东"
+  },
+  {
+    "source": "杨文秀",
+    "target": "王建华",
+    "value": "股东"
+  },
+  {
+    "source": "杨文秀",
+    "target": "柳国明",
+    "value": "股东"
+  },
+  {
+    "source": "杨文秀",
+    "target": "林雄心",
+    "value": "股东"
+  },
+  {
+    "source": "杨文秀",
+    "target": "杨青山",
+    "value": "股东"
+  },
+  {
+    "source": "杨文秀",
+    "target": "杨永泉",
+    "value": "股东"
+  },
+  {
+    "source": "杨永泉",
+    "target": "王建华",
+    "value": "股东"
+  },
+  {
+    "source": "杨永泉",
+    "target": "柳国明",
+    "value": "股东"
+  },
+  {
+    "source": "杨永泉",
+    "target": "林雄心",
+    "value": "股东"
+  },
+  {
+    "source": "杨永泉",
+    "target": "杨青山",
+    "value": "股东"
+  },
+  {
+    "source": "杨青山",
+    "target": "王建华",
+    "value": "股东"
+  },
+  {
+    "source": "杨青山",
+    "target": "柳国明",
+    "value": "股东"
+  },
+  {
+    "source": "杨青山",
+    "target": "林雄心",
+    "value": "股东"
+  },
+  {
+    "source": "林雄心",
+    "target": "王建华",
+    "value": "股东"
+  },
+  {
+    "source": "林雄心",
+    "target": "柳国明",
+    "value": "股东"
+  },
+  {
+    "source": "柳国明",
+    "target": "王建华",
+    "value": "股东"
+  },
+  {
+    "source": "吴德新",
+    "target": "吴庆元",
+    "value": "股东"
+  },
+  {
+    "source": "吴德新",
+    "target": "林雅英",
+    "value": "股东"
+  },
+  {
+    "source": "吴德新",
+    "target": "杨美先",
+    "value": "股东"
+  },
+  {
+    "source": "杨美先",
+    "target": "吴庆元",
+    "value": "股东"
+  },
+  {
+    "source": "杨美先",
+    "target": "林雅英",
+    "value": "股东"
+  },
+  {
+    "source": "林雅英",
+    "target": "吴庆元",
+    "value": "股东"
+  },
+  {
+    "source": "张金华",
+    "target": "林元豹",
+    "value": "股东"
+  },
+  {
+    "source": "张金华",
+    "target": "游东升",
+    "value": "股东"
+  },
+  {
+    "source": "张金华",
+    "target": "林茹",
+    "value": "股东"
+  },
+  {
+    "source": "张金华",
+    "target": "陈文魁",
+    "value": "股东"
+  },
+  {
+    "source": "张金华",
+    "target": "郭素珠",
+    "value": "股东"
+  },
+  {
+    "source": "张金华",
+    "target": "林永贵",
+    "value": "股东"
+  },
+  {
+    "source": "林永贵",
+    "target": "林元豹",
+    "value": "股东"
+  },
+  {
+    "source": "林永贵",
+    "target": "陈文魁",
+    "value": "股东"
+  },
+  {
+    "source": "林永贵",
+    "target": "郭素珠",
+    "value": "股东"
+  },
+  {
+    "source": "郭素珠",
+    "target": "陈文魁",
+    "value": "股东"
+  },
+  {
+    "source": "林茹",
+    "target": "游东升",
+    "value": "股东"
+  },
+  {
+    "source": "张桂平",
+    "target": "张康黎",
+    "value": "股东"
+  },
+  {
+    "source": "林新疆",
+    "target": "林建芳",
+    "value": "股东"
+  },
+  {
+    "source": "林新疆",
+    "target": "詹国太",
+    "value": "股东"
+  },
+  {
+    "source": "卓志强",
+    "target": "林华东",
+    "value": "股东"
+  },
+  {
+    "source": "卓志强",
+    "target": "陈建煌",
+    "value": "股东"
+  },
+  {
+    "source": "陈建煌",
+    "target": "唐国芳",
+    "value": "股东"
+  },
+  {
+    "source": "陈建煌",
+    "target": "朱哲勇",
+    "value": "股东"
+  },
+  {
+    "source": "陈建煌",
+    "target": "陈雪清",
+    "value": "股东"
+  },
+  {
+    "source": "陈建煌",
+    "target": "林华东",
+    "value": "股东"
+  },
+  {
+    "source": "卓国金",
+    "target": "阮维锋",
+    "value": "股东"
+  },
+  {
+    "source": "卓国金",
+    "target": "黄文其",
+    "value": "股东"
+  },
+  {
+    "source": "卓国金",
+    "target": "林建贤",
+    "value": "股东"
+  },
+  {
+    "source": "卓国金",
+    "target": "黄玉华",
+    "value": "股东"
+  },
+  {
+    "source": "卓国金",
+    "target": "雷会勇",
+    "value": "股东"
+  },
+  {
+    "source": "卓国金",
+    "target": "王爱东",
+    "value": "股东"
+  },
+  {
+    "source": "卓国金",
+    "target": "邹双仁",
+    "value": "股东"
+  },
+  {
+    "source": "卓国金",
+    "target": "林金宗",
+    "value": "股东"
+  },
+  {
+    "source": "卓国金",
+    "target": "刘韩啸",
+    "value": "股东"
+  },
+  {
+    "source": "张建军",
+    "target": "贾香伶",
+    "value": "股东"
+  },
+  {
+    "source": "郑志芳",
+    "target": "郑志雄",
+    "value": "股东"
+  },
+  {
+    "source": "黄光标",
+    "target": "黄金雄",
+    "value": "股东"
+  },
+  {
+    "source": "黄光标",
+    "target": "黄德锋",
+    "value": "股东"
+  },
+  {
+    "source": "黄德锋",
+    "target": "朱丽群",
+    "value": "股东"
+  },
+  {
+    "source": "黄德锋",
+    "target": "林金土",
+    "value": "股东"
+  },
+  {
+    "source": "黄德锋",
+    "target": "黄金雄",
+    "value": "股东"
+  },
+  {
+    "source": "肖志敏",
+    "target": "郑何水",
+    "value": "股东"
+  },
+  {
+    "source": "林金华",
+    "target": "陈松",
+    "value": "股东"
+  },
+  {
+    "source": "林金华",
+    "target": "林金富",
+    "value": "股东"
+  },
+  {
+    "source": "林金富",
+    "target": "陈松",
+    "value": "股东"
+  },
+  {
+    "source": "游金棋",
+    "target": "游金豹",
+    "value": "股东"
+  },
+  {
+    "source": "吴建成",
+    "target": "林群",
+    "value": "股东"
+  },
+  {
+    "source": "吴建成",
+    "target": "林兆晞",
+    "value": "股东"
+  },
+  {
+    "source": "吴建成",
+    "target": "叶志阳",
+    "value": "股东"
+  },
+  {
+    "source": "吴建成",
+    "target": "詹建昇",
+    "value": "股东"
+  },
+  {
+    "source": "吴建成",
+    "target": "陈金秀",
+    "value": "股东"
+  },
+  {
+    "source": "吴建成",
+    "target": "林国强",
+    "value": "股东"
+  },
+  {
+    "source": "林国强",
+    "target": "詹建昇",
+    "value": "股东"
+  },
+  {
+    "source": "林国强",
+    "target": "陈金秀",
+    "value": "股东"
+  },
+  {
+    "source": "陈金秀",
+    "target": "赵建坤",
+    "value": "股东"
+  },
+  {
+    "source": "陈金秀",
+    "target": "林群",
+    "value": "股东"
+  },
+  {
+    "source": "陈金秀",
+    "target": "林兆晞",
+    "value": "股东"
+  },
+  {
+    "source": "陈金秀",
+    "target": "詹建升",
+    "value": "股东"
+  },
+  {
+    "source": "陈金秀",
+    "target": "詹建昇",
+    "value": "股东"
+  },
+  {
+    "source": "詹建昇",
+    "target": "赵建坤",
+    "value": "股东"
+  },
+  {
+    "source": "詹建昇",
+    "target": "林群",
+    "value": "股东"
+  },
+  {
+    "source": "詹建昇",
+    "target": "詹建升",
+    "value": "股东"
+  },
+  {
+    "source": "詹建昇",
+    "target": "李开添",
+    "value": "股东"
+  },
+  {
+    "source": "詹建昇",
+    "target": "陈美香",
+    "value": "股东"
+  },
+  {
+    "source": "詹建昇",
+    "target": "陈志煌",
+    "value": "股东"
+  },
+  {
+    "source": "詹建昇",
+    "target": "林兆晞",
+    "value": "股东"
+  },
+  {
+    "source": "詹建昇",
+    "target": "陈金秀",
+    "value": "股东"
+  },
+  {
+    "source": "詹建昇",
+    "target": "叶志阳",
+    "value": "股东"
+  },
+  {
+    "source": "詹建昇",
+    "target": "吴建成",
+    "value": "股东"
+  },
+  {
+    "source": "詹建昇",
+    "target": "詹国栋",
+    "value": "股东"
+  },
+  {
+    "source": "卓国华",
+    "target": "詹国庆",
+    "value": "股东"
+  },
+  {
+    "source": "卓国华",
+    "target": "林茂森",
+    "value": "股东"
+  },
+  {
+    "source": "卓国华",
+    "target": "林志勇",
+    "value": "股东"
+  },
+  {
+    "source": "卓国华",
+    "target": "卓建山",
+    "value": "股东"
+  },
+  {
+    "source": "卓建山",
+    "target": "詹国庆",
+    "value": "股东"
+  },
+  {
+    "source": "卓建山",
+    "target": "林茂森",
+    "value": "股东"
+  },
+  {
+    "source": "卓建山",
+    "target": "林志勇",
+    "value": "股东"
+  },
+  {
+    "source": "林志勇",
+    "target": "詹国庆",
+    "value": "股东"
+  },
+  {
+    "source": "林志勇",
+    "target": "林茂森",
+    "value": "股东"
+  },
+  {
+    "source": "林茂森",
+    "target": "詹国庆",
+    "value": "股东"
+  },
+  {
+    "source": "何莉",
+    "target": "王鸿山",
+    "value": "股东"
+  },
+  {
+    "source": "邹双仁",
+    "target": "黄玉华",
+    "value": "股东"
+  },
+  {
+    "source": "邹双仁",
+    "target": "雷会勇",
+    "value": "股东"
+  },
+  {
+    "source": "邹双仁",
+    "target": "王爱东",
+    "value": "股东"
+  },
+  {
+    "source": "林清辉",
+    "target": "苏金芳",
+    "value": "股东"
+  },
+  {
+    "source": "王爱东",
+    "target": "黄玉华",
+    "value": "股东"
+  },
+  {
+    "source": "王爱东",
+    "target": "雷会勇",
+    "value": "股东"
+  },
+  {
+    "source": "雷会勇",
+    "target": "黄玉华",
+    "value": "股东"
+  },
+  {
+    "source": "林寿庸",
+    "target": "林志平",
+    "value": "股东"
+  },
+  {
+    "source": "李马号",
+    "target": "尚雅丽",
+    "value": "股东"
+  },
+  {
+    "source": "林开伦",
+    "target": "刘福强",
+    "value": "股东"
+  },
+  {
+    "source": "林开伦",
+    "target": "王贤毅",
+    "value": "股东"
+  },
+  {
+    "source": "林开伦",
+    "target": "李永",
+    "value": "股东"
+  },
+  {
+    "source": "李永",
+    "target": "刘福强",
+    "value": "股东"
+  },
+  {
+    "source": "李永",
+    "target": "王贤毅",
+    "value": "股东"
+  },
+  {
+    "source": "王贤毅",
+    "target": "刘福强",
+    "value": "股东"
+  },
+  {
+    "source": "林玉明",
+    "target": "王海波",
+    "value": "股东"
+  },
+  {
+    "source": "林玉明",
+    "target": "林振华",
+    "value": "股东"
+  },
+  {
+    "source": "林玉明",
+    "target": "张晓玉",
+    "value": "股东"
+  },
+  {
+    "source": "吴亚平",
+    "target": "陈福斌",
+    "value": "股东"
+  },
+  {
+    "source": "吴亚平",
+    "target": "魏荣达",
+    "value": "股东"
+  },
+  {
+    "source": "游添春",
+    "target": "游福坤",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "李开添",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "陈美香",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "陈志煌",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "周瑞云",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "詹玉鹏",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "詹建扬",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "詹建峰",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "黄玉凤",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "黄志强",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "黄德龙",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "黄建东",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "陈金秀",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "叶志阳",
+    "value": "股东"
+  },
+  {
+    "source": "詹国栋",
+    "target": "吴建成",
+    "value": "股东"
+  },
+  {
+    "source": "叶志阳",
+    "target": "詹建升",
+    "value": "股东"
+  },
+  {
+    "source": "叶志阳",
+    "target": "詹建昇",
+    "value": "股东"
+  },
+  {
+    "source": "叶志阳",
+    "target": "林群",
+    "value": "股东"
+  },
+  {
+    "source": "叶志阳",
+    "target": "林兆晞",
+    "value": "股东"
+  },
+  {
+    "source": "叶志阳",
+    "target": "陈金秀",
+    "value": "股东"
+  },
+  {
+    "source": "陈俊诚",
+    "target": "陈剑平",
+    "value": "股东"
+  },
+  {
+    "source": "庞敏",
+    "target": "梁齐",
+    "value": "股东"
+  },
+  {
+    "source": "庞敏",
+    "target": "赵莉",
+    "value": "股东"
+  },
+  {
+    "source": "庞敏",
+    "target": "姜萌",
+    "value": "股东"
+  },
+  {
+    "source": "庞敏",
+    "target": "崔桂荣",
+    "value": "股东"
+  },
+  {
+    "source": "庞敏",
+    "target": "黄文杰",
+    "value": "股东"
+  },
+  {
+    "source": "庞敏",
+    "target": "王强",
+    "value": "股东"
+  },
+  {
+    "source": "庞敏",
+    "target": "许红梅",
+    "value": "股东"
+  },
+  {
+    "source": "庞敏",
+    "target": "卢文军",
+    "value": "股东"
+  },
+  {
+    "source": "卢文军",
+    "target": "梁齐",
+    "value": "股东"
+  },
+  {
+    "source": "卢文军",
+    "target": "赵莉",
+    "value": "股东"
+  },
+  {
+    "source": "卢文军",
+    "target": "姜萌",
+    "value": "股东"
+  },
+  {
+    "source": "卢文军",
+    "target": "崔桂荣",
+    "value": "股东"
+  },
+  {
+    "source": "卢文军",
+    "target": "黄文杰",
+    "value": "股东"
+  },
+  {
+    "source": "卢文军",
+    "target": "王强",
+    "value": "股东"
+  },
+  {
+    "source": "卢文军",
+    "target": "许红梅",
+    "value": "股东"
+  },
+  {
+    "source": "许红梅",
+    "target": "梁齐",
+    "value": "股东"
+  },
+  {
+    "source": "许红梅",
+    "target": "赵莉",
+    "value": "股东"
+  },
+  {
+    "source": "许红梅",
+    "target": "姜萌",
+    "value": "股东"
+  },
+  {
+    "source": "许红梅",
+    "target": "崔桂荣",
+    "value": "股东"
+  },
+  {
+    "source": "许红梅",
+    "target": "黄文杰",
+    "value": "股东"
+  },
+  {
+    "source": "许红梅",
+    "target": "王强",
+    "value": "股东"
+  },
+  {
+    "source": "王强",
+    "target": "梁齐",
+    "value": "股东"
+  },
+  {
+    "source": "王强",
+    "target": "赵莉",
+    "value": "股东"
+  },
+  {
+    "source": "王强",
+    "target": "姜萌",
+    "value": "股东"
+  },
+  {
+    "source": "王强",
+    "target": "崔桂荣",
+    "value": "股东"
+  },
+  {
+    "source": "王强",
+    "target": "黄文杰",
+    "value": "股东"
+  },
+  {
+    "source": "黄文杰",
+    "target": "梁齐",
+    "value": "股东"
+  },
+  {
+    "source": "黄文杰",
+    "target": "赵莉",
+    "value": "股东"
+  },
+  {
+    "source": "黄文杰",
+    "target": "姜萌",
+    "value": "股东"
+  },
+  {
+    "source": "黄文杰",
+    "target": "崔桂荣",
+    "value": "股东"
+  },
+  {
+    "source": "崔桂荣",
+    "target": "梁齐",
+    "value": "股东"
+  },
+  {
+    "source": "崔桂荣",
+    "target": "赵莉",
+    "value": "股东"
+  },
+  {
+    "source": "崔桂荣",
+    "target": "姜萌",
+    "value": "股东"
+  },
+  {
+    "source": "姜萌",
+    "target": "梁齐",
+    "value": "股东"
+  },
+  {
+    "source": "姜萌",
+    "target": "赵莉",
+    "value": "股东"
+  },
+  {
+    "source": "赵莉",
+    "target": "梁齐",
+    "value": "股东"
+  },
+  {
+    "source": "蔡亚彬",
+    "target": "汤博文",
+    "value": "股东"
+  },
+  {
+    "source": "蔡亚彬",
+    "target": "詹进亮",
+    "value": "股东"
+  },
+  {
+    "source": "蔡亚彬",
+    "target": "詹进建",
+    "value": "股东"
+  },
+  {
+    "source": "蔡亚彬",
+    "target": "张玉丽",
+    "value": "股东"
+  },
+  {
+    "source": "蔡亚彬",
+    "target": "吴雨霞",
+    "value": "股东"
+  },
+  {
+    "source": "吴雨霞",
+    "target": "汤博文",
+    "value": "股东"
+  },
+  {
+    "source": "吴雨霞",
+    "target": "詹进亮",
+    "value": "股东"
+  },
+  {
+    "source": "吴雨霞",
+    "target": "詹进建",
+    "value": "股东"
+  },
+  {
+    "source": "吴雨霞",
+    "target": "张玉丽",
+    "value": "股东"
+  },
+  {
+    "source": "张玉丽",
+    "target": "汤博文",
+    "value": "股东"
+  },
+  {
+    "source": "张玉丽",
+    "target": "詹进亮",
+    "value": "股东"
+  },
+  {
+    "source": "张玉丽",
+    "target": "詹进建",
+    "value": "股东"
+  },
+  {
+    "source": "詹进建",
+    "target": "汤博文",
+    "value": "股东"
+  },
+  {
+    "source": "詹进建",
+    "target": "詹进亮",
+    "value": "股东"
+  },
+  {
+    "source": "詹进亮",
+    "target": "汤博文",
+    "value": "股东"
+  },
+  {
+    "source": "黄光盛",
+    "target": "黄金雄",
+    "value": "股东"
+  },
+  {
+    "source": "黄光盛",
+    "target": "黄德新",
+    "value": "股东"
+  },
+  {
+    "source": "黄光盛",
+    "target": "黄国栋",
+    "value": "股东"
+  },
+  {
+    "source": "黄国栋",
+    "target": "黄金雄",
+    "value": "股东"
+  },
+  {
+    "source": "黄国栋",
+    "target": "黄德新",
+    "value": "股东"
+  },
+  {
+    "source": "黄德新",
+    "target": "黄格林",
+    "value": "股东"
+  },
+  {
+    "source": "黄德新",
+    "target": "黄金雄",
+    "value": "股东"
+  },
+  {
+    "source": "姜军",
+    "target": "詹明洪",
+    "value": "股东"
+  },
+  {
+    "source": "姜军",
+    "target": "詹国章",
+    "value": "股东"
+  },
+  {
+    "source": "姜军",
+    "target": "佟立坤",
+    "value": "股东"
+  },
+  {
+    "source": "佟立坤",
+    "target": "詹明洪",
+    "value": "股东"
+  },
+  {
+    "source": "佟立坤",
+    "target": "詹国章",
+    "value": "股东"
+  },
+  {
+    "source": "詹国章",
+    "target": "詹明洪",
+    "value": "股东"
+  },
+  {
+    "source": "吴国成",
+    "target": "陈庆棋",
+    "value": "股东"
+  },
+  {
+    "source": "张月美",
+    "target": "魏国华",
+    "value": "股东"
+  },
+  {
+    "source": "张月美",
+    "target": "陈征",
+    "value": "股东"
+  },
+  {
+    "source": "张月美",
+    "target": "许荔涵",
+    "value": "股东"
+  },
+  {
+    "source": "许荔涵",
+    "target": "魏国华",
+    "value": "股东"
+  },
+  {
+    "source": "许荔涵",
+    "target": "陈征",
+    "value": "股东"
+  },
+  {
+    "source": "陈征",
+    "target": "魏国华",
+    "value": "股东"
+  },
+  {
+    "source": "林宗琰",
+    "target": "黄维杰",
+    "value": "股东"
+  },
+  {
+    "source": "林宗琰",
+    "target": "林明凯",
+    "value": "股东"
+  },
+  {
+    "source": "林明凯",
+    "target": "詹瑞金",
+    "value": "股东"
+  },
+  {
+    "source": "林明凯",
+    "target": "苏志强",
+    "value": "股东"
+  },
+  {
+    "source": "林明凯",
+    "target": "林毓斌",
+    "value": "股东"
+  },
+  {
+    "source": "林明凯",
+    "target": "黄维杰",
+    "value": "股东"
+  },
+  {
+    "source": "王国勇",
+    "target": "王文海",
+    "value": "股东"
+  },
+  {
+    "source": "苏瑞珍",
+    "target": "苏雪平",
+    "value": "股东"
+  },
+  {
+    "source": "苏瑞珍",
+    "target": "苏瑞福",
+    "value": "股东"
+  },
+  {
+    "source": "苏瑞珍",
+    "target": "苏雪花",
+    "value": "股东"
+  },
+  {
+    "source": "苏瑞珍",
+    "target": "苏行云",
+    "value": "股东"
+  },
+  {
+    "source": "苏瑞珍",
+    "target": "苏瑞高",
+    "value": "股东"
+  },
+  {
+    "source": "苏瑞高",
+    "target": "苏雪平",
+    "value": "股东"
+  },
+  {
+    "source": "苏瑞高",
+    "target": "苏雪花",
+    "value": "股东"
+  },
+  {
+    "source": "苏瑞高",
+    "target": "苏行云",
+    "value": "股东"
+  },
+  {
+    "source": "苏行云",
+    "target": "苏雪花",
+    "value": "股东"
+  },
+  {
+    "source": "刘瑞元",
+    "target": "林晓军",
+    "value": "股东"
+  },
+  {
+    "source": "简佩桃",
+    "target": "张嘉暖",
+    "value": "股东"
+  },
+  {
+    "source": "简佩桃",
+    "target": "何冠西",
+    "value": "股东"
+  },
+  {
+    "source": "简佩桃",
+    "target": "庞德云",
+    "value": "股东"
+  },
+  {
+    "source": "简佩桃",
+    "target": "陈谦",
+    "value": "股东"
+  },
+  {
+    "source": "陈谦",
+    "target": "张嘉暖",
+    "value": "股东"
+  },
+  {
+    "source": "陈谦",
+    "target": "何冠西",
+    "value": "股东"
+  },
+  {
+    "source": "陈谦",
+    "target": "庞德云",
+    "value": "股东"
+  },
+  {
+    "source": "庞德云",
+    "target": "张嘉暖",
+    "value": "股东"
+  },
+  {
+    "source": "庞德云",
+    "target": "何冠西",
+    "value": "股东"
+  },
+  {
+    "source": "何冠西",
+    "target": "张嘉暖",
+    "value": "股东"
+  },
+  {
+    "source": "苏其远",
+    "target": "陈立功",
+    "value": "股东"
+  },
+  {
+    "source": "苏其远",
+    "target": "陈益梅",
+    "value": "股东"
+  },
+  {
+    "source": "陈益梅",
+    "target": "陈立功",
+    "value": "股东"
+  },
+  {
+    "source": "胡东华",
+    "target": "陈智强",
+    "value": "股东"
+  },
+  {
+    "source": "林玉盛",
+    "target": "林美容",
+    "value": "股东"
+  },
+  {
+    "source": "林玉盛",
+    "target": "林美华",
+    "value": "股东"
+  },
+  {
+    "source": "刘鲁明",
+    "target": "陈玉辉",
+    "value": "股东"
+  },
+  {
+    "source": "刘鲁明",
+    "target": "陈淑平",
+    "value": "股东"
+  },
+  {
+    "source": "刘鲁明",
+    "target": "陈国瑞",
+    "value": "股东"
+  },
+  {
+    "source": "刘鲁明",
+    "target": "陈俊熙",
+    "value": "股东"
+  },
+  {
+    "source": "刘鲁明",
+    "target": "詹国连",
+    "value": "股东"
+  },
+  {
+    "source": "刘鲁明",
+    "target": "袁吕平",
+    "value": "股东"
+  },
+  {
+    "source": "袁吕平",
+    "target": "陈玉辉",
+    "value": "股东"
+  },
+  {
+    "source": "袁吕平",
+    "target": "陈淑平",
+    "value": "股东"
+  },
+  {
+    "source": "袁吕平",
+    "target": "陈国瑞",
+    "value": "股东"
+  },
+  {
+    "source": "袁吕平",
+    "target": "陈俊熙",
+    "value": "股东"
+  },
+  {
+    "source": "袁吕平",
+    "target": "詹国连",
+    "value": "股东"
+  },
+  {
+    "source": "陈俊熙",
+    "target": "陈玉辉",
+    "value": "股东"
+  },
+  {
+    "source": "陈俊熙",
+    "target": "陈淑平",
+    "value": "股东"
+  },
+  {
+    "source": "陈俊熙",
+    "target": "陈国瑞",
+    "value": "股东"
+  },
+  {
+    "source": "陈国瑞",
+    "target": "黄珍勇",
+    "value": "股东"
+  },
+  {
+    "source": "陈国瑞",
+    "target": "陈国家",
+    "value": "股东"
+  },
+  {
+    "source": "陈国瑞",
+    "target": "陈玉辉",
+    "value": "股东"
+  },
+  {
+    "source": "陈国瑞",
+    "target": "陈淑平",
+    "value": "股东"
+  },
+  {
+    "source": "陈淑平",
+    "target": "陈玉辉",
+    "value": "股东"
+  },
+  {
+    "source": "林玉国",
+    "target": "林权",
+    "value": "股东"
+  },
+  {
+    "source": "林玉国",
+    "target": "林玉盛",
+    "value": "股东"
+  },
+  {
+    "source": "张斌",
+    "target": "王爱萍",
+    "value": "股东"
+  },
+  {
+    "source": "苏金耀",
+    "target": "苏金国",
+    "value": "股东"
+  },
+  {
+    "source": "苏金耀",
+    "target": "苏元钗",
+    "value": "股东"
+  },
+  {
+    "source": "苏金耀",
+    "target": "苏金家",
+    "value": "股东"
+  },
+  {
+    "source": "苏金家",
+    "target": "苏金国",
+    "value": "股东"
+  },
+  {
+    "source": "苏金家",
+    "target": "苏元钗",
+    "value": "股东"
+  },
+  {
+    "source": "苏元钗",
+    "target": "苏金国",
+    "value": "股东"
+  },
+  {
+    "source": "林志程",
+    "target": "陈丽萍",
+    "value": "股东"
+  },
+  {
+    "source": "林志程",
+    "target": "林琼香",
+    "value": "股东"
+  },
+  {
+    "source": "林志程",
+    "target": "林新伟",
+    "value": "股东"
+  },
+  {
+    "source": "林志程",
+    "target": "王迪",
+    "value": "股东"
+  },
+  {
+    "source": "杜莲香",
+    "target": "陈志诚",
+    "value": "股东"
+  },
+  {
+    "source": "杜莲香",
+    "target": "陈一鸣",
+    "value": "股东"
+  },
+  {
+    "source": "陈一鸣",
+    "target": "陈志诚",
+    "value": "股东"
+  },
+  {
+    "source": "林丽艳",
+    "target": "陈丽萍",
+    "value": "股东"
+  },
+  {
+    "source": "林丽艳",
+    "target": "林琼香",
+    "value": "股东"
+  },
+  {
+    "source": "林丽艳",
+    "target": "林新伟",
+    "value": "股东"
+  },
+  {
+    "source": "林丽艳",
+    "target": "林志程",
+    "value": "股东"
+  },
+  {
+    "source": "林新伟",
+    "target": "陈丽萍",
+    "value": "股东"
+  },
+  {
+    "source": "林新伟",
+    "target": "林琼香",
+    "value": "股东"
+  },
+  {
+    "source": "林琼香",
+    "target": "陈丽萍",
+    "value": "股东"
+  },
+  {
+    "source": "汪良明",
+    "target": "袁欣",
+    "value": "股东"
+  },
+  {
+    "source": "汪良明",
+    "target": "王魁元",
+    "value": "股东"
+  },
+  {
+    "source": "王魁元",
+    "target": "袁欣",
+    "value": "股东"
+  },
+  {
+    "source": "陈丽华",
+    "target": "陈德龙",
+    "value": "股东"
+  },
+  {
+    "source": "林玉栋",
+    "target": "陈茂泉",
+    "value": "股东"
+  },
+  {
+    "source": "胡继川",
+    "target": "周瑞云",
+    "value": "股东"
+  },
+  {
+    "source": "胡继川",
+    "target": "詹玉鹏",
+    "value": "股东"
+  },
+  {
+    "source": "胡继川",
+    "target": "詹建扬",
+    "value": "股东"
+  },
+  {
+    "source": "胡继川",
+    "target": "詹建峰",
+    "value": "股东"
+  },
+  {
+    "source": "胡继川",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "胡继川",
+    "target": "黄玉凤",
+    "value": "股东"
+  },
+  {
+    "source": "胡继川",
+    "target": "黄志强",
+    "value": "股东"
+  },
+  {
+    "source": "胡继川",
+    "target": "黄德龙",
+    "value": "股东"
+  },
+  {
+    "source": "胡继川",
+    "target": "黄建东",
+    "value": "股东"
+  },
+  {
+    "source": "胡继川",
+    "target": "詹国栋",
+    "value": "股东"
+  },
+  {
+    "source": "胡继川",
+    "target": "苏国喜",
+    "value": "股东"
+  },
+  {
+    "source": "苏国喜",
+    "target": "周瑞云",
+    "value": "股东"
+  },
+  {
+    "source": "苏国喜",
+    "target": "詹玉鹏",
+    "value": "股东"
+  },
+  {
+    "source": "苏国喜",
+    "target": "詹建扬",
+    "value": "股东"
+  },
+  {
+    "source": "苏国喜",
+    "target": "詹建峰",
+    "value": "股东"
+  },
+  {
+    "source": "苏国喜",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "苏国喜",
+    "target": "黄玉凤",
+    "value": "股东"
+  },
+  {
+    "source": "苏国喜",
+    "target": "黄志强",
+    "value": "股东"
+  },
+  {
+    "source": "苏国喜",
+    "target": "黄德龙",
+    "value": "股东"
+  },
+  {
+    "source": "苏国喜",
+    "target": "黄建东",
+    "value": "股东"
+  },
+  {
+    "source": "苏国喜",
+    "target": "詹国栋",
+    "value": "股东"
+  },
+  {
+    "source": "黄建东",
+    "target": "周瑞云",
+    "value": "股东"
+  },
+  {
+    "source": "黄建东",
+    "target": "詹玉鹏",
+    "value": "股东"
+  },
+  {
+    "source": "黄建东",
+    "target": "詹建扬",
+    "value": "股东"
+  },
+  {
+    "source": "黄建东",
+    "target": "詹建峰",
+    "value": "股东"
+  },
+  {
+    "source": "黄建东",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "黄建东",
+    "target": "黄玉凤",
+    "value": "股东"
+  },
+  {
+    "source": "黄建东",
+    "target": "黄志强",
+    "value": "股东"
+  },
+  {
+    "source": "黄建东",
+    "target": "黄德龙",
+    "value": "股东"
+  },
+  {
+    "source": "黄德龙",
+    "target": "周瑞云",
+    "value": "股东"
+  },
+  {
+    "source": "黄德龙",
+    "target": "詹玉鹏",
+    "value": "股东"
+  },
+  {
+    "source": "黄德龙",
+    "target": "詹建扬",
+    "value": "股东"
+  },
+  {
+    "source": "黄德龙",
+    "target": "詹建峰",
+    "value": "股东"
+  },
+  {
+    "source": "黄德龙",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "黄德龙",
+    "target": "黄玉凤",
+    "value": "股东"
+  },
+  {
+    "source": "黄德龙",
+    "target": "黄志强",
+    "value": "股东"
+  },
+  {
+    "source": "黄志强",
+    "target": "卓立强",
+    "value": "股东"
+  },
+  {
+    "source": "黄志强",
+    "target": "陈国洪",
+    "value": "股东"
+  },
+  {
+    "source": "黄志强",
+    "target": "周瑞云",
+    "value": "股东"
+  },
+  {
+    "source": "黄志强",
+    "target": "詹玉鹏",
+    "value": "股东"
+  },
+  {
+    "source": "黄志强",
+    "target": "詹建扬",
+    "value": "股东"
+  },
+  {
+    "source": "黄志强",
+    "target": "詹建峰",
+    "value": "股东"
+  },
+  {
+    "source": "黄志强",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "黄志强",
+    "target": "黄玉凤",
+    "value": "股东"
+  },
+  {
+    "source": "黄玉凤",
+    "target": "周瑞云",
+    "value": "股东"
+  },
+  {
+    "source": "黄玉凤",
+    "target": "詹玉鹏",
+    "value": "股东"
+  },
+  {
+    "source": "黄玉凤",
+    "target": "詹建扬",
+    "value": "股东"
+  },
+  {
+    "source": "黄玉凤",
+    "target": "詹建峰",
+    "value": "股东"
+  },
+  {
+    "source": "黄玉凤",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "詹建洪",
+    "target": "卓立强",
+    "value": "股东"
+  },
+  {
+    "source": "詹建洪",
+    "target": "黄玉凤",
+    "value": "股东"
+  },
+  {
+    "source": "詹建洪",
+    "target": "黄志强",
+    "value": "股东"
+  },
+  {
+    "source": "詹建洪",
+    "target": "黄德龙",
+    "value": "股东"
+  },
+  {
+    "source": "詹建洪",
+    "target": "黄建东",
+    "value": "股东"
+  },
+  {
+    "source": "詹建洪",
+    "target": "周瑞云",
+    "value": "股东"
+  },
+  {
+    "source": "詹建洪",
+    "target": "詹玉鹏",
+    "value": "股东"
+  },
+  {
+    "source": "詹建洪",
+    "target": "詹建扬",
+    "value": "股东"
+  },
+  {
+    "source": "詹建洪",
+    "target": "詹建峰",
+    "value": "股东"
+  },
+  {
+    "source": "詹建峰",
+    "target": "黄玉凤",
+    "value": "股东"
+  },
+  {
+    "source": "詹建峰",
+    "target": "黄志强",
+    "value": "股东"
+  },
+  {
+    "source": "詹建峰",
+    "target": "黄德龙",
+    "value": "股东"
+  },
+  {
+    "source": "詹建峰",
+    "target": "黄建东",
+    "value": "股东"
+  },
+  {
+    "source": "詹建峰",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "詹建峰",
+    "target": "周瑞云",
+    "value": "股东"
+  },
+  {
+    "source": "詹建峰",
+    "target": "詹玉鹏",
+    "value": "股东"
+  },
+  {
+    "source": "詹建峰",
+    "target": "詹建扬",
+    "value": "股东"
+  },
+  {
+    "source": "詹建扬",
+    "target": "黄玉凤",
+    "value": "股东"
+  },
+  {
+    "source": "詹建扬",
+    "target": "黄志强",
+    "value": "股东"
+  },
+  {
+    "source": "詹建扬",
+    "target": "黄德龙",
+    "value": "股东"
+  },
+  {
+    "source": "詹建扬",
+    "target": "黄建东",
+    "value": "股东"
+  },
+  {
+    "source": "詹建扬",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "詹建扬",
+    "target": "周瑞云",
+    "value": "股东"
+  },
+  {
+    "source": "詹建扬",
+    "target": "詹玉鹏",
+    "value": "股东"
+  },
+  {
+    "source": "詹玉鹏",
+    "target": "黄玉凤",
+    "value": "股东"
+  },
+  {
+    "source": "詹玉鹏",
+    "target": "黄志强",
+    "value": "股东"
+  },
+  {
+    "source": "詹玉鹏",
+    "target": "黄德龙",
+    "value": "股东"
+  },
+  {
+    "source": "詹玉鹏",
+    "target": "黄建东",
+    "value": "股东"
+  },
+  {
+    "source": "詹玉鹏",
+    "target": "周瑞云",
+    "value": "股东"
+  },
+  {
+    "source": "周瑞云",
+    "target": "黄玉凤",
+    "value": "股东"
+  },
+  {
+    "source": "周瑞云",
+    "target": "黄志强",
+    "value": "股东"
+  },
+  {
+    "source": "周瑞云",
+    "target": "黄德龙",
+    "value": "股东"
+  },
+  {
+    "source": "周瑞云",
+    "target": "黄建东",
+    "value": "股东"
+  },
+  {
+    "source": "周瑞云",
+    "target": "詹玉鹏",
+    "value": "股东"
+  },
+  {
+    "source": "周瑞云",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "周瑞云",
+    "target": "詹建扬",
+    "value": "股东"
+  },
+  {
+    "source": "周瑞云",
+    "target": "詹建峰",
+    "value": "股东"
+  },
+  {
+    "source": "周瑞云",
+    "target": "詹国栋",
+    "value": "股东"
+  },
+  {
+    "source": "周瑞云",
+    "target": "苏国喜",
+    "value": "股东"
+  },
+  {
+    "source": "周瑞云",
+    "target": "胡继川",
+    "value": "股东"
+  },
+  {
+    "source": "吴剑煌",
+    "target": "陈志强",
+    "value": "股东"
+  },
+  {
+    "source": "吴剑煌",
+    "target": "林国彪",
+    "value": "股东"
+  },
+  {
+    "source": "吴剑煌",
+    "target": "王金火",
+    "value": "股东"
+  },
+  {
+    "source": "吴剑煌",
+    "target": "林光利",
+    "value": "股东"
+  },
+  {
+    "source": "吴剑煌",
+    "target": "李秀萍",
+    "value": "股东"
+  },
+  {
+    "source": "李秀萍",
+    "target": "游秀琴",
+    "value": "股东"
+  },
+  {
+    "source": "李秀萍",
+    "target": "王金火",
+    "value": "股东"
+  },
+  {
+    "source": "李秀萍",
+    "target": "林光利",
+    "value": "股东"
+  },
+  {
+    "source": "林光利",
+    "target": "王金火",
+    "value": "股东"
+  },
+  {
+    "source": "林长青",
+    "target": "林琳琳",
+    "value": "股东"
+  },
+  {
+    "source": "林长青",
+    "target": "占万龙",
+    "value": "股东"
+  },
+  {
+    "source": "林长青",
+    "target": "蔡金海",
+    "value": "股东"
+  },
+  {
+    "source": "蔡金海",
+    "target": "林琳琳",
+    "value": "股东"
+  },
+  {
+    "source": "蔡金海",
+    "target": "占万龙",
+    "value": "股东"
+  },
+  {
+    "source": "占万龙",
+    "target": "林琳琳",
+    "value": "股东"
+  },
+  {
+    "source": "陈国兴",
+    "target": "王为民",
+    "value": "股东"
+  },
+  {
+    "source": "陈国兴",
+    "target": "林育宏",
+    "value": "股东"
+  },
+  {
+    "source": "陈国兴",
+    "target": "詹宗阳",
+    "value": "股东"
+  },
+  {
+    "source": "陈国兴",
+    "target": "朱海霞",
+    "value": "股东"
+  },
+  {
+    "source": "陈国兴",
+    "target": "蔡金兴",
+    "value": "股东"
+  },
+  {
+    "source": "陈国兴",
+    "target": "陈国涛",
+    "value": "股东"
+  },
+  {
+    "source": "陈国兴",
+    "target": "张金寿",
+    "value": "股东"
+  },
+  {
+    "source": "陈国兴",
+    "target": "詹国城",
+    "value": "股东"
+  },
+  {
+    "source": "陈国兴",
+    "target": "詹亚强",
+    "value": "股东"
+  },
+  {
+    "source": "陈国兴",
+    "target": "程慧斌",
+    "value": "股东"
+  },
+  {
+    "source": "陈国兴",
+    "target": "陈国雄",
+    "value": "股东"
+  },
+  {
+    "source": "陈国兴",
+    "target": "詹妍",
+    "value": "股东"
+  },
+  {
+    "source": "詹妍",
+    "target": "王为民",
+    "value": "股东"
+  },
+  {
+    "source": "詹妍",
+    "target": "林育宏",
+    "value": "股东"
+  },
+  {
+    "source": "詹妍",
+    "target": "詹宗阳",
+    "value": "股东"
+  },
+  {
+    "source": "詹妍",
+    "target": "朱海霞",
+    "value": "股东"
+  },
+  {
+    "source": "詹妍",
+    "target": "蔡金兴",
+    "value": "股东"
+  },
+  {
+    "source": "詹妍",
+    "target": "陈国涛",
+    "value": "股东"
+  },
+  {
+    "source": "詹妍",
+    "target": "张金寿",
+    "value": "股东"
+  },
+  {
+    "source": "詹妍",
+    "target": "詹国城",
+    "value": "股东"
+  },
+  {
+    "source": "詹妍",
+    "target": "詹亚强",
+    "value": "股东"
+  },
+  {
+    "source": "詹妍",
+    "target": "程慧斌",
+    "value": "股东"
+  },
+  {
+    "source": "詹妍",
+    "target": "陈国雄",
+    "value": "股东"
+  },
+  {
+    "source": "陈国雄",
+    "target": "王为民",
+    "value": "股东"
+  },
+  {
+    "source": "陈国雄",
+    "target": "蔡金兴",
+    "value": "股东"
+  },
+  {
+    "source": "陈国雄",
+    "target": "陈国涛",
+    "value": "股东"
+  },
+  {
+    "source": "陈国雄",
+    "target": "程慧斌",
+    "value": "股东"
+  },
+  {
+    "source": "程慧斌",
+    "target": "王为民",
+    "value": "股东"
+  },
+  {
+    "source": "程慧斌",
+    "target": "蔡金兴",
+    "value": "股东"
+  },
+  {
+    "source": "程慧斌",
+    "target": "陈国涛",
+    "value": "股东"
+  },
+  {
+    "source": "林毓斌",
+    "target": "詹瑞金",
+    "value": "股东"
+  },
+  {
+    "source": "林毓斌",
+    "target": "苏志强",
+    "value": "股东"
+  },
+  {
+    "source": "苏志强",
+    "target": "詹瑞金",
+    "value": "股东"
+  },
+  {
+    "source": "林瑞太",
+    "target": "陈新喜",
+    "value": "股东"
+  },
+  {
+    "source": "孔杨",
+    "target": "陈金坚",
+    "value": "股东"
+  },
+  {
+    "source": "孔杨",
+    "target": "林国祥",
+    "value": "股东"
+  },
+  {
+    "source": "林国祥",
+    "target": "陈金坚",
+    "value": "股东"
+  },
+  {
+    "source": "薛朝华",
+    "target": "黄琦斌",
+    "value": "股东"
+  },
+  {
+    "source": "胡群峰",
+    "target": "卓国金",
+    "value": "股东"
+  },
+  {
+    "source": "胡群峰",
+    "target": "李文献",
+    "value": "股东"
+  },
+  {
+    "source": "胡群峰",
+    "target": "林金宗",
+    "value": "股东"
+  },
+  {
+    "source": "胡群峰",
+    "target": "卓国勇",
+    "value": "股东"
+  },
+  {
+    "source": "卓国勇",
+    "target": "黄开飞",
+    "value": "股东"
+  },
+  {
+    "source": "卓国勇",
+    "target": "沈雪峰",
+    "value": "股东"
+  },
+  {
+    "source": "卓国勇",
+    "target": "吴元良",
+    "value": "股东"
+  },
+  {
+    "source": "卓国勇",
+    "target": "黄文其",
+    "value": "股东"
+  },
+  {
+    "source": "卓国勇",
+    "target": "卓国金",
+    "value": "股东"
+  },
+  {
+    "source": "卓国勇",
+    "target": "李文献",
+    "value": "股东"
+  },
+  {
+    "source": "卓国勇",
+    "target": "林金宗",
+    "value": "股东"
+  },
+  {
+    "source": "李文献",
+    "target": "黄文其",
+    "value": "股东"
+  },
+  {
+    "source": "李文献",
+    "target": "卓国金",
+    "value": "股东"
+  },
+  {
+    "source": "刘国武",
+    "target": "曾子显",
+    "value": "股东"
+  },
+  {
+    "source": "刘俊",
+    "target": "吴勇山",
+    "value": "股东"
+  },
+  {
+    "source": "刘俊",
+    "target": "陈广政",
+    "value": "股东"
+  },
+  {
+    "source": "刘俊",
+    "target": "吴勇斌",
+    "value": "股东"
+  },
+  {
+    "source": "刘俊",
+    "target": "温志荣",
+    "value": "股东"
+  },
+  {
+    "source": "刘俊",
+    "target": "吴勇汉",
+    "value": "股东"
+  },
+  {
+    "source": "吴勇汉",
+    "target": "吴勇山",
+    "value": "股东"
+  },
+  {
+    "source": "吴勇汉",
+    "target": "陈广政",
+    "value": "股东"
+  },
+  {
+    "source": "吴勇汉",
+    "target": "吴勇斌",
+    "value": "股东"
+  },
+  {
+    "source": "吴勇汉",
+    "target": "温志荣",
+    "value": "股东"
+  },
+  {
+    "source": "温志荣",
+    "target": "吴勇山",
+    "value": "股东"
+  },
+  {
+    "source": "温志荣",
+    "target": "陈广政",
+    "value": "股东"
+  },
+  {
+    "source": "温志荣",
+    "target": "吴勇斌",
+    "value": "股东"
+  },
+  {
+    "source": "吴勇斌",
+    "target": "吴勇山",
+    "value": "股东"
+  },
+  {
+    "source": "吴勇斌",
+    "target": "陈广政",
+    "value": "股东"
+  },
+  {
+    "source": "陈广政",
+    "target": "吴勇山",
+    "value": "股东"
+  },
+  {
+    "source": "林建芬",
+    "target": "林元豹",
+    "value": "股东"
+  },
+  {
+    "source": "林建芬",
+    "target": "林永贵",
+    "value": "股东"
+  },
+  {
+    "source": "林建芬",
+    "target": "张金华",
+    "value": "股东"
+  },
+  {
+    "source": "林建芬",
+    "target": "黄国明",
+    "value": "股东"
+  },
+  {
+    "source": "黄国明",
+    "target": "林元豹",
+    "value": "股东"
+  },
+  {
+    "source": "黄国明",
+    "target": "林永贵",
+    "value": "股东"
+  },
+  {
+    "source": "黄国明",
+    "target": "张金华",
+    "value": "股东"
+  },
+  {
+    "source": "陈雪清",
+    "target": "唐国芳",
+    "value": "股东"
+  },
+  {
+    "source": "陈雪清",
+    "target": "朱哲勇",
+    "value": "股东"
+  },
+  {
+    "source": "朱哲勇",
+    "target": "唐国芳",
+    "value": "股东"
+  },
+  {
+    "source": "陈建新",
+    "target": "陈建辉",
+    "value": "股东"
+  },
+  {
+    "source": "郑坚江",
+    "target": "郑志鹏",
+    "value": "股东"
+  },
+  {
+    "source": "郑坚江",
+    "target": "何锡万",
+    "value": "股东"
+  },
+  {
+    "source": "郑坚江",
+    "target": "郑江",
+    "value": "股东"
+  },
+  {
+    "source": "郑江",
+    "target": "郑志鹏",
+    "value": "股东"
+  },
+  {
+    "source": "郑江",
+    "target": "何锡万",
+    "value": "股东"
+  },
+  {
+    "source": "何锡万",
+    "target": "郑志鹏",
+    "value": "股东"
+  },
+  {
+    "source": "游顺雄",
+    "target": "柯德荣",
+    "value": "股东"
+  },
+  {
+    "source": "林国彪",
+    "target": "林国雄",
+    "value": "股东"
+  },
+  {
+    "source": "林国彪",
+    "target": "陈波",
+    "value": "股东"
+  },
+  {
+    "source": "林国彪",
+    "target": "陈志强",
+    "value": "股东"
+  },
+  {
+    "source": "林国彪",
+    "target": "蔡亚彬",
+    "value": "股东"
+  },
+  {
+    "source": "林国彪",
+    "target": "苏玉照",
+    "value": "股东"
+  },
+  {
+    "source": "林国彪",
+    "target": "林玉辉",
+    "value": "股东"
+  },
+  {
+    "source": "林玉辉",
+    "target": "陈志强",
+    "value": "股东"
+  },
+  {
+    "source": "林玉辉",
+    "target": "林美钦",
+    "value": "股东"
+  },
+  {
+    "source": "林玉辉",
+    "target": "蔡亚彬",
+    "value": "股东"
+  },
+  {
+    "source": "林玉辉",
+    "target": "苏玉照",
+    "value": "股东"
+  },
+  {
+    "source": "苏玉照",
+    "target": "蔡亚彬",
+    "value": "股东"
+  },
+  {
+    "source": "詹国团",
+    "target": "游秀琴",
+    "value": "股东"
+  },
+  {
+    "source": "詹国团",
+    "target": "李秀萍",
+    "value": "股东"
+  },
+  {
+    "source": "詹国团",
+    "target": "林珍金",
+    "value": "股东"
+  },
+  {
+    "source": "詹国团",
+    "target": "詹美爱",
+    "value": "股东"
+  },
+  {
+    "source": "詹国团",
+    "target": "詹国营",
+    "value": "股东"
+  },
+  {
+    "source": "詹国团",
+    "target": "詹国连",
+    "value": "股东"
+  },
+  {
+    "source": "詹国营",
+    "target": "游秀琴",
+    "value": "股东"
+  },
+  {
+    "source": "詹国营",
+    "target": "李秀萍",
+    "value": "股东"
+  },
+  {
+    "source": "詹国营",
+    "target": "林珍金",
+    "value": "股东"
+  },
+  {
+    "source": "詹国营",
+    "target": "詹美爱",
+    "value": "股东"
+  },
+  {
+    "source": "詹美爱",
+    "target": "游秀琴",
+    "value": "股东"
+  },
+  {
+    "source": "詹美爱",
+    "target": "李秀萍",
+    "value": "股东"
+  },
+  {
+    "source": "詹美爱",
+    "target": "林珍金",
+    "value": "股东"
+  },
+  {
+    "source": "林珍金",
+    "target": "游秀琴",
+    "value": "股东"
+  },
+  {
+    "source": "林珍金",
+    "target": "李秀萍",
+    "value": "股东"
+  },
+  {
+    "source": "游秀琴",
+    "target": "蔡兵洪",
+    "value": "股东"
+  },
+  {
+    "source": "游秀琴",
+    "target": "罗朝明",
+    "value": "股东"
+  },
+  {
+    "source": "孙学仁",
+    "target": "游文华",
+    "value": "股东"
+  },
+  {
+    "source": "朱金财",
+    "target": "朱丽群",
+    "value": "股东"
+  },
+  {
+    "source": "朱金财",
+    "target": "林金土",
+    "value": "股东"
+  },
+  {
+    "source": "朱金财",
+    "target": "黄德锋",
+    "value": "股东"
+  },
+  {
+    "source": "朱金财",
+    "target": "朱金丁",
+    "value": "股东"
+  },
+  {
+    "source": "朱金财",
+    "target": "徐丽玉",
+    "value": "股东"
+  },
+  {
+    "source": "朱金财",
+    "target": "罗朝明",
+    "value": "股东"
+  },
+  {
+    "source": "罗朝明",
+    "target": "蔡兵洪",
+    "value": "股东"
+  },
+  {
+    "source": "罗朝明",
+    "target": "朱丽群",
+    "value": "股东"
+  },
+  {
+    "source": "罗朝明",
+    "target": "林金土",
+    "value": "股东"
+  },
+  {
+    "source": "罗朝明",
+    "target": "黄德锋",
+    "value": "股东"
+  },
+  {
+    "source": "罗朝明",
+    "target": "朱金丁",
+    "value": "股东"
+  },
+  {
+    "source": "罗朝明",
+    "target": "徐丽玉",
+    "value": "股东"
+  },
+  {
+    "source": "徐丽玉",
+    "target": "蔡兵洪",
+    "value": "股东"
+  },
+  {
+    "source": "徐丽玉",
+    "target": "罗朝明",
+    "value": "股东"
+  },
+  {
+    "source": "徐丽玉",
+    "target": "游秀琴",
+    "value": "股东"
+  },
+  {
+    "source": "徐丽玉",
+    "target": "李冬其",
+    "value": "股东"
+  },
+  {
+    "source": "徐丽玉",
+    "target": "曾献志",
+    "value": "股东"
+  },
+  {
+    "source": "徐丽玉",
+    "target": "朱丽群",
+    "value": "股东"
+  },
+  {
+    "source": "徐丽玉",
+    "target": "林金土",
+    "value": "股东"
+  },
+  {
+    "source": "徐丽玉",
+    "target": "黄德锋",
+    "value": "股东"
+  },
+  {
+    "source": "徐丽玉",
+    "target": "朱金丁",
+    "value": "股东"
+  },
+  {
+    "source": "朱金丁",
+    "target": "朱丽群",
+    "value": "股东"
+  },
+  {
+    "source": "朱金丁",
+    "target": "林金土",
+    "value": "股东"
+  },
+  {
+    "source": "朱金丁",
+    "target": "黄德锋",
+    "value": "股东"
+  },
+  {
+    "source": "林金土",
+    "target": "朱丽群",
+    "value": "股东"
+  },
+  {
+    "source": "朱丽群",
+    "target": "蔡兵洪",
+    "value": "股东"
+  },
+  {
+    "source": "朱丽群",
+    "target": "罗朝明",
+    "value": "股东"
+  },
+  {
+    "source": "朱丽群",
+    "target": "游秀琴",
+    "value": "股东"
+  },
+  {
+    "source": "朱丽群",
+    "target": "李冬其",
+    "value": "股东"
+  },
+  {
+    "source": "吴嘉伟",
+    "target": "詹金灶",
+    "value": "股东"
+  },
+  {
+    "source": "吴嘉伟",
+    "target": "詹国连",
+    "value": "股东"
+  },
+  {
+    "source": "吴嘉伟",
+    "target": "林建飞",
+    "value": "股东"
+  },
+  {
+    "source": "吴嘉伟",
+    "target": "林国雄",
+    "value": "股东"
+  },
+  {
+    "source": "吴嘉伟",
+    "target": "李彤彤",
+    "value": "股东"
+  },
+  {
+    "source": "吴嘉伟",
+    "target": "吴建仁",
+    "value": "股东"
+  },
+  {
+    "source": "吴建仁",
+    "target": "詹金灶",
+    "value": "股东"
+  },
+  {
+    "source": "吴建仁",
+    "target": "詹国连",
+    "value": "股东"
+  },
+  {
+    "source": "吴建仁",
+    "target": "林建飞",
+    "value": "股东"
+  },
+  {
+    "source": "吴建仁",
+    "target": "林国雄",
+    "value": "股东"
+  },
+  {
+    "source": "吴建仁",
+    "target": "李彤彤",
+    "value": "股东"
+  },
+  {
+    "source": "李彤彤",
+    "target": "詹金灶",
+    "value": "股东"
+  },
+  {
+    "source": "李彤彤",
+    "target": "詹国连",
+    "value": "股东"
+  },
+  {
+    "source": "李彤彤",
+    "target": "林建飞",
+    "value": "股东"
+  },
+  {
+    "source": "李彤彤",
+    "target": "林国雄",
+    "value": "股东"
+  },
+  {
+    "source": "林国雄",
+    "target": "詹金灶",
+    "value": "股东"
+  },
+  {
+    "source": "林国雄",
+    "target": "詹国连",
+    "value": "股东"
+  },
+  {
+    "source": "林国雄",
+    "target": "林建飞",
+    "value": "股东"
+  },
+  {
+    "source": "林建飞",
+    "target": "詹金灶",
+    "value": "股东"
+  },
+  {
+    "source": "林建飞",
+    "target": "詹国连",
+    "value": "股东"
+  },
+  {
+    "source": "卓国洪",
+    "target": "吴荣达",
+    "value": "股东"
+  },
+  {
+    "source": "卓国洪",
+    "target": "吴建新",
+    "value": "股东"
+  },
+  {
+    "source": "吴建新",
+    "target": "黄开飞",
+    "value": "股东"
+  },
+  {
+    "source": "吴建新",
+    "target": "陈志键",
+    "value": "股东"
+  },
+  {
+    "source": "吴建新",
+    "target": "吴荣达",
+    "value": "股东"
+  },
+  {
+    "source": "卓国星",
+    "target": "陈志键",
+    "value": "股东"
+  },
+  {
+    "source": "卓国星",
+    "target": "吴建新",
+    "value": "股东"
+  },
+  {
+    "source": "吴明枫",
+    "target": "黄凯",
+    "value": "股东"
+  },
+  {
+    "source": "吴明枫",
+    "target": "陈庆龙",
+    "value": "股东"
+  },
+  {
+    "source": "吴明枫",
+    "target": "王丽英",
+    "value": "股东"
+  },
+  {
+    "source": "吴明枫",
+    "target": "林元清",
+    "value": "股东"
+  },
+  {
+    "source": "吴明枫",
+    "target": "李庆灶",
+    "value": "股东"
+  },
+  {
+    "source": "吴明枫",
+    "target": "宋大成",
+    "value": "股东"
+  },
+  {
+    "source": "宋大成",
+    "target": "黄凯",
+    "value": "股东"
+  },
+  {
+    "source": "宋大成",
+    "target": "陈庆龙",
+    "value": "股东"
+  },
+  {
+    "source": "宋大成",
+    "target": "王丽英",
+    "value": "股东"
+  },
+  {
+    "source": "宋大成",
+    "target": "林元清",
+    "value": "股东"
+  },
+  {
+    "source": "宋大成",
+    "target": "李庆灶",
+    "value": "股东"
+  },
+  {
+    "source": "李庆灶",
+    "target": "黄凯",
+    "value": "股东"
+  },
+  {
+    "source": "李庆灶",
+    "target": "陈庆龙",
+    "value": "股东"
+  },
+  {
+    "source": "李庆灶",
+    "target": "王丽英",
+    "value": "股东"
+  },
+  {
+    "source": "李庆灶",
+    "target": "林元清",
+    "value": "股东"
+  },
+  {
+    "source": "林元清",
+    "target": "黄凯",
+    "value": "股东"
+  },
+  {
+    "source": "林元清",
+    "target": "陈庆龙",
+    "value": "股东"
+  },
+  {
+    "source": "林元清",
+    "target": "王丽英",
+    "value": "股东"
+  },
+  {
+    "source": "王丽英",
+    "target": "黄凯",
+    "value": "股东"
+  },
+  {
+    "source": "王丽英",
+    "target": "陈庆龙",
+    "value": "股东"
+  },
+  {
+    "source": "陈庆龙",
+    "target": "黄凯",
+    "value": "股东"
+  },
+  {
+    "source": "李国强",
+    "target": "黄瑞钦",
+    "value": "股东"
+  },
+  {
+    "source": "李国强",
+    "target": "李国柏",
+    "value": "股东"
+  },
+  {
+    "source": "李国柏",
+    "target": "黄瑞钦",
+    "value": "股东"
+  },
+  {
+    "source": "林兆晞",
+    "target": "赵建坤",
+    "value": "股东"
+  },
+  {
+    "source": "林兆晞",
+    "target": "詹建昇",
+    "value": "股东"
+  },
+  {
+    "source": "林兆晞",
+    "target": "陈金秀",
+    "value": "股东"
+  },
+  {
+    "source": "林兆晞",
+    "target": "林群",
+    "value": "股东"
+  },
+  {
+    "source": "林群",
+    "target": "赵建坤",
+    "value": "股东"
+  },
+  {
+    "source": "林群",
+    "target": "詹建昇",
+    "value": "股东"
+  },
+  {
+    "source": "林群",
+    "target": "陈金秀",
+    "value": "股东"
+  },
+  {
+    "source": "李德林",
+    "target": "林碧峰",
+    "value": "股东"
+  },
+  {
+    "source": "李德林",
+    "target": "陈金国",
+    "value": "股东"
+  },
+  {
+    "source": "李德林",
+    "target": "黄建海",
+    "value": "股东"
+  },
+  {
+    "source": "李德林",
+    "target": "吴爱平",
+    "value": "股东"
+  },
+  {
+    "source": "李德林",
+    "target": "郑爱平",
+    "value": "股东"
+  },
+  {
+    "source": "郑爱平",
+    "target": "林碧峰",
+    "value": "股东"
+  },
+  {
+    "source": "郑爱平",
+    "target": "陈金国",
+    "value": "股东"
+  },
+  {
+    "source": "郑爱平",
+    "target": "黄建海",
+    "value": "股东"
+  },
+  {
+    "source": "郑爱平",
+    "target": "吴爱平",
+    "value": "股东"
+  },
+  {
+    "source": "吴爱平",
+    "target": "林碧峰",
+    "value": "股东"
+  },
+  {
+    "source": "吴爱平",
+    "target": "陈金国",
+    "value": "股东"
+  },
+  {
+    "source": "吴爱平",
+    "target": "黄建海",
+    "value": "股东"
+  },
+  {
+    "source": "吴爱平",
+    "target": "郑爱平",
+    "value": "股东"
+  },
+  {
+    "source": "吴秋云",
+    "target": "吴永兵",
+    "value": "股东"
+  },
+  {
+    "source": "刘金太",
+    "target": "张蒂",
+    "value": "股东"
+  },
+  {
+    "source": "詹亚强",
+    "target": "詹国城",
+    "value": "股东"
+  },
+  {
+    "source": "卓明进",
+    "target": "黄英",
+    "value": "股东"
+  },
+  {
+    "source": "卓明进",
+    "target": "朱良吉",
+    "value": "股东"
+  },
+  {
+    "source": "卓明进",
+    "target": "德吉央宗",
+    "value": "股东"
+  },
+  {
+    "source": "卓明进",
+    "target": "林国珍",
+    "value": "股东"
+  },
+  {
+    "source": "卓明进",
+    "target": "黄冬英",
+    "value": "股东"
+  },
+  {
+    "source": "黄冬英",
+    "target": "卓明进",
+    "value": "股东"
+  },
+  {
+    "source": "朱良吉",
+    "target": "黄冬英",
+    "value": "股东"
+  },
+  {
+    "source": "朱良吉",
+    "target": "林国珍",
+    "value": "股东"
+  },
+  {
+    "source": "朱良吉",
+    "target": "卓明进",
+    "value": "股东"
+  },
+  {
+    "source": "朱良吉",
+    "target": "黄英",
+    "value": "股东"
+  },
+  {
+    "source": "黄英",
+    "target": "黄冬英",
+    "value": "股东"
+  },
+  {
+    "source": "黄英",
+    "target": "林国珍",
+    "value": "股东"
+  },
+  {
+    "source": "黄英",
+    "target": "卓明进",
+    "value": "股东"
+  },
+  {
+    "source": "范志高",
+    "target": "郑国华",
+    "value": "股东"
+  },
+  {
+    "source": "吴梓明",
+    "target": "陈黎明",
+    "value": "股东"
+  },
+  {
+    "source": "黄素娟",
+    "target": "郑的章",
+    "value": "股东"
+  },
+  {
+    "source": "黄素娟",
+    "target": "郑建铭",
+    "value": "股东"
+  },
+  {
+    "source": "黄素娟",
+    "target": "肖文汉",
+    "value": "股东"
+  },
+  {
+    "source": "肖文汉",
+    "target": "郑的章",
+    "value": "股东"
+  },
+  {
+    "source": "肖文汉",
+    "target": "郑建铭",
+    "value": "股东"
+  },
+  {
+    "source": "郑建铭",
+    "target": "郑的章",
+    "value": "股东"
+  },
+  {
+    "source": "郑建山",
+    "target": "陈国新",
+    "value": "股东"
+  },
+  {
+    "source": "李生毅",
+    "target": "谢巨凡",
+    "value": "股东"
+  },
+  {
+    "source": "施国杰",
+    "target": "林瑞勇",
+    "value": "股东"
+  },
+  {
+    "source": "林建贤",
+    "target": "林建潘",
+    "value": "股东"
+  },
+  {
+    "source": "徐俊峰",
+    "target": "王胜磊",
+    "value": "股东"
+  },
+  {
+    "source": "林寿旺",
+    "target": "陈国凤",
+    "value": "股东"
+  },
+  {
+    "source": "林丽英",
+    "target": "林秀烟",
+    "value": "股东"
+  },
+  {
+    "source": "陈秀凤",
+    "target": "陈国兴",
+    "value": "股东"
+  },
+  {
+    "source": "龚雨",
+    "target": "林新兴",
+    "value": "股东"
+  },
+  {
+    "source": "陈木兰",
+    "target": "陈国兴",
+    "value": "股东"
+  },
+  {
+    "source": "陈木兰",
+    "target": "陈秀凤",
+    "value": "股东"
+  },
+  {
+    "source": "徐大才",
+    "target": "苏金家",
+    "value": "股东"
+  },
+  {
+    "source": "徐大才",
+    "target": "苏金耀",
+    "value": "股东"
+  },
+  {
+    "source": "林琼",
+    "target": "林臻",
+    "value": "股东"
+  },
+  {
+    "source": "林臻",
+    "target": "肖暹",
+    "value": "股东"
+  },
+  {
+    "source": "陈金章",
+    "target": "陈文粦",
+    "value": "股东"
+  },
+  {
+    "source": "陈金章",
+    "target": "苏金秀",
+    "value": "股东"
+  },
+  {
+    "source": "陈金章",
+    "target": "林建良",
+    "value": "股东"
+  },
+  {
+    "source": "林建良",
+    "target": "陈文粦",
+    "value": "股东"
+  },
+  {
+    "source": "林建良",
+    "target": "苏金秀",
+    "value": "股东"
+  },
+  {
+    "source": "苏金秀",
+    "target": "陈文粦",
+    "value": "股东"
+  },
+  {
+    "source": "张晓玉",
+    "target": "王海波",
+    "value": "股东"
+  },
+  {
+    "source": "张晓玉",
+    "target": "林振华",
+    "value": "股东"
+  },
+  {
+    "source": "林振华",
+    "target": "王海波",
+    "value": "股东"
+  },
+  {
+    "source": "何长福",
+    "target": "林玉国",
+    "value": "股东"
+  },
+  {
+    "source": "曾真",
+    "target": "詹建光",
+    "value": "股东"
+  },
+  {
+    "source": "曾真",
+    "target": "程智斌",
+    "value": "股东"
+  },
+  {
+    "source": "程智斌",
+    "target": "詹建光",
+    "value": "股东"
+  },
+  {
+    "source": "赵建坤",
+    "target": "李方新",
+    "value": "股东"
+  },
+  {
+    "source": "赵建坤",
+    "target": "詹建昇",
+    "value": "股东"
+  },
+  {
+    "source": "赵建坤",
+    "target": "陈金秀",
+    "value": "股东"
+  },
+  {
+    "source": "赵建坤",
+    "target": "林群",
+    "value": "股东"
+  },
+  {
+    "source": "赵建坤",
+    "target": "林兆晞",
+    "value": "股东"
+  },
+  {
+    "source": "陈志强",
+    "target": "翁国勇",
+    "value": "股东"
+  },
+  {
+    "source": "陈志强",
+    "target": "游金保",
+    "value": "股东"
+  },
+  {
+    "source": "陈志强",
+    "target": "卓建武",
+    "value": "股东"
+  },
+  {
+    "source": "卓建武",
+    "target": "翁国勇",
+    "value": "股东"
+  },
+  {
+    "source": "卓建武",
+    "target": "游金保",
+    "value": "股东"
+  },
+  {
+    "source": "游金保",
+    "target": "翁国勇",
+    "value": "股东"
+  },
+  {
+    "source": "陈建萍",
+    "target": "卓立强",
+    "value": "股东"
+  },
+  {
+    "source": "陈建萍",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "陈建萍",
+    "target": "陈国洪",
+    "value": "股东"
+  },
+  {
+    "source": "陈建萍",
+    "target": "黄志强",
+    "value": "股东"
+  },
+  {
+    "source": "陈建萍",
+    "target": "柯向阳",
+    "value": "股东"
+  },
+  {
+    "source": "柯向阳",
+    "target": "卓立强",
+    "value": "股东"
+  },
+  {
+    "source": "柯向阳",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "柯向阳",
+    "target": "陈国洪",
+    "value": "股东"
+  },
+  {
+    "source": "柯向阳",
+    "target": "黄志强",
+    "value": "股东"
+  },
+  {
+    "source": "陈国洪",
+    "target": "卓立强",
+    "value": "股东"
+  },
+  {
+    "source": "陈国洪",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "卓立强",
+    "target": "占阳珊",
+    "value": "股东"
+  },
+  {
+    "source": "卓立强",
+    "target": "詹阳程",
+    "value": "股东"
+  },
+  {
+    "source": "卓立强",
+    "target": "陈美蓉",
+    "value": "股东"
+  },
+  {
+    "source": "卓立强",
+    "target": "黄海燕",
+    "value": "股东"
+  },
+  {
+    "source": "卓立强",
+    "target": "詹阳斌",
+    "value": "股东"
+  },
+  {
+    "source": "陈山",
+    "target": "林兆晞",
+    "value": "股东"
+  },
+  {
+    "source": "陈山",
+    "target": "詹建昇",
+    "value": "股东"
+  },
+  {
+    "source": "林瑞泉",
+    "target": "郑洪",
+    "value": "股东"
+  },
+  {
+    "source": "郑洪",
+    "target": "陈本亭",
+    "value": "股东"
+  },
+  {
+    "source": "郑洪",
+    "target": "高海云",
+    "value": "股东"
+  },
+  {
+    "source": "郑洪",
+    "target": "陈帆",
+    "value": "股东"
+  },
+  {
+    "source": "郑洪",
+    "target": "李树战",
+    "value": "股东"
+  },
+  {
+    "source": "郑洪",
+    "target": "詹建萍",
+    "value": "股东"
+  },
+  {
+    "source": "郑洪",
+    "target": "苏荣华",
+    "value": "股东"
+  },
+  {
+    "source": "刘志盛",
+    "target": "林志洪",
+    "value": "股东"
+  },
+  {
+    "source": "陈志煌",
+    "target": "李开添",
+    "value": "股东"
+  },
+  {
+    "source": "陈志煌",
+    "target": "陈美香",
+    "value": "股东"
+  },
+  {
+    "source": "陈美香",
+    "target": "李开添",
+    "value": "股东"
+  },
+  {
+    "source": "陈庆寿",
+    "target": "詹国太",
+    "value": "股东"
+  },
+  {
+    "source": "卓群峰",
+    "target": "黄国林",
+    "value": "股东"
+  },
+  {
+    "source": "王根生",
+    "target": "苏继荣",
+    "value": "股东"
+  },
+  {
+    "source": "占国兴",
+    "target": "王朝",
+    "value": "股东"
+  },
+  {
+    "source": "占国兴",
+    "target": "王文龙",
+    "value": "股东"
+  },
+  {
+    "source": "占国兴",
+    "target": "卓国芳",
+    "value": "股东"
+  },
+  {
+    "source": "卓国芳",
+    "target": "王朝",
+    "value": "股东"
+  },
+  {
+    "source": "卓国芳",
+    "target": "王文龙",
+    "value": "股东"
+  },
+  {
+    "source": "王文龙",
+    "target": "王朝",
+    "value": "股东"
+  },
+  {
+    "source": "詹加龙",
+    "target": "詹换平",
+    "value": "股东"
+  },
+  {
+    "source": "于涛",
+    "target": "朱倩茹",
+    "value": "股东"
+  },
+  {
+    "source": "于涛",
+    "target": "徐忠友",
+    "value": "股东"
+  },
+  {
+    "source": "于涛",
+    "target": "徐可",
+    "value": "股东"
+  },
+  {
+    "source": "徐可",
+    "target": "朱倩茹",
+    "value": "股东"
+  },
+  {
+    "source": "徐可",
+    "target": "徐忠友",
+    "value": "股东"
+  },
+  {
+    "source": "徐忠友",
+    "target": "朱倩茹",
+    "value": "股东"
+  },
+  {
+    "source": "苏荣华",
+    "target": "陈本亭",
+    "value": "股东"
+  },
+  {
+    "source": "苏荣华",
+    "target": "高海云",
+    "value": "股东"
+  },
+  {
+    "source": "苏荣华",
+    "target": "陈帆",
+    "value": "股东"
+  },
+  {
+    "source": "苏荣华",
+    "target": "李树战",
+    "value": "股东"
+  },
+  {
+    "source": "苏荣华",
+    "target": "詹建萍",
+    "value": "股东"
+  },
+  {
+    "source": "詹建萍",
+    "target": "陈本亭",
+    "value": "股东"
+  },
+  {
+    "source": "詹建萍",
+    "target": "高海云",
+    "value": "股东"
+  },
+  {
+    "source": "詹建萍",
+    "target": "陈帆",
+    "value": "股东"
+  },
+  {
+    "source": "詹建萍",
+    "target": "李树战",
+    "value": "股东"
+  },
+  {
+    "source": "李树战",
+    "target": "陈本亭",
+    "value": "股东"
+  },
+  {
+    "source": "李树战",
+    "target": "高海云",
+    "value": "股东"
+  },
+  {
+    "source": "李树战",
+    "target": "陈帆",
+    "value": "股东"
+  },
+  {
+    "source": "陈帆",
+    "target": "陈本亭",
+    "value": "股东"
+  },
+  {
+    "source": "陈帆",
+    "target": "高海云",
+    "value": "股东"
+  },
+  {
+    "source": "高海云",
+    "target": "陈本亭",
+    "value": "股东"
+  },
+  {
+    "source": "付天俊",
+    "target": "李金良",
+    "value": "股东"
+  },
+  {
+    "source": "李金良",
+    "target": "李金同",
+    "value": "股东"
+  },
+  {
+    "source": "李金良",
+    "target": "游黎飞",
+    "value": "股东"
+  },
+  {
+    "source": "李金良",
+    "target": "李金山",
+    "value": "股东"
+  },
+  {
+    "source": "黄开飞",
+    "target": "苏金清",
+    "value": "股东"
+  },
+  {
+    "source": "黄开飞",
+    "target": "黄开添",
+    "value": "股东"
+  },
+  {
+    "source": "黄开飞",
+    "target": "周义隆",
+    "value": "股东"
+  },
+  {
+    "source": "黄开飞",
+    "target": "柯元芳",
+    "value": "股东"
+  },
+  {
+    "source": "柯元芳",
+    "target": "詹嘉豪",
+    "value": "股东"
+  },
+  {
+    "source": "柯元芳",
+    "target": "黄志勇",
+    "value": "股东"
+  },
+  {
+    "source": "柯元芳",
+    "target": "苏金清",
+    "value": "股东"
+  },
+  {
+    "source": "柯元芳",
+    "target": "黄开添",
+    "value": "股东"
+  },
+  {
+    "source": "柯元芳",
+    "target": "周义隆",
+    "value": "股东"
+  },
+  {
+    "source": "周义隆",
+    "target": "黄志勇",
+    "value": "股东"
+  },
+  {
+    "source": "周义隆",
+    "target": "柯元芳",
+    "value": "股东"
+  },
+  {
+    "source": "周义隆",
+    "target": "苏金清",
+    "value": "股东"
+  },
+  {
+    "source": "周义隆",
+    "target": "黄开添",
+    "value": "股东"
+  },
+  {
+    "source": "黄开添",
+    "target": "黄志勇",
+    "value": "股东"
+  },
+  {
+    "source": "黄开添",
+    "target": "柯元芳",
+    "value": "股东"
+  },
+  {
+    "source": "黄开添",
+    "target": "苏金清",
+    "value": "股东"
+  },
+  {
+    "source": "苏金清",
+    "target": "黄志勇",
+    "value": "股东"
+  },
+  {
+    "source": "苏金清",
+    "target": "柯元芳",
+    "value": "股东"
+  },
+  {
+    "source": "胡剑莲",
+    "target": "陈志雄",
+    "value": "股东"
+  },
+  {
+    "source": "胡剑莲",
+    "target": "陆景平",
+    "value": "股东"
+  },
+  {
+    "source": "胡剑莲",
+    "target": "汪浙军",
+    "value": "股东"
+  },
+  {
+    "source": "胡剑莲",
+    "target": "汪阿毛",
+    "value": "股东"
+  },
+  {
+    "source": "汪阿毛",
+    "target": "陈志雄",
+    "value": "股东"
+  },
+  {
+    "source": "汪阿毛",
+    "target": "陆景平",
+    "value": "股东"
+  },
+  {
+    "source": "汪阿毛",
+    "target": "汪浙军",
+    "value": "股东"
+  },
+  {
+    "source": "汪浙军",
+    "target": "陈志雄",
+    "value": "股东"
+  },
+  {
+    "source": "汪浙军",
+    "target": "陆景平",
+    "value": "股东"
+  },
+  {
+    "source": "陆景平",
+    "target": "陈志雄",
+    "value": "股东"
+  },
+  {
+    "source": "张金寿",
+    "target": "陈国涛",
+    "value": "股东"
+  },
+  {
+    "source": "张金寿",
+    "target": "程慧斌",
+    "value": "股东"
+  },
+  {
+    "source": "张金寿",
+    "target": "陈国雄",
+    "value": "股东"
+  },
+  {
+    "source": "林志忠",
+    "target": "林雪静",
+    "value": "股东"
+  },
+  {
+    "source": "林志忠",
+    "target": "林爱清",
+    "value": "股东"
+  },
+  {
+    "source": "林志忠",
+    "target": "陈国林",
+    "value": "股东"
+  },
+  {
+    "source": "林志忠",
+    "target": "唐宝平",
+    "value": "股东"
+  },
+  {
+    "source": "林志忠",
+    "target": "苏世杰",
+    "value": "股东"
+  },
+  {
+    "source": "林志忠",
+    "target": "林淑花",
+    "value": "股东"
+  },
+  {
+    "source": "林志忠",
+    "target": "林建芳",
+    "value": "股东"
+  },
+  {
+    "source": "林志忠",
+    "target": "林爱香",
+    "value": "股东"
+  },
+  {
+    "source": "林志忠",
+    "target": "林新平",
+    "value": "股东"
+  },
+  {
+    "source": "林志忠",
+    "target": "林新强",
+    "value": "股东"
+  },
+  {
+    "source": "林志忠",
+    "target": "林新潮",
+    "value": "股东"
+  },
+  {
+    "source": "林志忠",
+    "target": "林丽君",
+    "value": "股东"
+  },
+  {
+    "source": "林丽君",
+    "target": "林志忠",
+    "value": "股东"
+  },
+  {
+    "source": "林丽君",
+    "target": "林雪静",
+    "value": "股东"
+  },
+  {
+    "source": "林丽君",
+    "target": "林爱清",
+    "value": "股东"
+  },
+  {
+    "source": "林丽君",
+    "target": "陈国林",
+    "value": "股东"
+  },
+  {
+    "source": "林丽君",
+    "target": "唐宝平",
+    "value": "股东"
+  },
+  {
+    "source": "林丽君",
+    "target": "苏世杰",
+    "value": "股东"
+  },
+  {
+    "source": "林丽君",
+    "target": "林淑花",
+    "value": "股东"
+  },
+  {
+    "source": "林丽君",
+    "target": "林建芳",
+    "value": "股东"
+  },
+  {
+    "source": "林丽君",
+    "target": "林爱香",
+    "value": "股东"
+  },
+  {
+    "source": "林丽君",
+    "target": "林新平",
+    "value": "股东"
+  },
+  {
+    "source": "林丽君",
+    "target": "林新强",
+    "value": "股东"
+  },
+  {
+    "source": "林丽君",
+    "target": "林新潮",
+    "value": "股东"
+  },
+  {
+    "source": "林新潮",
+    "target": "林雪静",
+    "value": "股东"
+  },
+  {
+    "source": "林新潮",
+    "target": "林爱清",
+    "value": "股东"
+  },
+  {
+    "source": "林新潮",
+    "target": "陈国林",
+    "value": "股东"
+  },
+  {
+    "source": "林新潮",
+    "target": "唐宝平",
+    "value": "股东"
+  },
+  {
+    "source": "林新潮",
+    "target": "苏世杰",
+    "value": "股东"
+  },
+  {
+    "source": "林新潮",
+    "target": "林淑花",
+    "value": "股东"
+  },
+  {
+    "source": "林新潮",
+    "target": "林建芳",
+    "value": "股东"
+  },
+  {
+    "source": "林新潮",
+    "target": "林爱香",
+    "value": "股东"
+  },
+  {
+    "source": "林新潮",
+    "target": "林新平",
+    "value": "股东"
+  },
+  {
+    "source": "林新潮",
+    "target": "林新强",
+    "value": "股东"
+  },
+  {
+    "source": "林新强",
+    "target": "林雪静",
+    "value": "股东"
+  },
+  {
+    "source": "林新强",
+    "target": "林爱清",
+    "value": "股东"
+  },
+  {
+    "source": "林新强",
+    "target": "陈国林",
+    "value": "股东"
+  },
+  {
+    "source": "林新强",
+    "target": "唐宝平",
+    "value": "股东"
+  },
+  {
+    "source": "林新强",
+    "target": "苏世杰",
+    "value": "股东"
+  },
+  {
+    "source": "林新强",
+    "target": "林淑花",
+    "value": "股东"
+  },
+  {
+    "source": "林新强",
+    "target": "林建芳",
+    "value": "股东"
+  },
+  {
+    "source": "林新强",
+    "target": "林爱香",
+    "value": "股东"
+  },
+  {
+    "source": "林新强",
+    "target": "林新平",
+    "value": "股东"
+  },
+  {
+    "source": "林新平",
+    "target": "林雪静",
+    "value": "股东"
+  },
+  {
+    "source": "林新平",
+    "target": "林爱清",
+    "value": "股东"
+  },
+  {
+    "source": "林新平",
+    "target": "陈国林",
+    "value": "股东"
+  },
+  {
+    "source": "林新平",
+    "target": "唐宝平",
+    "value": "股东"
+  },
+  {
+    "source": "林新平",
+    "target": "苏世杰",
+    "value": "股东"
+  },
+  {
+    "source": "林新平",
+    "target": "林淑花",
+    "value": "股东"
+  },
+  {
+    "source": "林新平",
+    "target": "林建芳",
+    "value": "股东"
+  },
+  {
+    "source": "林新平",
+    "target": "林爱香",
+    "value": "股东"
+  },
+  {
+    "source": "林爱香",
+    "target": "林新平",
+    "value": "股东"
+  },
+  {
+    "source": "林爱香",
+    "target": "林新强",
+    "value": "股东"
+  },
+  {
+    "source": "林爱香",
+    "target": "林新潮",
+    "value": "股东"
+  },
+  {
+    "source": "林爱香",
+    "target": "林雪静",
+    "value": "股东"
+  },
+  {
+    "source": "林爱香",
+    "target": "林爱清",
+    "value": "股东"
+  },
+  {
+    "source": "林爱香",
+    "target": "陈国林",
+    "value": "股东"
+  },
+  {
+    "source": "林爱香",
+    "target": "唐宝平",
+    "value": "股东"
+  },
+  {
+    "source": "林爱香",
+    "target": "苏世杰",
+    "value": "股东"
+  },
+  {
+    "source": "林爱香",
+    "target": "林淑花",
+    "value": "股东"
+  },
+  {
+    "source": "林爱香",
+    "target": "林建芳",
+    "value": "股东"
+  },
+  {
+    "source": "林建芳",
+    "target": "林雪静",
+    "value": "股东"
+  },
+  {
+    "source": "林建芳",
+    "target": "林爱清",
+    "value": "股东"
+  },
+  {
+    "source": "林建芳",
+    "target": "陈国林",
+    "value": "股东"
+  },
+  {
+    "source": "林建芳",
+    "target": "唐宝平",
+    "value": "股东"
+  },
+  {
+    "source": "林建芳",
+    "target": "苏世杰",
+    "value": "股东"
+  },
+  {
+    "source": "林建芳",
+    "target": "林淑花",
+    "value": "股东"
+  },
+  {
+    "source": "林淑花",
+    "target": "林建芳",
+    "value": "股东"
+  },
+  {
+    "source": "林淑花",
+    "target": "林新平",
+    "value": "股东"
+  },
+  {
+    "source": "林淑花",
+    "target": "林新强",
+    "value": "股东"
+  },
+  {
+    "source": "林淑花",
+    "target": "林新潮",
+    "value": "股东"
+  },
+  {
+    "source": "林淑花",
+    "target": "林爱香",
+    "value": "股东"
+  },
+  {
+    "source": "林淑花",
+    "target": "林雪静",
+    "value": "股东"
+  },
+  {
+    "source": "林淑花",
+    "target": "林爱清",
+    "value": "股东"
+  },
+  {
+    "source": "林淑花",
+    "target": "陈国林",
+    "value": "股东"
+  },
+  {
+    "source": "林淑花",
+    "target": "唐宝平",
+    "value": "股东"
+  },
+  {
+    "source": "林淑花",
+    "target": "苏世杰",
+    "value": "股东"
+  },
+  {
+    "source": "苏世杰",
+    "target": "林雪静",
+    "value": "股东"
+  },
+  {
+    "source": "苏世杰",
+    "target": "林爱清",
+    "value": "股东"
+  },
+  {
+    "source": "苏世杰",
+    "target": "陈国林",
+    "value": "股东"
+  },
+  {
+    "source": "苏世杰",
+    "target": "唐宝平",
+    "value": "股东"
+  },
+  {
+    "source": "唐宝平",
+    "target": "林雪静",
+    "value": "股东"
+  },
+  {
+    "source": "唐宝平",
+    "target": "林爱清",
+    "value": "股东"
+  },
+  {
+    "source": "唐宝平",
+    "target": "陈国林",
+    "value": "股东"
+  },
+  {
+    "source": "陈国林",
+    "target": "林雪静",
+    "value": "股东"
+  },
+  {
+    "source": "陈国林",
+    "target": "林爱清",
+    "value": "股东"
+  },
+  {
+    "source": "蔡金兴",
+    "target": "陈国涛",
+    "value": "股东"
+  },
+  {
+    "source": "李金山",
+    "target": "李金同",
+    "value": "股东"
+  },
+  {
+    "source": "李金山",
+    "target": "游黎飞",
+    "value": "股东"
+  },
+  {
+    "source": "陈新发",
+    "target": "陈新喜",
+    "value": "股东"
+  },
+  {
+    "source": "陈新发",
+    "target": "陈新贤",
+    "value": "股东"
+  },
+  {
+    "source": "陈新贤",
+    "target": "陈新喜",
+    "value": "股东"
+  },
+  {
+    "source": "詹阳斌",
+    "target": "占阳珊",
+    "value": "股东"
+  },
+  {
+    "source": "詹阳斌",
+    "target": "詹阳程",
+    "value": "股东"
+  },
+  {
+    "source": "詹阳斌",
+    "target": "陈美蓉",
+    "value": "股东"
+  },
+  {
+    "source": "詹阳斌",
+    "target": "黄海燕",
+    "value": "股东"
+  },
+  {
+    "source": "詹阳斌",
+    "target": "李小青",
+    "value": "股东"
+  },
+  {
+    "source": "詹阳斌",
+    "target": "林剑华",
+    "value": "股东"
+  },
+  {
+    "source": "詹阳斌",
+    "target": "游亚金",
+    "value": "股东"
+  },
+  {
+    "source": "游亚金",
+    "target": "李小青",
+    "value": "股东"
+  },
+  {
+    "source": "游亚金",
+    "target": "林剑华",
+    "value": "股东"
+  },
+  {
+    "source": "林剑华",
+    "target": "李小青",
+    "value": "股东"
+  },
+  {
+    "source": "林美钦",
+    "target": "陈志强",
+    "value": "股东"
+  },
+  {
+    "source": "詹嘉豪",
+    "target": "陈东海",
+    "value": "股东"
+  },
+  {
+    "source": "詹嘉豪",
+    "target": "黄开添",
+    "value": "股东"
+  },
+  {
+    "source": "刘开泉",
+    "target": "陈东海",
+    "value": "股东"
+  },
+  {
+    "source": "刘开泉",
+    "target": "詹嘉豪",
+    "value": "股东"
+  },
+  {
+    "source": "刘开泉",
+    "target": "洪鹭青",
+    "value": "股东"
+  },
+  {
+    "source": "刘开泉",
+    "target": "詹嘉武",
+    "value": "股东"
+  },
+  {
+    "source": "詹嘉武",
+    "target": "陈东海",
+    "value": "股东"
+  },
+  {
+    "source": "詹嘉武",
+    "target": "詹嘉豪",
+    "value": "股东"
+  },
+  {
+    "source": "詹嘉武",
+    "target": "洪鹭青",
+    "value": "股东"
+  },
+  {
+    "source": "洪鹭青",
+    "target": "陈东海",
+    "value": "股东"
+  },
+  {
+    "source": "洪鹭青",
+    "target": "詹嘉豪",
+    "value": "股东"
+  },
+  {
+    "source": "林爱清",
+    "target": "林雪静",
+    "value": "股东"
+  },
+  {
+    "source": "游宗清",
+    "target": "詹彼德",
+    "value": "股东"
+  },
+  {
+    "source": "游宗清",
+    "target": "祝朋军",
+    "value": "股东"
+  },
+  {
+    "source": "祝朋军",
+    "target": "詹彼德",
+    "value": "股东"
+  },
+  {
+    "source": "黄海燕",
+    "target": "占阳珊",
+    "value": "股东"
+  },
+  {
+    "source": "黄海燕",
+    "target": "詹阳程",
+    "value": "股东"
+  },
+  {
+    "source": "黄海燕",
+    "target": "陈美蓉",
+    "value": "股东"
+  },
+  {
+    "source": "陈美蓉",
+    "target": "占阳珊",
+    "value": "股东"
+  },
+  {
+    "source": "陈美蓉",
+    "target": "詹阳程",
+    "value": "股东"
+  },
+  {
+    "source": "詹阳程",
+    "target": "占阳珊",
+    "value": "股东"
+  },
+  {
+    "source": "李祥山",
+    "target": "黄开添",
+    "value": "股东"
+  },
+  {
+    "source": "李祥山",
+    "target": "陈清冰",
+    "value": "股东"
+  },
+  {
+    "source": "李祥山",
+    "target": "詹开林",
+    "value": "股东"
+  },
+  {
+    "source": "李祥山",
+    "target": "黄樑云",
+    "value": "股东"
+  },
+  {
+    "source": "黄樑云",
+    "target": "黄开添",
+    "value": "股东"
+  },
+  {
+    "source": "黄樑云",
+    "target": "陈清冰",
+    "value": "股东"
+  },
+  {
+    "source": "黄樑云",
+    "target": "詹开林",
+    "value": "股东"
+  },
+  {
+    "source": "詹开林",
+    "target": "黄开添",
+    "value": "股东"
+  },
+  {
+    "source": "詹开林",
+    "target": "陈清冰",
+    "value": "股东"
+  },
+  {
+    "source": "陈清冰",
+    "target": "黄开添",
+    "value": "股东"
+  },
+  {
+    "source": "翁金栋",
+    "target": "林金动",
+    "value": "股东"
+  },
+  {
+    "source": "林金动",
+    "target": "翁金栋",
+    "value": "股东"
+  },
+  {
+    "source": "许乌烘",
+    "target": "黄元聪",
+    "value": "股东"
+  },
+  {
+    "source": "林梅兰",
+    "target": "陈娟",
+    "value": "股东"
+  },
+  {
+    "source": "林梅兰",
+    "target": "林瑞兴",
+    "value": "股东"
+  },
+  {
+    "source": "林瑞兴",
+    "target": "陈娟",
+    "value": "股东"
+  },
+  {
+    "source": "陈波",
+    "target": "林国雄",
+    "value": "股东"
+  },
+  {
+    "source": "吴元良",
+    "target": "吴建新",
+    "value": "股东"
+  },
+  {
+    "source": "吴元良",
+    "target": "黄开飞",
+    "value": "股东"
+  },
+  {
+    "source": "吴元良",
+    "target": "沈雪峰",
+    "value": "股东"
+  },
+  {
+    "source": "沈雪峰",
+    "target": "黄开飞",
+    "value": "股东"
+  },
+  {
+    "source": "吴丽琴",
+    "target": "陈建洪",
+    "value": "股东"
+  },
+  {
+    "source": "邹梅洪",
+    "target": "林先敏",
+    "value": "股东"
+  },
+  {
+    "source": "杨丽新",
+    "target": "林黎明",
+    "value": "股东"
+  },
+  {
+    "source": "吴建忠",
+    "target": "胡阳",
+    "value": "股东"
+  },
+  {
+    "source": "吴福先",
+    "target": "陈建成",
+    "value": "股东"
+  },
+  {
+    "source": "林志通",
+    "target": "詹妍",
+    "value": "股东"
+  },
+  {
+    "source": "林志通",
+    "target": "陈国兴",
+    "value": "股东"
+  },
+  {
+    "source": "林楚乾",
+    "target": "林鸿雁",
+    "value": "股东"
+  },
+  {
+    "source": "林楚乾",
+    "target": "叶玉娟",
+    "value": "股东"
+  },
+  {
+    "source": "叶玉娟",
+    "target": "林鸿雁",
+    "value": "股东"
+  },
+  {
+    "source": "杨献东",
+    "target": "詹妍",
+    "value": "股东"
+  },
+  {
+    "source": "杨献东",
+    "target": "陈国兴",
+    "value": "股东"
+  },
+  {
+    "source": "杨献东",
+    "target": "林志通",
+    "value": "股东"
+  },
+  {
+    "source": "李金圆",
+    "target": "李爱金",
+    "value": "股东"
+  },
+  {
+    "source": "苏瑞福",
+    "target": "苏雪平",
+    "value": "股东"
+  },
+  {
+    "source": "苏瑞福",
+    "target": "苏瑞高",
+    "value": "股东"
+  },
+  {
+    "source": "詹珍金",
+    "target": "詹文焰",
+    "value": "股东"
+  },
+  {
+    "source": "宋杨杨",
+    "target": "王晓泸",
+    "value": "股东"
+  },
+  {
+    "source": "王晓泸",
+    "target": "宋杨杨",
+    "value": "股东"
+  },
+  {
+    "source": "陈亚淙",
+    "target": "黄朝棋",
+    "value": "股东"
+  },
+  {
+    "source": "陈亚淙",
+    "target": "陈志镇",
+    "value": "股东"
+  },
+  {
+    "source": "陈志镇",
+    "target": "黄朝棋",
+    "value": "股东"
+  },
+  {
+    "source": "林建舟",
+    "target": "黄建平",
+    "value": "股东"
+  },
+  {
+    "source": "黄俊伟",
+    "target": "肖建宇",
+    "value": "股东"
+  },
+  {
+    "source": "林淑梅",
+    "target": "苏金耀",
+    "value": "股东"
+  },
+  {
+    "source": "林淑梅",
+    "target": "林宗金",
+    "value": "股东"
+  },
+  {
+    "source": "林淑梅",
+    "target": "周斌",
+    "value": "股东"
+  },
+  {
+    "source": "林淑梅",
+    "target": "周莉",
+    "value": "股东"
+  },
+  {
+    "source": "林淑梅",
+    "target": "林明雄",
+    "value": "股东"
+  },
+  {
+    "source": "林淑梅",
+    "target": "林明开",
+    "value": "股东"
+  },
+  {
+    "source": "林淑梅",
+    "target": "郭小鹏",
+    "value": "股东"
+  },
+  {
+    "source": "林淑梅",
+    "target": "郜翀",
+    "value": "股东"
+  },
+  {
+    "source": "林淑梅",
+    "target": "凌明圣",
+    "value": "股东"
+  },
+  {
+    "source": "林淑梅",
+    "target": "林婷婷",
+    "value": "股东"
+  },
+  {
+    "source": "林婷婷",
+    "target": "苏金耀",
+    "value": "股东"
+  },
+  {
+    "source": "林婷婷",
+    "target": "林宗金",
+    "value": "股东"
+  },
+  {
+    "source": "林婷婷",
+    "target": "周斌",
+    "value": "股东"
+  },
+  {
+    "source": "林婷婷",
+    "target": "周莉",
+    "value": "股东"
+  },
+  {
+    "source": "林婷婷",
+    "target": "林明雄",
+    "value": "股东"
+  },
+  {
+    "source": "林婷婷",
+    "target": "林明开",
+    "value": "股东"
+  },
+  {
+    "source": "林婷婷",
+    "target": "郭小鹏",
+    "value": "股东"
+  },
+  {
+    "source": "林婷婷",
+    "target": "郜翀",
+    "value": "股东"
+  },
+  {
+    "source": "林婷婷",
+    "target": "凌明圣",
+    "value": "股东"
+  },
+  {
+    "source": "凌明圣",
+    "target": "苏金耀",
+    "value": "股东"
+  },
+  {
+    "source": "凌明圣",
+    "target": "林宗金",
+    "value": "股东"
+  },
+  {
+    "source": "凌明圣",
+    "target": "周斌",
+    "value": "股东"
+  },
+  {
+    "source": "凌明圣",
+    "target": "周莉",
+    "value": "股东"
+  },
+  {
+    "source": "凌明圣",
+    "target": "林明雄",
+    "value": "股东"
+  },
+  {
+    "source": "凌明圣",
+    "target": "林明开",
+    "value": "股东"
+  },
+  {
+    "source": "凌明圣",
+    "target": "郭小鹏",
+    "value": "股东"
+  },
+  {
+    "source": "凌明圣",
+    "target": "郜翀",
+    "value": "股东"
+  },
+  {
+    "source": "郜翀",
+    "target": "苏金耀",
+    "value": "股东"
+  },
+  {
+    "source": "郜翀",
+    "target": "林宗金",
+    "value": "股东"
+  },
+  {
+    "source": "郜翀",
+    "target": "周斌",
+    "value": "股东"
+  },
+  {
+    "source": "郜翀",
+    "target": "周莉",
+    "value": "股东"
+  },
+  {
+    "source": "郜翀",
+    "target": "林明雄",
+    "value": "股东"
+  },
+  {
+    "source": "郜翀",
+    "target": "林明开",
+    "value": "股东"
+  },
+  {
+    "source": "郜翀",
+    "target": "郭小鹏",
+    "value": "股东"
+  },
+  {
+    "source": "郭小鹏",
+    "target": "苏金耀",
+    "value": "股东"
+  },
+  {
+    "source": "郭小鹏",
+    "target": "林宗金",
+    "value": "股东"
+  },
+  {
+    "source": "郭小鹏",
+    "target": "周斌",
+    "value": "股东"
+  },
+  {
+    "source": "郭小鹏",
+    "target": "周莉",
+    "value": "股东"
+  },
+  {
+    "source": "郭小鹏",
+    "target": "林明雄",
+    "value": "股东"
+  },
+  {
+    "source": "郭小鹏",
+    "target": "林明开",
+    "value": "股东"
+  },
+  {
+    "source": "林明开",
+    "target": "苏金耀",
+    "value": "股东"
+  },
+  {
+    "source": "林明开",
+    "target": "林宗金",
+    "value": "股东"
+  },
+  {
+    "source": "林明开",
+    "target": "周斌",
+    "value": "股东"
+  },
+  {
+    "source": "林明开",
+    "target": "周莉",
+    "value": "股东"
+  },
+  {
+    "source": "林明开",
+    "target": "林明雄",
+    "value": "股东"
+  },
+  {
+    "source": "林明雄",
+    "target": "王为民",
+    "value": "股东"
+  },
+  {
+    "source": "林明雄",
+    "target": "程慧斌",
+    "value": "股东"
+  },
+  {
+    "source": "林明雄",
+    "target": "陈国雄",
+    "value": "股东"
+  },
+  {
+    "source": "林明雄",
+    "target": "林育宏",
+    "value": "股东"
+  },
+  {
+    "source": "林明雄",
+    "target": "詹妍",
+    "value": "股东"
+  },
+  {
+    "source": "林明雄",
+    "target": "陈国兴",
+    "value": "股东"
+  },
+  {
+    "source": "林明雄",
+    "target": "林明杰",
+    "value": "股东"
+  },
+  {
+    "source": "林明雄",
+    "target": "苏金耀",
+    "value": "股东"
+  },
+  {
+    "source": "林明雄",
+    "target": "林宗金",
+    "value": "股东"
+  },
+  {
+    "source": "林明雄",
+    "target": "周斌",
+    "value": "股东"
+  },
+  {
+    "source": "林明雄",
+    "target": "周莉",
+    "value": "股东"
+  },
+  {
+    "source": "周莉",
+    "target": "苏金耀",
+    "value": "股东"
+  },
+  {
+    "source": "周莉",
+    "target": "林宗金",
+    "value": "股东"
+  },
+  {
+    "source": "周莉",
+    "target": "周斌",
+    "value": "股东"
+  },
+  {
+    "source": "周斌",
+    "target": "苏金耀",
+    "value": "股东"
+  },
+  {
+    "source": "周斌",
+    "target": "林宗金",
+    "value": "股东"
+  },
+  {
+    "source": "林宗金",
+    "target": "苏金耀",
+    "value": "股东"
+  },
+  {
+    "source": "卓国潘",
+    "target": "阮维锋",
+    "value": "股东"
+  },
+  {
+    "source": "卓国潘",
+    "target": "卓国金",
+    "value": "股东"
+  },
+  {
+    "source": "蔡锋清",
+    "target": "黄志红",
+    "value": "股东"
+  },
+  {
+    "source": "蔡锋清",
+    "target": "柯建珊",
+    "value": "股东"
+  },
+  {
+    "source": "柯建珊",
+    "target": "黄志红",
+    "value": "股东"
+  },
+  {
+    "source": "苏文忠",
+    "target": "杨亚雄",
+    "value": "股东"
+  },
+  {
+    "source": "苏文忠",
+    "target": "林远敏",
+    "value": "股东"
+  },
+  {
+    "source": "苏文忠",
+    "target": "陈春光",
+    "value": "股东"
+  },
+  {
+    "source": "苏文忠",
+    "target": "林天雄",
+    "value": "股东"
+  },
+  {
+    "source": "苏文忠",
+    "target": "苏文良",
+    "value": "股东"
+  },
+  {
+    "source": "苏文良",
+    "target": "杨亚雄",
+    "value": "股东"
+  },
+  {
+    "source": "苏文良",
+    "target": "林远敏",
+    "value": "股东"
+  },
+  {
+    "source": "苏文良",
+    "target": "陈春光",
+    "value": "股东"
+  },
+  {
+    "source": "苏文良",
+    "target": "林天雄",
+    "value": "股东"
+  },
+  {
+    "source": "林天雄",
+    "target": "杨亚雄",
+    "value": "股东"
+  },
+  {
+    "source": "林天雄",
+    "target": "林远敏",
+    "value": "股东"
+  },
+  {
+    "source": "林天雄",
+    "target": "陈春光",
+    "value": "股东"
+  },
+  {
+    "source": "陈春光",
+    "target": "杨亚雄",
+    "value": "股东"
+  },
+  {
+    "source": "陈春光",
+    "target": "林远敏",
+    "value": "股东"
+  },
+  {
+    "source": "林远敏",
+    "target": "杨亚雄",
+    "value": "股东"
+  },
+  {
+    "source": "林军兵",
+    "target": "陈国勇",
+    "value": "股东"
+  },
+  {
+    "source": "卓智福",
+    "target": "卓立强",
+    "value": "股东"
+  },
+  {
+    "source": "卓智福",
+    "target": "詹建洪",
+    "value": "股东"
+  },
+  {
+    "source": "卓智福",
+    "target": "陈国洪",
+    "value": "股东"
+  },
+  {
+    "source": "卓智福",
+    "target": "黄志强",
+    "value": "股东"
+  },
+  {
+    "source": "卓智福",
+    "target": "柯向阳",
+    "value": "股东"
+  },
+  {
+    "source": "卓智福",
+    "target": "陈建萍",
+    "value": "股东"
+  },
+  {
+    "source": "陈春霖",
+    "target": "林玉荣",
+    "value": "股东"
+  },
+  {
+    "source": "蔡伟",
+    "target": "崔以泰",
+    "value": "股东"
+  },
+  {
+    "source": "蔡伟",
+    "target": "占小妹",
+    "value": "股东"
+  },
+  {
+    "source": "占小妹",
+    "target": "崔以泰",
+    "value": "股东"
+  },
+  {
+    "source": "刘宣明",
+    "target": "魏荣达",
+    "value": "股东"
+  },
+  {
+    "source": "黄珍棋",
+    "target": "吴德平",
+    "value": "股东"
+  },
+  {
+    "source": "吴德平",
+    "target": "黄珍棋",
+    "value": "股东"
+  },
+  {
+    "source": "朱海霞",
+    "target": "詹宗阳",
+    "value": "股东"
+  },
+  {
+    "source": "林金后",
+    "target": "张福荣",
+    "value": "股东"
+  },
+  {
+    "source": "林金后",
+    "target": "郑俊青",
+    "value": "股东"
+  },
+  {
+    "source": "郑俊青",
+    "target": "张福荣",
+    "value": "股东"
+  },
+  {
+    "source": "林宗灶",
+    "target": "苏建潘",
+    "value": "股东"
+  },
+  {
+    "source": "林宗灶",
+    "target": "林宗尚",
+    "value": "股东"
+  },
+  {
+    "source": "林宗灶",
+    "target": "游的忠",
+    "value": "股东"
+  },
+  {
+    "source": "林宗灶",
+    "target": "李国防",
+    "value": "股东"
+  },
+  {
+    "source": "林宗灶",
+    "target": "林宗其",
+    "value": "股东"
+  },
+  {
+    "source": "林宗其",
+    "target": "苏建潘",
+    "value": "股东"
+  },
+  {
+    "source": "林宗其",
+    "target": "林宗尚",
+    "value": "股东"
+  },
+  {
+    "source": "林宗其",
+    "target": "游的忠",
+    "value": "股东"
+  },
+  {
+    "source": "林宗其",
+    "target": "李国防",
+    "value": "股东"
+  },
+  {
+    "source": "李国防",
+    "target": "苏建潘",
+    "value": "股东"
+  },
+  {
+    "source": "李国防",
+    "target": "林宗尚",
+    "value": "股东"
+  },
+  {
+    "source": "李国防",
+    "target": "游的忠",
+    "value": "股东"
+  },
+  {
+    "source": "游的忠",
+    "target": "苏建潘",
+    "value": "股东"
+  },
+  {
+    "source": "游的忠",
+    "target": "林宗尚",
+    "value": "股东"
+  },
+  {
+    "source": "林宗尚",
+    "target": "苏建潘",
+    "value": "股东"
+  },
+  {
+    "source": "王峰",
+    "target": "吕雪梅",
+    "value": "股东"
+  },
+  {
+    "source": "吴奇斌",
+    "target": "游再寿",
+    "value": "股东"
+  },
+  {
+    "source": "吴奇斌",
+    "target": "陈意雄",
+    "value": "股东"
+  },
+  {
+    "source": "陈意雄",
+    "target": "游再寿",
+    "value": "股东"
+  },
+  {
+    "source": "林明杰",
+    "target": "王为民",
+    "value": "股东"
+  },
+  {
+    "source": "林明杰",
+    "target": "程慧斌",
+    "value": "股东"
+  },
+  {
+    "source": "林明杰",
+    "target": "陈国雄",
+    "value": "股东"
+  },
+  {
+    "source": "林明杰",
+    "target": "林育宏",
+    "value": "股东"
+  },
+  {
+    "source": "林明杰",
+    "target": "詹妍",
+    "value": "股东"
+  },
+  {
+    "source": "林明杰",
+    "target": "陈国兴",
+    "value": "股东"
+  },
+  {
+    "source": "林育宏",
+    "target": "王为民",
+    "value": "股东"
+  },
+  {
+    "source": "林育宏",
+    "target": "程慧斌",
+    "value": "股东"
+  },
+  {
+    "source": "林育宏",
+    "target": "陈国雄",
+    "value": "股东"
+  },
+  {
+    "source": "林宗太",
+    "target": "黄苍锦",
+    "value": "股东"
+  },
+  {
+    "source": "林宗太",
+    "target": "詹清锋",
+    "value": "股东"
+  },
+  {
+    "source": "林宗太",
+    "target": "詹光俊",
+    "value": "股东"
+  },
+  {
+    "source": "詹光俊",
+    "target": "黄苍锦",
+    "value": "股东"
+  },
+  {
+    "source": "詹光俊",
+    "target": "詹清锋",
+    "value": "股东"
+  },
+  {
+    "source": "詹清锋",
+    "target": "黄苍锦",
+    "value": "股东"
+  },
+  {
+    "source": "任德盛",
+    "target": "陈志腾",
+    "value": "股东"
+  },
+  {
+    "source": "梁顺珍",
+    "target": "陈国梅",
+    "value": "股东"
+  },
+  {
+    "source": "梁顺珍",
+    "target": "阮龙勇",
+    "value": "股东"
+  },
+  {
+    "source": "阮龙勇",
+    "target": "陈国梅",
+    "value": "股东"
+  },
+  {
+    "source": "德吉央宗",
+    "target": "黄英",
+    "value": "股东"
+  },
+  {
+    "source": "德吉央宗",
+    "target": "朱良吉",
+    "value": "股东"
+  },
+  {
+    "source": "陈国家",
+    "target": "黄珍勇",
+    "value": "股东"
+  },
+  {
+    "source": "朱建东",
+    "target": "蒋志毅",
+    "value": "股东"
+  },
+  {
+    "source": "吴建生",
+    "target": "林金汉",
+    "value": "股东"
+  },
+  {
+    "source": "丁松泉",
+    "target": "蔡兵洪",
+    "value": "股东"
+  },
+  {
+    "source": "丁松泉",
+    "target": "罗朝明",
+    "value": "股东"
+  },
+  {
+    "source": "丁松泉",
+    "target": "游秀琴",
+    "value": "股东"
+  },
+  {
+    "source": "丁松泉",
+    "target": "李冬其",
+    "value": "股东"
+  },
+  {
+    "source": "丁松泉",
+    "target": "朱丽群",
+    "value": "股东"
+  },
+  {
+    "source": "丁松泉",
+    "target": "曾献志",
+    "value": "股东"
+  },
+  {
+    "source": "丁松泉",
+    "target": "徐丽玉",
+    "value": "股东"
+  },
+  {
+    "source": "曾献志",
+    "target": "蔡兵洪",
+    "value": "股东"
+  },
+  {
+    "source": "曾献志",
+    "target": "罗朝明",
+    "value": "股东"
+  },
+  {
+    "source": "曾献志",
+    "target": "游秀琴",
+    "value": "股东"
+  },
+  {
+    "source": "曾献志",
+    "target": "李冬其",
+    "value": "股东"
+  },
+  {
+    "source": "曾献志",
+    "target": "朱丽群",
+    "value": "股东"
+  },
+  {
+    "source": "李冬其",
+    "target": "蔡兵洪",
+    "value": "股东"
+  },
+  {
+    "source": "李冬其",
+    "target": "罗朝明",
+    "value": "股东"
+  },
+  {
+    "source": "李冬其",
+    "target": "游秀琴",
+    "value": "股东"
+  },
+  {
+    "source": "林建成",
+    "target": "黄国华",
+    "value": "股东"
+  },
+  {
+    "source": "陈金国",
+    "target": "林碧峰",
+    "value": "股东"
+  },
+  {
+    "source": "卓元杰",
+    "target": "黄开飞",
+    "value": "股东"
+  },
+  {
+    "source": "卓元杰",
+    "target": "吴建新",
+    "value": "股东"
+  },
+  {
+    "source": "卓元杰",
+    "target": "吴元良",
+    "value": "股东"
+  },
+  {
+    "source": "许朝星",
+    "target": "卓国金",
+    "value": "股东"
+  },
+  {
+    "source": "许朝星",
+    "target": "李文献",
+    "value": "股东"
+  },
+  {
+    "source": "许朝星",
+    "target": "林金宗",
+    "value": "股东"
+  },
+  {
+    "source": "许朝星",
+    "target": "卓国勇",
+    "value": "股东"
+  },
+  {
+    "source": "林滚",
+    "target": "苏飞鹏",
+    "value": "股东"
+  },
+  {
+    "source": "林滚",
+    "target": "苏少杰",
+    "value": "股东"
+  },
+  {
+    "source": "苏少杰",
+    "target": "苏飞鹏",
+    "value": "股东"
+  },
+  {
+    "source": "林宗海",
+    "target": "蔡金明",
+    "value": "股东"
+  },
+  {
+    "source": "徐玉森",
+    "target": "林建芳",
+    "value": "股东"
+  },
+  {
+    "source": "黄建成",
+    "target": "陈德芳",
+    "value": "股东"
+  },
+  {
+    "source": "徐玉林",
+    "target": "林秀烟",
+    "value": "股东"
+  },
+  {
+    "source": "秦建平",
+    "target": "苗苗",
+    "value": "股东"
+  },
+  {
+    "source": "林诚坤",
+    "target": "吴天宗",
+    "value": "股东"
+  },
+  {
+    "source": "林诚坤",
+    "target": "吴子荣",
+    "value": "股东"
+  },
+  {
+    "source": "吴子荣",
+    "target": "吴天宗",
+    "value": "股东"
+  },
+  {
+    "source": "伍林",
+    "target": "苏文芳",
+    "value": "股东"
+  },
+  {
+    "source": "伍林",
+    "target": "张泽军",
+    "value": "股东"
+  },
+  {
+    "source": "张泽军",
+    "target": "苏文芳",
+    "value": "股东"
+  },
+  {
+    "source": "吴启俊",
+    "target": "林炳祥",
+    "value": "股东"
+  },
+  {
+    "source": "傅东军",
+    "target": "刘德芳",
+    "value": "股东"
+  },
+  {
+    "source": "黄建庭",
+    "target": "黎军",
+    "value": "股东"
+  },
+  {
+    "source": "徐秋建",
+    "target": "陈德龙",
+    "value": "高管"
+  },
+  {
+    "source": "陈进达",
+    "target": "陆建武",
+    "value": "高管"
+  },
+  {
+    "source": "卓志展",
+    "target": "詹阳斌",
+    "value": "高管"
+  },
+  {
+    "source": "卓志展",
+    "target": "詹国连",
+    "value": "高管"
+  },
+  {
+    "source": "詹国连",
+    "target": "詹国团",
+    "value": "高管"
+  },
+  {
+    "source": "詹国连",
+    "target": "詹美爱",
+    "value": "高管"
+  },
+  {
+    "source": "詹国连",
+    "target": "陈国瑞",
+    "value": "高管"
+  },
+  {
+    "source": "詹国连",
+    "target": "詹阳斌",
+    "value": "高管"
+  },
+  {
+    "source": "林金宗",
+    "target": "吴东升",
+    "value": "高管"
+  },
+  {
+    "source": "林金宗",
+    "target": "邹双仁",
+    "value": "高管"
+  },
+  {
+    "source": "张娟",
+    "target": "杨文秀",
+    "value": "高管"
+  },
+  {
+    "source": "林雄心",
+    "target": "杨美先",
+    "value": "高管"
+  },
+  {
+    "source": "林雄心",
+    "target": "杨光富",
+    "value": "高管"
+  },
+  {
+    "source": "柳国明",
+    "target": "杨文秀",
+    "value": "高管"
+  },
+  {
+    "source": "柳国明",
+    "target": "张娟",
+    "value": "高管"
+  },
+  {
+    "source": "张金华",
+    "target": "林元楷",
+    "value": "高管"
+  },
+  {
+    "source": "陈文魁",
+    "target": "黄德锋",
+    "value": "高管"
+  },
+  {
+    "source": "陈文魁",
+    "target": "黄光标",
+    "value": "高管"
+  },
+  {
+    "source": "陈文魁",
+    "target": "黄金雄",
+    "value": "高管"
+  },
+  {
+    "source": "陈文魁",
+    "target": "林永贵",
+    "value": "高管"
+  },
+  {
+    "source": "林新疆",
+    "target": "李亮",
+    "value": "高管"
+  },
+  {
+    "source": "林新疆",
+    "target": "赵选明",
+    "value": "高管"
+  },
+  {
+    "source": "林新疆",
+    "target": "赵建萍",
+    "value": "高管"
+  },
+  {
+    "source": "陈建煌",
+    "target": "唐国芳",
+    "value": "高管"
+  },
+  {
+    "source": "陈建煌",
+    "target": "詹建昌",
+    "value": "高管"
+  },
+  {
+    "source": "林华东",
+    "target": "詹建昌",
+    "value": "高管"
+  },
+  {
+    "source": "林华东",
+    "target": "陈建煌",
+    "value": "高管"
+  },
+  {
+    "source": "卓国金",
+    "target": "林建贤",
+    "value": "高管"
+  },
+  {
+    "source": "张建军",
+    "target": "贾香伶",
+    "value": "高管"
+  },
+  {
+    "source": "黄光标",
+    "target": "黄德锋",
+    "value": "高管"
+  },
+  {
+    "source": "黄德锋",
+    "target": "罗朝明",
+    "value": "高管"
+  },
+  {
+    "source": "黄德锋",
+    "target": "蔡亚彬",
+    "value": "高管"
+  },
+  {
+    "source": "黄金雄",
+    "target": "黄德锋",
+    "value": "高管"
+  },
+  {
+    "source": "黄金雄",
+    "target": "黄光标",
+    "value": "高管"
+  },
+  {
+    "source": "郑何水",
+    "target": "肖志敏",
+    "value": "高管"
+  },
+  {
+    "source": "林金华",
+    "target": "陈松",
+    "value": "高管"
+  },
+  {
+    "source": "林金华",
+    "target": "林金富",
+    "value": "高管"
+  },
+  {
+    "source": "林金富",
+    "target": "陈松",
+    "value": "高管"
+  },
+  {
+    "source": "卓朝阳",
+    "target": "蒋林",
+    "value": "高管"
+  },
+  {
+    "source": "卓朝阳",
+    "target": "吴建裕",
+    "value": "高管"
+  },
+  {
+    "source": "游金棋",
+    "target": "游金豹",
+    "value": "高管"
+  },
+  {
+    "source": "林国强",
+    "target": "吴建成",
+    "value": "高管"
+  },
+  {
+    "source": "陈金秀",
+    "target": "詹建昇",
+    "value": "高管"
+  },
+  {
+    "source": "詹建昇",
+    "target": "胡珍敬",
+    "value": "高管"
+  },
+  {
+    "source": "卓国华",
+    "target": "卓建山",
+    "value": "高管"
+  },
+  {
+    "source": "何莉",
+    "target": "陈思",
+    "value": "高管"
+  },
+  {
+    "source": "邹双仁",
+    "target": "吴东升",
+    "value": "高管"
+  },
+  {
+    "source": "苏金芳",
+    "target": "林清辉",
+    "value": "高管"
+  },
+  {
+    "source": "黄玉华",
+    "target": "邹双仁",
+    "value": "高管"
+  },
+  {
+    "source": "林寿庸",
+    "target": "刁国峰",
+    "value": "高管"
+  },
+  {
+    "source": "林志平",
+    "target": "刁国峰",
+    "value": "高管"
+  },
+  {
+    "source": "林志平",
+    "target": "林寿庸",
+    "value": "高管"
+  },
+  {
+    "source": "李马号",
+    "target": "尚雅丽",
+    "value": "高管"
+  },
+  {
+    "source": "林开伦",
+    "target": "刘福强",
+    "value": "高管"
+  },
+  {
+    "source": "林开伦",
+    "target": "王贤毅",
+    "value": "高管"
+  },
+  {
+    "source": "林开伦",
+    "target": "李永",
+    "value": "高管"
+  },
+  {
+    "source": "李永",
+    "target": "刘福强",
+    "value": "高管"
+  },
+  {
+    "source": "李永",
+    "target": "王贤毅",
+    "value": "高管"
+  },
+  {
+    "source": "王贤毅",
+    "target": "刘福强",
+    "value": "高管"
+  },
+  {
+    "source": "林玉明",
+    "target": "曾哲民",
+    "value": "高管"
+  },
+  {
+    "source": "林玉明",
+    "target": "林金耀",
+    "value": "高管"
+  },
+  {
+    "source": "林玉明",
+    "target": "林志通",
+    "value": "高管"
+  },
+  {
+    "source": "林玉明",
+    "target": "陈建华",
+    "value": "高管"
+  },
+  {
+    "source": "林玉明",
+    "target": "苏金汉",
+    "value": "高管"
+  },
+  {
+    "source": "林玉明",
+    "target": "甘勇",
+    "value": "高管"
+  },
+  {
+    "source": "林玉明",
+    "target": "李文凤",
+    "value": "高管"
+  },
+  {
+    "source": "林玉明",
+    "target": "苏建清",
+    "value": "高管"
+  },
+  {
+    "source": "游福坤",
+    "target": "游添春",
+    "value": "高管"
+  },
+  {
+    "source": "叶志阳",
+    "target": "郑志坚",
+    "value": "高管"
+  },
+  {
+    "source": "蔡亚彬",
+    "target": "罗朝明",
+    "value": "高管"
+  },
+  {
+    "source": "蔡亚彬",
+    "target": "杨春法",
+    "value": "高管"
+  },
+  {
+    "source": "吴雨霞",
+    "target": "杨春法",
+    "value": "高管"
+  },
+  {
+    "source": "黄光盛",
+    "target": "黄国栋",
+    "value": "高管"
+  },
+  {
+    "source": "黄德新",
+    "target": "黄格林",
+    "value": "高管"
+  },
+  {
+    "source": "姜军",
+    "target": "詹明洪",
+    "value": "高管"
+  },
+  {
+    "source": "肖国满",
+    "target": "栾华",
+    "value": "高管"
+  },
+  {
+    "source": "陈征",
+    "target": "许文兴",
+    "value": "高管"
+  },
+  {
+    "source": "林宗琰",
+    "target": "黄维杰",
+    "value": "高管"
+  },
+  {
+    "source": "林明凯",
+    "target": "詹瑞金",
+    "value": "高管"
+  },
+  {
+    "source": "黄维杰",
+    "target": "龚江茂",
+    "value": "高管"
+  },
+  {
+    "source": "陈焕宁",
+    "target": "刘国城",
+    "value": "高管"
+  },
+  {
+    "source": "王文海",
+    "target": "王国勇",
+    "value": "高管"
+  },
+  {
+    "source": "王文海",
+    "target": "王剑",
+    "value": "高管"
+  },
+  {
+    "source": "何炳华",
+    "target": "林淑梅",
+    "value": "高管"
+  },
+  {
+    "source": "苏瑞高",
+    "target": "苏瑞福",
+    "value": "高管"
+  },
+  {
+    "source": "苏行云",
+    "target": "苏瑞高",
+    "value": "高管"
+  },
+  {
+    "source": "林晓军",
+    "target": "刘瑞元",
+    "value": "高管"
+  },
+  {
+    "source": "简佩桃",
+    "target": "麦嘉霖",
+    "value": "高管"
+  },
+  {
+    "source": "简佩桃",
+    "target": "何冠西",
+    "value": "高管"
+  },
+  {
+    "source": "何冠西",
+    "target": "麦嘉霖",
+    "value": "高管"
+  },
+  {
+    "source": "陈益梅",
+    "target": "陈立功",
+    "value": "高管"
+  },
+  {
+    "source": "陈益梅",
+    "target": "黄峰泉",
+    "value": "高管"
+  },
+  {
+    "source": "胡东华",
+    "target": "陈智强",
+    "value": "高管"
+  },
+  {
+    "source": "林玉盛",
+    "target": "潘国华",
+    "value": "高管"
+  },
+  {
+    "source": "林玉盛",
+    "target": "黄开饶",
+    "value": "高管"
+  },
+  {
+    "source": "陈国瑞",
+    "target": "黄珍勇",
+    "value": "高管"
+  },
+  {
+    "source": "陈淑平",
+    "target": "陈国瑞",
+    "value": "高管"
+  },
+  {
+    "source": "陈淑平",
+    "target": "詹国连",
+    "value": "高管"
+  },
+  {
+    "source": "李峰",
+    "target": "陈建华",
+    "value": "高管"
+  },
+  {
+    "source": "李峰",
+    "target": "林玉明",
+    "value": "高管"
+  },
+  {
+    "source": "苏金耀",
+    "target": "苏金家",
+    "value": "高管"
+  },
+  {
+    "source": "林志程",
+    "target": "林志忠",
+    "value": "高管"
+  },
+  {
+    "source": "林志程",
+    "target": "李君琳",
+    "value": "高管"
+  },
+  {
+    "source": "陈志诚",
+    "target": "杜莲香",
+    "value": "高管"
+  },
+  {
+    "source": "汪良明",
+    "target": "袁欣",
+    "value": "高管"
+  },
+  {
+    "source": "汪良明",
+    "target": "王魁元",
+    "value": "高管"
+  },
+  {
+    "source": "王魁元",
+    "target": "袁欣",
+    "value": "高管"
+  },
+  {
+    "source": "陈丽华",
+    "target": "桌国新",
+    "value": "高管"
+  },
+  {
+    "source": "林玉栋",
+    "target": "陈茂泉",
+    "value": "高管"
+  },
+  {
+    "source": "胡继川",
+    "target": "詹建洪",
+    "value": "高管"
+  },
+  {
+    "source": "胡继川",
+    "target": "黄清锋",
+    "value": "高管"
+  },
+  {
+    "source": "苏国喜",
+    "target": "詹建洪",
+    "value": "高管"
+  },
+  {
+    "source": "苏国喜",
+    "target": "胡继川",
+    "value": "高管"
+  },
+  {
+    "source": "苏国喜",
+    "target": "詹玉鹏",
+    "value": "高管"
+  },
+  {
+    "source": "苏国喜",
+    "target": "詹建扬",
+    "value": "高管"
+  },
+  {
+    "source": "苏国喜",
+    "target": "黄德龙",
+    "value": "高管"
+  },
+  {
+    "source": "苏国喜",
+    "target": "黄清锋",
+    "value": "高管"
+  },
+  {
+    "source": "黄德龙",
+    "target": "胡继川",
+    "value": "高管"
+  },
+  {
+    "source": "黄德龙",
+    "target": "詹玉鹏",
+    "value": "高管"
+  },
+  {
+    "source": "黄德龙",
+    "target": "詹建扬",
+    "value": "高管"
+  },
+  {
+    "source": "詹建洪",
+    "target": "陈建萍",
+    "value": "高管"
+  },
+  {
+    "source": "詹建洪",
+    "target": "童晓文",
+    "value": "高管"
+  },
+  {
+    "source": "詹建扬",
+    "target": "胡继川",
+    "value": "高管"
+  },
+  {
+    "source": "詹建扬",
+    "target": "詹玉鹏",
+    "value": "高管"
+  },
+  {
+    "source": "詹玉鹏",
+    "target": "胡继川",
+    "value": "高管"
+  },
+  {
+    "source": "吴剑煌",
+    "target": "林光利",
+    "value": "高管"
+  },
+  {
+    "source": "林琳琳",
+    "target": "占万龙",
+    "value": "高管"
+  },
+  {
+    "source": "陈国兴",
+    "target": "曾广荀",
+    "value": "高管"
+  },
+  {
+    "source": "陈国雄",
+    "target": "陈金章",
+    "value": "高管"
+  },
+  {
+    "source": "陈国雄",
+    "target": "蔡金兴",
+    "value": "高管"
+  },
+  {
+    "source": "程慧斌",
+    "target": "陈国雄",
+    "value": "高管"
+  },
+  {
+    "source": "陈新喜",
+    "target": "陈新贤",
+    "value": "高管"
+  },
+  {
+    "source": "陈新喜",
+    "target": "林瑞太",
+    "value": "高管"
+  },
+  {
+    "source": "魏荣达",
+    "target": "吴明枫",
+    "value": "高管"
+  },
+  {
+    "source": "黄琦斌",
+    "target": "薛朝华",
+    "value": "高管"
+  },
+  {
+    "source": "胡群峰",
+    "target": "林国腾",
+    "value": "高管"
+  },
+  {
+    "source": "吴勇汉",
+    "target": "吴德新",
+    "value": "高管"
+  },
+  {
+    "source": "王斌",
+    "target": "苏文金",
+    "value": "高管"
+  },
+  {
+    "source": "林建芬",
+    "target": "林元俊",
+    "value": "高管"
+  },
+  {
+    "source": "朱哲勇",
+    "target": "林志洪",
+    "value": "高管"
+  },
+  {
+    "source": "朱哲勇",
+    "target": "刘志盛",
+    "value": "高管"
+  },
+  {
+    "source": "陈建新",
+    "target": "陈建明",
+    "value": "高管"
+  },
+  {
+    "source": "林国彪",
+    "target": "李永刚",
+    "value": "高管"
+  },
+  {
+    "source": "林玉辉",
+    "target": "杨春法",
+    "value": "高管"
+  },
+  {
+    "source": "林玉辉",
+    "target": "蔡亚彬",
+    "value": "高管"
+  },
+  {
+    "source": "林玉辉",
+    "target": "苏玉照",
+    "value": "高管"
+  },
+  {
+    "source": "苏玉照",
+    "target": "杨春法",
+    "value": "高管"
+  },
+  {
+    "source": "苏玉照",
+    "target": "蔡亚彬",
+    "value": "高管"
+  },
+  {
+    "source": "詹美爱",
+    "target": "詹国团",
+    "value": "高管"
+  },
+  {
+    "source": "孙学仁",
+    "target": "游文华",
+    "value": "高管"
+  },
+  {
+    "source": "朱金财",
+    "target": "罗朝明",
+    "value": "高管"
+  },
+  {
+    "source": "朱金财",
+    "target": "蔡亚彬",
+    "value": "高管"
+  },
+  {
+    "source": "朱金财",
+    "target": "黄德锋",
+    "value": "高管"
+  },
+  {
+    "source": "朱金财",
+    "target": "林金土",
+    "value": "高管"
+  },
+  {
+    "source": "朱金财",
+    "target": "徐丽玉",
+    "value": "高管"
+  },
+  {
+    "source": "朱金财",
+    "target": "朱建东",
+    "value": "高管"
+  },
+  {
+    "source": "朱金财",
+    "target": "杨坚",
+    "value": "高管"
+  },
+  {
+    "source": "徐丽玉",
+    "target": "罗朝明",
+    "value": "高管"
+  },
+  {
+    "source": "徐丽玉",
+    "target": "蔡亚彬",
+    "value": "高管"
+  },
+  {
+    "source": "徐丽玉",
+    "target": "黄德锋",
+    "value": "高管"
+  },
+  {
+    "source": "徐丽玉",
+    "target": "林金土",
+    "value": "高管"
+  },
+  {
+    "source": "林金土",
+    "target": "罗朝明",
+    "value": "高管"
+  },
+  {
+    "source": "林金土",
+    "target": "蔡亚彬",
+    "value": "高管"
+  },
+  {
+    "source": "林金土",
+    "target": "黄德锋",
+    "value": "高管"
+  },
+  {
+    "source": "朱丽群",
+    "target": "李冬其",
+    "value": "高管"
+  },
+  {
+    "source": "朱丽群",
+    "target": "蔡兵洪",
+    "value": "高管"
+  },
+  {
+    "source": "朱丽群",
+    "target": "曾献志",
+    "value": "高管"
+  },
+  {
+    "source": "林国雄",
+    "target": "林建飞",
+    "value": "高管"
+  },
+  {
+    "source": "林国雄",
+    "target": "林国瑞",
+    "value": "高管"
+  },
+  {
+    "source": "吴建新",
+    "target": "吴元良",
+    "value": "高管"
+  },
+  {
+    "source": "林元清",
+    "target": "魏荣达",
+    "value": "高管"
+  },
+  {
+    "source": "黄凯",
+    "target": "李金耀",
+    "value": "高管"
+  },
+  {
+    "source": "黄凯",
+    "target": "李志冰",
+    "value": "高管"
+  },
+  {
+    "source": "黄凯",
+    "target": "陈庆龙",
+    "value": "高管"
+  },
+  {
+    "source": "李国强",
+    "target": "李国柏",
+    "value": "高管"
+  },
+  {
+    "source": "林兆晞",
+    "target": "叶志阳",
+    "value": "高管"
+  },
+  {
+    "source": "吴秋云",
+    "target": "李志龙",
+    "value": "高管"
+  },
+  {
+    "source": "刘金太",
+    "target": "张蒂",
+    "value": "高管"
+  },
+  {
+    "source": "詹国城",
+    "target": "陈国兴",
+    "value": "高管"
+  },
+  {
+    "source": "卓明进",
+    "target": "林国珍",
+    "value": "高管"
+  },
+  {
+    "source": "林国珍",
+    "target": "陈志镇",
+    "value": "高管"
+  },
+  {
+    "source": "林国珍",
+    "target": "卓明进",
+    "value": "高管"
+  },
+  {
+    "source": "李志冰",
+    "target": "李金耀",
+    "value": "高管"
+  },
+  {
+    "source": "肖文汉",
+    "target": "郑建铭",
+    "value": "高管"
+  },
+  {
+    "source": "陈国新",
+    "target": "郑建山",
+    "value": "高管"
+  },
+  {
+    "source": "李生毅",
+    "target": "谢巨凡",
+    "value": "高管"
+  },
+  {
+    "source": "林瑞勇",
+    "target": "施国杰",
+    "value": "高管"
+  },
+  {
+    "source": "林建贤",
+    "target": "林建潘",
+    "value": "高管"
+  },
+  {
+    "source": "徐俊峰",
+    "target": "王胜磊",
+    "value": "高管"
+  },
+  {
+    "source": "林丽英",
+    "target": "曾广荀",
+    "value": "高管"
+  },
+  {
+    "source": "林丽英",
+    "target": "陈国兴",
+    "value": "高管"
+  },
+  {
+    "source": "林丽英",
+    "target": "林新兴",
+    "value": "高管"
+  },
+  {
+    "source": "林丽英",
+    "target": "龚宇",
+    "value": "高管"
+  },
+  {
+    "source": "林丽英",
+    "target": "张少白",
+    "value": "高管"
+  },
+  {
+    "source": "林臻",
+    "target": "肖暹",
+    "value": "高管"
+  },
+  {
+    "source": "肖暹",
+    "target": "林琼",
+    "value": "高管"
+  },
+  {
+    "source": "林建良",
+    "target": "陈金章",
+    "value": "高管"
+  },
+  {
+    "source": "林建良",
+    "target": "刑亚东",
+    "value": "高管"
+  },
+  {
+    "source": "陈文粦",
+    "target": "陈金章",
+    "value": "高管"
+  },
+  {
+    "source": "陈文粦",
+    "target": "刑亚东",
+    "value": "高管"
+  },
+  {
+    "source": "陈文粦",
+    "target": "林建良",
+    "value": "高管"
+  },
+  {
+    "source": "张晓玉",
+    "target": "林玉国",
+    "value": "高管"
+  },
+  {
+    "source": "张晓玉",
+    "target": "李文凤",
+    "value": "高管"
+  },
+  {
+    "source": "何长福",
+    "target": "林玉盛",
+    "value": "高管"
+  },
+  {
+    "source": "曾真",
+    "target": "程智斌",
+    "value": "高管"
+  },
+  {
+    "source": "曾真",
+    "target": "陈国雄",
+    "value": "高管"
+  },
+  {
+    "source": "曾真",
+    "target": "陈汉章",
+    "value": "高管"
+  },
+  {
+    "source": "詹建光",
+    "target": "程智斌",
+    "value": "高管"
+  },
+  {
+    "source": "詹建光",
+    "target": "曾真",
+    "value": "高管"
+  },
+  {
+    "source": "赵建坤",
+    "target": "林兆晞",
+    "value": "高管"
+  },
+  {
+    "source": "赵建坤",
+    "target": "黄金树",
+    "value": "高管"
+  },
+  {
+    "source": "陈志强",
+    "target": "詹国平",
+    "value": "高管"
+  },
+  {
+    "source": "陈建萍",
+    "target": "詹玉鹏",
+    "value": "高管"
+  },
+  {
+    "source": "陈建萍",
+    "target": "柯向阳",
+    "value": "高管"
+  },
+  {
+    "source": "柯向阳",
+    "target": "詹玉鹏",
+    "value": "高管"
+  },
+  {
+    "source": "陈国洪",
+    "target": "陈建萍",
+    "value": "高管"
+  },
+  {
+    "source": "陈国洪",
+    "target": "童晓文",
+    "value": "高管"
+  },
+  {
+    "source": "陈国洪",
+    "target": "詹建洪",
+    "value": "高管"
+  },
+  {
+    "source": "卓立强",
+    "target": "朱敏",
+    "value": "高管"
+  },
+  {
+    "source": "陈山",
+    "target": "陈金秀",
+    "value": "高管"
+  },
+  {
+    "source": "郑洪",
+    "target": "林瑞泉",
+    "value": "高管"
+  },
+  {
+    "source": "刘志盛",
+    "target": "林志洪",
+    "value": "高管"
+  },
+  {
+    "source": "李开添",
+    "target": "陈志煌",
+    "value": "高管"
+  },
+  {
+    "source": "陈福斌",
+    "target": "杨振富",
+    "value": "高管"
+  },
+  {
+    "source": "王根生",
+    "target": "苏继荣",
+    "value": "高管"
+  },
+  {
+    "source": "黄文其",
+    "target": "李文献",
+    "value": "高管"
+  },
+  {
+    "source": "詹加龙",
+    "target": "洪鹭青",
+    "value": "高管"
+  },
+  {
+    "source": "于涛",
+    "target": "徐忠友",
+    "value": "高管"
+  },
+  {
+    "source": "付天俊",
+    "target": "李金良",
+    "value": "高管"
+  },
+  {
+    "source": "柯元芳",
+    "target": "黄开添",
+    "value": "高管"
+  },
+  {
+    "source": "张金寿",
+    "target": "陈国涛",
+    "value": "高管"
+  },
+  {
+    "source": "林志忠",
+    "target": "林爱香",
+    "value": "高管"
+  },
+  {
+    "source": "林丽君",
+    "target": "林爱香",
+    "value": "高管"
+  },
+  {
+    "source": "林新强",
+    "target": "林淑花",
+    "value": "高管"
+  },
+  {
+    "source": "林新平",
+    "target": "林爱香",
+    "value": "高管"
+  },
+  {
+    "source": "林爱香",
+    "target": "林志忠",
+    "value": "高管"
+  },
+  {
+    "source": "林爱香",
+    "target": "林翠云",
+    "value": "高管"
+  },
+  {
+    "source": "林建芳",
+    "target": "潘清祥",
+    "value": "高管"
+  },
+  {
+    "source": "唐宝平",
+    "target": "林志忠",
+    "value": "高管"
+  },
+  {
+    "source": "唐宝平",
+    "target": "林志程",
+    "value": "高管"
+  },
+  {
+    "source": "蔡金兴",
+    "target": "陈金章",
+    "value": "高管"
+  },
+  {
+    "source": "詹嘉豪",
+    "target": "洪鹭青",
+    "value": "高管"
+  },
+  {
+    "source": "詹嘉豪",
+    "target": "詹加龙",
+    "value": "高管"
+  },
+  {
+    "source": "游黎飞",
+    "target": "李金山",
+    "value": "高管"
+  },
+  {
+    "source": "刘开泉",
+    "target": "詹嘉武",
+    "value": "高管"
+  },
+  {
+    "source": "詹彼德",
+    "target": "祝朋军",
+    "value": "高管"
+  },
+  {
+    "source": "詹阳程",
+    "target": "陈志东",
+    "value": "高管"
+  },
+  {
+    "source": "詹阳程",
+    "target": "陈庭芳",
+    "value": "高管"
+  },
+  {
+    "source": "占阳珊",
+    "target": "朱敏",
+    "value": "高管"
+  },
+  {
+    "source": "占阳珊",
+    "target": "卓立强",
+    "value": "高管"
+  },
+  {
+    "source": "詹开林",
+    "target": "黄开添",
+    "value": "高管"
+  },
+  {
+    "source": "詹开林",
+    "target": "黄开飞",
+    "value": "高管"
+  },
+  {
+    "source": "翁金栋",
+    "target": "林金动",
+    "value": "高管"
+  },
+  {
+    "source": "黄元聪",
+    "target": "许乌烘",
+    "value": "高管"
+  },
+  {
+    "source": "林梅兰",
+    "target": "林瑞兴",
+    "value": "高管"
+  },
+  {
+    "source": "沈雪峰",
+    "target": "黄开飞",
+    "value": "高管"
+  },
+  {
+    "source": "李金同",
+    "target": "李金山",
+    "value": "高管"
+  },
+  {
+    "source": "邹梅洪",
+    "target": "郑奇峰",
+    "value": "高管"
+  },
+  {
+    "source": "杨丽新",
+    "target": "林黎明",
+    "value": "高管"
+  },
+  {
+    "source": "陈建成",
+    "target": "吴福先",
+    "value": "高管"
+  },
+  {
+    "source": "林楚乾",
+    "target": "林鸿镇",
+    "value": "高管"
+  },
+  {
+    "source": "李金圆",
+    "target": "吴金才",
+    "value": "高管"
+  },
+  {
+    "source": "李金圆",
+    "target": "吴耿乙",
+    "value": "高管"
+  },
+  {
+    "source": "李爱金",
+    "target": "林建飞",
+    "value": "高管"
+  },
+  {
+    "source": "李爱金",
+    "target": "吴金才",
+    "value": "高管"
+  },
+  {
+    "source": "李爱金",
+    "target": "李金圆",
+    "value": "高管"
+  },
+  {
+    "source": "詹文焰",
+    "target": "詹珍金",
+    "value": "高管"
+  },
+  {
+    "source": "詹文焰",
+    "target": "卓国林",
+    "value": "高管"
+  },
+  {
+    "source": "宋杨杨",
+    "target": "王冠",
+    "value": "高管"
+  },
+  {
+    "source": "宋杨杨",
+    "target": "王晓泸",
+    "value": "高管"
+  },
+  {
+    "source": "王晓泸",
+    "target": "宋杨杨",
+    "value": "高管"
+  },
+  {
+    "source": "王晓泸",
+    "target": "王冠",
+    "value": "高管"
+  },
+  {
+    "source": "陈志镇",
+    "target": "林国珍",
+    "value": "高管"
+  },
+  {
+    "source": "林建舟",
+    "target": "蔡金尾",
+    "value": "高管"
+  },
+  {
+    "source": "黄建平",
+    "target": "蔡金尾",
+    "value": "高管"
+  },
+  {
+    "source": "黄建平",
+    "target": "林建舟",
+    "value": "高管"
+  },
+  {
+    "source": "李方新",
+    "target": "黄舜强",
+    "value": "高管"
+  },
+  {
+    "source": "林明开",
+    "target": "林宗金",
+    "value": "高管"
+  },
+  {
+    "source": "林明开",
+    "target": "鞠占富",
+    "value": "高管"
+  },
+  {
+    "source": "林明雄",
+    "target": "苏金家",
+    "value": "高管"
+  },
+  {
+    "source": "林明雄",
+    "target": "苏金耀",
+    "value": "高管"
+  },
+  {
+    "source": "卓国潘",
+    "target": "卓国金",
+    "value": "高管"
+  },
+  {
+    "source": "卓国潘",
+    "target": "阮维锋",
+    "value": "高管"
+  },
+  {
+    "source": "阮维锋",
+    "target": "卓国金",
+    "value": "高管"
+  },
+  {
+    "source": "苏文忠",
+    "target": "苏文良",
+    "value": "高管"
+  },
+  {
+    "source": "林军兵",
+    "target": "陈国勇",
+    "value": "高管"
+  },
+  {
+    "source": "林军兵",
+    "target": "柳韬",
+    "value": "高管"
+  },
+  {
+    "source": "陈春霖",
+    "target": "陈俊山",
+    "value": "高管"
+  },
+  {
+    "source": "朱海霞",
+    "target": "陈国兴",
+    "value": "高管"
+  },
+  {
+    "source": "朱海霞",
+    "target": "杨献东",
+    "value": "高管"
+  },
+  {
+    "source": "朱海霞",
+    "target": "王为民",
+    "value": "高管"
+  },
+  {
+    "source": "詹宗阳",
+    "target": "陈国兴",
+    "value": "高管"
+  },
+  {
+    "source": "詹宗阳",
+    "target": "朱海霞",
+    "value": "高管"
+  },
+  {
+    "source": "郑俊青",
+    "target": "林金后",
+    "value": "高管"
+  },
+  {
+    "source": "王峰",
+    "target": "吕雪梅",
+    "value": "高管"
+  },
+  {
+    "source": "吴奇斌",
+    "target": "游再寿",
+    "value": "高管"
+  },
+  {
+    "source": "吴奇斌",
+    "target": "陈意雄",
+    "value": "高管"
+  },
+  {
+    "source": "陈意雄",
+    "target": "游再寿",
+    "value": "高管"
+  },
+  {
+    "source": "王为民",
+    "target": "杨献东",
+    "value": "高管"
+  },
+  {
+    "source": "詹光俊",
+    "target": "林宗太",
+    "value": "高管"
+  },
+  {
+    "source": "任德盛",
+    "target": "陈志腾",
+    "value": "高管"
+  },
+  {
+    "source": "梁顺珍",
+    "target": "阮龙勇",
+    "value": "高管"
+  },
+  {
+    "source": "朱建东",
+    "target": "罗朝明",
+    "value": "高管"
+  },
+  {
+    "source": "朱建东",
+    "target": "蔡亚彬",
+    "value": "高管"
+  },
+  {
+    "source": "朱建东",
+    "target": "黄德锋",
+    "value": "高管"
+  },
+  {
+    "source": "朱建东",
+    "target": "林金土",
+    "value": "高管"
+  },
+  {
+    "source": "朱建东",
+    "target": "徐丽玉",
+    "value": "高管"
+  },
+  {
+    "source": "吴建生",
+    "target": "林金汉",
+    "value": "高管"
+  },
+  {
+    "source": "曾献志",
+    "target": "李冬其",
+    "value": "高管"
+  },
+  {
+    "source": "曾献志",
+    "target": "蔡兵洪",
+    "value": "高管"
+  },
+  {
+    "source": "蔡兵洪",
+    "target": "李冬其",
+    "value": "高管"
+  },
+  {
+    "source": "蔡兵洪",
+    "target": "罗朝明",
+    "value": "高管"
+  },
+  {
+    "source": "蔡兵洪",
+    "target": "蔡亚彬",
+    "value": "高管"
+  },
+  {
+    "source": "蔡兵洪",
+    "target": "黄德锋",
+    "value": "高管"
+  },
+  {
+    "source": "蔡兵洪",
+    "target": "林金土",
+    "value": "高管"
+  },
+  {
+    "source": "蔡兵洪",
+    "target": "徐丽玉",
+    "value": "高管"
+  },
+  {
+    "source": "蔡兵洪",
+    "target": "朱建东",
+    "value": "高管"
+  },
+  {
+    "source": "蔡兵洪",
+    "target": "杨坚",
+    "value": "高管"
+  },
+  {
+    "source": "蔡兵洪",
+    "target": "朱金财",
+    "value": "高管"
+  },
+  {
+    "source": "林金銮",
+    "target": "李兴华",
+    "value": "高管"
+  },
+  {
+    "source": "许朝星",
+    "target": "邵丽叶",
+    "value": "高管"
+  },
+  {
+    "source": "苏飞鹏",
+    "target": "林滚",
+    "value": "高管"
+  },
+  {
+    "source": "林宗海",
+    "target": "蔡金明",
+    "value": "高管"
+  },
+  {
+    "source": "黄建成",
+    "target": "陈德芳",
+    "value": "高管"
+  },
+  {
+    "source": "徐玉林",
+    "target": "林秀烟",
+    "value": "高管"
+  },
+  {
+    "source": "秦建平",
+    "target": "王晚梅",
+    "value": "高管"
+  },
+  {
+    "source": "吴子荣",
+    "target": "吴天宗",
+    "value": "高管"
+  },
+  {
+    "source": "张泽军",
+    "target": "苏文芳",
+    "value": "高管"
+  },
+  {
+    "source": "吴启俊",
+    "target": "林炳祥",
+    "value": "高管"
+  },
+  {
+    "source": "张晓泽",
+    "target": "吴清水",
+    "value": "高管"
+  },
+  {
+    "source": "蒋忠远",
+    "target": "王培舟",
+    "value": "高管"
+  },
+  {
+    "source": "蒋忠远",
+    "target": "丛志刚",
+    "value": "高管"
+  },
+  {
+    "source": "丛志刚",
+    "target": "王培舟",
+    "value": "高管"
+  },
+  {
+    "source": "吴洪绪",
+    "target": "林金宗",
+    "value": "高管"
+  },
+  {
+    "source": "戴莉",
+    "target": "成立兵",
+    "value": "高管"
+  },
+  {
+    "source": "戴莉",
+    "target": "张晓丹",
+    "value": "高管"
+  },
+  {
+    "source": "戴莉",
+    "target": "郭文明",
+    "value": "高管"
+  },
+  {
+    "source": "郭文明",
+    "target": "成立兵",
+    "value": "高管"
+  },
+  {
+    "source": "郭文明",
+    "target": "张晓丹",
+    "value": "高管"
+  },
+  {
+    "source": "张晓丹",
+    "target": "成立兵",
+    "value": "高管"
+  },
+  {
+    "source": "杨光富",
+    "target": "吴洪豹",
+    "value": "高管"
+  },
+  {
+    "source": "杨光富",
+    "target": "杨美先",
+    "value": "高管"
+  },
+  {
+    "source": "江雯娟",
+    "target": "丁立奇",
+    "value": "高管"
+  },
+  {
+    "source": "江雯娟",
+    "target": "王志红",
+    "value": "高管"
+  },
+  {
+    "source": "王志红",
+    "target": "张梦婷",
+    "value": "高管"
+  },
+  {
+    "source": "王志红",
+    "target": "范舟",
+    "value": "高管"
+  },
+  {
+    "source": "王志红",
+    "target": "丁立奇",
+    "value": "高管"
+  },
+  {
+    "source": "方先",
+    "target": "卓国金",
+    "value": "高管"
+  },
+  {
+    "source": "吴建裕",
+    "target": "蒋林",
+    "value": "高管"
+  },
+  {
+    "source": "林勇斌",
+    "target": "卓建山",
+    "value": "高管"
+  },
+  {
+    "source": "林勇斌",
+    "target": "卓国华",
+    "value": "高管"
+  },
+  {
+    "source": "吴廷文",
+    "target": "苏建清",
+    "value": "高管"
+  },
+  {
+    "source": "吴廷文",
+    "target": "林玉明",
+    "value": "高管"
+  },
+  {
+    "source": "林建军",
+    "target": "李文凤",
+    "value": "高管"
+  },
+  {
+    "source": "林建军",
+    "target": "林玉明",
+    "value": "高管"
+  },
+  {
+    "source": "李文凤",
+    "target": "林玉国",
+    "value": "高管"
+  },
+  {
+    "source": "李文凤",
+    "target": "苏金汉",
+    "value": "高管"
+  },
+  {
+    "source": "李文凤",
+    "target": "甘勇",
+    "value": "高管"
+  },
+  {
+    "source": "林雨",
+    "target": "叶志阳",
+    "value": "高管"
+  },
+  {
+    "source": "魏杭",
+    "target": "陈俊熙",
+    "value": "高管"
+  },
+  {
+    "source": "黄卫民",
+    "target": "刘培",
+    "value": "高管"
+  },
+  {
+    "source": "黄卫民",
+    "target": "邓成桂",
+    "value": "高管"
+  },
+  {
+    "source": "邓成桂",
+    "target": "刘培",
+    "value": "高管"
+  },
+  {
+    "source": "江金山",
+    "target": "杨春法",
+    "value": "高管"
+  },
+  {
+    "source": "江金山",
+    "target": "吴雨霞",
+    "value": "高管"
+  },
+  {
+    "source": "江金山",
+    "target": "方明庆",
+    "value": "高管"
+  },
+  {
+    "source": "江金山",
+    "target": "朱寄群",
+    "value": "高管"
+  },
+  {
+    "source": "江金山",
+    "target": "阮柯巧",
+    "value": "高管"
+  },
+  {
+    "source": "阮柯巧",
+    "target": "杨春法",
+    "value": "高管"
+  },
+  {
+    "source": "阮柯巧",
+    "target": "吴雨霞",
+    "value": "高管"
+  },
+  {
+    "source": "阮柯巧",
+    "target": "方明庆",
+    "value": "高管"
+  },
+  {
+    "source": "阮柯巧",
+    "target": "朱寄群",
+    "value": "高管"
+  },
+  {
+    "source": "朱寄群",
+    "target": "杨春法",
+    "value": "高管"
+  },
+  {
+    "source": "朱寄群",
+    "target": "吴雨霞",
+    "value": "高管"
+  },
+  {
+    "source": "朱寄群",
+    "target": "方明庆",
+    "value": "高管"
+  },
+  {
+    "source": "方明庆",
+    "target": "杨春法",
+    "value": "高管"
+  },
+  {
+    "source": "方明庆",
+    "target": "吴雨霞",
+    "value": "高管"
+  },
+  {
+    "source": "杨春法",
+    "target": "何玉枚",
+    "value": "高管"
+  },
+  {
+    "source": "汤源武",
+    "target": "郑志坚",
+    "value": "高管"
+  },
+  {
+    "source": "汤源武",
+    "target": "叶志阳",
+    "value": "高管"
+  },
+  {
+    "source": "王剑",
+    "target": "王国勇",
+    "value": "高管"
+  },
+  {
+    "source": "邓国杰",
+    "target": "麦嘉霖",
+    "value": "高管"
+  },
+  {
+    "source": "邓国杰",
+    "target": "何冠西",
+    "value": "高管"
+  },
+  {
+    "source": "邓国杰",
+    "target": "简佩桃",
+    "value": "高管"
+  },
+  {
+    "source": "黄峰泉",
+    "target": "陈立功",
+    "value": "高管"
+  },
+  {
+    "source": "吴天和",
+    "target": "潘清祥",
+    "value": "高管"
+  },
+  {
+    "source": "涂孝明",
+    "target": "林志程",
+    "value": "高管"
+  },
+  {
+    "source": "涂孝明",
+    "target": "林绍华",
+    "value": "高管"
+  },
+  {
+    "source": "林绍华",
+    "target": "林志程",
+    "value": "高管"
+  },
+  {
+    "source": "苏宜凡",
+    "target": "陈立功",
+    "value": "高管"
+  },
+  {
+    "source": "林志华",
+    "target": "苏建清",
+    "value": "高管"
+  },
+  {
+    "source": "林志华",
+    "target": "李文凤",
+    "value": "高管"
+  },
+  {
+    "source": "林志华",
+    "target": "林玉明",
+    "value": "高管"
+  },
+  {
+    "source": "黄清锋",
+    "target": "詹建洪",
+    "value": "高管"
+  },
+  {
+    "source": "黄清锋",
+    "target": "胡继川",
+    "value": "高管"
+  },
+  {
+    "source": "黄清锋",
+    "target": "詹玉鹏",
+    "value": "高管"
+  },
+  {
+    "source": "黄清锋",
+    "target": "詹建扬",
+    "value": "高管"
+  },
+  {
+    "source": "黄清锋",
+    "target": "黄德龙",
+    "value": "高管"
+  },
+  {
+    "source": "陈汉章",
+    "target": "王为民",
+    "value": "高管"
+  },
+  {
+    "source": "陈汉章",
+    "target": "郑梅华",
+    "value": "高管"
+  },
+  {
+    "source": "陈汉章",
+    "target": "陈国雄",
+    "value": "高管"
+  },
+  {
+    "source": "陈汉章",
+    "target": "程慧斌",
+    "value": "高管"
+  },
+  {
+    "source": "范舟",
+    "target": "张梦婷",
+    "value": "高管"
+  },
+  {
+    "source": "苏裕洪",
+    "target": "黄国成",
+    "value": "高管"
+  },
+  {
+    "source": "林启良",
+    "target": "林国腾",
+    "value": "高管"
+  },
+  {
+    "source": "林启良",
+    "target": "胡群峰",
+    "value": "高管"
+  },
+  {
+    "source": "刘福全",
+    "target": "曾子显",
+    "value": "高管"
+  },
+  {
+    "source": "林凡",
+    "target": "苏文金",
+    "value": "高管"
+  },
+  {
+    "source": "林凡",
+    "target": "王斌",
+    "value": "高管"
+  },
+  {
+    "source": "吴琳",
+    "target": "林元俊",
+    "value": "高管"
+  },
+  {
+    "source": "吴琳",
+    "target": "林建芬",
+    "value": "高管"
+  },
+  {
+    "source": "凌春波",
+    "target": "陈济芬",
+    "value": "高管"
+  },
+  {
+    "source": "凌春波",
+    "target": "林荣森",
+    "value": "高管"
+  },
+  {
+    "source": "林荣森",
+    "target": "陈济芬",
+    "value": "高管"
+  },
+  {
+    "source": "杨坚",
+    "target": "罗朝明",
+    "value": "高管"
+  },
+  {
+    "source": "杨坚",
+    "target": "蔡亚彬",
+    "value": "高管"
+  },
+  {
+    "source": "杨坚",
+    "target": "黄德锋",
+    "value": "高管"
+  },
+  {
+    "source": "杨坚",
+    "target": "林金土",
+    "value": "高管"
+  },
+  {
+    "source": "杨坚",
+    "target": "徐丽玉",
+    "value": "高管"
+  },
+  {
+    "source": "杨坚",
+    "target": "朱建东",
+    "value": "高管"
+  },
+  {
+    "source": "黄天铸",
+    "target": "林建飞",
+    "value": "高管"
+  },
+  {
+    "source": "黄天铸",
+    "target": "林国瑞",
+    "value": "高管"
+  },
+  {
+    "source": "黄天铸",
+    "target": "林国雄",
+    "value": "高管"
+  },
+  {
+    "source": "林国瑞",
+    "target": "林建飞",
+    "value": "高管"
+  },
+  {
+    "source": "陈清剑",
+    "target": "李寿伙",
+    "value": "高管"
+  },
+  {
+    "source": "陈清剑",
+    "target": "吴国付",
+    "value": "高管"
+  },
+  {
+    "source": "吴国付",
+    "target": "李寿伙",
+    "value": "高管"
+  },
+  {
+    "source": "游庆洪",
+    "target": "吴建新",
+    "value": "高管"
+  },
+  {
+    "source": "刘恒兴",
+    "target": "叶志阳",
+    "value": "高管"
+  },
+  {
+    "source": "刘恒兴",
+    "target": "林兆晞",
+    "value": "高管"
+  },
+  {
+    "source": "张秀德",
+    "target": "李德林",
+    "value": "高管"
+  },
+  {
+    "source": "郑建峰",
+    "target": "郑建铭",
+    "value": "高管"
+  },
+  {
+    "source": "郑建峰",
+    "target": "肖文汉",
+    "value": "高管"
+  },
+  {
+    "source": "王永太",
+    "target": "郑建山",
+    "value": "高管"
+  },
+  {
+    "source": "王永太",
+    "target": "陈国新",
+    "value": "高管"
+  },
+  {
+    "source": "陈元和",
+    "target": "林建潘",
+    "value": "高管"
+  },
+  {
+    "source": "陈元和",
+    "target": "林建贤",
+    "value": "高管"
+  },
+  {
+    "source": "刘雪娟",
+    "target": "陈国凤",
+    "value": "高管"
+  },
+  {
+    "source": "陈美华",
+    "target": "林丽英",
+    "value": "高管"
+  },
+  {
+    "source": "张少白",
+    "target": "龚宇",
+    "value": "高管"
+  },
+  {
+    "source": "陈敏",
+    "target": "吴易璨",
+    "value": "高管"
+  },
+  {
+    "source": "陈敏",
+    "target": "李娟",
+    "value": "高管"
+  },
+  {
+    "source": "李娟",
+    "target": "吴易璨",
+    "value": "高管"
+  },
+  {
+    "source": "刑亚东",
+    "target": "陈金章",
+    "value": "高管"
+  },
+  {
+    "source": "周璐",
+    "target": "向红敏",
+    "value": "高管"
+  },
+  {
+    "source": "周璐",
+    "target": "柳菲菲",
+    "value": "高管"
+  },
+  {
+    "source": "周璐",
+    "target": "韩笑冰",
+    "value": "高管"
+  },
+  {
+    "source": "周璐",
+    "target": "李军霞",
+    "value": "高管"
+  },
+  {
+    "source": "周璐",
+    "target": "陶琳",
+    "value": "高管"
+  },
+  {
+    "source": "陶琳",
+    "target": "向红敏",
+    "value": "高管"
+  },
+  {
+    "source": "陶琳",
+    "target": "柳菲菲",
+    "value": "高管"
+  },
+  {
+    "source": "陶琳",
+    "target": "韩笑冰",
+    "value": "高管"
+  },
+  {
+    "source": "陶琳",
+    "target": "李军霞",
+    "value": "高管"
+  },
+  {
+    "source": "李军霞",
+    "target": "向红敏",
+    "value": "高管"
+  },
+  {
+    "source": "李军霞",
+    "target": "柳菲菲",
+    "value": "高管"
+  },
+  {
+    "source": "李军霞",
+    "target": "韩笑冰",
+    "value": "高管"
+  },
+  {
+    "source": "韩笑冰",
+    "target": "向红敏",
+    "value": "高管"
+  },
+  {
+    "source": "韩笑冰",
+    "target": "柳菲菲",
+    "value": "高管"
+  },
+  {
+    "source": "柳菲菲",
+    "target": "向红敏",
+    "value": "高管"
+  },
+  {
+    "source": "黄金树",
+    "target": "林兆晞",
+    "value": "高管"
+  },
+  {
+    "source": "黄开饶",
+    "target": "潘国华",
+    "value": "高管"
+  },
+  {
+    "source": "苏金模",
+    "target": "詹玉鹏",
+    "value": "高管"
+  },
+  {
+    "source": "苏金模",
+    "target": "柯向阳",
+    "value": "高管"
+  },
+  {
+    "source": "苏金模",
+    "target": "陈建萍",
+    "value": "高管"
+  },
+  {
+    "source": "苏金模",
+    "target": "詹珊珊",
+    "value": "高管"
+  },
+  {
+    "source": "詹珊珊",
+    "target": "詹玉鹏",
+    "value": "高管"
+  },
+  {
+    "source": "詹珊珊",
+    "target": "柯向阳",
+    "value": "高管"
+  },
+  {
+    "source": "詹珊珊",
+    "target": "陈建萍",
+    "value": "高管"
+  },
+  {
+    "source": "陈凌",
+    "target": "陈建萍",
+    "value": "高管"
+  },
+  {
+    "source": "陈凌",
+    "target": "黄庆飞",
+    "value": "高管"
+  },
+  {
+    "source": "黄庆飞",
+    "target": "陈建萍",
+    "value": "高管"
+  },
+  {
+    "source": "林国锋",
+    "target": "黄建海",
+    "value": "高管"
+  },
+  {
+    "source": "陈建坤",
+    "target": "徐祖贤",
+    "value": "高管"
+  },
+  {
+    "source": "陈建坤",
+    "target": "陈耀明",
+    "value": "高管"
+  },
+  {
+    "source": "陈耀明",
+    "target": "徐祖贤",
+    "value": "高管"
+  },
+  {
+    "source": "林伟明",
+    "target": "杨振富",
+    "value": "高管"
+  },
+  {
+    "source": "林伟明",
+    "target": "陈福斌",
+    "value": "高管"
+  },
+  {
+    "source": "叶小建",
+    "target": "潘庆荣",
+    "value": "高管"
+  },
+  {
+    "source": "栗豪",
+    "target": "陈志强",
+    "value": "高管"
+  },
+  {
+    "source": "占文营",
+    "target": "詹加龙",
+    "value": "高管"
+  },
+  {
+    "source": "肖亚珠",
+    "target": "林福兵",
+    "value": "高管"
+  },
+  {
+    "source": "肖亚珠",
+    "target": "林丹",
+    "value": "高管"
+  },
+  {
+    "source": "林丹",
+    "target": "林福兵",
+    "value": "高管"
+  },
+  {
+    "source": "张晓鹏",
+    "target": "陈志雄",
+    "value": "高管"
+  },
+  {
+    "source": "周义明",
+    "target": "黄开添",
+    "value": "高管"
+  },
+  {
+    "source": "周义明",
+    "target": "柯元芳",
+    "value": "高管"
+  },
+  {
+    "source": "周义明",
+    "target": "柯国良",
+    "value": "高管"
+  },
+  {
+    "source": "柯国良",
+    "target": "黄开添",
+    "value": "高管"
+  },
+  {
+    "source": "柯国良",
+    "target": "柯元芳",
+    "value": "高管"
+  },
+  {
+    "source": "肖秀建",
+    "target": "李金良",
+    "value": "高管"
+  },
+  {
+    "source": "张卓",
+    "target": "李俊雄",
+    "value": "高管"
+  },
+  {
+    "source": "黄开山",
+    "target": "柯元芳",
+    "value": "高管"
+  },
+  {
+    "source": "林翠云",
+    "target": "林志忠",
+    "value": "高管"
+  },
+  {
+    "source": "杜娟",
+    "target": "陈建洪",
+    "value": "高管"
+  },
+  {
+    "source": "陈庭芳",
+    "target": "陈志东",
+    "value": "高管"
+  },
+  {
+    "source": "赵兴力",
+    "target": "林志通",
+    "value": "高管"
+  },
+  {
+    "source": "赵兴力",
+    "target": "林玉明",
+    "value": "高管"
+  },
+  {
+    "source": "林南生",
+    "target": "吴耿乙",
+    "value": "高管"
+  },
+  {
+    "source": "林南生",
+    "target": "李金圆",
+    "value": "高管"
+  },
+  {
+    "source": "林宗喜",
+    "target": "黄维杰",
+    "value": "高管"
+  },
+  {
+    "source": "林宗喜",
+    "target": "林宗琰",
+    "value": "高管"
+  },
+  {
+    "source": "卓国林",
+    "target": "詹珍金",
+    "value": "高管"
+  },
+  {
+    "source": "张艳红",
+    "target": "林爱香",
+    "value": "高管"
+  },
+  {
+    "source": "张艳红",
+    "target": "林丽君",
+    "value": "高管"
+  },
+  {
+    "source": "毛江涛",
+    "target": "林宗金",
+    "value": "高管"
+  },
+  {
+    "source": "毛江涛",
+    "target": "鞠占富",
+    "value": "高管"
+  },
+  {
+    "source": "毛江涛",
+    "target": "林明开",
+    "value": "高管"
+  },
+  {
+    "source": "毛江涛",
+    "target": "王艳",
+    "value": "高管"
+  },
+  {
+    "source": "毛江涛",
+    "target": "刘凯",
+    "value": "高管"
+  },
+  {
+    "source": "刘凯",
+    "target": "林宗金",
+    "value": "高管"
+  },
+  {
+    "source": "刘凯",
+    "target": "鞠占富",
+    "value": "高管"
+  },
+  {
+    "source": "刘凯",
+    "target": "林明开",
+    "value": "高管"
+  },
+  {
+    "source": "刘凯",
+    "target": "王艳",
+    "value": "高管"
+  },
+  {
+    "source": "王艳",
+    "target": "林宗金",
+    "value": "高管"
+  },
+  {
+    "source": "王艳",
+    "target": "鞠占富",
+    "value": "高管"
+  },
+  {
+    "source": "王艳",
+    "target": "林明开",
+    "value": "高管"
+  },
+  {
+    "source": "鞠占富",
+    "target": "林宗金",
+    "value": "高管"
+  },
+  {
+    "source": "高菲菲",
+    "target": "林吓连",
+    "value": "高管"
+  },
+  {
+    "source": "林卡",
+    "target": "柯建珊",
+    "value": "高管"
+  },
+  {
+    "source": "柳韬",
+    "target": "陈国勇",
+    "value": "高管"
+  },
+  {
+    "source": "陈少华",
+    "target": "詹宇辉",
+    "value": "高管"
+  },
+  {
+    "source": "林俊兴",
+    "target": "苑瑞华",
+    "value": "高管"
+  },
+  {
+    "source": "李庆章",
+    "target": "魏荣达",
+    "value": "高管"
+  },
+  {
+    "source": "李庆章",
+    "target": "林元清",
+    "value": "高管"
+  },
+  {
+    "source": "郑梅华",
+    "target": "王为民",
+    "value": "高管"
+  },
+  {
+    "source": "童晓文",
+    "target": "陈建萍",
+    "value": "高管"
+  },
+  {
+    "source": "崔美松",
+    "target": "范银龙",
+    "value": "高管"
+  },
+  {
+    "source": "林金耀",
+    "target": "曾哲民",
+    "value": "高管"
+  },
+  {
+    "source": "李纯煌",
+    "target": "吴明枫",
+    "value": "高管"
+  },
+  {
+    "source": "李纯煌",
+    "target": "王燕",
+    "value": "高管"
+  },
+  {
+    "source": "王燕",
+    "target": "吴明枫",
+    "value": "高管"
+  },
+  {
+    "source": "高海峰",
+    "target": "陈金国",
+    "value": "高管"
+  },
+  {
+    "source": "陈瑞其",
+    "target": "吴元良",
+    "value": "高管"
+  },
+  {
+    "source": "陈瑞其",
+    "target": "吴建新",
+    "value": "高管"
+  },
+  {
+    "source": "李亮",
+    "target": "林新疆",
+    "value": "高管"
+  },
+  {
+    "source": "王俊杰",
+    "target": "李宗穗",
+    "value": "高管"
+  },
+  {
+    "source": "张朝阳",
+    "target": "刘德芳",
+    "value": "高管"
+  }
+]
+}

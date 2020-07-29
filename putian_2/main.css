@@ -1,0 +1,339 @@
+body {
+    background-color: black;
+}
+
+#title {
+    position: relative;
+    color: white;
+    font-size: 60px;
+    /* 备选字体：Times New Roman, Garamond, TrajanPro-Regular,Book Antiqua, Optima, papyrus */
+    font-family: "Arial Black";
+    /* font-weight: bold; */
+    text-align: center;
+    padding-top: 150px;
+    text-shadow: 0 0 0.1em black;
+}
+
+#subtitle {
+    position: relative;
+    /* color: white;
+  font-size: 40px;
+  font-family: "Times New Roman"; */
+    color: #FFDA44;
+    font-size: 40px;
+    font-family: "Arial Black";
+    text-align: center;
+    padding-top: 10px;
+    text-shadow: 0 0 0.2em black;
+}
+
+a {
+    color: #FFDA44;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: #3EBFED;
+    font-family: "Arial Black";
+}
+
+h2 {
+    padding-top: 40px;
+    padding-bottom: 0px;
+    margin-left: 10%;
+    color: white;
+    font-family: "Arial Black";
+}
+
+p {
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 1.5;
+    padding-top: 20px;
+}
+
+#textOffSlider {
+    padding-top: 100px;
+}
+
+.button {
+    background-color: rgba(100, 100, 255, 0.35);
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+    padding: 13px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.button2 {
+    /* background-color: transparent; */
+    border: 1px solid rgb(128, 127, 127);
+    height: 18px;
+    width: 18px;
+    padding-bottom: 3px;
+    /* background: url("img/refresh.png") no-repeat; */
+    background: url("img/refresh.png") no-repeat;
+    background-size: 100% 100%;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    position: relative;
+    font-family: "Arial Black";
+}
+
+.button:hover {
+    background-color: orange;
+}
+
+.button2:hover {
+    background-color: orange;
+}
+
+.icon-refresh {
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid currentColor;
+    border-left: 2px solid transparent;
+    position: relative;
+    margin: 30px auto;
+}
+
+.icon-refresh::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-bottom: 2px solid currentColor;
+    border-left: 2px solid currentcolor;
+    position: absolute;
+    top: 24px;
+    left: 3px;
+    transform: rotate(90deg);
+}
+
+#photowall {
+    /* width: 250px;  */
+    /* height: 600px; */
+    /* -webkit-mask-image: url(PC.svg);  */
+    -webkit-mask-image: linear-gradient(black, transparent);
+    /* /* mask-image: url(PC.svg); */
+    /* mask-size: auto 600px ; */
+}
+
+.ads {
+    width: 25%;
+    opacity: 0.9;
+    position: absolute;
+    display: inline-block;
+}
+
+.graph_title {
+    color: #3EBFED;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-family: "Arial Black";
+}
+
+.graph_legend {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.sankey_legend {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.node1,
+.node2 {
+    cursor: pointer;
+}
+
+
+/* 样式冲突，改为内联 */
+
+
+/* .link {
+  fill: none;
+   stroke: #8b8b8b;  
+} */
+
+.ticks {
+    font: 12px sans-serif;
+    fill: white;
+}
+
+.track .track-inset .track-overlay {
+    stroke-linecap: round;
+}
+
+.track {
+    stroke: white;
+    stroke-opacity: 0.3;
+    stroke-width: 10px;
+}
+
+.track-inset {
+    stroke: #ddd;
+    stroke-width: 8px;
+}
+
+.track-overlay {
+    pointer-events: stroke;
+    stroke-width: 50px;
+    cursor: pointer;
+}
+
+#handle1,
+#handle2,
+#handle3,
+#handle4,
+#handle5 {
+    fill: white;
+    /* stroke: white;
+  stroke-opacity: 1;
+  stroke-width: 3px; */
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    /* height: 20px; */
+    padding: 2px;
+    font: 12px sans-serif;
+    /* background: white; */
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+
+/* SANKEY */
+
+.node rect {
+    cursor: move;
+    fill-opacity: .9;
+    shape-rendering: crispEdges;
+}
+
+.node text {
+    pointer-events: none;
+    fill: white;
+    /* text-shadow: 0 1px 0 #fff; */
+}
+
+.linksankey {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: 0;
+}
+
+.linksankey:hover {
+    stroke-opacity: .35;
+}
+
+
+/* 需要canvas上的hover不是svg */
+
+
+/* SANKEY */
+
+#sankey {
+    position: relative;
+    width: 80%;
+    height: 700px;
+    margin-left: 10%;
+    margin-top: 50px;
+    text-align: center;
+    /* ??? */
+}
+
+#sankeysvg {
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    position: relative;
+    background-color: transparent;
+}
+
+#sankeycanvas {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    background-color: transparent;
+}
+
+.bottomright {
+    position: absolute;
+    bottom: 280px;
+    right: 16px;
+    font-size: 15px;
+}
+
+.pausebutton {
+    z-index: 5;
+    position: relative;
+    background: url("img/pause.png") no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    border-radius: 5px;
+    /* top: 5px; */
+    /* padding: 15px 32px; */
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    /* trans */
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.replaybutton {
+    z-index: 5;
+    position: relative;
+    background: url("img/play.png") no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    border-radius: 5px;
+    left: 30px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    /* trans */
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+.replaybutton:hover {
+    background-color: white;
+}
+
+.pausebutton:hover {
+    background-color: white;
+}
+
+.graphlayout {
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}

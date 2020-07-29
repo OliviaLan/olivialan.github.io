@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<package name="struts" extends="struts-default" namespace="/">
+		<action name="content" class="com.lanxingyu.action.InfoAction" method="start">
+			<result name="success">/content.jsp</result>
+		</action>
+		
+		<action name="next" class="com.lanxingyu.action.InfoAction" method="next">
+			<result name="success">/content.jsp</result>
+		</action>
+	</package>
+	
+	
+</struts>

@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>人与人关系图</title>
+<!-- 引入 ECharts 文件 -->
+<script type="text/javascript" src="./js/echarts.js"></script>
+<script type="text/javascript" src="./js/jquery-1.11.1.js"></script>
+</head>
+<body>
+	<div id="main" style="width: 100%; height: 600px"></div>
+	<script type="text/javascript">
+	var cluster1 = new Array("陈国林","陈丽萍","陈庆寿","李君琳","李亮","林爱清","林爱香","林翠云","林建芳","林丽君","林丽艳","林琼香","林韶华","林淑花","林新潮","林新疆","林新平","林新强","林新伟","林雪静","林志程","林志忠","潘清祥","苏世杰","唐宝平","涂孝明","王迪","吴天和","徐玉森","詹国太","张艳红","赵建萍","赵选明");
+	var cluster2 = new Array("陈东海","陈清冰","陈瑞其","陈元和","陈志键","方先","洪鹭青","胡嘉军","胡群峰","黄开飞","黄开山","黄开添","黄樑云","黄文其","黄玉华","黄志勇","柯国良","柯元芳","雷会勇","李文献","李祥山","林国腾","林建潘","林建贤","林金宗","林启良","刘韩啸","刘开泉","阮维锋","绍丽叶","沈雪峰","苏国忠","苏金清","王爱东","吴东升","吴洪绪","吴建新","吴荣达","吴元良","徐朝星","游庆洪","詹换平","詹加龙","詹嘉豪","詹嘉武","詹开林","占文营","郑志芳","郑志雄","周义隆","周义明","卓国洪","卓国金","卓国潘","卓国星","卓国勇","卓元杰","邹双仁");
+	var cluster3 = new Array("蔡兵洪","蔡亚彬","曾献志","陈波","陈国洪","陈国家","陈国瑞","陈建萍","陈建清","陈金秀","陈俊熙","陈凌","陈美蓉","陈美香","陈山","陈淑平","陈庭芳","陈文魁","陈玉辉","陈元粦","陈志东","陈志煌","陈志强","丁松泉","方明庆","郭素珠","何玉枚","胡继川","黄德锋","黄德龙","黄德新","黄格林","黄光标","黄光盛","黄国栋","黄国明","黄海燕","黄建东","黄金树","黄金雄","黄清锋","黄庆飞","黄舜强","黄天铸","黄玉凤","黄珍敬","黄珍勇","黄志强","江金山","蒋志毅","柯向阳","李爱金","李冬其","李方新","李金圆","李开添","李彤彤","李小青","李秀萍","李永刚","栗豪","林光利","林国彪","林国强","林国瑞","林国雄","林建飞","林建芬","林剑华","林金土","林美钦","林南生","林群","林茹","林永贵","林雨","林玉辉","林元豹","林元俊","林元楷","林兆晞","林珍金","刘恒兴","刘鲁明","罗朝阳","阮柯巧","苏国喜","苏金模","苏玉照","汤博文","汤源武","童晓文","王金火","魏杭","翁国勇","吴耿乙","吴嘉伟","吴建成","吴建仁","吴剑煌","吴金才","吴琳","吴雨霞","徐丽玉","杨春法","杨春法","杨坚","叶志阳","游东升","游金保","游秀琴","游亚金","袁吕平","詹国栋","詹国连","詹国平","詹国团","詹国营","詹建峰","詹建洪","詹建升","詹建昇","詹建扬","詹金灶","詹进建","詹进亮","詹美爱","詹珊珊","詹阳斌","詹阳程","詹玉鹏","占阳珊","张金华","张玉丽","赵建坤","郑志坚","周瑞云","朱寄群","朱建东","朱金财","朱金丁","朱丽群","朱敏","卓建武","卓立强","卓志展","卓智福");
+	var cluster4 = new Array("陈广政","何文华","林雄心","林雅英","刘俊","柳国明","王建华","温志荣","吴德新","吴洪豹","吴庆元","吴勇斌","吴勇汉","吴勇山","杨光富","杨国强","杨国先","杨美先","杨青山","杨文秀","杨永泉","张娟");
+	var cluster5 = new Array("蔡金兴","曾广荀","曾哲民","曾真","陈国涛","陈国兴","陈国雄","陈汉章","陈建华","陈金章","陈美华","陈木兰","陈文粦","陈秀凤","程慧斌","程智斌","甘勇","郜翀","龚宇","龚雨","郭小鹏","何炳华","何长福","黄开饶","鞠占富","李峰","李文凤","林建军","林建良","林金耀","林丽英","林美华","林美容","林明杰","林明开","林明雄","林权","林淑梅","林婷婷","林新兴","林秀烟","林玉国","林玉明","林玉盛","林育宏","林振华","林志华","林志通","林宗金","凌明圣","刘凯","毛江涛","潘国华","苏建清","苏金国","苏金汉","苏金家","苏金秀","苏金耀","苏元钗","王海波","王为民","王艳","吴廷文","刑亚东","徐大才","徐玉林","杨献东","詹国城","詹建光","詹亚强","詹妍","詹宗阳","张金寿","张少白","张晓玉","赵兴力","郑梅华","周斌","周莉","朱海霞");
+	var deleClu = new Array();
+	var temp = new Array();//临时数组，用以存储当前要删的节点
+	var duration = 5;//动画持续速度
+	var symbolSize = 10;//节点大小，初始都为10
+	var maxSymbolSize = 20;//节点最大大小
+	var nodePer = 500 /(duration * 10);//每0.1秒删除的节点数
+	
+	// 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    myChart.showLoading();	
+	//加载json
+	$.get("relationship.json",function(data){  
+		myChart.hideLoading();
+	 	// 指定图表的配置项和数据
+		var option = {
+	            title: {
+	                text: '莆田系人物关系'
+	            },
+	            legend: {
+	                data: ['抱团1', '抱团2', '抱团3', '抱团4', '抱团5', '其它'],
+	                orient : 'vertical',
+	                x:'left',
+	                y:'center',
+	                textStyle:{fontSize:18}
+	                
+	            },
+	            tooltip: {
+	            	formatter: function (params, ticket, callback) {	
+						if(params.name.length > 3){
+							return params.name+"："+params.value;
+						}else{
+							return params.name;
+						}	         		  
+	            	}		
+		        },
+	            
+	            series: [{
+	                type: 'graph',
+					layout:'force',
+					animation:true,
+					//animationEasingUpdate:'quarticIn',
+					animationDurationUpdate:0,
+					label: {
+			               normal: {
+				    			show:false,
+			            	   	position: 'right'
+			                },
+			                emphasis:{
+								show:false,
+								position:'right'
+				            }
+			            },
+			        
+				        
+			        roam:true,//是否开启鼠标缩放或者平移
+			        draggable:true,//节点是否可拖拽
+			        focusNodeAdjacency:true,//是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点
+			        
+			        data:data.nodes.map(function(node,idx){
+				        if(cluster1.contains(node.name) == false && cluster2.contains(node.name) == false && cluster3.contains(node.name) == false && cluster4.contains(node.name) == false && cluster5.contains(node.name) == false){
+							deleClu.push(node.name);		
+						}
+			        	return {
+							name:node.name,
+							category:node.category,
+							symbolSize:10,
+							itemStyle:{
+								normal:{
+			                        borderColor : 'rgba(255,215,0,0.4)',
+			                        borderWidth : 1
+								}
+							}
+						};
+				    }), 
+				    categories: data.categories,
+				    force: {
+			                // initLayout: 'circular'
+			                // repulsion: 20,
+			                edgeLength: 5,
+			                repulsion: 20,
+			                gravity: 0.2
+			                //layoutAnimation:false
+			            },
+				 	links:data.links
+	            }],
+	            
+	            lineStyle: {
+	                normal: {
+	                    opacity: 0.9,
+	                    width: 10,
+	                    curveness: 0
+	                }
+	            }
+	        };	
+		// 使用刚指定的配置项和数据显示图表。
+		myChart.setOption(option);
+		//延期三秒开始执行
+		//clearTimeout(loadingTicket);
+		loadingTicket = setTimeout(function(){
+			alert("动画开始");
+			var durSize = maxSymbolSize - symbolSize;
+			var interval = 400 / durSize;//初始断点：一旦删除的点数超过了断点，便增加节点size
+			timeTicket = setInterval(function (){
+				//获取要删除的节点
+				var lastTempLen = temp.length;
+				for(var i = 0 + lastTempLen;i < nodePer +  lastTempLen;i++){
+					if(temp.length == deleClu.length){
+						break;
+					}else{
+						temp.push(deleClu[i]);
+					}	
+				}
+				//设置symbolSize
+				if(temp.length > interval){
+					symbolSize++;
+					//设置下一个断点
+					interval = interval * 2;
+				}
+				
+				//删除json数据
+				//删除节点数据
+				for(var i in data.nodes){
+					if(temp.contains(data.nodes[i].name)){
+						data.nodes.splice(i,1);
+					
+					}
+				} 
+				
+				
+				var newdata = { series: [{		
+						data:data.nodes.map(function(node,idx){
+							if(temp.contains(node.name)){
+								return {
+									name:node.name,
+									category:node.category,
+									symbolSize:10,
+									symbol:'none',
+									itemStyle:{
+										normal:{
+					                        borderColor : 'rgba(255,215,0,0.4)',
+					                        borderWidth : 1
+										}
+									}
+								};
+							}else if(cluster1.contains(node.name) || cluster2.contains(node.name) || cluster3.contains(node.name) || cluster4.contains(node.name) || cluster5.contains(node.name)){
+								return {
+									name:node.name,
+									category:node.category,
+									symbolSize:Math.min(symbolSize,maxSymbolSize),
+									itemStyle:{
+										normal:{
+					                        borderColor : 'rgba(255,215,0,0.4)',
+					                        borderWidth : 1
+										}
+									}
+								};
+							}else{
+								return {
+									name:node.name,
+									category:node.category,
+									symbolSize:10,
+									itemStyle:{
+										normal:{
+					                        borderColor : 'rgba(255,215,0,0.4)',
+					                        borderWidth : 1
+										}
+									}
+								};
+							}			        	
+						}),
+						links:data.links.map(function(link,idx){
+							if(temp.contains(link.source) || temp.contains(link.target) || link.value == "高管"){
+								return{
+									source:link.source,
+									target:link.target,
+									value:link.value,
+									lineStyle:{
+										normal:{
+											color :'rgba(255,215,0,0)'
+										}
+									}
+								};
+							}else{
+								return{
+									source:link.source,
+									target:link.target,
+									value:link.value
+								}; 
+							}
+							
+							
+						})}]
+				};
+				
+				myChart.setOption(newdata);
+				
+				//退出
+				if(temp.length == deleClu.length){
+					clearInterval(timeTicket);	
+				}
+			},0);
+		},5000);
+       
+	});
+ 	
+    //定义方法判断js数组是否包含元素
+    Array.prototype.contains = function ( needle ) {
+		  for (i in this) {
+		    if (this[i] == needle) 
+			    return true;
+		  }
+		  return false;
+	}
+	       
+        
+        
+    </script>
+</body>
+</html>

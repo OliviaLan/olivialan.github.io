@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=0.5, user-scalable=1, minimum-scale=0.5, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="title" content="蓝星宇的问卷">
+<title>蓝星宇的问卷</title>
+
+<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+<link
+	href="https://dp5pnij3net95.cloudfront.net/widget/quiz/build/main.min.css?7905f33f4f8866bb5419"
+	rel="stylesheet">
+<script type="text/javascript">
+	$(function() {
+		var trueIndex = 1;
+		$("#true").hide();
+		$("#false").hide();
+		$('li').click(function() {
+			//显示正确的
+			if ($(this).index() == trueIndex) {
+				$("#question").hide();
+				$("#true").show();
+				var trueSum = parseInt(document.cookie.split("=")[1]) + 1;
+				document.cookie="trueSum="+trueSum;
+			} else {
+				$("#question").hide();
+				$("#false").show();
+			}
+		})
+	});
+</script>
+</head>
+<body>
+	<div id="app">
+		<div class="App-component is-loaded" data-reactid=".0">
+			<noscript data-reactid=".0.$0"></noscript>
+			<div class="Quiz-component is-loaded" data-reactid=".0.1">
+				<noscript data-reactid=".0.1.$0"></noscript>
+
+				<div class=" page-enter" data-reactid=".0.1.$2">
+					<div class="Quiz-content" data-reactid=".0.1.$2.$0">
+						<div class="Quiz-background show-overlay SetContent-block"
+							data-reactid=".0.1.$2.$0.$0"
+							style="background-image: url('../images/what_the_dickens.jpg'); background-position: 50% 50%;"></div>
+						<div class="Quiz-content-inner" data-reactid=".0.1.$2.$0.$1">
+							<noscript data-reactid=".0.1.$2.$0.$1.1:$0"></noscript>
+							<div class="AutoSubmit-component is-loaded"
+								data-reactid=".0.1.$2.$0.$1.1:$1"></div>
+
+							<div class="QuizQuestion-component is-loaded"
+								data-reactid=".0.1.$2.$0.$1.1:2">
+								<div class="QuizQuestion-position"
+									data-reactid=".0.1.$2.$0.$1.1:2.0">
+									<span
+										style="width:25% ;"
+										class="QuizQuestion-position-content"
+										data-reactid=".0.1.$2.$0.$1.1:2.0.0">3/12</span>
+								</div>
+								<!--下方是question div  -->
+								<div class="QuizQuestion-container "
+									data-reactid=".0.1.$2.$0.$1.1:2.$question-1" id="question">
+									<div class="QuizQuestion-header"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0"></div>
+									<section tabindex="-1" class="QuizQuestion-info"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$https=2//www=1qzzr=1com/api/sessions/358792770/213231">
+									<h1 class="QuizQuestion-info-title"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$https=2//www=1qzzr=1com/api/sessions/358792770/213231.$1">Question 3</h1>
+									<article class="QuizQuestion-info-description-container"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$https=2//www=1qzzr=1com/api/sessions/358792770/213231.2">
+									<div class="QuizQuestion-info-description"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$https=2//www=1qzzr=1com/api/sessions/358792770/213231.2.0">一觉睡到自然醒过来，不管这个胡闹时代到底有多坏</div>
+									</article> </section>
+									<fieldset class="QuizQuestion-options has-text-options"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2">
+										<legend class="QuizQuestion-options-legend"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$0">Question 3
+											一觉睡到自然醒过来，不管这个胡闹时代到底有多坏</legend>
+										<ol role="radio-group" aria-label="Select the best option"
+											class="QuizQuestion-options-list"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options">
+											<li
+												class="QuizQuestionOption-component is-loaded QuizQuestionOption"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0"
+												id="s1_1"><input name="question-1-options" type="radio"
+												class="QuizQuestionOption-input"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$0"><label
+												for="848214" role="radio" aria-checked="false"
+												class="QuizQuestionOption-item"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1"><div
+														class="QuizQuestionOption-item-content"
+														data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1.$0">
+														<span class="QuizQuestionOption-item-label"
+															data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1.$0.1">林夕</span>
+													</div>
+													<div class="QuizQuestionOption-item-icon"
+														data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1.1">
+														<i
+															class="QuizQuestionOption-icon QuizQuestionOption-icon-radio   icon-radio  "
+															data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1.1.0"></i>
+													</div></label></li>
+											<li
+												class="QuizQuestionOption-component is-loaded QuizQuestionOption"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1"
+												id="s1_2"><input name="question-1-options" type="radio"
+												class="QuizQuestionOption-input"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$0"><label
+												for="848215" role="radio" aria-checked="false"
+												class="QuizQuestionOption-item"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1"><div
+														class="QuizQuestionOption-item-content"
+														data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1.$0">
+														<span class="QuizQuestionOption-item-label"
+															data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1.$0.1">黄伟文</span>
+													</div>
+													<div class="QuizQuestionOption-item-icon"
+														data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1.1">
+														<i
+															class="QuizQuestionOption-icon QuizQuestionOption-icon-radio   icon-radio  "
+															data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1.1.0"></i>
+													</div></label></li>
+										</ol>
+									</fieldset>
+								</div>
+
+								<!--下方是正确答案的div-  -->
+								<div class="QuizQuestion-container is-locked"
+									data-reactid=".0.1.$2.$0.$1.1:2.$question-1" id="true"
+									onclick="location.href='content4.html'">
+									<div class="QuizQuestion-header"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0">
+										<section id="questionFeedback"
+											class="QuizQuestion-feedback QuizQuestion-feedback-is-correct"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0">
+										<div
+											class="QuizQuestion-feedback-header QuizQuestion-feedback-header-is-correct QuizQuestion-feedback-header-has-description"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0">
+											<span class="QuizQuestion-feedback-header-state"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0.$0"><span
+												class="translate-component is-loaded"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0.$0.0"><span
+													data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0.$0.0.0">正确</span></span></span><span
+												class="QuizQuestion-feedback-header-hint"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0.$1"><span
+												class="translate-component is-loaded"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0.$1.1"><span
+													data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0.$1.1.0">点击任意地方继续</span></span></span>
+										</div>
+										<article class="QuizQuestion-feedback-description"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:1">林宥嘉《自然醒》</article>
+										<div class="QuizQuestion-feedback-footer"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.$1">
+											<button class="QuizQuestion-feedback-footer-next"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.$1.0">
+												<span class="translate-component is-loaded"
+													data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.$1.0.0"><span
+													data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.$1.0.0.0">接下来的问题</span></span>
+											</button>
+										</div>
+										</section>
+									</div>
+									<section tabindex="-1" class="QuizQuestion-info"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$https=2//www=1qzzr=1com/api/sessions/358792770/213231">
+									<h1 class="QuizQuestion-info-title"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$https=2//www=1qzzr=1com/api/sessions/358792770/213231.$1">Question 3</h1>
+									<article class="QuizQuestion-info-description-container"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$https=2//www=1qzzr=1com/api/sessions/358792770/213231.2">
+									<div class="QuizQuestion-info-description"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$https=2//www=1qzzr=1com/api/sessions/358792770/213231.2.0">一觉睡到自然醒过来，不管这个胡闹时代到底有多坏</div>
+									</article> </section>
+									<fieldset class="QuizQuestion-options has-text-options"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2">
+										<legend class="QuizQuestion-options-legend"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$0">Question 3
+											一觉睡到自然醒过来，不管这个胡闹时代到底有多坏</legend>
+										<ol role="radio-group" aria-label="Select the best option"
+											class="QuizQuestion-options-list"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options">
+											<li
+												class="QuizQuestionOption-component is-loaded QuizQuestionOption QuizQuestionOption-is-active QuizQuestionOption-is-correct QuizQuestionOption-is-locked"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0"><input
+												name="question-1-options" id="848214" type="radio"
+												class="QuizQuestionOption-input QuizQuestionOption-input-is-active QuizQuestionOption-input-is-correct"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$0"
+												disabled="true"><label for="848214" role="radio"
+												aria-checked="true"
+												class="QuizQuestionOption-item QuizQuestionOption-item-is-active QuizQuestionOption-item-is-correct"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1"><div
+														class="QuizQuestionOption-item-content QuizQuestionOption-item-content-is-active QuizQuestionOption-item-content-is-correct"
+														data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1.$0">
+														<span
+															class="QuizQuestionOption-item-label QuizQuestionOption-item-label-is-active QuizQuestionOption-item-label-is-correct"
+															data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1.$0.1">林夕</span>
+													</div>
+													<div class="QuizQuestionOption-item-icon"
+														data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1.1">
+														<i
+															class="QuizQuestionOption-icon QuizQuestionOption-icon-is-active QuizQuestionOption-icon-is-correct is-active   icon-check "
+															data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1.1.0"></i>
+													</div></label></li>
+											<li
+												class="QuizQuestionOption-component is-loaded QuizQuestionOption QuizQuestionOption-is-incorrect QuizQuestionOption-is-locked"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1"><input
+												name="question-1-options" id="848215" type="radio"
+												class="QuizQuestionOption-input QuizQuestionOption-input-is-incorrect"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$0"
+												disabled="true"><label for="848215" role="radio"
+												aria-checked="false"
+												class="QuizQuestionOption-item QuizQuestionOption-item-is-incorrect"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1"><div
+														class="QuizQuestionOption-item-content QuizQuestionOption-item-content-is-incorrect"
+														data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1.$0">
+														<span
+															class="QuizQuestionOption-item-label QuizQuestionOption-item-label-is-incorrect"
+															data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1.$0.1">黄伟文</span>
+													</div>
+													<div class="QuizQuestionOption-item-icon"
+														data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1.1">
+														<i
+															class="QuizQuestionOption-icon QuizQuestionOption-icon-is-incorrect     icon-delete"
+															data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1.1.0"></i>
+													</div></label></li>
+										</ol>
+									</fieldset>
+									<div class="QuizQuestion-clickanywhere"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$question-1-clickanywhere"></div>
+								</div>
+								<!--下方是错误答案的div  -->
+								<div class="QuizQuestion-container is-locked"
+									data-reactid=".0.1.$2.$0.$1.1:2.$question-1" id="false"
+									onclick="location.href='content4.html'">
+									<div class="QuizQuestion-header"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0">
+										<section id="questionFeedback"
+											class="QuizQuestion-feedback QuizQuestion-feedback-is-incorrect"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0">
+										<div
+											class="QuizQuestion-feedback-header QuizQuestion-feedback-header-is-incorrect QuizQuestion-feedback-header-has-description"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0">
+											<span class="QuizQuestion-feedback-header-state"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0.$0"><span
+												class="translate-component is-loaded"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0.$0.0"><span
+													data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0.$0.0.0">不正确</span></span></span><span
+												class="QuizQuestion-feedback-header-hint"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0.$1"><span
+												class="translate-component is-loaded"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0.$1.1"><span
+													data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:$0.$1.1.0">点击任意地方继续</span></span></span>
+										</div>
+										<article class="QuizQuestion-feedback-description"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.0:1">林宥嘉《自然醒》</article>
+										<div class="QuizQuestion-feedback-footer"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.$1">
+											<button class="QuizQuestion-feedback-footer-next"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.$1.0">
+												<span class="translate-component is-loaded"
+													data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.$1.0.0"><span
+													data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$0.0.$1.0.0.0">接下来的问题</span></span>
+											</button>
+										</div>
+										</section>
+									</div>
+									<section tabindex="-1" class="QuizQuestion-info"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$https=2//www=1qzzr=1com/api/sessions/359017271/213231">
+									<h1 class="QuizQuestion-info-title"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$https=2//www=1qzzr=1com/api/sessions/359017271/213231.$1">Question 3</h1>
+									<article class="QuizQuestion-info-description-container"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$https=2//www=1qzzr=1com/api/sessions/359017271/213231.2">
+									<div class="QuizQuestion-info-description"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$https=2//www=1qzzr=1com/api/sessions/359017271/213231.2.0">一觉睡到自然醒过来，不管这个胡闹时代到底有多坏</div>
+									</article></section>
+									<fieldset class="QuizQuestion-options has-text-options"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2">
+										<legend class="QuizQuestion-options-legend"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$0">Question 3
+											一觉睡到自然醒过来，不管这个胡闹时代到底有多坏</legend>
+										<ol role="radio-group" aria-label="Select the best option"
+											class="QuizQuestion-options-list"
+											data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options">
+											<li
+												class="QuizQuestionOption-component is-loaded QuizQuestionOption QuizQuestionOption-is-correct QuizQuestionOption-is-locked"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0"><input
+												disabled="" name="question-1-options" id="848214"
+												type="radio"
+												class="QuizQuestionOption-input QuizQuestionOption-input-is-correct"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$0"><label
+												for="848214" role="radio" aria-checked="false"
+												class="QuizQuestionOption-item QuizQuestionOption-item-is-correct"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1"><div
+														class="QuizQuestionOption-item-content QuizQuestionOption-item-content-is-correct"
+														data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1.$0">
+														<span
+															class="QuizQuestionOption-item-label QuizQuestionOption-item-label-is-correct"
+															data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1.$0.1">林夕</span>
+													</div>
+													<div class="QuizQuestionOption-item-icon"
+														data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1.1">
+														<i
+															class="QuizQuestionOption-icon QuizQuestionOption-icon-is-correct    icon-check "
+															data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.0.$1.1.0"></i>
+													</div></label></li>
+											<li
+												class="QuizQuestionOption-component is-loaded QuizQuestionOption QuizQuestionOption-is-active QuizQuestionOption-is-incorrect QuizQuestionOption-is-locked"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1"><input
+												disabled="" name="question-1-options" id="848215"
+												type="radio"
+												class="QuizQuestionOption-input QuizQuestionOption-input-is-active QuizQuestionOption-input-is-incorrect"
+												checked=""
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$0"><label
+												for="848215" role="radio" aria-checked="true"
+												class="QuizQuestionOption-item QuizQuestionOption-item-is-active QuizQuestionOption-item-is-incorrect"
+												data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1"><div
+														class="QuizQuestionOption-item-content QuizQuestionOption-item-content-is-active QuizQuestionOption-item-content-is-incorrect"
+														data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1.$0">
+														<span
+															class="QuizQuestionOption-item-label QuizQuestionOption-item-label-is-active QuizQuestionOption-item-label-is-incorrect"
+															data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1.$0.1">黄伟文</span>
+													</div>
+													<div class="QuizQuestionOption-item-icon"
+														data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1.1">
+														<i
+															class="QuizQuestionOption-icon QuizQuestionOption-icon-is-active QuizQuestionOption-icon-is-incorrect is-active    icon-delete"
+															data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$2.$question-1-options.1.$1.1.0"></i>
+													</div></label></li>
+										</ol>
+									</fieldset>
+									<div class="QuizQuestion-clickanywhere"
+										data-reactid=".0.1.$2.$0.$1.1:2.$question-1.$question-1-clickanywhere"></div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

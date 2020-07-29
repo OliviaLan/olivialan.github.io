@@ -1,0 +1,283 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Echarts</title>
+    <script src="echarts.js"></script>
+    <script src="echarts-gl.min.js"></script>
+    <!-- <script src="china.js"></script> -->
+    <!--要异步加载json的时候要记得引用：-->
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <style>
+        body {
+            background-color: green;
+        }
+        
+        #main {
+            height: 900px;
+            width: 90%;
+            margin: 40px;
+            background-color: rgb(216, 67, 67);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main" style="width:100%; height:700px"></div>
+
+    <script>
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // var ROOT_PATH = "https://echarts.apache.org/examples/";
+
+
+        var options = {
+                baseOption: {
+                    timeline: {
+                        axisType: 'category',
+                        data: ['1/22/20',
+                            '1/23/20',
+                            '1/24/20',
+                            '1/25/20',
+                            '1/26/20',
+                            '1/27/20',
+                            '1/28/20',
+                            '1/29/20',
+                            '1/30/20',
+                            '1/31/20',
+                            '2/1/20',
+                            '2/2/20',
+                            '2/3/20',
+                            '2/4/20',
+                            '2/5/20',
+                            '2/6/20',
+                            '2/7/20',
+                            '2/8/20',
+                            '2/9/20',
+                            '2/10/20',
+                            '2/11/20',
+                            '2/12/20',
+                            '2/13/20',
+                            '2/14/20',
+                            '2/15/20',
+                            '2/16/20',
+                            '2/17/20',
+                            '2/18/20',
+                            '2/19/20',
+                            '2/20/20',
+                            '2/21/20',
+                            '2/22/20',
+                            '2/23/20',
+                            '2/24/20',
+                            '2/25/20',
+                            '2/26/20',
+                            '2/27/20',
+                            '2/28/20',
+                            '2/29/20',
+                            '3/1/20',
+                            '3/2/20',
+                            '3/3/20',
+                            '3/4/20',
+                            '3/5/20',
+                            '3/6/20',
+                            '3/7/20',
+                            '3/8/20',
+                            '3/9/20',
+                            '3/10/20',
+                            '3/11/20',
+                            '3/12/20',
+                            '3/13/20',
+                            '3/14/20',
+                            '3/15/20',
+                            '3/16/20',
+                            '3/17/20',
+                            '3/18/20',
+                            '3/19/20',
+                            '3/20/20',
+                            '3/21/20',
+                            '3/22/20',
+                            '3/23/20',
+                            '3/24/20',
+                            '3/25/20',
+                            '3/26/20',
+                            '3/27/20',
+                            '3/28/20',
+                            '3/29/20',
+                            '3/30/20',
+                            '3/31/20',
+                            '4/1/20',
+                            '4/2/20',
+                            '4/3/20',
+                            '4/4/20',
+                            '4/5/20',
+                            '4/6/20',
+                            '4/7/20',
+                            '4/8/20',
+                            '4/9/20',
+                            '4/10/20',
+                            '4/11/20',
+                            '4/12/20',
+                            '4/13/20',
+                            '4/14/20',
+                            '4/15/20',
+                            '4/16/20',
+                            '4/17/20',
+                            '4/18/20',
+                            '4/19/20',
+                            '4/20/20',
+                            '4/21/20',
+                            '4/22/20',
+                            '4/23/20',
+                            '4/24/20',
+                            '4/25/20',
+                            '4/26/20',
+                            '4/27/20',
+                            '4/28/20',
+                            '4/29/20',
+                            '4/30/20',
+                            '5/1/20',
+                            '5/2/20',
+                            '5/3/20',
+                            '5/4/20',
+                            '5/5/20',
+                            '5/6/20',
+                            '5/7/20',
+                            '5/8/20',
+                            '5/9/20',
+                            '5/10/20',
+                            '5/11/20',
+                            '5/12/20',
+                            '5/13/20'
+                        ],
+                        show: true,
+                        bottom: 0,
+                        left: 20,
+                        right: 60,
+                        lineStyle: {
+                            show: true,
+                        },
+                        symbolSize: 1,
+                        autoPlay: true,
+                        playInterval: 3000,
+                        loop: true,
+                        label: {
+                            normal: {
+                                show: true,
+                                interval: 1,
+                                rotate: 45,
+                            },
+
+                        },
+                    },
+
+                    backgroundColor: "green",
+                    globe: {
+                        globeRadius: 60,
+                        globeOuterRadius: 100,
+                        baseTexture: "world3.png",
+                        heightTexture: "world3.png",
+                        //是否受光照影响
+                        shading: 'color',
+                        // shading: 'realistic',
+                        // realisticMaterial: {
+                        //     // roughness = 0.2,
+                        //     // metalness = 1,
+                        // },
+                        // environment: 'star.jpg',
+                        environment: '#043501',
+                        // globeOuterRadius: haha,
+                        // light: {
+                        //     main: {
+                        //         intensity: 1
+                        //     }
+                        // },
+                        viewControl: {
+                            autoRotate: true,
+                            autoRotateAfterStill: 0,
+                            autoRotateSpeed: 5,
+                            alpha: 60,
+                            beta: 120,
+                        }
+                    },
+
+                    // visualMap: {
+                    //     max: 10,
+                    //     calculable: true,
+                    //     realtime: false,
+                    //     inRange: {
+                    //         colorLightness: [0.2, 0.5]
+                    //     },
+                    //     textStyle: {
+                    //         color: '#fff'
+                    //     },
+                    //     controller: {
+                    //         inRange: {
+                    //             color: 'red'
+                    //         }
+                    //     },
+                    //     outOfRange: {
+                    //         colorAlpha: 0
+                    //     }
+                    // },
+                    series: [{
+                        type: 'bar3D',
+                        coordinateSystem: 'globe',
+                        // stack: 'sum',
+                        data: null,
+                        barSize: 0.2,
+                        minHeight: 0,
+                        silent: true,
+                        // itemStyle: {
+                        //     color: 'orange'
+                        // }
+                        itemStyle: {
+                            color: function(data) {
+                                // debugger;
+                                if (data.value[2] == 14.22097566607244) {
+                                    return "transparent"
+                                } else {
+                                    return "#EA5215"
+                                }
+                            },
+                        }
+                    }],
+                    options: null
+                }
+            }
+            // var haha = 100;
+
+        $.getJSON("covid_log.json", function(data) {
+            // for (var i = 0; i < data.length; i++) {
+            //     var max_value = 0;
+            //     var this_value = data[i]['series'][0]['data']
+            //     if (selector.length == 1)
+            //         selector = '0' + selector;
+            //     selector = '#event' + selector;
+            //     array.push($(selector, response).html());
+            // }
+
+            // haha = data.filter(function(dataItem) {
+            //     return dataItem[2] > 0;
+            // }).map(function(dataItem) {
+            //     return [dataItem[0], dataItem[1], Math.sqrt(dataItem[2])];
+            // });
+
+            // data = data.filter(function(dataItem) {
+            //     return dataItem[2] > 0;
+            // }).map(function(dataItem) {
+            //     return [dataItem[0], dataItem[1], Math.sqrt(dataItem[2])];
+
+            // });
+            options.options = data;
+            // debugger;
+            myChart.setOption(options);
+            // all_data = data;
+
+
+        })
+    </script>
+
+</body>
+
+</html>

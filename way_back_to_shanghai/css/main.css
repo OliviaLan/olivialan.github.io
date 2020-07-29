@@ -1,0 +1,322 @@
+/*与size无关的style*/
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    line-height: 100px;
+}
+
+h2 {
+    text-align: center;
+    line-height: 100px;
+}
+
+
+/* body {
+    font: normal 160% Helvetica, Arial, sans-serif;
+    line-height: 2;
+} */
+
+
+/*图片淡出，只在trigger出发的时候有效*/
+
+.after {
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    /* width: 64px; */
+    /* height: 20px; */
+    padding: 2px;
+    font: 14px sans-serif;
+    background: white;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+div.sights_tooltip {
+    position: absolute;
+    text-align: center;
+    /* width: 64px;
+    height: 20px; */
+    padding: 2px;
+    font: 14px sans-serif;
+    background: white;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+
+/*pc端 大于ipad的768px*/
+
+@media screen and (min-width: 1000px) {
+    body {
+        font-size: 16px;
+        line-height: 2;
+    }
+    /*出现pin以及小船*/
+    #pin1 {
+        text-align: center;
+        position: relative;
+        width: 40%;
+        display: inline-block;
+    }
+    #pin1_words {
+        display: inline-block;
+        width: 40%;
+        vertical-align: top;
+        margin-top: 30px;
+        margin-left: 150px;
+    }
+    #pin2 {
+        display: block;
+    }
+    #trigger1 {
+        display: block;
+    }
+    /*控制小船滑动的留白*/
+    .scroll {
+        height: 500px;
+    }
+    /*小屏的配图及banner不出现*/
+    .mobile {
+        display: none;
+    }
+    /*图旁文字有50pxpadding*/
+    #mobile_words {
+        padding-top: 50px;
+        padding-left: 50px;
+    }
+    /*大屏排版样式*/
+    .section {
+        clear: both;
+        margin-top: 20px;
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+    .col-sm-6.left {
+        padding-left: 120px;
+        padding-right: 40px;
+    }
+    .col-sm-6.right {
+        padding-left: 40px;
+        padding-right: 120px;
+    }
+    .col-sm-6.right img,
+    .col-sm-6.left img {
+        width: 100%;
+        padding: 20px;
+    }
+    /* pc版本图文左右float排列 */
+    .words_right {
+        width: 40%;
+        margin-left: auto;
+        margin-right: 0px;
+    }
+    .words_left {
+        width: 50%;
+        margin-left: 0px;
+        margin-right: auto;
+    }
+    /* 由于float可能会有文字溢出，需要clear */
+    .clear {
+        clear: both;
+        height: 20px;
+    }
+    .section.pad_show {
+        display: none;
+    }
+    #daoyu {
+        width: 40%;
+    }
+}
+
+
+/*手机小屏时*/
+
+@media screen and (max-width: 700px) {
+    body {
+        font-size: 16px;
+        line-height: 2;
+    }
+    #pin1,
+    #pin2,
+    #pin3,
+    #pin4,
+    .before_map,
+    .mobile_hidden {
+        display: none;
+    }
+    .mobile {
+        display: block;
+        width: 100%;
+    }
+    #mobile_words {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #scroll_begin {
+        height: 0px
+    }
+    .scroll {
+        height: 0px;
+    }
+    .section {
+        clear: both;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .section.pad_show {
+        display: none;
+    }
+    /* 所有图文都变成100% */
+    .col-sm-6.left,
+    .col-sm-6.right,
+    .words_right,
+    .words_left,
+    #daoyu {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    /* 针对手机，图片铺满屏幕 */
+    .col-sm-6.right img,
+    .col-sm-6.left img {
+        width: 100%;
+        padding: 20px;
+    }
+    /* 图文直排，不需要clear */
+    .clear {
+        clear: both;
+        height: 0px;
+    }
+}
+
+
+/*ipad屏时 也采用mobile图文图文的形式，但是让所有图片不要铺满屏幕，因此有mobile resize*/
+
+@media screen and (max-width: 1000px) and (min-width: 700px) {
+    body {
+        font-size: 16px;
+        line-height: 2;
+    }
+    #pin1,
+    #pin2,
+    #pin3,
+    #pin4,
+    .before_map {
+        display: none;
+    }
+    /* 手机版图片出现 */
+    .mobile {
+        display: block;
+        width: 100%;
+    }
+    /* 非手机版图片隐藏 */
+    .mobile_hidden {
+        display: none;
+    }
+    /* 特殊的强行隐藏 */
+    #hidden {
+        display: none;
+    }
+    /* 地图resize */
+    #clickable_1,
+    #clickable_2,
+    #clickable_3 {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* 针对ipad，图片不能铺满屏幕 */
+    .col-sm-6.right img,
+    .col-sm-6.left img {
+        display: block;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* 针对手机版重新定位出现的图片也需要resize */
+    .mobile.resize {
+        display: block;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #scroll_begin {
+        height: 0px
+    }
+    .scroll {
+        height: 0px;
+    }
+    .section {
+        clear: both;
+        margin-top: 20px;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .section.pad_show {
+        display: block;
+    }
+    .pad_hidden {
+        display: none;
+    }
+    .col-sm-6.left,
+    .col-sm-6.right,
+    .words_right.words_left,
+    #mobile_words {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    /* 图文直排，不需要clear */
+    .clear {
+        clear: both;
+        height: 0px;
+    }
+    #daoyu {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 1160px) and (min-width: 1000px) {
+    /*开场pin的尾部留白 小尺寸pc和大尺寸pc分别设置！*/
+    #scroll_begin {
+        height: 50px
+    }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1160px) {
+    /*开场pin的尾部留白 小尺寸pc和大尺寸pc分别设置！*/
+    #scroll_begin {
+        height: 130px
+    }
+}
+
+@media screen and (max-width: 1340px) and (min-width: 1280px) {
+    /*开场pin的尾部留白 小尺寸pc和大尺寸pc分别设置！*/
+    #scroll_begin {
+        height: 150px
+    }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1340px) {
+    /*开场pin的尾部留白 小尺寸pc和大尺寸pc分别设置！*/
+    #scroll_begin {
+        height: 300px
+    }
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1400px) {
+    /*开场pin的尾部留白 小尺寸pc和大尺寸pc分别设置！*/
+    #scroll_begin {
+        height: 400px
+    }
+}

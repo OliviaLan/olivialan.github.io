@@ -1,0 +1,256 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Echarts</title>
+    <script src="echarts.js"></script>
+    <!-- <script src="china.js"></script> -->
+    <!--要异步加载json的时候要记得引用：-->
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <style>
+        body {
+            background-color: black;
+        }
+        
+        #main {
+            height: 760px;
+            width: 90%;
+            margin: 40px;
+            background-color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main"></div>
+    <div id="main2"></div>
+
+    <script>
+
+    draw_meilai();
+    function draw_meilai() {
+        var data_2000 = {
+            "nodes": [{
+                "label": "北京东方美莱医疗美容门诊部有限公司",
+                "id": "175",
+                "type": "Company",
+            }, {
+                "label": "北京美莱荟文化有限公司",
+                "id": "62",
+                "type": "Company",
+            }, ],
+            "links": [{
+                "source": "175",
+                "target": "62",
+            }, ]
+        }
+
+        //1.定义一个div，并指示将chart放进去
+        var myChart = echarts.init(document.getElementById("main"));
+
+        // var myChart2 = echarts.init(document.getElementById("main2"));
+        var nodes = [{
+            category: '主线',
+            name: '1',
+            symbolSize: 23
+        }, ];
+        var links = [];
+        var categories = [{
+            name: 'Company'
+        }, {
+            name: 'Person'
+        }, {
+            name: 'Boss'
+        }, ]
+        var options = {
+            baseOption: {
+                color: ["#3EBFED", "#FFDA44", "red"],
+                tooltip: {
+
+                    formatter: function(x) {
+                        if (x.data.category == "Boss") {
+                            return "<div style='background-color:white; border-radius: 10px; padding:10px;'><div style='display:inline-block;'><img style = height:80px;vertical-align:middle  src = 'cjx.png' > </img><div style='color:black; display: inline-block; vertical-align:middle; padding-right:0px'>  xxxxxxxxx  </div><div>"
+                        } else {
+                            return x.data.label; //设置提示框的内容和格式 节点和边都显示name属性
+                        }
+                    }
+                },
+                timeline: {
+                    data: [
+                        '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'
+                    ],
+                    show: true,
+                    axisType: 'category',
+                    // loop: false,
+                    autoPlay: true,
+                    playInterval: 1500,
+                    bottom: 15,
+                    lineStyle: {
+                        show: false,
+                    },
+                    symbolSize: 10,
+                    label: {
+                        normal: {
+                            show: true,
+                        },
+                    },
+                    checkpointStyle: {
+                        color: "#3EBFED",
+                        borderColor: "#FFDA44",
+                        borderWidth: 3,
+                    },
+                    controlStyle: {
+                        showPrevBtn: false,
+                        showNextBtn: false,
+                        itemSize: 40,
+                        itemGap: 30,
+                        normal: {
+                            color: '#fff',
+                            borderColor: '#fff',
+                            borderWidth: 1.5,
+                        },
+                        emphasis: {
+                            color: '#ffce22',
+                            borderColor: '#ffce22',
+                            borderWidth: 1.5,
+                        },
+                    }
+                },
+                title: {
+                    left: 'center',
+                    text: 'Mylike Medical Group',
+                    subtext: 'size = the amount of connections',
+                    textStyle: {
+                        fontSize: 25,
+                        color: "white",
+                    },
+                    subtextStyle: {
+                        fontSize: 18,
+                        color: "white",
+                        align: "right"
+                    }
+                },
+                backgroundColor: {
+                    color: {
+                        type: 'linear',
+                        x: 0,
+                        y: 0,
+                        x2: 0,
+                        y2: 1,
+                        colorStops: [{
+                            offset: 0,
+                            color: 'red' // 0% 处的颜色
+                        }, {
+                            offset: 1,
+                            color: 'blue' // 100% 处的颜色
+                        }],
+                        globalCoord: false // 缺省为 false
+                    }
+                },
+                legend: [{
+                    //selectedMode: 'single',
+                    top: 70,
+                    left: 'center',
+                    data: categories,
+                    show: true,
+                    //selected: selected1
+                    textStyle: {
+                        fontSize: 14,
+                        color: "white"
+                    }
+                }],
+
+                animationDurationUpdate: 2,
+                animationEasingUpdate: 'quinticInOut',
+
+                series: [{
+                    type: 'graph',
+                    ribbonType: true,
+                    //layout: 'circular',
+                    edgeSymbol: ['circle'],
+                    edgeSymbolSize: [1, 50],
+                    circular: {
+                        rotateLabel: true
+                    },
+
+                    layout: 'force',
+
+                    force: {
+                        //initLayout: 'circular',
+                        repulsion: 90,
+                        gravity: 0.2,
+                        edgeLength: [10, 50],
+                        layoutAnimation: true,
+                    },
+
+                    // roam: true,
+                    focusNodeAdjacency: false,
+                    hoverAnimation: false,
+
+                    label: {
+                        normal: {
+                            position: 'right',
+                            color: 'transparent',
+                            // fontWeight: 'bold',
+                            fontSize: 0,
+                        },
+                        // show: false
+                    },
+                    draggable: true,
+                    itemStyle: {
+                        normal: {
+                            borderColor: '#fff',
+                            borderWidth: 0.5,
+                        }
+                    },
+
+                    lineStyle: {
+                        color: 'grey',
+                        opacity: 0.5,
+                        curveness: 0
+                    },
+                    emphasis: {
+                        lineStyle: {
+                            width: 3
+                        }
+                    },
+                    categories: categories,
+                    data: nodes,
+                    links: links
+                }]
+            },
+            // visualMap: [{
+            //     type: 'continuous', // 连续型
+            //     min: 0, // 值域最小值，必须参数
+            //     max: 5000, // 值域最大值，必须参数
+            //     calculable: true, // 是否启用值域漫游
+            //     show: false,
+            //     inRange: {
+            //         symbolSize: [5, 200]
+            //     },
+            //     itemWidth: 20,
+            //     textStyle: {
+            //         color: 'black' // 值域控件的文本颜色
+            //     }
+            // }],
+            options: null
+        };
+
+        $.getJSON("meilai2.json", function(res) {
+            all_data = res;
+            options.options = res;
+            myChart.setOption(options)
+        })
+
+        // $.getJSON("lanshizi2.json", function(res) {
+        //     all_data = res;
+        //     options.options = res;
+        //     myChart2.setOption(options)
+        // })
+
+    }
+    </script>
+</body>
+
+</html>

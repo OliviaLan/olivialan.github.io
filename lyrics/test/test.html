@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js">
+</script>
+<script type="text/javascript" src="js/echarts.js">
+</script>
+<script type="text/javascript">
+    var changeColor = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+    var x = [1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015]
+    var y11 = [0, 0, 0, 0, 0, 0, 1, 1, 2, 4, 4, 0, 0, 0, 0, 9, 11, 18, 11, 11, 11, 11, 5, 4, 5, 0, 2, 2]
+    var y12 = [0, 0, 0, 0, 0, 0, 0, 2, 3, 5, 5, 1, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    var y21 = [0, 0, 0, 0, 0, 0, 0, 0, 2, 7, 11, 8, 4, 4, 13, 13, 9, 6, 11, 9, 3, 2, 2, 2, 2, 0, 1, 0]
+    var y22 = [0, 0, 0, 0, 0, 0, 0, 0, 6, 8, 6, 2, 0, 4, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    var y31 = [0, 1, 8, 0, 0, 4, 11, 9, 2, 17, 8, 8, 14, 9, 3, 8, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0];
+    var y32 = [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    var y41 = [0, 0, 1, 1, 0, 1, 1, 3, 3, 16, 14, 12, 11, 3, 7, 0, 8, 6, 5, 1, 3, 0, 0, 1, 0, 0, 0, 0]
+    var y42 = [0, 0, 0, 0, 0, 0, 0, 0, 6, 8, 6, 2, 0, 4, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    var y51 = [0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 6, 3, 7, 11, 19, 8, 10, 4, 4, 3, 2, 4, 1, 2, 1, 4, 2, 0]
+    var y52 = [0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 7, 3, 8, 28, 12, 11, 0, 14, 16, 4, 2, 6, 6, 3, 1, 0, 0, 0]
+    var y61 = [2, 0, 3, 0, 3, 0, 0, 1, 2, 6, 2, 11, 6, 8, 9, 4, 8, 1, 6, 5, 1, 1, 0, 1, 1, 0, 1, 0]
+    var y62 = [0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 1, 2, 3, 2, 4, 4, 7, 5, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0]
+    var y71 = [0, 0, 0, 0, 0, 0, 0, 3, 3, 4, 6, 7, 12, 5, 14, 10, 6, 0, 8, 0, 1, 0, 1, 1, 0, 1, 0, 0]
+    var y72 = [0, 0, 0, 0, 0, 0, 0, 2, 5, 2, 0, 2, 1, 6, 8, 6, 20, 2, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+    var y81 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 15, 9, 16, 11, 5, 4, 0, 0, 0, 0, 1, 0, 0, 0]
+    var y82 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 9, 10, 10, 4, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    var y91 = [0, 0, 1, 0, 1, 1, 2, 2, 4, 2, 3, 2, 4, 13, 11, 2, 7, 1, 0, 0, 1, 0, 0, 2, 0, 3, 2, 0]
+    var y92 = [0, 0, 0, 0, 0, 0, 4, 2, 2, 10, 2, 4, 12, 10, 0, 4, 4, 0, 0, 1, 0, 4, 0, 0, 0, 1, 1, 0]
+    var y101 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 15, 6, 10, 6, 2, 5, 1, 6, 3, 0, 0, 2, 1, 1, 0]
+    var y102 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 3, 6, 10, 5, 5, 3, 2, 4, 7, 3, 1, 3, 3, 0]
+    var y111 = [0, 0, 1, 0, 1, 2, 1, 2, 1, 5, 2, 4, 1, 5, 0, 12, 6, 0, 10, 2, 1, 1, 1, 0, 0, 2, 1, 0]
+    var y112 = [0, 0, 0, 0, 0, 0, 0, 0, 1, 5, 10, 0, 4, 5, 0, 0, 3, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0]
+    var y121 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 7, 9, 5, 9, 7, 5, 2, 5, 3, 2, 0, 3, 0, 0, 0, 0, 0, 0]
+    var y122 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 6, 8, 10, 2, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    var y131 = [0, 0, 0, 0, 2, 7, 6, 3, 3, 5, 2, 0, 5, 0, 1, 5, 1, 0, 7, 0, 2, 0, 1, 2, 0, 1, 0, 0]
+    var y132 = [0, 0, 0, 0, 0, 1, 0, 2, 2, 0, 2, 0, 6, 0, 4, 6, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 1, 0]
+    var y141 = [0, 0, 0, 0, 0, 1, 0, 1, 0, 3, 6, 3, 5, 3, 7, 5, 0, 0, 0, 0, 5, 0, 0, 1, 1, 0, 3, 0]
+    var y142 = [0, 0, 0, 0, 0, 0, 2, 6, 4, 9, 4, 2, 4, 4, 8, 2, 2, 0, 0, 0, 10, 0, 0, 6, 0, 0, 1, 0]
+    var y151 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    var y152 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 9, 9, 2, 13, 5, 7, 6, 9, 2, 2, 0, 1, 0, 0]
+    var yarr1 = [y11, y21, y31, y41, y51, y61, y71, y81, y91, y101, y111, y121, y131, y141, y151];
+    var yarr2 = [y12, y22, y32, y42, y52, y62, y72, y82, y92, y102, y112, y122, y132, y142, y152];
+    var nameArr = ['古巨基', "杨千嬅", "王菲", '黎明', "陈奕迅", "许志安", "陈慧琳", "Twins", "郑秀文", "容祖儿", "梁汉文", "谢霆锋", "黄耀明", "苏永康", "何韵诗"]
+
+    function showLine(y1, y2) {
+        var myChart1 = echarts.init(document.getElementById('main1'));
+        var option1 = {
+            tooltip: {
+                show: true
+            },
+            legend: {
+                data: ['作词量']
+            },
+            xAxis: [{
+                type: 'category',
+                data: x,
+                name: "林夕"
+            }],
+            yAxis: [{
+                type: 'value'
+            }],
+            series: y1
+        };
+        myChart1.setOption(option1);
+        var myChart2 = echarts.init(document.getElementById('main2'));
+        var option2 = {
+            tooltip: {
+                show: true
+            },
+            legend: {
+                data: ['作词量']
+            },
+            xAxis: [{
+                type: 'category',
+                data: x,
+                name: "黄伟文"
+            }],
+            yAxis: [{
+                type: 'value'
+            }],
+            series: y2
+        };
+        // 为echarts对象加载数据
+        myChart2.setOption(option2);
+    }
+
+    function openLine(i) {
+        if (changeColor[i] == 0) {
+            changeColor[i] = 1;
+            document.getElementById("id" + i).style.background = "blue";
+        } else {
+            changeColor[i] = 0;
+            document.getElementById("id" + i).style.background = "";
+        }
+        var str1 = "[";
+        var str2 = "[";
+        var m = 0;
+        for (var k = 0; k < changeColor.length; k++) {
+            if (changeColor[k] == 1) {
+                m++;
+                str1 += '{"name":"' + nameArr[k] + '","type":"line","data":yarr1[' + k + ']}' + ",";
+                str2 += '{"name":"' + nameArr[k] + '","type":"line","data":yarr2[' + k + ']}' + ",";
+            }
+        }
+        if (m > 0) {
+            str1 = str1.substring(0, str1.length - 1);
+            str2 = str2.substring(0, str2.length - 1);
+        }
+        str1 += "]"
+        str2 += "]"
+        showLine(eval('(' + str1 + ')'), eval('(' + str2 + ')'))
+    }
+</script>
+
+<body>
+    <input type="button" id="id0" value="古巨基" onclick="openLine(0)">
+    <input type="button" id="id1" value="杨千嬅" onclick="openLine(1)">
+    <input type="button" id="id2" value="王菲" onclick="openLine(2)">
+    <input type="button" id="id3" value="黎明" onclick="openLine(3)">
+    <input type="button" id="id4" value="陈奕迅" onclick="openLine(4)">
+    <input type="button" id="id5" value="许志安" onclick="openLine(5)">
+    <input type="button" id="id6" value="陈慧琳" onclick="openLine(6)">
+    <input type="button" id="id7" value="Twins" onclick="openLine(7)">
+    <input type="button" id="id8" value="郑秀文" onclick="openLine(8)">
+    <input type="button" id="id9" value="容祖儿" onclick="openLine(9)">
+    <input type="button" id="id10" value="梁汉文" onclick="openLine(10)">
+    <input type="button" id="id11" value="谢霆锋" onclick="openLine(11)">
+    <input type="button" id="id12" value="黄耀明" onclick="openLine(12)">
+    <input type="button" id="id13" value="苏永康" onclick="openLine(13)">
+    <input type="button" id="id14" value="何韵诗" onclick="openLine(14)">
+    <div id="main1" style="height:500px;width:300px"></div>
+    <div id="main2" style="height:500px;width:300px"></div>
+</body>
+
+</html>

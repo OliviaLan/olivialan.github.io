@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>玻尿酸查查查～</title>
+    <!-- Echarts-->
+    <script src="echarts.min.js"></script>
+    <!-- Bootstrap & jquery-->
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="bootstrap-select.min.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="data.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files  -->
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="buttons.css">
+    <style>
+        #to-chaxun1 {
+            width: 80%;
+            margin-top: 50%;
+            color: #e51873;
+        }
+        
+        #to-chaxun2 {
+            width: 80%;
+            margin-top: 5%;
+            color: #e51873;
+        }
+        
+        #to-chaxun2-3 {
+            width: 80%;
+            color: #e51873;
+        }
+        
+        #to-chaxun1-2 {
+            width: 80%;
+            color: #e51873;
+        }
+        
+        #to-chaxun2-2 {
+            width: 80%;
+            color: #e51873;
+        }
+        
+        #chaxun1 {
+            width: 100%;
+            margin: 0%;
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-position: center;
+            -moz-background-size: 100% 100%;
+        }
+        
+        #chaxun2 {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-position: center;
+            -moz-background-size: 100% 100%;
+        }
+        
+        #result {
+            color: gray;
+            font-size: 14px;
+            text-shadow: 1rem;
+            text-align: center;
+            width: 320px;
+            height: 250px;
+            background-color: snow;
+            border-radius: 5px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        
+        @media screen and (max-width: 479px) {
+            #result {
+                width: 320px;
+            }
+        }
+        
+        #search {
+            background-color: palevioletred;
+            border-color: rgba(100, 100, 100, 0.1);
+            width: 60%;
+            margin-top: 50px;
+            box-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
+            margin: 0 auto;
+            /margin-left: 20px */ /它跟下面btn-group是同步变化的 */
+        }
+        
+        .test {
+            color: #252525;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+            /line-height: 1.6rem;
+            */
+        }
+        
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn.active.focus {
+            outline: none;
+            border-color: palevioletred;
+            box-shadow: none;
+            background-color: palevioletred !important;
+            color: white
+        }
+        
+        th {
+            font-size: 12px;
+        }
+        
+        td {
+            font-size: 12px;
+        }
+    </style>
+
+    <script>
+        $(function() {
+            $("#to-chaxun2-2").hide();
+            $("#to-chaxun1-2").hide();
+
+            $("#chaxun2").hide();
+            $("#chaxun1").hide();
+
+            $("#hw-tb").hide();
+
+            $("#yw-tb").hide();
+            $("#yw-bar").hide();
+
+            $("#rby-tb").hide();
+            $("#rby-bar").hide();
+
+            $("#afl-tb").hide();
+            $("#afl-bar").hide();
+
+            $("#rl-tb").hide();
+            $("#rl-bar").hide();
+
+            $("#qyd-tb").hide();
+            $("#qyd-bar").hide();
+
+            $("#alw-tb").hide();
+            $("#alw-bar").hide();
+
+            $("#sy-tb").hide();
+            $("#sy-bar").hide();
+
+            $("#fsl-tb").hide();
+            $("#fsl-bar").hide();
+
+            $("#xfl-tb").hide();
+            $("#xfl-bar").hide();
+
+            $("#ym-tb").hide();
+            $("#ym-bar").hide();
+
+            $("#jl-tb").hide();
+            $("#jl-bar").hide();
+
+            $("#abf-tb").hide();
+            $("#abf-bar").hide();
+
+            $("#blz-tb").hide();
+            $("#blz-bar").hide();
+
+            $("#fmd-tb").hide();
+            $("#fmd-bar").hide();
+
+            $("#bnd-tb").hide();
+            $("#bnd-bar").hide();
+
+            $("#ta-tb").hide();
+            $("#ta-bar").hide();
+
+            $("#sl-tb").hide();
+            $("#sl-bar").hide();
+
+            $("#nlms-tb").hide();
+            $("#nlms-bar").hide();
+        })
+    </script>
+
+</head>
+
+<body style="font-size:16px;line-height:2.0">
+    <div class="text-center">
+        <button type="button" class="btn btn-default btn-md" id="to-chaxun1">有哪些玻尿酸产品？</button>
+        <button type="button" class="btn btn-default btn-md" id="to-chaxun2">查哪些医院有资质？</button>
+    </div>
+
+    <div id="chaxun1">
+        <img src="./img/chaxun.jpg" class="img-responsive " alt="响应式图像">
+
+        <div class="container">
+            <div class="row  text-center" style="margin-top:20px">
+                <!-- <p style="font-size:13px">韩国</p> -->
+                <button class="button blue serif round glass" id="nlms">纽拉美斯</button>
+                <button class="button blue serif round glass" id="alw">艾莉薇</button>
+                <button class="button blue serif round glass" id="yw">伊婉</button>
+
+                <br>
+                <!-- <p style="font-size:13px">欧美</p> -->
+                <button class="button orange serif round glass" id="rl">瑞蓝</button>
+                <button class="button orange serif round glass" id="ta">泰奥</button>
+                <button class="button orange serif round glass" id="sl">丝丽</button>
+                <button class="button orange serif round glass" id="qyd">乔雅登</button>
+                <br>
+                <!-- <br>
+                <p style="font-size:13px">中国台湾</p>  -->
+                <button class="button green serif round glass" id="fsl">法思丽</button>
+                <button class="button green serif round glass" id="blz">贝丽姿</button>
+                <button class="button green serif round glass" id="fmd">芙媄登</button>
+                <br>
+                <!-- <br>
+                <p style="font-size:13px">大陆</p>  -->
+                <button class="button pink serif round glass" id="bnd">宝尼达</button>
+                <button class="button pink serif round glass" id="xfl">欣菲聆</button>
+                <button class="button pink serif round glass" id="rby">润百颜</button>
+                <br>
+                <button class="button pink serif round glass" id="hw">海薇</button>
+                <button class="button pink serif round glass" id="sy">舒颜</button>
+                <button class="button pink serif round glass" id="ym">逸美</button>
+                <button class="button pink serif round glass" id="afl">爱芙莱</button>
+                <br>
+                <br>
+                <p align="center" style="font-size:11px;color:grey">数据来源：官方网站、比价网站、代购报价<br>非确切价格，仅供参考</p>
+            </div>
+        </div>
+
+        <script>
+            $(function() { // Routine format; put all your jQuery initialisation inside
+                //点击乔雅登
+                $('#hw').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#yw-tb").hide();
+                    $("#rby-tb").hide();
+                    $("#afl-tb").hide();
+                    $("#rl-tb").hide();
+                    $("#qyd-tb").hide();
+                    $("#alw-tb").hide();
+                    $("#sy-tb").hide();
+                    $("#fsl-tb").hide();
+                    $("#xfl-tb").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#hw-tb").show();
+                    $("#hw-bar").show();
+                    Hw();
+                });
+                $('#yw').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#yw-tb").show();
+                    $("#yw-bar").show();
+                    Yw();
+                });
+                $('#rby').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#rby-tb").show();
+                    $("#rby-bar").show();
+                    Rby();
+                });
+                $('#afl').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#afl-tb").show();
+                    $("#afl-bar").show();
+                    Afl();
+                });
+                $('#rl').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#rl-tb").show();
+                    $("#rl-bar").show();
+                    Rl();
+                });
+                $('#qyd').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#qyd-tb").show();
+                    $("#qyd-bar").show();
+                    Qyd();
+                });
+                $('#alw').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#alw-tb").show();
+                    $("#alw-bar").show();
+                    Alw();
+                });
+                $('#sy').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#sy-tb").show();
+                    $("#sy-bar").show();
+                    Sy();
+                });
+                $('#fsl').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#fsl-tb").show();
+                    $("#fsl-bar").show();
+                    Fsl();
+                });
+                $('#xfl').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#xfl-tb").show();
+                    $("#xfl-bar").show();
+                    Xfl();
+                });
+                $('#ym').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#ym-tb").show();
+                    $("#ym-bar").show();
+                    Ym();
+                });
+                $('#jl').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#jl-tb").show();
+                    $("#jl-bar").show();
+                    Jl();
+                });
+                $('#abf').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#abf-tb").show();
+                    $("#abf-bar").show();
+                    Abf();
+                });
+                $('#blz').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#blz-tb").show();
+                    $("#blz-bar").show();
+                    Blz();
+                });
+                $('#fmd').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#fmd-tb").show();
+                    $("#fmd-bar").show();
+                    Fmd();
+                });
+                $('#bnd').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#bnd-tb").show();
+                    $("#bnd-bar").show();
+                    Bnd();
+                });
+                $('#ta').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#ta-tb").show();
+                    $("#ta-bar").show();
+                    Ta();
+                });
+                $('#sl').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#nlms-tb").hide();
+                    $("#nlms-bar").hide();
+                    $("#sl-tb").show();
+                    $("#sl-bar").show();
+                    Sl();
+                });
+                $('#nlms').click(function() {
+                    $("#to-chaxun2-2").show();
+                    $("#hw-tb").hide();
+                    $("#hw-bar").hide();
+                    $("#yw-tb").hide();
+                    $("#yw-bar").hide();
+                    $("#rby-tb").hide();
+                    $("#rby-bar").hide();
+                    $("#afl-tb").hide();
+                    $("#afl-bar").hide();
+                    $("#rl-tb").hide();
+                    $("#rl-bar").hide();
+                    $("#qyd-tb").hide();
+                    $("#qyd-bar").hide();
+                    $("#alw-tb").hide();
+                    $("#alw-bar").hide();
+                    $("#sy-tb").hide();
+                    $("#sy-bar").hide();
+                    $("#fsl-tb").hide();
+                    $("#fsl-bar").hide();
+                    $("#xfl-tb").hide();
+                    $("#xfl-bar").hide();
+                    $("#ym-tb").hide();
+                    $("#ym-bar").hide();
+                    $("#jl-tb").hide();
+                    $("#jl-bar").hide();
+                    $("#abf-tb").hide();
+                    $("#abf-bar").hide();
+                    $("#blz-tb").hide();
+                    $("#blz-bar").hide();
+                    $("#fmd-tb").hide();
+                    $("#fmd-bar").hide();
+                    $("#bnd-tb").hide();
+                    $("#bnd-bar").hide();
+                    $("#ta-tb").hide();
+                    $("#ta-bar").hide();
+                    $("#sl-tb").hide();
+                    $("#sl-bar").hide();
+                    $("#nlms-tb").show();
+                    $("#nlms-bar").show();
+                    Nlms();
+                });
+            }); // Routine format; put all your jQuery initialisation inside
+        </script>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-hover" style="margin-top:20px" id="hw-tb">
+                        <caption style="text-align:center;font-size:18px;color:#252525;font-weight:bold">海薇（国产）
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>大分子</td>
+                                <td>填充定型</td>
+                                <td>466元</td>
+                                <td>暂无</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="yw-tb">
+                        <caption style="text-align:center;font-size:18px;color:#252525;font-weight:bold">伊婉（韩国）
+                            <br><span style="text-align:center;font-size:12px;color:darkseagreen"> 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>CLASSIC S</td>
+                                <td>中分子</td>
+                                <td>抚平细纹</td>
+                                <td>1774元</td>
+                                <td>259美金</td>
+                            </tr>
+                            <tr class="success">
+                                <td>VOLUME S</td>
+                                <td>大分子</td>
+                                <td>面部塑形</td>
+                                <td>2980元</td>
+                                <td>380美金</td>
+
+                            </tr>
+                            <tr class="success">
+                                <td>CLASSIC PLUS</td>
+                                <td>中分子</td>
+                                <td>抚平细纹（麻醉版）</td>
+                                <td>3200元</td>
+                                <td>200美金</td>
+
+                            </tr>
+                            <tr class="success">
+                                <td>VOLUME PLUS</td>
+                                <td>大分子</td>
+                                <td>面部塑形（麻醉版）</td>
+                                <td>3400元</td>
+                                <td>380美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>YVOIRE Contour</td>
+                                <td>中分子</td>
+                                <td>眉间/眼部皱纹</td>
+                                <td>2048元</td>
+                                <td>299美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>YVOIRE Hydro</td>
+                                <td>小分子</td>
+                                <td>填充下巴/八字皱纹</td>
+                                <td>2048元</td>
+                                <td>380美金</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="rby-tb">
+                        <caption style="text-align:center;font-size:18px;color:#252525;font-weight:bold">润百颜（国产）
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>大分子</td>
+                                <td>除皱/填充定型</td>
+                                <td>650元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="afl-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">艾芙莱（国产）
+                            <br><span style="font-size:12px;color:darkseagreen;text-align:center"> 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>0.5ml装</td>
+                                <td>小分子</td>
+                                <td>皮下浅层</td>
+                                <td>600元</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="success">
+                                <td>1ml装</td>
+                                <td>中分子</td>
+                                <td>皮下深层</td>
+                                <td>1280元</td>
+                                <td>暂无</td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="rl-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">瑞蓝（韩国）
+                            <br><span style="font-size:12px;color:darkseagreen;text-align:center"> 标绿表示已获我国批文</span>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>瑞蓝1</td>
+                                <td>小分子</td>
+                                <td>泪沟/卧蚕</td>
+                                <td>1340元</td>
+                                <td>190美金</td>
+                            </tr>
+                            <tr class="success">
+                                <td>瑞蓝2</td>
+                                <td>中分子</td>
+                                <td>皱纹/丰唇</td>
+                                <td>3000元（官方）<br> 1800元（水货）</td>
+                                <td>115美金</td>
+                            </tr>
+
+                            <tr>
+                                <td>瑞蓝3</td>
+                                <td>大分子</td>
+                                <td>抬头纹/法令纹</td>
+                                <td>1250元</td>
+                                <td>185美金</td>
+                            </tr>
+                            <tr>
+                                <td>瑞蓝4</td>
+                                <td>最大分子</td>
+                                <td>大面积填充</td>
+                                <td>1450元</td>
+                                <td>209美金</td>
+                            </tr>
+                            <tr>
+                                <td>瑞蓝5</td>
+                                <td>小分子</td>
+                                <td>嫩肤补水</td>
+                                <td>1100元</td>
+                                <td>209美金</td>
+                            </tr>
+                            <tr>
+                                <td>瑞蓝6</td>
+                                <td>小分子</td>
+                                <td>丰唇</td>
+                                <td>1139元</td>
+                                <td>159美金</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="qyd-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">乔雅登（美国）
+                            <br><span style="font-size:12px;color:darkseagreen;text-align:center"> 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>乔雅登1</td>
+                                <td>小分子</td>
+                                <td>丰唇专用</td>
+                                <td>1450元</td>
+                                <td>255美金</td>
+                            </tr>
+                            <tr>
+                                <td>乔雅登2</td>
+                                <td>小分子</td>
+                                <td>泪沟/卧蚕/眼周</td>
+                                <td>1380元</td>
+                                <td>229美金</td>
+                            </tr>
+
+                            <tr>
+                                <td>乔雅登3</td>
+                                <td>中分子</td>
+                                <td>额头/太阳穴/苹果肌</td>
+                                <td>1800元</td>
+                                <td>325美金</td>
+                            </tr>
+                            <tr>
+                                <td>乔雅登4</td>
+                                <td>大分子</td>
+                                <td>鼻子/下巴/眉骨</td>
+                                <td>1850元</td>
+                                <td>329美金</td>
+                            </tr>
+                            <tr>
+                                <td>乔雅登5</td>
+                                <td>大分子</td>
+                                <td>鼻子/下巴</td>
+                                <td>2000元</td>
+                                <td>429美金</td>
+                            </tr>
+                            <tr class="success">
+                                <td>雅致</td>
+                                <td>小分子</td>
+                                <td>抚平轻度皱纹</td>
+                                <td>12800元（官方）<br>2900元（水货）</td>
+                                <td>319美金</td>
+                            </tr>
+                            <tr class="success">
+                                <td>极致</td>
+                                <td>大分子</td>
+                                <td>极强塑形效果</td>
+                                <td>14800元（官方）<br>2900元（水货）</td>
+                                <td>319美金</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="alw-tb">
+
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">艾莉薇（韩国）
+                            <br><span style="font-size:12px;color:darkseagreen;text-align:center"> 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Light</td>
+                                <td>小分子</td>
+                                <td>祛除细小皱纹</td>
+                                <td>4000元</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="success">
+                                <td>Deep Line</td>
+                                <td>中分子</td>
+                                <td>中重度鼻唇沟</td>
+                                <td>4680元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                            <tr>
+                                <td>Ultra Volume</td>
+                                <td>大分子</td>
+                                <td>丰额头/垫下巴</td>
+                                <td>3400元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="sy-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">舒颜（国产）
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>中分子</td>
+                                <td>垫下巴</td>
+                                <td>1000元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="fsl-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">法丝丽（台湾）
+                            <br><span style="font-size:12px;color:darkseagreen;text-align:center"> 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>中分子</td>
+                                <td>中深度鼻唇沟</td>
+                                <td>2000元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="xfl-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">欣菲聆（国产）
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>大分子</td>
+                                <td>抬头纹/法令纹</td>
+                                <td>500元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="ym-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">逸美（国产）
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>Vigor</td>
+                                <td>小分子</td>
+                                <td>细纹/面部补水</td>
+                                <td>605元</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="success">
+                                <td>Nature</td>
+                                <td>中分子</td>
+                                <td>中度皱纹/塑形</td>
+                                <td>1050元</td>
+                                <td>暂无</td>
+
+                            </tr>
+                            <tr class="success">
+                                <td>逸美1.0</td>
+                                <td>中分子</td>
+                                <td>深度皱纹/塑形</td>
+                                <td>1360元</td>
+                                <td>暂无</td>
+
+                            </tr>
+                            <tr class="success">
+                                <td>逸美2.0</td>
+                                <td>大分子</td>
+                                <td>强塑型</td>
+                                <td>1980元</td>
+                                <td>暂无</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="jl-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">姣兰（国产）
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>小分子</td>
+                                <td>眼周唇部填充</td>
+                                <td>3800元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="abf-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">爱贝芙（台湾）
+                            <span style="font-size:12px;color:darkseagreen;text-align:center"> 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>统一</td>
+                                <td>中分子</td>
+                                <td>除皱/隆鼻/丰唇沟</td>
+                                <td>13800元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="blz-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">贝丽姿（台湾）
+                            <br><span style="font-size:12px;color:darkseagreen;text-align:center"> 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>中分子</td>
+                                <td>丰苹果肌</td>
+                                <td>2000元</td>
+                                <td>305美金</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="fmd-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">芙镁登（台湾）
+                            <br><span style="font-size:12px;color:darkseagreen;text-align:center"> 标绿表示已获我国批文</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>中分子</td>
+                                <td>中深度鼻唇沟</td>
+                                <td>1000元</td>
+                                <td>暂无</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="bnd-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">宝尼达（国产）
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>统一</td>
+                                <td>中分子</td>
+                                <td>长期填充皱纹</td>
+                                <td>1000元</td>
+                                <td>11800</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="ta-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">泰奥（瑞士）
+                            <br><span style="font-size:12px;color:darkseagreen;text-align:center"> 啊噢～该产品暂时未获我国批文哦</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RHA 1</td>
+                                <td>小分子</td>
+                                <td>细纹/浅皱纹</td>
+                                <td>1113元</td>
+                                <td>253美金</td>
+                            </tr>
+                            <tr>
+                                <td>RHA 2（熊猫针）</td>
+                                <td>小分子</td>
+                                <td>泪沟/黑眼圈/卧蚕</td>
+                                <td>1830元</td>
+                                <td>259美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>RHA 3</td>
+                                <td>中分子</td>
+                                <td>抚平深度皱纹</td>
+                                <td>1791元</td>
+                                <td>264美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>RHA 4</td>
+                                <td>大分子</td>
+                                <td>面部填充塑形</td>
+                                <td>1908元</td>
+                                <td>274美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>Fist line</td>
+                                <td>小分子</td>
+                                <td>脸部各处细纹</td>
+                                <td>1402元</td>
+                                <td>195美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>Deep line</td>
+                                <td>中分子</td>
+                                <td>法令纹/太阳穴/面部填充</td>
+                                <td>1713元</td>
+                                <td>259美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>Kiss</td>
+                                <td>小分子</td>
+                                <td>唇/嘴部提升</td>
+                                <td>1791元</td>
+                                <td>269美金</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="sl-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">丝丽（法国）
+                            <br><span style="font-size:12px;color:darkseagreen;text-align:center"> 啊噢～该产品暂时未获我国批文哦</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>丝丽S</td>
+                                <td>小分子</td>
+                                <td>泪沟/卧蚕/嘴唇</td>
+                                <td>1050元</td>
+                                <td>179美金</td>
+                            </tr>
+                            <tr>
+                                <td>丝丽M</td>
+                                <td>中分子</td>
+                                <td>额头/太阳穴/苹果肌</td>
+                                <td>1500元</td>
+                                <td>212美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>丝丽L</td>
+                                <td>中分子</td>
+                                <td>额头/太阳穴/法令纹</td>
+                                <td>1550元</td>
+                                <td>279美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>丝丽XL</td>
+                                <td>大分子</td>
+                                <td>下巴/鼻子/眉骨</td>
+                                <td>1700元</td>
+                                <td>329美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>丝丽XXL</td>
+                                <td>大分子</td>
+                                <td>隆鼻子/垫下巴</td>
+                                <td>1750元</td>
+                                <td>379美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>丝丽Lips</td>
+                                <td>小分子</td>
+                                <td>丰唇专用</td>
+                                <td>1100元</td>
+                                <td>179美金</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-hover" style="margin-top:20px" id="nlms-tb">
+                        <caption style="font-size:18px;color:black;font-weight:bold;text-align:center">纽拉美斯（韩国）
+                            <br><span style="font-size:12px;color:darkseagreen;text-align:center"> 啊噢～该产品暂时未获我国批文哦</span>
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>型号</th>
+                                <th>分子</th>
+                                <th>功用</th>
+                                <th>国内售价</th>
+                                <th>国外售价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1号</td>
+                                <td>小分子</td>
+                                <td>皱纹/面部水光</td>
+                                <td>960元</td>
+                                <td>146美金</td>
+                            </tr>
+                            <tr>
+                                <td>2号</td>
+                                <td>小分子</td>
+                                <td>丰唇</td>
+                                <td>1180元</td>
+                                <td>179美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>3号</td>
+                                <td>中分子</td>
+                                <td>面部软组织填充</td>
+                                <td>1450元</td>
+                                <td>220美金</td>
+
+                            </tr>
+                            <tr>
+                                <td>4号</td>
+                                <td>大分子</td>
+                                <td>隆鼻子/垫下巴</td>
+                                <td>1660元</td>
+                                <td>252美金</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 查询2 -->
+    <div id="chaxun2">
+        <div class="container">
+            <div div class="row  text-center">
+                <img src="./img/chaxun2.jpg" class="img-responsive " alt="响应式图像">
+                <br>
+
+                <select class="selectpicker" id="prov" data-size="8" style="width:80%">
+                        </select>
+                <br>
+
+                <select class="selectpicker" id="county" style="width:80%">
+                        </select>
+                <br>
+                <br>
+                <button type="button" class="btn btn-primary" id="search" style="width:60%">我要搜索</button>
+
+            </div>
+            <div id='result'><br>选择你的省份<br>搜索哪些医院获得玻尿酸产品授权<br><br>注：目前能查到的只有三种品牌<br>将持续更新资料......
+                <!-- <img src="img/background.jpg" alt="a"> -->
+            </div>
+            <script>
+                Object.keys(list).forEach(function(i) {
+                    $('#prov').append($('<option>' + i + '</option>)'));
+                });
+
+                aha();
+
+                $('#prov').on('hidden.bs.select', function() {
+                    aha();
+                });
+
+                function aha() {
+                    var prov = $('#prov').val();
+                    var county = Object.keys(list[prov]);
+                    $('#county').children().remove();
+                    county.forEach(function(i) {
+                        $('#county').append($('<option>' + i + '</option>)'));
+                    });
+                    $('#county').selectpicker('refresh');
+                    $('#county').selectpicker('val');
+
+                }
+
+                // $('#county').on('hidden.bs.select', function() {
+                //     var prov = $('#prov').val();
+                //     var county = $('#county').val();
+                //     // 下面这个输出选的值
+                //     console.log(list[prov][county]);
+                // });
+
+
+                $('#search').on('click', function() {
+
+                    var prov = $('#prov').val();
+                    var county = $('#county').val();
+                    var resultList = list[prov][county]
+
+                    // 下面这个输出选的值
+                    console.log(list[prov][county]);
+
+                    $('#result').html(""); //清空原本text
+                    resultList.forEach(function(i) {
+                        // $('#result').append(i + '<br>');
+                        $('#result').append('<p class="test">' + i + '</p>');
+
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <div class="text-center" style="margin-top:20px;margin-bottom:30px">
+        <button type="button" class="btn btn-default btn-md" id="to-chaxun1-2">去查产品～</button>
+        <button type="button" class="btn btn-default btn-md" id="to-chaxun2-2">去查资质～</button>
+        <button type="button" class="btn btn-default btn-md" id="to-chaxun2-3">返回新闻页</button>
+    </div>
+
+    <script>
+        $(function() { // Routine format; put all your jQuery initialisation inside
+
+            $('#to-chaxun3').click(function() {
+                location.href = "index.html";
+            });
+            $('#to-chaxun2-3').click(function() {
+                location.href = "index.html";
+            });
+            $('#to-chaxun1').click(function() {
+                $("#chaxun2").hide();
+                $("#chaxun1").show();
+                $("#to-chaxun1").hide();
+                $("#to-chaxun2").hide();
+                $("#to-chaxun2-3").hide();
+
+            });
+            $('#to-chaxun2').click(function() {
+                $("#chaxun1").hide();
+                $("#chaxun2").show();
+                $("#to-chaxun1").hide();
+                $("#to-chaxun2").hide();
+                $("#to-chaxun1-2").show();
+
+
+            });
+            //去查资质～
+            $('#to-chaxun2-2').click(function() {
+                $("#chaxun1").hide();
+                $("#chaxun2").show();
+                $("#to-chaxun1-2").show();
+                $("#to-chaxun2-2").hide();
+                $("#to-chaxun2-3").show();
+
+            });
+            //去查产品～
+            $('#to-chaxun1-2').click(function() {
+                $("#chaxun1").show();
+                $("#chaxun2").hide();
+                $("#to-chaxun1-2").hide();
+                $("#to-chaxun2-2").show();
+                $("#to-chaxun2-3").show();
+
+
+            });
+
+        }); // Routine format; put all your jQuery initialisation inside
+    </script>
+
+
+</body>
+
+</html>
