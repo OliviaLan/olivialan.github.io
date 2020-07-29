@@ -1,10 +1,13 @@
   	// --- CONSENT FORM
   	var init_landing_page = () => {
   	        d = document.createElement('div')
-  	        text = '<b>Title:</b> Evaluation of Narratives<br> <b>Description: </b><br>In this HIT, you will view 2 fictional stories and evaluate their narratives by setting scores to several rating questions. As the questions are mostly subjective, you need to write down reasons to explain your ratings, and we encourage writing reasons clearly and specifically to help us distinguish qualified answers (e.g., from robots). Very careful feedback will be rewarded with a bonus. The HIT must be completed in one session. <br><br><b>HIT acceptance criteria: </b>You need to first accept the HIT on MTurk, then finish all the task on this page, copy your unique code, return to MTurk, paste your code to the input, and submit the HIT. Since we have to check the answers manually to see whether your reasons can explain your ratings, your HIT acceptance and bonus assignment may take up to 48 hours to process.'
+  	        text = '<p><strong>Evaluation of Narratives</strong></p> <br> <p>Description: </b><br>In this HIT, you will view 2 stories based on fictional data and evaluate their narratives by answering several questions. </p><p>As most questions are subjective, you need to write down reasons to explain yourself. We encourage writing reasons clearly and specifically to help us distinguish qualified answers (e.g., from robots). Very careful feedback will be rewarded with $1 bonus. </p>.'
   	        d.innerHTML = text
-  	        d.style.textAlign = 'left'
-  	        d.style.margin = '2%'
+  	        d.style.textAlign = 'center'
+  	        d.style.fontSize = 'large'
+  	        d.style.marginTop = '10%'
+  	        d.style.marginLeft = '20%'
+  	        d.style.marginRight = '20%'
   	        document.body.append(d)
 
 

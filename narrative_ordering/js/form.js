@@ -27,13 +27,13 @@
   	    // },
   	    "literacy_1": {
   	        "type": "string",
-  	        "title": "Have you ever read timelines before?",
-  	        "enum": ['Yes', 'No'],
+  	        "title": "Which story is more engaging?",
+  	        "enum": ['Story One', 'Story Two'],
   	        'required': true
   	    },
   	    "literacy_2": {
   	        "type": "string",
-  	        "title": "Have you ever read line charts before?",
+  	        "title": "Did you habe trouble reading the visualizations?",
   	        "enum": ['Yes', 'No'],
   	        'required': true
   	    },

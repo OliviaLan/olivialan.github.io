@@ -103,18 +103,23 @@ var init_end = () => {
 var init_warning = () => {
     document.body.innerHTML = ''
     d = document.createElement('div')
-    d.innerHTML = 'Attention: do not close or reload the page after this step. If you do, the HIT will end without being finished.'
-    d.style.margin = '20%'
+    d.innerHTML = 'Attention: do not close or reload the page after this step. <br>If you do, the HIT will end without being finished.'
     d.style.fontWeight = 'bold'
-    d.style.fontSize = 'xx-large'
+    d.style.textAlign = 'center'
+    d.style.fontSize = '20px'
+    d.style.marginTop = '20%'
+    d.style.marginLeft = '20%'
+    d.style.marginRight = '20%'
     d.style.color = '#c00'
     document.body.append(d)
 
     btn = document.createElement('button')
-    btn.className = 'button f_button'
+    btn.innerHTML = 'Start the HIT'
+    btn.style.margin = '5%'
+    btn.style.fontSize = 'large'
+        // btn.className = 'button f_button'
     btn.onclick = init_questions
         // btn.onclick = init_tutorial
-    btn.innerHTML = 'Start the HIT'
     document.body.append(btn)
 }
 
@@ -197,7 +202,7 @@ var save_mid = () => {
 async function returning_mid() {
     document.body.innerHTML = ''
     d = document.createElement('div')
-    d.innerHTML = "It looks like you have already attempted this test. This may be due to your closing the browser tab during a previous attempt. Unfortunately, we can't allow users to take the test twice. <br><br>"
+    d.innerHTML = "It looks like you have already attempted this test. Unfortunately, we can't allow users to take the test twice. <br><br>"
     d.style.margin = '20%'
     d.style.fontWeight = 'bold'
     document.body.append(d)
@@ -231,7 +236,7 @@ async function returning_mid() {
 var end_preview = () => {
     document.body.innerHTML = ''
     d = document.createElement('div')
-    d.innerHTML = "This is the end of the preview. Unfortunately, we can't show you more than this. <br><br> We have to ask you to accept this HIT because we need to verify that you have not completed this survey before. According to MTurk support, accepting and then returning HITs does not affect your account or your eligibility to complete other HITs. <br> <br> <br> If you did not choose to preview the test, you may be seeing this message because of an issue with your Mechanical Turk ID. Try opening the link from the Mechanical Turk page again, or contact us."
+    d.innerHTML = "This is the end of the preview. Unfortunately, we can't show you more than this. <br><br> We have to ask you to accept this HIT because we need to verify that you have not completed this survey before. According to MTurk support, accepting and then returning HITs does not affect your account or your eligibility to complete other HITs. <br> <br> <br> If you did not choose to preview the test, you may be seeing this message because of an issue with your Mechanical Turk ID. Try opening the link from the Mechanical Turk page again."
     d.style.margin = '20%'
     d.style.fontWeight = 'bold'
     document.body.append(d)

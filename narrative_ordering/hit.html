@@ -15,18 +15,22 @@
                 <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
                 <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Survey Link Instructions</strong> </a>
                 <div class="panel-body">
-                    <p><strong>Evaluation of Timeline Shapes</strong></p>
+                    <p><strong>Evaluation of Narratives</strong></p>
 
 
-                    <p>We are conducting an academic survey about social networks. We need to understand your opinion about social networks. Select the link below to complete the survey. At the end of the survey, you will receive a code to paste into the
-                        box below to receive credit for taking our survey.</p>
+                    <p>We are conducting an academic survey about story narratives. We need to understand your opinion about what narratives lead to an engaging story.</p>
+                    <p>This HIT may last about 20-30 minutes. You will view 2 stories based on fictional data and evaluate their narratives by answering several questions and writing down reasons. Very careful feedback will be rewarded with $1 bonus.</p>
+                    <p><strong>HIT acceptance criteria: </strong>(1) Accept the HIT on MTurk, (2) Select the link below to complete the survey, (3) Copy the unique code you receive at the end of the survey, (4) Return to this page, paste your code below
+                        and submit the HIT.</p>
+                    Since we have to check the answers manually, your HIT acceptance and bonus assignment may take up to 72 hours to process.
+                    </p>
 
-                    <p><strong>HIT acceptance criteria:</strong> You need to answer at least 6 out of the 12 questions correctly. Your evaluation is done automatically, but your HIT acceptance and bonus assignment may take up to 48 hours to process.</p>
+                    <!-- <p><strong>HIT acceptance criteria:</strong> You need to finish. Your evaluation is done automatically, but your HIT acceptance and bonus assignment may take up to 48 hours to process.</p> -->
 
-                    <p><strong>Make sure to leave this window open as you complete the survey. </strong> When you are finished, you will return to this page to paste the code into the box.</p>
+                    <p><strong><mark>Make sure to leave this window open as you complete the survey. </mark></strong></p>
 
-                    <p class="well well-sm"><strong><mark>Template note for Requesters</mark></strong> - To verify that Workers actually complete your survey, require each Worker to enter a <strong>unique</strong> survey completion code to your HIT. Consult with your survey
-                        service provider on how to generate this code at the end of your survey.</p>
+                    <!-- <p class="well well-sm"><strong><mark>Template note for Requesters</mark></strong> - To verify that Workers actually complete your survey, require each Worker to enter a <strong>unique</strong> survey completion code to your HIT. Consult with your survey
+                        service provider on how to generate this code at the end of your survey.</p> -->
                 </div>
             </div>
         </div>
@@ -72,13 +76,13 @@
                 // 如果此人只是preview，则id为空，跳过去的网址也没有id后缀，这个新的网页就可以判断它是否接受了hit
                 if (mturkworkerID != undefined && mturkworkerID != '') {
                     a.target = '_blank';
-                    a.href = 'index.html?&MID=' + mturkworkerID;
+                    a.href = 'https://olivialan.github.io/narrative_ordering/index.html?&MID=' + mturkworkerID;
                 } else {
-                    a.href = 'index.html';
+                    a.href = 'https://olivialan.github.io/narrative_ordering/index.html';
                     a.target = '_blank';
                 }
                 // 但表面上两种情况的显示link是一样的
-                a.innerHTML = 'go to external page';
+                a.innerHTML = 'Go to the survey';
                 linkdiv.append(a);
             </script>
 

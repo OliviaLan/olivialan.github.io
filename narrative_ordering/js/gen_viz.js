@@ -74,14 +74,14 @@ function gen_question(text, pattern, dataset) {
             .attr("height", height)
             .style("position", "absolute")
             .style("left", "0px")
-        console.log('create svg')
+            // console.log('create svg')
             // 创建一个form，并放到大div里
         var divradio = document.createElement("form");
         divradio.style.textAlign = "left";
         divradio.id = "divradio";
         divradio.style.maxWidth = '30%'
             //通过函数传的文字放进去
-        divradio.innerHTML = "<b>" + text + "</b><br>" + "The animation begins in 3 seconds";
+        divradio.innerHTML = "<b>Story" + (current_question + 1) + ": " + text + "</b>" + "<p>The story shall start in 2 seconds</p>";
         divquestion.append(divradio);
 
 
@@ -254,7 +254,7 @@ var create_chronological_line = (svg, data, datalimit) => {
             .append("tspan")
             .attr("class", "text_" + counter)
             .text(d => d)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", function() {
                 return this.parentElement.x.baseVal[0].value
             })
@@ -314,7 +314,7 @@ var create_chronological_line = (svg, data, datalimit) => {
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", 0)
             .attr("dx", 10)
             .attr("dy", function(d, i) {
@@ -482,7 +482,7 @@ var create_trailer_line = (svg, data, datalimit) => {
             .append("tspan")
             .attr("class", "text_" + counter + "_trailer")
             .text(d => d)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", function() {
                 return this.parentElement.x.baseVal[0].value
             })
@@ -527,7 +527,7 @@ var create_trailer_line = (svg, data, datalimit) => {
             .append("tspan")
             .attr("class", "text_" + counter + "_trailer")
             .text(d => d)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", function() {
                 return this.parentElement.x.baseVal[0].value
             })
@@ -609,7 +609,7 @@ var create_trailer_line = (svg, data, datalimit) => {
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", 0)
             .attr("dx", 10)
             .attr("dy", function(d, i) {
@@ -756,7 +756,7 @@ var create_recurrence_line = (svg, data, datalimit) => {
             .append("tspan")
             .attr("class", "text_" + counter)
             .text(d => d)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", function() {
                 return this.parentElement.x.baseVal[0].value
             })
@@ -863,7 +863,7 @@ var create_recurrence_line = (svg, data, datalimit) => {
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", 0)
             .attr("dx", 10)
             .attr("dy", function(d, i) {
@@ -959,7 +959,7 @@ var create_recurrence_line = (svg, data, datalimit) => {
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter + "_again")
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", 0)
             .attr("dx", 10)
             .attr("dy", function(d, i) {
@@ -1108,7 +1108,7 @@ var create_trace_line = (svg, data, datalimit) => {
             .append("tspan")
             .attr("class", "text_" + counter + "_trace")
             .text(d => d)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", function() {
                 return this.parentElement.x.baseVal[0].value
             })
@@ -1181,7 +1181,7 @@ var create_trace_line = (svg, data, datalimit) => {
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", 0)
             .attr("dx", 10)
             .attr("dy", function(d, i) {
@@ -1322,7 +1322,7 @@ var create_trace_line = (svg, data, datalimit) => {
 //             .append("tspan")
 //             .attr("class", "text_" + counter)
 //             .text(d => d)
-//             .style("font-size", curems + "em")
+//             .style("font-size", curems + "px")
 //             .attr("x", function() {
 //                 return this.parentElement.x.baseVal[0].value
 //             })
@@ -1385,7 +1385,7 @@ var create_trace_line = (svg, data, datalimit) => {
 //             .enter()
 //             .append("tspan")
 //             .attr("class", "text_" + counter)
-//             .style("font-size", curems + "em")
+//             .style("font-size", curems + "px")
 //             .attr("x", 0)
 //             .attr("dx", 10)
 //             .attr("dy", 20)
@@ -1529,7 +1529,7 @@ var create_halfway_line = (svg, data, datalimit) => {
             .append("tspan")
             .attr("class", "text_" + counter + "_half")
             .text(d => d)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", function() {
                 return this.parentElement.x.baseVal[0].value
             })
@@ -1603,7 +1603,7 @@ var create_halfway_line = (svg, data, datalimit) => {
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", 0)
             .attr("dx", 10)
             .attr("dy", function(d, i) {
@@ -1765,7 +1765,7 @@ var create_halfway_line = (svg, data, datalimit) => {
 //             .append("tspan")
 //             .attr("class", "text_" + counter + "_parting")
 //             .text(d => d)
-//             .style("font-size", curems + "em")
+//             .style("font-size", curems + "px")
 //             .attr("x", function() {
 //                 return this.parentElement.x.baseVal[0].value
 //             })
@@ -1800,7 +1800,7 @@ var create_halfway_line = (svg, data, datalimit) => {
 //             .append("tspan")
 //             .attr("class", "text_" + counter)
 //             .text(d => d)
-//             .style("font-size", curems + "em")
+//             .style("font-size", curems + "px")
 //             .attr("x", function() {
 //                 return this.parentElement.x.baseVal[0].value
 //             })
@@ -1885,7 +1885,7 @@ var create_halfway_line = (svg, data, datalimit) => {
 //             .enter()
 //             .append("tspan")
 //             .attr("class", "text_" + counter)
-//             .style("font-size", curems + "em")
+//             .style("font-size", curems + "px")
 //             .attr("x", 0)
 //             .attr("dx", 10)
 //             .attr("dy", 20)
@@ -1969,7 +1969,7 @@ var create_halfway_line = (svg, data, datalimit) => {
 //             .enter()
 //             .append("tspan")
 //             .attr("class", "text_" + counter)
-//             .style("font-size", curems + "em")
+//             .style("font-size", curems + "px")
 //             .attr("x", 0)
 //             .attr("dx", 10)
 //             .attr("dy", 20)
@@ -2124,7 +2124,7 @@ var create_anchor_line = (svg, data, datalimit) => {
             .append("tspan")
             .attr("class", "text_" + counter + "_anchor")
             .text(d => d)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", function() {
                 return this.parentElement.x.baseVal[0].value
             })
@@ -2165,7 +2165,7 @@ var create_anchor_line = (svg, data, datalimit) => {
             .append("tspan")
             .attr("class", "text_" + counter)
             .text(d => d)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", function() {
                 return this.parentElement.x.baseVal[0].value
             })
@@ -2212,7 +2212,7 @@ var create_anchor_line = (svg, data, datalimit) => {
             .append("tspan")
             .attr("class", "text_" + counter + "_anchor2")
             .text(d => d)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", function() {
                 return this.parentElement.x.baseVal[0].value
             })
@@ -2302,7 +2302,7 @@ var create_anchor_line = (svg, data, datalimit) => {
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", 0)
             .attr("dx", 10)
             .attr("dy", function(d, i) {
@@ -2390,7 +2390,7 @@ var create_anchor_line = (svg, data, datalimit) => {
             .enter()
             .append("tspan")
             .attr("class", "text_" + counter)
-            .style("font-size", curems + "em")
+            .style("font-size", "14px")
             .attr("x", 0)
             .attr("dx", 10)
             .attr("dy", function(d, i) {
@@ -2507,7 +2507,7 @@ var create_chronological_timeline = (svg, data, datalimit) => {
         .append("tspan")
         .attr("class", "text")
         .text(d => d)
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .attr("x", function() {
             return this.parentElement.x.baseVal[0].value
         })
@@ -2587,7 +2587,7 @@ var create_chronological_timeline = (svg, data, datalimit) => {
         .attr("text-anchor", "middle")
         .attr("y", (d, i) => d.Year.split(" ").length > 1 ? -15 : 0)
         .attr("font-weight", "bold")
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .text(d => d.Year.split(" ")[0])
         .style("opacity", 0)
         .transition()
@@ -2729,7 +2729,7 @@ var create_trailer_timeline = (svg, data, datalimit) => {
         .append("tspan")
         .attr("class", "text")
         .text(d => d)
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .attr("x", function() {
             return this.parentElement.x.baseVal[0].value
         })
@@ -2872,7 +2872,7 @@ var create_trailer_timeline = (svg, data, datalimit) => {
         .attr("text-anchor", "middle")
         .attr("y", (d, i) => d.Year.split(" ").length > 1 ? -15 : 0)
         .attr("font-weight", "bold")
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .text(d => d.Year)
         .style("opacity", 0)
         .transition()
@@ -2992,7 +2992,7 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
         .append("tspan")
         .attr("class", "text")
         .text(d => d)
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .attr("x", function() {
             return this.parentElement.x.baseVal[0].value
         })
@@ -3131,7 +3131,7 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
         .attr("text-anchor", "middle")
         .attr("y", (d, i) => d.Year.split(" ").length > 1 ? -15 : 0)
         .attr("font-weight", "bold")
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .text(d => d.Year.split(" ")[0])
         .style("opacity", 0)
         .transition()
@@ -3253,7 +3253,7 @@ var create_trace_timeline = (svg, data, datalimit) => {
         .append("tspan")
         .attr("class", "text")
         .text(d => d)
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .attr("x", function() {
             return this.parentElement.x.baseVal[0].value
         })
@@ -3382,7 +3382,7 @@ var create_trace_timeline = (svg, data, datalimit) => {
         .attr("text-anchor", "middle")
         .attr("y", (d, i) => d.Year.split(" ").length > 1 ? -15 : 0)
         .attr("font-weight", "bold")
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .text(d => d.Year.split(" ")[0])
         .style("opacity", 0)
         .transition()
@@ -3496,7 +3496,7 @@ var create_retrograde_timeline = (svg, data, datalimit) => {
         .append("tspan")
         .attr("class", "text")
         .text(d => d)
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .attr("x", function() {
             return this.parentElement.x.baseVal[0].value
         })
@@ -3615,7 +3615,7 @@ var create_retrograde_timeline = (svg, data, datalimit) => {
         .attr("text-anchor", "middle")
         .attr("y", (d, i) => d.Year.split(" ").length > 1 ? -15 : 0)
         .attr("font-weight", "bold")
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .text(d => d.Year.split(" ")[0])
         .style("opacity", 0)
         .transition()
@@ -3732,7 +3732,7 @@ var create_halfway_timeline = (svg, data, datalimit) => {
         .append("tspan")
         .attr("class", "text")
         .text(d => d)
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .attr("x", function() {
             return this.parentElement.x.baseVal[0].value
         })
@@ -3871,7 +3871,7 @@ var create_halfway_timeline = (svg, data, datalimit) => {
         .attr("text-anchor", "middle")
         .attr("y", (d, i) => d.Year.split(" ").length > 1 ? -15 : 0)
         .attr("font-weight", "bold")
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .text(d => d.Year.split(" ")[0])
         .style("opacity", 0)
         .transition()
@@ -4254,7 +4254,7 @@ var create_anchor_timeline = (svg, data, datalimit) => {
         .append("tspan")
         .attr("class", "text")
         .text(d => d)
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .attr("x", function() {
             return this.parentElement.x.baseVal[0].value
         })
@@ -4393,7 +4393,7 @@ var create_anchor_timeline = (svg, data, datalimit) => {
         .attr("text-anchor", "middle")
         .attr("y", (d, i) => d.Year.split(" ").length > 1 ? -15 : 0)
         .attr("font-weight", "bold")
-        .style("font-size", curems + "em")
+        .style("font-size", "14px")
         .text(d => d.Year.split(" ")[0])
         .style("opacity", 0)
         .transition()
