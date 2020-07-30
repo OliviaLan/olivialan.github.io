@@ -55,7 +55,7 @@ var init_recall = () => {
     textarea.id = "retell"
         // input.size = "35"
     textarea.style.width = "500px"
-    textarea.style.height = "300px"
+    textarea.style.height = "250px"
 
     d.append(textarea)
 

@@ -1,53 +1,69 @@
 var save_q2_answers = () => {
 
-    curiosity = Array.prototype.slice.call(d.getElementsByClassName('curiosity'))
     attention = Array.prototype.slice.call(d.getElementsByClassName('attention'))
-    fun = Array.prototype.slice.call(d.getElementsByClassName('fun'))
+    involvement = Array.prototype.slice.call(d.getElementsByClassName('involvement'))
+    novelty = Array.prototype.slice.call(d.getElementsByClassName('novelty'))
     motivation = Array.prototype.slice.call(d.getElementsByClassName('motivation'))
     challenge = Array.prototype.slice.call(d.getElementsByClassName('challenge'))
-
+    affect_enjoy = Array.prototype.slice.call(d.getElementsByClassName('affect_enjoy'))
+    affect_arousal = Array.prototype.slice.call(d.getElementsByClassName('affect_arousal'))
+    likability = Array.prototype.slice.call(d.getElementsByClassName('likability'))
 
     // arousal = Array.prototype.slice.call(d.children).filter(d => d.name == 'arousal')
     // clearness = Array.prototype.slice.call(d.children).filter(d => d.name == 'clearness')
     // attention = Array.prototype.slice.call(d.children).filter(d => d.name == 'attention')
 
     var counter = 0
-    for (var c in curiosity) {
+    for (var n in novelty) {
         for (var a in attention) {
-            for (var f in fun) {
+            for (var i in involvement) {
                 for (var m in motivation) {
                     for (var ch in challenge) {
-                        if (curiosity[c].checked == true && attention[a].checked == true && fun[f].checked == true && motivation[m].checked == true && challenge[ch].checked == true) {
-                            console.log('finished')
-                            new_answer = {
-                                'index': questions[current_question]['original_index'],
-                                'fun': fun[f].value,
-                                'curiosity': curiosity[c].value,
-                                'motivation': motivation[m].value,
-                                'attention': attention[a].value,
-                                'elapsed_time': Date.now() - cur_start_time,
-                                'dataset': questions[current_question]['dataset'],
-                                'pattern': questions[current_question]['pattern'],
-                                // 'rating_reason': document.getElementById('rating_reason').value,
+                        for (var en in affect_enjoy) {
+                            for (var ar in affect_arousal) {
+                                for (var l in likability) {
+                                    if (likability[l].checked == true && affect_enjoy[en].checked == true && affect_arousal[ar].checked == true && novelty[n].checked == true && attention[a].checked == true && involvement[i].checked == true && motivation[m].checked == true && challenge[ch].checked == true) {
+
+                                        console.log('finished')
+                                        new_answer = {
+                                            'index': questions[current_question]['original_index'],
+                                            'attention': attention[a].value,
+                                            'involvement': involvement[i].value,
+                                            'novelty': novelty[n].value,
+                                            'motivation': motivation[m].value,
+                                            'challenge': challenge[ch].value,
+                                            'affect_enjoy': affect_enjoy[en].value,
+                                            'affect_arousal': affect_arousal[ar].value,
+                                            'likability': likability[l].value,
+                                            'elapsed_time': Date.now() - cur_start_time,
+                                            'dataset': questions[current_question]['dataset'],
+                                            'pattern': questions[current_question]['pattern'],
+                                            // 'rating_reason': document.getElementById('rating_reason').value,
+                                        }
+                                        user_answers.push(new_answer)
+                                        user_data['answers'] = user_answers
+                                        db.collection(incomplete_collection).add(user_data)
+                                            //         .then(involvementction(docRef) {
+                                            //             console.log("Document written with ID: ", docRef.id);
+                                            //         })
+                                            //         .catch(involvementction(error) {
+                                            //             console.error("Error adding document: ", error);
+                                            //         });
+                                        init_grid()
+                                    } else {
+                                        counter++
+                                        if (counter == 49 * 49 * 49 * 49) {
+                                            var error = document.createElement('div')
+                                            error.innerHTML = 'Please set scores to the buttons'
+                                            error.style.color = 'red'
+                                            d.append(error)
+                                        }
+                                    }
+
+                                }
+
                             }
-                            user_answers.push(new_answer)
-                            user_data['answers'] = user_answers
-                            db.collection(incomplete_collection).add(user_data)
-                                //         .then(function(docRef) {
-                                //             console.log("Document written with ID: ", docRef.id);
-                                //         })
-                                //         .catch(function(error) {
-                                //             console.error("Error adding document: ", error);
-                                //         });
-                            init_grid()
-                        } else {
-                            counter++
-                            if (counter == 49 * 49 * 7) {
-                                var error = document.createElement('div')
-                                error.innerHTML = 'Please set scores to the buttons'
-                                error.style.color = 'red'
-                                d.append(error)
-                            }
+
                         }
 
                     }
@@ -136,8 +152,8 @@ var init_emotion = () => {
         choice.style.textAlign = "center";
         r1 = document.createElement("input");
         r1.type = "radio";
-        r1.name = "fun";
-        r1.className = "r1 fun";
+        r1.name = "involvement";
+        r1.className = "r1 involvement";
         r1.value = i;
         l1 = document.createElement("label");
         l1.for = i;
@@ -172,7 +188,7 @@ var init_emotion = () => {
     d.innerHTML += '<br><br>'
 
     //----------question-----------
-    d.innerHTML += '<p><strong>3. I think the narratives of this story incited my curiosity.</strong></p>'
+    d.innerHTML += '<p><strong>3. I think the narratives of this story interests me.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {
@@ -183,8 +199,8 @@ var init_emotion = () => {
         choice.style.textAlign = "center";
         r1 = document.createElement("input");
         r1.type = "radio";
-        r1.name = "curiosity";
-        r1.className = "r1 curiosity";
+        r1.name = "novelty";
+        r1.className = "r1 novelty";
         r1.value = i;
         l1 = document.createElement("label");
         l1.for = i;
@@ -218,7 +234,7 @@ var init_emotion = () => {
 
     //----------question-----------
 
-    d.innerHTML += '<p><strong>4. I think the narratives of this story motivates me to read the story.</strong></p>'
+    d.innerHTML += '<p><strong>4. I think the narratives of this story gives me a good reasons to proceed reading.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {
@@ -305,6 +321,143 @@ var init_emotion = () => {
         scale.innerHTML = i
         likert.append(scale)
     }
+
+    d.innerHTML += '<br><br>'
+
+    //----------question-----------
+    d.innerHTML += '<p><strong>6. I think the narratives of this story is enjoyable.</strong></p>'
+    d.innerHTML += '<br>'
+
+    for (var i = 1; i < 8; i++) {
+        choice = document.createElement("span");
+        choice.style.display = "inline-block";
+        choice.style.width = "100px";
+        choice.style.height = "20px";
+        choice.style.textAlign = "center";
+        r1 = document.createElement("input");
+        r1.type = "radio";
+        r1.name = "affect_enjoy";
+        r1.className = "r1 affect_enjoy";
+        r1.value = i;
+        l1 = document.createElement("label");
+        l1.for = i;
+        l1.innerHTML = i;
+        l1.className = "l1";
+        //依次添加radio button和label
+        choice.append(r1);
+        choice.append(l1);
+        d.append(choice)
+            // d.innerHTML += '<br>'
+    }
+    d.innerHTML += '<br>'
+
+    likert = document.createElement('span');
+    likert.style.lineHeight = "20px";
+    d.append(likert);
+
+
+    for (i of['strongly disagree', 'disagree', 'somewhat disagree', 'neutral', 'somewhat agree', 'agree', 'strongly agree']) {
+        scale = document.createElement('span')
+        scale.style.display = "inline-block";
+        scale.style.width = "100px";
+        scale.style.verticalAlign = "top";
+        // hhh.style.lineHeight = "50px";
+        scale.style.textAlign = "center";
+        scale.innerHTML = i
+        likert.append(scale)
+    }
+
+    d.innerHTML += '<br><br>'
+
+
+    //----------question-----------
+    d.innerHTML += '<p><strong>7. I was emotionally aroused by the narratives of the story</strong></p>'
+    d.innerHTML += '<br>'
+
+    for (var i = 1; i < 8; i++) {
+        choice = document.createElement("span");
+        choice.style.display = "inline-block";
+        choice.style.width = "100px";
+        choice.style.height = "20px";
+        choice.style.textAlign = "center";
+        r1 = document.createElement("input");
+        r1.type = "radio";
+        r1.name = "affect_arousal";
+        r1.className = "r1 affect_arousal";
+        r1.value = i;
+        l1 = document.createElement("label");
+        l1.for = i;
+        l1.innerHTML = i;
+        l1.className = "l1";
+        //依次添加radio button和label
+        choice.append(r1);
+        choice.append(l1);
+        d.append(choice)
+            // d.innerHTML += '<br>'
+    }
+    d.innerHTML += '<br>'
+
+    likert = document.createElement('span');
+    likert.style.lineHeight = "20px";
+    d.append(likert);
+
+
+    for (i of['strongly disagree', 'disagree', 'somewhat disagree', 'neutral', 'somewhat agree', 'agree', 'strongly agree']) {
+        scale = document.createElement('span')
+        scale.style.display = "inline-block";
+        scale.style.width = "100px";
+        scale.style.verticalAlign = "top";
+        // hhh.style.lineHeight = "50px";
+        scale.style.textAlign = "center";
+        scale.innerHTML = i
+        likert.append(scale)
+    }
+
+    d.innerHTML += '<br><br>'
+
+    //----------question-----------
+    d.innerHTML += '<p><strong>8. I like the narratives of the story.</strong></p>'
+    d.innerHTML += '<br>'
+
+    for (var i = 1; i < 8; i++) {
+        choice = document.createElement("span");
+        choice.style.display = "inline-block";
+        choice.style.width = "100px";
+        choice.style.height = "20px";
+        choice.style.textAlign = "center";
+        r1 = document.createElement("input");
+        r1.type = "radio";
+        r1.name = "likability";
+        r1.className = "r1 likability";
+        r1.value = i;
+        l1 = document.createElement("label");
+        l1.for = i;
+        l1.innerHTML = i;
+        l1.className = "l1";
+        //依次添加radio button和label
+        choice.append(r1);
+        choice.append(l1);
+        d.append(choice)
+            // d.innerHTML += '<br>'
+    }
+    d.innerHTML += '<br>'
+
+    likert = document.createElement('span');
+    likert.style.lineHeight = "20px";
+    d.append(likert);
+
+
+    for (i of['strongly disagree', 'disagree', 'somewhat disagree', 'neutral', 'somewhat agree', 'agree', 'strongly agree']) {
+        scale = document.createElement('span')
+        scale.style.display = "inline-block";
+        scale.style.width = "100px";
+        scale.style.verticalAlign = "top";
+        // hhh.style.lineHeight = "50px";
+        scale.style.textAlign = "center";
+        scale.innerHTML = i
+        likert.append(scale)
+    }
+
 
 
     //----------question-----------

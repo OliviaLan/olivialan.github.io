@@ -1,5 +1,5 @@
 var grid_width = 600
-var grid_margin = 70
+var grid_margin = 90
 
 
 var save_q4_answers = () => {
@@ -106,12 +106,12 @@ var init_grid = () => {
     svg.append("text")
         .attr("transform", "translate(" + grid_width / 2 + "," + (grid_margin - 20) + ")")
         .style("text-anchor", "middle")
-        .text("Learnt");
+        .text("Comprehensible");
 
     svg.append("text")
         .attr("transform", "translate(" + grid_width / 2 + "," + (grid_width - grid_margin + 20) + ")")
         .style("text-anchor", "middle")
-        .text("Didn't learn");
+        .text("Incomprehensible");
 
 
     svg
@@ -123,13 +123,13 @@ var init_grid = () => {
         .attr("transform", "translate(" + (grid_width - grid_margin) + "," + (grid_width / 2 + 20) + ")")
         .attr("dy", "1em")
         .style("text-anchor", "middle")
-        .text("Liked it");
+        .text("Expressive");
 
     svg.append("text")
         .attr("transform", "translate(" + grid_margin + "," + (grid_width / 2 + 20) + ")")
         .attr("dy", "1em")
         .style("text-anchor", "middle")
-        .text("Disliked it");
+        .text("Expressionless");
 
 
 
@@ -179,8 +179,8 @@ var init_grid = () => {
         d3.select("#x-pointer").attr("y1", pos_y());
         d3.select("#x-pointer").attr("x2", pos_x());
         d3.select("#x-pointer").attr("y2", pos_y());
-        d3.select("#xpos").text("like: " + Math.round(x.invert(pos_x()) * 10) / 10);
-        d3.select("#ypos").text("learn: " + Math.round(y.invert(pos_y()) * 10) / 10);
+        d3.select("#xpos").text("Expressiveness: " + Math.round(x.invert(pos_x()) * 10) / 10);
+        d3.select("#ypos").text("Comprehensibility: " + Math.round(y.invert(pos_y()) * 10) / 10);
         d3.select("#xpos").attr("transform", "translate(" + pos_x() + "," + pos_y() + ")");
         d3.select("#ypos").attr("transform", "translate(" + pos_x() + "," + pos_y() + ")");
         d3.select("#y-pointer").attr("x1", pos_x());
@@ -198,7 +198,7 @@ var init_grid = () => {
         .attr("id", "circle")
         .attr("r", "15")
         .attr("stroke", "red")
-        .attr("stroke-width", "5px")
+        .attr("stroke-width", "3px")
         .attr("fill", "transparent")
         .call(drag)
 
