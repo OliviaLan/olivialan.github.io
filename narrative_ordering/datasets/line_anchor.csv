@@ -1,13 +1,13 @@
-date,close,np,np2,np3
-2014,1,"In the beginning\na new city emerged with 1 thousand people",,
-2015,10,"Before that,\nthe population passed 10 thousand",,
-2016,20,"Before that,\nthe population passed 20 thousand",,
-2017,40,"Before that,\nthe population passed 40 thousand",,
-2018,60,"Before that,\nthe population passed 60 thousand",,
-2019,80,"Before that,\nthe population passed 80 thousand",,
-2020,150,"Now, the population passed 150 thousand","However after 2015,\nthe population passed 150 thousand","here are we now\nthe population passed 150 thousand"
-2021,300,,"Then,\nthe population passed 300 thousand",
-2022,600,,"Then,\nthe population passed 600 thousand",
-2023,1000,," Then,\nthe population passed 1000 thousand",
-2024,1500,,"Then,\nthe population passed 1500 thousand",
-2025,2000,,"At last, largest community with\na population of 2000 thousand",
+Date,close,np,np2,np3
+2014,10,"In the beginning,\nCity Y had a population of 10 thousand","",""
+2015,20,"Before that,\nCity Y had a population of 20 thousand","",""
+2016,40,"Before that,\nCity Y had a population of 40 thousand","",""
+2017,80,"Before that,\nCity Y had a population of 80 thousand","",""
+2018,200,"Before that,\nCity Y had a population of 200 thousand","",""
+2019,400,"Before that,\nCity Y had a population of 400 thousand","",""
+2020,800,"Now,\nCity Y has a population of 800 thousand","How about after 2020?","Here are we now"
+2021,1200,"","Then,\nCity Y will have a population of 1200 thousand",""
+2022,1800,"","Then,\nCity Y will have a population of 1800 thousand",""
+2023,2500,"","Then,\nCity Y will have a population of 2500 thousand",""
+2024,4000,"","Then,\nCity Y will have a population\nof 4000 thousand",""
+2025,6000,"","At last,\nCity Y will have a population\nof 6000 thousand",""

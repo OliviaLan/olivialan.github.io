@@ -36,13 +36,13 @@ function gen_question(text, pattern, dataset) {
 
     var path = "./datasets/";
     if (dataset == "history") {
-        // path += "history_anchor.csv";
-        if (pattern == "1") path += "history_chronology.csv";
-        else if (pattern == "2") path += "history_trace.csv";
-        else if (pattern == "3") path += "history_trailer.csv";
-        else if (pattern == "4") path += "history_recurrence.csv";
-        else if (pattern == "5") path += "history_halfway.csv";
-        else if (pattern == "6") path += "history_anchor.csv";
+        path += "history_recurrence.csv";
+        // if (pattern == "1") path += "history_chronology.csv";
+        // else if (pattern == "2") path += "history_trace.csv";
+        // else if (pattern == "3") path += "history_trailer.csv";
+        // else if (pattern == "4") path += "history_recurrence.csv";
+        // else if (pattern == "5") path += "history_halfway.csv";
+        // else if (pattern == "6") path += "history_anchor.csv";
     } else if (dataset == "population") {
         // path += "line_anchor.csv";
         if (pattern == "1") path += "line_chronology.csv";
@@ -87,15 +87,15 @@ function gen_question(text, pattern, dataset) {
 
         //user_data['assigned_question_type'] == 3 这个是为了判断true/false，如果为true，vis会是clickable的
         if (dataset == 'history') {
-            // create_anchor_timeline(svg, data, datalimit)
-            if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
-            else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
-            else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
-            else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
-            else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
-            else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
-            // else if (pattern == "7") create_parting_timeline(svg, data, datalimit);
-            // else if (pattern == "8") create_anchor_timeline(svg, data, datalimit);
+            create_recurrence_timeline(svg, data, datalimit)
+                // if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
+                // else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
+                // else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
+                // else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
+                // else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
+                // else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
+                // else if (pattern == "7") create_parting_timeline(svg, data, datalimit);
+                // else if (pattern == "8") create_anchor_timeline(svg, data, datalimit);
         } else if (dataset == 'population') {
             // create_anchor_line(svg, data, datalimit)
             if (pattern == "1") create_chronological_line(svg, data, datalimit);
@@ -263,7 +263,11 @@ var create_chronological_line = (svg, data, datalimit) => {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             });
 
     }
@@ -321,7 +325,11 @@ var create_chronological_line = (svg, data, datalimit) => {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             })
             .transition()
             .delay(delay)
@@ -616,7 +624,11 @@ var create_trailer_line = (svg, data, datalimit) => {
                 if (data[counter].np2.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np2.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             })
             .transition()
             .delay(delay)
@@ -765,7 +777,11 @@ var create_recurrence_line = (svg, data, datalimit) => {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             });
 
 
@@ -870,7 +886,11 @@ var create_recurrence_line = (svg, data, datalimit) => {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             })
             .transition()
             .delay(delay)
@@ -966,7 +986,11 @@ var create_recurrence_line = (svg, data, datalimit) => {
                 if (data[counter].np2.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np2.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             })
             .transition()
             .delay(delay)
@@ -1117,7 +1141,11 @@ var create_trace_line = (svg, data, datalimit) => {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             });
 
     }
@@ -1188,7 +1216,11 @@ var create_trace_line = (svg, data, datalimit) => {
                 if (data[counter].np2.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np2.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             })
             .transition()
             .delay(delay)
@@ -1538,7 +1570,11 @@ var create_halfway_line = (svg, data, datalimit) => {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             });
 
 
@@ -1610,7 +1646,11 @@ var create_halfway_line = (svg, data, datalimit) => {
                 if (data[counter].np2.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np2.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             })
             .transition()
             .delay(delay)
@@ -2133,7 +2173,11 @@ var create_anchor_line = (svg, data, datalimit) => {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             });
 
     }
@@ -2174,7 +2218,11 @@ var create_anchor_line = (svg, data, datalimit) => {
                 if (data[counter].np2.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np2.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             })
             .attr("opacity", 0)
             .transition()
@@ -2221,7 +2269,11 @@ var create_anchor_line = (svg, data, datalimit) => {
                 if (data[counter].np3.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np3.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             })
             .attr("opacity", 0)
             .transition()
@@ -2309,7 +2361,11 @@ var create_anchor_line = (svg, data, datalimit) => {
                 if (data[counter].np.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             })
             .transition()
             .delay(delay)
@@ -2397,7 +2453,11 @@ var create_anchor_line = (svg, data, datalimit) => {
                 if (data[counter].np2.split("\\n").length == 2) {
                     if (i == 0) return -30
                     else return 20
-                } else return -10
+                } else if (data[counter].np2.split("\\n").length == 3) {
+                    if (i == 0) return -50
+                    else return 20
+                }
+                return -10
             })
             .transition()
             .delay(delay)
@@ -2651,7 +2711,7 @@ var create_chronological_timeline = (svg, data, datalimit) => {
         );
     setTimeout(function() {
         document.getElementById('story_finish').style.display = "block"
-    }, delay + 1000)
+    }, delay + 2000)
 
 }
 
@@ -3003,13 +3063,16 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
         .style("opacity", 0)
         .transition()
         .delay(function(d, i) {
-            if (d.Event != '') return delay = delay + interval
+            if (i < data.length / 2 + 1) return delay = delay + interval
             else return delay = delay + 500
         })
         .duration(500)
         .style("opacity", 1)
         .transition()
-        .delay(interval - 1000)
+        .delay(function(d, i) {
+            if (i < data.length / 2 + 1) return interval - 1000
+            else return 500
+        })
         .style("opacity", 0);
 
 
@@ -3136,13 +3199,16 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
         .style("opacity", 0)
         .transition()
         .delay(function(d, i) {
-            if (d.Event != '') return delay = delay + interval
+            if (i < data.length / 2 + 1) return delay = delay + interval
             else return delay = delay + 500
         })
         .duration(500)
         .style("opacity", 1)
         .transition()
-        .delay(interval - 1000)
+        .delay(function(d, i) {
+            if (i < data.length / 2 + 1) return interval - 1000
+            else return 500
+        })
         .style("opacity", 0)
 
     //刻度
