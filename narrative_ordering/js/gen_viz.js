@@ -81,7 +81,7 @@ function gen_question(text, pattern, dataset) {
         divradio.id = "divradio";
         divradio.style.maxWidth = '30%'
             //通过函数传的文字放进去
-        divradio.innerHTML = "<b>Story" + (current_question + 1) + ": " + text + "</b>" + "<p>The story shall start in 2 seconds</p>";
+        divradio.innerHTML = "<b>Story" + (current_question + 1) + ": " + text + "</b>" + "<p>The story will start in 2 seconds</p>";
         divquestion.append(divradio);
 
 

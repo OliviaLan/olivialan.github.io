@@ -33,22 +33,13 @@ var save_q3_answers = () => {
 var init_recall = () => {
     document.body.innerHTML = ''
     d = document.createElement('div')
-    text = '<p><strong>Question 1: Recall</strong></p>'
+    text = '<p><strong>Question 1: Recall</strong></p><br><p>Please recall the story and answer the following questions:</p>'
     d.innerHTML = text
     d.style.textAlign = 'left'
     d.style.margin = '2%'
     document.body.append(d)
 
-    d.innerHTML += '<br><p><strong>1. Please write down the main idea of this story:</strong></p>'
-
-    input = document.createElement('input')
-    input.name = "main_idea"
-    input.id = "main_idea"
-    input.size = "60"
-    d.append(input)
-
-
-    d.innerHTML += '<br><br><p><strong>2. Please retell the story.</strong></p><br>'
+    d.innerHTML += '<br><p>1. Please retell the story as much as you can:</p><br>'
 
     textarea = document.createElement('textarea')
         // input.name = "reason"
@@ -58,6 +49,14 @@ var init_recall = () => {
     textarea.style.height = "250px"
 
     d.append(textarea)
+
+    d.innerHTML += '<br><br><p>2. What do you think is the main idea of this story:</p>'
+
+    input = document.createElement('input')
+    input.name = "main_idea"
+    input.id = "main_idea"
+    input.size = "60"
+    d.append(input)
 
 
     // d.innerHTML += '<br><br><p>No. 1</p>'

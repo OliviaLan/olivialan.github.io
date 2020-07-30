@@ -54,7 +54,7 @@ var save_q2_answers = () => {
                                         counter++
                                         if (counter == 49 * 49 * 49 * 49) {
                                             var error = document.createElement('div')
-                                            error.innerHTML = 'Please set scores to the buttons'
+                                            error.innerHTML = 'Please answer all the questions'
                                             error.style.color = 'red'
                                             d.append(error)
                                         }
@@ -87,7 +87,7 @@ var init_emotion = () => {
     d.style.textAlign = 'left'
     d.style.margin = '2%'
     document.body.append(d)
-    text = '<p><strong>Question 2: Engagement</strong></p>'
+    text = '<p><strong>Question 2: Engagement</strong></p><br><p>Please select one button for each of the items below:</p>'
     d.innerHTML = text
     d.innerHTML += '<br>'
 
@@ -188,7 +188,7 @@ var init_emotion = () => {
     d.innerHTML += '<br><br>'
 
     //----------question-----------
-    d.innerHTML += '<p><strong>3. I think the narratives of this story interests me.</strong></p>'
+    d.innerHTML += '<p><strong>3. I think the narrative of this story interests me.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {
@@ -234,7 +234,7 @@ var init_emotion = () => {
 
     //----------question-----------
 
-    d.innerHTML += '<p><strong>4. I think the narratives of this story gives me a good reasons to proceed reading.</strong></p>'
+    d.innerHTML += '<p><strong>4. I think the narrative of this story gives me a reason to proceed reading.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {
@@ -280,7 +280,7 @@ var init_emotion = () => {
 
 
     //----------question-----------
-    d.innerHTML += '<p><strong>5. I think the narratives of this story encourages me to think.</strong></p>'
+    d.innerHTML += '<p><strong>5. I think the narrative of this story encourages me to think.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {
@@ -325,7 +325,7 @@ var init_emotion = () => {
     d.innerHTML += '<br><br>'
 
     //----------question-----------
-    d.innerHTML += '<p><strong>6. I think the narratives of this story is enjoyable.</strong></p>'
+    d.innerHTML += '<p><strong>6. I think the narrative of this story is enjoyable.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {
@@ -371,7 +371,7 @@ var init_emotion = () => {
 
 
     //----------question-----------
-    d.innerHTML += '<p><strong>7. I was emotionally aroused by the narratives of the story</strong></p>'
+    d.innerHTML += '<p><strong>7. I was emotionally aroused by the narrative of the story</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {
@@ -416,7 +416,7 @@ var init_emotion = () => {
     d.innerHTML += '<br><br>'
 
     //----------question-----------
-    d.innerHTML += '<p><strong>8. I like the narratives of the story.</strong></p>'
+    d.innerHTML += '<p><strong>8. I like the narrative of the story.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {

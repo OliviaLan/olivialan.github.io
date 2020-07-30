@@ -23,8 +23,8 @@ var save_q4_answers = () => {
     if (document.getElementById('grid_reason').value != '') {
         new_answer = {
             'index': questions[current_question]['original_index'],
-            'like': position_invert[0],
-            'learn': position_invert[1],
+            'expressiveness': position_invert[0],
+            'comprehensibility': position_invert[1],
             'grid_reason': document.getElementById('grid_reason').value,
             'elapsed_time': Date.now() - cur_start_time,
             'dataset': questions[current_question]['dataset'],
@@ -41,9 +41,8 @@ var save_q4_answers = () => {
             init_survey()
         }
     } else {
-        console.log('pls fill in')
         error = document.createElement('div')
-        error.innerHTML = 'Please provide reason for the placement.'
+        error.innerHTML = 'Please provide your reason.'
         error.style.color = 'red'
         d.append(error)
     }
@@ -52,7 +51,7 @@ var save_q4_answers = () => {
 var init_grid = () => {
     document.body.innerHTML = ''
     d = document.createElement('div')
-    text = '<p><strong>Question 3: Grid</strong></p> <br> <p>Place the red button to where you feel right with.</p>'
+    text = '<p><strong>Question 3: Grid</strong></p> <br><p>To what degree will you say this story is expressive or comprehensible? </p><p>Please adjust the position of the red circle according to your evaluation.</p>'
     d.innerHTML = text
     d.style.textAlign = 'left'
     d.style.margin = '2%'

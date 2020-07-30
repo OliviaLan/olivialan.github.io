@@ -16,30 +16,36 @@
   	        "enum": ['Female', 'Male', 'Non-binary', 'Prefer not to say'],
   	        'required': true
   	    },
-  	    "judgement": {
+  	    "literacy": {
+  	        "type": "string",
+  	        "title": "Did you have trouble reading the visualizations?",
+  	        "enum": ['Yes', 'No'],
+  	        'required': true
+  	    },
+  	    "judgement_1": {
   	        "type": "string",
   	        "title": "Which story has better narratives?",
   	        "enum": ['Story One', 'Story Two'],
   	        'required': true
   	    },
+  	    "judgement_1_why": {
+  	        "type": "string",
+  	        "title": "Please describe why briefly.",
+  	        'required': true
+  	    },
   	    // "img": {
   	    //     "title": "Which story do you prefer?"
   	    // },
-  	    "literacy_1": {
+  	    "judgement_2": {
   	        "type": "string",
   	        "title": "Which story is more engaging?",
   	        "enum": ['Story One', 'Story Two'],
   	        'required': true
   	    },
-  	    "literacy_2": {
+  	    "judgement_2_why": {
   	        "type": "string",
-  	        "title": "Did you habe trouble reading the visualizations?",
-  	        "enum": ['Yes', 'No'],
+  	        "title": "Please describe why briefly.",
   	        'required': true
-  	    },
-  	    "strategy": {
-  	        "type": "string",
-  	        "title": "Please describe your strategy (if any) about how you completed the tasks."
   	    },
   	    "feedback": {
   	        "type": "string",
@@ -67,33 +73,42 @@
   	                //     'type': 'country',
   	                //     'label': 'Current country'
   	                // },
+  	                "age": {
+  	                    'type': 'string',
+  	                    'hideNone': true
+  	                },
   	                "gender": {
   	                    'type': 'radio',
   	                    'hideNone': true
   	                },
-  	                "judgement": {
+  	                "literacy": {
   	                    'sort': function(a, b) { return 0 },
   	                    'type': 'radio',
   	                    'hideNone': true
   	                },
-  	                "literacy_1": {
+  	                "judgement_1": {
   	                    'sort': function(a, b) { return 0 },
   	                    'type': 'radio',
   	                    'hideNone': true
   	                },
-  	                "literacy_2": {
-  	                    'sort': function(a, b) { return 0 },
-  	                    'type': 'radio',
-  	                    'hideNone': true
-  	                },
-  	                'feedback': {
+  	                'judgement_1_why': {
   	                    "type": "textarea",
-  	                    "rows": 5,
+  	                    "rows": 1,
   	                    "cols": 60,
   	                    "label": "",
-  	                    "wordlimit": 1000
   	                },
-  	                'strategy': {
+  	                "judgement_2": {
+  	                    'sort': function(a, b) { return 0 },
+  	                    'type': 'radio',
+  	                    'hideNone': true
+  	                },
+  	                'judgement_2_why': {
+  	                    "type": "textarea",
+  	                    "rows": 1,
+  	                    "cols": 60,
+  	                    "label": "",
+  	                },
+  	                'feedback': {
   	                    "type": "textarea",
   	                    "rows": 5,
   	                    "cols": 60,
