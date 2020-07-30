@@ -18,7 +18,7 @@
   	    },
   	    "literacy": {
   	        "type": "string",
-  	        "title": "Did you have trouble reading the visualizations?",
+  	        "title": "Did you have trouble reading the visualizations (timeline & line chart)?",
   	        "enum": ['Yes', 'No'],
   	        'required': true
   	    },
@@ -30,23 +30,23 @@
   	    },
   	    "judgement_1_why": {
   	        "type": "string",
-  	        "title": "Please describe why briefly.",
+  	        "title": "Please describe your reason briefly.",
   	        'required': true
   	    },
   	    // "img": {
   	    //     "title": "Which story do you prefer?"
   	    // },
-  	    "judgement_2": {
-  	        "type": "string",
-  	        "title": "Which story is more engaging?",
-  	        "enum": ['Story One', 'Story Two'],
-  	        'required': true
-  	    },
-  	    "judgement_2_why": {
-  	        "type": "string",
-  	        "title": "Please describe why briefly.",
-  	        'required': true
-  	    },
+  	    // "judgement_2": {
+  	    //     "type": "string",
+  	    //     "title": "Which story is more engaging?",
+  	    //     "enum": ['Story One', 'Story Two'],
+  	    //     'required': true
+  	    // },
+  	    // "judgement_2_why": {
+  	    //     "type": "string",
+  	    //     "title": "Please describe why briefly.",
+  	    //     'required': true
+  	    // },
   	    "feedback": {
   	        "type": "string",
   	        "title": "Please leave your feedback or comments related to this study below."
@@ -73,10 +73,6 @@
   	                //     'type': 'country',
   	                //     'label': 'Current country'
   	                // },
-  	                "age": {
-  	                    'type': 'string',
-  	                    'hideNone': true
-  	                },
   	                "gender": {
   	                    'type': 'radio',
   	                    'hideNone': true
@@ -91,23 +87,23 @@
   	                    'type': 'radio',
   	                    'hideNone': true
   	                },
-  	                'judgement_1_why': {
-  	                    "type": "textarea",
-  	                    "rows": 1,
-  	                    "cols": 60,
-  	                    "label": "",
-  	                },
-  	                "judgement_2": {
-  	                    'sort': function(a, b) { return 0 },
-  	                    'type': 'radio',
-  	                    'hideNone': true
-  	                },
-  	                'judgement_2_why': {
-  	                    "type": "textarea",
-  	                    "rows": 1,
-  	                    "cols": 60,
-  	                    "label": "",
-  	                },
+  	                // 'judgement_1_why': {
+  	                //     "type": "textarea",
+  	                //     "rows": 1,
+  	                //     "cols": 60,
+  	                //     "label": "",
+  	                // },
+  	                // "judgement_2": {
+  	                //     'sort': function(a, b) { return 0 },
+  	                //     'type': 'radio',
+  	                //     'hideNone': true
+  	                // },
+  	                // 'judgement_2_why': {
+  	                //     "type": "textarea",
+  	                //     "rows": 1,
+  	                //     "cols": 60,
+  	                //     "label": "",
+  	                // },
   	                'feedback': {
   	                    "type": "textarea",
   	                    "rows": 5,

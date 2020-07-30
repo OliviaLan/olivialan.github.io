@@ -202,7 +202,7 @@ var save_mid = () => {
 async function returning_mid() {
     document.body.innerHTML = ''
     d = document.createElement('div')
-    d.innerHTML = "It looks like you have already attempted this test. Unfortunately, we can't allow users to take the test twice. <br><br>"
+    d.innerHTML = "It looks like you have already attempted this test. Unfortunately, we can't allow users to take the test twice. Please contact us if you have any questions.<br><br>"
     d.style.margin = '20%'
     d.style.fontWeight = 'bold'
     document.body.append(d)
