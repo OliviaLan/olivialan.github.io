@@ -9,7 +9,7 @@ questions = [{
         // 'type_index': 'a0',
     },
     {
-        'text': 'Population',
+        'text': 'The Population of City Y',
         'upper_text': 'This visualization shows a made up history timeline.',
         // 'options': ['921', '924', '925', '927', '929', '933'],
         'dataset': 'population',

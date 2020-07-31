@@ -18,7 +18,13 @@
   	    },
   	    "literacy": {
   	        "type": "string",
-  	        "title": "Did you have trouble reading the visualizations (timeline & line chart)?",
+  	        "title": "I can understand the visualization in the stories (timeline & line chart)?",
+  	        "enum": ['Yes', 'No'],
+  	        'required': true
+  	    },
+  	    "speed": {
+  	        "type": "string",
+  	        "title": "I think the animation speed is neither too fast nor too slow",
   	        "enum": ['Yes', 'No'],
   	        'required': true
   	    },
@@ -78,6 +84,11 @@
   	                    'hideNone': true
   	                },
   	                "literacy": {
+  	                    'sort': function(a, b) { return 0 },
+  	                    'type': 'radio',
+  	                    'hideNone': true
+  	                },
+  	                "speed": {
   	                    'sort': function(a, b) { return 0 },
   	                    'type': 'radio',
   	                    'hideNone': true

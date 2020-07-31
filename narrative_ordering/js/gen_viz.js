@@ -81,7 +81,7 @@ function gen_question(text, pattern, dataset) {
         divradio.id = "divradio";
         divradio.style.maxWidth = '30%'
             //通过函数传的文字放进去
-        divradio.innerHTML = "<b>Story" + (current_question + 1) + ": " + text + "</b>" + "<p>The story will start in 2 seconds</p>";
+        divradio.innerHTML = "<b>Story" + (current_question + 1) + ": " + text + "</b>" + "<p>The animation will start in 2 seconds</p>";
         divquestion.append(divradio);
 
 
@@ -3063,15 +3063,15 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
         .style("opacity", 0)
         .transition()
         .delay(function(d, i) {
-            if (i < data.length / 2 + 1) return delay = delay + interval
-            else return delay = delay + 500
+            if (i < data.length / 2 + 2) return delay = delay + interval
+            else return delay = delay + 1000
         })
         .duration(500)
         .style("opacity", 1)
         .transition()
         .delay(function(d, i) {
-            if (i < data.length / 2 + 1) return interval - 1000
-            else return 500
+            if (i < data.length / 2 + 1 || i == data.length - 1) return interval - 1000
+            else return 200
         })
         .style("opacity", 0);
 
@@ -3199,15 +3199,15 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
         .style("opacity", 0)
         .transition()
         .delay(function(d, i) {
-            if (i < data.length / 2 + 1) return delay = delay + interval
-            else return delay = delay + 500
+            if (i < data.length / 2 + 2) return delay = delay + interval
+            else return delay = delay + 1000
         })
         .duration(500)
         .style("opacity", 1)
         .transition()
         .delay(function(d, i) {
-            if (i < data.length / 2 + 1) return interval - 1000
-            else return 500
+            if (i < data.length / 2 + 1 || i == data.length - 1) return interval - 1000
+            else return 200
         })
         .style("opacity", 0)
 
