@@ -36,12 +36,13 @@ function gen_question(text, pattern, dataset) {
 
     var path = "./datasets/";
     if (dataset == "history") {
-        if (pattern == "1") path += "history_chronology.csv";
-        else if (pattern == "2") path += "history_trace.csv";
-        else if (pattern == "3") path += "history_trailer.csv";
-        else if (pattern == "4") path += "history_recurrence.csv";
-        else if (pattern == "5") path += "history_halfway.csv";
-        else if (pattern == "6") path += "history_anchor.csv";
+        path += "history_recurrence.csv";
+        // if (pattern == "1") path += "history_chronology.csv";
+        // else if (pattern == "2") path += "history_trace.csv";
+        // else if (pattern == "3") path += "history_trailer.csv";
+        // else if (pattern == "4") path += "history_recurrence.csv";
+        // else if (pattern == "5") path += "history_halfway.csv";
+        // else if (pattern == "6") path += "history_anchor.csv";
     } else if (dataset == "population") {
         // path += "line_anchor.csv";
         if (pattern == "1") path += "line_chronology.csv";
@@ -115,15 +116,13 @@ function gen_question(text, pattern, dataset) {
 
         //user_data['assigned_question_type'] == 3 这个是为了判断true/false，如果为true，vis会是clickable的
         if (dataset == 'history') {
-            // create_recurrence_timeline(svg, data, datalimit)
-            if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
-            else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
-            else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
-            else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
-            else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
-            else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
-            // else if (pattern == "7") create_parting_timeline(svg, data, datalimit);
-            // else if (pattern == "8") create_anchor_timeline(svg, data, datalimit);
+            create_recurrence_timeline(svg, data, datalimit)
+                // if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
+                // else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
+                // else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
+                // else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
+                // else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
+                // else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
         } else if (dataset == 'population') {
             // create_anchor_line(svg, data, datalimit)
             if (pattern == "1") create_chronological_line(svg, data, datalimit);
@@ -3072,15 +3071,28 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
             "x",
             function(d, i) {
                 var j = 0;
-                if (i < data.length / 2) j = i;
-                else j = i - data.length / 2;
+                if (i == data.length - 2) j = 0;
+                else if (i == data.length - 1) j = data.length - 3;
+                else j = i + 0;
                 return width * 0.1 +
-                    (0.5 * (width * 0.8)) / (data.length / 2) +
-                    (j * (width * 0.8)) / (data.length / 2)
+                    (0.5 * (width * 0.8)) / (data.length - 2) +
+                    (j * (width * 0.8)) / (data.length - 2)
 
             }
         )
-        .attr("y", 60 * curems)
+        // .attr(
+        //     "x",
+        //     function(d, i) {
+        //         var j = 0;
+        //         if (i < data.length / 2) j = i;
+        //         else j = i - data.length / 2;
+        //         return width * 0.1 +
+        //             (0.5 * (width * 0.8)) / (data.length / 2) +
+        //             (j * (width * 0.8)) / (data.length / 2)
+
+    //     }
+    // )
+    .attr("y", 60 * curems)
 
     t.selectAll("tspan.text")
         .data(d => d.Event.split("\\n"))
@@ -3099,113 +3111,16 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
         .style("opacity", 0)
         .transition()
         .delay(function(d, i) {
-            if (i < data.length / 2 + 2) return delay = delay + interval
-            else return delay = delay + 1000
+            return delay = delay + interval
         })
         .duration(500)
         .style("opacity", 1)
         .transition()
-        .delay(function(d, i) {
-            if (i < data.length / 2 + 1 || i == data.length - 1) return interval - 1000
-            else return 200
-        })
+        .delay(interval - 1000)
         .style("opacity", 0);
 
 
-    // t = linegraph
-    //     .selectAll(".labeltext")
-    //     .data(data)
-    //     .enter()
-    //     .append("text")
-    //     .attr("text-anchor", "middle")
-    //     .attr("class", "labeltext hahaha")
-    //     .attr("id", d => "ev1_" + d.Year.replace(/ /g, ""))
-    //     .attr(
-    //         "x",
-    //         function(d, i) {
-    //             var j = 0;
-    //             if (i < data.length / 2) j = i;
-    //             else j = i - data.length / 2;
-    //             return width * 0.1 +
-    //                 (0.5 * (width * 0.8)) / (data.length / 2) +
-    //                 (j * (width * 0.8)) / (data.length / 2)
-
-    //         }
-    //     )
-    //     .attr("y", (d, i) => data.filter(e => e.Event != '').indexOf(d) % 2 != 0 ? 60 * curems : 100 * curems)
-    //     .style("font-size", curems + "em")
-    //     .text(function(d, i) {
-    //             if (d.Event) {
-    //                 if (i == 0) return "Once upon a time, " + d.Event;
-    //                 if (i == data.length - 1) return "To sum up, " + d.Event;
-    //                 else if (i == data.length - 1) return "Finally, " + d.Event;
-    //                 else return "Then, " + d.Event;
-    //             }
-    //         }
-    //         // d.Event.split(" ")
-    //         // .slice(0, Math.round(d.Event.split(" ").length / 2))
-    //         // .join(" ")
-    //     )
-    //     .style("opacity", 0)
-    //     .transition()
-    //     .delay(function(d, i) {
-    //         if (d.Year != '') return delay = delay + 3000
-    //         else return delay = delay + 0
-    //     })
-    //     .duration(500)
-    //     .style("opacity", 1)
-    //     .transition()
-    //     .delay(3000)
-    //     .style("opacity", 0)
-
-
-
     delay = 0;
-
-    //虚线
-    // t = linegraph.selectAll('.dashedline')
-    //     .data(data)
-    //     .enter()
-    //     .append('path')
-    //     .attr('stroke', '#bbb')
-    //     .attr("class", "hahaha")
-    //     .attr('stroke-width', 2)
-    //     .style("stroke-dasharray", ("7, 3"))
-    //     .attr('d', function(d, i) {
-    //         if (data.filter(e => e.Event != '').indexOf(d) % 2 != 0 || d.Event == '') return []
-    //         else {
-    //             var j = 0;
-    //             if (i < data.length / 2) j = i;
-    //             else j = i - data.length / 2;
-    //             return line([{
-    //                     x: width * 0.1 +
-    //                         (0.5 * (width * 0.8)) / (data.length / 2) +
-    //                         (j * (width * 0.8)) / (data.length / 2),
-    //                     y: 25
-    //                 },
-    //                 {
-    //                     x: width * 0.1 +
-    //                         (0.5 * (width * 0.8)) / (data.length / 2) +
-    //                         (j * (width * 0.8)) / (data.length / 2),
-    //                     y: 65
-    //                 }
-    //             ])
-
-
-    //         }
-    //     })
-    //     .style("opacity", 0)
-    //     .transition()
-    //     .delay(function(d, i) {
-    //         if (d.Year != '') return delay = delay + 2000
-    //         else return delay = delay + 0
-    //     })
-    //     .style("opacity", 1)
-    //     // .transition()
-    //     // .style("opacity", 0)
-
-
-    // delay = 0;
 
     //时间标签
     t = linegraph
@@ -3219,15 +3134,28 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
             "x",
             function(d, i) {
                 var j = 0;
-                if (i < data.length / 2) j = i;
-                else j = i - data.length / 2;
+                if (i == data.length - 2) j = 0;
+                else if (i == data.length - 1) j = data.length - 3;
+                else j = i + 0;
                 return width * 0.1 +
-                    (0.5 * (width * 0.8)) / (data.length / 2) +
-                    (j * (width * 0.8)) / (data.length / 2)
+                    (0.5 * (width * 0.8)) / (data.length - 2) +
+                    (j * (width * 0.8)) / (data.length - 2)
 
             }
         )
-        .attr("text-anchor", "middle")
+        // .attr(
+        //     "x",
+        //     function(d, i) {
+        //         var j = 0;
+        //         if (i < data.length / 2) j = i;
+        //         else j = i - data.length / 2;
+        //         return width * 0.1 +
+        //             (0.5 * (width * 0.8)) / (data.length / 2) +
+        //             (j * (width * 0.8)) / (data.length / 2)
+
+    //     }
+    // )
+    .attr("text-anchor", "middle")
         .attr("y", (d, i) => d.Year.split(" ").length > 1 ? -15 : 0)
         .attr("font-weight", "bold")
         .style("font-size", "14px")
@@ -3235,16 +3163,12 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
         .style("opacity", 0)
         .transition()
         .delay(function(d, i) {
-            if (i < data.length / 2 + 2) return delay = delay + interval
-            else return delay = delay + 1000
+            return delay = delay + interval
         })
         .duration(500)
         .style("opacity", 1)
         .transition()
-        .delay(function(d, i) {
-            if (i < data.length / 2 + 1 || i == data.length - 1) return interval - 1000
-            else return 200
-        })
+        .delay(interval - 1000)
         .style("opacity", 0)
 
     //刻度
@@ -3257,22 +3181,39 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
         .attr("stroke-width", (d, i) => d.Event == '' ? 1 : 3)
         .attr("d", function(d, i) {
             var j = 0;
-            if (i < data.length / 2) j = i;
-            else j = i - data.length / 2;
+            if (i == data.length - 2) j = 0;
+            else if (i == data.length - 1) j = data.length - 3;
+            else j = i + 0;
             return line([{
                     x: width * 0.1 +
-                        (0.5 * (width * 0.8)) / (data.length / 2) +
-                        (j * (width * 0.8)) / (data.length / 2),
+                        (0.5 * (width * 0.8)) / (data.length - 2) +
+                        (j * (width * 0.8)) / (data.length - 2),
                     y: 25
                 },
                 {
                     x: width * 0.1 +
-                        (0.5 * (width * 0.8)) / (data.length / 2) +
-                        (j * (width * 0.8)) / (data.length / 2),
+                        (0.5 * (width * 0.8)) / (data.length - 2) +
+                        (j * (width * 0.8)) / (data.length - 2),
                     y: 15
                 }
             ])
         });
+    //     var j = 0;
+    //     if (i < data.length / 2) j = i;
+    //     else j = i - data.length / 2;
+    //     return line([{
+    //             x: width * 0.1 +
+    //                 (0.5 * (width * 0.8)) / (data.length / 2) +
+    //                 (j * (width * 0.8)) / (data.length / 2),
+    //             y: 25
+    //         },
+    //         {
+    //             x: width * 0.1 +
+    //                 (0.5 * (width * 0.8)) / (data.length / 2) +
+    //                 (j * (width * 0.8)) / (data.length / 2),
+    //             y: 15
+    //         }
+    //     ])
     if (user_data['history_replay'] == 0) {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
