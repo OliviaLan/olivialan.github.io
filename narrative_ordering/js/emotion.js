@@ -371,7 +371,7 @@ var init_emotion = () => {
 
 
     //----------question-----------
-    d.innerHTML += '<p><strong>7. I was emotionally aroused by the narrative of the story</strong></p>'
+    d.innerHTML += '<p><strong>7. I was emotionally aroused by the narrative of the story.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {

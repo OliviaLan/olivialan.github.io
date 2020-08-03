@@ -22,20 +22,15 @@
   	        "enum": ['Yes', 'No'],
   	        'required': true
   	    },
-  	    "replay_reason": {
-  	        "type": "string",
-  	        "title": "4. Did you replay the stories? If you did, please describe the reason.",
-  	        'required': true
-  	    },
   	    "judgement_1": {
   	        "type": "string",
-  	        "title": "5. Which story has better narratives?",
+  	        "title": "4. Which story has better narratives?",
   	        "enum": ['Story One', 'Story Two'],
   	        'required': true
   	    },
   	    "judgement_1_why": {
   	        "type": "string",
-  	        "title": "For question 5, please describe your reason briefly.",
+  	        "title": "For question 4, please describe your reason briefly.",
   	        'required': true
   	    },
   	    // "img": {
@@ -52,6 +47,12 @@
   	    //     "title": "Please describe why briefly.",
   	    //     'required': true
   	    // },
+  	    "replay": {
+  	        "type": "string",
+  	        "title": "5. Did you click the 'replay' buttons? If you did, please describe the reason.",
+  	        'required': true
+  	    },
+
   	    "feedback": {
   	        "type": "string",
   	        "title": "6. Please leave your feedback or comments related to this study below."
@@ -78,6 +79,9 @@
   	                //     'type': 'country',
   	                //     'label': 'Current country'
   	                // },
+  	                "age": {
+  	                    "size": 20,
+  	                },
   	                "gender": {
   	                    'type': 'radio',
   	                    'hideNone': true
@@ -87,10 +91,8 @@
   	                    'type': 'radio',
   	                    'hideNone': true
   	                },
-  	                "speed": {
-  	                    'sort': function(a, b) { return 0 },
-  	                    'type': 'radio',
-  	                    'hideNone': true
+  	                "replay": {
+  	                    "size": 100,
   	                },
   	                "judgement_1": {
   	                    'sort': function(a, b) { return 0 },
