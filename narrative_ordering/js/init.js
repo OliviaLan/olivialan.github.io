@@ -449,10 +449,13 @@ async function init() {
         // user_data['latin_square_index'] = await choose_latin_square_index()
     user_data['assigned_pattern_type'] = await choose_assigned_pattern_type()
     user_data['record'] = await choose_pattern_order(chosen_patterns)
-        // user_data['history_pattern'] = user_data['pattern_order'][0]
-        // user_data['story_pattern'] = user_data['pattern_order'][1]
-        // user_data['c_pattern'] = user_data['pattern_order'][2]
-        // user_data['d_pattern'] = user_data['pattern_order'][3]
+    user_data['history' + '_replay'] = 0
+    user_data['population' + '_replay'] = 0
+
+    // user_data['history_pattern'] = user_data['pattern_order'][0]
+    // user_data['story_pattern'] = user_data['pattern_order'][1]
+    // user_data['c_pattern'] = user_data['pattern_order'][2]
+    // user_data['d_pattern'] = user_data['pattern_order'][3]
 
     window.addEventListener("beforeunload", function(e) {
         var confirmationMessage = "\o/";

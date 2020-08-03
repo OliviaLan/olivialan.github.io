@@ -67,6 +67,8 @@
 
   	    gen_question(questions_shuffle[current_question]['text'], questions_shuffle[current_question]['pattern'], questions_shuffle[current_question]['dataset'])
 
+
+
   	}
 
 

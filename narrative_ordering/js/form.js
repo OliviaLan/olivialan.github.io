@@ -7,36 +7,35 @@
   	    // },
   	    "age": {
   	        "type": "string",
-  	        "title": "Age",
+  	        "title": "1. Age",
   	        'required': true
   	    },
   	    "gender": {
   	        "type": "string",
-  	        "title": "Gender",
+  	        "title": "2. Gender",
   	        "enum": ['Female', 'Male', 'Non-binary', 'Prefer not to say'],
   	        'required': true
   	    },
   	    "literacy": {
   	        "type": "string",
-  	        "title": "I can understand the visualization in the stories (timeline & line chart)?",
+  	        "title": "3. I can understand the visualization in the stories (timeline & line chart)?",
   	        "enum": ['Yes', 'No'],
   	        'required': true
   	    },
-  	    "speed": {
+  	    "replay_reason": {
   	        "type": "string",
-  	        "title": "I think the animation speed is neither too fast nor too slow",
-  	        "enum": ['Yes', 'No'],
+  	        "title": "4. Did you replay the stories? If you did, please describe the reason.",
   	        'required': true
   	    },
   	    "judgement_1": {
   	        "type": "string",
-  	        "title": "Which story has better narratives?",
+  	        "title": "5. Which story has better narratives?",
   	        "enum": ['Story One', 'Story Two'],
   	        'required': true
   	    },
   	    "judgement_1_why": {
   	        "type": "string",
-  	        "title": "Please describe your reason briefly.",
+  	        "title": "For question 5, please describe your reason briefly.",
   	        'required': true
   	    },
   	    // "img": {
@@ -55,7 +54,7 @@
   	    // },
   	    "feedback": {
   	        "type": "string",
-  	        "title": "Please leave your feedback or comments related to this study below."
+  	        "title": "6. Please leave your feedback or comments related to this study below."
   	    },
   	}
 

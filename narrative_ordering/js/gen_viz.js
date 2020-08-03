@@ -36,13 +36,12 @@ function gen_question(text, pattern, dataset) {
 
     var path = "./datasets/";
     if (dataset == "history") {
-        path += "history_recurrence.csv";
-        // if (pattern == "1") path += "history_chronology.csv";
-        // else if (pattern == "2") path += "history_trace.csv";
-        // else if (pattern == "3") path += "history_trailer.csv";
-        // else if (pattern == "4") path += "history_recurrence.csv";
-        // else if (pattern == "5") path += "history_halfway.csv";
-        // else if (pattern == "6") path += "history_anchor.csv";
+        if (pattern == "1") path += "history_chronology.csv";
+        else if (pattern == "2") path += "history_trace.csv";
+        else if (pattern == "3") path += "history_trailer.csv";
+        else if (pattern == "4") path += "history_recurrence.csv";
+        else if (pattern == "5") path += "history_halfway.csv";
+        else if (pattern == "6") path += "history_anchor.csv";
     } else if (dataset == "population") {
         // path += "line_anchor.csv";
         if (pattern == "1") path += "line_chronology.csv";
@@ -79,23 +78,52 @@ function gen_question(text, pattern, dataset) {
         var divradio = document.createElement("form");
         divradio.style.textAlign = "left";
         divradio.id = "divradio";
-        divradio.style.maxWidth = '30%'
-            //通过函数传的文字放进去
+        // divradio.style.maxWidth = '30%'
+        //通过函数传的文字放进去
         divradio.innerHTML = "<b>Story" + (current_question + 1) + ": " + text + "</b>" + "<p>The animation will start in 2 seconds</p>";
         divquestion.append(divradio);
 
+        document.body.append(divquestion);
+
+        b = document.createElement('button')
+        b.style.zIndex = 10
+        b.style.display = 'none'
+        b.innerHTML = "Next"
+        b.className = 'button f_button'
+        b.id = 'story_finish'
+
+        b.onclick = () => {
+            init_recall()
+        }
+
+        document.body.append(b)
+
+        b_replay = document.createElement('button')
+        b_replay.style.zIndex = 10
+        b_replay.style.display = 'none'
+        b_replay.innerHTML = "Replay"
+        b_replay.className = 'button replay_button'
+        b_replay.id = 'story_replay'
+
+        document.body.append(b_replay)
+
+        b_replay.onclick = () => {
+            user_data[questions_shuffle[current_question]['dataset'] + '_replay'] = user_data[questions_shuffle[current_question]['dataset'] + '_replay'] + 1
+            clearvis()
+            gen_question(questions_shuffle[current_question]['text'], questions_shuffle[current_question]['pattern'], questions_shuffle[current_question]['dataset'])
+        }
 
         //user_data['assigned_question_type'] == 3 这个是为了判断true/false，如果为true，vis会是clickable的
         if (dataset == 'history') {
-            create_recurrence_timeline(svg, data, datalimit)
-                // if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
-                // else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
-                // else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
-                // else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
-                // else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
-                // else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
-                // else if (pattern == "7") create_parting_timeline(svg, data, datalimit);
-                // else if (pattern == "8") create_anchor_timeline(svg, data, datalimit);
+            // create_recurrence_timeline(svg, data, datalimit)
+            if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
+            else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
+            else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
+            else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
+            else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
+            else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
+            // else if (pattern == "7") create_parting_timeline(svg, data, datalimit);
+            // else if (pattern == "8") create_anchor_timeline(svg, data, datalimit);
         } else if (dataset == 'population') {
             // create_anchor_line(svg, data, datalimit)
             if (pattern == "1") create_chronological_line(svg, data, datalimit);
@@ -124,20 +152,6 @@ function gen_question(text, pattern, dataset) {
         //     a.innerHTML = "correct answer:   " + answer + "<br><br><br>";
         //     document.body.append(a);
         // }
-        document.body.append(divquestion);
-
-        b = document.createElement('button')
-        b.style.zIndex = 10
-        b.style.display = 'none'
-        b.innerHTML = "Next"
-        b.className = 'button f_button'
-        b.id = 'story_finish'
-
-        b.onclick = () => {
-            init_recall()
-        }
-
-        document.body.append(b)
 
 
     });
@@ -387,10 +401,12 @@ var create_chronological_line = (svg, data, datalimit) => {
 
     }
 
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-            // clearvis()
-    }, delay + 2000)
+    if (user_data['population_replay'] == 0) {
+        setTimeout(function() {
+            document.getElementById('story_finish').style.display = "block"
+            document.getElementById('story_replay').style.display = "block"
+        }, delay + 2000)
+    }
 
 }
 
@@ -660,9 +676,12 @@ var create_trailer_line = (svg, data, datalimit) => {
 
     }
 
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, delay + 2000)
+    if (user_data['population_replay'] == 0) {
+        setTimeout(function() {
+            document.getElementById('story_finish').style.display = "block"
+            document.getElementById('story_replay').style.display = "block"
+        }, delay + 2000)
+    }
 
 
 
@@ -1028,9 +1047,12 @@ var create_recurrence_line = (svg, data, datalimit) => {
 
     }
 
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, delay + 1000)
+    if (user_data['population_replay'] == 0) {
+        setTimeout(function() {
+            document.getElementById('story_finish').style.display = "block"
+            document.getElementById('story_replay').style.display = "block"
+        }, delay + 2000)
+    }
 
 
 }
@@ -1253,9 +1275,12 @@ var create_trace_line = (svg, data, datalimit) => {
 
     }
 
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, delay + 2000)
+    if (user_data['population_replay'] == 0) {
+        setTimeout(function() {
+            document.getElementById('story_finish').style.display = "block"
+            document.getElementById('story_replay').style.display = "block"
+        }, delay + 2000)
+    }
 
 
 }
@@ -1681,13 +1706,15 @@ var create_halfway_line = (svg, data, datalimit) => {
             .call(d3.axisLeft(y));
     }
 
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, delay + 1000)
+    if (user_data['population_replay'] == 0) {
+        setTimeout(function() {
+            document.getElementById('story_finish').style.display = "block"
+            document.getElementById('story_replay').style.display = "block"
+        }, delay + 2000)
+    }
 
 
 }
-
 
 
 //     console.log("parting")
@@ -2488,9 +2515,12 @@ var create_anchor_line = (svg, data, datalimit) => {
             .call(d3.axisLeft(y));
     }
 
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, delay + 1000)
+    if (user_data['population_replay'] == 0) {
+        setTimeout(function() {
+            document.getElementById('story_finish').style.display = "block"
+            document.getElementById('story_replay').style.display = "block"
+        }, delay + 2000)
+    }
 
 }
 
@@ -2709,9 +2739,12 @@ var create_chronological_timeline = (svg, data, datalimit) => {
                 }
             ])
         );
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, delay + 2000)
+    if (user_data['history_replay'] == 0) {
+        setTimeout(function() {
+            document.getElementById('story_finish').style.display = "block"
+            document.getElementById('story_replay').style.display = "block"
+        }, delay + 2000)
+    }
 
 }
 
@@ -2974,9 +3007,12 @@ var create_trailer_timeline = (svg, data, datalimit) => {
                 }
             ])
         });
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, delay + 1000)
+    if (user_data['history_replay'] == 0) {
+        setTimeout(function() {
+            document.getElementById('story_finish').style.display = "block"
+            document.getElementById('story_replay').style.display = "block"
+        }, delay + 2000)
+    }
 
 }
 
@@ -3237,10 +3273,12 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
                 }
             ])
         });
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, delay + 2000)
-
+    if (user_data['history_replay'] == 0) {
+        setTimeout(function() {
+            document.getElementById('story_finish').style.display = "block"
+            document.getElementById('story_replay').style.display = "block"
+        }, delay + 2000)
+    }
 }
 
 
@@ -3489,241 +3527,244 @@ var create_trace_timeline = (svg, data, datalimit) => {
             ])
         });
 
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-            // clearvis()
-    }, delay + 2000)
+    if (user_data['history_replay'] == 0) {
+        setTimeout(function() {
+            document.getElementById('story_finish').style.display = "block"
+            document.getElementById('story_replay').style.display = "block"
+        }, delay + 2000)
+    }
 }
 
-var create_retrograde_timeline = (svg, data, datalimit) => {
+// var create_retrograde_timeline = (svg, data, datalimit) => {
 
-    console.log("reverse chronological")
-        // LINE
-        // startdate = data[0].Year
-        // if (startdate.includes('Mon')) {
-        //     data = make_schedule_proportional(data)
-        // } else if (startdate.includes('Spring')) {} else {
-        //     data = make_history_proportional(data)
-        // }
+//     console.log("reverse chronological")
+//         // LINE
+//         // startdate = data[0].Year
+//         // if (startdate.includes('Mon')) {
+//         //     data = make_schedule_proportional(data)
+//         // } else if (startdate.includes('Spring')) {} else {
+//         //     data = make_history_proportional(data)
+//         // }
 
-    linegraph = svg
-        .append("g")
-        .attr("transform", "translate(" + 0 + "," + height * 0.5 + ")");
+//     linegraph = svg
+//         .append("g")
+//         .attr("transform", "translate(" + 0 + "," + height * 0.5 + ")");
 
-    svg
-        .append("svg:defs")
-        .append("svg:marker")
-        .attr("id", "triangle")
-        .attr("refX", 6)
-        .attr("refY", 6)
-        .attr("markerWidth", 50)
-        .attr("markerHeight", 50)
-        .attr("markerUnits", "userSpaceOnUse")
-        .attr("orient", "auto")
-        .append("path")
-        .attr("d", "M 0 0 12 6 0 12 3 6")
-        .style("fill", "black");
+//     svg
+//         .append("svg:defs")
+//         .append("svg:marker")
+//         .attr("id", "triangle")
+//         .attr("refX", 6)
+//         .attr("refY", 6)
+//         .attr("markerWidth", 50)
+//         .attr("markerHeight", 50)
+//         .attr("markerUnits", "userSpaceOnUse")
+//         .attr("orient", "auto")
+//         .append("path")
+//         .attr("d", "M 0 0 12 6 0 12 3 6")
+//         .style("fill", "black");
 
-    //主线
-    l = linegraph
-        .append("path")
-        .attr("stroke", "black")
-        .attr("stroke-width", 3)
-        .attr(
-            "d",
-            line([{ x: width * 0.1, y: 20 }, { x: width - width * 0.1, y: 20 }])
-        )
-        .attr("marker-start", "url(#triangle)")
-        .attr("marker-end", "url(#triangle)");
+//     //主线
+//     l = linegraph
+//         .append("path")
+//         .attr("stroke", "black")
+//         .attr("stroke-width", 3)
+//         .attr(
+//             "d",
+//             line([{ x: width * 0.1, y: 20 }, { x: width - width * 0.1, y: 20 }])
+//         )
+//         .attr("marker-start", "url(#triangle)")
+//         .attr("marker-end", "url(#triangle)");
 
-    delay = interval * 13;
+//     delay = interval * 13;
 
-    //事件标签
-    t = linegraph
-        .selectAll(".labeltext")
-        .data(data)
-        .enter()
-        .append("text")
-        .attr("text-anchor", "middle")
-        .attr("class", "labeltext hahaha")
-        .attr("id", d => "ev1_" + d.Year.replace(/ /g, ""))
-        .attr(
-            "x",
-            (d, i) =>
-            width * 0.1 +
-            (0.5 * (width * 0.8)) / data.length +
-            (i * (width * 0.8)) / data.length
-        )
-        .attr("y", 60 * curems)
+//     //事件标签
+//     t = linegraph
+//         .selectAll(".labeltext")
+//         .data(data)
+//         .enter()
+//         .append("text")
+//         .attr("text-anchor", "middle")
+//         .attr("class", "labeltext hahaha")
+//         .attr("id", d => "ev1_" + d.Year.replace(/ /g, ""))
+//         .attr(
+//             "x",
+//             (d, i) =>
+//             width * 0.1 +
+//             (0.5 * (width * 0.8)) / data.length +
+//             (i * (width * 0.8)) / data.length
+//         )
+//         .attr("y", 60 * curems)
 
-    t.selectAll("tspan.text")
-        .data(d => d.Event.split("\\n"))
-        .enter()
-        .append("tspan")
-        .attr("class", "text")
-        .text(d => d)
-        .style("font-size", "14px")
-        .attr("x", function() {
-            return this.parentElement.x.baseVal[0].value
-        })
-        .attr("dx", 0)
-        .attr("dy", 20);
+//     t.selectAll("tspan.text")
+//         .data(d => d.Event.split("\\n"))
+//         .enter()
+//         .append("tspan")
+//         .attr("class", "text")
+//         .text(d => d)
+//         .style("font-size", "14px")
+//         .attr("x", function() {
+//             return this.parentElement.x.baseVal[0].value
+//         })
+//         .attr("dx", 0)
+//         .attr("dy", 20);
 
-    t
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d, i) {
-            if (d.Year != '') return delay = delay - interval
-            else return delay = delay - 0
-        })
-        .duration(500)
-        .style("opacity", 1)
-        .transition()
-        .delay(interval - 1000)
-        .style("opacity", 0);
+//     t
+//         .style("opacity", 0)
+//         .transition()
+//         .delay(function(d, i) {
+//             if (d.Year != '') return delay = delay - interval
+//             else return delay = delay - 0
+//         })
+//         .duration(500)
+//         .style("opacity", 1)
+//         .transition()
+//         .delay(interval - 1000)
+//         .style("opacity", 0);
 
-    // t = linegraph
-    //     .selectAll(".labeltext")
-    //     .data(data)
-    //     .enter()
-    //     .append("text")
-    //     .attr("text-anchor", "middle")
-    //     .attr("class", "labeltext hahaha")
-    //     .attr("id", d => "ev1_" + d.Year.replace(/ /g, ""))
-    //     .attr(
-    //         "x",
-    //         (d, i) =>
-    //         width * 0.1 +
-    //         (0.5 * (width * 0.8)) / data.length +
-    //         (i * (width * 0.8)) / data.length
-    //     )
-    //     .attr("y", (d, i) => data.filter(e => e.Event != '').indexOf(d) % 2 != 0 ? 60 * curems : 100 * curems)
-    //     .style("font-size", curems + "em")
-    //     .text(function(d, i) {
-    //             if (d.Event) {
-    //                 if (i == 0) return "Once upon a time, " + d.Event;
-    //                 else if (i == data.length - 1) return "Finally, " + d.Event;
-    //                 else return "Then, " + d.Event;
-    //             }
-    //         }
-    //         // d.Event.split(" ")
-    //         // .slice(0, Math.round(d.Event.split(" ").length / 2))
-    //         // .join(" ")
-    //     )
-    //     .style("opacity", 0)
-    //     .transition()
-    //     .delay(function(d, i) {
-    //         if (d.Year != '') return step = step - 3000
-    //         else return step = step + 0
-    //     })
-    //     .duration(500)
-    //     .style("opacity", 1)
-    //     .transition()
-    //     .style("opacity", 0)
-
-
-
-    delay = interval * 13;
-
-    // //虚线
-    // t = linegraph.selectAll('.dashedline')
-    //     .data(data)
-    //     .enter()
-    //     .append('path')
-    //     .attr('stroke', '#bbb')
-    //     .attr("class", "hahaha")
-    //     .attr('stroke-width', 2)
-    //     .style("stroke-dasharray", ("7, 3"))
-    //     .attr('d', (d, i) => {
-    //         if (data.filter(e => e.Event != '').indexOf(d) % 2 != 0 || d.Event == '') return []
-    //         else return line([{
-    //                 x: width * 0.1 +
-    //                     (0.5 * (width * 0.8)) / data.length +
-    //                     (i * (width * 0.8)) / data.length,
-    //                 y: 25
-    //             },
-    //             {
-    //                 x: width * 0.1 +
-    //                     (0.5 * (width * 0.8)) / data.length +
-    //                     (i * (width * 0.8)) / data.length,
-    //                 y: 65
-    //             }
-    //         ])
-    //     })
-    //     .style("opacity", 0)
-    //     .transition()
-    //     .delay(function(d, i) {
-    //         if (d.Year != '') return delay = delay - interval
-    //         else return delay = delay - 0
-    //     })
-    //     .style("opacity", 1)
-    //     .transition()
-    //     .style("opacity", 0)
+//     // t = linegraph
+//     //     .selectAll(".labeltext")
+//     //     .data(data)
+//     //     .enter()
+//     //     .append("text")
+//     //     .attr("text-anchor", "middle")
+//     //     .attr("class", "labeltext hahaha")
+//     //     .attr("id", d => "ev1_" + d.Year.replace(/ /g, ""))
+//     //     .attr(
+//     //         "x",
+//     //         (d, i) =>
+//     //         width * 0.1 +
+//     //         (0.5 * (width * 0.8)) / data.length +
+//     //         (i * (width * 0.8)) / data.length
+//     //     )
+//     //     .attr("y", (d, i) => data.filter(e => e.Event != '').indexOf(d) % 2 != 0 ? 60 * curems : 100 * curems)
+//     //     .style("font-size", curems + "em")
+//     //     .text(function(d, i) {
+//     //             if (d.Event) {
+//     //                 if (i == 0) return "Once upon a time, " + d.Event;
+//     //                 else if (i == data.length - 1) return "Finally, " + d.Event;
+//     //                 else return "Then, " + d.Event;
+//     //             }
+//     //         }
+//     //         // d.Event.split(" ")
+//     //         // .slice(0, Math.round(d.Event.split(" ").length / 2))
+//     //         // .join(" ")
+//     //     )
+//     //     .style("opacity", 0)
+//     //     .transition()
+//     //     .delay(function(d, i) {
+//     //         if (d.Year != '') return step = step - 3000
+//     //         else return step = step + 0
+//     //     })
+//     //     .duration(500)
+//     //     .style("opacity", 1)
+//     //     .transition()
+//     //     .style("opacity", 0)
 
 
-    // delay = interval * 12;
 
-    //时间标签
-    t = linegraph
-        .selectAll(".yeartext")
-        .data(data)
-        .enter()
-        .append("text")
-        .attr("class", "yeartext hahaha")
-        .attr("id", d => "yr_" + d.Year.replace(/ /g, ""))
-        .attr(
-            "x",
-            (d, i) =>
-            width * 0.1 +
-            (0.5 * (width * 0.8)) / data.length +
-            (i * (width * 0.8)) / data.length
-        )
-        .attr("text-anchor", "middle")
-        .attr("y", (d, i) => d.Year.split(" ").length > 1 ? -15 : 0)
-        .attr("font-weight", "bold")
-        .style("font-size", "14px")
-        .text(d => d.Year.split(" ")[0])
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d, i) {
-            if (d.Year != '') return delay = delay - interval
-            else return delay = delay - 0
-        })
-        .duration(500)
-        .style("opacity", 1)
-        .transition()
-        .delay(interval - 1000)
-        .style("opacity", 0)
+//     delay = interval * 13;
 
-    //刻度
-    t = linegraph
-        .selectAll(".tick")
-        .data(data)
-        .enter()
-        .append("path")
-        .attr("stroke", "black")
-        .attr("stroke-width", (d, i) => d.Event == '' ? 1 : 3)
-        .attr("d", (d, i) =>
-            line([{
-                    x: width * 0.1 +
-                        (0.5 * (width * 0.8)) / data.length +
-                        (i * (width * 0.8)) / data.length,
-                    y: 25
-                },
-                {
-                    x: width * 0.1 +
-                        (0.5 * (width * 0.8)) / data.length +
-                        (i * (width * 0.8)) / data.length,
-                    y: 15
-                }
-            ])
-        );
+//     // //虚线
+//     // t = linegraph.selectAll('.dashedline')
+//     //     .data(data)
+//     //     .enter()
+//     //     .append('path')
+//     //     .attr('stroke', '#bbb')
+//     //     .attr("class", "hahaha")
+//     //     .attr('stroke-width', 2)
+//     //     .style("stroke-dasharray", ("7, 3"))
+//     //     .attr('d', (d, i) => {
+//     //         if (data.filter(e => e.Event != '').indexOf(d) % 2 != 0 || d.Event == '') return []
+//     //         else return line([{
+//     //                 x: width * 0.1 +
+//     //                     (0.5 * (width * 0.8)) / data.length +
+//     //                     (i * (width * 0.8)) / data.length,
+//     //                 y: 25
+//     //             },
+//     //             {
+//     //                 x: width * 0.1 +
+//     //                     (0.5 * (width * 0.8)) / data.length +
+//     //                     (i * (width * 0.8)) / data.length,
+//     //                 y: 65
+//     //             }
+//     //         ])
+//     //     })
+//     //     .style("opacity", 0)
+//     //     .transition()
+//     //     .delay(function(d, i) {
+//     //         if (d.Year != '') return delay = delay - interval
+//     //         else return delay = delay - 0
+//     //     })
+//     //     .style("opacity", 1)
+//     //     .transition()
+//     //     .style("opacity", 0)
 
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, interval * 13 + 1000)
 
-}
+//     // delay = interval * 12;
+
+//     //时间标签
+//     t = linegraph
+//         .selectAll(".yeartext")
+//         .data(data)
+//         .enter()
+//         .append("text")
+//         .attr("class", "yeartext hahaha")
+//         .attr("id", d => "yr_" + d.Year.replace(/ /g, ""))
+//         .attr(
+//             "x",
+//             (d, i) =>
+//             width * 0.1 +
+//             (0.5 * (width * 0.8)) / data.length +
+//             (i * (width * 0.8)) / data.length
+//         )
+//         .attr("text-anchor", "middle")
+//         .attr("y", (d, i) => d.Year.split(" ").length > 1 ? -15 : 0)
+//         .attr("font-weight", "bold")
+//         .style("font-size", "14px")
+//         .text(d => d.Year.split(" ")[0])
+//         .style("opacity", 0)
+//         .transition()
+//         .delay(function(d, i) {
+//             if (d.Year != '') return delay = delay - interval
+//             else return delay = delay - 0
+//         })
+//         .duration(500)
+//         .style("opacity", 1)
+//         .transition()
+//         .delay(interval - 1000)
+//         .style("opacity", 0)
+
+//     //刻度
+//     t = linegraph
+//         .selectAll(".tick")
+//         .data(data)
+//         .enter()
+//         .append("path")
+//         .attr("stroke", "black")
+//         .attr("stroke-width", (d, i) => d.Event == '' ? 1 : 3)
+//         .attr("d", (d, i) =>
+//             line([{
+//                     x: width * 0.1 +
+//                         (0.5 * (width * 0.8)) / data.length +
+//                         (i * (width * 0.8)) / data.length,
+//                     y: 25
+//                 },
+//                 {
+//                     x: width * 0.1 +
+//                         (0.5 * (width * 0.8)) / data.length +
+//                         (i * (width * 0.8)) / data.length,
+//                     y: 15
+//                 }
+//             ])
+//         );
+
+//     setTimeout(function() {
+//         document.getElementById('story_finish').style.display = "block"
+//         document.getElementById('story_replay').style.display = "block"
+//     }, interval * 13 + 2000)
+
+// }
 
 var create_halfway_timeline = (svg, data, datalimit) => {
 
@@ -3977,9 +4018,12 @@ var create_halfway_timeline = (svg, data, datalimit) => {
                 }
             ])
         });
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, delay + 2000)
+    if (user_data['history_replay'] == 0) {
+        setTimeout(function() {
+            document.getElementById('story_finish').style.display = "block"
+            document.getElementById('story_replay').style.display = "block"
+        }, delay + 2000)
+    }
 
 }
 
@@ -4501,9 +4545,12 @@ var create_anchor_timeline = (svg, data, datalimit) => {
                 }
             ])
         });
-    setTimeout(function() {
-        document.getElementById('story_finish').style.display = "block"
-    }, delay + 2000)
+    if (user_data['history_replay'] == 0) {
+        setTimeout(function() {
+            document.getElementById('story_finish').style.display = "block"
+            document.getElementById('story_replay').style.display = "block"
+        }, delay + 2000)
+    }
 
 }
 

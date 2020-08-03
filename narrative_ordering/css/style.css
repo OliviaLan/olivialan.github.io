@@ -424,7 +424,11 @@ body {
 }
 
 .f_button {
-    right: 2%;
+    right: 50px;
+}
+
+.replay_button {
+    right: 220px;
 }
 
 #timediv {

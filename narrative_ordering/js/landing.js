@@ -14,8 +14,8 @@
 
   	        btn = document.createElement('button')
   	        btn.innerHTML = 'Accept and Proceed'
-  	        btn.style.margin = '5%'
-  	        btn.style.fontSize = 'large'
+  	        btn.style.margin = '3%'
+  	        btn.style.class = 'large'
   	        btn.onclick = () => {
   	            document.body.innerHTML = ''
   	            find_mid()
