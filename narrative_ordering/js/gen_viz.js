@@ -2077,7 +2077,7 @@ var create_halfway_line = (svg, data, datalimit) => {
 
 var create_anchor_line = (svg, data, datalimit) => {
 
-    console.log("anchored travel")
+    console.log("anchor")
         // hahaha = []
     var margin = { top: 100, right: 20, bottom: 20, left: 70 },
         width = 940 - margin.left - margin.right,
@@ -2129,7 +2129,7 @@ var create_anchor_line = (svg, data, datalimit) => {
         .attr("dy", "-0.7em");
 
     var breaking = 6;
-    var counter = breaking;
+    var counter = breaking + 0;
 
     var lineGen = d3.line()
         .x(function(d, i) {
