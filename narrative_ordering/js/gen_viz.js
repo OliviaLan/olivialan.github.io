@@ -116,13 +116,13 @@ function gen_question(text, pattern, dataset) {
 
         //user_data['assigned_question_type'] == 3 这个是为了判断true/false，如果为true，vis会是clickable的
         if (dataset == 'history') {
-            create_recurrence_timeline(svg, data, datalimit)
-                // if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
-                // else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
-                // else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
-                // else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
-                // else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
-                // else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
+            // create_recurrence_timeline(svg, data, datalimit)
+            if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
+            else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
+            else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
+            else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
+            else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
+            else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
         } else if (dataset == 'population') {
             // create_anchor_line(svg, data, datalimit)
             if (pattern == "1") create_chronological_line(svg, data, datalimit);
