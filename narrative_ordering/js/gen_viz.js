@@ -27,7 +27,7 @@ var curveOpen = d3
     })
     .curve(d3.curveCatmullRom.alpha(1));
 
-var interval = 3000
+var interval = 4000
 
 //【重要】画出左边的选项卡和右边的图
 function gen_question(text, pattern, dataset) {
@@ -168,9 +168,9 @@ var create_chronological_line = (svg, data, datalimit) => {
 
     console.log("chronological")
 
-    var margin = { top: 100, right: 20, bottom: 20, left: 70 },
-        width = 940 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+    var margin = { top: 100, right: 250, bottom: 150, left: 70 },
+        width_chart = width - margin.left - margin.right,
+        height_chart = height - margin.top - margin.bottom;
 
     var parseTime = d3.timeParse("%Y");
 
@@ -180,10 +180,10 @@ var create_chronological_line = (svg, data, datalimit) => {
 
     // X scale will use the index of our data
     var x = d3.scaleTime()
-        .range([0, width]);
+        .range([0, width_chart]);
     // 6. Y scale will use the randomly generate number 
     var y = d3.scaleLinear()
-        .range([height, 0]);
+        .range([height_chart, 0]);
 
     // var valueline = d3.line()
     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
@@ -238,7 +238,7 @@ var create_chronological_line = (svg, data, datalimit) => {
     // Add the x Axis
     linegraph.append("g")
         .attr("class", "xAxis")
-        .attr("transform", "translate(0," + height + ")")
+        .attr("transform", "translate(0," + height_chart + ")")
         .call(d3.axisBottom(x));
 
     // Add the y Axis
@@ -413,9 +413,9 @@ var create_trailer_line = (svg, data, datalimit) => {
 
     console.log("trailer")
 
-    var margin = { top: 100, right: 20, bottom: 20, left: 70 },
-        width = 940 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+    var margin = { top: 100, right: 250, bottom: 150, left: 70 },
+        width_chart = width - margin.left - margin.right,
+        height_chart = height - margin.top - margin.bottom;
 
     var parseTime = d3.timeParse("%Y");
 
@@ -424,9 +424,9 @@ var create_trailer_line = (svg, data, datalimit) => {
     //     .range([0, width]);
 
     // X scale will use the index of our data
-    var x = d3.scaleTime().range([0, width]);
+    var x = d3.scaleTime().range([0, width_chart]);
     // 6. Y scale will use the randomly generate number 
-    var y = d3.scaleLinear().range([height, 0]);
+    var y = d3.scaleLinear().range([height_chart, 0]);
 
     // var valueline = d3.line()
     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
@@ -479,7 +479,7 @@ var create_trailer_line = (svg, data, datalimit) => {
     // Add the x Axis
     linegraph.append("g")
         .attr("class", "xAxis")
-        .attr("transform", "translate(0," + height + ")")
+        .attr("transform", "translate(0," + height_chart + ")")
         .call(d3.axisBottom(x));
 
     // Add the y Axis
@@ -693,9 +693,10 @@ var create_recurrence_line = (svg, data, datalimit) => {
         // hahaha.push(data[9])
         // hahaha.push(data[10])
 
-    var margin = { top: 100, right: 20, bottom: 20, left: 70 },
-        width = 940 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+    var margin = { top: 100, right: 250, bottom: 150, left: 70 },
+        width_chart = width - margin.left - margin.right,
+        height_chart = height - margin.top - margin.bottom;
+
 
     var parseTime = d3.timeParse("%Y");
 
@@ -704,9 +705,9 @@ var create_recurrence_line = (svg, data, datalimit) => {
     //     .range([0, width]);
 
     // X scale will use the index of our data
-    var x = d3.scaleTime().range([0, width]);
+    var x = d3.scaleTime().range([0, width_chart]);
     // 6. Y scale will use the randomly generate number 
-    var y = d3.scaleLinear().range([height, 0]);
+    var y = d3.scaleLinear().range([height_chart, 0]);
 
     // var valueline = d3.line()
     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
@@ -759,7 +760,7 @@ var create_recurrence_line = (svg, data, datalimit) => {
     // Add the x Axis
     linegraph.append("g")
         .attr("class", "xAxis")
-        .attr("transform", "translate(0," + height + ")")
+        .attr("transform", "translate(0," + height_chart + ")")
         .call(d3.axisBottom(x));
 
     // Add the y Axis
@@ -1061,9 +1062,9 @@ var create_trace_line = (svg, data, datalimit) => {
 
     console.log("trace")
 
-    var margin = { top: 100, right: 20, bottom: 20, left: 70 },
-        width = 940 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+    var margin = { top: 100, right: 250, bottom: 150, left: 70 },
+        width_chart = width - margin.left - margin.right,
+        height_chart = height - margin.top - margin.bottom;
 
     var parseTime = d3.timeParse("%Y");
 
@@ -1072,9 +1073,9 @@ var create_trace_line = (svg, data, datalimit) => {
     //     .range([0, width]);
 
     // X scale will use the index of our data
-    var x = d3.scaleTime().range([0, width]);
+    var x = d3.scaleTime().range([0, width_chart]);
     // 6. Y scale will use the randomly generate number 
-    var y = d3.scaleLinear().range([height, 0]);
+    var y = d3.scaleLinear().range([height_chart, 0]);
 
     // var valueline = d3.line()
     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
@@ -1127,7 +1128,7 @@ var create_trace_line = (svg, data, datalimit) => {
     // Add the x Axis
     linegraph.append("g")
         .attr("class", "xAxis")
-        .attr("transform", "translate(0," + height + ")")
+        .attr("transform", "translate(0," + height_chart + ")")
         .call(d3.axisBottom(x));
 
     // Add the y Axis
@@ -1493,9 +1494,9 @@ var create_halfway_line = (svg, data, datalimit) => {
 
     console.log("halfway-back")
 
-    var margin = { top: 100, right: 20, bottom: 20, left: 70 },
-        width = 940 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+    var margin = { top: 100, right: 250, bottom: 150, left: 70 },
+        width_chart = width - margin.left - margin.right,
+        height_chart = height - margin.top - margin.bottom;
 
     var parseTime = d3.timeParse("%Y");
 
@@ -1504,9 +1505,9 @@ var create_halfway_line = (svg, data, datalimit) => {
     //     .range([0, width]);
 
     // X scale will use the index of our data
-    var x = d3.scaleTime().range([0, width]);
+    var x = d3.scaleTime().range([0, width_chart]);
     // 6. Y scale will use the randomly generate number 
-    var y = d3.scaleLinear().range([height, 0]);
+    var y = d3.scaleLinear().range([height_chart, 0]);
 
     // var valueline = d3.line()
     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
@@ -1559,7 +1560,7 @@ var create_halfway_line = (svg, data, datalimit) => {
     // Add the x Axis
     linegraph.append("g")
         .attr("class", "xAxis")
-        .attr("transform", "translate(0," + height + ")")
+        .attr("transform", "translate(0," + height_chart + ")")
         .call(d3.axisBottom(x));
 
     // Add the y Axis
@@ -2079,9 +2080,9 @@ var create_anchor_line = (svg, data, datalimit) => {
 
     console.log("anchor")
         // hahaha = []
-    var margin = { top: 100, right: 20, bottom: 20, left: 70 },
-        width = 940 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+    var margin = { top: 100, right: 250, bottom: 150, left: 70 },
+        width_chart = width - margin.left - margin.right,
+        height_chart = height - margin.top - margin.bottom;
 
     var parseTime = d3.timeParse("%Y");
 
@@ -2090,9 +2091,9 @@ var create_anchor_line = (svg, data, datalimit) => {
     //     .range([0, width]);
 
     // X scale will use the index of our data
-    var x = d3.scaleTime().range([0, width]);
+    var x = d3.scaleTime().range([0, width_chart]);
     // 6. Y scale will use the randomly generate number 
-    var y = d3.scaleLinear().range([height, 0]);
+    var y = d3.scaleLinear().range([height_chart, 0]);
 
     // var valueline = d3.line()
     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
@@ -2164,7 +2165,7 @@ var create_anchor_line = (svg, data, datalimit) => {
     // Add the x Axis
     linegraph.append("g")
         .attr("class", "xAxis")
-        .attr("transform", "translate(0," + height + ")")
+        .attr("transform", "translate(0," + height_chart + ")")
         .call(d3.axisBottom(x));
 
     // Add the y Axis

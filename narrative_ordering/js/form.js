@@ -24,7 +24,7 @@
   	    },
   	    "judgement_1": {
   	        "type": "string",
-  	        "title": "4. Which story has better narratives?",
+  	        "title": "4. Which story has better narratives? (story content not taken into account)",
   	        "enum": ['Story One', 'Story Two'],
   	        'required': true
   	    },

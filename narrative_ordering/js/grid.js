@@ -22,13 +22,13 @@ var save_q4_answers = () => {
 
     if (document.getElementById('grid_reason').value != '') {
         new_answer = {
-            'index': questions[current_question]['original_index'],
+            // 'index': shuffle_question[current_question]['original_index'],
             'expressiveness': position_invert[0],
             'comprehensibility': position_invert[1],
             'grid_reason': document.getElementById('grid_reason').value,
             'elapsed_time': Date.now() - cur_start_time,
-            'dataset': questions[current_question]['dataset'],
-            'pattern': questions[current_question]['pattern'],
+            'dataset': shuffle_question[current_question]['dataset'],
+            'pattern': shuffle_question[current_question]['pattern'],
         }
         user_answers.push(new_answer)
         user_data['answers'] = user_answers

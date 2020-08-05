@@ -9,12 +9,12 @@ var save_q3_answers = () => {
         // recall.push(document.getElementById('recall6').value)
         // recall.push(document.getElementById('recall7').value)
         new_answer = {
-            'index': questions[current_question]['original_index'],
+            // 'index': shuffle_question[current_question]['original_index'],
             'recall_overall': document.getElementById('main_idea').value,
             'recall': document.getElementById('retell').value,
             'elapsed_time': Date.now() - cur_start_time,
-            'dataset': questions[current_question]['dataset'],
-            'pattern': questions[current_question]['pattern'],
+            'dataset': shuffle_question[current_question]['dataset'],
+            'pattern': shuffle_question[current_question]['pattern'],
         }
         user_answers.push(new_answer)
         user_data['answers'] = user_answers

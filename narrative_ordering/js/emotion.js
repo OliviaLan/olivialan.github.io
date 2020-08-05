@@ -26,7 +26,6 @@ var save_q2_answers = () => {
 
                                         console.log('finished')
                                         new_answer = {
-                                            'index': questions[current_question]['original_index'],
                                             'attention': attention[a].value,
                                             'involvement': involvement[i].value,
                                             'novelty': novelty[n].value,
@@ -36,8 +35,8 @@ var save_q2_answers = () => {
                                             'affect_arousal': affect_arousal[ar].value,
                                             'likability': likability[l].value,
                                             'elapsed_time': Date.now() - cur_start_time,
-                                            'dataset': questions[current_question]['dataset'],
-                                            'pattern': questions[current_question]['pattern'],
+                                            'dataset': shuffle_question[current_question]['dataset'],
+                                            'pattern': shuffle_question[current_question]['pattern'],
                                             // 'rating_reason': document.getElementById('rating_reason').value,
                                         }
                                         user_answers.push(new_answer)
