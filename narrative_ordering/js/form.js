@@ -18,19 +18,25 @@
   	    },
   	    "literacy": {
   	        "type": "string",
-  	        "title": "3. I can understand the visualization in the stories (timeline & line chart)?",
+  	        "title": "3. I have no problem understanding the visualization in the stories (timeline & line chart)?",
+  	        "enum": ['Yes', 'No'],
+  	        'required': true
+  	    },
+  	    "speed": {
+  	        "type": "string",
+  	        "title": "4. I think the animation speed is neither too fast nor too slow",
   	        "enum": ['Yes', 'No'],
   	        'required': true
   	    },
   	    "judgement_1": {
   	        "type": "string",
-  	        "title": "4. Which story has better narratives? (story content not taken into account)",
+  	        "title": "5. Which story has better narrative skill? (story content not taken into account)",
   	        "enum": ['Story One', 'Story Two'],
   	        'required': true
   	    },
   	    "judgement_1_why": {
   	        "type": "string",
-  	        "title": "For question 4, please describe your reason briefly.",
+  	        "title": "For question 5, please describe your reason briefly.",
   	        'required': true
   	    },
   	    // "img": {
@@ -49,13 +55,13 @@
   	    // },
   	    "replay": {
   	        "type": "string",
-  	        "title": "5. Did you click the 'replay' buttons? If you did, please describe the reason.",
+  	        "title": "6. Did you click the 'replay' buttons? If you did, please describe the reason briefly.",
   	        'required': true
   	    },
 
   	    "feedback": {
   	        "type": "string",
-  	        "title": "6. Please leave your feedback or comments related to this study below."
+  	        "title": "7. (Optional) Please leave your feedback or comments related to this study below."
   	    },
   	}
 
@@ -91,6 +97,12 @@
   	                    'type': 'radio',
   	                    'hideNone': true
   	                },
+  	                "speed": {
+  	                    'sort': function(a, b) { return 0 },
+  	                    'type': 'radio',
+  	                    'hideNone': true
+  	                },
+
   	                "replay": {
   	                    "size": 100,
   	                },

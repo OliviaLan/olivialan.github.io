@@ -27,7 +27,7 @@ var curveOpen = d3
     })
     .curve(d3.curveCatmullRom.alpha(1));
 
-var interval = 200
+var interval = 4000
 
 //【重要】画出左边的选项卡和右边的图
 function gen_question(text, pattern, dataset) {
@@ -81,7 +81,7 @@ function gen_question(text, pattern, dataset) {
         divradio.id = "divradio";
         // divradio.style.maxWidth = '30%'
         //通过函数传的文字放进去
-        divradio.innerHTML = "<b>Story " + (current_question + 1) + ": " + text + "</b>" + "<p>The animation will start in 2 seconds</p>";
+        divradio.innerHTML = "<b>Story " + (current_question + 1) + ": " + text + "</b>" + "<p>The animation will start in 3 seconds</p>";
         divquestion.append(divradio);
 
         document.body.append(divquestion);
