@@ -1,4 +1,12 @@
 var save_q3_answers = () => {
+
+    if (current_question == 0) {
+        var dataset = user_data['record'][0];
+        var pattern = user_data['record'][1];
+    } else {
+        var dataset = user_data['record'][2];
+        var pattern = user_data['record'][3];
+    }
     if (document.getElementById('main_idea').value && document.getElementById('retell').value) {
         // var recall = []
         // recall.push(document.getElementById('recall1').value)
@@ -13,8 +21,8 @@ var save_q3_answers = () => {
             'recall_overall': document.getElementById('main_idea').value,
             'recall': document.getElementById('retell').value,
             'elapsed_time': Date.now() - cur_start_time,
-            'dataset': shuffle_question[current_question]['dataset'],
-            'pattern': shuffle_question[current_question]['pattern'],
+            'dataset': dataset,
+            'pattern': pattern,
         }
         user_answers.push(new_answer)
         user_data['answers'] = user_answers

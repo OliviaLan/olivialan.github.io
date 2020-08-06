@@ -1,5 +1,14 @@
 var save_q2_answers = () => {
 
+    if (current_question == 0) {
+        var dataset = user_data['record'][0];
+        var pattern = user_data['record'][1];
+    } else {
+        var dataset = user_data['record'][2];
+        var pattern = user_data['record'][3];
+    }
+
+
     attention = Array.prototype.slice.call(d.getElementsByClassName('attention'))
     involvement = Array.prototype.slice.call(d.getElementsByClassName('involvement'))
     novelty = Array.prototype.slice.call(d.getElementsByClassName('novelty'))
@@ -35,8 +44,8 @@ var save_q2_answers = () => {
                                             'affect_arousal': affect_arousal[ar].value,
                                             'likability': likability[l].value,
                                             'elapsed_time': Date.now() - cur_start_time,
-                                            'dataset': shuffle_question[current_question]['dataset'],
-                                            'pattern': shuffle_question[current_question]['pattern'],
+                                            'dataset': dataset,
+                                            'pattern': pattern,
                                             // 'rating_reason': document.getElementById('rating_reason').value,
                                         }
                                         user_answers.push(new_answer)
