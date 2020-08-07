@@ -30,7 +30,7 @@
   	    },
   	    "judgement_1": {
   	        "type": "string",
-  	        "title": "5. Which story has better narrative skill? (story content not taken into account)",
+  	        "title": "5. Which story has better narrative order? (story content not taken into account)",
   	        "enum": ['Story One', 'Story Two'],
   	        'required': true
   	    },
