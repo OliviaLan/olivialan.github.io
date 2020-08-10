@@ -101,7 +101,7 @@ var init_emotion = () => {
 
     //----------question-----------
 
-    d.innerHTML += '<p><strong>1. I think the narrative order of this story holds my attention.</strong></p>'
+    d.innerHTML += '<p><strong>1. I think the <u>narrative order</u> of this story holds my attention.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {
@@ -148,7 +148,7 @@ var init_emotion = () => {
 
 
     //----------question-----------
-    d.innerHTML += '<p><strong>2. I think the narrative order of this story is fun.</strong></p>'
+    d.innerHTML += '<p><strong>2. I think the <u>narrative order</u> of this story is fun.</strong></p>'
     d.innerHTML += '<br>'
 
 
@@ -196,7 +196,7 @@ var init_emotion = () => {
     d.innerHTML += '<br><br>'
 
     //----------question-----------
-    d.innerHTML += '<p><strong>3. I think the narrative order of this story interests me.</strong></p>'
+    d.innerHTML += '<p><strong>3. I think the <u>narrative order</u> of this story interests me.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {
@@ -242,7 +242,7 @@ var init_emotion = () => {
 
     //----------question-----------
 
-    d.innerHTML += '<p><strong>4. I think the narrative order of this story gives me a reason to proceed reading.</strong></p>'
+    d.innerHTML += '<p><strong>4. I think the <u>narrative order</u> of this story gives me a reason to proceed reading.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {
@@ -288,7 +288,7 @@ var init_emotion = () => {
 
 
     //----------question-----------
-    d.innerHTML += '<p><strong>5. I think the narrative order of this story encourages me to think.</strong></p>'
+    d.innerHTML += '<p><strong>5. I think the <u>narrative order</u> of this story encourages me to think.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {
@@ -333,7 +333,7 @@ var init_emotion = () => {
     d.innerHTML += '<br><br>'
 
     //----------question-----------
-    d.innerHTML += '<p><strong>6. I think the narrative order of this story is enjoyable.</strong></p>'
+    d.innerHTML += '<p><strong>6. I think the <u>narrative order</u> of this story is enjoyable.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {
@@ -379,7 +379,7 @@ var init_emotion = () => {
 
 
     //----------question-----------
-    d.innerHTML += '<p><strong>7. I was emotionally aroused by the narrative order of the story.</strong></p>'
+    d.innerHTML += '<p><strong>7. I was emotionally aroused by the <u>narrative order</u> of the story.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {
@@ -424,7 +424,7 @@ var init_emotion = () => {
     d.innerHTML += '<br><br>'
 
     //----------question-----------
-    d.innerHTML += '<p><strong>8. I like the narrative order of the story.</strong></p>'
+    d.innerHTML += '<p><strong>8. I like the <u>narrative order</u> of the story.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {

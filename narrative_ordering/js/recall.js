@@ -7,7 +7,7 @@ var save_q3_answers = () => {
         var dataset = user_data['record'][2];
         var pattern = user_data['record'][3];
     }
-    if (document.getElementById('main_idea').value && document.getElementById('retell').value) {
+    if (document.getElementById('recall_order').value && document.getElementById('retell').value) {
         // var recall = []
         // recall.push(document.getElementById('recall1').value)
         // recall.push(document.getElementById('recall2').value)
@@ -18,8 +18,9 @@ var save_q3_answers = () => {
         // recall.push(document.getElementById('recall7').value)
         new_answer = {
             // 'index': shuffle_question[current_question]['original_index'],
-            'recall_overall': document.getElementById('main_idea').value,
+            // 'recall_overall': document.getElementById('main_idea').value,
             'recall': document.getElementById('retell').value,
+            'recall_order': document.getElementById('recall_order').value,
             'elapsed_time': Date.now() - cur_start_time,
             'dataset': dataset,
             'pattern': pattern,
@@ -54,17 +55,27 @@ var init_recall = () => {
     textarea.id = "retell"
         // input.size = "35"
     textarea.style.width = "500px"
-    textarea.style.height = "250px"
+    textarea.style.height = "150px"
 
     d.append(textarea)
 
-    d.innerHTML += '<br><br><p>2. What do you think is the main idea of this story:</p>'
+    d.innerHTML += '<br><p>2. <u>Narrative order</u> refers to the arrangement of story pieces into a telling sequence. <br>Please recall and describe the <u>narrative order</u> of this story:</p><br>'
 
-    input = document.createElement('input')
-    input.name = "main_idea"
-    input.id = "main_idea"
-    input.size = "60"
-    d.append(input)
+    textarea_2 = document.createElement('textarea')
+    textarea_2.id = "recall_order"
+    textarea_2.style.width = "500px"
+    textarea_2.style.height = "150px"
+
+    d.append(textarea_2)
+
+
+    // d.innerHTML += '<br><br><p>3. What do you think is the main idea of this story:</p>'
+
+    // input = document.createElement('input')
+    // input.name = "main_idea"
+    // input.id = "main_idea"
+    // input.size = "60"
+    // d.append(input)
 
 
     // d.innerHTML += '<br><br><p>No. 1</p>'

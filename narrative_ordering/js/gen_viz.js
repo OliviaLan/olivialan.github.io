@@ -27,7 +27,7 @@ var curveOpen = d3
     })
     .curve(d3.curveCatmullRom.alpha(1));
 
-var interval = 4000
+var interval = 400
 
 //【重要】画出左边的选项卡和右边的图
 function gen_question(text, pattern, dataset) {
@@ -44,7 +44,7 @@ function gen_question(text, pattern, dataset) {
         else if (pattern == "5") path += "history_halfway.csv";
         else if (pattern == "6") path += "history_anchor.csv";
     } else if (dataset == "population") {
-        // path += "line_anchor.csv";
+        // path += "line_chronology.csv";
         if (pattern == "1") path += "line_chronology.csv";
         else if (pattern == "2") path += "line_trace.csv";
         else if (pattern == "3") path += "line_trailer.csv";
@@ -114,26 +114,31 @@ function gen_question(text, pattern, dataset) {
             gen_question(questions_shuffle[current_question]['text'], questions_shuffle[current_question]['pattern'], questions_shuffle[current_question]['dataset'])
         }
 
+        if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
+        else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
+        else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
+        else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
+        else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
+        else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
+
         //user_data['assigned_question_type'] == 3 这个是为了判断true/false，如果为true，vis会是clickable的
-        if (dataset == 'history') {
-            // create_recurrence_timeline(svg, data, datalimit)
-            if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
-            else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
-            else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
-            else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
-            else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
-            else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
-        } else if (dataset == 'population') {
-            // create_anchor_line(svg, data, datalimit)
-            if (pattern == "1") create_chronological_line(svg, data, datalimit);
-            else if (pattern == "2") create_trace_line(svg, data, datalimit);
-            else if (pattern == "3") create_trailer_line(svg, data, datalimit);
-            else if (pattern == "4") create_recurrence_line(svg, data, datalimit);
-            else if (pattern == "5") create_halfway_line(svg, data, datalimit);
-            else if (pattern == "6") create_anchor_line(svg, data, datalimit);
-            // else if (pattern == "7") create_parting_line(svg, data, datalimit);
-            // else if (pattern == "8") create_anchor_line(svg, data, datalimit);
-        }
+        // if (dataset == 'history') {
+        //     // create_recurrence_timeline(svg, data, datalimit)
+        //     if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
+        //     else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
+        //     else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
+        //     else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
+        //     else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
+        //     else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
+        // } else if (dataset == 'population') {
+        //     // create_anchor_line(svg, data, datalimit)
+        //     if (pattern == "1") create_chronological_line(svg, data, datalimit);
+        //     else if (pattern == "2") create_trace_line(svg, data, datalimit);
+        //     else if (pattern == "3") create_trailer_line(svg, data, datalimit);
+        //     else if (pattern == "4") create_recurrence_line(svg, data, datalimit);
+        //     else if (pattern == "5") create_halfway_line(svg, data, datalimit);
+        //     else if (pattern == "6") create_anchor_line(svg, data, datalimit);
+        // }
         // else if (dataset == 'story3') {
         //     if (pattern == "1") create_chronological_timeline(svg, data, nps, datalimit);
         //     else if (pattern == "2") create_retrograde_timeline(svg, data, nps, datalimit);
