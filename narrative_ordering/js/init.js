@@ -274,16 +274,16 @@ async function choose_assigned_pattern_type() {
     }
     min_type = assigned_types.indexOf(Math.min(...assigned_types));
     min_type = min_type + 2;
-    // delete assigned_types[min_type - 2];
-    // min_type_2 = assigned_types.indexOf(Math.min.apply(null, assigned_types.filter(function(n) { return !isNaN(n); })));
-    // min_type_2 = min_type_2 + 2;
+    delete assigned_types[min_type - 2];
+    min_type_2 = assigned_types.indexOf(Math.min.apply(null, assigned_types.filter(function(n) { return !isNaN(n); })));
+    min_type_2 = min_type_2 + 2;
     // delete assigned_types[min_type_2 - 2];
     // min_type_3 = assigned_types.indexOf(Math.min.apply(null, assigned_types.filter(function(n) { return !isNaN(n); })));
     // min_type_3 = min_type_3 + 2;
     chosen_patterns = [];
     chosen_patterns.push(1);
     chosen_patterns.push(min_type);
-    // chosen_patterns.push(min_type_2);
+    chosen_patterns.push(min_type_2);
     // chosen_patterns.push(min_type_3);
 
     // 包含chronological和其他任意三个pattern
@@ -292,43 +292,98 @@ async function choose_assigned_pattern_type() {
 
 async function choose_pattern_order(chosen_patterns) {
     // console.log(chosen_patterns.sort(function() { return Math.random() - 0.5; }))
-    history_assigned_types = []
-    stock_assigned_types = []
-        // c_assigned_types = []
-        // d_assigned_types = []
-        // pattern_1 = 1
-        // pattern_2 = chosen_patterns[1]
-        // pattern_3 = chosen_patterns[2]
-        // pattern_4 = chosen_patterns[3]
-        // chosen_patterns_copy = chosen_patterns.slice(0, 2)
+    history_assigned_types = [];
+    stock_assigned_types = [];
+    c_assigned_types = [];
+    // d_assigned_types = []
+    // pattern_1 = 1
+    // pattern_2 = chosen_patterns[1]
+    // pattern_3 = chosen_patterns[2]
+    // pattern_4 = chosen_patterns[3]
+    // chosen_patterns_copy = chosen_patterns.slice(0, 2)
 
     d = await get_firebase_data(mid_collection, false)
-    history_pattern_1 = d.filter(p => p['history_pattern'] == 1).length
-    stock_pattern_1 = d.filter(p => p['stock_pattern'] == 1).length
+    history_pattern_1 = d.filter(p => p['history_pattern'] == chosen_patterns[0]).length
+    population_pattern_1 = d.filter(p => p['population_pattern'] == chosen_patterns[0]).length
+    c_pattern_1 = d.filter(p => p['c_pattern'] == chosen_patterns[0]).length
 
-    if (history_pattern_1 <= stock_pattern_1) {
+    history_pattern_2 = d.filter(p => p['history_pattern'] == chosen_patterns[1]).length
+    population_pattern_2 = d.filter(p => p['population_pattern'] == chosen_patterns[1]).length
+    c_pattern_2 = d.filter(p => p['c_pattern'] == chosen_patterns[1]).length
+
+
+    if (history_pattern_1 <= population_pattern_1 && history_pattern_1 <= c_pattern_1) {
         user_data['history_pattern'] = 1;
-        user_data['stock_pattern'] = chosen_patterns[1];
-        if (questions_shuffle[0]['dataset'] == 'history') {
-            questions_shuffle[0]['pattern'] = 1;
-            questions_shuffle[1]['pattern'] = chosen_patterns[1];
+        if (population_pattern_2 <= c_pattern_2) {
+            user_data['population_pattern'] = chosen_patterns[1];
+            user_data['c_pattern'] = chosen_patterns[2];
         } else {
-            questions_shuffle[1]['pattern'] = 1;
-            questions_shuffle[0]['pattern'] = chosen_patterns[1];
+            user_data['c_pattern'] = chosen_patterns[1];
+            user_data['population_pattern'] = chosen_patterns[2];
+        }
+        // if (questions_shuffle[0]['dataset'] == 'history') {
+        //     questions_shuffle[0]['pattern'] = 1;
+        //     questions_shuffle[1]['pattern'] = chosen_patterns[1];
+        // } else {
+        //     questions_shuffle[1]['pattern'] = 1;
+        //     questions_shuffle[0]['pattern'] = chosen_patterns[1];
+        // }
+    } else if (population_pattern_1 <= history_pattern_1 && population_pattern_1 <= c_pattern_1) {
+        user_data['population_pattern_1'] = 1;
+        if (history_pattern <= c_pattern_2) {
+            user_data['history_pattern'] = chosen_patterns[1];
+            user_data['c_pattern'] = chosen_patterns[2];
+        } else {
+            user_data['c_pattern'] = chosen_patterns[1];
+            user_data['history_pattern'] = chosen_patterns[2];
         }
     } else {
-        user_data['history_pattern'] = chosen_patterns[1];
-        user_data['stock_pattern'] = 1
-        if (questions_shuffle[0]['dataset'] == 'stock') {
-            questions_shuffle[0]['pattern'] = 1;
-            questions_shuffle[1]['pattern'] = chosen_patterns[1];
-
+        user_data['c_pattern'] = 1;
+        if (history_pattern <= population_pattern_1) {
+            user_data['history_pattern'] = chosen_patterns[1];
+            user_data['population_pattern_1'] = chosen_patterns[2];
         } else {
-            questions_shuffle[1]['pattern'] = 1;
-            questions_shuffle[0]['pattern'] = chosen_patterns[1];
-
+            user_data['population_pattern_1'] = chosen_patterns[1];
+            user_data['history_pattern'] = chosen_patterns[2];
         }
     }
+
+    for (i = 0; i < 3; i++) {
+        if (questions_shuffle[i]['dataset'] == 'history') {
+            questions_shuffle[i]['pattern'] = user_data['history_pattern'];
+        }
+        if (questions_shuffle[i]['dataset'] == 'population') {
+            questions_shuffle[i]['pattern'] = user_data['population_pattern'];
+        }
+        if (questions_shuffle[i]['dataset'] == 'cccc') {
+            questions_shuffle[i]['pattern'] = user_data['c_pattern'];
+        }
+    }
+
+
+    // if (history_pattern_1 <= population_pattern_1) {
+    //     user_data['history_pattern'] = 1;
+    //     user_data['population_pattern'] = chosen_patterns[1];
+    //     if (questions_shuffle[0]['dataset'] == 'history') {
+    //         questions_shuffle[0]['pattern'] = 1;
+    //         questions_shuffle[1]['pattern'] = chosen_patterns[1];
+    //     } else {
+    //         questions_shuffle[1]['pattern'] = 1;
+    //         questions_shuffle[0]['pattern'] = chosen_patterns[1];
+    //     }
+    // } else {
+    //     user_data['history_pattern'] = chosen_patterns[1];
+    //     user_data['population_pattern'] = 1
+    //     if (questions_shuffle[0]['dataset'] == 'stock') {
+    //         questions_shuffle[0]['pattern'] = 1;
+    //         questions_shuffle[1]['pattern'] = chosen_patterns[1];
+
+    //     } else {
+    //         questions_shuffle[1]['pattern'] = 1;
+    //         questions_shuffle[0]['pattern'] = chosen_patterns[1];
+
+    //     }
+    // }
 
 
     // for (i = 0; i < 2; i++) {
@@ -347,7 +402,7 @@ async function choose_pattern_order(chosen_patterns) {
     // chosen_patterns_copy.splice(history_min_type, 1)
 
     // for (i = 0; i < 1; i++) {
-    //     num_of_this_type = d.filter(p => p['stock_pattern'] == chosen_patterns_copy[i]).length
+    //     num_of_this_type = d.filter(p => p['population_pattern'] == chosen_patterns_copy[i]).length
     //     stock_assigned_types.push(num_of_this_type)
     // }
 
@@ -358,7 +413,7 @@ async function choose_pattern_order(chosen_patterns) {
     // } else {
     //     questions_shuffle[1]['pattern'] = chosen_patterns_copy[stock_min_type];
     // }
-    // user_data['stock_pattern'] = chosen_patterns_copy[stock_min_type];
+    // user_data['population_pattern'] = chosen_patterns_copy[stock_min_type];
 
     // chosen_patterns_copy.splice(stock_min_type, 1)
 
@@ -379,6 +434,8 @@ async function choose_pattern_order(chosen_patterns) {
     record.push(questions_shuffle[0]['pattern'])
     record.push(questions_shuffle[1]['dataset'])
     record.push(questions_shuffle[1]['pattern'])
+    record.push(questions_shuffle[2]['dataset'])
+    record.push(questions_shuffle[2]['pattern'])
         // pattern_order.push(questions[2]['pattern'])
         // pattern_order.push(questions[3]['pattern'])
     return record
@@ -416,18 +473,31 @@ async function choose_pattern_order(chosen_patterns) {
 // }
 
 function shuffle_question(questions) {
-    var dice = Math.floor(Math.random() * 2)
+    var dice = Math.floor(Math.random() * 6)
     if (dice == 0) {
         questions_shuffle.push(questions[0])
         questions_shuffle.push(questions[1])
-            // user_data['story_1'] = 'history'
-            // user_data['story_2'] = 'stock'
+        questions_shuffle.push(questions[2])
     } else if (dice == 1) {
+        questions_shuffle.push(questions[0])
+        questions_shuffle.push(questions[2])
+        questions_shuffle.push(questions[1])
+    } else if (dice == 2) {
         questions_shuffle.push(questions[1])
         questions_shuffle.push(questions[0])
-            // user_data['story_1'] = 'stock'
-            // user_data['story_2'] = 'history'
-
+        questions_shuffle.push(questions[2])
+    } else if (dice == 3) {
+        questions_shuffle.push(questions[1])
+        questions_shuffle.push(questions[2])
+        questions_shuffle.push(questions[0])
+    } else if (dice == 4) {
+        questions_shuffle.push(questions[2])
+        questions_shuffle.push(questions[1])
+        questions_shuffle.push(questions[0])
+    } else if (dice == 5) {
+        questions_shuffle.push(questions[2])
+        questions_shuffle.push(questions[0])
+        questions_shuffle.push(questions[1])
     }
 }
 

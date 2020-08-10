@@ -3,11 +3,13 @@ var save_q2_answers = () => {
     if (current_question == 0) {
         var dataset = user_data['record'][0];
         var pattern = user_data['record'][1];
-    } else {
+    } else if (current_question == 1) {
         var dataset = user_data['record'][2];
         var pattern = user_data['record'][3];
+    } else {
+        var dataset = user_data['record'][4];
+        var pattern = user_data['record'][5];
     }
-
 
     attention = Array.prototype.slice.call(d.getElementsByClassName('attention'))
     involvement = Array.prototype.slice.call(d.getElementsByClassName('involvement'))
