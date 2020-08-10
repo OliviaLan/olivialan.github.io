@@ -11,9 +11,9 @@ time_out = false
 questions_shuffle = []
 
 //要提前在firebase里新建几个存数据的文件夹-collection
-mid_collection = 'mID3'
-complete_collection = 'pilot_test3'
-incomplete_collection = 'pilot_test3_incomplete'
+mid_collection = 'mID'
+complete_collection = 'test_result'
+incomplete_collection = 'test_result_incomplete'
 
 replacement_mid_collection = 'mID_replacement'
 experiment_replacement = 'pilot_test1_replacement'
@@ -440,7 +440,7 @@ async function init() {
     mID = getUrlVars()['MID'];
     //开始时间
     init_timestamp = Date.now()
-    user_data['timestamp'] = init_timestamp
+    user_data['timestamp_start'] = init_timestamp
     user_data['mid'] = mID
     shuffle_question(questions)
         //随机选择一种layout

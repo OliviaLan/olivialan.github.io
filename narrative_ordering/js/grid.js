@@ -47,7 +47,7 @@ var save_q4_answers = () => {
             current_question++
             next_question()
         } else {
-            user_data['full_questions_time'] = Date.now() - init_timestamp
+            // user_data['full_questions_time'] = Date.now() - init_timestamp
             init_survey()
         }
     } else {

@@ -18,7 +18,7 @@
   	    },
   	    "literacy": {
   	        "type": "string",
-  	        "title": "3. I have no problem understanding the visualization in the stories (timeline & line chart)?",
+  	        "title": "3. I have no problem understanding the visualization in the stories (timeline)?",
   	        "enum": ['Yes', 'No'],
   	        'required': true
   	    },
@@ -36,7 +36,7 @@
   	    },
   	    "judgement_1_why": {
   	        "type": "string",
-  	        "title": "For question 5, please describe your reason briefly.",
+  	        "title": "please describe your reason briefly.",
   	        'required': true
   	    },
   	    // "img": {
@@ -53,15 +53,15 @@
   	    //     "title": "Please describe why briefly.",
   	    //     'required': true
   	    // },
-  	    "replay": {
-  	        "type": "string",
-  	        "title": "6. Did you click the 'replay' buttons? If you did, please describe the reason briefly.",
-  	        'required': true
-  	    },
+  	    // "replay": {
+  	    //     "type": "string",
+  	    //     "title": "6. Did you click the 'replay' buttons? If you did, please describe the reason briefly.",
+  	    //     'required': true
+  	    // },
 
   	    "feedback": {
   	        "type": "string",
-  	        "title": "7. (Optional) Please leave your feedback or comments related to this study below."
+  	        "title": "6. Please leave your feedback or comments related to this study below."
   	    },
   	}
 
@@ -146,6 +146,10 @@
   	                    "submit": {
   	                        "value": "Submit the Form",
   	                        "click": (a) => {
+  	                            user_data['timestamp_end'] = Date.now()
+  	                            user_data['worktime_in_seconds'] = (user_data['timestamp_end'] - user_data['timestamp_start']) / 1000
+  	                            user_data['timestamp_start'] = new Date(user_data['timestamp_start']).toString()
+  	                            user_data['timestamp_end'] = new Date(user_data['timestamp_end']).toString()
   	                            val = $('#form').alpaca('get');
   	                            //存数据-property
   	                            for (prop of Object.keys(form_properties)) {
