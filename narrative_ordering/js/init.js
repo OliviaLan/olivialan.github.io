@@ -305,20 +305,20 @@ async function choose_pattern_order(chosen_patterns) {
     d = await get_firebase_data(mid_collection, false)
     history_pattern_1 = d.filter(p => p['history_pattern'] == chosen_patterns[0]).length
     population_pattern_1 = d.filter(p => p['population_pattern'] == chosen_patterns[0]).length
-    c_pattern_1 = d.filter(p => p['c_pattern'] == chosen_patterns[0]).length
+    diary_pattern_1 = d.filter(p => p['diary_pattern'] == chosen_patterns[0]).length
 
     history_pattern_2 = d.filter(p => p['history_pattern'] == chosen_patterns[1]).length
     population_pattern_2 = d.filter(p => p['population_pattern'] == chosen_patterns[1]).length
-    c_pattern_2 = d.filter(p => p['c_pattern'] == chosen_patterns[1]).length
+    diary_pattern_2 = d.filter(p => p['diary_pattern'] == chosen_patterns[1]).length
 
 
-    if (history_pattern_1 <= population_pattern_1 && history_pattern_1 <= c_pattern_1) {
+    if (history_pattern_1 <= population_pattern_1 && history_pattern_1 <= diary_pattern_1) {
         user_data['history_pattern'] = 1;
-        if (population_pattern_2 <= c_pattern_2) {
+        if (population_pattern_2 <= diary_pattern_2) {
             user_data['population_pattern'] = chosen_patterns[1];
-            user_data['c_pattern'] = chosen_patterns[2];
+            user_data['diary_pattern'] = chosen_patterns[2];
         } else {
-            user_data['c_pattern'] = chosen_patterns[1];
+            user_data['diary_pattern'] = chosen_patterns[1];
             user_data['population_pattern'] = chosen_patterns[2];
         }
         // if (questions_shuffle[0]['dataset'] == 'history') {
@@ -328,17 +328,17 @@ async function choose_pattern_order(chosen_patterns) {
         //     questions_shuffle[1]['pattern'] = 1;
         //     questions_shuffle[0]['pattern'] = chosen_patterns[1];
         // }
-    } else if (population_pattern_1 <= history_pattern_1 && population_pattern_1 <= c_pattern_1) {
+    } else if (population_pattern_1 <= history_pattern_1 && population_pattern_1 <= diary_pattern_1) {
         user_data['population_pattern_1'] = 1;
-        if (history_pattern <= c_pattern_2) {
+        if (history_pattern <= diary_pattern_2) {
             user_data['history_pattern'] = chosen_patterns[1];
-            user_data['c_pattern'] = chosen_patterns[2];
+            user_data['diary_pattern'] = chosen_patterns[2];
         } else {
-            user_data['c_pattern'] = chosen_patterns[1];
+            user_data['diary_pattern'] = chosen_patterns[1];
             user_data['history_pattern'] = chosen_patterns[2];
         }
     } else {
-        user_data['c_pattern'] = 1;
+        user_data['diary_pattern'] = 1;
         if (history_pattern <= population_pattern_1) {
             user_data['history_pattern'] = chosen_patterns[1];
             user_data['population_pattern_1'] = chosen_patterns[2];
@@ -355,8 +355,8 @@ async function choose_pattern_order(chosen_patterns) {
         if (questions_shuffle[i]['dataset'] == 'population') {
             questions_shuffle[i]['pattern'] = user_data['population_pattern'];
         }
-        if (questions_shuffle[i]['dataset'] == 'cccc') {
-            questions_shuffle[i]['pattern'] = user_data['c_pattern'];
+        if (questions_shuffle[i]['dataset'] == 'diary') {
+            questions_shuffle[i]['pattern'] = user_data['diary_pattern'];
         }
     }
 
@@ -418,7 +418,7 @@ async function choose_pattern_order(chosen_patterns) {
     // chosen_patterns_copy.splice(stock_min_type, 1)
 
     // for (i = 0; i < 2; i++) {
-    //     num_of_this_type = d.filter(p => p['c_pattern'] == chosen_patterns_copy[i]).length
+    //     num_of_this_type = d.filter(p => p['diary_pattern'] == chosen_patterns_copy[i]).length
     //     c_assigned_types.push(num_of_this_type)
     // }
 
@@ -524,7 +524,7 @@ async function init() {
 
     // user_data['history_pattern'] = user_data['pattern_order'][0]
     // user_data['story_pattern'] = user_data['pattern_order'][1]
-    // user_data['c_pattern'] = user_data['pattern_order'][2]
+    // user_data['diary_pattern'] = user_data['pattern_order'][2]
     // user_data['d_pattern'] = user_data['pattern_order'][3]
 
     window.addEventListener("beforeunload", function(e) {

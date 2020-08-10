@@ -53,7 +53,17 @@ var init_recall = () => {
     d.style.margin = '2%'
     document.body.append(d)
 
-    d.innerHTML += '<br><p>1. Please retell the story as much as you can:</p><br>'
+    d.innerHTML += '<br><p>1. <u>Narrative order</u> refers to the arrangement of story pieces into a telling sequence. <br>Please recall and describe the <u>narrative order</u> of this story:</p><br>'
+
+    textarea_2 = document.createElement('textarea')
+    textarea_2.id = "recall_order"
+    textarea_2.style.width = "500px"
+    textarea_2.style.height = "150px"
+
+    d.append(textarea_2)
+
+
+    d.innerHTML += '<br><p>2. Please retell the story content as much as you can:</p><br>'
 
     textarea = document.createElement('textarea')
         // input.name = "reason"
@@ -63,15 +73,6 @@ var init_recall = () => {
     textarea.style.height = "150px"
 
     d.append(textarea)
-
-    d.innerHTML += '<br><p>2. <u>Narrative order</u> refers to the arrangement of story pieces into a telling sequence. <br>Please recall and describe the <u>narrative order</u> of this story:</p><br>'
-
-    textarea_2 = document.createElement('textarea')
-    textarea_2.id = "recall_order"
-    textarea_2.style.width = "500px"
-    textarea_2.style.height = "150px"
-
-    d.append(textarea_2)
 
 
     // d.innerHTML += '<br><br><p>3. What do you think is the main idea of this story:</p>'

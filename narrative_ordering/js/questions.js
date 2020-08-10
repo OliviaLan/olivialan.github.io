@@ -20,10 +20,10 @@ questions = [{
         // 'nps': ['aaa', 'bbb', 'ccc', 'ddd', 'eee', 'fff'],
     },
     {
-        'text': 'The Population of City Y',
+        'text': 'One Day of Y',
         'upper_text': 'This visualization shows a made up history timeline.',
         // 'options': ['921', '924', '925', '927', '929', '933'],
-        'dataset': 'cccc',
+        'dataset': 'diary',
         // 'answer': '929',
         // 'question_type': 1,
         // 'ques_index': 1,

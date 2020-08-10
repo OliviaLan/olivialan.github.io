@@ -51,14 +51,14 @@ function gen_question(text, pattern, dataset) {
         else if (pattern == "4") path += "line_recurrence.csv";
         else if (pattern == "5") path += "line_halfway.csv";
         else if (pattern == "6") path += "line_anchor.csv";
-    } else if (dataset == "cccc") {
-        // path += "line_chronology.csv";
-        if (pattern == "1") path += "line_chronology.csv";
-        else if (pattern == "2") path += "line_trace.csv";
-        else if (pattern == "3") path += "line_trailer.csv";
-        else if (pattern == "4") path += "line_recurrence.csv";
-        else if (pattern == "5") path += "line_halfway.csv";
-        else if (pattern == "6") path += "line_anchor.csv";
+    } else if (dataset == "diary") {
+        // path += "diary_chronology.csv";
+        if (pattern == "1") path += "diary_chronology.csv";
+        else if (pattern == "2") path += "diary_trace.csv";
+        else if (pattern == "3") path += "diary_trailer.csv";
+        else if (pattern == "4") path += "diary_recurrence.csv";
+        else if (pattern == "5") path += "diary_halfway.csv";
+        else if (pattern == "6") path += "diary_anchor.csv";
     }
     // else if (dataset == "story3") path += "plants.csv";
     // else if (dataset == "story4") path += "schedule.csv";
