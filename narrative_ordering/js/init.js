@@ -330,7 +330,7 @@ async function choose_pattern_order(chosen_patterns) {
         // }
     } else if (population_pattern_1 <= history_pattern_1 && population_pattern_1 <= diary_pattern_1) {
         user_data['population_pattern_1'] = 1;
-        if (history_pattern <= diary_pattern_2) {
+        if (history_pattern_2 <= diary_pattern_2) {
             user_data['history_pattern'] = chosen_patterns[1];
             user_data['diary_pattern'] = chosen_patterns[2];
         } else {
@@ -339,7 +339,7 @@ async function choose_pattern_order(chosen_patterns) {
         }
     } else {
         user_data['diary_pattern'] = 1;
-        if (history_pattern <= population_pattern_1) {
+        if (history_pattern_2 <= population_pattern_2) {
             user_data['history_pattern'] = chosen_patterns[1];
             user_data['population_pattern_1'] = chosen_patterns[2];
         } else {
