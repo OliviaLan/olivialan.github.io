@@ -32,7 +32,7 @@ var save_q3_answers = () => {
         }
         user_answers.push(new_answer)
         user_data['answers'] = user_answers
-        db.collection(incomplete_collection).add(user_data)
+            // db.collection(incomplete_collection).add(user_data)
         init_emotion()
     } else {
         console.log('pls fill in')

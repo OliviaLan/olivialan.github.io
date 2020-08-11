@@ -45,7 +45,7 @@ var save_q4_answers = () => {
         }
         user_answers.push(new_answer)
         user_data['answers'] = user_answers
-        db.collection(incomplete_collection).add(user_data)
+            // db.collection(incomplete_collection).add(user_data)
         if (current_question < questions.length - 1) {
             current_question++
             next_question()

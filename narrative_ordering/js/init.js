@@ -12,8 +12,8 @@ questions_shuffle = []
 
 //要提前在firebase里新建几个存数据的文件夹-collection
 mid_collection = 'mID_pilot3'
-complete_collection = 'test_result'
-incomplete_collection = 'test_result_incomplete'
+complete_collection = 'result_pilot3'
+incomplete_collection = 'result_incomplete_pilot3'
 
 replacement_mid_collection = 'mID_replacement'
 experiment_replacement = 'pilot_test1_replacement'
@@ -329,7 +329,7 @@ async function choose_pattern_order(chosen_patterns) {
         //     questions_shuffle[0]['pattern'] = chosen_patterns[1];
         // }
     } else if (population_pattern_1 <= history_pattern_1 && population_pattern_1 <= diary_pattern_1) {
-        user_data['population_pattern_1'] = 1;
+        user_data['population_pattern'] = 1;
         if (history_pattern_2 <= diary_pattern_2) {
             user_data['history_pattern'] = chosen_patterns[1];
             user_data['diary_pattern'] = chosen_patterns[2];
@@ -341,9 +341,9 @@ async function choose_pattern_order(chosen_patterns) {
         user_data['diary_pattern'] = 1;
         if (history_pattern_2 <= population_pattern_2) {
             user_data['history_pattern'] = chosen_patterns[1];
-            user_data['population_pattern_1'] = chosen_patterns[2];
+            user_data['population_pattern'] = chosen_patterns[2];
         } else {
-            user_data['population_pattern_1'] = chosen_patterns[1];
+            user_data['population_pattern'] = chosen_patterns[1];
             user_data['history_pattern'] = chosen_patterns[2];
         }
     }
