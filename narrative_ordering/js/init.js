@@ -11,7 +11,7 @@ time_out = false
 questions_shuffle = []
 
 //要提前在firebase里新建几个存数据的文件夹-collection
-mid_collection = 'mID'
+mid_collection = 'mID_pilot3'
 complete_collection = 'test_result'
 incomplete_collection = 'test_result_incomplete'
 
