@@ -244,7 +244,7 @@ var init_emotion = () => {
 
     //----------question-----------
 
-    d.innerHTML += '<p><strong>4. I think the <u>narrative order</u> of this story gives me a reason to proceed reading.</strong></p>'
+    d.innerHTML += '<p><strong>4. I think the <u>narrative order</u> of this story gives me a reason to keep reading.</strong></p>'
     d.innerHTML += '<br>'
 
     for (var i = 1; i < 8; i++) {

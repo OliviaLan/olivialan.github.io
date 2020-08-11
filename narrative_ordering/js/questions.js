@@ -20,7 +20,7 @@ questions = [{
         // 'nps': ['aaa', 'bbb', 'ccc', 'ddd', 'eee', 'fff'],
     },
     {
-        'text': 'One Day of Y',
+        'text': 'One Day of Z',
         'upper_text': 'This visualization shows a made up history timeline.',
         // 'options': ['921', '924', '925', '927', '929', '933'],
         'dataset': 'diary',
