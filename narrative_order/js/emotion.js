@@ -97,7 +97,7 @@ var init_emotion = () => {
     d.style.textAlign = 'left'
     d.style.margin = '2%'
     document.body.append(d)
-    text = '<p><strong>Question 2: Engagement</strong></p><br><p>Please select one button for each of the items below:</p>'
+    text = '<p><strong>Question 2: Engagement</strong></p><br><p>Please select one button for each of the items below. </p><p><span style="color:red"><strong>Note that you are going to evaluate the <u>narrative order</u> of this story instead of the story content</strong></span>:</p>'
     d.innerHTML = text
     d.innerHTML += '<br>'
 

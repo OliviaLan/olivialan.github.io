@@ -106,14 +106,14 @@ var init_end = () => {
 var init_warning = () => {
     document.body.innerHTML = ''
     d = document.createElement('div')
-    d.innerHTML = 'Attention: do not close or reload the page after this step. <br>If you do, the HIT will end without being finished.'
+    d.innerHTML = 'Attention: do not close or reload the page after this step. <br>If you do, the study will end without being finished.'
     d.style.fontWeight = 'bold'
     d.style.textAlign = 'center'
     d.style.fontSize = '20px'
     d.style.marginTop = '20%'
     d.style.marginLeft = '20%'
     d.style.marginRight = '20%'
-    d.style.color = '#c00'
+    d.style.color = 'red'
     document.body.append(d)
 
     btn = document.createElement('button')
@@ -218,8 +218,8 @@ async function returning_mid() {
     if (complete.find(a => a['mid'] == mID)) {
         // elem = complete.find(a => a['mid'] == mID)
         // d.innerHTML += 'You got ' + elem['num_correct_answers'] + '/' + questions.length + ' correct answers. <br><br> '
-        d.innerHTML += 'Please copy and paste the following code in Mechanical Turk: <br>' + incomplete.find(a => a['mid'] == mID)['code']
-            //else d.innerHTML += 'Unfortunately, your number of correct answers in the test was insufficient to respect the conditions for passing the test.'
+        // d.innerHTML += 'Please copy and paste the following code in Mechanical Turk: <br>' + incomplete.find(a => a['mid'] == mID)['code']
+        //else d.innerHTML += 'Unfortunately, your number of correct answers in the test was insufficient to respect the conditions for passing the test.'
 
     }
     //没做完，做了一部分（也给钱）：
@@ -230,8 +230,8 @@ async function returning_mid() {
         // }
         // d.innerHTML += 'You got ' + max_answers + '/' + questions.length + ' correct answers. <br><br> '
 
-        d.innerHTML += 'Please copy and paste the following code in Mechanical Turk: <br>' + incomplete.find(a => a['mid'] == mID)['code']
-            //else d.innerHTML += 'Unfortunately, your number of correct answers in the test was insufficient to respect the conditions for passing the test.'
+        // d.innerHTML += 'Please copy and paste the following code in Mechanical Turk: <br>' + incomplete.find(a => a['mid'] == mID)['code']
+        //else d.innerHTML += 'Unfortunately, your number of correct answers in the test was insufficient to respect the conditions for passing the test.'
     }
 }
 
