@@ -53,7 +53,7 @@ var init_recall = () => {
     d.style.margin = '2%'
     document.body.append(d)
 
-    d.innerHTML += '<br><p>1. <u>Narrative order</u> refers to the arrangement of story pieces into a telling sequence. <br>Please recall and describe how the storyteller <u>order</u> this story:</p><br>'
+    d.innerHTML += '<br><p>1. <span style="color:red"><strong><u>Narrative order</u> refers to how a storyteller arranges the story pieces into an ordered telling sequence; it can be chronological (linear) or non-linear. </strong><span><br></p><p>Please recall and describe the <u>narrative order</u> of this story:</p><br>'
 
     textarea_2 = document.createElement('textarea')
     textarea_2.id = "recall_order"

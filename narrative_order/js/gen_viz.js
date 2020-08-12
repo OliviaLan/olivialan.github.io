@@ -36,7 +36,7 @@ function gen_question(text, pattern, dataset) {
 
     var path = "./datasets/";
     if (dataset == "history") {
-        // path += "history_recurrence.csv";
+        // path += "history_anchor.csv";
         if (pattern == "1") path += "history_chronology.csv";
         else if (pattern == "2") path += "history_trace.csv";
         else if (pattern == "3") path += "history_trailer.csv";
@@ -44,7 +44,7 @@ function gen_question(text, pattern, dataset) {
         else if (pattern == "5") path += "history_halfway.csv";
         else if (pattern == "6") path += "history_anchor.csv";
     } else if (dataset == "population") {
-        // path += "line_chronology.csv";
+        // path += "line_anchor.csv";
         if (pattern == "1") path += "line_chronology.csv";
         else if (pattern == "2") path += "line_trace.csv";
         else if (pattern == "3") path += "line_trailer.csv";
@@ -52,7 +52,7 @@ function gen_question(text, pattern, dataset) {
         else if (pattern == "5") path += "line_halfway.csv";
         else if (pattern == "6") path += "line_anchor.csv";
     } else if (dataset == "diary") {
-        // path += "diary_chronology.csv";
+        // path += "diary_anchor.csv";
         if (pattern == "1") path += "diary_chronology.csv";
         else if (pattern == "2") path += "diary_trace.csv";
         else if (pattern == "3") path += "diary_trailer.csv";
@@ -4303,11 +4303,11 @@ var create_anchor_timeline = (svg, data, datalimit) => {
             function(d, i) {
                 var j = 0;
                 if (i < breaking) j = data.length - breaking - i;
-                else if (i == data.length - 1) j = data.length - breaking;
+                // else if (i == data.length - 1) j = data.length - breaking;
                 else j = i - 1;
                 return width * 0.1 +
-                    (0.5 * (width * 0.8)) / (data.length - 2) +
-                    (j * (width * 0.8)) / (data.length - 2)
+                    (0.5 * (width * 0.8)) / (data.length - 1) +
+                    (j * (width * 0.8)) / (data.length - 1)
 
             }
         )
@@ -4447,11 +4447,11 @@ var create_anchor_timeline = (svg, data, datalimit) => {
             function(d, i) {
                 var j = 0;
                 if (i < breaking) j = data.length - breaking - i;
-                else if (i == data.length - 1) j = data.length - breaking;
+                // else if (i == data.length - 1) j = data.length - breaking;
                 else j = i - 1;
                 return width * 0.1 +
-                    (0.5 * (width * 0.8)) / (data.length - 2) +
-                    (j * (width * 0.8)) / (data.length - 2)
+                    (0.5 * (width * 0.8)) / (data.length - 1) +
+                    (j * (width * 0.8)) / (data.length - 1)
 
             }
         )
@@ -4484,18 +4484,18 @@ var create_anchor_timeline = (svg, data, datalimit) => {
             // debugger;
             var j = 0;
             if (i < breaking) j = data.length - breaking - i;
-            else if (i == data.length - 1) j = data.length - breaking;
+            // else if (i == data.length - 1) j = data.length - breaking;
             else j = i - 1;
             return line([{
                     x: width * 0.1 +
-                        (0.5 * (width * 0.8)) / (data.length - 2) +
-                        (j * (width * 0.8)) / (data.length - 2),
+                        (0.5 * (width * 0.8)) / (data.length - 1) +
+                        (j * (width * 0.8)) / (data.length - 1),
                     y: 25
                 },
                 {
                     x: width * 0.1 +
-                        (0.5 * (width * 0.8)) / (data.length - 2) +
-                        (j * (width * 0.8)) / (data.length - 2),
+                        (0.5 * (width * 0.8)) / (data.length - 1) +
+                        (j * (width * 0.8)) / (data.length - 1),
                     y: 15
                 }
             ])
