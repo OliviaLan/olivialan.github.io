@@ -27,7 +27,7 @@ var curveOpen = d3
     })
     .curve(d3.curveCatmullRom.alpha(1));
 
-var interval = 3500
+var interval = 4000
 
 //【重要】画出左边的选项卡和右边的图
 function gen_question(text, pattern, dataset) {
