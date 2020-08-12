@@ -239,7 +239,7 @@ async function returning_mid() {
 var end_preview = () => {
     document.body.innerHTML = ''
     d = document.createElement('div')
-    d.innerHTML = "This is the end of the preview. Unfortunately, we can't show you more than this. <br><br> We have to ask you to accept this HIT because we need to verify that you have not completed this survey before. According to MTurk support, accepting and then returning HITs does not affect your account or your eligibility to complete other HITs. <br> <br> <br> If you did not choose to preview the test, you may be seeing this message because of an issue with your Mechanical Turk ID. Try opening the link from the Mechanical Turk page again."
+    d.innerHTML = "This is the end of the preview. Unfortunately, we can't show you more than this. <br><br> We have to ask you to accept this study because we need to verify that you have not completed this survey before."
     d.style.margin = '20%'
     d.style.fontWeight = 'bold'
     document.body.append(d)
@@ -524,6 +524,8 @@ async function init() {
     user_data['record'] = await choose_pattern_order(chosen_patterns)
     user_data['history' + '_replay'] = 0
     user_data['population' + '_replay'] = 0
+    user_data['diary' + '_replay'] = 0
+
 
     // user_data['history_pattern'] = user_data['pattern_order'][0]
     // user_data['story_pattern'] = user_data['pattern_order'][1]

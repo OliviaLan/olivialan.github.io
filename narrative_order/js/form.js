@@ -18,7 +18,7 @@
   	    },
   	    "literacy": {
   	        "type": "string",
-  	        "title": "3. I have no problem understanding the visualization in the stories (timeline)?",
+  	        "title": "3. I can understand the visualization in the stories (timeline)?",
   	        "enum": ['Yes', 'No'],
   	        'required': true
   	    },
