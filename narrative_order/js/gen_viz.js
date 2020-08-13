@@ -2752,7 +2752,7 @@ var create_chronological_timeline = (svg, data, datalimit) => {
                 }
             ])
         );
-    if (user_data['history_replay'] == 0) {
+    if (user_data['history_replay'] == 0 || user_data['population_replay'] == 0 || user_data['diary_replay'] == 0) {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
@@ -3020,7 +3020,7 @@ var create_trailer_timeline = (svg, data, datalimit) => {
                 }
             ])
         });
-    if (user_data['history_replay'] == 0) {
+    if (user_data['history_replay'] == 0 || user_data['population_replay'] == 0 || user_data['diary_replay'] == 0) {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
@@ -3228,7 +3228,7 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
     //             y: 15
     //         }
     //     ])
-    if (user_data['history_replay'] == 0) {
+    if (user_data['history_replay'] == 0 || user_data['population_replay'] == 0 || user_data['diary_replay'] == 0) {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
@@ -3482,7 +3482,7 @@ var create_trace_timeline = (svg, data, datalimit) => {
             ])
         });
 
-    if (user_data['history_replay'] == 0) {
+    if (user_data['history_replay'] == 0 || user_data['population_replay'] == 0 || user_data['diary_replay'] == 0) {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
@@ -3973,7 +3973,7 @@ var create_halfway_timeline = (svg, data, datalimit) => {
                 }
             ])
         });
-    if (user_data['history_replay'] == 0) {
+    if (user_data['history_replay'] == 0 || user_data['population_replay'] == 0 || user_data['diary_replay'] == 0) {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
@@ -4500,7 +4500,7 @@ var create_anchor_timeline = (svg, data, datalimit) => {
                 }
             ])
         });
-    if (user_data['history_replay'] == 0) {
+    if (user_data['history_replay'] == 0 || user_data['population_replay'] == 0 || user_data['diary_replay'] == 0) {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
