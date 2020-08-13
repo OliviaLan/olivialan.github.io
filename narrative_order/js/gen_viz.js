@@ -2756,7 +2756,7 @@ var create_chronological_timeline = (svg, data, datalimit) => {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
-        }, delay + 2000)
+        }, 12 * interval + 2000)
     }
 
 }
@@ -3024,7 +3024,7 @@ var create_trailer_timeline = (svg, data, datalimit) => {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
-        }, delay + 2000)
+        }, 14 * interval + 2000)
     }
 
 }
@@ -3232,7 +3232,7 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
-        }, delay + 2000)
+        }, 14 * interval + 2000)
     }
 }
 
@@ -3486,7 +3486,7 @@ var create_trace_timeline = (svg, data, datalimit) => {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
-        }, delay + 2000)
+        }, 13 * interval + 2000)
     }
 }
 
@@ -3977,7 +3977,7 @@ var create_halfway_timeline = (svg, data, datalimit) => {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
-        }, delay + 2000)
+        }, 13 * interval + 2000)
     }
 
 }
@@ -4504,7 +4504,7 @@ var create_anchor_timeline = (svg, data, datalimit) => {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
-        }, delay + 2000)
+        }, 13 * interval + 2000)
     }
 
 }
