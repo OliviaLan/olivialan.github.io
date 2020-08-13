@@ -74,6 +74,9 @@ var init_end = () => {
 
     //实验人员在本地下载
     // get_firebase_data(complete_collection, true)
+    // get_firebase_data(incomplete_collection, true)
+    // get_firebase_data(mid_collection, true)
+
     // 最后提交完成才会生成final，包括做题的和问卷的结果
     final_user_data = {}
     for (elem of Object.keys(user_data)) {
@@ -210,29 +213,29 @@ async function returning_mid() {
     d.style.fontWeight = 'bold'
     document.body.append(d)
 
-    incomplete = await get_firebase_data(incomplete_collection, false)
-    complete = await get_firebase_data(complete_collection, false)
+    // incomplete = await get_firebase_data(incomplete_collection, false)
+    // complete = await get_firebase_data(complete_collection, false)
 
     //在现有的数据里去查，此人是否做完了/做了多少
     //做完：
-    if (complete.find(a => a['mid'] == mID)) {
-        // elem = complete.find(a => a['mid'] == mID)
-        // d.innerHTML += 'You got ' + elem['num_correct_answers'] + '/' + questions.length + ' correct answers. <br><br> '
-        // d.innerHTML += 'Please copy and paste the following code in Mechanical Turk: <br>' + incomplete.find(a => a['mid'] == mID)['code']
-        //else d.innerHTML += 'Unfortunately, your number of correct answers in the test was insufficient to respect the conditions for passing the test.'
+    // if (complete.find(a => a['mid'] == mID)) {
+    // elem = complete.find(a => a['mid'] == mID)
+    // d.innerHTML += 'You got ' + elem['num_correct_answers'] + '/' + questions.length + ' correct answers. <br><br> '
+    // d.innerHTML += 'Please copy and paste the following code in Mechanical Turk: <br>' + incomplete.find(a => a['mid'] == mID)['code']
+    //else d.innerHTML += 'Unfortunately, your number of correct answers in the test was insufficient to respect the conditions for passing the test.'
 
-    }
+    // }
     //没做完，做了一部分（也给钱）：
-    else if (incomplete.find(a => a['mid'] == mID)) {
-        // max_answers = 0
-        // for (elem of incomplete.filter(a => a['mid'] == mID)) {
-        //     if (parseFloat(elem['num_correct_answers']) > max_answers) max_answers = parseFloat(elem['num_correct_answers'])
-        // }
-        // d.innerHTML += 'You got ' + max_answers + '/' + questions.length + ' correct answers. <br><br> '
+    // else if (incomplete.find(a => a['mid'] == mID)) {
+    // max_answers = 0
+    // for (elem of incomplete.filter(a => a['mid'] == mID)) {
+    //     if (parseFloat(elem['num_correct_answers']) > max_answers) max_answers = parseFloat(elem['num_correct_answers'])
+    // }
+    // d.innerHTML += 'You got ' + max_answers + '/' + questions.length + ' correct answers. <br><br> '
 
-        // d.innerHTML += 'Please copy and paste the following code in Mechanical Turk: <br>' + incomplete.find(a => a['mid'] == mID)['code']
-        //else d.innerHTML += 'Unfortunately, your number of correct answers in the test was insufficient to respect the conditions for passing the test.'
-    }
+    // d.innerHTML += 'Please copy and paste the following code in Mechanical Turk: <br>' + incomplete.find(a => a['mid'] == mID)['code']
+    //else d.innerHTML += 'Unfortunately, your number of correct answers in the test was insufficient to respect the conditions for passing the test.'
+    // }
 }
 
 
