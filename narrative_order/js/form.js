@@ -2,11 +2,12 @@ var save_form_answers = () => {
 
     age = document.getElementById('age').value;
     gender = document.getElementById('gender').value;
+    judgement_1_why = document.getElementById('judgement_1_why').value;
+    feedback = document.getElementById('feedback').value;
+
     speed_all = document.getElementsByName('speed');
     literacy_all = document.getElementsByName('literacy');
     judgement_1_all = document.getElementsByName('judgement_1');
-    judgement_1_why = document.getElementById('judgement_1_why').value;
-    feedback = document.getElementById('feedback').value;
 
     for (i = 0; i < 2; i++) {
         if (speed_all[i].checked == true) {
