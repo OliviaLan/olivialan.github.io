@@ -20,8 +20,8 @@
   	            document.body.innerHTML = ''
   	            find_mid()
   	            if (mID == undefined || mID == '' || mID == 'preview') end_preview()
-  	                // else init_warning()
-  	            else init_survey()
+  	            else init_warning()
+  	                // else init_survey()
   	        }
   	        document.body.append(btn)
 
