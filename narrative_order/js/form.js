@@ -2,15 +2,33 @@ var save_form_answers = () => {
 
     age = document.getElementById('age').value;
     gender = document.getElementById('gender').value;
-    speed = document.getElementById('speed').value;
-    judgement_1 = document.getElementById('judgement_1').value;
+    speed_all = document.getElementsByName('speed');
+    literacy_all = document.getElementsByName('literacy');
+    judgement_1_all = document.getElementsByName('judgement_1');
     judgement_1_why = document.getElementById('judgement_1_why').value;
     feedback = document.getElementById('feedback').value;
 
-    if (age && gender && speed && judgement_1 && judgement_1_why) {
+    for (i = 0; i < 2; i++) {
+        if (speed_all[i].checked == true) {
+            var speed = speed_all[i].value
+        }
+        if (literacy_all[i].checked == true) {
+            var literacy = literacy_all[i].value
+        }
+    }
+
+    for (i = 0; i < 3; i++) {
+        if (judgement_1_all[i].checked == true) {
+            var judgement_1 = judgement_1_all[i].value
+        }
+    }
+
+
+    if (age && gender && speed && literacy && judgement_1 && judgement_1_why) {
         user_data['age'] = age;
-        user_data['gender'] = age;
+        user_data['gender'] = gender;
         user_data['speed'] = speed;
+        user_data['literacy'] = literacy;
         user_data['judgement_1'] = judgement_1;
         user_data['judgement_1_why'] = judgement_1_why;
         user_data['feedback'] = feedback;
