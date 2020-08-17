@@ -64,7 +64,7 @@ var save_q4_answers = () => {
 var init_grid = () => {
     document.body.innerHTML = ''
     d = document.createElement('div')
-    text = '<p><strong>Question 3: Grid</strong></p> <br><p>To what extent do you agree or disagree this story is expressive & comprehensible? </p><p>Please adjust the position of the red circle according to your evaluation.</p>'
+    text = '<p><strong>Question 3: Grid</strong></p> <br><p>To what extent do you agree or disagree this <u>narrative order</u> is expressive & comprehensible? </p><p>Please adjust the position of the red circle according to your evaluation.</p>'
     d.innerHTML = text
     d.style.textAlign = 'left'
     d.style.margin = '2%'
