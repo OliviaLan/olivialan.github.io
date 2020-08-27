@@ -25,7 +25,7 @@ var save_form_answers = () => {
     }
 
 
-    if (age && gender && speed && literacy && judgement_1 && judgement_1_why) {
+    if (age && gender && literacy && judgement_1 && judgement_1_why) {
         user_data['age'] = age;
         user_data['gender'] = gender;
         // user_data['speed'] = speed;
@@ -102,26 +102,26 @@ var init_survey = () => {
     d.append(input_4)
     d.innerHTML += ' No  '
 
-    d.innerHTML += '<br><br><p>4. I think the animation speed is neither too fast nor too slow.</p>'
-    input_5 = document.createElement('input')
-    input_5.id = "speed"
-    input_5.type = "radio"
-    input_5.name = "speed"
-    input_5.value = "Yes";
-    input_6 = document.createElement('input')
-    input_6.id = "speed"
-    input_6.type = "radio"
-    input_6.name = "speed"
-    input_6.value = "No";
+    // d.innerHTML += '<br><br><p>4. I think the animation speed is neither too fast nor too slow.</p>'
+    // input_5 = document.createElement('input')
+    // input_5.id = "speed"
+    // input_5.type = "radio"
+    // input_5.name = "speed"
+    // input_5.value = "Yes";
+    // input_6 = document.createElement('input')
+    // input_6.id = "speed"
+    // input_6.type = "radio"
+    // input_6.name = "speed"
+    // input_6.value = "No";
 
 
-    d.append(input_5)
-    d.innerHTML += ' Yes  '
+    // d.append(input_5)
+    // d.innerHTML += ' Yes  '
 
-    d.append(input_6)
-    d.innerHTML += ' No  '
+    // d.append(input_6)
+    // d.innerHTML += ' No  '
 
-    d.innerHTML += '<br><br><p>5. Which story has better narrative order? (story content not taken into account).</p>'
+    d.innerHTML += '<br><br><p>4. Which story has better narrative order? (story content not taken into account).</p>'
     input_7 = document.createElement('input')
     input_7.id = "judgement_1"
     input_7.type = "radio"
@@ -159,7 +159,7 @@ var init_survey = () => {
 
     d.append(textarea)
 
-    d.innerHTML += '<br><br><p>6. Please leave your feedback or comments related to this study below.</p><br>'
+    d.innerHTML += '<br><br><p>5. Please leave your feedback or comments related to this study below.</p><br>'
 
     textarea_2 = document.createElement('textarea')
         // input.name = "reason"
@@ -209,12 +209,12 @@ form_properties = {
         "enum": ['Yes', 'No'],
         'required': true
     },
-    "speed": {
-        "type": "string",
-        "title": "4. I think the animation speed is neither too fast nor too slow",
-        "enum": ['Yes', 'No'],
-        'required': true
-    },
+    // "speed": {
+    //     "type": "string",
+    //     "title": "4. I think the animation speed is neither too fast nor too slow",
+    //     "enum": ['Yes', 'No'],
+    //     'required': true
+    // },
     "judgement_1": {
         "type": "string",
         "title": "5. Which story has better narrative order? (story content not taken into account)",
