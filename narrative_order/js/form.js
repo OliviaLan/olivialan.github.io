@@ -5,14 +5,14 @@ var save_form_answers = () => {
     judgement_1_why = document.getElementById('judgement_1_why').value;
     feedback = document.getElementById('feedback').value;
 
-    speed_all = document.getElementsByName('speed');
+    // speed_all = document.getElementsByName('speed');
     literacy_all = document.getElementsByName('literacy');
     judgement_1_all = document.getElementsByName('judgement_1');
 
     for (i = 0; i < 2; i++) {
-        if (speed_all[i].checked == true) {
-            var speed = speed_all[i].value
-        }
+        // if (speed_all[i].checked == true) {
+        //     var speed = speed_all[i].value
+        // }
         if (literacy_all[i].checked == true) {
             var literacy = literacy_all[i].value
         }
@@ -28,7 +28,7 @@ var save_form_answers = () => {
     if (age && gender && speed && literacy && judgement_1 && judgement_1_why) {
         user_data['age'] = age;
         user_data['gender'] = gender;
-        user_data['speed'] = speed;
+        // user_data['speed'] = speed;
         user_data['literacy'] = literacy;
         user_data['judgement_1'] = judgement_1;
         user_data['judgement_1_why'] = judgement_1_why;
