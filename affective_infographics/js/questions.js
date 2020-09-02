@@ -1,8 +1,8 @@
 questions = [{
         'text': 'The Life of Company X',
         'upper_text': 'This visualization shows a made up history timeline.',
-        // 'options': ['912', '915', '917', '918', '924', '929'],
-        'dataset': 'history',
+        'id': 1,
+        'dataset': './data/1.png',
         // 'answer': '917',
         // 'question_type': 1,
         // 'ques_index': 0,
@@ -11,8 +11,8 @@ questions = [{
     {
         'text': 'The Population of City Y',
         'upper_text': 'This visualization shows a made up history timeline.',
-        // 'options': ['921', '924', '925', '927', '929', '933'],
-        'dataset': 'population',
+        'id': 2,
+        'dataset': './data/2.jpg',
         // 'answer': '929',
         // 'question_type': 1,
         // 'ques_index': 1,
@@ -22,14 +22,26 @@ questions = [{
     {
         'text': 'One Day of Z',
         'upper_text': 'This visualization shows a made up history timeline.',
-        // 'options': ['921', '924', '925', '927', '929', '933'],
-        'dataset': 'diary',
+        'id': 3,
+        'dataset': './data/3.jpeg',
         // 'answer': '929',
         // 'question_type': 1,
         // 'ques_index': 1,
         // 'type_index': 'a1',
         // 'nps': ['aaa', 'bbb', 'ccc', 'ddd', 'eee', 'fff'],
     },
+    {
+        'text': 'One Day of Z',
+        'upper_text': 'This visualization shows a made up history timeline.',
+        'id': 4,
+        'dataset': './data/4.jpg',
+        // 'answer': '929',
+        // 'question_type': 1,
+        // 'ques_index': 1,
+        // 'type_index': 'a1',
+        // 'nps': ['aaa', 'bbb', 'ccc', 'ddd', 'eee', 'fff'],
+    },
+
 
 ]
 

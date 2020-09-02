@@ -1,91 +1,169 @@
-  	// --- TEST
+var next_question = () => {
 
+    clickable_selected_answer = null
+    clickable_selected_answer_event = null
 
-  	//判断选项是否正确
-  	var check_answer_present = () => {
-  	    //与question.js里的正确答案对比
-  	    if (questions_shuffle[current_question]['question_type'] != 3) {
-  	        arr = Array.prototype.slice.call(divradio.children).filter(d => d.type == 'radio')
-  	        return arr.some(a => a.checked)
-  	    } else {
-  	        return clickable_selected_answer != null
-  	    }
-  	}
+    // cur_correct_answer_displayed = true
+    cur_start_time = new Date()
 
-  	var disable_radio_buttons = () => {
-  	    r_buttons = document.getElementsByTagName('input')
-  	    for (r = 0; r < r_buttons.length; r++) {
-  	        r_buttons[r].disabled = true
-  	    }
-  	}
+    document.body.innerHTML = ''
+    error = undefined
 
-  	//显示选择结果是否正确
-  	var show_correct_answer = () => {
-  	    a = key[questions_shuffle[current_question]['original_index']]
-  	    wrong_elem = Array.prototype.slice.call(divradio.children).filter(d => d.className == 'l1' && d.innerHTML == user_answers[user_answers.length - 1]['answer'])[0]
-  	    corr_elem = Array.prototype.slice.call(divradio.children).filter(d => d.className == 'l1' && d.innerHTML == a)[0]
+    // var q_div = document.createElement('div')
+    // q_div.style.textAlign = 'center'
 
-  	    wrong_elem.style.color = '#c00'
-  	    corr_elem.style.color = '#0c0'
-
-  	    if (wrong_elem.innerHTML != corr_elem.innerHTML) {
-  	        d = document.createElement('div')
-  	        d.innerHTML = 'wrong'
-  	        d.className = 'answer-result'
-  	        wrong_elem.append(d)
-
-  	        d = document.createElement('div')
-  	        d.innerHTML = 'correct'
-  	        d.className = 'answer-result'
-  	        corr_elem.append(d)
-  	    } else {
-  	        d = document.createElement('div')
-  	        d.innerHTML = 'correct'
-  	        d.className = 'answer-result'
-  	        corr_elem.append(d)
-  	    }
-
-  	    cur_correct_answer_displayed = true
-  	}
-
-  	var next_question = () => {
-
-  	    clickable_selected_answer = null
-  	    clickable_selected_answer_event = null
-
-  	    // cur_correct_answer_displayed = true
-  	    cur_start_time = new Date()
-
-  	    document.body.innerHTML = ''
-  	    error = undefined
-  	    progress_bar((current_question + 1) * window.innerWidth / questions_shuffle.length, '#0000cc', 'test')
-
-  	    // var q_div = document.createElement('div')
-  	    // q_div.style.textAlign = 'center'
-
-  	    //q_div.style.marginTop = '5%'
-
-  	    gen_question(questions_shuffle[current_question]['text'], questions_shuffle[current_question]['pattern'], questions_shuffle[current_question]['dataset'])
+    //q_div.style.marginTop = '5%'
 
 
 
-  	}
+}
 
 
-  	var init_questions = () => {
-  	        // startTimer(allowed_time_in_minutes * 60);
-  	        // test_start_time = new Date()
-  	        document.body.innerHTML = ''
+function save_answer() {
 
-  	        timediv = document.createElement('div')
-  	        timediv.id = 'timediv'
-  	            //记录这个问题在原js里的顺序
-  	        for (i in questions_shuffle) questions_shuffle[i]['original_index'] = i
-  	            //挑出符合task类型的12个问题，然后洗牌
+    arousal = Array.prototype.slice.call(d.getElementsByClassName('arousal'))
 
-  	        // if (randomize) questions = shuffle_constrained(questions, chosen_patterns)
-  	        // if (randomize) questions = shuffle_constrained(questions.filter(q => q['question_type'] == user_data['assigned_question_type']))
+    var counter = 0
+    for (var i in arousal) {
+        if (arousal[i].checked == true && document.getElementById('reason').value != '') {
+            console.log('finished')
+            new_answer = {
+                'arousal': arousal[i].value,
+                'pic_id': questions_shuffle[current_question]['id'],
+                'reason': document.getElementById('reason').value,
+            }
+            user_answers.push(new_answer)
+            user_data['answers'] = user_answers
+            db.collection(incomplete_collection).add(user_data)
+                //         .then(involvementction(docRef) {
+                //             console.log("Document written with ID: ", docRef.id);
+                //         })
+                //         .catch(involvementction(error) {
+                //             console.error("Error adding document: ", error);
+                //         });
+            if (current_question < questions_shuffle.length - 1) {
+                current_question++
+                gen_pic()
+            } else {
+                // user_data['full_questions_time'] = Date.now() - init_timestamp
+                init_survey()
+            }
 
-  	        next_question()
-  	    }
-  	    // --- END cur_start_time
+        } else {
+            counter++
+            if (counter == 7) {
+                var error = document.createElement('div')
+                error.innerHTML = 'Please answer all the questions'
+                error.style.color = 'red'
+                d.append(error)
+            }
+        }
+
+    }
+
+
+
+    // disable_radio_buttons()
+}
+
+
+function gen_pic() {
+    document.body.innerHTML = ''
+    progress_bar((current_question + 1) * window.innerWidth / questions_shuffle.length, '#0000cc', 'test')
+
+    d = document.createElement('div')
+    d.style.textAlign = 'left'
+    d.style.margin = '2%'
+    document.body.append(d)
+    d.innerHTML += '<img src =' + questions_shuffle[current_question]['dataset'] + ' style="width: 80%"></img>'
+
+
+    //----------question-----------
+
+    d.innerHTML += '<br>'
+
+    for (var i = 1; i < 8; i++) {
+        choice = document.createElement("span");
+        choice.style.display = "inline-block";
+        choice.style.width = "100px";
+        choice.style.height = "20px";
+        choice.style.textAlign = "center";
+        r2 = document.createElement("input");
+        r2.type = "radio";
+        r2.name = "arousal";
+        r2.className = "r1 arousal";
+        r2.value = i;
+        l2 = document.createElement("label");
+        l2.for = i;
+        l2.innerHTML = i;
+        l2.className = "l1";
+        //依次添加radio button和label
+        choice.append(r2);
+        choice.append(l2);
+        d.append(choice)
+            // d.innerHTML += '<br>'
+    }
+
+    d.innerHTML += '<br>'
+
+    likert = document.createElement('span');
+    likert.style.lineHeight = "20px";
+    d.append(likert);
+
+
+    for (i of['strongly disagree', 'disagree', 'somewhat disagree', 'neutral', 'somewhat agree', 'agree', 'strongly agree']) {
+        scale = document.createElement('span')
+        scale.style.display = "inline-block";
+        scale.style.width = "100px";
+        scale.style.verticalAlign = "top";
+        // hhh.style.lineHeight = "50px";
+        scale.style.textAlign = "center";
+        scale.innerHTML = i
+        likert.append(scale)
+    }
+
+    d.innerHTML += '<br><br>'
+
+    d.innerHTML += '<br><p>2. Please retell the story content as much as you can:</p><br>'
+
+    textarea = document.createElement('textarea')
+        // input.name = "reason"
+    textarea.id = "reason"
+        // input.size = "35"
+    textarea.style.width = "500px"
+    textarea.style.height = "150px"
+
+    d.append(textarea)
+
+
+    btn = document.createElement('button')
+    if (current_question < questions_shuffle.length - 1) btn.innerHTML = 'Next Pic'
+    else btn.innerHTML = 'End Test'
+        // btn.style.marginLeft = '45%'
+    btn.className = 'button f_button'
+        // btn.style.display = 'block'
+        // btn.style.fontSize = 'large'
+    btn.onclick = () => {
+        save_answer()
+    }
+    document.body.append(btn)
+
+}
+
+var init_questions = () => {
+        // startTimer(allowed_time_in_minutes * 60);
+        // test_start_time = new Date()
+        document.body.innerHTML = ''
+
+        timediv = document.createElement('div')
+        timediv.id = 'timediv'
+            //记录这个问题在原js里的顺序
+            // for (i in questions_shuffle) questions_shuffle[i]['original_index'] = i
+            //挑出符合task类型的12个问题，然后洗牌
+
+        // if (randomize) questions = shuffle_constrained(questions, chosen_patterns)
+        // if (randomize) questions = shuffle_constrained(questions.filter(q => q['question_type'] == user_data['assigned_question_type']))
+
+        gen_pic()
+    }
+    // --- END cur_start_time

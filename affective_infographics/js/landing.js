@@ -11,18 +11,17 @@
   	        document.body.append(d)
 
 
-
   	        btn = document.createElement('button')
   	        btn.innerHTML = 'Accept and Proceed'
   	        btn.style.margin = '3%'
   	        btn.style.class = 'large'
   	        btn.onclick = () => {
   	            document.body.innerHTML = ''
-  	            find_mid()
+  	                // find_mid()
   	            if (mID == undefined || mID == '' || mID == 'preview') end_preview()
-  	            else init_warning()
+  	                // else init_warning()
   	                // else init_survey()
-  	                // else init_tutorial
+  	            else init_tutorial()
   	        }
   	        document.body.append(btn)
 

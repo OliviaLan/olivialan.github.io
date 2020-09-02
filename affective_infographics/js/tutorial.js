@@ -1,5 +1,6 @@
 var init_tutorial = () => {
     console.log('hi')
+
     document.body.innerHTML = ''
     d = document.createElement('div')
     text = '<p><strong>Tutorial:</strong>'
@@ -9,7 +10,7 @@ var init_tutorial = () => {
     document.body.append(d)
 
     btn = document.createElement('button')
-    btn.innerHTML = 'Submit'
+    btn.innerHTML = 'Start the Study'
     btn.className = 'button f_button'
         // btn.style.margin = '5%'
         // btn.style.fontSize = 'large'
