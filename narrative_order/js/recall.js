@@ -33,7 +33,7 @@ var save_q3_answers = () => {
         user_answers.push(new_answer)
         user_data['answers'] = user_answers
         db.collection(incomplete_collection).add(user_data)
-        init_emotion()
+        init_engage()
     } else {
         console.log('pls fill in')
         error = document.createElement('div')
@@ -73,74 +73,6 @@ var init_recall = () => {
     textarea.style.height = "150px"
 
     d.append(textarea)
-
-
-    // d.innerHTML += '<br><br><p>3. What do you think is the main idea of this story:</p>'
-
-    // input = document.createElement('input')
-    // input.name = "main_idea"
-    // input.id = "main_idea"
-    // input.size = "60"
-    // d.append(input)
-
-
-    // d.innerHTML += '<br><br><p>No. 1</p>'
-
-
-    // input = document.createElement('input')
-    // input.name = "recall1"
-    // input.id = "recall1"
-    // input.size = "60"
-    // d.append(input)
-
-    // d.innerHTML += '<br><p>No. 2</p>'
-
-    // input2 = document.createElement('input')
-    // input2.name = "recall2"
-    // input2.id = "recall2"
-    // input2.size = "60"
-    // d.append(input2)
-
-    // d.innerHTML += '<br><p>No. 3</p>'
-
-    // input3 = document.createElement('input')
-    // input3.name = "recall3"
-    // input3.id = "recall3"
-    // input3.size = "60"
-    // d.append(input3)
-
-    // d.innerHTML += '<br><p>No. 4</p>'
-
-    // input4 = document.createElement('input')
-    // input4.name = "recall4"
-    // input4.id = "recall4"
-    // input4.size = "60"
-    // d.append(input4)
-
-    // d.innerHTML += '<br><p>No. 5</p>'
-
-    // input5 = document.createElement('input')
-    // input5.name = "recall5"
-    // input5.id = "recall5"
-    // input5.size = "60"
-    // d.append(input5)
-
-    // d.innerHTML += '<br><p>No. 6</p>'
-
-    // input6 = document.createElement('input')
-    // input6.name = "recall6"
-    // input6.id = "recall6"
-    // input6.size = "60"
-    // d.append(input6)
-
-    // d.innerHTML += '<br><p>Others</p>'
-
-    // input7 = document.createElement('input')
-    // input7.name = "recall7"
-    // input7.id = "recall7"
-    // input7.size = "60"
-    // d.append(input7)
-
 
 
     btn = document.createElement('button')
