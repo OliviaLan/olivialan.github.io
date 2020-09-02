@@ -34,7 +34,7 @@ function save_answer() {
             }
             user_answers.push(new_answer)
             user_data['answers'] = user_answers
-            db.collection(incomplete_collection).add(user_data)
+                // db.collection(incomplete_collection).add(user_data)
                 //         .then(involvementction(docRef) {
                 //             console.log("Document written with ID: ", docRef.id);
                 //         })
