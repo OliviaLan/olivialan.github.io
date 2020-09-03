@@ -1,24 +1,3 @@
-var next_question = () => {
-
-    clickable_selected_answer = null
-    clickable_selected_answer_event = null
-
-    // cur_correct_answer_displayed = true
-    cur_start_time = new Date()
-
-    document.body.innerHTML = ''
-    error = undefined
-
-    // var q_div = document.createElement('div')
-    // q_div.style.textAlign = 'center'
-
-    //q_div.style.marginTop = '5%'
-
-
-
-}
-
-
 function save_answer() {
 
     arousal = Array.prototype.slice.call(d.getElementsByClassName('arousal'))
@@ -51,7 +30,7 @@ function save_answer() {
 
         } else {
             counter++
-            if (counter == 7) {
+            if (counter == 9) {
                 var error = document.createElement('div')
                 error.innerHTML = 'Please answer all the questions'
                 error.style.color = 'red'
@@ -75,12 +54,12 @@ function gen_pic() {
     d.style.textAlign = 'left'
     d.style.margin = '2%'
     document.body.append(d)
-    d.innerHTML += '<img src =' + questions_shuffle[current_question]['dataset'] + ' style="width: 80%"></img>'
+    d.innerHTML += '<br><br><img src =' + questions_shuffle[current_question]['dataset'] + ' style="width: 80%"></img>'
 
 
     //----------question-----------
 
-    d.innerHTML += '<br><br><br><p><strong>1. Please score the arousal level of the design:</strong></p><br><br>'
+    d.innerHTML += '<br><br><br><p><strong>1. Please score the affective arousal level of the design:</strong></p><br><br>'
 
 
     sam = document.createElement('span');
@@ -149,7 +128,7 @@ function gen_pic() {
 
     // d.innerHTML += '<br><br>'
 
-    d.innerHTML += '<br><p><strong>2. Please write down your reason:</strong></p><br>'
+    d.innerHTML += '<br><p><strong>2. Please write down your reason:</strong></p><p>if you found more than one affective design factors, we encourage you to list them one by one.</p><br>'
 
     textarea = document.createElement('textarea')
         // input.name = "reason"

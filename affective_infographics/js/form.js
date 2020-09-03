@@ -84,23 +84,51 @@ var init_survey = () => {
 
     d.append(input_2)
 
-    d.innerHTML += '<br><br><p>3. I can understand the visualization in the stories (timeline).</p>'
+    d.innerHTML += '<br><br><p>3. What is the highest level of education that you have completed?</p>'
     input_3 = document.createElement('input')
-    input_3.id = "literacy"
+    input_3.id = "education"
     input_3.type = "radio"
-    input_3.name = "literacy"
-    input_3.value = "Yes";
+    input_3.name = "education"
+    input_3.value = "Less than a high school diploma";
     input_4 = document.createElement('input')
-    input_4.id = "literacy"
+    input_4.id = "education"
     input_4.type = "radio"
-    input_4.name = "literacy"
-    input_4.value = "No";
+    input_4.name = "education"
+    input_4.value = "High school or equivalent";
+    input_5 = document.createElement('input')
+    input_5.id = "education"
+    input_5.type = "radio"
+    input_5.name = "education"
+    input_5.value = "Bachelor or equivalent";
+    input_6 = document.createElement('input')
+    input_6.id = "education"
+    input_6.type = "radio"
+    input_6.name = "education"
+    input_6.value = "Master or equivalent";
+    input_7 = document.createElement('input')
+    input_7.id = "education"
+    input_7.type = "radio"
+    input_7.name = "education"
+    input_7.value = "Doctoral or equivalent";
+    input_8 = document.createElement('input')
+    input_8.id = "education"
+    input_8.type = "radio"
+    input_8.name = "education"
+    input_8.value = "Others";
 
     d.append(input_3)
-    d.innerHTML += ' Yes  '
-
+    d.innerHTML += ' Less than a high school diploma<br>'
     d.append(input_4)
-    d.innerHTML += ' No  '
+    d.innerHTML += ' High school or equivalent<br>'
+    d.append(input_5)
+    d.innerHTML += ' Bachelor or equivalent<br>'
+    d.append(input_6)
+    d.innerHTML += ' Master or equivalent<br>'
+    d.append(input_7)
+    d.innerHTML += ' Doctoral or equivalent<br>'
+    d.append(input_8)
+    d.innerHTML += ' Others'
+
 
     // d.innerHTML += '<br><br><p>4. I think the animation speed is neither too fast nor too slow.</p>'
     // input_5 = document.createElement('input')
@@ -121,52 +149,26 @@ var init_survey = () => {
     // d.append(input_6)
     // d.innerHTML += ' No  '
 
-    d.innerHTML += '<br><br><p>4. Which story has better narrative order? (story content not taken into account).</p>'
-    input_7 = document.createElement('input')
-    input_7.id = "judgement_1"
-    input_7.type = "radio"
-    input_7.name = "judgement_1"
-    input_7.value = "Story One";
-    input_8 = document.createElement('input')
-    input_8.id = "judgement_1"
-    input_8.type = "radio"
-    input_8.name = "judgement_1"
-    input_8.value = "Story Two";
-    input_9 = document.createElement('input')
-    input_9.id = "judgement_1"
-    input_9.type = "radio"
-    input_9.name = "judgement_1"
-    input_9.value = "Story Three";
 
-
-    d.append(input_7)
-    d.innerHTML += ' Story One&nbsp'
-
-    d.append(input_8)
-    d.innerHTML += ' Story Two   '
-
-    d.append(input_9)
-    d.innerHTML += ' Story Three   '
-
-    d.innerHTML += '<br><br><p>please describe your reason briefly.</p><br>'
+    d.innerHTML += '<br><br><p>4.What do you think is the most important design factor(s) in infographics to augement affective arousal?</p><br>'
 
     textarea = document.createElement('textarea')
         // input.name = "reason"
     textarea.id = "judgement_1_why"
         // input.size = "35"
     textarea.style.width = "500px"
-    textarea.style.height = "50px"
+    textarea.style.height = "120px"
 
     d.append(textarea)
 
-    d.innerHTML += '<br><br><p>5. Please leave your feedback or comments related to this study below.</p><br>'
+    d.innerHTML += '<br><br><p>5. Please leave your feedback or comments related to this study below (optional).</p><br>'
 
     textarea_2 = document.createElement('textarea')
         // input.name = "reason"
     textarea_2.id = "feedback"
         // input.size = "35"
     textarea_2.style.width = "500px"
-    textarea_2.style.height = "100px"
+    textarea_2.style.height = "120px"
 
     d.append(textarea_2)
 
