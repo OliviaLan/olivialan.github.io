@@ -39,36 +39,6 @@
   	}
 
 
-  	var shuffle_constrained = () => {
-  	    // var currentIndex = array.length,
-  	    //     temporaryValue, randomIndex;
-  	    // var order = ['history', 'plants', 'schedule']
-  	    // var vistypes = ['hline', 'line', 'circle', 'spiral']
-  	    // var sampler = latinSquare(latinsquare_initstring_generator().split(','))
-
-  	    // for (var i = 0; i < user_data['latin_square_index']; i++) order = sampler()
-  	    // console.log(order)
-
-  	    // // 洗牌，每洗一次index减一，直到为零；While there remain elements to shuffle...
-  	    // while (0 !== currentIndex) {
-  	    //     dset = order[(currentIndex - 1) % order.length].split('/')[0]
-  	    //         // shape = order[(currentIndex - 1) % order.length].split('/')[1]
-  	    //     shape = vistypes[(currentIndex - 1) % vistypes.length].split('/')[0]
-
-  	    //     randomIndex = array.indexOf(array.slice(0, currentIndex + 1).find(q => q['dataset'] == dset))
-  	    //     if (array[randomIndex] == undefined) console.log(array, dset, randomIndex, currentIndex)
-  	    //     array[randomIndex]['shape'] = shape
-
-  	    //     currentIndex -= 1;
-
-  	    //     // And swap it with the current element.
-  	    //     temporaryValue = array[currentIndex];
-  	    //     array[currentIndex] = array[randomIndex];
-  	    //     array[randomIndex] = temporaryValue;
-  	    // }
-
-  	    return questions;
-  	}
 
   	var ID = function() {
   	    // Math.random should be unique because of its seeding algorithm.

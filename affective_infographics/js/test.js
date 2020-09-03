@@ -80,12 +80,37 @@ function gen_pic() {
 
     //----------question-----------
 
-    d.innerHTML += '<br>'
+    d.innerHTML += '<br><br><br><p><strong>1. Please score the arousal level of the design:</strong></p><br><br>'
 
-    for (var i = 1; i < 8; i++) {
+
+    sam = document.createElement('span');
+    sam.style.lineHeight = "20px";
+    d.append(sam);
+
+    for (var i = 1; i < 6; i++) {
+        scale = document.createElement('span')
+        scale.style.display = "inline-block";
+        scale.style.width = "100px";
+        scale.style.verticalAlign = "top";
+        scale.style.marginRight = "50px";
+        scale.style.textAlign = "center";
+        scale.innerHTML = '<img src = "./img/sam_' + i + '.png" style="width:100%"></img>'
+        sam.append(scale)
+    }
+
+    d.innerHTML += '<br><br>'
+
+
+    input = document.createElement('span');
+    input.style.lineHeight = "20px";
+    input.style.marginLeft = "20px";
+    input.style.marginRight = "20px";
+    d.append(input);
+
+    for (var i = 1; i < 10; i++) {
         choice = document.createElement("span");
         choice.style.display = "inline-block";
-        choice.style.width = "100px";
+        choice.style.width = "75px";
         choice.style.height = "20px";
         choice.style.textAlign = "center";
         r2 = document.createElement("input");
@@ -100,31 +125,31 @@ function gen_pic() {
         //依次添加radio button和label
         choice.append(r2);
         choice.append(l2);
-        d.append(choice)
+        input.append(choice)
             // d.innerHTML += '<br>'
     }
 
     d.innerHTML += '<br>'
 
-    likert = document.createElement('span');
-    likert.style.lineHeight = "20px";
-    d.append(likert);
+    // likert = document.createElement('span');
+    // likert.style.lineHeight = "20px";
+    // d.append(likert);
 
 
-    for (i of['strongly disagree', 'disagree', 'somewhat disagree', 'neutral', 'somewhat agree', 'agree', 'strongly agree']) {
-        scale = document.createElement('span')
-        scale.style.display = "inline-block";
-        scale.style.width = "100px";
-        scale.style.verticalAlign = "top";
-        // hhh.style.lineHeight = "50px";
-        scale.style.textAlign = "center";
-        scale.innerHTML = i
-        likert.append(scale)
-    }
+    // for (i of['strongly disagree', 'disagree', 'somewhat disagree', 'neutral', 'somewhat agree', 'agree', 'strongly agree']) {
+    //     scale = document.createElement('span')
+    //     scale.style.display = "inline-block";
+    //     scale.style.width = "100px";
+    //     scale.style.verticalAlign = "top";
+    //     // hhh.style.lineHeight = "50px";
+    //     scale.style.textAlign = "center";
+    //     scale.innerHTML = i
+    //     likert.append(scale)
+    // }
 
-    d.innerHTML += '<br><br>'
+    // d.innerHTML += '<br><br>'
 
-    d.innerHTML += '<br><p>2. Please retell the story content as much as you can:</p><br>'
+    d.innerHTML += '<br><p><strong>2. Please write down your reason:</strong></p><br>'
 
     textarea = document.createElement('textarea')
         // input.name = "reason"

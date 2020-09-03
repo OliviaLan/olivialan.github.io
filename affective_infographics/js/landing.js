@@ -17,11 +17,11 @@
   	        btn.style.class = 'large'
   	        btn.onclick = () => {
   	            document.body.innerHTML = ''
-  	            find_mid()
+  	                // find_mid()
   	            if (mID == undefined || mID == '' || mID == 'preview') end_preview()
   	                // else init_warning()
   	                // else init_survey()
-  	            else init_tutorial()
+  	            else init_tutorial_1()
   	        }
   	        document.body.append(btn)
 
