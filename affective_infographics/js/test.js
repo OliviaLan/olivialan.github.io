@@ -13,7 +13,7 @@ function save_answer() {
             }
             user_answers.push(new_answer)
             user_data['answers'] = user_answers
-            db.collection(incomplete_collection).add(user_data)
+                // db.collection(incomplete_collection).add(user_data)
                 // .then(involvementction(docRef) {
                 //     console.log("Document written with ID: ", docRef.id);
                 // })
@@ -59,7 +59,7 @@ function gen_pic() {
 
     //----------question-----------
 
-    d.innerHTML += '<br><br><br><p><strong>1. Please score the affective arousal level of the design:</strong></p><br><br>'
+    d.innerHTML += '<br><br><br><p><strong>1. Please score the affective arousal level of the <u>design</u>:</strong></p><br><br>'
 
 
     sam = document.createElement('span');
@@ -128,7 +128,7 @@ function gen_pic() {
 
     // d.innerHTML += '<br><br>'
 
-    d.innerHTML += '<br><p><strong>2. Please write down your reason:</strong></p><p>if you found more than one affective design factors, we encourage you to list them one by one.</p><br>'
+    d.innerHTML += '<br><p><strong>2. Please write down your reason:</strong></p><p>if you find more than one affective design factors, we encourage you to list them one by one.</p><p>if you find the infographic design low in affective arousal, please explain why.</p><br>'
 
     textarea = document.createElement('textarea')
         // input.name = "reason"

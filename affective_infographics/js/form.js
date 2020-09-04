@@ -19,6 +19,7 @@ var save_form_answers = () => {
         // user_data['speed'] = speed;
         user_data['education'] = education;
         user_data['importance'] = document.getElementById('importance').value;
+        user_data['data'] = document.getElementById('data').value;
         user_data['feedback'] = document.getElementById('feedback').value;
         user_data['timestamp_end'] = Date.now();
         user_data['worktime_in_seconds'] = (user_data['timestamp_end'] - user_data['timestamp_start']) / 1000;
@@ -144,11 +145,23 @@ var init_survey = () => {
     textarea.id = "importance"
         // input.size = "35"
     textarea.style.width = "500px"
-    textarea.style.height = "120px"
+    textarea.style.height = "80px"
 
     d.append(textarea)
 
-    d.innerHTML += '<br><br><p>5. Please leave your feedback or comments related to this study below (optional).</p><br>'
+    d.innerHTML += '<br><br><p>5.Do you agree that augmenting the affective arousal of infographic design helps you absorb the data better? why?</p><br>'
+
+    textarea_3 = document.createElement('textarea')
+        // input.name = "reason"
+    textarea_3.id = "data"
+        // input.size = "35"
+    textarea_3.style.width = "500px"
+    textarea_3.style.height = "80px"
+
+    d.append(textarea_3)
+
+
+    d.innerHTML += '<br><br><p>6. Please leave your feedback or comments related to this study below (optional).</p><br>'
 
     textarea_2 = document.createElement('textarea')
         // input.name = "reason"
