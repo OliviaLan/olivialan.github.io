@@ -2,6 +2,8 @@ var save_form_answers = () => {
 
     age = document.getElementById('age').value;
     gender = document.getElementById('gender').value;
+    country = document.getElementById('country').value;
+
 
     // speed_all = document.getElementsByName('speed');
     education_all = document.getElementsByName('education');
@@ -13,9 +15,10 @@ var save_form_answers = () => {
     }
 
 
-    if (age && gender && education && document.getElementById('importance').value) {
+    if (age && gender && education && country && document.getElementById('importance').value) {
         user_data['age'] = age;
         user_data['gender'] = gender;
+        user_data['country'] = country;
         // user_data['speed'] = speed;
         user_data['education'] = education;
         user_data['importance'] = document.getElementById('importance').value;
@@ -57,7 +60,7 @@ var init_survey = () => {
     d.style.margin = '2%'
     document.body.append(d)
 
-    d.innerHTML += '<br><p>1. age</p>'
+    d.innerHTML += '<br><p>1. Age</p>'
 
     input = document.createElement('input')
     input.id = "age"
@@ -65,14 +68,22 @@ var init_survey = () => {
 
     d.append(input)
 
-    d.innerHTML += '<br><br><p>2. gender</p>'
+    d.innerHTML += '<br><br><p>2. Gender</p>'
     input_2 = document.createElement('input')
     input_2.id = "gender"
-    input_2.name = "age"
+    input_2.name = "gender"
 
     d.append(input_2)
 
-    d.innerHTML += '<br><br><p>3. What is the highest level of education that you have completed?</p>'
+    d.innerHTML += '<br><br><p>3. Country</p>'
+    input_9 = document.createElement('input')
+    input_9.id = "country"
+    input_9.name = "country"
+
+    d.append(input_9)
+
+
+    d.innerHTML += '<br><br><p>4. What is the highest level of education that you have completed?</p>'
     input_3 = document.createElement('input')
     input_3.id = "education"
     input_3.type = "radio"
@@ -138,7 +149,7 @@ var init_survey = () => {
     // d.innerHTML += ' No  '
 
 
-    d.innerHTML += '<br><br><p>4.What do you think is the most important design factor(s) in infographics to augement affective arousal?</p><br>'
+    d.innerHTML += '<br><br><p>5.What do you think is the most important design factor(s) in infographics to augement affective arousal?</p><br>'
 
     textarea = document.createElement('textarea')
         // input.name = "reason"
@@ -149,7 +160,7 @@ var init_survey = () => {
 
     d.append(textarea)
 
-    d.innerHTML += '<br><br><p>5.Do you agree that augmenting the affective arousal of infographic design helps you absorb the data better? why?</p><br>'
+    d.innerHTML += '<br><br><p>6.Do you agree that augmenting the affective arousal of infographic design helps you absorb the data better? why?</p><br>'
 
     textarea_3 = document.createElement('textarea')
         // input.name = "reason"
@@ -161,7 +172,7 @@ var init_survey = () => {
     d.append(textarea_3)
 
 
-    d.innerHTML += '<br><br><p>6. Please leave your feedback or comments related to this study below (optional).</p><br>'
+    d.innerHTML += '<br><br><p>7. Please leave your feedback or comments related to this study below (optional).</p><br>'
 
     textarea_2 = document.createElement('textarea')
         // input.name = "reason"
