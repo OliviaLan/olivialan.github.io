@@ -11,12 +11,12 @@ time_out = false
 questions_shuffle = []
 
 //要提前在firebase里新建几个存数据的文件夹-collection
-mid_collection = 'mID_prolific'
-complete_collection = 'result_prolific'
-incomplete_collection = 'result_incomplete_prolific'
+mid_collection = 'ID_affective'
+complete_collection = 'result_affective'
+incomplete_collection = 'result_incomplete_affective'
 
-replacement_mid_collection = 'mID_replacement'
-experiment_replacement = 'pilot_test1_replacement'
+// replacement_mid_collection = 'ID_replacement'
+// experiment_replacement = 'pilot_test1_replacement'
 
 test_mID = "test_mid"
 
@@ -94,13 +94,13 @@ var init_end = () => {
                 console.error("Error adding document: ", error);
             });
 
-        db.collection(experiment_replacement).add(final_user_data)
-            .then(function(docRef) {
-                console.log(experiment_replacement + "Document written with ID: ", docRef.id);
-            })
-            .catch(function(error) {
-                console.error("Error adding document: ", error);
-            });
+        // db.collection(experiment_replacement).add(final_user_data)
+        //     .then(function(docRef) {
+        //         console.log(experiment_replacement + "Document written with ID: ", docRef.id);
+        //     })
+        //     .catch(function(error) {
+        //         console.error("Error adding document: ", error);
+        //     });
 
     }
 }
@@ -195,13 +195,13 @@ var save_mid = () => {
             console.error("Error adding document: ", error);
         });
 
-    db.collection(replacement_mid_collection).add(user_data)
-        .then(function(docRef) {
-            console.log(replacement_mid_collection + "Document written with ID: ", docRef.id);
-        })
-        .catch(function(error) {
-            console.error("Error adding document: ", error);
-        });
+    // db.collection(replacement_mid_collection).add(user_data)
+    //     .then(function(docRef) {
+    //         console.log(replacement_mid_collection + "Document written with ID: ", docRef.id);
+    //     })
+    //     .catch(function(error) {
+    //         console.error("Error adding document: ", error);
+    //     });
 }
 
 
@@ -251,7 +251,7 @@ var end_preview = () => {
 // 在consent页，查询它是否有mturk id，以及是否已经做过了
 async function find_mid() {
     old_mids = await get_firebase_data(mid_collection, false)
-    replacement_mids = await get_firebase_data(replacement_mid_collection, false)
+        // replacement_mids = await get_firebase_data(replacement_mid_collection, false)
     if (mID == undefined || mID == '') {
         console.warn('mid is null')
     }
@@ -275,7 +275,7 @@ async function find_mid() {
 
 function generateRan() {
     //从1-max生成整数
-    var max = 4;
+    var max = questions.length;
     var random = [];
     for (var i = 0; i < max; i++) {
         var temp = Math.ceil(Math.random() * max);
@@ -298,9 +298,9 @@ async function init() {
     init_timestamp = Date.now()
     user_data['timestamp_start'] = init_timestamp
     user_data['mid'] = mID
-    assigned_pics = generateRan().slice(0, 3)
+    assigned_pics = generateRan().slice(0, 10)
     user_data['assigned_pics'] = assigned_pics
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < 10; i++) {
         questions_shuffle.push(questions[assigned_pics[i] - 1])
     }
 

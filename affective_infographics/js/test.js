@@ -13,13 +13,13 @@ function save_answer() {
             }
             user_answers.push(new_answer)
             user_data['answers'] = user_answers
-                // db.collection(incomplete_collection).add(user_data)
-                //         .then(involvementction(docRef) {
-                //             console.log("Document written with ID: ", docRef.id);
-                //         })
-                //         .catch(involvementction(error) {
-                //             console.error("Error adding document: ", error);
-                //         });
+            db.collection(incomplete_collection).add(user_data)
+                // .then(involvementction(docRef) {
+                //     console.log("Document written with ID: ", docRef.id);
+                // })
+                // .catch(involvementction(error) {
+                //     console.error("Error adding document: ", error);
+                // });
             if (current_question < questions_shuffle.length - 1) {
                 current_question++
                 gen_pic()
@@ -54,7 +54,7 @@ function gen_pic() {
     d.style.textAlign = 'left'
     d.style.margin = '2%'
     document.body.append(d)
-    d.innerHTML += '<br><br><img src =' + questions_shuffle[current_question]['dataset'] + ' style="width: 80%"></img>'
+    d.innerHTML += '<br><br><img src =./data/' + questions_shuffle[current_question]['src'] + ' style="width: 80%"></img>'
 
 
     //----------question-----------

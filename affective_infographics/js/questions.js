@@ -1,61 +1,733 @@
 questions = [{
-        'text': 'The Life of Company X',
-        'upper_text': 'This visualization shows a made up history timeline.',
-        'id': 1,
-        'dataset': './data/1.png',
-        // 'answer': '917',
-        // 'question_type': 1,
-        // 'ques_index': 0,
-        // 'type_index': 'a0',
+        "src": "1.png",
+        "id": "1"
     },
     {
-        'text': 'The Population of City Y',
-        'upper_text': 'This visualization shows a made up history timeline.',
-        'id': 2,
-        'dataset': './data/2.jpg',
-        // 'answer': '929',
-        // 'question_type': 1,
-        // 'ques_index': 1,
-        // 'type_index': 'a1',
-        // 'nps': ['aaa', 'bbb', 'ccc', 'ddd', 'eee', 'fff'],
+        "src": "2.jpg",
+        "id": "2"
     },
     {
-        'text': 'One Day of Z',
-        'upper_text': 'This visualization shows a made up history timeline.',
-        'id': 3,
-        'dataset': './data/3.jpeg',
-        // 'answer': '929',
-        // 'question_type': 1,
-        // 'ques_index': 1,
-        // 'type_index': 'a1',
-        // 'nps': ['aaa', 'bbb', 'ccc', 'ddd', 'eee', 'fff'],
+        "src": "3.jpeg",
+        "id": "3"
     },
     {
-        'text': 'One Day of Z',
-        'upper_text': 'This visualization shows a made up history timeline.',
-        'id': 4,
-        'dataset': './data/4.jpg',
-        // 'answer': '929',
-        // 'question_type': 1,
-        // 'ques_index': 1,
-        // 'type_index': 'a1',
-        // 'nps': ['aaa', 'bbb', 'ccc', 'ddd', 'eee', 'fff'],
+        "src": "4.jpg",
+        "id": "4"
     },
-
-
+    {
+        "src": "5.png",
+        "id": "5"
+    },
+    {
+        "src": "6.jpg",
+        "id": "6"
+    },
+    {
+        "src": "7.jpg",
+        "id": "7"
+    },
+    {
+        "src": "8.jpg",
+        "id": "8"
+    },
+    {
+        "src": "9.jpg",
+        "id": "9"
+    },
+    {
+        "src": "10.jpg",
+        "id": "10"
+    },
+    {
+        "src": "11.jpg",
+        "id": "11"
+    },
+    {
+        "src": "12.jpg",
+        "id": "12"
+    },
+    {
+        "src": "13.jpg",
+        "id": "13"
+    },
+    {
+        "src": "14.jpg",
+        "id": "14"
+    },
+    {
+        "src": "15.jpg",
+        "id": "15"
+    },
+    {
+        "src": "16.png",
+        "id": "16"
+    },
+    {
+        "src": "17.png",
+        "id": "17"
+    },
+    {
+        "src": "18.png",
+        "id": "18"
+    },
+    {
+        "src": "19.jpg",
+        "id": "19"
+    },
+    {
+        "src": "20.jpg",
+        "id": "20"
+    },
+    {
+        "src": "21.png",
+        "id": "21"
+    },
+    {
+        "src": "22.jpg",
+        "id": "22"
+    },
+    {
+        "src": "23.jpg",
+        "id": "23"
+    },
+    {
+        "src": "24.jpg",
+        "id": "24"
+    },
+    {
+        "src": "25.jpg",
+        "id": "25"
+    },
+    {
+        "src": "26.jpg",
+        "id": "26"
+    },
+    {
+        "src": "27.jpg",
+        "id": "27"
+    },
+    {
+        "src": "28.png",
+        "id": "28"
+    },
+    {
+        "src": "29.jpg",
+        "id": "29"
+    },
+    {
+        "src": "30.jpg",
+        "id": "30"
+    },
+    {
+        "src": "31.jpg",
+        "id": "31"
+    },
+    {
+        "src": "32.jpg",
+        "id": "32"
+    },
+    {
+        "src": "33.jpg",
+        "id": "33"
+    },
+    {
+        "src": "34.jpg",
+        "id": "34"
+    },
+    {
+        "src": "35.jpg",
+        "id": "35"
+    },
+    {
+        "src": "36.jpg",
+        "id": "36"
+    },
+    {
+        "src": "37.png",
+        "id": "37"
+    },
+    {
+        "src": "38.jpg",
+        "id": "38"
+    },
+    {
+        "src": "39.jpg",
+        "id": "39"
+    },
+    {
+        "src": "40.jpg",
+        "id": "40"
+    },
+    {
+        "src": "41.jpg",
+        "id": "41"
+    },
+    {
+        "src": "42.png",
+        "id": "42"
+    },
+    {
+        "src": "43.png",
+        "id": "43"
+    },
+    {
+        "src": "44.png",
+        "id": "44"
+    },
+    {
+        "src": "45.png",
+        "id": "45"
+    },
+    {
+        "src": "46.png",
+        "id": "46"
+    },
+    {
+        "src": "47.png",
+        "id": "47"
+    },
+    {
+        "src": "48.png",
+        "id": "48"
+    },
+    {
+        "src": "49.png",
+        "id": "49"
+    },
+    {
+        "src": "50.png",
+        "id": "50"
+    },
+    {
+        "src": "51.png",
+        "id": "51"
+    },
+    {
+        "src": "52.png",
+        "id": "52"
+    },
+    {
+        "src": "53.png",
+        "id": "53"
+    },
+    {
+        "src": "54.png",
+        "id": "54"
+    },
+    {
+        "src": "55.jpg",
+        "id": "55"
+    },
+    {
+        "src": "56.jpg",
+        "id": "56"
+    },
+    {
+        "src": "57.jpg",
+        "id": "57"
+    },
+    {
+        "src": "58.jpg",
+        "id": "58"
+    },
+    {
+        "src": "59.jpg",
+        "id": "59"
+    },
+    {
+        "src": "60.jpg",
+        "id": "60"
+    },
+    {
+        "src": "61.jpg",
+        "id": "61"
+    },
+    {
+        "src": "62.jpg",
+        "id": "62"
+    },
+    {
+        "src": "63.png",
+        "id": "63"
+    },
+    {
+        "src": "64.png",
+        "id": "64"
+    },
+    {
+        "src": "65.jpg",
+        "id": "65"
+    },
+    {
+        "src": "66.jpg",
+        "id": "66"
+    },
+    {
+        "src": "67.jpg",
+        "id": "67"
+    },
+    {
+        "src": "68.jpg",
+        "id": "68"
+    },
+    {
+        "src": "69.png",
+        "id": "69"
+    },
+    {
+        "src": "70.png",
+        "id": "70"
+    },
+    {
+        "src": "71.png",
+        "id": "71"
+    },
+    {
+        "src": "72.png",
+        "id": "72"
+    },
+    {
+        "src": "73.jpg",
+        "id": "73"
+    },
+    {
+        "src": "74.jpg",
+        "id": "74"
+    },
+    {
+        "src": "75.jpg",
+        "id": "75"
+    },
+    {
+        "src": "76.jpg",
+        "id": "76"
+    },
+    {
+        "src": "77.jpg",
+        "id": "77"
+    },
+    {
+        "src": "78.png",
+        "id": "78"
+    },
+    {
+        "src": "79.jpg",
+        "id": "79"
+    },
+    {
+        "src": "80.jpg",
+        "id": "80"
+    },
+    {
+        "src": "81.jpg",
+        "id": "81"
+    },
+    {
+        "src": "82.jpg",
+        "id": "82"
+    },
+    {
+        "src": "83.jpg",
+        "id": "83"
+    },
+    {
+        "src": "84.png",
+        "id": "84"
+    },
+    {
+        "src": "85.jpg",
+        "id": "85"
+    },
+    {
+        "src": "86.png",
+        "id": "86"
+    },
+    {
+        "src": "87.jpg",
+        "id": "87"
+    },
+    {
+        "src": "88.jpg",
+        "id": "88"
+    },
+    {
+        "src": "89.jpg",
+        "id": "89"
+    },
+    {
+        "src": "90.jpg",
+        "id": "90"
+    },
+    {
+        "src": "91.jpg",
+        "id": "91"
+    },
+    {
+        "src": "92.jpg",
+        "id": "92"
+    },
+    {
+        "src": "93.jpg",
+        "id": "93"
+    },
+    {
+        "src": "94.jpg",
+        "id": "94"
+    },
+    {
+        "src": "95.png",
+        "id": "95"
+    },
+    {
+        "src": "96.jpg",
+        "id": "96"
+    },
+    {
+        "src": "97.png",
+        "id": "97"
+    },
+    {
+        "src": "98.png",
+        "id": "98"
+    },
+    {
+        "src": "99.jpg",
+        "id": "99"
+    },
+    {
+        "src": "100.jpg",
+        "id": "100"
+    },
+    {
+        "src": "101.png",
+        "id": "101"
+    },
+    {
+        "src": "102.png",
+        "id": "102"
+    },
+    {
+        "src": "103.png",
+        "id": "103"
+    },
+    {
+        "src": "104.png",
+        "id": "104"
+    },
+    {
+        "src": "105.png",
+        "id": "105"
+    },
+    {
+        "src": "106.png",
+        "id": "106"
+    },
+    {
+        "src": "107.png",
+        "id": "107"
+    },
+    {
+        "src": "108.png",
+        "id": "108"
+    },
+    {
+        "src": "109.png",
+        "id": "109"
+    },
+    {
+        "src": "110.png",
+        "id": "110"
+    },
+    {
+        "src": "111.png",
+        "id": "111"
+    },
+    {
+        "src": "112.png",
+        "id": "112"
+    },
+    {
+        "src": "113.png",
+        "id": "113"
+    },
+    {
+        "src": "114.png",
+        "id": "114"
+    },
+    {
+        "src": "115.png",
+        "id": "115"
+    },
+    {
+        "src": "116.png",
+        "id": "116"
+    },
+    {
+        "src": "117.png",
+        "id": "117"
+    },
+    {
+        "src": "118.png",
+        "id": "118"
+    },
+    {
+        "src": "119.png",
+        "id": "119"
+    },
+    {
+        "src": "120.png",
+        "id": "120"
+    },
+    {
+        "src": "121.png",
+        "id": "121"
+    },
+    {
+        "src": "122.png",
+        "id": "122"
+    },
+    {
+        "src": "123.png",
+        "id": "123"
+    },
+    {
+        "src": "124.png",
+        "id": "124"
+    },
+    {
+        "src": "125.png",
+        "id": "125"
+    },
+    {
+        "src": "126.png",
+        "id": "126"
+    },
+    {
+        "src": "127.png",
+        "id": "127"
+    },
+    {
+        "src": "128.png",
+        "id": "128"
+    },
+    {
+        "src": "129.png",
+        "id": "129"
+    },
+    {
+        "src": "130.png",
+        "id": "130"
+    },
+    {
+        "src": "131.png",
+        "id": "131"
+    },
+    {
+        "src": "132.png",
+        "id": "132"
+    },
+    {
+        "src": "133.png",
+        "id": "133"
+    },
+    {
+        "src": "134.png",
+        "id": "134"
+    },
+    {
+        "src": "135.png",
+        "id": "135"
+    },
+    {
+        "src": "136.png",
+        "id": "136"
+    },
+    {
+        "src": "137.png",
+        "id": "137"
+    },
+    {
+        "src": "138.png",
+        "id": "138"
+    },
+    {
+        "src": "139.png",
+        "id": "139"
+    },
+    {
+        "src": "140.png",
+        "id": "140"
+    },
+    {
+        "src": "141.png",
+        "id": "141"
+    },
+    {
+        "src": "142.png",
+        "id": "142"
+    },
+    {
+        "src": "143.png",
+        "id": "143"
+    },
+    {
+        "src": "144.png",
+        "id": "144"
+    },
+    {
+        "src": "145.png",
+        "id": "145"
+    },
+    {
+        "src": "146.png",
+        "id": "146"
+    },
+    {
+        "src": "147.png",
+        "id": "147"
+    },
+    {
+        "src": "148.png",
+        "id": "148"
+    },
+    {
+        "src": "149.png",
+        "id": "149"
+    },
+    {
+        "src": "150.png",
+        "id": "150"
+    },
+    {
+        "src": "151.png",
+        "id": "151"
+    },
+    {
+        "src": "152.png",
+        "id": "152"
+    },
+    {
+        "src": "153.png",
+        "id": "153"
+    },
+    {
+        "src": "154.png",
+        "id": "154"
+    },
+    {
+        "src": "155.jpg",
+        "id": "155"
+    },
+    {
+        "src": "156.jpg",
+        "id": "156"
+    },
+    {
+        "src": "157.jpg",
+        "id": "157"
+    },
+    {
+        "src": "158.png",
+        "id": "158"
+    },
+    {
+        "src": "159.jpg",
+        "id": "159"
+    },
+    {
+        "src": "160.jpg",
+        "id": "160"
+    },
+    {
+        "src": "161.png",
+        "id": "161"
+    },
+    {
+        "src": "162.jpg",
+        "id": "162"
+    },
+    {
+        "src": "163.png",
+        "id": "163"
+    },
+    {
+        "src": "164.jpg",
+        "id": "164"
+    },
+    {
+        "src": "165.jpg",
+        "id": "165"
+    },
+    {
+        "src": "166.jpeg",
+        "id": "166"
+    },
+    {
+        "src": "167.jpg",
+        "id": "167"
+    },
+    {
+        "src": "168.jpeg",
+        "id": "168"
+    },
+    {
+        "src": "169.jpg",
+        "id": "169"
+    },
+    {
+        "src": "170.jpg",
+        "id": "170"
+    },
+    {
+        "src": "171.jpg",
+        "id": "171"
+    },
+    {
+        "src": "172.jpg",
+        "id": "172"
+    },
+    {
+        "src": "173.png",
+        "id": "173"
+    },
+    {
+        "src": "174.jpg",
+        "id": "174"
+    },
+    {
+        "src": "175.jpg",
+        "id": "175"
+    },
+    {
+        "src": "176.png",
+        "id": "176"
+    },
+    {
+        "src": "177.png",
+        "id": "177"
+    },
+    {
+        "src": "178.jpg",
+        "id": "178"
+    },
+    {
+        "src": "179.png",
+        "id": "179"
+    },
+    {
+        "src": "180.png",
+        "id": "180"
+    },
+    {
+        "src": "181.jpg",
+        "id": "181"
+    },
+    {
+        "src": "182.jpg",
+        "id": "182"
+    },
+    {
+        "src": "183.jpg",
+        "id": "183"
+    }
 ]
-
-key = {
-    '0': '1 day',
-    '1': '2 days',
-    '2': '2 days',
-    '3': 'about 8.5 hours',
-    '4': '3 days',
-    '5': '1 event',
-    '6': '1 day',
-    '7': '4 days',
-    '8': '4 days',
-    '9': '8.5 hours',
-    '10': '11 days',
-    '11': '2 events'
-}

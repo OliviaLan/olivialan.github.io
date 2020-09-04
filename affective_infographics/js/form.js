@@ -2,37 +2,24 @@ var save_form_answers = () => {
 
     age = document.getElementById('age').value;
     gender = document.getElementById('gender').value;
-    judgement_1_why = document.getElementById('judgement_1_why').value;
-    feedback = document.getElementById('feedback').value;
 
     // speed_all = document.getElementsByName('speed');
-    literacy_all = document.getElementsByName('literacy');
-    judgement_1_all = document.getElementsByName('judgement_1');
+    education_all = document.getElementsByName('education');
 
-    for (i = 0; i < 2; i++) {
-        // if (speed_all[i].checked == true) {
-        //     var speed = speed_all[i].value
-        // }
-        if (literacy_all[i].checked == true) {
-            var literacy = literacy_all[i].value
-        }
-    }
-
-    for (i = 0; i < 3; i++) {
-        if (judgement_1_all[i].checked == true) {
-            var judgement_1 = judgement_1_all[i].value
+    for (i = 0; i < 6; i++) {
+        if (education_all[i].checked == true) {
+            var education = education_all[i].value
         }
     }
 
 
-    if (age && gender && literacy && judgement_1 && judgement_1_why) {
+    if (age && gender && education && document.getElementById('importance').value) {
         user_data['age'] = age;
         user_data['gender'] = gender;
         // user_data['speed'] = speed;
-        user_data['literacy'] = literacy;
-        user_data['judgement_1'] = judgement_1;
-        user_data['judgement_1_why'] = judgement_1_why;
-        user_data['feedback'] = feedback;
+        user_data['education'] = education;
+        user_data['importance'] = document.getElementById('importance').value;
+        user_data['feedback'] = document.getElementById('feedback').value;
         user_data['timestamp_end'] = Date.now();
         user_data['worktime_in_seconds'] = (user_data['timestamp_end'] - user_data['timestamp_start']) / 1000;
         user_data['timestamp_start'] = new Date(user_data['timestamp_start']).toString();
@@ -154,7 +141,7 @@ var init_survey = () => {
 
     textarea = document.createElement('textarea')
         // input.name = "reason"
-    textarea.id = "judgement_1_why"
+    textarea.id = "importance"
         // input.size = "35"
     textarea.style.width = "500px"
     textarea.style.height = "120px"
