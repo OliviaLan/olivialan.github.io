@@ -66,7 +66,7 @@
   	    d.style.left = '1vh'
   	    d.style.color = color
   	    if (section == 'tutorial') d.innerHTML = 'tutorial progress: ' + (1 + current_slide) + '/' + (tutorial_length)
-  	    else if (section == 'test') d.innerHTML = 'story number: ' + (1 + current_question) + '/' + (questions_shuffle.length)
+  	    else if (section == 'test') d.innerHTML = 'infographics number: ' + (1 + current_question) + '/' + (questions_shuffle.length)
   	    document.body.append(d)
 
   	    d = document.createElement('div')
