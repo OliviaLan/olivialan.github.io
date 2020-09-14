@@ -159,21 +159,16 @@ var ID = function() {
 };
 
 
-// 在consent页，查询它是否有mturk id，以及是否已经做过了
 async function find_mid() {
     old_mids = await get_firebase_data(mid_collection, false)
     if (mID == undefined || mID == '') {
         console.warn('mid is null')
-    }
-    //发现这个账号已经在数据记录里了（test_mID不会被视为重复，可以通行），执行函数显示其记录
-    else if (old_mids.some(a => a.mid == mID) && mID != test_mID) {
+    } else if (old_mids.some(a => a.mid == mID) && mID != test_mID) {
         returning_mid(mID)
         return
     } else {
-        //新账号，生成一个独有的code并存储
         uniquecode = 'se' + ID()
         user_data['code'] = uniquecode
-            //但是test_mID的数据不会被存储
         if (mID != test_mID && mID != undefined && mID != '') {
             save_mid()
         }
@@ -183,7 +178,6 @@ async function find_mid() {
 async function choose_assigned_pattern_type() {
     assigned_types = []
     d = await get_firebase_data(mid_collection, false)
-        //一共六种pattern，i=5
     for (i = 0; i < 5; i++) {
         num_of_this_type = d.filter(p => p['assigned_pattern_type'].includes(i + 2)).length
         assigned_types.push(num_of_this_type)
@@ -304,8 +298,8 @@ function getUrlVars() {
     return vars;
 }
 
-var progress_bar = (progress, color, section) => {
-    //总体bar
+var progress_bar = (progress, color) => {
+
     bar = document.createElement('div')
     bar.style.position = 'absolute'
     bar.style.top = '0px'
@@ -315,15 +309,14 @@ var progress_bar = (progress, color, section) => {
     bar.style.width = Math.round(progress) + 'px'
     bar.style.backgroundColor = color
     document.body.append(bar)
-        //进行到第几个，显示红色bar
+
     d = document.createElement('div')
     d.style.position = 'absolute'
     d.className = 'timeclass'
     d.style.top = '1vh'
     d.style.left = '1vh'
     d.style.color = color
-    if (section == 'tutorial') d.innerHTML = 'tutorial progress: ' + (1 + current_slide) + '/' + (tutorial_length)
-    else if (section == 'test') d.innerHTML = 'story number: ' + (1 + current_question) + '/' + (questions.length)
+    d.innerHTML = 'story number: ' + (1 + current_question) + '/' + (questions.length)
     document.body.append(d)
 
     d = document.createElement('div')
@@ -346,7 +339,7 @@ var next_question = () => {
 
     document.body.innerHTML = ''
     error = undefined
-    progress_bar((current_question + 1) * window.innerWidth / questions_shuffle.length, '#0000cc', 'test')
+    progress_bar((current_question + 1) * window.innerWidth / questions_shuffle.length, '#0000cc')
     gen_question(questions_shuffle[current_question]['text'], questions_shuffle[current_question]['pattern'], questions_shuffle[current_question]['dataset'])
 
 }
@@ -376,11 +369,9 @@ questions = [{
 ]
 
 async function init() {
-    //连接到数据库
+
     init_firebase()
-        //记录mturk id
     mID = getUrlVars()['PROLIFIC_PID'];
-    //开始时间
     init_timestamp = Date.now()
     user_data['timestamp_start'] = init_timestamp
     user_data['mid'] = mID
@@ -390,7 +381,6 @@ async function init() {
     user_data['company' + '_replay'] = 0
     user_data['population' + '_replay'] = 0
     user_data['crime' + '_replay'] = 0
-
 
 
     window.addEventListener("beforeunload", function(e) {
