@@ -7,15 +7,13 @@ var line = d3
         return d.y;
     });
 
-
+//Animation speed
 var interval = 4000
 
-//【重要】画出左边的选项卡和右边的图
 function gen_question(text, pattern, dataset) {
 
     var path = "./datasets/";
     if (dataset == "history") {
-        // path += "history_anchor.csv";
         if (pattern == "1") path += "history_chronology.csv";
         else if (pattern == "2") path += "history_trace.csv";
         else if (pattern == "3") path += "history_trailer.csv";
@@ -23,7 +21,6 @@ function gen_question(text, pattern, dataset) {
         else if (pattern == "5") path += "history_halfway.csv";
         else if (pattern == "6") path += "history_anchor.csv";
     } else if (dataset == "population") {
-        // path += "line_anchor.csv";
         if (pattern == "1") path += "line_chronology.csv";
         else if (pattern == "2") path += "line_trace.csv";
         else if (pattern == "3") path += "line_trailer.csv";
@@ -31,7 +28,6 @@ function gen_question(text, pattern, dataset) {
         else if (pattern == "5") path += "line_halfway.csv";
         else if (pattern == "6") path += "line_anchor.csv";
     } else if (dataset == "diary") {
-        // path += "diary_anchor.csv";
         if (pattern == "1") path += "diary_chronology.csv";
         else if (pattern == "2") path += "diary_trace.csv";
         else if (pattern == "3") path += "diary_trailer.csv";
@@ -39,21 +35,14 @@ function gen_question(text, pattern, dataset) {
         else if (pattern == "5") path += "diary_halfway.csv";
         else if (pattern == "6") path += "diary_anchor.csv";
     }
-    // else if (dataset == "story3") path += "plants.csv";
-    // else if (dataset == "story4") path += "schedule.csv";
 
     d3.csv(path).then(data => {
-        //截取前datalimit行
-        // if (dataset == "stock") data = data.slice(0, 26);
-        // else data = data.slice(0, datalimit);
-
-        //大div，装了左边的form和右边的vis
         var divquestion = document.createElement("div")
         divquestion.setAttribute("id", "replayable")
         divquestion.style.position = 'relative'
         divquestion.style.height = height + 'px'
         divquestion.style.marginTop = '3%'
-            //在大div里生成一个svg
+
         var svg = d3
             .select(divquestion)
             .append("svg")
@@ -61,14 +50,11 @@ function gen_question(text, pattern, dataset) {
             .attr("height", height)
             .style("position", "absolute")
             .style("left", "0px")
-            // console.log('create svg')
-            // 创建一个form，并放到大div里
+
         var divradio = document.createElement("form");
         divradio.style.textAlign = "left";
         divradio.id = "divradio";
-        // divradio.style.maxWidth = '30%'
-        //通过函数传的文字放进去
-        divradio.innerHTML = "<b>Story " + (current_question + 1) + ": " + text + "</b>" + "<p>The animation will start in 3 seconds</p>";
+        divradio.innerHTML = "<b>Story " + (current_question + 1) + ": " + text + "</b>" + "<p>The animation will start in about 3 seconds</p>";
         divquestion.append(divradio);
 
         document.body.append(divquestion);
@@ -101,12 +87,12 @@ function gen_question(text, pattern, dataset) {
             gen_question(questions_shuffle[current_question]['text'], questions_shuffle[current_question]['pattern'], questions_shuffle[current_question]['dataset'])
         }
 
-        if (pattern == "1") create_chronological_timeline(svg, data, datalimit);
-        else if (pattern == "2") create_trace_timeline(svg, data, datalimit);
-        else if (pattern == "3") create_trailer_timeline(svg, data, datalimit);
-        else if (pattern == "4") create_recurrence_timeline(svg, data, datalimit);
-        else if (pattern == "5") create_halfway_timeline(svg, data, datalimit);
-        else if (pattern == "6") create_anchor_timeline(svg, data, datalimit);
+        if (pattern == "1") create_chronological_timeline(svg, data);
+        else if (pattern == "2") create_trace_timeline(svg, data);
+        else if (pattern == "3") create_trailer_timeline(svg, data);
+        else if (pattern == "4") create_recurrence_timeline(svg, data);
+        else if (pattern == "5") create_halfway_timeline(svg, data);
+        else if (pattern == "6") create_anchor_timeline(svg, data);
 
     });
 }
@@ -117,7 +103,7 @@ var clearvis = () => {
 }
 
 
-var create_chronological_timeline = (svg, data, datalimit) => {
+var create_chronological_timeline = (svg, data) => {
 
     console.log("chronological")
 
@@ -139,7 +125,6 @@ var create_chronological_timeline = (svg, data, datalimit) => {
         .attr("d", "M 0 0 12 6 0 12 3 6")
         .style("fill", "black");
 
-    //主线
     l = linegraph
         .append("path")
         .attr("stroke", "black")
@@ -153,7 +138,6 @@ var create_chronological_timeline = (svg, data, datalimit) => {
 
     delay = 0;
 
-    //事件标签
     t = linegraph
         .selectAll(".labeltext")
         .data(data)
@@ -201,9 +185,6 @@ var create_chronological_timeline = (svg, data, datalimit) => {
     delay = 0;
 
 
-    delay = 0;
-
-    //时间标签
     t = linegraph
         .selectAll(".yeartext")
         .data(data)
@@ -236,7 +217,6 @@ var create_chronological_timeline = (svg, data, datalimit) => {
         .style("opacity", 0)
 
 
-    //刻度
     t = linegraph
         .selectAll(".tick")
         .data(data)
@@ -268,7 +248,7 @@ var create_chronological_timeline = (svg, data, datalimit) => {
 
 }
 
-var create_trailer_timeline = (svg, data, datalimit) => {
+var create_trailer_timeline = (svg, data) => {
 
     console.log("trailer")
 
@@ -290,7 +270,6 @@ var create_trailer_timeline = (svg, data, datalimit) => {
         .attr("d", "M 0 0 12 6 0 12 3 6")
         .style("fill", "black");
 
-    //主线
     l = linegraph
         .append("path")
         .attr("stroke", "black")
@@ -304,7 +283,6 @@ var create_trailer_timeline = (svg, data, datalimit) => {
 
     delay = 0;
 
-    //事件标签
     t = linegraph
         .selectAll(".labeltext")
         .data(data)
@@ -358,7 +336,6 @@ var create_trailer_timeline = (svg, data, datalimit) => {
 
     delay = 0;
 
-    //时间标签
     t = linegraph
         .selectAll(".yeartext")
         .data(data)
@@ -397,7 +374,6 @@ var create_trailer_timeline = (svg, data, datalimit) => {
         .delay(interval - 1000)
         .style("opacity", 0)
 
-    //刻度
     t = linegraph
         .selectAll(".tick")
         .data(data)
@@ -434,7 +410,7 @@ var create_trailer_timeline = (svg, data, datalimit) => {
 
 }
 
-var create_recurrence_timeline = (svg, data, datalimit) => {
+var create_recurrence_timeline = (svg, data) => {
 
     console.log("recurrence")
 
@@ -456,7 +432,6 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
         .attr("d", "M 0 0 12 6 0 12 3 6")
         .style("fill", "black");
 
-    //主线
     l = linegraph
         .append("path")
         .attr("stroke", "black")
@@ -470,7 +445,6 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
 
     delay = 0;
 
-    //事件标签
     t = linegraph
         .selectAll(".labeltext")
         .data(data)
@@ -522,7 +496,6 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
 
     delay = 0;
 
-    //时间标签
     t = linegraph
         .selectAll(".yeartext")
         .data(data)
@@ -559,7 +532,6 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
         .delay(interval - 1000)
         .style("opacity", 0)
 
-    //刻度
     t = linegraph
         .selectAll(".tick")
         .data(data)
@@ -595,7 +567,7 @@ var create_recurrence_timeline = (svg, data, datalimit) => {
 }
 
 
-var create_trace_timeline = (svg, data, datalimit) => {
+var create_trace_timeline = (svg, data) => {
 
     console.log("trace-back")
 
@@ -617,7 +589,6 @@ var create_trace_timeline = (svg, data, datalimit) => {
         .attr("d", "M 0 0 12 6 0 12 3 6")
         .style("fill", "black");
 
-    //主线
     l = linegraph
         .append("path")
         .attr("stroke", "black")
@@ -631,7 +602,6 @@ var create_trace_timeline = (svg, data, datalimit) => {
 
     delay = 0;
 
-    //事件标签
 
     t = linegraph
         .selectAll(".labeltext")
@@ -685,7 +655,6 @@ var create_trace_timeline = (svg, data, datalimit) => {
 
     delay = 0;
 
-    //时间标签
     t = linegraph
         .selectAll(".yeartext")
         .data(data)
@@ -722,7 +691,6 @@ var create_trace_timeline = (svg, data, datalimit) => {
         .delay(interval - 1000)
         .style("opacity", 0)
 
-    //刻度
     t = linegraph
         .selectAll(".tick")
         .data(data)
@@ -757,9 +725,9 @@ var create_trace_timeline = (svg, data, datalimit) => {
     }
 }
 
-var create_halfway_timeline = (svg, data, datalimit) => {
+var create_halfway_timeline = (svg, data) => {
 
-    console.log("half-way back")
+    console.log("halfway-back")
 
     linegraph = svg
         .append("g")
@@ -779,7 +747,6 @@ var create_halfway_timeline = (svg, data, datalimit) => {
         .attr("d", "M 0 0 12 6 0 12 3 6")
         .style("fill", "black");
 
-    //主线
     l = linegraph
         .append("path")
         .attr("stroke", "black")
@@ -793,7 +760,6 @@ var create_halfway_timeline = (svg, data, datalimit) => {
 
     delay = 0;
 
-    //事件标签
     t = linegraph
         .selectAll(".labeltext")
         .data(data)
@@ -844,7 +810,6 @@ var create_halfway_timeline = (svg, data, datalimit) => {
 
     delay = 0;
 
-    //时间标签
     t = linegraph
         .selectAll(".yeartext")
         .data(data)
@@ -881,7 +846,6 @@ var create_halfway_timeline = (svg, data, datalimit) => {
         .delay(interval - 1000)
         .style("opacity", 0)
 
-    //刻度
     t = linegraph
         .selectAll(".tick")
         .data(data)
@@ -916,7 +880,7 @@ var create_halfway_timeline = (svg, data, datalimit) => {
 
 }
 
-var create_anchor_timeline = (svg, data, datalimit) => {
+var create_anchor_timeline = (svg, data) => {
 
     console.log("anchor")
 
@@ -938,7 +902,6 @@ var create_anchor_timeline = (svg, data, datalimit) => {
         .attr("d", "M 0 0 12 6 0 12 3 6")
         .style("fill", "black");
 
-    //主线
     l = linegraph
         .append("path")
         .attr("stroke", "black")
@@ -954,7 +917,6 @@ var create_anchor_timeline = (svg, data, datalimit) => {
     var breaking = 7;
 
 
-    //事件标签
     t = linegraph
         .selectAll(".labeltext")
         .data(data)
@@ -968,7 +930,6 @@ var create_anchor_timeline = (svg, data, datalimit) => {
             function(d, i) {
                 var j = 0;
                 if (i < breaking) j = data.length - breaking - i;
-                // else if (i == data.length - 1) j = data.length - breaking;
                 else j = i - 1;
                 return width * 0.1 +
                     (0.5 * (width * 0.8)) / (data.length - 1) +
@@ -1006,7 +967,6 @@ var create_anchor_timeline = (svg, data, datalimit) => {
 
     delay = 0;
 
-    //时间标签
     t = linegraph
         .selectAll(".yeartext")
         .data(data)
@@ -1019,7 +979,6 @@ var create_anchor_timeline = (svg, data, datalimit) => {
             function(d, i) {
                 var j = 0;
                 if (i < breaking) j = data.length - breaking - i;
-                // else if (i == data.length - 1) j = data.length - breaking;
                 else j = i - 1;
                 return width * 0.1 +
                     (0.5 * (width * 0.8)) / (data.length - 1) +
@@ -1044,7 +1003,6 @@ var create_anchor_timeline = (svg, data, datalimit) => {
         .delay(interval - 1000)
         .style("opacity", 0)
 
-    //刻度
     t = linegraph
         .selectAll(".tick")
         .data(data)
@@ -1053,10 +1011,8 @@ var create_anchor_timeline = (svg, data, datalimit) => {
         .attr("stroke", "black")
         .attr("stroke-width", (d, i) => d.Event == '' ? 1 : 3)
         .attr("d", function(d, i) {
-            // debugger;
             var j = 0;
             if (i < breaking) j = data.length - breaking - i;
-            // else if (i == data.length - 1) j = data.length - breaking;
             else j = i - 1;
             return line([{
                     x: width * 0.1 +
@@ -1080,2367 +1036,3 @@ var create_anchor_timeline = (svg, data, datalimit) => {
     }
 
 }
-
-
-
-//——————————LINE——————————
-
-// var create_chronological_line = (svg, data, datalimit) => {
-
-//     console.log("chronological")
-
-//     var margin = { top: 100, right: 250, bottom: 150, left: 70 },
-//         width_chart = width - margin.left - margin.right,
-//         height_chart = height - margin.top - margin.bottom;
-
-//     var parseTime = d3.timeParse("%Y");
-
-//     // var xLine = d3.scaleLinear()
-//     //     .domain([0, 9])
-//     //     .range([0, width]);
-
-//     // X scale will use the index of our data
-//     var x = d3.scaleTime()
-//         .range([0, width_chart]);
-//     // 6. Y scale will use the randomly generate number 
-//     var y = d3.scaleLinear()
-//         .range([height_chart, 0]);
-
-//     // var valueline = d3.line()
-//     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
-//     //     .y(function(d) { return y(d.close); }) // set the y values for the line generator 
-
-//     var linegraph = svg
-//         .append("g")
-//         .attr("transform",
-//             "translate(" + margin.left + "," + margin.top + ")");
-//     // .append("g")
-//     // .attr("transform", "translate(" + 0 + "," + height * 0.5 + ")");
-
-//     data.forEach(function(d) {
-//         d.date = parseTime(d.date);
-//         d.close = +d.close;
-//     });
-
-
-//     // Scale the range of the data
-//     x.domain(d3.extent(data, function(d) { return d.date; }));
-//     y.domain([0, d3.max(data, function(d) { return d.close; })]);
-
-
-//     var realGDPline = linegraph.append("line")
-//         .attr("class", "line")
-//         .style("stroke", "transparent");
-
-//     var focus = linegraph.append("g")
-//         .attr("fill", "black");
-
-//     focus.append("circle")
-//         .attr("r", 5);
-
-//     var t = focus.append("text")
-//         .attr("x", 0)
-//         .attr("dy", "-0.7em");
-
-//     var counter = 0;
-
-//     var lineGen = d3.line()
-//         .x(function(d, i) {
-//             return x(i <= counter ? d.date : data[counter].date);
-//         })
-//         .y(function(d, i) {
-//             return y(i <= counter ? d.close : data[counter].close);
-//         })
-
-//     var pathLine = linegraph.append('path').datum(data)
-//         .attr('d', lineGen)
-//         .classed('line', true)
-
-//     // Add the x Axis
-//     linegraph.append("g")
-//         .attr("class", "xAxis")
-//         .attr("transform", "translate(0," + height_chart + ")")
-//         .call(d3.axisBottom(x));
-
-//     // Add the y Axis
-//     linegraph.append("g")
-//         .attr("class", "yAxis")
-//         .call(d3.axisLeft(y));
-
-//     function start() {
-
-//         counter = 0;
-
-//         realGDPline
-//             .attr("x1", x(data[counter].date))
-//             .attr("y1", y(data[counter].close))
-//             .attr("x2", x(data[counter].date))
-//             .attr("y2", y(data[counter].close));
-
-//         focus.attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-//         // focus.select("text")
-//         // .text(data[counter].np);
-
-//         t.selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .text(d => d)
-//             .style("font-size", "14px")
-//             .attr("x", function() {
-//                 return this.parentElement.x.baseVal[0].value
-//             })
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             });
-
-//     }
-
-//     start();
-
-//     var delay = 0
-
-
-//     for (counter = 1; counter < data.length; counter++) {
-//         movefocus(counter)
-//     }
-
-//     function movefocus(counter) {
-
-
-
-//         // counter++;
-//         var d = data[counter]
-
-//         realGDPline
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .delay(function() {
-//                 if (data[counter - 1].np) return delay = delay + interval
-//                 else return delay = delay + 500
-//             })
-//             .duration(500)
-//             .attr("x2", x(data[1].date))
-//             .attr("y2", y(data[1].close));
-
-//         pathLine
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .delay(delay)
-//             .duration(500)
-//             // .delay(10000 - counter * 500)
-//             .attr('d', lineGen)
-
-//         t.selectAll("tspan.text_" + (counter - 1))
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-//         t
-//             .selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .style("font-size", "14px")
-//             .attr("x", 0)
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             })
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .text(function(d, i) { return d });
-//         // .style('opacity', 1)
-//         // .duration(2000)
-//         // .style('opacity', 0)
-
-
-
-//         // setTimeout(function() {
-//         //     debugger;
-//         //     t.selectAll('tspan.text').remove()
-//         // }, delay + 2000)
-
-
-
-//         focus
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-//             // .select("text")
-//             // .text(data[counter].close + data[counter].np);
-
-
-//         // focus
-//         //     .transition()
-//         //     .delay(counter * 500)
-//         //     .duration(500)
-
-//         x.domain(d3.extent(data, function(d) {
-//             return d.date;
-//         }));
-//         y.domain([0, d3.max(data, function(d) {
-//             return d.close;
-//         })]);
-
-//         linegraph.selectAll(".xAxis")
-//             .transition()
-//             // .delay(delay)
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .call(d3.axisBottom(x));
-
-//         // Add the y Axis
-//         linegraph.selectAll(".yAxis")
-//             .transition()
-//             .delay(delay)
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .call(d3.axisLeft(y));
-
-
-//     }
-
-//     if (user_data['population_replay'] == 0) {
-//         setTimeout(function() {
-//             document.getElementById('story_finish').style.display = "block"
-//             document.getElementById('story_replay').style.display = "block"
-//         }, delay + 2000)
-//     }
-
-// }
-
-// var create_trailer_line = (svg, data, datalimit) => {
-
-//     console.log("trailer")
-
-//     var margin = { top: 100, right: 250, bottom: 150, left: 70 },
-//         width_chart = width - margin.left - margin.right,
-//         height_chart = height - margin.top - margin.bottom;
-
-//     var parseTime = d3.timeParse("%Y");
-
-//     // var xLine = d3.scaleLinear()
-//     //     .domain([0, 9])
-//     //     .range([0, width]);
-
-//     // X scale will use the index of our data
-//     var x = d3.scaleTime().range([0, width_chart]);
-//     // 6. Y scale will use the randomly generate number 
-//     var y = d3.scaleLinear().range([height_chart, 0]);
-
-//     // var valueline = d3.line()
-//     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
-//     //     .y(function(d) { return y(d.close); }) // set the y values for the line generator 
-
-//     var linegraph = svg
-//         .append("g")
-//         .attr("transform",
-//             "translate(" + margin.left + "," + margin.top + ")");
-//     // .append("g")
-//     // .attr("transform", "translate(" + 0 + "," + height * 0.5 + ")");
-
-//     data.forEach(function(d) {
-//         d.date = parseTime(d.date);
-//         d.close = +d.close;
-//     });
-
-//     // Scale the range of the data
-//     x.domain(d3.extent(data, function(d) { return d.date; }));
-//     y.domain([0, d3.max(data, function(d) { return d.close; })]);
-
-//     var realGDPline = linegraph.append("line")
-//         .attr("class", "line")
-//         .style("stroke", "transparent");
-
-//     var focus = linegraph.append("g")
-//         .attr("fill", "black");
-
-//     focus.append("circle")
-//         .attr("r", 5);
-
-//     var t = focus.append("text")
-//         .attr("x", 0)
-//         .attr("dy", "-0.7em");
-
-//     var counter = 0;
-
-//     var lineGen = d3.line()
-//         .x(function(d, i) {
-//             return x(i <= counter ? d.date : data[counter].date);
-//         })
-//         .y(function(d, i) {
-//             return y(i <= counter ? d.close : data[counter].close);
-//         })
-
-//     var pathLine = linegraph.append('path').datum(data)
-//         .attr('d', lineGen)
-//         .classed('line', true)
-
-//     // Add the x Axis
-//     linegraph.append("g")
-//         .attr("class", "xAxis")
-//         .attr("transform", "translate(0," + height_chart + ")")
-//         .call(d3.axisBottom(x));
-
-//     // Add the y Axis
-//     linegraph.append("g")
-//         .attr("class", "yAxis")
-//         .call(d3.axisLeft(y));
-
-//     function start() {
-
-//         counter = 0;
-
-//         realGDPline
-//             .attr("x1", x(data[counter].date))
-//             .attr("y1", y(data[counter].close))
-//             .attr("x2", x(data[counter].date))
-//             .attr("y2", y(data[counter].close));
-
-//         focus.attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-//         t.selectAll("tspan.text_" + counter + "_trailer")
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter + "_trailer")
-//             .text(d => d)
-//             .style("font-size", "14px")
-//             .attr("x", function() {
-//                 return this.parentElement.x.baseVal[0].value
-//             })
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             });
-
-//     }
-
-//     function start2() {
-
-//         counter = data.length - 1;
-
-//         realGDPline
-//             .attr("x1", x(data[counter].date))
-//             .attr("y1", y(data[counter].close))
-//             .attr("x2", x(data[counter].date))
-//             .attr("y2", y(data[counter].close));
-
-//         focus
-//             .transition()
-//             .delay(3000)
-//             .duration(500)
-//             .attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-//         t.selectAll("tspan.text_0_trailer")
-//             .transition()
-//             .delay(3000)
-//             .style("display", "none")
-
-//         t.selectAll("tspan.text_" + counter + "_trailer")
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter + "_trailer")
-//             .text(d => d)
-//             .style("font-size", "14px")
-//             .attr("x", function() {
-//                 return this.parentElement.x.baseVal[0].value
-//             })
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             })
-//             .attr("opacity", 0)
-//             .transition()
-//             .delay(3000)
-//             .attr("opacity", 1)
-//     }
-
-//     start();
-//     start2();
-
-//     var delay = 0
-
-//     for (counter = 0; counter < data.length; counter++) {
-//         movefocus(counter)
-//     }
-
-//     function movefocus(counter) {
-
-//         // counter++;
-//         var d = data[counter]
-
-//         realGDPline
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .delay(function() {
-//                 if (counter > 0) {
-//                     if (data[counter - 1].np2) return delay = delay + interval
-//                     else return delay = delay + 500
-//                 } else return delay = delay + interval * 2
-//             })
-//             .duration(500)
-//             .attr("x2", x(data[1].date))
-//             .attr("y2", y(data[1].close));
-
-//         pathLine
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .delay(delay)
-//             .duration(500)
-//             // .delay(10000 - counter * 500)
-//             .attr('d', lineGen)
-
-
-//         focus
-//             .transition()
-//             .delay(delay)
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-
-//         if (counter == 0) {
-//             t.selectAll("tspan.text_11_trailer")
-//                 .transition()
-//                 .delay(delay)
-//                 .style("display", "none")
-//         } else {
-//             t.selectAll("tspan.text_" + (counter - 1))
-//                 .transition()
-//                 .delay(delay)
-//                 .style("display", "none")
-//         }
-
-//         t
-//             .selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np2.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .style("font-size", "14px")
-//             .attr("x", 0)
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np2.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np2.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             })
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .text(function(d, i) { return d });
-
-//         x.domain(d3.extent(data, function(d) {
-//             return d.date;
-//         }));
-//         y.domain([0, d3.max(data, function(d) {
-//             return d.close;
-//         })]);
-
-//         linegraph.selectAll(".xAxis")
-//             .transition()
-//             .delay(delay)
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .call(d3.axisBottom(x));
-
-//         // Add the y Axis
-//         linegraph.selectAll(".yAxis")
-//             .transition()
-//             .delay(delay)
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .call(d3.axisLeft(y));
-
-
-//     }
-
-//     if (user_data['population_replay'] == 0) {
-//         setTimeout(function() {
-//             document.getElementById('story_finish').style.display = "block"
-//             document.getElementById('story_replay').style.display = "block"
-//         }, delay + 2000)
-//     }
-
-
-
-// }
-
-// var create_recurrence_line = (svg, data, datalimit) => {
-
-//     console.log("recurrence")
-//         // hahaha = []
-//         // hahaha.push(data[9])
-//         // hahaha.push(data[10])
-
-//     var margin = { top: 100, right: 250, bottom: 150, left: 70 },
-//         width_chart = width - margin.left - margin.right,
-//         height_chart = height - margin.top - margin.bottom;
-
-
-//     var parseTime = d3.timeParse("%Y");
-
-//     // var xLine = d3.scaleLinear()
-//     //     .domain([0, 9])
-//     //     .range([0, width]);
-
-//     // X scale will use the index of our data
-//     var x = d3.scaleTime().range([0, width_chart]);
-//     // 6. Y scale will use the randomly generate number 
-//     var y = d3.scaleLinear().range([height_chart, 0]);
-
-//     // var valueline = d3.line()
-//     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
-//     //     .y(function(d) { return y(d.close); }) // set the y values for the line generator 
-
-//     var linegraph = svg
-//         .append("g")
-//         .attr("transform",
-//             "translate(" + margin.left + "," + margin.top + ")");
-//     // .append("g")
-//     // .attr("transform", "translate(" + 0 + "," + height * 0.5 + ")");
-
-//     data.forEach(function(d) {
-//         d.date = parseTime(d.date);
-//         d.close = +d.close;
-//     });
-
-//     // Scale the range of the data
-//     x.domain(d3.extent(data, function(d) { return d.date; }));
-//     y.domain([0, d3.max(data, function(d) { return d.close; })]);
-
-//     var realGDPline = linegraph.append("line")
-//         .attr("class", "line")
-//         .style("stroke", "transparent");
-
-//     var focus = linegraph.append("g")
-//         .attr("fill", "black");
-
-//     focus.append("circle")
-//         .attr("r", 5);
-
-//     t = focus.append("text")
-//         .attr("x", 0)
-//         .attr("dy", "-0.7em");
-
-//     var counter = 0;
-
-//     var lineGen = d3.line()
-//         .x(function(d, i) {
-//             return x(i <= counter ? d.date : data[counter].date);
-//         })
-//         .y(function(d, i) {
-//             return y(i <= counter ? d.close : data[counter].close);
-//         })
-
-//     var pathLine = linegraph.append('path').datum(data)
-//         .attr('d', lineGen)
-//         .classed('line', true)
-
-//     // Add the x Axis
-//     linegraph.append("g")
-//         .attr("class", "xAxis")
-//         .attr("transform", "translate(0," + height_chart + ")")
-//         .call(d3.axisBottom(x));
-
-//     // Add the y Axis
-//     linegraph.append("g")
-//         .attr("class", "yAxis")
-//         .call(d3.axisLeft(y));
-
-//     function start() {
-
-//         counter = 0;
-
-//         realGDPline
-//             .attr("x1", x(data[counter].date))
-//             .attr("y1", y(data[counter].close))
-//             .attr("x2", x(data[counter].date))
-//             .attr("y2", y(data[counter].close));
-
-//         focus
-//             .attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-//         t.selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .text(d => d)
-//             .style("font-size", "14px")
-//             .attr("x", function() {
-//                 return this.parentElement.x.baseVal[0].value
-//             })
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             });
-
-
-//     }
-
-//     // function start2() {
-
-//     //     counter = 0;
-
-//     //     realGDPline
-//     //         .attr("x1", x(data[counter].date))
-//     //         .attr("y1", y(data[counter].close))
-//     //         .attr("x2", x(data[counter].date))
-//     //         .attr("y2", y(data[counter].close));
-
-//     //     focus
-//     //         .transition()
-//     //         .delay(function() { delay = delay + interval })
-//     //         .duration(500)
-//     //         .attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-//     //     t.selectAll("tspan.text_11")
-//     //         .transition()
-//     //         .delay(delay)
-//     //         .style("display", "none")
-
-//     //     t.selectAll("tspan.text_" + counter + "_again")
-//     //         .data(d => data[counter].np.split("\\n"))
-//     //         .enter()
-//     //         .append("tspan")
-//     //         .attr("class", "text_" + counter + "_again")
-//     //         .text(d => d)
-//     //         .style("font-size", curems + "em")
-//     //         .attr("x", function() {
-//     //             return this.parentElement.x.baseVal[0].value
-//     //         })
-//     //         .attr("dx", 10)
-//     //         .attr("dy", 20)
-//     //         .attr("opacity", 0)
-//     //         .transition()
-//     //         .delay(delay)
-//     //         .attr("opacity", 1)
-
-//     // }
-
-//     var delay = 0;
-
-//     start();
-
-//     for (counter = 1; counter < data.length; counter++) {
-//         movefocus(counter)
-//     }
-
-
-//     // start2();
-
-//     for (counter = 0; counter < data.length; counter++) {
-//         movefocus_forward(counter)
-//     }
-
-
-//     function movefocus(counter) {
-
-//         // counter++;
-//         var d = data[counter]
-
-
-//         realGDPline
-//             .transition()
-//             .ease(d3.easeLinear)
-//             // .delay(counter * 500)
-//             // .delay(10000 - counter * 500)
-//             .delay(function() { delay = delay + interval })
-//             .duration(500)
-//             .attr("x2", x(data[1].date))
-//             .attr("y2", y(data[1].close));
-
-//         pathLine
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .delay(delay)
-//             .duration(500)
-//             // .delay(counter * 500)
-//             // .delay(10000 - counter * 500)
-//             .attr('d', lineGen)
-
-//         t.selectAll("tspan.text_" + (counter - 1))
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-//         t
-//             .selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .style("font-size", "14px")
-//             .attr("x", 0)
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             })
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .text(function(d, i) { return d });
-
-//         focus
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-
-
-//         x.domain(d3.extent(data, function(d) {
-//             return d.date;
-//         }));
-//         y.domain([0, d3.max(data, function(d) {
-//             return d.close;
-//         })]);
-
-//         linegraph.selectAll(".xAxis")
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .call(d3.axisBottom(x));
-
-//         // Add the y Axis
-//         linegraph.selectAll(".yAxis")
-//             .transition()
-//             .delay(delay)
-//             .duration(490)
-//             .call(d3.axisLeft(y));
-
-
-//     }
-
-//     function movefocus_forward(counter) {
-
-//         // counter++;
-//         var d = data[counter]
-
-
-//         realGDPline
-//             .transition()
-//             .ease(d3.easeLinear)
-//             // .delay(10000 + counter * 500)
-//             .delay(function() {
-//                 if (counter > 0) {
-//                     if (data[counter - 1].np2) return delay = delay + interval
-//                     else return delay = delay + 500
-//                 } else return delay = delay + interval
-//             })
-//             .duration(500)
-//             .attr("x2", x(data[1].date))
-//             .attr("y2", y(data[1].close));
-
-//         pathLine
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .duration(500)
-//             .delay(delay)
-//             // .delay(10000 + counter * 500)
-//             .attr('d', lineGen)
-
-
-//         focus
-//             .transition()
-//             // .delay(10000 + counter * 500)
-//             .delay(delay)
-//             .duration(500)
-//             .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-
-//         t.selectAll("tspan.text_11")
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-//         t.selectAll("tspan.text_" + (counter - 1) + "_again")
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-//         t
-//             .selectAll("tspan.text_" + counter + "_again")
-//             .data(d => data[counter].np2.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter + "_again")
-//             .style("font-size", "14px")
-//             .attr("x", 0)
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np2.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np2.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             })
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .text(function(d, i) { return d });
-
-//         // focus
-//         //     .transition()
-//         //     .delay(counter * 500)
-//         //     .duration(500)
-
-
-//         x.domain(d3.extent(data, function(d) {
-//             return d.date;
-//         }));
-//         y.domain([0, d3.max(data, function(d) {
-//             return d.close;
-//         })]);
-
-//         linegraph.selectAll(".xAxis")
-//             .transition()
-//             // .delay(10000 + counter * 500)
-//             .delay(delay)
-//             .duration(500)
-//             .call(d3.axisBottom(x));
-
-//         // Add the y Axis
-//         linegraph.selectAll(".yAxis")
-//             .transition()
-//             // .delay(10000 + counter * 500)
-//             .delay(delay)
-//             .duration(500)
-//             .call(d3.axisLeft(y));
-
-
-//     }
-
-//     if (user_data['population_replay'] == 0) {
-//         setTimeout(function() {
-//             document.getElementById('story_finish').style.display = "block"
-//             document.getElementById('story_replay').style.display = "block"
-//         }, delay + 2000)
-//     }
-
-
-// }
-
-
-// var create_trace_line = (svg, data, datalimit) => {
-
-//     console.log("trace")
-
-//     var margin = { top: 100, right: 250, bottom: 150, left: 70 },
-//         width_chart = width - margin.left - margin.right,
-//         height_chart = height - margin.top - margin.bottom;
-
-//     var parseTime = d3.timeParse("%Y");
-
-//     // var xLine = d3.scaleLinear()
-//     //     .domain([0, 9])
-//     //     .range([0, width]);
-
-//     // X scale will use the index of our data
-//     var x = d3.scaleTime().range([0, width_chart]);
-//     // 6. Y scale will use the randomly generate number 
-//     var y = d3.scaleLinear().range([height_chart, 0]);
-
-//     // var valueline = d3.line()
-//     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
-//     //     .y(function(d) { return y(d.close); }) // set the y values for the line generator 
-
-//     var linegraph = svg
-//         .append("g")
-//         .attr("transform",
-//             "translate(" + margin.left + "," + margin.top + ")");
-//     // .append("g")
-//     // .attr("transform", "translate(" + 0 + "," + height * 0.5 + ")");
-
-//     data.forEach(function(d) {
-//         d.date = parseTime(d.date);
-//         d.close = +d.close;
-//     });
-
-//     // Scale the range of the data
-//     x.domain(d3.extent(data, function(d) { return d.date; }));
-//     y.domain([0, d3.max(data, function(d) { return d.close; })]);
-
-//     var realGDPline = linegraph.append("line")
-//         .attr("class", "line")
-//         .style("stroke", "transparent");
-
-//     var focus = linegraph.append("g")
-//         .attr("fill", "black");
-
-//     focus.append("circle")
-//         .attr("r", 5);
-
-//     var t = focus.append("text")
-//         .attr("x", 0)
-//         .attr("dy", "-0.7em");
-
-//     var counter = 0;
-
-//     var lineGen = d3.line()
-//         .x(function(d, i) {
-//             return x(i <= counter ? d.date : data[counter].date);
-//         })
-//         .y(function(d, i) {
-//             return y(i <= counter ? d.close : data[counter].close);
-//         })
-
-//     var pathLine = linegraph.append('path').datum(data)
-//         .attr('d', lineGen)
-//         .classed('line', true)
-
-//     // Add the x Axis
-//     linegraph.append("g")
-//         .attr("class", "xAxis")
-//         .attr("transform", "translate(0," + height_chart + ")")
-//         .call(d3.axisBottom(x));
-
-//     // Add the y Axis
-//     linegraph.append("g")
-//         .attr("class", "yAxis")
-//         .call(d3.axisLeft(y));
-
-//     function start() {
-
-//         counter = data.length - 1;
-
-//         realGDPline
-//             .attr("x1", x(data[counter].date))
-//             .attr("y1", y(data[counter].close))
-//             .attr("x2", x(data[counter].date))
-//             .attr("y2", y(data[counter].close));
-
-//         focus.attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-//         t.selectAll("tspan.text_" + counter + "_trace")
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter + "_trace")
-//             .text(d => d)
-//             .style("font-size", "14px")
-//             .attr("x", function() {
-//                 return this.parentElement.x.baseVal[0].value
-//             })
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             });
-
-//     }
-
-//     start();
-
-//     var delay = 0
-
-//     for (counter = 0; counter < data.length; counter++) {
-//         movefocus(counter)
-//     }
-
-//     function movefocus(counter) {
-
-//         // counter++;
-//         var d = data[counter]
-
-//         realGDPline
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .delay(function() {
-//                 if (counter > 0) {
-//                     if (data[counter - 1].np2) return delay = delay + interval
-//                     else return delay = delay + 500
-//                 } else return delay = delay + interval
-//             })
-//             .duration(500)
-//             .attr("x2", x(data[1].date))
-//             .attr("y2", y(data[1].close));
-
-//         pathLine
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .delay(delay)
-//             .duration(500)
-//             // .delay(10000 - counter * 500)
-//             .attr('d', lineGen)
-
-
-//         focus
-//             .transition()
-//             .delay(delay)
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-
-//         t.selectAll("tspan.text_11_trace")
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-//         t.selectAll("tspan.text_" + (counter - 1))
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-
-
-//         t.selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np2.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .style("font-size", "14px")
-//             .attr("x", 0)
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np2.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np2.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             })
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .text(function(d, i) { return d });
-
-
-//         x.domain(d3.extent(data, function(d) {
-//             return d.date;
-//         }));
-//         y.domain([0, d3.max(data, function(d) {
-//             return d.close;
-//         })]);
-
-//         linegraph.selectAll(".xAxis")
-//             .transition()
-//             .delay(delay)
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .call(d3.axisBottom(x));
-
-//         // Add the y Axis
-//         linegraph.selectAll(".yAxis")
-//             .transition()
-//             .delay(delay)
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .call(d3.axisLeft(y));
-
-
-//     }
-
-//     if (user_data['population_replay'] == 0) {
-//         setTimeout(function() {
-//             document.getElementById('story_finish').style.display = "block"
-//             document.getElementById('story_replay').style.display = "block"
-//         }, delay + 2000)
-//     }
-
-
-// }
-
-
-// var create_retrograde_line = (svg, data, datalimit) => {
-
-//     var margin = { top: 20, right: 20, bottom: 50, left: 70 },
-//         width = 940 - margin.left - margin.right,
-//         height = 500 - margin.top - margin.bottom;
-
-//     var parseTime = d3.timeParse("%Y");
-
-//     // var xLine = d3.scaleLinear()
-//     //     .domain([0, 9])
-//     //     .range([0, width]);
-
-//     // X scale will use the index of our data
-//     var x = d3.scaleTime().range([0, width]);
-//     // 6. Y scale will use the randomly generate number 
-//     var y = d3.scaleLinear().range([height, 0]);
-
-//     // var valueline = d3.line()
-//     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
-//     //     .y(function(d) { return y(d.close); }) // set the y values for the line generator 
-
-//     var linegraph = svg
-//         .append("g")
-//         .attr("transform",
-//             "translate(" + margin.left + "," + margin.top + ")");
-//     // .append("g")
-//     // .attr("transform", "translate(" + 0 + "," + height * 0.5 + ")");
-
-//     data.forEach(function(d) {
-//         d.date = parseTime(d.date);
-//         d.close = +d.close;
-//     });
-
-//     // Scale the range of the data
-//     x.domain(d3.extent(data, function(d) { return d.date; }));
-//     y.domain([0, d3.max(data, function(d) { return d.close; })]);
-
-//     var realGDPline = linegraph.append("line")
-//         .attr("class", "line")
-//         .style("stroke", "transparent");
-
-//     var focus = linegraph.append("g")
-//         .attr("fill", "black");
-
-//     focus.append("circle")
-//         .attr("r", 5);
-
-//     var t = focus.append("text")
-//         .attr("x", 0)
-//         .attr("dy", "-0.7em");
-
-//     var counter = data.length - 1;
-
-//     var lineGen = d3.line()
-//         .x(function(d, i) {
-//             return x(i <= counter ? d.date : data[counter].date);
-//         })
-//         .y(function(d, i) {
-//             return y(i <= counter ? d.close : data[counter].close);
-//         })
-
-//     var pathLine = linegraph.append('path').datum(data)
-//         .attr('d', lineGen)
-//         .classed('line', true)
-
-//     // Add the x Axis
-//     linegraph.append("g")
-//         .attr("class", "xAxis")
-//         .attr("transform", "translate(0," + height + ")")
-//         .call(d3.axisBottom(x));
-
-//     // Add the y Axis
-//     linegraph.append("g")
-//         .attr("class", "yAxis")
-//         .call(d3.axisLeft(y));
-
-//     function start() {
-//         counter = data.length - 1;
-
-//         realGDPline
-//             .attr("x1", x(data[counter].date))
-//             .attr("y1", y(data[counter].close))
-//             .attr("x2", x(data[counter].date))
-//             .attr("y2", y(data[counter].close));
-
-//         focus.attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-//         t.selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .text(d => d)
-//             .style("font-size", curems + "px")
-//             .attr("x", function() {
-//                 return this.parentElement.x.baseVal[0].value
-//             })
-//             .attr("dx", 10)
-//             .attr("dy", 20);
-
-//     }
-
-//     start();
-
-//     var delay = 0;
-
-//     for (counter = data.length - 2; counter > -1; counter--) {
-//         movefocus(counter)
-//     }
-
-
-//     function movefocus(counter) {
-
-//         // counter++;
-//         var d = data[counter]
-//             // debugger;
-
-
-//         realGDPline
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .delay(function() {
-//                 if (data[counter + 1].np) return delay = delay + 2000
-//                 else return delay = delay + 500
-//             })
-//             .duration(500)
-//             .attr("x2", x(data[1].date))
-//             .attr("y2", y(data[1].close));
-
-//         pathLine
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .delay(delay)
-//             .duration(500)
-//             // .delay(10000 - counter * 500)
-//             .attr('d', lineGen)
-
-
-//         focus
-//             .transition()
-//             .delay(delay)
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-
-//         t.selectAll("tspan.text_" + (counter + 1))
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-//         t
-//             .selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .style("font-size", curems + "px")
-//             .attr("x", 0)
-//             .attr("dx", 10)
-//             .attr("dy", 20)
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .text(function(d, i) { return d });
-
-
-//         // focus
-//         //     .transition()
-//         //     .delay(counter * 500)
-//         //     .duration(500)
-
-//         x.domain(d3.extent(data, function(d) {
-//             return d.date;
-//         }));
-//         y.domain([0, d3.max(data, function(d) {
-//             return d.close;
-//         })]);
-
-//         linegraph.selectAll(".xAxis")
-//             .transition()
-//             .delay(function() {
-//                 return data.length * 2000 - 2000 * counter;
-//             })
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .call(d3.axisBottom(x));
-
-//         // Add the y Axis
-//         linegraph.selectAll(".yAxis")
-//             .transition()
-//             .delay(delay)
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .call(d3.axisLeft(y));
-
-
-//     }
-//     setTimeout(function() {
-//         document.getElementById('story_finish').style.display = "block"
-//     }, delay + 1000)
-
-
-// }
-
-// var create_halfway_line = (svg, data, datalimit) => {
-
-//     console.log("halfway-back")
-
-//     var margin = { top: 100, right: 250, bottom: 150, left: 70 },
-//         width_chart = width - margin.left - margin.right,
-//         height_chart = height - margin.top - margin.bottom;
-
-//     var parseTime = d3.timeParse("%Y");
-
-//     // var xLine = d3.scaleLinear()
-//     //     .domain([0, 9])
-//     //     .range([0, width]);
-
-//     // X scale will use the index of our data
-//     var x = d3.scaleTime().range([0, width_chart]);
-//     // 6. Y scale will use the randomly generate number 
-//     var y = d3.scaleLinear().range([height_chart, 0]);
-
-//     // var valueline = d3.line()
-//     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
-//     //     .y(function(d) { return y(d.close); }) // set the y values for the line generator 
-
-//     var linegraph = svg
-//         .append("g")
-//         .attr("transform",
-//             "translate(" + margin.left + "," + margin.top + ")");
-//     // .append("g")
-//     // .attr("transform", "translate(" + 0 + "," + height * 0.5 + ")");
-
-//     data.forEach(function(d) {
-//         d.date = parseTime(d.date);
-//         d.close = +d.close;
-//     });
-
-//     // Scale the range of the data
-//     x.domain(d3.extent(data, function(d) { return d.date; }));
-//     y.domain([0, d3.max(data, function(d) { return d.close; })]);
-
-//     var realGDPline = linegraph.append("line")
-//         .attr("class", "line")
-//         .style("stroke", "transparent");
-
-//     var focus = linegraph.append("g")
-//         .attr("fill", "black");
-
-//     focus.append("circle")
-//         .attr("r", 5);
-
-//     var t = focus.append("text")
-//         .attr("x", 0)
-//         .attr("dy", "-0.7em");
-
-//     var counter = 0;
-
-//     var lineGen = d3.line()
-//         .x(function(d, i) {
-//             return x(i <= counter ? d.date : data[counter].date);
-//         })
-//         .y(function(d, i) {
-//             return y(i <= counter ? d.close : data[counter].close);
-//         })
-
-//     var pathLine = linegraph.append('path').datum(data)
-//         .attr('d', lineGen)
-//         .classed('line', true)
-
-//     // Add the x Axis
-//     linegraph.append("g")
-//         .attr("class", "xAxis")
-//         .attr("transform", "translate(0," + height_chart + ")")
-//         .call(d3.axisBottom(x));
-
-//     // Add the y Axis
-//     linegraph.append("g")
-//         .attr("class", "yAxis")
-//         .call(d3.axisLeft(y));
-
-//     function start() {
-
-//         counter = 6;
-
-//         realGDPline
-//             .attr("x1", x(data[counter].date))
-//             .attr("y1", y(data[counter].close))
-//             .attr("x2", x(data[counter].date))
-//             .attr("y2", y(data[counter].close));
-
-//         focus.attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-//         t.selectAll("tspan.text_" + counter + "_half")
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter + "_half")
-//             .text(d => d)
-//             .style("font-size", "14px")
-//             .attr("x", function() {
-//                 return this.parentElement.x.baseVal[0].value
-//             })
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             });
-
-
-//     }
-
-//     start();
-
-//     var delay = 0
-
-//     for (counter = 0; counter < data.length; counter++) {
-//         movefocus(counter)
-//     }
-
-//     function movefocus(counter) {
-
-//         // counter++;
-//         var d = data[counter]
-
-//         realGDPline
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .delay(function() {
-//                 if (counter > 0) {
-//                     if (data[counter - 1].np2) return delay = delay + interval
-//                     else return delay = delay + 500
-//                 } else return delay = delay + interval
-//             })
-//             .duration(500)
-//             .attr("x2", x(data[1].date))
-//             .attr("y2", y(data[1].close));
-
-//         pathLine
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .delay(delay)
-//             .duration(500)
-//             // .delay(10000 - counter * 500)
-//             .attr('d', lineGen)
-
-
-//         focus
-//             .transition()
-//             .delay(delay)
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-
-//         t.selectAll("tspan.text_6_half")
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-
-//         t.selectAll("tspan.text_" + (counter - 1))
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-//         t
-//             .selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np2.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .style("font-size", "14px")
-//             .attr("x", 0)
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np2.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np2.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             })
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .text(function(d, i) { return d });
-
-
-//         x.domain(d3.extent(data, function(d) {
-//             return d.date;
-//         }));
-//         y.domain([0, d3.max(data, function(d) {
-//             return d.close;
-//         })]);
-
-//         linegraph.selectAll(".xAxis")
-//             .transition()
-//             .delay(delay)
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .call(d3.axisBottom(x));
-
-//         // Add the y Axis
-//         linegraph.selectAll(".yAxis")
-//             .transition()
-//             .delay(delay)
-//             // .delay(10000 - counter * 500)
-//             .duration(500)
-//             .call(d3.axisLeft(y));
-//     }
-
-//     if (user_data['population_replay'] == 0) {
-//         setTimeout(function() {
-//             document.getElementById('story_finish').style.display = "block"
-//             document.getElementById('story_replay').style.display = "block"
-//         }, delay + 2000)
-//     }
-
-
-// }
-
-
-//     console.log("parting")
-//         // hahaha = []
-//         // hahaha.push(data[9])
-//         // hahaha.push(data[10])
-
-//     var margin = { top: 20, right: 20, bottom: 50, left: 70 },
-//         width = 940 - margin.left - margin.right,
-//         height = 500 - margin.top - margin.bottom;
-
-//     var parseTime = d3.timeParse("%Y");
-
-//     // var xLine = d3.scaleLinear()
-//     //     .domain([0, 9])
-//     //     .range([0, width]);
-
-//     // X scale will use the index of our data
-//     var x = d3.scaleTime().range([0, width]);
-//     // 6. Y scale will use the randomly generate number 
-//     var y = d3.scaleLinear().range([height, 0]);
-
-//     // var valueline = d3.line()
-//     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
-//     //     .y(function(d) { return y(d.close); }) // set the y values for the line generator 
-
-//     var linegraph = svg
-//         .append("g")
-//         .attr("transform",
-//             "translate(" + margin.left + "," + margin.top + ")");
-//     // .append("g")
-//     // .attr("transform", "translate(" + 0 + "," + height * 0.5 + ")");
-
-//     data.forEach(function(d) {
-//         d.date = parseTime(d.date);
-//         d.close = +d.close;
-//     });
-
-//     // Scale the range of the data
-//     x.domain(d3.extent(data, function(d) { return d.date; }));
-//     y.domain([0, d3.max(data, function(d) { return d.close; })]);
-
-//     var realGDPline = linegraph.append("line")
-//         .attr("class", "line")
-//         .style("stroke", "transparent");
-
-//     var focus = linegraph.append("g")
-//         .attr("fill", "black");
-
-//     focus.append("circle")
-//         .attr("r", 5);
-
-//     var t = focus.append("text")
-//         .attr("x", 0)
-//         .attr("dy", "-0.7em");
-
-//     var counter = 5;
-
-//     var lineGen = d3.line()
-//         .x(function(d, i) {
-//             if (counter >= 5) {
-//                 if (i < 5) return x(data[5].date)
-//                 else if (5 <= i && i <= counter) return x(d.date)
-//                 else if (i > counter) return x(data[counter].date)
-//             }
-//             // debugger;
-//             // return xScaleGDP(i <= counter ? d.date : dataGDP[counter].date);
-//             else if (counter < 5) {
-//                 if (i <= counter) return x(data[counter].date)
-//                 else return x(d.date);
-//             }
-//         })
-//         .y(function(d, i) {
-//             // return yScaleGDP(i <= counter ? d.GDPreal : dataGDP[counter].GDPreal);
-//             if (counter >= 5) {
-//                 if (i < 5) return y(data[5].close)
-//                 else if (5 <= i && i <= counter) return y(d.close)
-//                 else if (i > counter) return y(data[counter].close)
-//             } else if (counter < 5) {
-//                 if (i <= counter) return y(data[counter].close)
-//                 else return y(d.close);
-//             }
-//         })
-
-//     var pathLine = linegraph.append('path').datum(data)
-//         .attr('d', lineGen)
-//         .classed('line', true)
-
-//     // Add the x Axis
-//     linegraph.append("g")
-//         .attr("class", "xAxis")
-//         .attr("transform", "translate(0," + height + ")")
-//         .call(d3.axisBottom(x));
-
-//     // Add the y Axis
-//     linegraph.append("g")
-//         .attr("class", "yAxis")
-//         .call(d3.axisLeft(y));
-
-//     function start() {
-
-//         counter = 5;
-
-//         realGDPline
-//             .attr("x1", x(data[counter].date))
-//             .attr("y1", y(data[counter].close))
-//             .attr("x2", x(data[counter].date))
-//             .attr("y2", y(data[counter].close));
-
-//         focus.attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-//         t.selectAll("tspan.text_" + counter + "_parting")
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter + "_parting")
-//             .text(d => d)
-//             .style("font-size", curems + "px")
-//             .attr("x", function() {
-//                 return this.parentElement.x.baseVal[0].value
-//             })
-//             .attr("dx", 10)
-//             .attr("dy", 20);
-//     }
-
-//     function start2() {
-
-//         counter = 5;
-
-//         realGDPline
-//             .attr("x1", x(data[counter].date))
-//             .attr("y1", y(data[counter].close))
-//             .attr("x2", x(data[counter].date))
-//             .attr("y2", y(data[counter].close));
-
-//         focus
-//             .transition()
-//             .delay(function() { return delay = delay + interval })
-//             .attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-//         t.selectAll("tspan.text_11")
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-
-//         t.selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .text(d => d)
-//             .style("font-size", curems + "px")
-//             .attr("x", function() {
-//                 return this.parentElement.x.baseVal[0].value
-//             })
-//             .attr("dx", 10)
-//             .attr("dy", 20)
-//             .attr("opacity", 0)
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .attr("opacity", 1)
-//             .text(function(d, i) { return d });
-
-//     }
-
-
-//     start();
-
-//     var delay = 0
-
-//     for (counter = 6; counter < data.length; counter++) {
-//         movefocus(counter)
-//     }
-
-//     start2()
-
-//     for (counter = 4; counter > -1; counter--) {
-//         movefocus_forward(counter)
-//     }
-
-
-//     function movefocus(counter) {
-
-//         // counter++;
-//         var d = data[counter]
-
-
-//         realGDPline
-//             .transition()
-//             .ease(d3.easeLinear)
-//             // .delay(counter * 500)
-//             // .delay(10000 - counter * 500)
-//             .delay(function() {
-//                 if (data[counter - 1].np) return delay = delay + interval
-//                 else return delay = delay + 500
-//             })
-//             .duration(500)
-//             .attr("x2", x(data[1].date))
-//             .attr("y2", y(data[1].close));
-
-//         pathLine
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .delay(delay)
-//             .duration(500)
-//             // .delay(counter * 500)
-//             // .delay(10000 - counter * 500)
-//             .attr('d', lineGen)
-
-
-//         focus
-//             .transition()
-//             // .delay(counter * 500)
-//             // .delay(10000 - counter * 500)
-//             .delay(delay)
-//             .duration(500)
-//             .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-
-//         t.selectAll("tspan.text_5_parting")
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-
-//         t.selectAll("tspan.text_" + (counter - 1))
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-//         t
-//             .selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .style("font-size", curems + "px")
-//             .attr("x", 0)
-//             .attr("dx", 10)
-//             .attr("dy", 20)
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .text(function(d, i) { return d });
-
-
-
-//         x.domain(d3.extent(data, function(d) {
-//             return d.date;
-//         }));
-//         y.domain([0, d3.max(data, function(d) {
-//             return d.close;
-//         })]);
-
-//         linegraph.selectAll(".xAxis")
-//             .transition()
-//             // .delay(counter * 500)
-//             // .delay(10000 - counter * 500)
-//             .delay(delay)
-//             .duration(500)
-//             .call(d3.axisBottom(x));
-
-//         // Add the y Axis
-//         linegraph.selectAll(".yAxis")
-//             .transition()
-//             // .delay(counter * 500)
-//             // .delay(10000 - counter * 500)
-//             .delay(delay)
-//             .duration(490)
-//             .call(d3.axisLeft(y));
-
-
-//     }
-
-//     function movefocus_forward(counter) {
-
-//         // counter++;
-//         var d = data[counter]
-
-
-//         realGDPline
-//             .transition()
-//             .ease(d3.easeLinear)
-//             // .delay(10000 + counter * 500)
-//             .delay(function() {
-//                 if (data[counter + 1].np) return delay = delay + interval
-//                 else return delay = delay + 500
-//             })
-//             .duration(500)
-//             .attr("x2", x(data[1].date))
-//             .attr("y2", y(data[1].close));
-
-//         pathLine
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .duration(500)
-//             .delay(delay)
-//             // .delay(10000 + counter * 500)
-//             .attr('d', lineGen)
-
-
-//         focus
-//             .transition()
-//             // .delay(10000 + counter * 500)
-//             .delay(delay)
-//             .duration(500)
-//             .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-
-
-//         t.selectAll("tspan.text_" + (counter + 1))
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-//         t
-//             .selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .style("font-size", curems + "px")
-//             .attr("x", 0)
-//             .attr("dx", 10)
-//             .attr("dy", 20)
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .text(function(d, i) { return d });
-
-
-
-//         x.domain(d3.extent(data, function(d) {
-//             return d.date;
-//         }));
-//         y.domain([0, d3.max(data, function(d) {
-//             return d.close;
-//         })]);
-
-//         linegraph.selectAll(".xAxis")
-//             .transition()
-//             // .delay(10000 + counter * 500)
-//             .delay(delay)
-//             .duration(500)
-//             .call(d3.axisBottom(x));
-
-//         // Add the y Axis
-//         linegraph.selectAll(".yAxis")
-//             .transition()
-//             // .delay(10000 + counter * 500)
-//             .delay(delay)
-//             .duration(500)
-//             .call(d3.axisLeft(y));
-//     }
-
-//     setTimeout(function() {
-//         document.getElementById('story_finish').style.display = "block"
-//     }, delay + 1000)
-
-// }
-
-// var create_anchor_line = (svg, data, datalimit) => {
-
-//     console.log("anchor")
-//         // hahaha = []
-//     var margin = { top: 100, right: 250, bottom: 150, left: 70 },
-//         width_chart = width - margin.left - margin.right,
-//         height_chart = height - margin.top - margin.bottom;
-
-//     var parseTime = d3.timeParse("%Y");
-
-//     // var xLine = d3.scaleLinear()
-//     //     .domain([0, 9])
-//     //     .range([0, width]);
-
-//     // X scale will use the index of our data
-//     var x = d3.scaleTime().range([0, width_chart]);
-//     // 6. Y scale will use the randomly generate number 
-//     var y = d3.scaleLinear().range([height_chart, 0]);
-
-//     // var valueline = d3.line()
-//     //     .x(function(d) { return x(d.date); }) // set the x values for the line generator
-//     //     .y(function(d) { return y(d.close); }) // set the y values for the line generator 
-
-//     var linegraph = svg
-//         .append("g")
-//         .attr("transform",
-//             "translate(" + margin.left + "," + margin.top + ")");
-//     // .append("g")
-//     // .attr("transform", "translate(" + 0 + "," + height * 0.5 + ")");
-
-//     data.forEach(function(d) {
-//         d.date = parseTime(d.date);
-//         d.close = +d.close;
-//     });
-
-//     // Scale the range of the data
-//     x.domain(d3.extent(data, function(d) { return d.date; }));
-//     y.domain([0, d3.max(data, function(d) { return d.close; })]);
-
-//     var realGDPline = linegraph.append("line")
-//         .attr("class", "line")
-//         .style("stroke", "transparent");
-
-//     var focus = linegraph.append("g")
-//         .attr("fill", "black");
-
-//     focus.append("circle")
-//         .attr("r", 5);
-
-//     var t = focus.append("text")
-//         .attr("x", 0)
-//         .attr("dy", "-0.7em");
-
-//     var breaking = 6;
-//     var counter = breaking + 0;
-
-//     var lineGen = d3.line()
-//         .x(function(d, i) {
-//             if (counter > breaking) {
-//                 if (i <= counter) return x(d.date)
-//                 else if (i > counter) return x(data[counter].date)
-//             }
-//             // debugger;
-//             // return xScaleGDP(i <= counter ? d.date : dataGDP[counter].date);
-//             else if (counter <= breaking) {
-//                 if (i <= counter) return x(data[counter].date)
-//                 else if (i > breaking) return x(data[breaking].date)
-//                 else return x(d.date);
-//             }
-//         })
-//         .y(function(d, i) {
-//             // return yScaleGDP(i <= counter ? d.GDPreal : dataGDP[counter].GDPreal);
-//             if (counter > breaking) {
-//                 if (i <= counter) return y(d.close)
-//                 else if (i > counter) return y(data[counter].close)
-//             } else if (counter <= breaking) {
-//                 if (i <= counter) return y(data[counter].close)
-//                 else if (i > breaking) return y(data[breaking].close)
-//                 else return y(d.close);
-//             }
-//         })
-
-//     var pathLine = linegraph.append('path').datum(data)
-//         .attr('d', lineGen)
-//         .classed('line', true)
-
-//     // Add the x Axis
-//     linegraph.append("g")
-//         .attr("class", "xAxis")
-//         .attr("transform", "translate(0," + height_chart + ")")
-//         .call(d3.axisBottom(x));
-
-//     // Add the y Axis
-//     linegraph.append("g")
-//         .attr("class", "yAxis")
-//         .call(d3.axisLeft(y));
-
-//     function start() {
-
-//         counter = breaking;
-
-//         realGDPline
-//             .attr("x1", x(data[counter].date))
-//             .attr("y1", y(data[counter].close))
-//             .attr("x2", x(data[counter].date))
-//             .attr("y2", y(data[counter].close));
-
-//         focus.attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-//         t.selectAll("tspan.text_" + counter + "_anchor")
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter + "_anchor")
-//             .text(d => d)
-//             .style("font-size", "14px")
-//             .attr("x", function() {
-//                 return this.parentElement.x.baseVal[0].value
-//             })
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             });
-
-//     }
-
-//     function start2() {
-
-//         counter = breaking;
-
-//         realGDPline
-//             .attr("x1", x(data[counter].date))
-//             .attr("y1", y(data[counter].close))
-//             .attr("x2", x(data[counter].date))
-//             .attr("y2", y(data[counter].close));
-
-//         focus
-//             .transition()
-//             .delay(function() { return delay = delay + interval })
-//             .attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-//         t.selectAll("tspan.text_0")
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-
-//         t.selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np2.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .text(d => d)
-//             .style("font-size", "14px")
-//             .attr("x", function() {
-//                 return this.parentElement.x.baseVal[0].value
-//             })
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np2.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np2.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             })
-//             .attr("opacity", 0)
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .attr("opacity", 1)
-//             .text(function(d, i) { return d });
-
-//     }
-
-//     function start3() {
-
-//         counter = breaking;
-
-//         realGDPline
-//             .attr("x1", x(data[counter].date))
-//             .attr("y1", y(data[counter].close))
-//             .attr("x2", x(data[counter].date))
-//             .attr("y2", y(data[counter].close));
-
-//         focus
-//             .transition()
-//             .delay(function() { return delay = delay + interval })
-//             .attr("transform", "translate(" + x(data[counter].date) + "," + y(data[counter].close) + ")");
-
-//         t.selectAll("tspan.text_11")
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-
-//         t.selectAll("tspan.text_" + counter + "_anchor2")
-//             .data(d => data[counter].np3.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter + "_anchor2")
-//             .text(d => d)
-//             .style("font-size", "14px")
-//             .attr("x", function() {
-//                 return this.parentElement.x.baseVal[0].value
-//             })
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np3.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np3.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             })
-//             .attr("opacity", 0)
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .attr("opacity", 1)
-//             .text(function(d, i) { return d });
-
-//     }
-
-
-//     delay = 0
-
-//     start();
-
-//     for (counter = breaking - 1; counter > -1; counter--) {
-//         movefocus(counter)
-//     }
-
-//     start2()
-
-//     for (counter = breaking + 1; counter < data.length; counter++) {
-//         movefocus_forward(counter)
-//     }
-
-//     start3()
-
-
-
-//     function movefocus(counter) {
-
-//         // counter++;
-//         var d = data[counter]
-
-
-//         realGDPline
-//             .transition()
-//             .ease(d3.easeLinear)
-//             // .delay(counter * 500)
-//             // .delay(10000 - counter * 500)
-//             .delay(function() { return delay = delay + interval })
-//             .duration(500)
-//             .attr("x2", x(data[1].date))
-//             .attr("y2", y(data[1].close));
-
-//         pathLine
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .delay(delay)
-//             .duration(500)
-//             // .delay(counter * 500)
-//             // .delay(10000 - counter * 500)
-//             .attr('d', lineGen)
-
-
-//         focus
-//             .transition()
-//             // .delay(counter * 500)
-//             // .delay(10000 - counter * 500)
-//             .delay(delay)
-//             .duration(500)
-//             .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-
-//         t.selectAll("tspan.text_" + breaking + "_anchor")
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-
-//         t.selectAll("tspan.text_" + (counter + 1))
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-//         t
-//             .selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .style("font-size", "14px")
-//             .attr("x", 0)
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             })
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .text(function(d, i) { return d });
-
-
-
-
-//         x.domain(d3.extent(data, function(d) {
-//             return d.date;
-//         }));
-//         y.domain([0, d3.max(data, function(d) {
-//             return d.close;
-//         })]);
-
-//         linegraph.selectAll(".xAxis")
-//             .transition()
-//             // .delay(counter * 500)
-//             // .delay(10000 - counter * 500)
-//             .delay(delay)
-//             .duration(500)
-//             .call(d3.axisBottom(x));
-
-//         // Add the y Axis
-//         linegraph.selectAll(".yAxis")
-//             .transition()
-//             // .delay(counter * 500)
-//             // .delay(10000 - counter * 500)
-//             .delay(delay)
-//             .duration(490)
-//             .call(d3.axisLeft(y));
-
-
-//     }
-
-//     function movefocus_forward(counter) {
-
-//         // counter++;
-//         var d = data[counter]
-
-
-//         realGDPline
-//             .transition()
-//             .ease(d3.easeLinear)
-//             // .delay(10000 + counter * 500)
-//             .delay(function() { return delay = delay + interval })
-//             .duration(500)
-//             .attr("x2", x(data[1].date))
-//             .attr("y2", y(data[1].close));
-
-//         pathLine
-//             .transition()
-//             .ease(d3.easeLinear)
-//             .duration(500)
-//             .delay(delay)
-//             // .delay(10000 + counter * 500)
-//             .attr('d', lineGen)
-
-
-//         focus
-//             .transition()
-//             // .delay(10000 + counter * 500)
-//             .delay(delay)
-//             .duration(500)
-//             .attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")")
-
-
-
-//         t.selectAll("tspan.text_" + (counter - 1))
-//             .transition()
-//             .delay(delay)
-//             .style("display", "none")
-
-//         t
-//             .selectAll("tspan.text_" + counter)
-//             .data(d => data[counter].np2.split("\\n"))
-//             .enter()
-//             .append("tspan")
-//             .attr("class", "text_" + counter)
-//             .style("font-size", "14px")
-//             .attr("x", 0)
-//             .attr("dx", 10)
-//             .attr("dy", function(d, i) {
-//                 if (data[counter].np2.split("\\n").length == 2) {
-//                     if (i == 0) return -30
-//                     else return 20
-//                 } else if (data[counter].np2.split("\\n").length == 3) {
-//                     if (i == 0) return -50
-//                     else return 20
-//                 }
-//                 return -10
-//             })
-//             .transition()
-//             .delay(delay)
-//             .duration(500)
-//             .text(function(d, i) { return d });
-
-
-//         x.domain(d3.extent(data, function(d) {
-//             return d.date;
-//         }));
-//         y.domain([0, d3.max(data, function(d) {
-//             return d.close;
-//         })]);
-
-//         linegraph.selectAll(".xAxis")
-//             .transition()
-//             // .delay(10000 + counter * 500)
-//             .delay(delay)
-//             .duration(500)
-//             .call(d3.axisBottom(x));
-
-//         // Add the y Axis
-//         linegraph.selectAll(".yAxis")
-//             .transition()
-//             // .delay(10000 + counter * 500)
-//             .delay(delay)
-//             .duration(500)
-//             .call(d3.axisLeft(y));
-//     }
-
-//     if (user_data['population_replay'] == 0) {
-//         setTimeout(function() {
-//             document.getElementById('story_finish').style.display = "block"
-//             document.getElementById('story_replay').style.display = "block"
-//         }, delay + 2000)
-//     }
-
-// }

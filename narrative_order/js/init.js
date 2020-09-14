@@ -1,16 +1,10 @@
-tutorial_slides = []
-tutorial_length = 10
 current_slide = 0
 current_question = 0
-randomize = true
-allowed_time_in_minutes = 60
 user_answers = []
 user_data = {}
 chosen_patterns = []
-time_out = false
 questions_shuffle = []
 
-//要提前在firebase里新建几个存数据的文件夹-collection
 mid_collection = 'mID_prolific'
 complete_collection = 'result_prolific'
 incomplete_collection = 'result_incomplete_prolific'
@@ -22,34 +16,14 @@ test_mID = "test_mid"
 
 total_num_participants = 108
 
-var tutorial_start_time, test_start_time;
-
 var width = window.innerWidth - 100;
 var height = window.innerHeight * 0.95;
 
-var shapes = ['hline', 'line', 'circle', 'spiral']
-var datasets = ['plants', 'history', 'schedule']
-    // var question_types = [0, 1, 2, 3]
-var datalimit = 12
 
 var curems = 0.8
-var curdatalimit = 12
-
-var clickable_selected_answer = null
 
 PRODUCTION = true
 
-// --- LAST PAGE
-// var count_correct_answers = () => {
-//     let res = 0
-
-//     if (user_answers == undefined || user_answers.length == 0) return 0
-
-//     for (answer of user_answers) {
-//         if (questions.find(q => q.ques_index == answer.ques_index)['answer'] == answer['answer']) res += 1
-//     }
-//     return res
-// }
 
 var init_end = () => {
     user_data['answers'] = user_answers
@@ -58,26 +32,20 @@ var init_end = () => {
     d = document.createElement('div')
     d.style.margin = '10%'
     d.style.marginBottom = '1%'
-        // numright = count_correct_answers()
-        // user_data['num_correct_answers'] = numright
     d.innerHTML = '<p>Thank you for participating. <br>Please <a href = "https://app.prolific.co/submissions/complete?cc=28FF7A86" >click here to completed your study.</a></p>'
-        // 生成一个独有的随机码
+        // IF USE UNIQUE CODE
         // d2 = document.createElement('div')
         // d2.innerHTML = uniquecode
         // d2.style.fontSize = 'large'
         // d2.style.fontWeight = 'bold'
 
     document.body.append(d)
-        // document.body.append(d2)
 
     console.log('finalize')
 
     //实验人员在本地下载
     // get_firebase_data(complete_collection, true)
-    // get_firebase_data(incomplete_collection, true)
-    // get_firebase_data(mid_collection, true)
 
-    // 最后提交完成才会生成final，包括做题的和问卷的结果
     final_user_data = {}
     for (elem of Object.keys(user_data)) {
         if (user_data[elem] != undefined) {
@@ -105,29 +73,6 @@ var init_end = () => {
     }
 }
 
-
-var init_warning = () => {
-    document.body.innerHTML = ''
-    d = document.createElement('div')
-    d.innerHTML = 'Attention: do not close or reload the page after this step. <br>If you do, the study will end without being finished.'
-    d.style.fontWeight = 'bold'
-    d.style.textAlign = 'center'
-    d.style.fontSize = '20px'
-    d.style.marginTop = '20%'
-    d.style.marginLeft = '20%'
-    d.style.marginRight = '20%'
-    d.style.color = 'red'
-    document.body.append(d)
-
-    btn = document.createElement('button')
-    btn.innerHTML = 'Start'
-    btn.style.margin = '5%'
-    btn.style.fontSize = 'large'
-        // btn.className = 'button f_button'
-    btn.onclick = init_questions
-        // btn.onclick = init_tutorial
-    document.body.append(btn)
-}
 
 
 var get_firebase_data = (collection = complete_collection, download = true) => {
@@ -161,30 +106,12 @@ var get_firebase_data = (collection = complete_collection, download = true) => {
         });
 }
 
-// async function time_run_out() {
-//     document.body.innerHTML = ''
-//     d = document.createElement('div')
-//     d.innerHTML = 'Your time for completing the experiment has run out. <br><br> You got ' + count_correct_answers() + '/' + (questions.length / 4) + ' correct answers. <br><br> '
-//     d.style.margin = '20%'
-//     d.style.fontWeight = 'bold'
-
-//     old_mids = await get_firebase_data(mid_collection, false)
-//     code = old_mids.find(m => m['mid'] == mID)['code']
-
-//     d.innerHTML += 'Please copy and paste the following code in Mechanical Turk: <br>' + code
-//         //else d.innerHTML += 'Unfortunately, your number of correct answers in the test was insufficient to respect the conditions for passing the test.'
-
-//     document.body.append(d)
-// }
 
 var init_firebase = () => {
 
-        // Initialize Firebase
-        // 与我的firebase进行连接
-        firebase.initializeApp(firebaseConfig);
-        db = firebase.firestore();
-    }
-    // --- END LAST PAGE
+    firebase.initializeApp(firebaseConfig);
+    db = firebase.firestore();
+}
 
 var save_mid = () => {
     db.collection(mid_collection).add(user_data)
@@ -212,30 +139,6 @@ async function returning_mid() {
     d.style.margin = '20%'
     d.style.fontWeight = 'bold'
     document.body.append(d)
-
-    // incomplete = await get_firebase_data(incomplete_collection, false)
-    // complete = await get_firebase_data(complete_collection, false)
-
-    //在现有的数据里去查，此人是否做完了/做了多少
-    //做完：
-    // if (complete.find(a => a['mid'] == mID)) {
-    // elem = complete.find(a => a['mid'] == mID)
-    // d.innerHTML += 'You got ' + elem['num_correct_answers'] + '/' + questions.length + ' correct answers. <br><br> '
-    // d.innerHTML += 'Please copy and paste the following code in Mechanical Turk: <br>' + incomplete.find(a => a['mid'] == mID)['code']
-    //else d.innerHTML += 'Unfortunately, your number of correct answers in the test was insufficient to respect the conditions for passing the test.'
-
-    // }
-    //没做完，做了一部分（也给钱）：
-    // else if (incomplete.find(a => a['mid'] == mID)) {
-    // max_answers = 0
-    // for (elem of incomplete.filter(a => a['mid'] == mID)) {
-    //     if (parseFloat(elem['num_correct_answers']) > max_answers) max_answers = parseFloat(elem['num_correct_answers'])
-    // }
-    // d.innerHTML += 'You got ' + max_answers + '/' + questions.length + ' correct answers. <br><br> '
-
-    // d.innerHTML += 'Please copy and paste the following code in Mechanical Turk: <br>' + incomplete.find(a => a['mid'] == mID)['code']
-    //else d.innerHTML += 'Unfortunately, your number of correct answers in the test was insufficient to respect the conditions for passing the test.'
-    // }
 }
 
 
@@ -248,10 +151,17 @@ var end_preview = () => {
     document.body.append(d)
 }
 
+var ID = function() {
+    // Math.random should be unique because of its seeding algorithm.
+    // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+    // after the decimal.
+    return '_' + Math.random().toString(36).substr(2, 9);
+};
+
+
 // 在consent页，查询它是否有mturk id，以及是否已经做过了
 async function find_mid() {
     old_mids = await get_firebase_data(mid_collection, false)
-    replacement_mids = await get_firebase_data(replacement_mid_collection, false)
     if (mID == undefined || mID == '') {
         console.warn('mid is null')
     }
@@ -283,30 +193,15 @@ async function choose_assigned_pattern_type() {
     delete assigned_types[min_type - 2];
     min_type_2 = assigned_types.indexOf(Math.min.apply(null, assigned_types.filter(function(n) { return !isNaN(n); })));
     min_type_2 = min_type_2 + 2;
-    // delete assigned_types[min_type_2 - 2];
-    // min_type_3 = assigned_types.indexOf(Math.min.apply(null, assigned_types.filter(function(n) { return !isNaN(n); })));
-    // min_type_3 = min_type_3 + 2;
     chosen_patterns = [];
     chosen_patterns.push(1);
     chosen_patterns.push(min_type);
     chosen_patterns.push(min_type_2);
-    // chosen_patterns.push(min_type_3);
 
-    // 包含chronological和其他任意三个pattern
     return chosen_patterns
 }
 
 async function choose_pattern_order(chosen_patterns) {
-    // console.log(chosen_patterns.sort(function() { return Math.random() - 0.5; }))
-    history_assigned_types = [];
-    stock_assigned_types = [];
-    c_assigned_types = [];
-    // d_assigned_types = []
-    // pattern_1 = 1
-    // pattern_2 = chosen_patterns[1]
-    // pattern_3 = chosen_patterns[2]
-    // pattern_4 = chosen_patterns[3]
-    // chosen_patterns_copy = chosen_patterns.slice(0, 2)
 
     d = await get_firebase_data(mid_collection, false)
     history_pattern_1 = d.filter(p => p['history_pattern'] == chosen_patterns[0]).length
@@ -327,13 +222,6 @@ async function choose_pattern_order(chosen_patterns) {
             user_data['diary_pattern'] = chosen_patterns[1];
             user_data['population_pattern'] = chosen_patterns[2];
         }
-        // if (questions_shuffle[0]['dataset'] == 'history') {
-        //     questions_shuffle[0]['pattern'] = 1;
-        //     questions_shuffle[1]['pattern'] = chosen_patterns[1];
-        // } else {
-        //     questions_shuffle[1]['pattern'] = 1;
-        //     questions_shuffle[0]['pattern'] = chosen_patterns[1];
-        // }
     } else if (population_pattern_1 <= history_pattern_1 && population_pattern_1 <= diary_pattern_1) {
         user_data['population_pattern'] = 1;
         if (history_pattern_2 <= diary_pattern_2) {
@@ -367,74 +255,6 @@ async function choose_pattern_order(chosen_patterns) {
     }
 
 
-    // if (history_pattern_1 <= population_pattern_1) {
-    //     user_data['history_pattern'] = 1;
-    //     user_data['population_pattern'] = chosen_patterns[1];
-    //     if (questions_shuffle[0]['dataset'] == 'history') {
-    //         questions_shuffle[0]['pattern'] = 1;
-    //         questions_shuffle[1]['pattern'] = chosen_patterns[1];
-    //     } else {
-    //         questions_shuffle[1]['pattern'] = 1;
-    //         questions_shuffle[0]['pattern'] = chosen_patterns[1];
-    //     }
-    // } else {
-    //     user_data['history_pattern'] = chosen_patterns[1];
-    //     user_data['population_pattern'] = 1
-    //     if (questions_shuffle[0]['dataset'] == 'stock') {
-    //         questions_shuffle[0]['pattern'] = 1;
-    //         questions_shuffle[1]['pattern'] = chosen_patterns[1];
-
-    //     } else {
-    //         questions_shuffle[1]['pattern'] = 1;
-    //         questions_shuffle[0]['pattern'] = chosen_patterns[1];
-
-    //     }
-    // }
-
-
-    // for (i = 0; i < 2; i++) {
-    //     num_of_this_type = d.filter(p => p['history_pattern'] == chosen_patterns_copy[i]).length
-    //     history_assigned_types.push(num_of_this_type)
-    // }
-    // history_min_type = history_assigned_types.indexOf(Math.min(...history_assigned_types));
-    // if (questions_shuffle[0]['dataset'] == 'history') {
-    //     questions_shuffle[0]['pattern'] = chosen_patterns_copy[history_min_type];
-    // } else {
-    //     questions_shuffle[1]['pattern'] = chosen_patterns_copy[history_min_type];
-    // }
-    // user_data['history_pattern'] = chosen_patterns_copy[history_min_type];
-
-
-    // chosen_patterns_copy.splice(history_min_type, 1)
-
-    // for (i = 0; i < 1; i++) {
-    //     num_of_this_type = d.filter(p => p['population_pattern'] == chosen_patterns_copy[i]).length
-    //     stock_assigned_types.push(num_of_this_type)
-    // }
-
-    // stock_min_type = stock_assigned_types.indexOf(Math.min(...stock_assigned_types));
-    // if (questions_shuffle[0]['dataset'] == 'stock') {
-    //     questions_shuffle[0]['pattern'] = chosen_patterns_copy[stock_min_type];
-
-    // } else {
-    //     questions_shuffle[1]['pattern'] = chosen_patterns_copy[stock_min_type];
-    // }
-    // user_data['population_pattern'] = chosen_patterns_copy[stock_min_type];
-
-    // chosen_patterns_copy.splice(stock_min_type, 1)
-
-    // for (i = 0; i < 2; i++) {
-    //     num_of_this_type = d.filter(p => p['diary_pattern'] == chosen_patterns_copy[i]).length
-    //     c_assigned_types.push(num_of_this_type)
-    // }
-
-    // c_min_type = c_assigned_types.indexOf(Math.min(...c_assigned_types));
-    // questions[2]['pattern'] = chosen_patterns_copy[c_min_type];
-
-    // chosen_patterns_copy.splice(c_min_type, 1);
-
-    // questions[3]['pattern'] = chosen_patterns_copy[0];
-
     var record = []
     record.push(questions_shuffle[0]['dataset'])
     record.push(questions_shuffle[0]['pattern'])
@@ -442,41 +262,9 @@ async function choose_pattern_order(chosen_patterns) {
     record.push(questions_shuffle[1]['pattern'])
     record.push(questions_shuffle[2]['dataset'])
     record.push(questions_shuffle[2]['pattern'])
-        // pattern_order.push(questions[2]['pattern'])
-        // pattern_order.push(questions[3]['pattern'])
     return record
 }
 
-// async function choose_assigned_question_type() {
-//     assigned_types = []
-//     d = await get_firebase_data(mid_collection, false)
-//     for (i = 0; i < 4; i++) {
-//         num_of_this_type = d.filter(p => p['assigned_question_type'] == i + 1).length
-//         assigned_types.push(num_of_this_type)
-//     }
-//     //读取数据库，看哪种layout现在是最少的，返回它的index
-//     min_type = assigned_types.indexOf(Math.min(...assigned_types))
-//     return min_type + 1
-// }
-
-
-// async function choose_latin_square_index() {
-//     assigned_indices = []
-//     d = await get_firebase_data(mid_collection, false)
-//         //从数据库中找出和这个用户que type一样的数据
-//     d = d.filter(p => p['assigned_question_type'] == user_data['assigned_question_type'])
-//         //看数据库中的12种latin-square index的频次，找出最少的那种
-//     for (i = 0; i < 12; i++) {
-//         num_of_this_type = d.filter(p => p['latin_square_index'] == i).length
-//         assigned_indices.push(num_of_this_type)
-//     }
-
-//     min_index = assigned_indices.indexOf(Math.min(...assigned_indices))
-
-//     console.log(user_data['assigned_question_type'], min_index, assigned_indices)
-
-//     return min_index
-// }
 
 function shuffle_question(questions) {
     var dice = Math.floor(Math.random() * 6)
@@ -508,6 +296,70 @@ function shuffle_question(questions) {
 }
 
 
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+var progress_bar = (progress, color, section) => {
+    //总体bar
+    bar = document.createElement('div')
+    bar.style.position = 'absolute'
+    bar.style.top = '0px'
+    bar.style.height = '10px'
+    bar.className = 'timeclass'
+    bar.id = 'timebar'
+    bar.style.width = Math.round(progress) + 'px'
+    bar.style.backgroundColor = color
+    document.body.append(bar)
+        //进行到第几个，显示红色bar
+    d = document.createElement('div')
+    d.style.position = 'absolute'
+    d.className = 'timeclass'
+    d.style.top = '1vh'
+    d.style.left = '1vh'
+    d.style.color = color
+    if (section == 'tutorial') d.innerHTML = 'tutorial progress: ' + (1 + current_slide) + '/' + (tutorial_length)
+    else if (section == 'test') d.innerHTML = 'story number: ' + (1 + current_question) + '/' + (questions.length)
+    document.body.append(d)
+
+    d = document.createElement('div')
+    d.id = 'timediv'
+    d.className = 'timeclass'
+    d.style.position = 'absolute'
+    d.style.top = '4%'
+    d.style.left = '1vh'
+    d.style.color = color
+    document.body.append(d)
+}
+
+
+var next_question = () => {
+
+    clickable_selected_answer = null
+    clickable_selected_answer_event = null
+
+    cur_start_time = new Date()
+
+    document.body.innerHTML = ''
+    error = undefined
+    progress_bar((current_question + 1) * window.innerWidth / questions_shuffle.length, '#0000cc', 'test')
+    gen_question(questions_shuffle[current_question]['text'], questions_shuffle[current_question]['pattern'], questions_shuffle[current_question]['dataset'])
+
+}
+
+
+var init_questions = () => {
+    document.body.innerHTML = ''
+    timediv = document.createElement('div')
+    timediv.id = 'timediv'
+    for (i in questions_shuffle) questions_shuffle[i]['original_index'] = i
+    next_question()
+}
+
 
 async function init() {
     //连接到数据库
@@ -519,10 +371,6 @@ async function init() {
     user_data['timestamp_start'] = init_timestamp
     user_data['mid'] = mID
     shuffle_question(questions)
-        //随机选择一种layout
-        // user_data['assigned_question_type'] = await choose_assigned_question_type()
-        //找到question里的这种layout，并随机排序
-        // user_data['latin_square_index'] = await choose_latin_square_index()
     user_data['assigned_pattern_type'] = await choose_assigned_pattern_type()
     user_data['record'] = await choose_pattern_order(chosen_patterns)
     user_data['history' + '_replay'] = 0
@@ -530,10 +378,6 @@ async function init() {
     user_data['diary' + '_replay'] = 0
 
 
-    // user_data['history_pattern'] = user_data['pattern_order'][0]
-    // user_data['story_pattern'] = user_data['pattern_order'][1]
-    // user_data['diary_pattern'] = user_data['pattern_order'][2]
-    // user_data['d_pattern'] = user_data['pattern_order'][3]
 
     window.addEventListener("beforeunload", function(e) {
         var confirmationMessage = "\o/";
@@ -541,12 +385,7 @@ async function init() {
         return confirmationMessage; //Webkit, Safari, Chrome
     });
 
-    //页面跳转
-    // init_questions()
-    //init_tutorial()
     init_landing_page()
-        //init_consent()
-        //init_survey()
 }
 
 init()

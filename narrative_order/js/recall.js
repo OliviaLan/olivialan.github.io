@@ -1,4 +1,4 @@
-var save_q3_answers = () => {
+var save_q1_answers = () => {
 
     if (current_question == 0) {
         var dataset = user_data['record'][0];
@@ -13,17 +13,7 @@ var save_q3_answers = () => {
 
 
     if (document.getElementById('recall_order').value && document.getElementById('retell').value) {
-        // var recall = []
-        // recall.push(document.getElementById('recall1').value)
-        // recall.push(document.getElementById('recall2').value)
-        // recall.push(document.getElementById('recall3').value)
-        // recall.push(document.getElementById('recall4').value)
-        // recall.push(document.getElementById('recall5').value)
-        // recall.push(document.getElementById('recall6').value)
-        // recall.push(document.getElementById('recall7').value)
         new_answer = {
-            // 'index': shuffle_question[current_question]['original_index'],
-            // 'recall_overall': document.getElementById('main_idea').value,
             'recall': document.getElementById('retell').value,
             'recall_order': document.getElementById('recall_order').value,
             'elapsed_time': Date.now() - cur_start_time,
@@ -66,9 +56,7 @@ var init_recall = () => {
     d.innerHTML += '<br><p>2. Please retell the story content as much as you can:</p><br>'
 
     textarea = document.createElement('textarea')
-        // input.name = "reason"
     textarea.id = "retell"
-        // input.size = "35"
     textarea.style.width = "500px"
     textarea.style.height = "150px"
 
@@ -78,10 +66,8 @@ var init_recall = () => {
     btn = document.createElement('button')
     btn.innerHTML = 'Next Question'
     btn.className = 'button f_button'
-        // btn.style.margin = '5%'
-        // btn.style.fontSize = 'large'
     btn.onclick = () => {
-        save_q3_answers()
+        save_q1_answers()
     }
     document.body.append(btn)
 }

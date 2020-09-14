@@ -2,7 +2,7 @@ var grid_width = 600
 var grid_margin = 90
 
 
-var save_q4_answers = () => {
+var save_q3_answers = () => {
 
     if (current_question == 0) {
         var dataset = user_data['record'][0];
@@ -34,7 +34,6 @@ var save_q4_answers = () => {
 
     if (document.getElementById('grid_reason').value != '') {
         new_answer = {
-            // 'index': shuffle_question[current_question]['original_index'],
             'expressiveness': position_invert[0],
             'comprehensibility': position_invert[1],
             'grid_reason': document.getElementById('grid_reason').value,
@@ -50,7 +49,6 @@ var save_q4_answers = () => {
             current_question++
             next_question()
         } else {
-            // user_data['full_questions_time'] = Date.now() - init_timestamp
             init_survey()
         }
     } else {
@@ -83,9 +81,7 @@ var init_grid = () => {
     d_3.style.display = 'inline-block'
     document.body.append(d_3)
     textarea = document.createElement('textarea')
-        // input.name = "reason"
     textarea.id = "grid_reason"
-        // input.size = "35"
     textarea.style.width = "500px"
     textarea.style.height = "100px"
 
@@ -94,7 +90,6 @@ var init_grid = () => {
     var svg = d3.select("#grid").append("svg")
         .attr("width", grid_width)
         .attr("height", grid_width)
-        // .on("click", click);
 
     var x = d3.scaleLinear()
         .domain([-3, 3])
@@ -144,13 +139,11 @@ var init_grid = () => {
         .text("Expressionless");
 
 
-
-
     var xPointer = svg
         .append('line')
         .attr('id', 'x-pointer')
         .attr('stroke', '#bbb')
-        .attr("class", "hahaha")
+        .attr("class", "pointer")
         .attr('stroke-width', 2)
         .style("stroke-dasharray", ("7, 3"))
         .attr("x1", grid_width / 2)
@@ -159,12 +152,11 @@ var init_grid = () => {
         .attr("y2", grid_width / 2);
 
 
-
     var yPointer = svg
         .append('line')
         .attr('id', 'y-pointer')
         .attr('stroke', '#bbb')
-        .attr("class", "hahaha")
+        .attr("class", "pointer")
         .attr('stroke-width', 2)
         .style("stroke-dasharray", ("7, 3"))
         .attr("x1", grid_width / 2)
@@ -233,12 +225,9 @@ var init_grid = () => {
     btn = document.createElement('button')
     if (current_question < questions.length - 1) btn.innerHTML = 'Next Story'
     else btn.innerHTML = 'End test'
-        // btn.style.marginLeft = '45%'
     btn.className = 'button f_button'
-        // btn.style.display = 'block'
-        // btn.style.fontSize = 'large'
     btn.onclick = () => {
-        save_q4_answers()
+        save_q3_answers()
     }
     document.body.append(btn)
 }

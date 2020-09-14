@@ -13,52 +13,41 @@ var save_q2_answers = () => {
 
     attention = Array.prototype.slice.call(d.getElementsByClassName('attention'))
     involvement = Array.prototype.slice.call(d.getElementsByClassName('involvement'))
-    novelty = Array.prototype.slice.call(d.getElementsByClassName('novelty'))
+    interest = Array.prototype.slice.call(d.getElementsByClassName('interest'))
     motivation = Array.prototype.slice.call(d.getElementsByClassName('motivation'))
     challenge = Array.prototype.slice.call(d.getElementsByClassName('challenge'))
-    affect_enjoy = Array.prototype.slice.call(d.getElementsByClassName('affect_enjoy'))
+    enjoyment = Array.prototype.slice.call(d.getElementsByClassName('enjoyment'))
     affect_arousal = Array.prototype.slice.call(d.getElementsByClassName('affect_arousal'))
     likability = Array.prototype.slice.call(d.getElementsByClassName('likability'))
 
-    // arousal = Array.prototype.slice.call(d.children).filter(d => d.name == 'arousal')
-    // clearness = Array.prototype.slice.call(d.children).filter(d => d.name == 'clearness')
-    // attention = Array.prototype.slice.call(d.children).filter(d => d.name == 'attention')
 
     var counter = 0
-    for (var n in novelty) {
+    for (var it in interest) {
         for (var a in attention) {
             for (var i in involvement) {
                 for (var m in motivation) {
                     for (var ch in challenge) {
-                        for (var en in affect_enjoy) {
+                        for (var en in enjoyment) {
                             for (var ar in affect_arousal) {
                                 for (var l in likability) {
-                                    if (likability[l].checked == true && affect_enjoy[en].checked == true && affect_arousal[ar].checked == true && novelty[n].checked == true && attention[a].checked == true && involvement[i].checked == true && motivation[m].checked == true && challenge[ch].checked == true) {
-
+                                    if (likability[l].checked == true && enjoyment[en].checked == true && affect_arousal[ar].checked == true && interest[it].checked == true && attention[a].checked == true && involvement[i].checked == true && motivation[m].checked == true && challenge[ch].checked == true) {
                                         console.log('finished')
                                         new_answer = {
                                             'attention': attention[a].value,
                                             'involvement': involvement[i].value,
-                                            'novelty': novelty[n].value,
+                                            'interest': interest[it].value,
                                             'motivation': motivation[m].value,
                                             'challenge': challenge[ch].value,
-                                            'affect_enjoy': affect_enjoy[en].value,
+                                            'enjoyment': enjoyment[en].value,
                                             'affect_arousal': affect_arousal[ar].value,
                                             'likability': likability[l].value,
                                             'elapsed_time': Date.now() - cur_start_time,
                                             'dataset': dataset,
                                             'pattern': pattern,
-                                            // 'rating_reason': document.getElementById('rating_reason').value,
                                         }
                                         user_answers.push(new_answer)
                                         user_data['answers'] = user_answers
                                         db.collection(incomplete_collection).add(user_data)
-                                            //         .then(involvementction(docRef) {
-                                            //             console.log("Document written with ID: ", docRef.id);
-                                            //         })
-                                            //         .catch(involvementction(error) {
-                                            //             console.error("Error adding document: ", error);
-                                            //         });
                                         init_grid()
                                     } else {
                                         counter++
@@ -85,8 +74,6 @@ var save_q2_answers = () => {
 
     }
 
-
-    // disable_radio_buttons()
 }
 
 
@@ -121,11 +108,9 @@ var init_engage = () => {
         l2.for = i;
         l2.innerHTML = i;
         l2.className = "l1";
-        //依次添加radio button和label
         choice.append(r2);
         choice.append(l2);
         d.append(choice)
-            // d.innerHTML += '<br>'
     }
 
     d.innerHTML += '<br>'
@@ -140,7 +125,6 @@ var init_engage = () => {
         scale.style.display = "inline-block";
         scale.style.width = "100px";
         scale.style.verticalAlign = "top";
-        // hhh.style.lineHeight = "50px";
         scale.style.textAlign = "center";
         scale.innerHTML = i
         likert.append(scale)
@@ -169,12 +153,9 @@ var init_engage = () => {
         l1.for = i;
         l1.innerHTML = i;
         l1.className = "l1";
-        //依次添加radio button和label
         choice.append(r1);
         choice.append(l1);
         d.append(choice)
-
-        // d.innerHTML += '<br>'
     }
 
     d.innerHTML += '<br>'
@@ -189,7 +170,6 @@ var init_engage = () => {
         scale.style.display = "inline-block";
         scale.style.width = "100px";
         scale.style.verticalAlign = "top";
-        // hhh.style.lineHeight = "50px";
         scale.style.textAlign = "center";
         scale.innerHTML = i
         likert.append(scale)
@@ -209,18 +189,16 @@ var init_engage = () => {
         choice.style.textAlign = "center";
         r1 = document.createElement("input");
         r1.type = "radio";
-        r1.name = "novelty";
-        r1.className = "r1 novelty";
+        r1.name = "interest";
+        r1.className = "r1 interest";
         r1.value = i;
         l1 = document.createElement("label");
         l1.for = i;
         l1.innerHTML = i;
         l1.className = "l1";
-        //依次添加radio button和label
         choice.append(r1);
         choice.append(l1);
         d.append(choice)
-            // d.innerHTML += '<br>'
     }
     d.innerHTML += '<br>'
 
@@ -234,7 +212,6 @@ var init_engage = () => {
         scale.style.display = "inline-block";
         scale.style.width = "100px";
         scale.style.verticalAlign = "top";
-        // hhh.style.lineHeight = "50px";
         scale.style.textAlign = "center";
         scale.innerHTML = i
         likert.append(scale)
@@ -262,11 +239,9 @@ var init_engage = () => {
         l2.for = i;
         l2.innerHTML = i;
         l2.className = "l1";
-        //依次添加radio button和label
         choice.append(r2);
         choice.append(l2);
         d.append(choice)
-            // d.innerHTML += '<br>'
     }
 
     d.innerHTML += '<br>'
@@ -281,7 +256,6 @@ var init_engage = () => {
         scale.style.display = "inline-block";
         scale.style.width = "100px";
         scale.style.verticalAlign = "top";
-        // hhh.style.lineHeight = "50px";
         scale.style.textAlign = "center";
         scale.innerHTML = i
         likert.append(scale)
@@ -308,11 +282,9 @@ var init_engage = () => {
         l1.for = i;
         l1.innerHTML = i;
         l1.className = "l1";
-        //依次添加radio button和label
         choice.append(r1);
         choice.append(l1);
         d.append(choice)
-            // d.innerHTML += '<br>'
     }
     d.innerHTML += '<br>'
 
@@ -326,7 +298,6 @@ var init_engage = () => {
         scale.style.display = "inline-block";
         scale.style.width = "100px";
         scale.style.verticalAlign = "top";
-        // hhh.style.lineHeight = "50px";
         scale.style.textAlign = "center";
         scale.innerHTML = i
         likert.append(scale)
@@ -346,18 +317,16 @@ var init_engage = () => {
         choice.style.textAlign = "center";
         r1 = document.createElement("input");
         r1.type = "radio";
-        r1.name = "affect_enjoy";
-        r1.className = "r1 affect_enjoy";
+        r1.name = "enjoyment";
+        r1.className = "r1 enjoyment";
         r1.value = i;
         l1 = document.createElement("label");
         l1.for = i;
         l1.innerHTML = i;
         l1.className = "l1";
-        //依次添加radio button和label
         choice.append(r1);
         choice.append(l1);
         d.append(choice)
-            // d.innerHTML += '<br>'
     }
     d.innerHTML += '<br>'
 
@@ -371,7 +340,6 @@ var init_engage = () => {
         scale.style.display = "inline-block";
         scale.style.width = "100px";
         scale.style.verticalAlign = "top";
-        // hhh.style.lineHeight = "50px";
         scale.style.textAlign = "center";
         scale.innerHTML = i
         likert.append(scale)
@@ -399,11 +367,9 @@ var init_engage = () => {
         l1.for = i;
         l1.innerHTML = i;
         l1.className = "l1";
-        //依次添加radio button和label
         choice.append(r1);
         choice.append(l1);
         d.append(choice)
-            // d.innerHTML += '<br>'
     }
     d.innerHTML += '<br>'
 
@@ -417,7 +383,6 @@ var init_engage = () => {
         scale.style.display = "inline-block";
         scale.style.width = "100px";
         scale.style.verticalAlign = "top";
-        // hhh.style.lineHeight = "50px";
         scale.style.textAlign = "center";
         scale.innerHTML = i
         likert.append(scale)
@@ -444,11 +409,9 @@ var init_engage = () => {
         l1.for = i;
         l1.innerHTML = i;
         l1.className = "l1";
-        //依次添加radio button和label
         choice.append(r1);
         choice.append(l1);
         d.append(choice)
-            // d.innerHTML += '<br>'
     }
     d.innerHTML += '<br>'
 
@@ -462,28 +425,10 @@ var init_engage = () => {
         scale.style.display = "inline-block";
         scale.style.width = "100px";
         scale.style.verticalAlign = "top";
-        // hhh.style.lineHeight = "50px";
         scale.style.textAlign = "center";
         scale.innerHTML = i
         likert.append(scale)
     }
-
-
-
-    //----------question-----------
-
-    // d_r = document.createElement('div')
-    // d_r.innerHTML = 'Please provide your reason: <br>'
-    // d_r.style.textAlign = 'left'
-    // d_r.style.margin = '2%'
-    // d.append(d_r)
-    // textarea = document.createElement('textarea')
-    //     // input.name = "reason"
-    // textarea.id = "rating_reason"
-    //     // input.size = "35"
-    // textarea.style.width = "500px"
-    // textarea.style.height = "100px"
-    // d_r.append(textarea)
 
 
     btn = document.createElement('button')
