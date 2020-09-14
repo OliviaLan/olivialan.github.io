@@ -204,53 +204,53 @@ async function choose_assigned_pattern_type() {
 async function choose_pattern_order(chosen_patterns) {
 
     d = await get_firebase_data(mid_collection, false)
-    history_pattern_1 = d.filter(p => p['history_pattern'] == chosen_patterns[0]).length
+    company_pattern_1 = d.filter(p => p['company_pattern'] == chosen_patterns[0]).length
     population_pattern_1 = d.filter(p => p['population_pattern'] == chosen_patterns[0]).length
-    diary_pattern_1 = d.filter(p => p['diary_pattern'] == chosen_patterns[0]).length
+    crime_pattern_1 = d.filter(p => p['crime_pattern'] == chosen_patterns[0]).length
 
-    history_pattern_2 = d.filter(p => p['history_pattern'] == chosen_patterns[1]).length
+    company_pattern_2 = d.filter(p => p['company_pattern'] == chosen_patterns[1]).length
     population_pattern_2 = d.filter(p => p['population_pattern'] == chosen_patterns[1]).length
-    diary_pattern_2 = d.filter(p => p['diary_pattern'] == chosen_patterns[1]).length
+    crime_pattern_2 = d.filter(p => p['crime_pattern'] == chosen_patterns[1]).length
 
 
-    if (history_pattern_1 <= population_pattern_1 && history_pattern_1 <= diary_pattern_1) {
-        user_data['history_pattern'] = 1;
-        if (population_pattern_2 <= diary_pattern_2) {
+    if (company_pattern_1 <= population_pattern_1 && company_pattern_1 <= crime_pattern_1) {
+        user_data['company_pattern'] = 1;
+        if (population_pattern_2 <= crime_pattern_2) {
             user_data['population_pattern'] = chosen_patterns[1];
-            user_data['diary_pattern'] = chosen_patterns[2];
+            user_data['crime_pattern'] = chosen_patterns[2];
         } else {
-            user_data['diary_pattern'] = chosen_patterns[1];
+            user_data['crime_pattern'] = chosen_patterns[1];
             user_data['population_pattern'] = chosen_patterns[2];
         }
-    } else if (population_pattern_1 <= history_pattern_1 && population_pattern_1 <= diary_pattern_1) {
+    } else if (population_pattern_1 <= company_pattern_1 && population_pattern_1 <= crime_pattern_1) {
         user_data['population_pattern'] = 1;
-        if (history_pattern_2 <= diary_pattern_2) {
-            user_data['history_pattern'] = chosen_patterns[1];
-            user_data['diary_pattern'] = chosen_patterns[2];
+        if (company_pattern_2 <= crime_pattern_2) {
+            user_data['company_pattern'] = chosen_patterns[1];
+            user_data['crime_pattern'] = chosen_patterns[2];
         } else {
-            user_data['diary_pattern'] = chosen_patterns[1];
-            user_data['history_pattern'] = chosen_patterns[2];
+            user_data['crime_pattern'] = chosen_patterns[1];
+            user_data['company_pattern'] = chosen_patterns[2];
         }
     } else {
-        user_data['diary_pattern'] = 1;
-        if (history_pattern_2 <= population_pattern_2) {
-            user_data['history_pattern'] = chosen_patterns[1];
+        user_data['crime_pattern'] = 1;
+        if (company_pattern_2 <= population_pattern_2) {
+            user_data['company_pattern'] = chosen_patterns[1];
             user_data['population_pattern'] = chosen_patterns[2];
         } else {
             user_data['population_pattern'] = chosen_patterns[1];
-            user_data['history_pattern'] = chosen_patterns[2];
+            user_data['company_pattern'] = chosen_patterns[2];
         }
     }
 
     for (i = 0; i < 3; i++) {
-        if (questions_shuffle[i]['dataset'] == 'history') {
-            questions_shuffle[i]['pattern'] = user_data['history_pattern'];
+        if (questions_shuffle[i]['dataset'] == 'company') {
+            questions_shuffle[i]['pattern'] = user_data['company_pattern'];
         }
         if (questions_shuffle[i]['dataset'] == 'population') {
             questions_shuffle[i]['pattern'] = user_data['population_pattern'];
         }
-        if (questions_shuffle[i]['dataset'] == 'diary') {
-            questions_shuffle[i]['pattern'] = user_data['diary_pattern'];
+        if (questions_shuffle[i]['dataset'] == 'crime') {
+            questions_shuffle[i]['pattern'] = user_data['crime_pattern'];
         }
     }
 
@@ -360,6 +360,20 @@ var init_questions = () => {
     next_question()
 }
 
+questions = [{
+        'text': 'The Life of Company X',
+        'dataset': 'company',
+    },
+    {
+        'text': 'The Population of City Y',
+        'dataset': 'population',
+    },
+    {
+        'text': 'One Day of Z',
+        'dataset': 'crime',
+    },
+
+]
 
 async function init() {
     //连接到数据库
@@ -373,9 +387,9 @@ async function init() {
     shuffle_question(questions)
     user_data['assigned_pattern_type'] = await choose_assigned_pattern_type()
     user_data['record'] = await choose_pattern_order(chosen_patterns)
-    user_data['history' + '_replay'] = 0
+    user_data['company' + '_replay'] = 0
     user_data['population' + '_replay'] = 0
-    user_data['diary' + '_replay'] = 0
+    user_data['crime' + '_replay'] = 0
 
 
 

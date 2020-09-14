@@ -1,7 +1,3 @@
-//用的时候要先去firestore注册一个新的app，然后粘过来
-//同时还需要开通database和storage
-//database里rule里，Change allow read, write: if false; to true;
-
 // var firebaseConfig = {
 //     apiKey: "",
 //     authDomain: "",

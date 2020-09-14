@@ -13,27 +13,27 @@ var interval = 4000
 function gen_question(text, pattern, dataset) {
 
     var path = "./datasets/";
-    if (dataset == "history") {
-        if (pattern == "1") path += "history_chronology.csv";
-        else if (pattern == "2") path += "history_trace.csv";
-        else if (pattern == "3") path += "history_trailer.csv";
-        else if (pattern == "4") path += "history_recurrence.csv";
-        else if (pattern == "5") path += "history_halfway.csv";
-        else if (pattern == "6") path += "history_anchor.csv";
+    if (dataset == "company") {
+        if (pattern == "1") path += "company_chronology.csv";
+        else if (pattern == "2") path += "company_trace.csv";
+        else if (pattern == "3") path += "company_trailer.csv";
+        else if (pattern == "4") path += "company_recurrence.csv";
+        else if (pattern == "5") path += "company_halfway.csv";
+        else if (pattern == "6") path += "company_anchor.csv";
     } else if (dataset == "population") {
-        if (pattern == "1") path += "line_chronology.csv";
-        else if (pattern == "2") path += "line_trace.csv";
-        else if (pattern == "3") path += "line_trailer.csv";
-        else if (pattern == "4") path += "line_recurrence.csv";
-        else if (pattern == "5") path += "line_halfway.csv";
-        else if (pattern == "6") path += "line_anchor.csv";
-    } else if (dataset == "diary") {
-        if (pattern == "1") path += "diary_chronology.csv";
-        else if (pattern == "2") path += "diary_trace.csv";
-        else if (pattern == "3") path += "diary_trailer.csv";
-        else if (pattern == "4") path += "diary_recurrence.csv";
-        else if (pattern == "5") path += "diary_halfway.csv";
-        else if (pattern == "6") path += "diary_anchor.csv";
+        if (pattern == "1") path += "population_chronology.csv";
+        else if (pattern == "2") path += "population_trace.csv";
+        else if (pattern == "3") path += "population_trailer.csv";
+        else if (pattern == "4") path += "population_recurrence.csv";
+        else if (pattern == "5") path += "population_halfway.csv";
+        else if (pattern == "6") path += "population_anchor.csv";
+    } else if (dataset == "crime") {
+        if (pattern == "1") path += "crime_chronology.csv";
+        else if (pattern == "2") path += "crime_trace.csv";
+        else if (pattern == "3") path += "crime_trailer.csv";
+        else if (pattern == "4") path += "crime_recurrence.csv";
+        else if (pattern == "5") path += "crime_halfway.csv";
+        else if (pattern == "6") path += "crime_anchor.csv";
     }
 
     d3.csv(path).then(data => {
@@ -239,7 +239,7 @@ var create_chronological_timeline = (svg, data) => {
                 }
             ])
         );
-    if (user_data['history_replay'] == 0 || user_data['population_replay'] == 0 || user_data['diary_replay'] == 0) {
+    if (user_data['company_replay'] == 0 || user_data['population_replay'] == 0 || user_data['crime_replay'] == 0) {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
@@ -401,7 +401,7 @@ var create_trailer_timeline = (svg, data) => {
                 }
             ])
         });
-    if (user_data['history_replay'] == 0 || user_data['population_replay'] == 0 || user_data['diary_replay'] == 0) {
+    if (user_data['company_replay'] == 0 || user_data['population_replay'] == 0 || user_data['crime_replay'] == 0) {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
@@ -558,7 +558,7 @@ var create_recurrence_timeline = (svg, data) => {
                 }
             ])
         });
-    if (user_data['history_replay'] == 0 || user_data['population_replay'] == 0 || user_data['diary_replay'] == 0) {
+    if (user_data['company_replay'] == 0 || user_data['population_replay'] == 0 || user_data['crime_replay'] == 0) {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
@@ -717,7 +717,7 @@ var create_trace_timeline = (svg, data) => {
             ])
         });
 
-    if (user_data['history_replay'] == 0 || user_data['population_replay'] == 0 || user_data['diary_replay'] == 0) {
+    if (user_data['company_replay'] == 0 || user_data['population_replay'] == 0 || user_data['crime_replay'] == 0) {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
@@ -871,7 +871,7 @@ var create_halfway_timeline = (svg, data) => {
                 }
             ])
         });
-    if (user_data['history_replay'] == 0 || user_data['population_replay'] == 0 || user_data['diary_replay'] == 0) {
+    if (user_data['company_replay'] == 0 || user_data['population_replay'] == 0 || user_data['crime_replay'] == 0) {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
@@ -1028,7 +1028,7 @@ var create_anchor_timeline = (svg, data) => {
                 }
             ])
         });
-    if (user_data['history_replay'] == 0 || user_data['population_replay'] == 0 || user_data['diary_replay'] == 0) {
+    if (user_data['company_replay'] == 0 || user_data['population_replay'] == 0 || user_data['crime_replay'] == 0) {
         setTimeout(function() {
             document.getElementById('story_finish').style.display = "block"
             document.getElementById('story_replay').style.display = "block"
