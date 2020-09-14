@@ -7,6 +7,7 @@ var save_form_answers = () => {
 
     // speed_all = document.getElementsByName('speed');
     education_all = document.getElementsByName('education');
+    prior_all = document.getElementsByName('prior');
 
     for (i = 0; i < 6; i++) {
         if (education_all[i].checked == true) {
@@ -14,12 +15,19 @@ var save_form_answers = () => {
         }
     }
 
+    for (i = 0; i < 2; i++) {
+        if (prior_all[i].checked == true) {
+            var prior = prior_all[i].value
+        }
+    }
 
-    if (age && gender && education && country && document.getElementById('importance').value) {
+
+
+    if (age && gender && education && country && prior && document.getElementById('importance').value) {
         user_data['age'] = age;
         user_data['gender'] = gender;
         user_data['country'] = country;
-        // user_data['speed'] = speed;
+        user_data['prior'] = prior;
         user_data['education'] = education;
         user_data['importance'] = document.getElementById('importance').value;
         user_data['data'] = document.getElementById('data').value;
@@ -129,27 +137,29 @@ var init_survey = () => {
     d.innerHTML += ' Others'
 
 
-    // d.innerHTML += '<br><br><p>4. I think the animation speed is neither too fast nor too slow.</p>'
-    // input_5 = document.createElement('input')
-    // input_5.id = "speed"
-    // input_5.type = "radio"
-    // input_5.name = "speed"
-    // input_5.value = "Yes";
-    // input_6 = document.createElement('input')
-    // input_6.id = "speed"
-    // input_6.type = "radio"
-    // input_6.name = "speed"
-    // input_6.value = "No";
+    d.innerHTML += '<br><br><p>5. Have you ever seen any of the 10 infographics before?</p>'
+    input_10 = document.createElement('input')
+    input_10.id = "prior"
+    input_10.type = "radio"
+    input_10.name = "prior"
+    input_10.value = "Yes";
+    input_11 = document.createElement('input')
+    input_11.id = "prior"
+    input_11.type = "radio"
+    input_11.name = "prior"
+    input_11.value = "No";
 
 
-    // d.append(input_5)
-    // d.innerHTML += ' Yes  '
+    d.append(input_10)
+    d.innerHTML += ' Yes  '
 
-    // d.append(input_6)
-    // d.innerHTML += ' No  '
+    d.append(input_11)
+    d.innerHTML += ' No  '
 
 
-    d.innerHTML += '<br><br><p>5.What do you think is the most important design factor(s) in infographics to augement affective arousal?</p><br>'
+
+
+    d.innerHTML += '<br><br><p>6.What do you think is the most important design factor(s) in infographics to augement affective arousal?</p><br>'
 
     textarea = document.createElement('textarea')
         // input.name = "reason"
@@ -160,7 +170,7 @@ var init_survey = () => {
 
     d.append(textarea)
 
-    d.innerHTML += '<br><br><p>6.Do you agree that augmenting the affective arousal of infographic design helps you absorb the data better? why?</p><br>'
+    d.innerHTML += '<br><br><p>7.Do you agree that augmenting the affective arousal of infographic design helps you absorb the data better? why?</p><br>'
 
     textarea_3 = document.createElement('textarea')
         // input.name = "reason"
@@ -172,7 +182,7 @@ var init_survey = () => {
     d.append(textarea_3)
 
 
-    d.innerHTML += '<br><br><p>7. Please leave your feedback or comments related to this study below (optional).</p><br>'
+    d.innerHTML += '<br><br><p>8. Please leave your feedback or comments related to this study below (optional).</p><br>'
 
     textarea_2 = document.createElement('textarea')
         // input.name = "reason"

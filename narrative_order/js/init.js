@@ -120,7 +120,7 @@ var init_warning = () => {
     document.body.append(d)
 
     btn = document.createElement('button')
-    btn.innerHTML = 'Start the HIT'
+    btn.innerHTML = 'Start'
     btn.style.margin = '5%'
     btn.style.fontSize = 'large'
         // btn.className = 'button f_button'
