@@ -434,7 +434,6 @@ var init_engage = () => {
     btn = document.createElement('button')
     btn.innerHTML = 'Next Question'
     btn.className = 'button f_button'
-        // btn.style.fontSize = 'large'
     btn.onclick = () => {
         save_q2_answers()
     }

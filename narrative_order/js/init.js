@@ -9,12 +9,7 @@ mid_collection = 'mID_prolific'
 complete_collection = 'result_prolific'
 incomplete_collection = 'result_incomplete_prolific'
 
-replacement_mid_collection = 'mID_replacement'
-experiment_replacement = 'pilot_test1_replacement'
-
 test_mID = "test_mid"
-
-total_num_participants = 108
 
 var width = window.innerWidth - 100;
 var height = window.innerHeight * 0.95;
@@ -32,7 +27,7 @@ var init_end = () => {
     d = document.createElement('div')
     d.style.margin = '10%'
     d.style.marginBottom = '1%'
-    d.innerHTML = '<p>Thank you for participating. <br>Please <a href = "https://app.prolific.co/submissions/complete?cc=28FF7A86" >click here to completed your study.</a></p>'
+    d.innerHTML = '<p>Thank you for participating. <br>Please <a href = "copy Prolific link here" >click here to completed your study.</a></p>'
         // IF USE UNIQUE CODE
         // d2 = document.createElement('div')
         // d2.innerHTML = uniquecode
@@ -43,7 +38,7 @@ var init_end = () => {
 
     console.log('finalize')
 
-    //实验人员在本地下载
+    //Download the final data
     // get_firebase_data(complete_collection, true)
 
     final_user_data = {}
@@ -81,12 +76,6 @@ var get_firebase_data = (collection = complete_collection, download = true) => {
         .then(function(querySnapshot) {
             data = querySnapshot.docs.map(doc => Object.assign(doc.data(), { id: doc.id }));
             filename = 'results.json'
-
-            for (elem of data) {
-                for (prop of Object.keys(form_properties)) {
-                    if (elem[prop] == undefined) elem[prop] = 'null'
-                }
-            }
 
             if (download) {
                 if (typeof data === "object") {
