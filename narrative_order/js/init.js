@@ -110,14 +110,6 @@ var save_mid = () => {
         .catch(function(error) {
             console.error("Error adding document: ", error);
         });
-
-    db.collection(replacement_mid_collection).add(user_data)
-        .then(function(docRef) {
-            console.log(replacement_mid_collection + "Document written with ID: ", docRef.id);
-        })
-        .catch(function(error) {
-            console.error("Error adding document: ", error);
-        });
 }
 
 

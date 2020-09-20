@@ -54,7 +54,7 @@ function gen_question(text, pattern, dataset) {
         var divradio = document.createElement("form");
         divradio.style.textAlign = "left";
         divradio.id = "divradio";
-        divradio.innerHTML = "<b>Story " + (current_question + 1) + ": " + text + "</b>" + "<p>The animation will start in about 3 seconds</p>";
+        divradio.innerHTML = "<b>Story " + (current_question + 1) + ": " + text + "</b>" + "<p>Animation will start in about 3 seconds</p>";
         divquestion.append(divradio);
 
         document.body.append(divquestion);
