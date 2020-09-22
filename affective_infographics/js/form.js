@@ -3,6 +3,8 @@ var save_form_answers = () => {
     age = document.getElementById('age').value;
     gender = document.getElementById('gender').value;
     country = document.getElementById('country').value;
+    country = document.getElementById('country').value;
+
 
 
     // speed_all = document.getElementsByName('speed');
@@ -23,7 +25,7 @@ var save_form_answers = () => {
 
 
 
-    if (age && gender && education && country && prior && document.getElementById('importance').value) {
+    if (age && gender && education && country && prior && document.getElementById('importance').value && document.getElementById('data').value) {
         user_data['age'] = age;
         user_data['gender'] = gender;
         user_data['country'] = country;
