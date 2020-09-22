@@ -1,48 +1,51 @@
 function save_answer() {
 
     arousal = Array.prototype.slice.call(d.getElementsByClassName('arousal'))
+    preference_like = Array.prototype.slice.call(d.getElementsByClassName('preference_like'))
+    preference_share = Array.prototype.slice.call(d.getElementsByClassName('preference_share'))
+
 
     var counter = 0
     for (var i in arousal) {
-        if (arousal[i].checked == true && document.getElementById('reason').value != '') {
-            console.log('finished')
-            new_answer = {
-                'arousal': arousal[i].value,
-                'pic_id': questions_shuffle[current_question]['id'],
-                'reason': document.getElementById('reason').value,
-            }
-            user_answers.push(new_answer)
-            user_data['answers'] = user_answers
-                // db.collection(incomplete_collection).add(user_data)
-                // .then(involvementction(docRef) {
-                //     console.log("Document written with ID: ", docRef.id);
-                // })
-                // .catch(involvementction(error) {
-                //     console.error("Error adding document: ", error);
-                // });
-            if (current_question < questions_shuffle.length - 1) {
-                current_question++
-                gen_pic()
-            } else {
-                // user_data['full_questions_time'] = Date.now() - init_timestamp
-                init_survey()
-            }
+        for (var l in preference_like) {
+            for (var s in preference_share) {
+                if (arousal[i].checked == true && preference_like[l].checked == true && preference_share[s].checked == true && document.getElementById('reason').value != '') {
+                    console.log('finished')
+                    new_answer = {
+                        'arousal': arousal[i].value,
+                        'pic_id': questions_shuffle[current_question]['id'],
+                        'reason': document.getElementById('reason').value,
+                    }
+                    user_answers.push(new_answer)
+                    user_data['answers'] = user_answers
+                        // db.collection(incomplete_collection).add(user_data)
+                        // .then(involvementction(docRef) {
+                        //     console.log("Document written with ID: ", docRef.id);
+                        // })
+                        // .catch(involvementction(error) {
+                        //     console.error("Error adding document: ", error);
+                        // });
+                    if (current_question < questions_shuffle.length - 1) {
+                        current_question++
+                        gen_pic()
+                    } else {
+                        // user_data['full_questions_time'] = Date.now() - init_timestamp
+                        init_survey()
+                    }
 
-        } else {
-            counter++
-            if (counter == 9) {
-                var error = document.createElement('div')
-                error.innerHTML = 'Please answer all the questions'
-                error.style.color = 'red'
-                d.append(error)
+                } else {
+                    counter++
+                    if (counter == 9 * 5 * 5) {
+                        var error = document.createElement('div')
+                        error.innerHTML = 'Please answer all the questions'
+                        error.style.color = 'red'
+                        d.append(error)
+                    }
+                }
+
             }
         }
-
     }
-
-
-
-    // disable_radio_buttons()
 }
 
 
@@ -57,9 +60,9 @@ function gen_pic() {
     d.innerHTML += '<br><br><img src =./data/' + questions_shuffle[current_question]['src'] + ' style="width: 80%"></img>'
 
 
-    //----------question-----------
+    //----------rating-----------
 
-    d.innerHTML += '<br><br><br><p><strong>1. Please score the affective arousal level of the <u>design</u>:</strong></p><br><br>'
+    d.innerHTML += '<br><br><br><p><strong>1. Please score the affective arousal level of the <u>design</u>:</strong></p><br>'
 
 
     sam = document.createElement('span');
@@ -108,27 +111,12 @@ function gen_pic() {
             // d.innerHTML += '<br>'
     }
 
-    d.innerHTML += '<br>'
+    d.innerHTML += '<br><br>'
 
-    // likert = document.createElement('span');
-    // likert.style.lineHeight = "20px";
-    // d.append(likert);
+    // -----------------reason--------------------
 
 
-    // for (i of['strongly disagree', 'disagree', 'somewhat disagree', 'neutral', 'somewhat agree', 'agree', 'strongly agree']) {
-    //     scale = document.createElement('span')
-    //     scale.style.display = "inline-block";
-    //     scale.style.width = "100px";
-    //     scale.style.verticalAlign = "top";
-    //     // hhh.style.lineHeight = "50px";
-    //     scale.style.textAlign = "center";
-    //     scale.innerHTML = i
-    //     likert.append(scale)
-    // }
-
-    // d.innerHTML += '<br><br>'
-
-    d.innerHTML += '<br><p><strong>2. Please write down your reason:</strong></p><p>if you find more than one affective design factors, we encourage you to list them one by one.</p><p>if you find the infographic design low in affective arousal, please explain why.</p><br>'
+    d.innerHTML += '<p><strong>2. Please write down your reason:</strong></p><p>if you find more than one affective design factors, we encourage you to list them one by one.</p><p>if you find the infographic design low in affective arousal, please explain why.</p><br>'
 
     textarea = document.createElement('textarea')
         // input.name = "reason"
@@ -138,6 +126,99 @@ function gen_pic() {
     textarea.style.height = "150px"
 
     d.append(textarea)
+
+    d.innerHTML += '<br><br>'
+
+
+    // -----------------preference 1--------------------
+    d.innerHTML += '<p><strong>3. I feel that I like this infographic.</strong></p>'
+    d.innerHTML += '<br>'
+
+
+    for (var i = 1; i < 6; i++) {
+        choice = document.createElement("span");
+        choice.style.display = "inline-block";
+        choice.style.width = "100px";
+        choice.style.height = "20px";
+        choice.style.textAlign = "center";
+        r1 = document.createElement("input");
+        r1.type = "radio";
+        r1.name = "preference_like";
+        r1.className = "r1 preference_like";
+        r1.value = i;
+        l1 = document.createElement("label");
+        l1.for = i;
+        l1.innerHTML = i;
+        l1.className = "l1";
+        choice.append(r1);
+        choice.append(l1);
+        d.append(choice)
+    }
+
+    d.innerHTML += '<br>'
+
+    likert = document.createElement('span');
+    likert.style.lineHeight = "20px";
+    d.append(likert);
+
+
+    for (i of['Strongly disagree', 'Disagree', 'Neither agree nor disagree', 'Agree', 'Strongly agree']) {
+        scale = document.createElement('span')
+        scale.style.display = "inline-block";
+        scale.style.width = "100px";
+        scale.style.verticalAlign = "top";
+        scale.style.textAlign = "center";
+        scale.innerHTML = i
+        likert.append(scale)
+    }
+
+    d.innerHTML += '<br><br>'
+
+    // -----------------preference 2--------------------
+    d.innerHTML += '<p><strong>4. I feel that I want to share this infographic.</strong></p>'
+    d.innerHTML += '<br>'
+
+
+    for (var i = 1; i < 6; i++) {
+        choice = document.createElement("span");
+        choice.style.display = "inline-block";
+        choice.style.width = "100px";
+        choice.style.height = "20px";
+        choice.style.textAlign = "center";
+        r1 = document.createElement("input");
+        r1.type = "radio";
+        r1.name = "preference_share";
+        r1.className = "r1 preference_share";
+        r1.value = i;
+        l1 = document.createElement("label");
+        l1.for = i;
+        l1.innerHTML = i;
+        l1.className = "l1";
+        choice.append(r1);
+        choice.append(l1);
+        d.append(choice)
+    }
+
+    d.innerHTML += '<br>'
+
+    likert = document.createElement('span');
+    likert.style.lineHeight = "20px";
+    d.append(likert);
+
+
+    for (i of['Strongly disagree', 'Disagree', 'Neither agree nor disagree', 'Agree', 'Strongly agree']) {
+        scale = document.createElement('span')
+        scale.style.display = "inline-block";
+        scale.style.width = "100px";
+        scale.style.verticalAlign = "top";
+        scale.style.textAlign = "center";
+        scale.innerHTML = i
+        likert.append(scale)
+    }
+
+    d.innerHTML += '<br><br>'
+
+
 
 
     btn = document.createElement('button')
@@ -155,19 +236,18 @@ function gen_pic() {
 }
 
 var init_questions = () => {
-        // startTimer(allowed_time_in_minutes * 60);
-        // test_start_time = new Date()
-        document.body.innerHTML = ''
+    // startTimer(allowed_time_in_minutes * 60);
+    // test_start_time = new Date()
+    document.body.innerHTML = ''
 
-        timediv = document.createElement('div')
-        timediv.id = 'timediv'
-            //记录这个问题在原js里的顺序
-            // for (i in questions_shuffle) questions_shuffle[i]['original_index'] = i
-            //挑出符合task类型的12个问题，然后洗牌
+    timediv = document.createElement('div')
+    timediv.id = 'timediv'
+        //记录这个问题在原js里的顺序
+        // for (i in questions_shuffle) questions_shuffle[i]['original_index'] = i
+        //挑出符合task类型的12个问题，然后洗牌
 
-        // if (randomize) questions = shuffle_constrained(questions, chosen_patterns)
-        // if (randomize) questions = shuffle_constrained(questions.filter(q => q['question_type'] == user_data['assigned_question_type']))
+    // if (randomize) questions = shuffle_constrained(questions, chosen_patterns)
+    // if (randomize) questions = shuffle_constrained(questions.filter(q => q['question_type'] == user_data['assigned_question_type']))
 
-        gen_pic()
-    }
-    // --- END cur_start_time
+    gen_pic()
+}

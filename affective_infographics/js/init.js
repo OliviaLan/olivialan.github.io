@@ -137,11 +137,11 @@ var get_firebase_data = (collection = complete_collection, download = true) => {
             data = querySnapshot.docs.map(doc => Object.assign(doc.data(), { id: doc.id }));
             filename = 'results.json'
 
-            for (elem of data) {
-                for (prop of Object.keys(form_properties)) {
-                    if (elem[prop] == undefined) elem[prop] = 'null'
-                }
-            }
+            // for (elem of data) {
+            //     for (prop of Object.keys(form_properties)) {
+            //         if (elem[prop] == undefined) elem[prop] = 'null'
+            //     }
+            // }
 
             if (download) {
                 if (typeof data === "object") {
