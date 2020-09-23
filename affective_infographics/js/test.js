@@ -15,6 +15,8 @@ function save_answer() {
                         'arousal': arousal[i].value,
                         'pic_id': questions_shuffle[current_question]['id'],
                         'reason': document.getElementById('reason').value,
+                        'preference_like': preference_like[l].value,
+                        'preference_share': preference_share[s].value,
                     }
                     user_answers.push(new_answer)
                     user_data['answers'] = user_answers

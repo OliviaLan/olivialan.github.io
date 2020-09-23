@@ -55,7 +55,7 @@ var init_tutorial_3 = () => {
     d.innerHTML += '<img src = "./img/tutorial_3.jpeg" style="width:70%"></img>'
 
     btn = document.createElement('button')
-    btn.innerHTML = 'Start the Study'
+    btn.innerHTML = 'Next'
     btn.className = 'button f_button'
     btn.onclick = init_tutorial_4
 
