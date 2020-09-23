@@ -1,21 +1,26 @@
 var save_form_answers = () => {
 
     age = document.getElementById('age').value;
-    gender = document.getElementById('gender').value;
     country = document.getElementById('country').value;
-    country = document.getElementById('country').value;
+    importance = document.getElementById('importance').value;
+    data = document.getElementById('data').value;
 
-
-
-    // speed_all = document.getElementsByName('speed');
+    gender_all = document.getElementsByName('gender');
     education_all = document.getElementsByName('education');
     prior_all = document.getElementsByName('prior');
+
+    for (i = 0; i < 4; i++) {
+        if (gender_all[i].checked == true) {
+            var gender = gender_all[i].value
+        }
+    }
 
     for (i = 0; i < 6; i++) {
         if (education_all[i].checked == true) {
             var education = education_all[i].value
         }
     }
+
 
     for (i = 0; i < 2; i++) {
         if (prior_all[i].checked == true) {
@@ -25,14 +30,14 @@ var save_form_answers = () => {
 
 
 
-    if (age && gender && education && country && prior && document.getElementById('importance').value && document.getElementById('data').value) {
+    if (age && gender && education && country && prior && importance && data) {
         user_data['age'] = age;
         user_data['gender'] = gender;
         user_data['country'] = country;
         user_data['prior'] = prior;
         user_data['education'] = education;
-        user_data['importance'] = document.getElementById('importance').value;
-        user_data['data'] = document.getElementById('data').value;
+        user_data['importance'] = importance;
+        user_data['data'] = data;
         user_data['feedback'] = document.getElementById('feedback').value;
         user_data['timestamp_end'] = Date.now();
         user_data['worktime_in_seconds'] = (user_data['timestamp_end'] - user_data['timestamp_start']) / 1000;
@@ -69,83 +74,116 @@ var init_survey = () => {
     d.append(input)
 
     d.innerHTML += '<br><br><p>2. Gender</p>'
-    input_2 = document.createElement('input')
-    input_2.id = "gender"
-    input_2.name = "gender"
+    input_21 = document.createElement('input')
+    input_21.id = "gender"
+    input_21.type = "radio"
+    input_21.name = "gender"
+    input_21.value = "female";
+    input_22 = document.createElement('input')
+    input_22.id = "gender"
+    input_22.type = "radio"
+    input_22.name = "gender"
+    input_22.value = "male";
+    input_23 = document.createElement('input')
+    input_23.id = "gender"
+    input_23.type = "radio"
+    input_23.name = "gender"
+    input_23.value = "non-binary";
+    input_24 = document.createElement('input')
+    input_24.id = "gender"
+    input_24.type = "radio"
+    input_24.name = "gender"
+    input_24.value = "prefer not to say";
 
-    d.append(input_2)
 
-    d.innerHTML += '<br><br><p>3. Country</p>'
-    input_9 = document.createElement('input')
-    input_9.id = "country"
-    input_9.name = "country"
 
-    d.append(input_9)
+    // input_2 = document.createElement('input')
+    // input_2.id = "gender"
+    // input_2.name = "gender"
+
+    d.append(input_21)
+    d.innerHTML += ' Female<br>'
+    d.append(input_22)
+    d.innerHTML += ' Male<br>'
+    d.append(input_23)
+    d.innerHTML += ' Non-binary<br>'
+    d.append(input_24)
+    d.innerHTML += ' Prefer not to say<br>'
+
+
+
+
+    d.innerHTML += '<br><p>3. Country</p>'
+    input_3 = document.createElement('input')
+    input_3.id = "country"
+    input_3.name = "country"
+
+    d.append(input_3)
 
 
     d.innerHTML += '<br><br><p>4. What is the highest level of education that you have completed?</p>'
-    input_3 = document.createElement('input')
-    input_3.id = "education"
-    input_3.type = "radio"
-    input_3.name = "education"
-    input_3.value = "Less than a high school diploma";
-    input_4 = document.createElement('input')
-    input_4.id = "education"
-    input_4.type = "radio"
-    input_4.name = "education"
-    input_4.value = "High school or equivalent";
-    input_5 = document.createElement('input')
-    input_5.id = "education"
-    input_5.type = "radio"
-    input_5.name = "education"
-    input_5.value = "Bachelor or equivalent";
-    input_6 = document.createElement('input')
-    input_6.id = "education"
-    input_6.type = "radio"
-    input_6.name = "education"
-    input_6.value = "Master or equivalent";
-    input_7 = document.createElement('input')
-    input_7.id = "education"
-    input_7.type = "radio"
-    input_7.name = "education"
-    input_7.value = "Doctoral or equivalent";
-    input_8 = document.createElement('input')
-    input_8.id = "education"
-    input_8.type = "radio"
-    input_8.name = "education"
-    input_8.value = "Others";
+    input_41 = document.createElement('input')
+    input_41.id = "education"
+    input_41.type = "radio"
+    input_41.name = "education"
+    input_41.value = "Less than a high school diploma";
+    input_42 = document.createElement('input')
+    input_42.id = "education"
+    input_42.type = "radio"
+    input_42.name = "education"
+    input_42.value = "High school or equivalent";
+    input_43 = document.createElement('input')
+    input_43.id = "education"
+    input_43.type = "radio"
+    input_43.name = "education"
+    input_43.value = "Bachelor or equivalent";
+    input_44 = document.createElement('input')
+    input_44.id = "education"
+    input_44.type = "radio"
+    input_44.name = "education"
+    input_44.value = "Master or equivalent";
+    input_45 = document.createElement('input')
+    input_45.id = "education"
+    input_45.type = "radio"
+    input_45.name = "education"
+    input_45.value = "Doctoral or equivalent";
+    input_46 = document.createElement('input')
+    input_46.id = "education"
+    input_46.type = "radio"
+    input_46.name = "education"
+    input_46.value = "Others";
 
-    d.append(input_3)
+    d.append(input_41)
     d.innerHTML += ' Less than a high school diploma<br>'
-    d.append(input_4)
+    d.append(input_42)
     d.innerHTML += ' High school or equivalent<br>'
-    d.append(input_5)
+    d.append(input_43)
     d.innerHTML += ' Bachelor or equivalent<br>'
-    d.append(input_6)
+    d.append(input_44)
     d.innerHTML += ' Master or equivalent<br>'
-    d.append(input_7)
+    d.append(input_45)
     d.innerHTML += ' Doctoral or equivalent<br>'
-    d.append(input_8)
+    d.append(input_46)
     d.innerHTML += ' Others'
 
 
     d.innerHTML += '<br><br><p>5. Have you ever seen any of the 10 infographics before?</p>'
-    input_10 = document.createElement('input')
-    input_10.id = "prior"
-    input_10.type = "radio"
-    input_10.name = "prior"
-    input_10.value = "Yes";
-    input_11 = document.createElement('input')
-    input_11.id = "prior"
-    input_11.type = "radio"
-    input_11.name = "prior"
-    input_11.value = "No";
+    input_51 = document.createElement('input')
+    input_51.id = "prior"
+    input_51.type = "radio"
+    input_51.name = "prior"
+    input_51.value = "Yes";
+    input_52 = document.createElement('input')
+    input_52.id = "prior"
+    input_52.type = "radio"
+    input_52.name = "prior"
+    input_52.value = "No";
 
 
-    d.append(input_10)
+    d.append(input_51)
     d.innerHTML += ' Yes  '
 
-    d.append(input_11)
+    d.append(input_52)
     d.innerHTML += ' No  '
 
 
