@@ -287,6 +287,20 @@ function generateRan() {
     return (random)
 }
 
+function generateSelected() {
+
+    var selection = [177, 155, 54, 99, 116, 9, 156, 3, 86, 124, 87, 121, 123, 128, 93, 78, 130, 115, 88, 77, 94, 72, 79, 46, 41, 71, 152, 97, 172, 18, 170, 1, 117, 49, 122, 44, 28, 96, 106, 53, 23, 158, 10, 119, 175, 105, 174, 57, 174, 57, 24, 166, 40, 21, 113, 180, 43, 83, 12, 85, 143, 159, 133, 75, 82, 73, 30, 48, 173, 37, 91, 134, 5, 64, 154, 178, 14, 137, 61, 34, 84, 74, 13, 107, 81];
+    var selected = [];
+    for (var i = 0; i < 10; i++) {
+        var temp = Math.ceil(Math.random() * selection.length);
+        if (selected.indexOf(selection[temp]) == -1) {
+            selected.push(selection[temp]);
+        } else
+            i--;
+    }
+    return (selected)
+}
+
 
 
 async function init() {
@@ -298,7 +312,8 @@ async function init() {
     init_timestamp = Date.now()
     user_data['timestamp_start'] = init_timestamp
     user_data['mid'] = mID
-    assigned_pics = generateRan().slice(0, 10)
+        // assigned_pics = generateRan().slice(0, 10)
+    assigned_pics = generateSelected()
     user_data['assigned_pics'] = assigned_pics
     for (i = 0; i < 10; i++) {
         questions_shuffle.push(questions[assigned_pics[i] - 1])
