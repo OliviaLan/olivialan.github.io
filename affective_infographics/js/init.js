@@ -289,7 +289,7 @@ function generateRan() {
 
 function generateSelected() {
 
-    var selection = [3, 177, 115, 86, 99, 41, 121, 18, 1, 117, 77, 122, 124, 87, 10, 152, 172, 119, 175, 105, 174, 156, 94, 128, 9, 72, 28, 79, 46, 123, 158, 23, 71, 155, 93, 116, 97, 88, 37, 54, 178, 24, 130, 44, 180, 43, 85, 143];
+    var selection = [177, 99, 115, 3, 122, 41, 77, 28, 87, 172, 18, 54, 117, 156, 128, 72, 86];
     var selected = [];
     for (var i = 0; i < 10; i++) {
         var temp = Math.floor(Math.random() * selection.length);
