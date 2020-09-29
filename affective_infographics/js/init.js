@@ -73,9 +73,9 @@ var init_end = () => {
     console.log('finalize')
 
     //实验人员在本地下载
-    // get_firebase_data(complete_collection, true)
-    // get_firebase_data(incomplete_collection, true)
-    // get_firebase_data(mid_collection, true)
+    get_firebase_data(complete_collection, true)
+        // get_firebase_data(incomplete_collection, true)
+        // get_firebase_data(mid_collection, true)
 
     // 最后提交完成才会生成final，包括做题的和问卷的结果
     final_user_data = {}
@@ -289,7 +289,7 @@ function generateRan() {
 
 function generateSelected() {
 
-    var selection = [1, 12, 95, 97, 5, 30, 36, 43, 46, 48, 51, 53, 59, 71, 73, 81, 84, 103, 107, 115, 118, 140, 143, 160, 171, 173, 174, 13, 14, 17, 23, 27, 32, 45, 47, 49, 57, 61, 79, 94, 98, 100, 106, 113, 121, 124, 130, 134, 142, 148, 149, 152, 153, 154, 155, 164, 166, 170, 175, 177];
+    var selection = [95, 97, 12, 140, 43, 161, 53, 174, 73, 46, 171, 45, 149, 81, 107, 106, 84, 118, 5, 30, 121, 51, 48, 164, 47, 61, 32, 14, 166, 155, 23];
     var selected = [];
     for (var i = 0; i < 10; i++) {
         var temp = Math.floor(Math.random() * selection.length);
