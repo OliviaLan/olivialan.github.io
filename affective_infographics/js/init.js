@@ -278,7 +278,7 @@ function generateRan() {
     var max = questions.length;
     var random = [];
     for (var i = 0; i < max; i++) {
-        var temp = Math.ceil(Math.random() * max);
+        var temp = 183 + Math.ceil(Math.random() * max);
         if (random.indexOf(temp) == -1) {
             random.push(temp);
         } else
@@ -289,7 +289,7 @@ function generateRan() {
 
 function generateSelected() {
 
-    var selection = [95, 97, 12, 140, 43, 161, 53, 174, 73, 46, 171, 45, 149, 81, 107, 106, 84, 118, 5, 30, 121, 51, 48, 164, 47, 61, 32, 14, 166, 155, 23];
+    var selection = [95, 97, 12, 140, 43, 45, 5, 174, 32, 23, 161, 53, 73];
     var selected = [];
     for (var i = 0; i < 10; i++) {
         var temp = Math.floor(Math.random() * selection.length);
@@ -312,11 +312,11 @@ async function init() {
     init_timestamp = Date.now()
     user_data['timestamp_start'] = init_timestamp
     user_data['mid'] = mID
-        // assigned_pics = generateRan().slice(0, 10)
-    assigned_pics = generateSelected()
+    assigned_pics = generateRan().slice(0, 10)
+        // assigned_pics = generateSelected()
     user_data['assigned_pics'] = assigned_pics
     for (i = 0; i < 10; i++) {
-        questions_shuffle.push(questions[assigned_pics[i] - 1])
+        questions_shuffle.push(questions[assigned_pics[i] - 183 - 1])
     }
 
     window.addEventListener("beforeunload", function(e) {

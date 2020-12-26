@@ -189,7 +189,7 @@ var init_survey = () => {
 
 
 
-    d.innerHTML += '<br><br><p>6.What do you think is the most important design factor(s) in infographics to augement affective arousal?</p><br>'
+    d.innerHTML += '<br><br><p>6.What do you think is the most important design factor(s) in infographics to augment affective arousal?</p><br>'
 
     textarea = document.createElement('textarea')
         // input.name = "reason"
