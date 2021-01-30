@@ -289,7 +289,7 @@ function generateRan() {
 
 function generateSelected() {
 
-    var selection = [320, 404, 430, 209, 366, 245, 381, 249, 285, 290, 413, 206];
+    var selection = [452, 435, 442, 459, 501, 495, 499, 479, 502, 491, 464, 468, 480, 436, 460, 482, 467, 469, 449, 471, 450, 438, 444, 454, 487, 485, 448, 500, 474, 455, 439, 504, 477, 465, 446, 488, 510, 437, 453, 489, 508, 476, 466, 486, 493, 441, 503, 463, 483, 458, 440, 470, 515, 456, 498, 481, 497, 478, 509, 505, 506, 514, 475, 507, 472, 443, 496, 434, 451, 457, 492, 462, 512, 484, 445, 461, 494, 447, 473, 490];
     var selected = [];
     for (var i = 0; i < 10; i++) {
         var temp = Math.floor(Math.random() * selection.length);
@@ -312,8 +312,8 @@ async function init() {
     init_timestamp = Date.now()
     user_data['timestamp_start'] = init_timestamp
     user_data['mid'] = mID
-    assigned_pics = generateRan().slice(0, 10)
-        // assigned_pics = generateSelected()
+        // assigned_pics = generateRan().slice(0, 10)
+    assigned_pics = generateSelected()
     user_data['assigned_pics'] = assigned_pics
     for (i = 0; i < 10; i++) {
         questions_shuffle.push(questions[assigned_pics[i] - 433 - 1])
