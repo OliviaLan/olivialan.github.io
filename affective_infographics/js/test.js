@@ -59,7 +59,7 @@ function gen_pic() {
     d.style.textAlign = 'left'
     d.style.margin = '2%'
     document.body.append(d)
-    d.innerHTML += '<br><br><img src =./data_add_2/' + questions_shuffle[current_question]['src'] + ' style="width: 80%"></img>'
+    d.innerHTML += '<br><br><img src =./data/' + questions_shuffle[current_question]['src'] + ' style="width: 80%"></img>'
 
 
     //----------rating-----------
