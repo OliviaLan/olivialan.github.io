@@ -278,7 +278,7 @@ function generateRan() {
     var max = questions.length;
     var random = [];
     for (var i = 0; i < max; i++) {
-        var temp = 433 + Math.ceil(Math.random() * max);
+        var temp = Math.ceil(Math.random() * max);
         if (random.indexOf(temp) == -1) {
             random.push(temp);
         } else
@@ -289,7 +289,7 @@ function generateRan() {
 
 function generateSelected() {
 
-    var selection = [434, 441, 444, 450, 451, 454, 464, 479, 484, 507, 508, 510];
+    var selection = [12, 43, 115, 71, 5, 45, 32, 9, 53, 134, 95, 3, 97, 161, 174, 78, 73, 159, 23, 141, 46, 303, 329, 334, 315, 316, 262, 269, 215, 199, 283, 376, 189, 222, 388, 228, 184, 393, 204, 368, 387, 343, 426, 237, 203, 353, 308, 236, 408, 385, 392, 322, 256, 196, 427, 270, 279, 347, 389, 230, 359, 298, 255, 356, 258, 423, 386, 193, 374, 340, 395, 310, 365, 379, 272, 414, 383, 299, 211, 202, 216, 278, 205, 297, 266, 206, 352, 224, 240, 416, 192, 194, 188, 371, 264, 326, 396, 243, 390, 232, 191, 300, 319, 295, 358, 274, 338, 420, 415, 311, 273, 207, 234, 250, 394, 401, 455, 444, 464, 451, 448, 491, 477, 456, 507, 496, 503, 463, 434, 475, 505, 484, 478];
     var selected = [];
     for (var i = 0; i < 10; i++) {
         var temp = Math.floor(Math.random() * selection.length);
@@ -316,7 +316,7 @@ async function init() {
     assigned_pics = generateSelected()
     user_data['assigned_pics'] = assigned_pics
     for (i = 0; i < 10; i++) {
-        questions_shuffle.push(questions[assigned_pics[i] - 433 - 1])
+        questions_shuffle.push(questions[assigned_pics[i] - 1])
     }
 
     window.addEventListener("beforeunload", function(e) {
