@@ -20,8 +20,8 @@
   	            find_mid()
   	            if (mID == undefined || mID == '' || mID == 'preview') end_preview()
   	                // else init_warning()
-  	                // else init_survey()
-  	            else init_tutorial_1()
+  	            else init_survey()
+  	                // else init_tutorial_1()
   	        }
   	        document.body.append(btn)
 

@@ -73,9 +73,9 @@ var init_end = () => {
     console.log('finalize')
 
     //实验人员在本地下载
-    // get_firebase_data(complete_collection, true)
-    // get_firebase_data(incomplete_collection, true)
-    // get_firebase_data(mid_collection, true)
+    get_firebase_data(complete_collection, true)
+        // get_firebase_data(incomplete_collection, true)
+        // get_firebase_data(mid_collection, true)
 
     // 最后提交完成才会生成final，包括做题的和问卷的结果
     final_user_data = {}
