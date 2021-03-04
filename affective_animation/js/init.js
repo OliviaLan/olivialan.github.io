@@ -271,14 +271,11 @@ async function find_mid() {
 }
 
 
-
-
-function generateRan() {
+function generateStory() {
     //从1-max生成整数
-    var max = questions.length;
     var random = [];
-    for (var i = 0; i < max; i++) {
-        var temp = Math.ceil(Math.random() * max);
+    for (var i = 0; i < 30; i++) {
+        var temp = Math.ceil(Math.random() * 30);
         if (random.indexOf(temp) == -1) {
             random.push(temp);
         } else
@@ -287,18 +284,42 @@ function generateRan() {
     return (random)
 }
 
-function generateSelected() {
-
-    var selection = [72, 77, 78, 79, 81, 121, 123, 124, 179, 433];
-    var selected = [];
-    for (var i = 0; i < 10; i++) {
-        var temp = Math.floor(Math.random() * selection.length);
-        if (selected.indexOf(selection[temp]) == -1) {
-            selected.push(selection[temp]);
+function generateStory() {
+    //从1-max生成整数
+    var random = [];
+    for (var i = 0; i < 30; i++) {
+        var temp = Math.ceil(Math.random() * 30);
+        if (random.indexOf(temp) == -1) {
+            random.push(temp);
         } else
             i--;
     }
-    return (selected)
+    return (random)
+}
+
+function generateAnimation(assigned_stories) {
+    var baseline_dice = Math.ceil(Math.random() * 10);
+    var baseline_story
+    for (d = 0; d < questions.length; d++) {
+        if (questions[d]['story_id'] == "story" + assigned_stories[baseline_dice - 1] && questions[d]['animation'] == "baseline") {
+            baseline_story = questions[d]
+        }
+    }
+    var other_stories = JSON.parse(JSON.stringify(assigned_stories));
+    other_stories.splice(baseline_dice - 1, 1);
+
+    for (i = 0; i < 9; i++) {
+        // console.log(assigned_stories[i])
+        var animations = [];
+        for (j = 0; j < questions.length; j++) {
+            if (questions[j]['story_id'] == "story" + other_stories[i]) {
+                animations.push(questions[j])
+            }
+        }
+        var temp = Math.ceil(Math.random() * animations.length);
+        questions_shuffle.push(animations[temp - 1])
+    }
+    questions_shuffle.splice(baseline_dice - 1, 0, baseline_story)
 }
 
 
@@ -312,14 +333,16 @@ async function init() {
     init_timestamp = Date.now()
     user_data['timestamp_start'] = init_timestamp
     user_data['mid'] = mID
+    assigned_stories = generateStory().slice(0, 10)
         //从question里随机挑
-    assigned_pics = generateRan().slice(0, 10)
+        // assigned_pics = generateRan().slice(0, 10)
         //从指定的list里随机挑
         // assigned_pics = generateSelected()
-    user_data['assigned_pics'] = assigned_pics
-    for (i = 0; i < 10; i++) {
-        questions_shuffle.push(questions[assigned_pics[i] - 1])
-    }
+    user_data['assigned_stories'] = assigned_stories
+    generateAnimation(assigned_stories)
+        // for (i = 0; i < 10; i++) {
+        //     questions_shuffle.push(questions[assigned_stories[i] - 1])
+        // }
 
     window.addEventListener("beforeunload", function(e) {
         var confirmationMessage = "\o/";

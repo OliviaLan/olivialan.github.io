@@ -2,12 +2,11 @@ var save_form_answers = () => {
 
     age = document.getElementById('age').value;
     country = document.getElementById('country').value;
-    importance = document.getElementById('importance').value;
-    data = document.getElementById('data').value;
 
     gender_all = document.getElementsByName('gender');
     education_all = document.getElementsByName('education');
-    prior_all = document.getElementsByName('prior');
+    sum_impress_all = document.getElementsByName('sum_impress');
+
 
     for (i = 0; i < 4; i++) {
         if (gender_all[i].checked == true) {
@@ -21,29 +20,25 @@ var save_form_answers = () => {
         }
     }
 
-
-    for (i = 0; i < 2; i++) {
-        if (prior_all[i].checked == true) {
-            var prior = prior_all[i].value
+    for (i = 0; i < 10; i++) {
+        if (sum_impress_all[i].checked == true) {
+            var sum_impress = sum_impress_all[i].value
         }
     }
 
 
 
-    if (age && gender && education && country && prior && importance && data) {
+    if (age && gender && education && country && sum_impress) {
         user_data['age'] = age;
         user_data['gender'] = gender;
         user_data['country'] = country;
-        user_data['prior'] = prior;
         user_data['education'] = education;
-        user_data['importance'] = importance;
-        user_data['data'] = data;
+        user_data['sum_impress'] = questions_shuffle[sum_impress]['id'];
         user_data['feedback'] = document.getElementById('feedback').value;
         user_data['timestamp_end'] = Date.now();
         user_data['worktime_in_seconds'] = (user_data['timestamp_end'] - user_data['timestamp_start']) / 1000;
         user_data['timestamp_start'] = new Date(user_data['timestamp_start']).toString();
         user_data['timestamp_end'] = new Date(user_data['timestamp_end']).toString();
-
         init_end()
     } else {
         console.log('pls fill in')
@@ -65,7 +60,7 @@ var init_survey = () => {
     d.style.margin = '2%'
     document.body.append(d)
 
-    d.innerHTML += '<br><p>1. Age</p>'
+    d.innerHTML += '<br><p><strong>1. Age</strong></p>'
 
     input = document.createElement('input')
     input.id = "age"
@@ -73,7 +68,7 @@ var init_survey = () => {
 
     d.append(input)
 
-    d.innerHTML += '<br><br><p>2. Gender</p>'
+    d.innerHTML += '<br><br><p><strong>2. Gender</strong></p>'
     input_21 = document.createElement('input')
     input_21.id = "gender"
     input_21.type = "radio"
@@ -113,7 +108,7 @@ var init_survey = () => {
 
 
 
-    d.innerHTML += '<br><p>3. Country</p>'
+    d.innerHTML += '<br><p><strong>3. Country</strong></p>'
     input_3 = document.createElement('input')
     input_3.id = "country"
     input_3.name = "country"
@@ -121,7 +116,7 @@ var init_survey = () => {
     d.append(input_3)
 
 
-    d.innerHTML += '<br><br><p>4. What is the highest level of education that you have completed?</p>'
+    d.innerHTML += '<br><br><p><strong>4. What is the highest level of education that you have completed?</strong></p>'
     input_41 = document.createElement('input')
     input_41.id = "education"
     input_41.type = "radio"
@@ -166,53 +161,98 @@ var init_survey = () => {
     d.append(input_46)
     d.innerHTML += ' Others'
 
+    d.innerHTML += '<br><br><p><strong>5. Which animation impressed you most?</strong></p><br>'
 
-    d.innerHTML += '<br><br><p>5. Have you ever seen any of the 10 infographics before?</p>'
-    input_51 = document.createElement('input')
-    input_51.id = "prior"
-    input_51.type = "radio"
-    input_51.name = "prior"
-    input_51.value = "Yes";
-    input_52 = document.createElement('input')
-    input_52.id = "prior"
-    input_52.type = "radio"
-    input_52.name = "prior"
-    input_52.value = "No";
+    gallery = document.createElement('div')
+    d.append(gallery)
+    gallery.style.border = "4px solid #8DC487"
+    gallery.style.textAlign = "center"
+    gallery.style.padding = "10px"
 
 
-    d.append(input_51)
-    d.innerHTML += ' Yes  '
+    for (var i = 0; i < 10; i++) {
+        choice = document.createElement("span");
+        choice.style.display = "inline-block";
+        choice.style.width = "220px";
+        choice.style.height = "20px";
+        choice.style.textAlign = "center";
+        l1 = document.createElement("img");
+        l1.src = './img/' + questions_shuffle[i]['test_src'];
+        l1.style.width = '220px';
+        // l1.innerHTML = i;
+        l1.className = "l1";
+        r1 = document.createElement("input");
+        r1.type = "radio";
+        r1.name = "sum_impress";
+        r1.className = "r1 sum_impress";
+        r1.value = i;
+        choice.append(l1);
+        choice.append(r1);
+        gallery.append(choice)
+    }
 
-    d.append(input_52)
-    d.innerHTML += ' No  '
+    d.innerHTML += '<br><br><p><strong>6. Which animation xx you most?</strong></p><br>'
 
-
-
-
-    d.innerHTML += '<br><br><p>6.What do you think is the most important design factor(s) in infographics to augment affective arousal?</p><br>'
-
-    textarea = document.createElement('textarea')
-        // input.name = "reason"
-    textarea.id = "importance"
-        // input.size = "35"
-    textarea.style.width = "500px"
-    textarea.style.height = "80px"
-
-    d.append(textarea)
-
-    d.innerHTML += '<br><br><p>7.Do you agree that augmenting the affective arousal of infographic design helps you absorb the data better? why?</p><br>'
-
-    textarea_3 = document.createElement('textarea')
-        // input.name = "reason"
-    textarea_3.id = "data"
-        // input.size = "35"
-    textarea_3.style.width = "500px"
-    textarea_3.style.height = "80px"
-
-    d.append(textarea_3)
+    gallery2 = document.createElement('div')
+    d.append(gallery2)
+    gallery2.style.border = "4px solid #8DC487"
+    gallery2.style.textAlign = "center"
+    gallery2.style.padding = "10px"
 
 
-    d.innerHTML += '<br><br><p>8. Please leave your feedback or comments related to this study below (optional).</p><br>'
+    for (var i = 0; i < 10; i++) {
+        choice = document.createElement("span");
+        choice.style.display = "inline-block";
+        choice.style.width = "220px";
+        choice.style.height = "20px";
+        choice.style.textAlign = "center";
+        l1 = document.createElement("img");
+        l1.src = './img/' + questions_shuffle[i]['test_src'];
+        l1.style.width = '220px';
+        // l1.innerHTML = i;
+        l1.className = "l1";
+        r1 = document.createElement("input");
+        r1.type = "radio";
+        r1.name = "sum_impress";
+        r1.className = "r1 sum_impress";
+        r1.value = i;
+        choice.append(l1);
+        choice.append(r1);
+        gallery2.append(choice)
+    }
+
+
+    d.innerHTML += '<br><br><p><strong>7. Which animation xxx you most?</strong></p><br>'
+
+    gallery3 = document.createElement('div')
+    d.append(gallery3)
+    gallery3.style.border = "4px solid #8DC487"
+    gallery3.style.textAlign = "center"
+    gallery3.style.padding = "10px"
+
+    for (var i = 0; i < 10; i++) {
+        choice = document.createElement("span");
+        choice.style.display = "inline-block";
+        choice.style.width = "220px";
+        choice.style.height = "20px";
+        choice.style.textAlign = "center";
+        l1 = document.createElement("img");
+        l1.src = './img/' + questions_shuffle[i]['test_src'];
+        l1.style.width = '220px';
+        // l1.innerHTML = i;
+        l1.className = "l1";
+        r1 = document.createElement("input");
+        r1.type = "radio";
+        r1.name = "sum_impress";
+        r1.className = "r1 sum_impress";
+        r1.value = i;
+        choice.append(l1);
+        choice.append(r1);
+        gallery3.append(choice)
+    }
+
+
+    d.innerHTML += '<br><br><p><strong>8. Please leave your feedback or comments related to this study below (optional).</strong></p><br>'
 
     textarea_2 = document.createElement('textarea')
         // input.name = "reason"

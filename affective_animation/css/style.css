@@ -536,3 +536,32 @@ h5 {
     stroke-linejoin: miter;
     font-weight: 500;
 }
+
+.column {
+    float: center;
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 12px;
+    width: 20%;
+}
+
+.column input {
+    margin-top: 12px;
+    width: 20%;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    margin: 0 auto;
+    width: 90%;
+}
