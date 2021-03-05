@@ -17,8 +17,8 @@
   	        btn.style.class = 'large'
   	        btn.onclick = () => {
   	            document.body.innerHTML = ''
-  	                //注释掉即不连接云数据库
-  	                // find_mid()
+  	                //注释掉即不连接云数据库，正式测试记得加回来
+  	            find_mid()
   	            if (mID == undefined || mID == '' || mID == 'preview') end_preview()
   	                // else init_survey()
   	            else init_questions()

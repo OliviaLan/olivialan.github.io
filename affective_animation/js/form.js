@@ -5,7 +5,9 @@ var save_form_answers = () => {
 
     gender_all = document.getElementsByName('gender');
     education_all = document.getElementsByName('education');
-    sum_impress_all = document.getElementsByName('sum_impress');
+    sum_impress_all = document.getElementsByClassName('r1 sum_impress');
+    sum_like_all = document.getElementsByClassName('r1 sum_like');
+    sum_share_all = document.getElementsByClassName('r1 sum_share');
 
 
     for (i = 0; i < 4; i++) {
@@ -20,20 +22,35 @@ var save_form_answers = () => {
         }
     }
 
+    var sum_impress = [];
     for (i = 0; i < 10; i++) {
         if (sum_impress_all[i].checked == true) {
-            var sum_impress = sum_impress_all[i].value
+            sum_impress.push(questions_shuffle[i]['id'])
         }
     }
 
+    var sum_like = [];
+    for (i = 0; i < 10; i++) {
+        if (sum_like_all[i].checked == true) {
+            sum_like.push(questions_shuffle[i]['id'])
+        }
+    }
 
+    var sum_share = [];
+    for (i = 0; i < 10; i++) {
+        if (sum_share_all[i].checked == true) {
+            sum_share.push(questions_shuffle[i]['id'])
+        }
+    }
 
-    if (age && gender && education && country && sum_impress) {
+    if (age && gender && education && country && sum_impress && sum_like && sum_share) {
         user_data['age'] = age;
         user_data['gender'] = gender;
         user_data['country'] = country;
         user_data['education'] = education;
-        user_data['sum_impress'] = questions_shuffle[sum_impress]['id'];
+        user_data['sum_impress'] = sum_impress;
+        user_data['sum_like'] = sum_like;
+        user_data['sum_share'] = sum_share;
         user_data['feedback'] = document.getElementById('feedback').value;
         user_data['timestamp_end'] = Date.now();
         user_data['worktime_in_seconds'] = (user_data['timestamp_end'] - user_data['timestamp_start']) / 1000;
@@ -161,7 +178,7 @@ var init_survey = () => {
     d.append(input_46)
     d.innerHTML += ' Others'
 
-    d.innerHTML += '<br><br><p><strong>5. Which animation impressed you most?</strong></p><br>'
+    d.innerHTML += '<br><br><p><strong>5. Below shows all the 10 animations you have viewed. Which animation(s) impressed you most? (You can choose more than one)</strong></p><br>'
 
     gallery = document.createElement('div')
     d.append(gallery)
@@ -183,7 +200,7 @@ var init_survey = () => {
         l1.className = "l1";
         r1 = document.createElement("input");
         r1.type = "radio";
-        r1.name = "sum_impress";
+        r1.name = "sum_impress" + i;
         r1.className = "r1 sum_impress";
         r1.value = i;
         choice.append(l1);
@@ -191,7 +208,7 @@ var init_survey = () => {
         gallery.append(choice)
     }
 
-    d.innerHTML += '<br><br><p><strong>6. Which animation xx you most?</strong></p><br>'
+    d.innerHTML += '<br><br><p><strong>6. Below shows all the 10 animations you have viewed. Which animation(s) do you like most? (You can choose more than one)</strong></p><br>'
 
     gallery2 = document.createElement('div')
     d.append(gallery2)
@@ -213,8 +230,8 @@ var init_survey = () => {
         l1.className = "l1";
         r1 = document.createElement("input");
         r1.type = "radio";
-        r1.name = "sum_impress";
-        r1.className = "r1 sum_impress";
+        r1.name = "sum_like" + i;
+        r1.className = "r1 sum_like";
         r1.value = i;
         choice.append(l1);
         choice.append(r1);
@@ -222,7 +239,7 @@ var init_survey = () => {
     }
 
 
-    d.innerHTML += '<br><br><p><strong>7. Which animation xxx you most?</strong></p><br>'
+    d.innerHTML += '<br><br><p><strong>7. Below shows all the 10 animations you have viewed. Which animation(s) do you want to share most? (You can choose more than one)</strong></p><br>'
 
     gallery3 = document.createElement('div')
     d.append(gallery3)
@@ -243,8 +260,8 @@ var init_survey = () => {
         l1.className = "l1";
         r1 = document.createElement("input");
         r1.type = "radio";
-        r1.name = "sum_impress";
-        r1.className = "r1 sum_impress";
+        r1.name = "sum_share" + i;
+        r1.className = "r1 sum_share";
         r1.value = i;
         choice.append(l1);
         choice.append(r1);

@@ -11,9 +11,9 @@ time_out = false
 questions_shuffle = []
 
 //要提前在firebase里新建几个存数据的文件夹-collection
-mid_collection = 'ID_affective'
-complete_collection = 'result_affective'
-incomplete_collection = 'result_incomplete_affective'
+mid_collection = 'ID_animation'
+complete_collection = 'result_animation'
+incomplete_collection = 'result_incomplete_animation'
 
 // replacement_mid_collection = 'ID_replacement'
 // experiment_replacement = 'pilot_test1_replacement'
@@ -161,22 +161,6 @@ var get_firebase_data = (collection = complete_collection, download = true) => {
         });
 }
 
-// async function time_run_out() {
-//     document.body.innerHTML = ''
-//     d = document.createElement('div')
-//     d.innerHTML = 'Your time for completing the experiment has run out. <br><br> You got ' + count_correct_answers() + '/' + (questions.length / 4) + ' correct answers. <br><br> '
-//     d.style.margin = '20%'
-//     d.style.fontWeight = 'bold'
-
-//     old_mids = await get_firebase_data(mid_collection, false)
-//     code = old_mids.find(m => m['mid'] == mID)['code']
-
-//     d.innerHTML += 'Please copy and paste the following code in Mechanical Turk: <br>' + code
-//         //else d.innerHTML += 'Unfortunately, your number of correct answers in the test was insufficient to respect the conditions for passing the test.'
-
-//     document.body.append(d)
-// }
-
 var init_firebase = () => {
 
         // Initialize Firebase
@@ -284,20 +268,9 @@ function generateStory() {
     return (random)
 }
 
-function generateStory() {
-    //从1-max生成整数
-    var random = [];
-    for (var i = 0; i < 30; i++) {
-        var temp = Math.ceil(Math.random() * 30);
-        if (random.indexOf(temp) == -1) {
-            random.push(temp);
-        } else
-            i--;
-    }
-    return (random)
-}
 
 function generateAnimation(assigned_stories) {
+    //在10个故事里面选择一个应用baseline动画
     var baseline_dice = Math.ceil(Math.random() * 10);
     var baseline_story
     for (d = 0; d < questions.length; d++) {
@@ -305,19 +278,51 @@ function generateAnimation(assigned_stories) {
             baseline_story = questions[d]
         }
     }
+    //先copy一下选到的故事，然后去掉应用baseline的故事
     var other_stories = JSON.parse(JSON.stringify(assigned_stories));
     other_stories.splice(baseline_dice - 1, 1);
 
+    //对于剩下的9个故事，依次找出它们各自的所有的kinetic动画
     for (i = 0; i < 9; i++) {
         // console.log(assigned_stories[i])
         var animations = [];
         for (j = 0; j < questions.length; j++) {
-            if (questions[j]['story_id'] == "story" + other_stories[i]) {
+            if (questions[j]['story_id'] == "story" + other_stories[i] && questions[j]['tag'] == "kineticharts") {
                 animations.push(questions[j])
             }
         }
-        var temp = Math.ceil(Math.random() * animations.length);
-        questions_shuffle.push(animations[temp - 1])
+        //在这些动画里随机选一个
+        var temp = Math.ceil(Math.random() * animations.length) - 1;
+        var animation_selected = animations[temp]
+            //第一个故事直接放入        
+        if (questions_shuffle.length == 0) {
+            questions_shuffle.push(animation_selected);
+        }
+        //对于此后的故事，需要判断选到的vis动画是否重复
+        else {
+            counter = 0
+            for (h = 0; h < questions_shuffle.length; h++) {
+                if (questions_shuffle[h]['vis'] == animation_selected['vis'] && questions_shuffle[h]['animation'] == animation_selected['animation']) {
+                    //出现了同样的vis动画，只是故事内容不同，例如故事1的bounce和故事4的bounce，都是柱状图的bounce
+                    console.log('same animated vis!')
+                    console.log(questions_shuffle[h], animation_selected)
+                        //因此，需要排除掉刚才选择的index后，为它选择一个另外的动画
+                    var animation_selected_index = Array.apply(null, { length: animations.length }).map(Number.call, Number)
+                    animation_selected_index.splice(temp, 1)
+                    var temp_new = animation_selected_index[Math.floor(Math.random() * animation_selected_index.length)]
+                        //把新选择的动画放入问题列表
+                    questions_shuffle.push(animations[temp_new]);
+                    console.log(animations[temp_new]);
+                } else {
+                    //如果没有出现重复的vis动画，则计数器加一
+                    counter++
+                }
+            }
+            //当计数器等于问题列表长度，说明这个vis动画和此前的动画都没有重复，可以放入
+            if (counter == questions_shuffle.length) {
+                questions_shuffle.push(animation_selected);
+            }
+        }
     }
     questions_shuffle.splice(baseline_dice - 1, 0, baseline_story)
 }
