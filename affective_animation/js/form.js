@@ -194,7 +194,7 @@ var init_survey = () => {
         choice.style.height = "20px";
         choice.style.textAlign = "center";
         l1 = document.createElement("img");
-        l1.src = './img/' + questions_shuffle[i]['test_src'];
+        l1.src = './img/' + questions_shuffle[i]['src'];
         l1.style.width = '220px';
         // l1.innerHTML = i;
         l1.className = "l1";
@@ -224,7 +224,7 @@ var init_survey = () => {
         choice.style.height = "20px";
         choice.style.textAlign = "center";
         l1 = document.createElement("img");
-        l1.src = './img/' + questions_shuffle[i]['test_src'];
+        l1.src = './img/' + questions_shuffle[i]['src'];
         l1.style.width = '220px';
         // l1.innerHTML = i;
         l1.className = "l1";
@@ -254,7 +254,7 @@ var init_survey = () => {
         choice.style.height = "20px";
         choice.style.textAlign = "center";
         l1 = document.createElement("img");
-        l1.src = './img/' + questions_shuffle[i]['test_src'];
+        l1.src = './img/' + questions_shuffle[i]['src'];
         l1.style.width = '220px';
         // l1.innerHTML = i;
         l1.className = "l1";
