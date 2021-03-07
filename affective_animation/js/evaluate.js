@@ -133,7 +133,7 @@ var evaluate = () => {
         d.append(textarea_3)
     }
 
-    d.innerHTML += '<br><br><p><strong>- What emotional message do you think the storyteller wants to communicate?</strong></p><br>'
+    d.innerHTML += '<br><br><p><strong>- What emotional message/feeling do you think the storyteller wants to communicate?</strong></p><br>'
     textarea_4 = document.createElement('textarea')
     textarea_4.id = "message"
     textarea_4.style.width = "500px"
