@@ -7,7 +7,10 @@ var save_form_answers = () => {
     education_all = document.getElementsByName('education');
     sum_impress_all = document.getElementsByClassName('r1 sum_impress');
     sum_like_all = document.getElementsByClassName('r1 sum_like');
-    sum_share_all = document.getElementsByClassName('r1 sum_share');
+    // sum_share_all = document.getElementsByClassName('r1 sum_share');
+
+    sum_impress_why = document.getElementById('sum_impress_why').value;
+    sum_like_why = document.getElementById('sum_like_why').value;
 
 
     for (i = 0; i < 4; i++) {
@@ -29,6 +32,7 @@ var save_form_answers = () => {
         }
     }
 
+
     var sum_like = [];
     for (i = 0; i < 10; i++) {
         if (sum_like_all[i].checked == true) {
@@ -36,21 +40,23 @@ var save_form_answers = () => {
         }
     }
 
-    var sum_share = [];
-    for (i = 0; i < 10; i++) {
-        if (sum_share_all[i].checked == true) {
-            sum_share.push(questions_shuffle[i]['id'])
-        }
-    }
+    // var sum_share = [];
+    // for (i = 0; i < 10; i++) {
+    //     if (sum_share_all[i].checked == true) {
+    //         sum_share.push(questions_shuffle[i]['id'])
+    //     }
+    // }
 
-    if (age && gender && education && country && sum_impress && sum_like && sum_share) {
+    if (age && gender && education && country && sum_impress_why && sum_like_why && sum_impress.length != 0 && sum_like.length != 0) {
         user_data['age'] = age;
         user_data['gender'] = gender;
         user_data['country'] = country;
         user_data['education'] = education;
         user_data['sum_impress'] = sum_impress;
+        user_data['sum_impress_why'] = sum_impress_why;
         user_data['sum_like'] = sum_like;
-        user_data['sum_share'] = sum_share;
+        user_data['sum_like_why'] = sum_like_why;
+        // user_data['sum_share'] = sum_share;
         user_data['feedback'] = document.getElementById('feedback').value;
         user_data['timestamp_end'] = Date.now();
         user_data['worktime_in_seconds'] = (user_data['timestamp_end'] - user_data['timestamp_start']) / 1000;
@@ -60,7 +66,7 @@ var save_form_answers = () => {
     } else {
         console.log('pls fill in')
         error = document.createElement('div')
-        error.innerHTML = 'Please fill in your answer'
+        error.innerHTML = 'Please answer all the questions'
         error.style.color = 'red'
         d.append(error)
     }
@@ -71,7 +77,7 @@ var save_form_answers = () => {
 var init_survey = () => {
     document.body.innerHTML = ''
     d = document.createElement('div')
-    text = '<p><strong>Suvey:</strong>'
+    text = '<p><strong>Survey:</strong>'
     d.innerHTML = text
     d.style.textAlign = 'left'
     d.style.margin = '2%'
@@ -178,7 +184,7 @@ var init_survey = () => {
     d.append(input_46)
     d.innerHTML += ' Others'
 
-    d.innerHTML += '<br><br><p><strong>5. Below shows all the 10 animations you have viewed. Which animation(s) impressed you most? (You can choose more than one)</strong></p><br>'
+    d.innerHTML += '<br><br><p><strong>5. Below shows all the 10 animated chart viewed by you. Which animation(s) impressed you most? (You can choose more than one)</strong></p><br>'
 
     gallery = document.createElement('div')
     d.append(gallery)
@@ -208,7 +214,19 @@ var init_survey = () => {
         gallery.append(choice)
     }
 
-    d.innerHTML += '<br><br><p><strong>6. Below shows all the 10 animations you have viewed. Which animation(s) do you like most? (You can choose more than one)</strong></p><br>'
+    d.innerHTML += '<br><br><p><strong>Please explain your reasons.</strong></p><br>'
+
+    textarea_1 = document.createElement('textarea')
+        // input.name = "reason"
+    textarea_1.id = "sum_impress_why"
+        // input.size = "35"
+    textarea_1.style.width = "500px"
+    textarea_1.style.height = "60px"
+
+    d.append(textarea_1)
+
+
+    d.innerHTML += '<br><br><p><strong>6. Below shows all the 10 animated charts viewed by you. Which is/are your favorite animation(s)? (You can choose more than one)</strong></p><br>'
 
     gallery2 = document.createElement('div')
     d.append(gallery2)
@@ -238,47 +256,59 @@ var init_survey = () => {
         gallery2.append(choice)
     }
 
-
-    d.innerHTML += '<br><br><p><strong>7. Below shows all the 10 animations you have viewed. Which animation(s) do you want to share most? (You can choose more than one)</strong></p><br>'
-
-    gallery3 = document.createElement('div')
-    d.append(gallery3)
-    gallery3.style.border = "4px solid #8DC487"
-    gallery3.style.textAlign = "center"
-    gallery3.style.padding = "10px"
-
-    for (var i = 0; i < 10; i++) {
-        choice = document.createElement("span");
-        choice.style.display = "inline-block";
-        choice.style.width = "220px";
-        choice.style.height = "20px";
-        choice.style.textAlign = "center";
-        l1 = document.createElement("img");
-        l1.src = './img/' + questions_shuffle[i]['src'];
-        l1.style.width = '220px';
-        // l1.innerHTML = i;
-        l1.className = "l1";
-        r1 = document.createElement("input");
-        r1.type = "radio";
-        r1.name = "sum_share" + i;
-        r1.className = "r1 sum_share";
-        r1.value = i;
-        choice.append(l1);
-        choice.append(r1);
-        gallery3.append(choice)
-    }
-
-
-    d.innerHTML += '<br><br><p><strong>8. Please leave your feedback or comments related to this study below (optional).</strong></p><br>'
+    d.innerHTML += '<br><br><p><strong>Please explain your reasons.</strong></p><br>'
 
     textarea_2 = document.createElement('textarea')
         // input.name = "reason"
-    textarea_2.id = "feedback"
+    textarea_2.id = "sum_like_why"
         // input.size = "35"
     textarea_2.style.width = "500px"
-    textarea_2.style.height = "120px"
+    textarea_2.style.height = "60px"
 
     d.append(textarea_2)
+
+
+
+    // d.innerHTML += '<br><br><p><strong>7. Below shows all the 10 animations you have viewed. Which animation(s) do you want to share most? (You can choose more than one)</strong></p><br>'
+
+    // gallery3 = document.createElement('div')
+    // d.append(gallery3)
+    // gallery3.style.border = "4px solid #8DC487"
+    // gallery3.style.textAlign = "center"
+    // gallery3.style.padding = "10px"
+
+    // for (var i = 0; i < 10; i++) {
+    //     choice = document.createElement("span");
+    //     choice.style.display = "inline-block";
+    //     choice.style.width = "220px";
+    //     choice.style.height = "20px";
+    //     choice.style.textAlign = "center";
+    //     l1 = document.createElement("img");
+    //     l1.src = './img/' + questions_shuffle[i]['src'];
+    //     l1.style.width = '220px';
+    //     // l1.innerHTML = i;
+    //     l1.className = "l1";
+    //     r1 = document.createElement("input");
+    //     r1.type = "radio";
+    //     r1.name = "sum_share" + i;
+    //     r1.className = "r1 sum_share";
+    //     r1.value = i;
+    //     choice.append(l1);
+    //     choice.append(r1);
+    //     gallery3.append(choice)
+    // }
+
+
+    d.innerHTML += '<br><br><p><strong>7. Please leave your feedback or comments related to this study below (optional).</strong></p><br>'
+
+    textarea_3 = document.createElement('textarea')
+        // input.name = "reason"
+    textarea_3.id = "feedback"
+        // input.size = "35"
+    textarea_3.style.width = "500px"
+    textarea_3.style.height = "120px"
+
+    d.append(textarea_3)
 
 
     btn = document.createElement('button')
