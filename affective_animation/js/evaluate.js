@@ -113,7 +113,7 @@ var evaluate = () => {
     textarea = document.createElement('textarea')
     textarea.id = "subject"
     textarea.style.width = "500px"
-    textarea.style.height = "25px"
+    textarea.style.height = "50px"
     d.append(textarea)
 
 
@@ -129,7 +129,7 @@ var evaluate = () => {
         textarea_3 = document.createElement('textarea')
         textarea_3.id = "trend"
         textarea_3.style.width = "500px"
-        textarea_3.style.height = "25px"
+        textarea_3.style.height = "50px"
         d.append(textarea_3)
     }
 
