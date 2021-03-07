@@ -60,7 +60,7 @@ var init_end = () => {
     d.style.marginBottom = '1%'
         // numright = count_correct_answers()
         // user_data['num_correct_answers'] = numright
-    d.innerHTML = '<p>Thank you for participating. <br>Please <a href = "https://app.prolific.co/submissions/complete?cc=24CE4EC7" >click here to completed your study.</a></p>'
+    d.innerHTML = '<p>Thank you for participating. <br>Please <a href = "https://app.prolific.co/submissions/complete?cc=4C20487C" >click here to completed your study.</a></p>'
         // 生成一个独有的随机码
         // d2 = document.createElement('div')
         // d2.innerHTML = uniquecode
