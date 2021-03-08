@@ -2,9 +2,10 @@ function gen_pic() {
     document.body.innerHTML = ''
     progress_bar((current_question + 1) * window.innerWidth / questions_shuffle.length, '#8DC487', 'test')
 
-    index = document.createElement('h2')
+    index = document.createElement('div')
     index.style.textAlign = 'center'
-    index.innerHTML += '<br>Story ' + (current_question + 1)
+    index.innerHTML += '<br><h2>Story ' + (current_question + 1) + '</h2>'
+    index.innerHTML += '<p><strong>Hint: the animation will replay automatically</strong></p>'
     document.body.append(index)
 
     // note = document.createElement('p')
