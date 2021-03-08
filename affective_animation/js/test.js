@@ -7,6 +7,11 @@ function gen_pic() {
     index.innerHTML += '<br>Story ' + (current_question + 1)
     document.body.append(index)
 
+    note = document.createElement('p')
+    note.style.textAlign = 'center'
+    note.innerHTML += '<strong>(the animation with replay automatically)</strong>'
+    document.body.append(note)
+
     intro = document.createElement('div')
     intro.style.textAlign = 'center'
     intro.style.marginLeft = '15%'
