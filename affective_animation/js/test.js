@@ -9,7 +9,7 @@ function gen_pic() {
 
     note = document.createElement('p')
     note.style.textAlign = 'center'
-    note.innerHTML += '<strong>(the animation with replay automatically)</strong>'
+    note.innerHTML += '<strong>Hint: the animation with replay automatically</strong>'
     document.body.append(note)
 
     intro = document.createElement('div')
