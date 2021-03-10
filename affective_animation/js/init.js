@@ -287,7 +287,7 @@ function generateAnimation(assigned_stories) {
         // console.log(assigned_stories[i])
         var animations = [];
         for (j = 0; j < questions.length; j++) {
-            if (questions[j]['story_id'] == "story" + other_stories[i] && questions[j]['tag'] == "kineticharts") {
+            if (questions[j]['story_id'] == "story" + other_stories[i]) {
                 animations.push(questions[j])
             }
         }
