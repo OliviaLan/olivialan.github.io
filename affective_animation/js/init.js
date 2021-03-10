@@ -258,10 +258,10 @@ async function find_mid() {
 function generateStory() {
     //从1-max生成整数
     var random = [];
-    for (var i = 0; i < 30; i++) {
-        var temp = Math.ceil(Math.random() * 30);
-        if (random.indexOf(temp) == -1) {
-            random.push(temp);
+    for (var i = 0; i < 26; i++) {
+        var temp = Math.ceil(Math.random() * 26);
+        if (random.indexOf(temp + 1) == -1) {
+            random.push(temp + 1);
         } else
             i--;
     }
