@@ -268,6 +268,26 @@ function generateStory() {
     return (random)
 }
 
+function shuffle(array) {
+    var currentIndex = array.length,
+        temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
+
 
 function generateAnimation(assigned_stories) {
     //在10个故事里面选择一个应用baseline动画
@@ -278,6 +298,8 @@ function generateAnimation(assigned_stories) {
             baseline_story = questions[d]
         }
     }
+    questions_shuffle.push(baseline_story)
+
     //先copy一下选到的故事，然后去掉应用baseline的故事
     var other_stories = JSON.parse(JSON.stringify(assigned_stories));
     other_stories.splice(baseline_dice - 1, 1);
@@ -324,7 +346,7 @@ function generateAnimation(assigned_stories) {
             }
         }
     }
-    questions_shuffle.splice(baseline_dice - 1, 0, baseline_story)
+    shuffle(questions_shuffle)
 }
 
 
