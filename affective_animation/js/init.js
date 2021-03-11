@@ -255,18 +255,25 @@ async function find_mid() {
 }
 
 
+// function generateStory() {
+//     //从1-max生成整数
+//     var random = [];
+//     for (var i = 0; i < 23; i++) {
+//         var temp = Math.ceil(Math.random() * 23);
+//         if (random.indexOf(temp + 4) == -1) {
+//             random.push(temp + 4);
+//         } else
+//             i--;
+//     }
+//     return (random)
+// }
+
 function generateStory() {
-    //从1-max生成整数
-    var random = [];
-    for (var i = 0; i < 23; i++) {
-        var temp = Math.ceil(Math.random() * 23);
-        if (random.indexOf(temp + 4) == -1) {
-            random.push(temp + 4);
-        } else
-            i--;
-    }
+    var random = [1, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 27, 28, 29];
+    shuffle(random)
     return (random)
 }
+
 
 function shuffle(array) {
     var currentIndex = array.length,
