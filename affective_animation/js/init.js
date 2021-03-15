@@ -269,7 +269,7 @@ async function find_mid() {
 // }
 
 function generateStory() {
-    var random = [4, 7, 8, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 24, 27, 29];
+    var random = [4, 8, 11, 12, 13, 14, 15, 16, 17, 18, 19, 22, 23, 24, 29];
     shuffle(random)
     return (random)
 }
