@@ -9,6 +9,11 @@ Released for free under the Creative Commons Attribution License
     src: url("fengyasong.TTF");
 }
 
+@font-face {
+    font-family: "Oxygen";
+    src: url("Oxygen.TTF");
+}
+
 body {
     margin: 0;
     padding: 0;
