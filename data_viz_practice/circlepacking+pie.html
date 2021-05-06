@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <!-- <script src="d3.v3.min.js"></script> -->
+    <script src="https://d3js.org/d3-array.v2.min.js"></script>
+</head>
+
+<body>
+    <script>
+        data = ({
+            "name": "Trade Value",
+            "children": [{
+                "name": "亚洲",
+                "children": [{
+                    "name": "日本",
+                    "value": 217119088,
+                    "export": 98746880,
+                    "import": 118372208
+                }, {
+                    "name": "中国香港",
+                    "value": 198685466,
+                    "export": 192425765,
+                    "import": 6259701
+                }, {
+                    "name": "韩国",
+                    "value": 196082225,
+                    "export": 76482232,
+                    "import": 119599993
+                }, {
+                    "name": "中国台湾",
+                    "value": 157325910,
+                    "export": 37986564,
+                    "import": 119339346
+                }, {
+                    "name": "越南",
+                    "value": 111829880,
+                    "export": 67498621,
+                    "import": 44331258
+                }, {
+                    "name": "中国",
+                    "value": 89492884,
+                    "export": 0,
+                    "import": 89492884
+                }, {
+                    "name": "马来西亚 ",
+                    "value": 85505687,
+                    "export": 35958728,
+                    "import": 49546959
+                }, {
+                    "name": "印度",
+                    "value": 63953737,
+                    "export": 51564166,
+                    "import": 12389571
+                }, {
+                    "name": "泰国",
+                    "value": 63266105,
+                    "export": 31456656,
+                    "import": 31809449
+                }, {
+                    "name": "新加坡",
+                    "value": 62046207,
+                    "export": 37783624,
+                    "import": 24262583
+                }, {
+                    "name": "印度尼西亚",
+                    "value": 54987067,
+                    "export": 31501801,
+                    "import": 23485266
+                }, {
+                    "name": "沙特阿拉伯",
+                    "value": 53806858,
+                    "export": 16444950,
+                    "import": 37361908
+                }, {
+                    "name": "菲律宾",
+                    "value": 42034306,
+                    "export": 28109348,
+                    "import": 13924957
+                }, {
+                    "name": "阿联酋",
+                    "value": 33575792,
+                    "export": 23058565,
+                    "import": 10517227
+                }, {
+                    "name": "伊拉克",
+                    "value": 22996542,
+                    "export": 6523565,
+                    "import": 16472977
+                }, {
+                    "name": "伊朗",
+                    "value": 15813020,
+                    "export": 6606344,
+                    "import": 9206675
+                }, {
+                    "name": "阿曼",
+                    "value": 15567166,
+                    "export": 2082969,
+                    "import": 13484197
+                }, {
+                    "name": "哈萨克斯坦",
+                    "value": 15179151,
+                    "export": 8799820,
+                    "import": 6379331
+                }, {
+                    "name": "土耳其",
+                    "value": 14354243,
+                    "export": 11944024,
+                    "import": 2410219
+                }, {
+                    "name": "缅甸",
+                    "value": 12890744,
+                    "export": 8490072,
+                    "import": 4400672
+                }, {
+                    "name": "孟加拉国",
+                    "value": 12653471,
+                    "export": 11939847,
+                    "import": 713624
+                }, {
+                    "name": "巴基斯坦",
+                    "value": 12399795,
+                    "export": 11157960,
+                    "import": 1241835
+                }, {
+                    "name": "科威特",
+                    "value": 11897407,
+                    "export": 2643559,
+                    "import": 9253848
+                }, {
+                    "name": "以色列",
+                    "value": 10193038,
+                    "export": 6630385,
+                    "import": 3562653
+                }, {
+                    "name": "卡塔尔",
+                    "value": 7667985,
+                    "export": 1663239,
+                    "import": 6004746
+                }, {
+                    "name": "柬埔寨",
+                    "value": 6498884,
+                    "export": 5504534,
+                    "import": 994349
+                }, {
+                    "name": "土库曼斯坦",
+                    "value": 6273804,
+                    "export": 298160,
+                    "import": 5975645
+                }, {
+                    "name": "蒙古",
+                    "value": 5611643,
+                    "export": 1260945,
+                    "import": 4350698
+                }, {
+                    "name": "乌兹别克斯坦 ",
+                    "value": 4973307,
+                    "export": 3472955,
+                    "import": 1500353
+                }, {
+                    "name": "吉尔吉斯斯坦",
+                    "value": 4391992,
+                    "export": 4346211,
+                    "import": 45781
+                }, {
+                    "name": "斯里兰卡",
+                    "value": 3099426,
+                    "export": 2825023,
+                    "import": 274403
+                }, {
+                    "name": "约旦",
+                    "value": 2835651,
+                    "export": 2536744,
+                    "import": 298907
+                }, {
+                    "name": "老挝",
+                    "value": 2703576,
+                    "export": 1215830,
+                    "import": 1487746
+                }, {
+                    "name": "也门",
+                    "value": 2541557,
+                    "export": 1943351,
+                    "import": 598206
+                }, {
+                    "name": "中国澳门",
+                    "value": 2142874,
+                    "export": 2096506,
+                    "import": 46368
+                }, {
+                    "name": "朝鲜",
+                    "value": 1924624,
+                    "export": 1776468,
+                    "import": 148156
+                }, {
+                    "name": "黎巴嫩",
+                    "value": 1173116,
+                    "export": 1155189,
+                    "import": 17927
+                }, {
+                    "name": "塔吉克斯坦",
+                    "value": 1158156,
+                    "export": 1099748,
+                    "import": 58408
+                }, {
+                    "name": "巴林",
+                    "value": 1152993,
+                    "export": 1017685,
+                    "import": 135308
+                }, {
+                    "name": "尼泊尔联邦民主共和国 ",
+                    "value": 1048396,
+                    "export": 1025111,
+                    "import": 23286
+                }, {
+                    "name": "叙利亚",
+                    "value": 906419,
+                    "export": 905448,
+                    "import": 971
+                }, {
+                    "name": "文莱",
+                    "value": 760367,
+                    "export": 448077,
+                    "import": 312290
+                }, {
+                    "name": "塞浦路斯",
+                    "value": 439249,
+                    "export": 401097,
+                    "import": 38152
+                }, {
+                    "name": "阿富汗",
+                    "value": 434599,
+                    "export": 414206,
+                    "import": 20393
+                }, {
+                    "name": "马尔代夫",
+                    "value": 263786,
+                    "export": 240649,
+                    "import": 23137
+                }, {
+                    "name": "东帝汶",
+                    "value": 116341,
+                    "export": 98998,
+                    "import": 17343
+                }, {
+                    "name": "巴勒斯坦",
+                    "value": 56674,
+                    "export": 56578,
+                    "import": 96
+                }, {
+                    "name": "不丹",
+                    "value": 7570,
+                    "export": 7538,
+                    "import": 32
+                }, {
+                    "name": "亚洲其他国家(地区)",
+                    "value": 963,
+                    "export": 918,
+                    "import": 46
+                }, ]
+            }, {
+                "name": "欧洲",
+                "children": [{
+                    "name": "德国",
+                    "value": 127414065,
+                    "export": 54994430,
+                    "import": 72419635
+                }, {
+                    "name": "俄罗斯联邦",
+                    "value": 76413949,
+                    "export": 34337033,
+                    "import": 42076916
+                }, {
+                    "name": "英国",
+                    "value": 59541253,
+                    "export": 43062319,
+                    "import": 16478933
+                }, {
+                    "name": "荷兰",
+                    "value": 58766360,
+                    "export": 51038003,
+                    "import": 7728357
+                }, {
+                    "name": "法国",
+                    "value": 45223915,
+                    "export": 22750810,
+                    "import": 22473105
+                }, {
+                    "name": "意大利",
+                    "value": 37845109,
+                    "export": 23087922,
+                    "import": 14757187
+                }, {
+                    "name": "西班牙",
+                    "value": 24456245,
+                    "export": 18525225,
+                    "import": 5931020
+                }, {
+                    "name": "瑞士",
+                    "value": 21917865,
+                    "export": 3138084,
+                    "import": 18779781
+                }, {
+                    "name": "波兰",
+                    "value": 19185796,
+                    "export": 16467531,
+                    "import": 2718265
+                }, {
+                    "name": "比利时",
+                    "value": 17302882,
+                    "export": 12568051,
+                    "import": 4734831
+                }, {
+                    "name": "瑞典",
+                    "value": 12175434,
+                    "export": 5879399,
+                    "import": 6296035
+                }, {
+                    "name": "捷克",
+                    "value": 12150918,
+                    "export": 8959703,
+                    "import": 3191215
+                }, {
+                    "name": "爱尔兰",
+                    "value": 11528007,
+                    "export": 2269627,
+                    "import": 9258381
+                }, {
+                    "name": "乌克兰 ",
+                    "value": 8217441,
+                    "export": 5103271,
+                    "import": 3114170
+                }, {
+                    "name": "丹麦",
+                    "value": 8070673,
+                    "export": 4651358,
+                    "import": 3419316
+                }, {
+                    "name": "奥地利",
+                    "value": 7355741,
+                    "export": 2101634,
+                    "import": 5254107
+                }, {
+                    "name": "匈牙利",
+                    "value": 7043551,
+                    "export": 4461156,
+                    "import": 2582396
+                }, {
+                    "name": "斯洛伐克",
+                    "value": 6120372,
+                    "export": 2019146,
+                    "import": 4101226
+                }, {
+                    "name": "希腊",
+                    "value": 5833285,
+                    "export": 5333273,
+                    "import": 500013
+                }, {
+                    "name": "芬兰",
+                    "value": 5294625,
+                    "export": 2097818,
+                    "import": 3196806
+                }, {
+                    "name": "挪威",
+                    "value": 5073439,
+                    "export": 2377592,
+                    "import": 2695846
+                }, {
+                    "name": "罗马尼亚",
+                    "value": 4756553,
+                    "export": 3152349,
+                    "import": 1604204
+                }, {
+                    "name": "葡萄牙",
+                    "value": 4609889,
+                    "export": 3009133,
+                    "import": 1600756
+                }, {
+                    "name": "斯洛文尼亚 ",
+                    "value": 2706020,
+                    "export": 2350142,
+                    "import": 355878
+                }, {
+                    "name": "保加利亚",
+                    "value": 1873564,
+                    "export": 1072388,
+                    "import": 801176
+                }, {
+                    "name": "白俄罗斯",
+                    "value": 1869949,
+                    "export": 1241333,
+                    "import": 628616
+                }, {
+                    "name": "立陶宛 ",
+                    "value": 1473606,
+                    "export": 1171281,
+                    "import": 302325
+                }, {
+                    "name": "卢森堡",
+                    "value": 1256902,
+                    "export": 1062381,
+                    "import": 194521
+                }, {
+                    "name": "克罗地亚",
+                    "value": 1061822,
+                    "export": 961915,
+                    "import": 99907
+                }, {
+                    "name": "马耳他",
+                    "value": 1048498,
+                    "export": 801031,
+                    "import": 247467
+                }, {
+                    "name": "格鲁吉亚",
+                    "value": 1022739,
+                    "export": 967169,
+                    "import": 55570
+                }, {
+                    "name": "阿塞拜疆",
+                    "value": 1014778,
+                    "export": 425706,
+                    "import": 589072
+                }, {
+                    "name": "塞尔维亚",
+                    "value": 963249,
+                    "export": 713986,
+                    "import": 249263
+                }, {
+                    "name": "拉脱维亚",
+                    "value": 889382,
+                    "export": 754783,
+                    "import": 134599
+                }, {
+                    "name": "爱沙尼亚",
+                    "value": 840764,
+                    "export": 634946,
+                    "import": 205818
+                }, {
+                    "name": "亚美尼亚",
+                    "value": 522339,
+                    "export": 153664,
+                    "import": 368675
+                }, {
+                    "name": "阿尔巴尼亚",
+                    "value": 485068,
+                    "export": 414141,
+                    "import": 70928
+                }, {
+                    "name": "北马其顿共和国",
+                    "value": 194843,
+                    "export": 92113,
+                    "import": 102730
+                }, {
+                    "name": "冰岛",
+                    "value": 178097,
+                    "export": 79297,
+                    "import": 98800
+                }, {
+                    "name": "波黑",
+                    "value": 132395,
+                    "export": 79153,
+                    "import": 53242
+                }, {
+                    "name": "列支敦士登",
+                    "value": 126471,
+                    "export": 36576,
+                    "import": 89895
+                }, {
+                    "name": "摩尔多瓦",
+                    "value": 121698,
+                    "export": 89320,
+                    "import": 32378
+                }, {
+                    "name": "法罗群岛",
+                    "value": 110267,
+                    "export": 2858,
+                    "import": 107409
+                }, {
+                    "name": "黑山",
+                    "value": 108261,
+                    "export": 78331,
+                    "import": 29930
+                }, {
+                    "name": "摩纳哥",
+                    "value": 27654,
+                    "export": 21049,
+                    "import": 6606
+                }, {
+                    "name": "圣马力诺",
+                    "value": 4925,
+                    "export": 2659,
+                    "import": 2267
+                }, {
+                    "name": "直布罗陀",
+                    "value": 3076,
+                    "export": 3075,
+                    "import": 1
+                }, {
+                    "name": "安道尔 ",
+                    "value": 1904,
+                    "export": 1757,
+                    "import": 148
+                }, {
+                    "name": "欧洲其他国家(地区) ",
+                    "value": 231,
+                    "export": 5,
+                    "import": 227
+                }, {
+                    "name": "梵蒂冈城国",
+                    "value": 27,
+                    "export": 5,
+                    "import": 22
+                }, ]
+            }, {
+                "name": "北美洲",
+                "children": [{
+                    "name": "美国",
+                    "value": 373185175,
+                    "export": 288647563,
+                    "import": 84537611
+                }, {
+                    "name": "加拿大",
+                    "value": 44827372,
+                    "export": 25456588,
+                    "import": 19370784
+                }, {
+                    "name": "格陵兰 ",
+                    "value": 190264,
+                    "export": 702,
+                    "import": 189561
+                }, {
+                    "name": "百慕大",
+                    "value": 25549,
+                    "export": 25541,
+                    "import": 7
+                }, {
+                    "name": "北美洲其他国家(地区)",
+                    "value": 1655,
+                    "export": 1636,
+                    "import": 19
+                }, ]
+            }, {
+                "name": "国(地)别不详的",
+                "children": [{
+                    "name": "国(地)别不详的",
+                    "value": 2362571,
+                    "export": 6516,
+                    "import": 2356056
+                }, ]
+            }, {
+                "name": "拉丁美洲",
+                "children": [{
+                    "name": "巴西",
+                    "value": 79540221,
+                    "export": 24530265,
+                    "import": 55009956
+                }, {
+                    "name": "墨西哥",
+                    "value": 41871206,
+                    "export": 31981244,
+                    "import": 9889962
+                }, {
+                    "name": "智利",
+                    "value": 28219262,
+                    "export": 10137128,
+                    "import": 18082134
+                }, {
+                    "name": "秘鲁",
+                    "value": 16326340,
+                    "export": 5870768,
+                    "import": 10455572
+                }, {
+                    "name": "哥伦比亚",
+                    "value": 10762680,
+                    "export": 6370630,
+                    "import": 4392050
+                }, {
+                    "name": "阿根廷",
+                    "value": 9858190,
+                    "export": 4738361,
+                    "import": 5119829
+                }, {
+                    "name": "巴拿马",
+                    "value": 5790976,
+                    "export": 5479875,
+                    "import": 311101
+                }, {
+                    "name": "厄瓜多尔",
+                    "value": 5007041,
+                    "export": 2505303,
+                    "import": 2501738
+                }, {
+                    "name": "委内瑞拉",
+                    "value": 4379242,
+                    "export": 1065834,
+                    "import": 3313407
+                }, {
+                    "name": "乌拉圭 ",
+                    "value": 3393513,
+                    "export": 1343346,
+                    "import": 2050168
+                }, {
+                    "name": "多米尼加共和国",
+                    "value": 1960747,
+                    "export": 1648115,
+                    "import": 312633
+                }, {
+                    "name": "危地马拉",
+                    "value": 1792660,
+                    "export": 1655793,
+                    "import": 136868
+                }, {
+                    "name": "哥斯达黎加",
+                    "value": 1548813,
+                    "export": 1050417,
+                    "import": 498397
+                }, {
+                    "name": "波多黎各 ",
+                    "value": 1070858,
+                    "export": 454317,
+                    "import": 616541
+                }, {
+                    "name": "巴拉圭",
+                    "value": 996593,
+                    "export": 985368,
+                    "import": 11225
+                }, {
+                    "name": "古巴",
+                    "value": 880949,
+                    "export": 543926,
+                    "import": 337023
+                }, {
+                    "name": "玻利维亚",
+                    "value": 811183,
+                    "export": 588355,
+                    "import": 222829
+                }, {
+                    "name": "萨尔瓦多",
+                    "value": 768621,
+                    "export": 690215,
+                    "import": 78406
+                }, {
+                    "name": "特立尼达和多巴哥",
+                    "value": 714632,
+                    "export": 250682,
+                    "import": 463951
+                }, {
+                    "name": "洪都拉斯",
+                    "value": 670792,
+                    "export": 648797,
+                    "import": 21996
+                }, {
+                    "name": "牙买加",
+                    "value": 482312,
+                    "export": 462153,
+                    "import": 20159
+                }, {
+                    "name": "海地",
+                    "value": 389344,
+                    "export": 386265,
+                    "import": 3079
+                }, {
+                    "name": "尼加拉瓜",
+                    "value": 377123,
+                    "export": 345787,
+                    "import": 31336
+                }, {
+                    "name": "巴哈马",
+                    "value": 299840,
+                    "export": 245610,
+                    "import": 54230
+                }, {
+                    "name": "圭亚那",
+                    "value": 219627,
+                    "export": 187920,
+                    "import": 31707
+                }, {
+                    "name": "苏里南 ",
+                    "value": 198919,
+                    "export": 161825,
+                    "import": 37094
+                }, {
+                    "name": "巴巴多斯",
+                    "value": 121648,
+                    "export": 107693,
+                    "import": 13955
+                }, {
+                    "name": "伯利兹",
+                    "value": 80552,
+                    "export": 80449,
+                    "import": 103
+                }, {
+                    "name": "安提瓜和巴布达",
+                    "value": 49609,
+                    "export": 49561,
+                    "import": 48
+                }, {
+                    "name": "瓜德罗普",
+                    "value": 31920,
+                    "export": 31913,
+                    "import": 7
+                }, {
+                    "name": "库腊索岛",
+                    "value": 28802,
+                    "export": 28799,
+                    "import": 3
+                }, {
+                    "name": "阿鲁巴",
+                    "value": 26997,
+                    "export": 26965,
+                    "import": 32
+                }, {
+                    "name": "开曼群岛",
+                    "value": 26419,
+                    "export": 26362,
+                    "import": 57
+                }, {
+                    "name": "多米尼克",
+                    "value": 23589,
+                    "export": 23260,
+                    "import": 328
+                }, {
+                    "name": "马提尼克",
+                    "value": 18601,
+                    "export": 18432,
+                    "import": 169
+                }, {
+                    "name": "圣卢西亚",
+                    "value": 15008,
+                    "export": 14879,
+                    "import": 129
+                }, {
+                    "name": "圣文森特和格林纳丁斯",
+                    "value": 14834,
+                    "export": 14833,
+                    "import": 1
+                }, {
+                    "name": "法属圭亚那",
+                    "value": 12098,
+                    "export": 12065,
+                    "import": 33
+                }, {
+                    "name": "荷属安的列斯",
+                    "value": 11822,
+                    "export": 11816,
+                    "import": 7
+                }, {
+                    "name": "格林纳达",
+                    "value": 10094,
+                    "export": 10092,
+                    "import": 2
+                }, {
+                    "name": "拉丁美洲其他国家(地区)",
+                    "value": 10078,
+                    "export": 9848,
+                    "import": 230
+                }, {
+                    "name": "英属维尔京群岛",
+                    "value": 7517,
+                    "export": 7179,
+                    "import": 337
+                }, {
+                    "name": "圣基茨和尼维斯",
+                    "value": 6921,
+                    "export": 6670,
+                    "import": 251
+                }, {
+                    "name": "圣马丁岛",
+                    "value": 4551,
+                    "export": 4547,
+                    "import": 4
+                }, {
+                    "name": "特克斯和凯科斯群岛",
+                    "value": 2095,
+                    "export": 2091,
+                    "import": 4
+                }, {
+                    "name": "蒙特塞拉特",
+                    "value": 291,
+                    "export": 289,
+                    "import": 2
+                }, {
+                    "name": "圣皮埃尔和密克隆",
+                    "value": 48,
+                    "export": 47,
+                    "import": 2
+                }, {
+                    "name": "博内尔",
+                    "value": 7,
+                    "export": 7,
+                    "import": 0
+                }, {
+                    "name": "萨巴 ",
+                    "value": 6,
+                    "export": 6,
+                    "import": 0
+                }, ]
+            }, {
+                "name": "非洲",
+                "children": [{
+                    "name": "南非 ",
+                    "value": 29247336,
+                    "export": 11405206,
+                    "import": 17842130
+                }, {
+                    "name": "安哥拉",
+                    "value": 17687413,
+                    "export": 1418399,
+                    "import": 16269014
+                }, {
+                    "name": "尼日利亚",
+                    "value": 13301108,
+                    "export": 11464669,
+                    "import": 1836439
+                }, {
+                    "name": "埃及",
+                    "value": 9101039,
+                    "export": 8415245,
+                    "import": 685795
+                }, {
+                    "name": "阿尔及利亚",
+                    "value": 5560344,
+                    "export": 4778079,
+                    "import": 782265
+                }, {
+                    "name": "加纳",
+                    "value": 5149225,
+                    "export": 3384754,
+                    "import": 1764471
+                }, {
+                    "name": "利比亚",
+                    "value": 5002869,
+                    "export": 1692059,
+                    "import": 3310810
+                }, {
+                    "name": "刚果(金)",
+                    "value": 4491178,
+                    "export": 1431956,
+                    "import": 3059222
+                }, {
+                    "name": "刚果(布)",
+                    "value": 4469281,
+                    "export": 300650,
+                    "import": 4168630
+                }, {
+                    "name": "肯尼亚",
+                    "value": 3568430,
+                    "export": 3444912,
+                    "import": 123518
+                }, {
+                    "name": "加蓬",
+                    "value": 3457802,
+                    "export": 260514,
+                    "import": 3197288
+                }, {
+                    "name": "摩洛哥",
+                    "value": 3219975,
+                    "export": 2781985,
+                    "import": 437990
+                }, {
+                    "name": "赞比亚 ",
+                    "value": 2913389,
+                    "export": 668968,
+                    "import": 2244420
+                }, {
+                    "name": "坦桑尼亚",
+                    "value": 2885739,
+                    "export": 2630748,
+                    "import": 254992
+                }, {
+                    "name": "几内亚",
+                    "value": 2868540,
+                    "export": 1184604,
+                    "import": 1683936
+                }, {
+                    "name": "利比里亚",
+                    "value": 2772611,
+                    "export": 2688142,
+                    "import": 84469
+                }, {
+                    "name": "苏丹",
+                    "value": 2093162,
+                    "export": 1583548,
+                    "import": 509614
+                }, {
+                    "name": "喀麦隆 ",
+                    "value": 1850974,
+                    "export": 1152613,
+                    "import": 698361
+                }, {
+                    "name": "莫桑比克",
+                    "value": 1844061,
+                    "export": 1351311,
+                    "import": 492750
+                }, {
+                    "name": "埃塞俄比亚",
+                    "value": 1843905,
+                    "export": 1607802,
+                    "import": 236103
+                }, {
+                    "name": "塞内加尔",
+                    "value": 1727832,
+                    "export": 1522177,
+                    "import": 205654
+                }, {
+                    "name": "科特迪瓦",
+                    "value": 1719603,
+                    "export": 1406267,
+                    "import": 313336
+                }, {
+                    "name": "多哥",
+                    "value": 1591616,
+                    "export": 1469360,
+                    "import": 122256
+                }, {
+                    "name": "贝宁",
+                    "value": 1581919,
+                    "export": 1476491,
+                    "import": 105427
+                }, {
+                    "name": "吉布提",
+                    "value": 1534539,
+                    "export": 1520473,
+                    "import": 14066
+                }, {
+                    "name": "毛里塔尼亚",
+                    "value": 1347382,
+                    "export": 707336,
+                    "import": 640046
+                }, {
+                    "name": "赤道几内亚",
+                    "value": 1261515,
+                    "export": 78057,
+                    "import": 1183459
+                }, {
+                    "name": "南苏丹共和国",
+                    "value": 1134237,
+                    "export": 84138,
+                    "import": 1050098
+                }, {
+                    "name": "突尼斯",
+                    "value": 1084937,
+                    "export": 940895,
+                    "import": 144043
+                }, {
+                    "name": "津巴布韦",
+                    "value": 918179,
+                    "export": 254642,
+                    "import": 663536
+                }, {
+                    "name": "马达加斯加",
+                    "value": 880155,
+                    "export": 739244,
+                    "import": 140911
+                }, {
+                    "name": "毛里求斯",
+                    "value": 583412,
+                    "export": 556680,
+                    "import": 26732
+                }, {
+                    "name": "乌干达",
+                    "value": 540174,
+                    "export": 511164,
+                    "import": 29010
+                }, {
+                    "name": "索马里",
+                    "value": 516734,
+                    "export": 503827,
+                    "import": 12906
+                }, {
+                    "name": "乍得",
+                    "value": 500305,
+                    "export": 192320,
+                    "import": 307985
+                }, {
+                    "name": "纳米比亚",
+                    "value": 488233,
+                    "export": 136331,
+                    "import": 351902
+                }, {
+                    "name": "马里 ",
+                    "value": 409545,
+                    "export": 300485,
+                    "import": 109060
+                }, {
+                    "name": "冈比亚",
+                    "value": 401877,
+                    "export": 352982,
+                    "import": 48896
+                }, {
+                    "name": "尼日尔",
+                    "value": 351194,
+                    "export": 198435,
+                    "import": 152760
+                }, {
+                    "name": "塞拉利昂",
+                    "value": 350791,
+                    "export": 216280,
+                    "import": 134511
+                }, {
+                    "name": "布基纳法索",
+                    "value": 221076,
+                    "export": 180191,
+                    "import": 40885
+                }, {
+                    "name": "博茨瓦纳",
+                    "value": 219645,
+                    "export": 207902,
+                    "import": 11743
+                }, {
+                    "name": "卢旺达",
+                    "value": 207380,
+                    "export": 183279,
+                    "import": 24101
+                }, {
+                    "name": "马拉维",
+                    "value": 190410,
+                    "export": 179624,
+                    "import": 10786
+                }, {
+                    "name": "厄立特里亚",
+                    "value": 175827,
+                    "export": 33696,
+                    "import": 142130
+                }, {
+                    "name": "留尼汪",
+                    "value": 120849,
+                    "export": 120836,
+                    "import": 13
+                }, {
+                    "name": "莱索托 ",
+                    "value": 70825,
+                    "export": 49543,
+                    "import": 21283
+                }, {
+                    "name": "布隆迪",
+                    "value": 54711,
+                    "export": 45861,
+                    "import": 8851
+                }, {
+                    "name": "科摩罗",
+                    "value": 50689,
+                    "export": 50667,
+                    "import": 22
+                }, {
+                    "name": "塞舌尔",
+                    "value": 45371,
+                    "export": 45323,
+                    "import": 47
+                }, {
+                    "name": "佛得角",
+                    "value": 44283,
+                    "export": 44264,
+                    "import": 20
+                }, {
+                    "name": "中非",
+                    "value": 42703,
+                    "export": 17718,
+                    "import": 24986
+                }, {
+                    "name": "斯威士兰",
+                    "value": 29791,
+                    "export": 29266,
+                    "import": 524
+                }, {
+                    "name": "几内亚比绍",
+                    "value": 27795,
+                    "export": 22056,
+                    "import": 5739
+                }, {
+                    "name": "马约特",
+                    "value": 27001,
+                    "export": 26995,
+                    "import": 6
+                }, {
+                    "name": "圣多美和普林西比",
+                    "value": 6173,
+                    "export": 6163,
+                    "import": 10
+                }, {
+                    "name": "梅利利亚",
+                    "value": 1481,
+                    "export": 1475,
+                    "import": 6
+                }, {
+                    "name": "加那利群岛",
+                    "value": 1235,
+                    "export": 1212,
+                    "import": 23
+                }, {
+                    "name": "非洲其他国家(地区)",
+                    "value": 933,
+                    "export": 927,
+                    "import": 6
+                }, {
+                    "name": "塞卜泰(休达)",
+                    "value": 239,
+                    "export": 205,
+                    "import": 35
+                }, {
+                    "name": "西撒哈拉",
+                    "value": 49,
+                    "export": 49,
+                    "import": 0
+                }, ]
+            }, {
+                "name": "大洋洲",
+                "children": [{
+                    "name": "澳大利亚 ",
+                    "value": 116892996,
+                    "export": 33276059,
+                    "import": 83616937
+                }, {
+                    "name": "新西兰",
+                    "value": 12602863,
+                    "export": 3959650,
+                    "import": 8643213
+                }, {
+                    "name": "巴布亚新几内亚 ",
+                    "value": 2641317,
+                    "export": 551532,
+                    "import": 2089785
+                }, {
+                    "name": "马绍尔群岛",
+                    "value": 1672631,
+                    "export": 1641928,
+                    "import": 30702
+                }, {
+                    "name": "新喀里多尼亚",
+                    "value": 862387,
+                    "export": 107444,
+                    "import": 754943
+                }, {
+                    "name": "所罗门群岛",
+                    "value": 384842,
+                    "export": 67778,
+                    "import": 317065
+                }, {
+                    "name": "斐济",
+                    "value": 251507,
+                    "export": 241542,
+                    "import": 9965
+                }, {
+                    "name": "法属波利尼西亚",
+                    "value": 72827,
+                    "export": 68159,
+                    "import": 4668
+                }, {
+                    "name": "瓦努阿图",
+                    "value": 63410,
+                    "export": 53383,
+                    "import": 10028
+                }, {
+                    "name": "萨摩亚",
+                    "value": 60729,
+                    "export": 60423,
+                    "import": 306
+                }, {
+                    "name": "库克群岛 ",
+                    "value": 30568,
+                    "export": 29365,
+                    "import": 1202
+                }, {
+                    "name": "大洋洲其他国家(地区) ",
+                    "value": 30053,
+                    "export": 29474,
+                    "import": 579
+                }, {
+                    "name": "密克罗尼西亚联邦",
+                    "value": 21608,
+                    "export": 12910,
+                    "import": 8698
+                }, {
+                    "name": "汤加",
+                    "value": 20435,
+                    "export": 20345,
+                    "import": 90
+                }, {
+                    "name": "图瓦卢",
+                    "value": 14984,
+                    "export": 14966,
+                    "import": 18
+                }, {
+                    "name": "基里巴斯",
+                    "value": 14548,
+                    "export": 13911,
+                    "import": 636
+                }, {
+                    "name": "帕劳",
+                    "value": 12963,
+                    "export": 12922,
+                    "import": 41
+                }, {
+                    "name": "瑙鲁 ",
+                    "value": 864,
+                    "export": 846,
+                    "import": 18
+                }, {
+                    "name": "社会群岛",
+                    "value": 588,
+                    "export": 588,
+                    "import": 0
+                }, {
+                    "name": "瓦利斯和浮图纳",
+                    "value": 494,
+                    "export": 494,
+                    "import": 0
+                }, {
+                    "name": "诺福克岛",
+                    "value": 336,
+                    "export": 336,
+                    "import": 0
+                }, {
+                    "name": "土布艾群岛",
+                    "value": 102,
+                    "export": 102,
+                    "import": 0
+                }, {
+                    "name": "盖比群岛",
+                    "value": 21,
+                    "export": 13,
+                    "import": 8
+                }, {
+                    "name": "马克萨斯群岛",
+                    "value": 12,
+                    "export": 9,
+                    "import": 3
+                }, {
+                    "name": "土阿莫土群岛",
+                    "value": 2,
+                    "export": 2,
+                    "import": 0
+                }, ]
+            }]
+        })
+
+
+        pack = data => d3.pack()
+            .size([width - 2, height - 2])
+            .padding(3)
+            (d3.hierarchy(data)
+                .sum(d => d.value)
+                .sort((a, b) => b.value - a.value))
+
+        // color = d3.scaleOrdinal().range(["#E26F99", "#E89BB7", "#F2C5D6"]);
+
+        const width = 675;
+        const height = width;
+
+        const root = pack(data);
+
+        const svg = d3.select("body")
+            .append("svg")
+            .attr("title", "Packed circle chart")
+            // .attr("viewBox", [0, 0, width, height])
+            .attr("width", width)
+            .attr("height", height)
+            .style("font", "400 16px/1.4 'Source Sans Pro', 'Noto Sans', sans-serif")
+            .attr("text-anchor", "middle");
+
+        const node = svg.selectAll("g")
+            .data(d3.group(root.descendants(), d => d.height))
+            .join("g")
+            .selectAll("g")
+            .data(d => d[1])
+            .join("g")
+            .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
+
+        node.append("circle")
+            .attr("r", d => d.r)
+            .attr("fill", function(d) {
+                if (d.ancestors().length > 1) {
+                    //d.ancestors()[0] 为第二层，d.ancestors()[1]为第三层
+                    // if (d.ancestors()[0].data.name == "亚洲") {
+                    //     return "#fce260"
+                    // } else if (d.ancestors()[0].data.name == "欧洲") {
+                    //     return "#68a5ec"
+                    // } else if (d.ancestors()[0].data.name == "非洲") {
+                    //     return "#a7adc4"
+                    // } else if (d.ancestors()[0].data.name == "大洋洲") {
+                    //     return "#b8e986"
+                    // } else if (d.ancestors()[0].data.name == "北美洲") {
+                    //     return "#ee5a6d"
+                    // } else if (d.ancestors()[0].data.name == "拉丁美洲") {
+                    //     return "#c195e9"
+                    // } else if (d.ancestors()[0].data.name == "国(地)别不详的") {
+                    //     return "#606060"
+                    // } else {
+                    //     return "white";
+                    // }
+                    if (d.ancestors()[1].data.name == "亚洲") {
+                        return "#fce260"
+                    } else if (d.ancestors()[1].data.name == "欧洲") {
+                        return "#68a5ec"
+                    } else if (d.ancestors()[1].data.name == "非洲") {
+                        return "#a7adc4"
+                    } else if (d.ancestors()[1].data.name == "大洋洲") {
+                        return "#b8e986"
+                    } else if (d.ancestors()[1].data.name == "北美洲") {
+                        return "#ee5a6d"
+                    } else if (d.ancestors()[1].data.name == "拉丁美洲") {
+                        return "#c195e9"
+                    } else if (d.ancestors()[1].data.name == "国(地)别不详的") {
+                        return "#606060"
+                    } else {
+                        return "white";
+                    }
+
+                } else {
+                    return "white";
+                }
+            })
+            .attr("stroke", function(d) {
+                if (d.ancestors().length < 3) {
+                    return "black"
+                }
+            })
+            //d => color2(d.height)
+        const leaf = node.filter(d => !d.children);
+
+
+        // leaf.select("circle")
+        //     .attr("id", function(d) {
+        //         debugger;
+        //     });
+        //d => (d.leafUid = DOM.uid("leaf")).id
+
+        // leaf.append("clipPath")
+        //     .attr("id", d => (d.clipUid = DOM.uid("clip")).id)
+        //     .append("use")
+        //     .attr("xlink:href", d => d.leafUid.href);
+
+
+        var arc = d3.arc().innerRadius(0)
+        var pie = d3.pie();
+
+        // set the color scale
+        var color = d3.scaleOrdinal().range(["black", "white"])
+            // var color_2 = d3.scaleOrdinal().range(["#80deff", "#f79fb2"])
+
+
+        leaf.selectAll("g.arc")
+            .data(function(d) {
+                value_list = []
+                value_list.push(d.data.export)
+                value_list.push(d.data.import)
+                    // debugger;
+                return pie(value_list).map(function(m) {
+                    m.r = d.r;
+                    return m;
+                });
+            })
+            .enter()
+            .append("g")
+            .attr("class", "arc")
+            .append("path")
+            .attr("d", function(d) {
+                arc.outerRadius(d.r);
+                return arc(d);
+            })
+            //保留各大洲颜色
+            .style("opacity", 0.1)
+            .style("fill", function(d, i) {
+                return color(i);
+            })
+            .style("stroke", "black");
+
+        leaf.append("text")
+            // .attr("clip-path", d => d.clipUid) // Remove this if you want labels to extend outside circles
+            .attr("display", d => d.r < 17 ? 'none' : 'inherit') // Uncomment this if you want to hide labels in small circles
+            .selectAll("tspan")
+            .data(d => d.data.name.split(/(?=[A-Z][a-z])|\s+/g)) // Split words into their own tspans and lines
+            .join("tspan")
+            .attr("x", 0)
+            .attr("y", (d, i, nodes) => `${i - nodes.length / 2 + 0.8}em`)
+            .attr("fill", "black")
+            .text(d => d)
+            .clone(true)
+            .lower()
+            .attr("aria-hidden", "true")
+            // .style("text-shadow", "1px 1px 2px #40081C, -1px 1px 2px #40081C") // This doesn't export well
+            .attr("fill", "none")
+            .attr("stroke", "#FAEBF0")
+            .attr("stroke-width", 2)
+            .attr("stroke-linecap", "round")
+            .attr("stroke-linejoin", "round");
+
+
+
+        // node.append("title")
+        //     .text(d => `${d.ancestors().map(d => d.data.name).reverse().join(" / ")}\nValue: ${d.value}`);
+
+        //每个大洲的label
+        // const groupLabel = svg.append("g")
+        //     .attr("pointer-events", "none")
+        //     .attr("text-anchor", "middle")
+        //     .selectAll("text")
+        //     .data(root.descendants())
+        //     .join("text")
+        //     .text(d => d.height === 1 ? d.data.name : '');
+
+        //每个大洲的label   
+        // groupLabel
+        //     .attr("transform", d => `translate(${(d.x)}, ${(d.y - (d.r))})`)
+        //     .attr("dy", "-0.25em")
+        //     .attr("class", "repo-name")
+        //     .attr("fill", "#fff")
+        //     .clone(true)
+        //     .lower()
+        //     .attr("aria-hidden", "true")
+        //     // .style("text-shadow", "1px 1px 2px #40081C, -1px 1px 2px #40081C") // This doesn't export well
+        //     .attr("fill", "none")
+        //     .attr("stroke", "#6A1131")
+        //     .attr("stroke-width", 2)
+        //     .attr("stroke-linecap", "round")
+        //     .attr("stroke-linejoin", "round");
+
+        svg.append("text")
+            .attr("id", "byline")
+            .attr("x", width)
+            .attr("y", height)
+            .attr("dy", "-1em")
+            .attr("text-anchor", "end")
+
+        // return svg.node();
+    </script>
+</body>

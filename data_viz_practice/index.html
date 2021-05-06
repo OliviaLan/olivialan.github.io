@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        
+        g.arc path {
+            stroke: #828282;
+            stroke-width: 0.5;
+        }
+        
+        g.arc text {
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var data = [
+            ["美国", [288647563, 84537611]],
+            ["日本", [98746880, 118372208]],
+            ["中国香港", [192425765, 6259701]],
+            ["韩国", [76482232, 119599993]],
+            ["中国台湾", [37986564, 119339346]],
+            ["bubble6", [15, 5, 10]],
+            ["bubble7", [10, 10]],
+            ["bubble8", [25, 10]],
+            ["bubble9", [10, 25, 10, 10]],
+            ["bubble10", [55, 10]],
+            ["bubble11", [10, 80, 10, 10]],
+            ["bubble12", [50, 50]],
+        ];
+
+        var color = d3.scaleOrdinal().range(["green", "orange"]),
+            diameter = 500;
+
+        var bubble = d3.pack()
+            .size([diameter, diameter])
+            .padding(1.5),
+            root = d3.hierarchy({
+                children: data
+            })
+            .sum(function(d) {
+                return d.children ? 0 : d3.sum(d[1]);
+            }),
+            arc = d3.arc().innerRadius(0),
+            pie = d3.pie();
+
+        var nodeData = bubble(root).children;
+
+        var svg = d3.select("body").append("svg")
+            .attr("width", diameter)
+            .attr("height", diameter)
+            .attr("class", "bubble");
+
+        var nodes = svg.selectAll("g.node")
+            .data(nodeData);
+
+        var nodeEnter = nodes.enter().append("g")
+            .attr("class", "node")
+            .attr("transform", function(d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            })
+
+
+        var arcGs = nodeEnter.selectAll("g.arc")
+            .data(function(d) {
+                return pie(d.data[1]).map(function(m) {
+                    m.r = d.r;
+                    return m;
+                });
+            });
+        var arcEnter = arcGs.enter().append("g").attr("class", "arc");
+
+        arcEnter.append("path")
+            .attr("d", function(d) {
+                arc.outerRadius(d.r);
+                return arc(d);
+            })
+            .style("fill", function(d, i) {
+                return color(i);
+            });
+
+        arcEnter.append("text")
+            .attr('x', function(d) {
+                arc.outerRadius(d.r);
+                return arc.centroid(d)[0];
+            })
+            .attr('y', function(d) {
+                arc.outerRadius(d.r);
+                return arc.centroid(d)[1];
+            })
+            .attr('dy', "0.35em")
+            .style("text-anchor", "middle")
+            .text(function(d) {
+                console.log(d);
+                return d.value;
+            });
+
+        // var labels = nodeEnter.selectAll("text.label")
+        //     .data(function(d) {
+        //         return [d.data[0]];
+        //     });
+        // labels.enter().append("text")
+        //     .attr('class', 'label')
+        //     .attr('dy', '0.35em')
+        //     .style("text-anchor", "middle")
+        //     .text(String);
+    </script>
+</body>
