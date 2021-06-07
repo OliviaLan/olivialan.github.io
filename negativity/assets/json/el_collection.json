@@ -1,10 +1,8 @@
 [
-{"EL_id":0, "EL_tag":"Bar chart"}, 
-{"EL_id":1, "EL_tag":"Line chart"}, 
-{"EL_id":2, "EL_tag":"Pie chart"},  
-{"EL_id":3, "EL_tag":"Chart marks"}, 
-{"EL_id":4, "EL_tag":"Chart axes"}, 
-{"EL_id":5, "EL_tag":"Chart as a whole"},
-{"EL_id":6, "EL_tag":"Embellishment"}, 
-{"EL_id":7, "EL_tag":"Camera"}
+    { "EL_id": 0, "EL_tag": "Color" },
+    { "EL_id": 1, "EL_tag": "Imagery" },
+    { "EL_id": 2, "EL_tag": "Audio" },
+    { "EL_id": 3, "EL_tag": "Interaction" },
+    { "EL_id": 4, "EL_tag": "Motion" },
+    { "EL_id": 5, "EL_tag": "Narratives" }
 ]

@@ -10,15 +10,15 @@ class DisplayQueue {
     constructor(name, init_first_member) {
         this._name = name + "";
         this._first_member = init_first_member || "";
-        this._queue  = { head: [new DisplayQueueMember({ VNS_tag: _HEAD_SIGN }), 0] };
+        this._queue = { head: [new DisplayQueueMember({ VNS_tag: _HEAD_SIGN }), 0] };
     }
 
-    keys () {
+    keys() {
         return Object.keys(this._queue);
     }
 
-    reset_first_member (VNS_tag) {
-        if(this.keys().length === 1 || this.keys().indexOf(VNS_tag) < 0) {
+    reset_first_member(VNS_tag) {
+        if (this.keys().length === 1 || this.keys().indexOf(VNS_tag) < 0) {
             console.error("You can not set a nonexistent member to the \'first member\'");
             return false;
         }
@@ -27,11 +27,11 @@ class DisplayQueue {
         this._first_member = VNS_tag;
         return true;
     }
-    
-    reset_link (prev_VNS_tag, next_VNS_tag) {
-        if(this.keys().length === 1 
-            || this.keys().indexOf(prev_VNS_tag) < 0 
-            || !(this.keys().indexOf(next_VNS_tag) < 0 || next_VNS_tag === "")
+
+    reset_link(prev_VNS_tag, next_VNS_tag) {
+        if (this.keys().length === 1 ||
+            this.keys().indexOf(prev_VNS_tag) < 0 ||
+            !(this.keys().indexOf(next_VNS_tag) < 0 || next_VNS_tag === "")
         ) {
             console.error("You can not set nonexistent member\(s\) to the a new link.");
             return false;
@@ -41,53 +41,53 @@ class DisplayQueue {
         return true;
     }
 
-    get_next_tag (VNS_tag) {
-        if(this.keys().length === 1 || this.keys().indexOf(VNS_tag) < 0) {
+    get_next_tag(VNS_tag) {
+        if (this.keys().length === 1 || this.keys().indexOf(VNS_tag) < 0) {
             console.error("You can not read an empty queue nor a nonexistent display!");
             return false;
         }
         return this._queue[VNS_tag][0].get_next_tag();
     }
 
-    is_first_member (VNS_tag) {
+    is_first_member(VNS_tag) {
         VNS_tag = VNS_tag + "";
-        if(this.keys().indexOf(VNS_tag) > -1 && this._queue["head"].get_next_tag() === VNS_tag) {
+        if (this.keys().indexOf(VNS_tag) > -1 && this._queue["head"].get_next_tag() === VNS_tag) {
             return true;
         }
         return false;
     }
 
 
-    _get_card_id_list (VNS_tag) {
-        if(this.keys().length === 1 || this.keys().indexOf(VNS_tag) < 0) {
+    _get_card_id_list(VNS_tag) {
+        if (this.keys().length === 1 || this.keys().indexOf(VNS_tag) < 0) {
             console.error("You can not read an empty queue nor a nonexistent display!");
             return [];
         }
-        return this._queue[VNS_tag][0]._print(); 
+        return this._queue[VNS_tag][0]._print();
     }
 
     get_card_subject_list(VNS_tag) {
-        if(this.keys().length === 1 || this.keys().indexOf(VNS_tag) < 0) {
+        if (this.keys().length === 1 || this.keys().indexOf(VNS_tag) < 0) {
             console.error("You can not read an empty queue nor a nonexistent display!");
             return [];
         }
         return this._queue[VNS_tag][0]._get_card_subject_list();
     }
 
-    print (VNS_tag = "") {
-        if(VNS_tag === "head") {
+    print(VNS_tag = "") {
+        if (VNS_tag === "head") {
             return {};
         }
 
-        if(VNS_tag && this.keys().indexOf(VNS_tag) > -1) {
-            return { VNS_tag: this._get_card_id_list (VNS_tag) };
+        if (VNS_tag && this.keys().indexOf(VNS_tag) > -1) {
+            return { VNS_tag: this._get_card_id_list(VNS_tag) };
         }
 
-        if(VNS_tag === "") {
+        if (VNS_tag === "") {
             let result = {};
             this.keys().forEach((VNS_tag_key, i, keyArray) => {
-                if(VNS_tag_key === "head") {
-                    return ;
+                if (VNS_tag_key === "head") {
+                    return;
                 }
                 result[VNS_tag_key] = this._get_card_id_list(VNS_tag_key);
             });
@@ -97,16 +97,16 @@ class DisplayQueue {
         return {};
     }
 
-    append (display_member, first = false) {
+    append(display_member, first = false) {
         first = first || false;
         let VNS_tag = display_member.get_VNS_tag();
-        if(this.keys().indexOf(VNS_tag) > -1) {
+        if (this.keys().indexOf(VNS_tag) > -1) {
             // console.log(`VNS_tag: ${VNS_tag} has already existed in the queue.`);
             return -1;
-        } 
+        }
         let count = display_member._count_cards();
         this._queue[VNS_tag] = [display_member, count]; // single queue template
-        if(first) {
+        if (first) {
             this.reset_first_member(VNS_tag);
         }
         return this.keys().length - 1;
@@ -115,13 +115,13 @@ class DisplayQueue {
     // only step out of the link
     // *** shouldn't be used to remove a display member from the queue! ***
     // if count === 0, front end will remove the certain display out of the container but not back-end's job.
-    remove (VNS_tag) {
+    remove(VNS_tag) {
         VNS_tag = VNS_tag + "";
-        if(this.keys().indexOf(VNS_tag) < 0) {
+        if (this.keys().indexOf(VNS_tag) < 0) {
             console.log(`VNS_tag: ${VNS_tag} doesn't exist in the queue.`);
             return false;
         }
-        
+
         let prev_display_tag = "head";
         let next_display_tag = this.get_next_tag(VNS_tag);
         while (this.get_next_tag(prev_display_tag) !== VNS_tag) {
@@ -130,18 +130,16 @@ class DisplayQueue {
         this.reset_link(prev_display_tag, next_display_tag);
         this.reset_link(VNS_tag, "");
 
-        if(this.is_first_member(VNS_tag)) {
+        if (this.is_first_member(VNS_tag)) {
             this.reset_first_member(next_display_tag);
         }
         return VNS_tag;
     }
 
-    pushCard (card_subject) {
+    pushCard(card_subject) {
         let VNS_tag = card_subject._get_param("VNS_tag");
-        if(this.keys().indexOf(VNS_tag) < 0) {
+        if (this.keys().indexOf(VNS_tag) < 0) {
             console.
-
-
             error(`We don't have VNS_tag: ${VNS_tag} here in the queue.`);
             return false;
         }
@@ -149,8 +147,8 @@ class DisplayQueue {
         this._queue[VNS_tag][1]++;
     }
 
-    delCard (VNS_tag, card_id) {
-        if(this.keys().indexOf(VNS_tag) < 0) {
+    delCard(VNS_tag, card_id) {
+        if (this.keys().indexOf(VNS_tag) < 0) {
             console.error(`We don't have VNS_tag: ${VNS_tag} here in the queue.`);
             return false;
         }
@@ -161,27 +159,27 @@ class DisplayQueue {
 
 
 class DisplayQueueMember extends Homepage_Reminder {
-    constructor ({ VNS_tag, VNS_desc, VNS_num }, cards_list = [], next_tag = "") {
-        super ({ VNS_tag, VNS_desc, VNS_num });
+    constructor({ VNS_tag, VNS_desc, VNS_num }, cards_list = [], next_tag = "") {
+        super({ VNS_tag, VNS_desc, VNS_num });
         this._cards_list = cards_list;
         this._next_tag = next_tag;
     }
 
-    get_VNS_tag () {
+    get_VNS_tag() {
         return this._VNS_tag || "";
     }
 
-    set_next_tag (VNS_tag = "") {
+    set_next_tag(VNS_tag = "") {
         this._next_tag = VNS_tag;
         return true;
     }
 
-    get_next_tag () {
+    get_next_tag() {
         return this._next_tag;
     }
 
-    _set_head () {
-        if(this._VNS_tag !== "") {
+    _set_head() {
+        if (this._VNS_tag !== "") {
             console.error("This is not an empty link node.");
             return false;
         }
@@ -189,52 +187,52 @@ class DisplayQueueMember extends Homepage_Reminder {
         return true;
     }
 
-    is_head () {
-        if(this._VNS_tag === _HEAD_SIGN) {
+    is_head() {
+        if (this._VNS_tag === _HEAD_SIGN) {
             return true;
         }
         return false;
     }
 
-    is_tail () {
-        if(this._VNS_tag === "") {
+    is_tail() {
+        if (this._VNS_tag === "") {
             return true;
         }
         return false;
     }
 
-    _get_card_subject_list () {
+    _get_card_subject_list() {
         return this._cards_list;
     }
 
-    _get_card_id_list () {
+    _get_card_id_list() {
         return Array.from(this._cards_list, x => Number(x._get_param("card_id")));
     }
 
-    _count_cards () {
+    _count_cards() {
         return this._cards_list.length;
     }
 
-    _print () {
+    _print() {
         return Array.from(this._cards_list, x => Number(x._get_param("card_id")));
     }
 
-    _pushCard (card_subject) {
+    _pushCard(card_subject) {
         let card_id = card_subject._get_param("card_id");
-        if(card_subject._get_param("VNS_tag") !== this._VNS_tag || (this._get_card_id_list()).indexOf(card_id) > -1) {
+        if (card_subject._get_param("VNS_tag") !== this._VNS_tag || (this._get_card_id_list()).indexOf(card_id) > -1) {
             return false;
         }
- 
+
         this._cards_list.push(card_subject);
         this._cards_list.sort((a, b) => Number(a._get_param("card_id") - Number(b._get_param("card_id"))));
         return true;
     }
 
-    _delCard (card_id) {
+    _delCard(card_id) {
         card_id = Number(card_id) || 0;
         let id_list = this._get_card_id_list();
         let card_No_inArray = id_list.indexOf(card_id);
-        if((card_No_inArray < 0) || Number(card_id) <= 0) {
+        if ((card_No_inArray < 0) || Number(card_id) <= 0) {
             console.error("This card id doesn\'t exist.");
             return -1;
         }
@@ -246,22 +244,22 @@ class DisplayQueueMember extends Homepage_Reminder {
 
 
 class CardsFilter {
-    constructor (name, spec_tag = "", sep = true) {
+    constructor(name, spec_tag = "", sep = true) {
         this._name = name + "";
         this._spec_tag = spec_tag + "";
         this._keywords = [];
         this._sep = sep;
     }
 
-    _regex_keywords (keywords = []) {
+    _regex_keywords(keywords = []) {
         let keywords_arr = [];
         let result;
-        if(keywords.length === 0) {
+        if (keywords.length === 0) {
             result = new RegExp("\.\*");
             return result;
         }
 
-        if(this._sep) {
+        if (this._sep) {
             let keywords_str = keywords.join(",");
             keywords_str = keywords_str.replace(/\s+/, ",");
             keywords_arr = keywords_str
@@ -277,19 +275,19 @@ class CardsFilter {
         return result;
     }
 
-    filtering_method (obj = {}) {
+    filtering_method(obj = {}) {
         let trans_kw = this._regex_keywords(this._keywords);
-        if(this._spec_tag.length > 0) {
+        if (this._spec_tag.length > 0) {
             return obj[this._spec_tag].search(trans_kw) + 1; // number
         }
-        
-        if(Object.keys(obj).length > 0) {
+
+        if (Object.keys(obj).length > 0) {
             return Object.keys(obj).some((key, i, keyArray) => {
-                if((typeof obj[key] === "string") || (typeof obj[key] === "number")) {
+                if ((typeof obj[key] === "string") || (typeof obj[key] === "number")) {
                     return (obj[key] + "").search(trans_kw) >= 0;
                 }
                 return false;
-            }) ? 1: 0;
+            }) ? 1 : 0;
         }
 
         return 0;
@@ -298,14 +296,14 @@ class CardsFilter {
     _appendKeywords(new_keywords = []) {
         let that = this;
         let timer = 1;
-        while(timer > 0) {
+        while (timer > 0) {
             timer--;
-            if(timer === 0 && that._keywords.length > 0) {
+            if (timer === 0 && that._keywords.length > 0) {
                 timer = 100;
             }
         }
-        
-        if(new_keywords) {
+
+        if (new_keywords) {
             new_keywords = new_keywords.filter(x => that._keywords.indexOf(x) < 0);
             that._keywords = that._keywords.concat(new_keywords);
         }
@@ -322,10 +320,10 @@ class CardsFilter {
 
 
 // trans = true: return compensatory set
-DisplayQueue.prototype.card_filter = function (Filter = new CardsFilter("new filter"), keywords = [], trans = false) {
+DisplayQueue.prototype.card_filter = function(Filter = new CardsFilter("new filter"), keywords = [], trans = false) {
     // homepage_status["visible_display_queue"] = this;
     let obj_set = this;
-    if(keywords.length === 0) {
+    if (keywords.length === 0) {
         return this;
     }
 
@@ -333,11 +331,11 @@ DisplayQueue.prototype.card_filter = function (Filter = new CardsFilter("new fil
     Filter._appendKeywords(keywords);
 
     obj_set.keys().forEach((VNS_tag, i_a, keyList) => {
-        if(VNS_tag == "head") {
-            return ;
+        if (VNS_tag == "head") {
+            return;
         }
         let obj_list = obj_set.get_card_subject_list(VNS_tag);
-        obj_list = obj_list.filter(obj => Filter.filtering_method(obj.parameters) === (trans? 1: 0));
+        obj_list = obj_list.filter(obj => Filter.filtering_method(obj.parameters) === (trans ? 1 : 0));
         obj_set._queue[VNS_tag][0]._cards_list = obj_list;
         obj_set._queue[VNS_tag][1] = obj_list.length;
     });
@@ -355,7 +353,7 @@ const FILTER_TAG_QUEUE = new CardsFilter("filtering tag queue", "EL_tag", false)
 const FILTER_KEYWORD_QUEUE = new CardsFilter("filtering keyword queue");
 
 
-function _create_display_subjects (display_url) {
+function _create_display_subjects(display_url) {
 
     $.ajaxSettings.async = false;
     $.getJSON(display_url, json => {
@@ -363,21 +361,21 @@ function _create_display_subjects (display_url) {
         let next_tag = "";
         let is_first = false;
         json.forEach((json_item, i, jsonArr) => {
-            
+
             let display_reminder_subject = new DisplayQueueMember({
                 VNS_tag: json_item["VNS_tag"],
                 VNS_desc: json_item["VNS_desc"],
                 VNS_num: json_item["VNS_num"]
             });
-            next_tag = (i + 1 < jsonArr.length) ? jsonArr[i + 1]["VNS_tag"]: "";
+            next_tag = (i + 1 < jsonArr.length) ? jsonArr[i + 1]["VNS_tag"] : "";
             display_reminder_subject.set_next_tag(next_tag);
-            is_first = (i === 0) ? true: false;
+            is_first = (i === 0) ? true : false;
             VISIBLE_DISPLAY_QUEUE.append(display_reminder_subject, is_first);
         });
     });
 }
 
-function _create_card_subjects (cards_url, displayQueue) {
+function _create_card_subjects(cards_url, displayQueue) {
 
     $.ajaxSettings.async = false;
     $.getJSON(cards_url, json => {
@@ -391,18 +389,18 @@ function _create_card_subjects (cards_url, displayQueue) {
 
 // main
 //好像是这里做的筛选
-const init_display_container = function (keywords = [], search = false, EL_filter = false) {
-    _create_display_subjects (homepage_vns_url);
+const init_display_container = function(keywords = [], search = false, EL_filter = false) {
+    _create_display_subjects(homepage_vns_url);
     _create_card_subjects(homepage_cards_url, VISIBLE_DISPLAY_QUEUE);
-    if(!search && !EL_filter ) {
+    if (!search && !EL_filter) {
         return VISIBLE_DISPLAY_QUEUE;
     }
 
-    if(search == true) {
+    if (search == true) {
         return VISIBLE_DISPLAY_QUEUE.card_filter(FILTER_KEYWORD_QUEUE, keywords, true);
     }
 
-    if(EL_filter == true) {
+    if (EL_filter == true) {
         return VISIBLE_DISPLAY_QUEUE.card_filter(FILTER_TAG_QUEUE, keywords);
     }
 
@@ -411,8 +409,8 @@ const init_display_container = function (keywords = [], search = false, EL_filte
 
 // const result = init_display_container([], false, true);
 
-export { 
+export {
     DisplayQueue as DisplayQueue,
     DisplayQueueMember as DisplayQueueMember,
-    init_display_container as homeAPI 
+    init_display_container as homeAPI
 };

@@ -31,9 +31,9 @@ export const vns_method_to_btn_name = str => {
 
 window.onload = function() {
     // 定位到tab
-    VISIT_PAGE("home", openHomepage_ex);
-
-
+    VISIT_PAGE("home", openStudyMaterial);
+    //openStudyMaterial
+    //openHomepage_ex
 
 
     // openVideoDataset();
@@ -59,10 +59,10 @@ window.onload = function() {
                 callback = openStudyMaterial;
             }
 
-            if (tab_name === "gallery") {
-                // callback = openVideoDataset;
-                callback = openGalleryDataset;
-            }
+            // if (tab_name === "gallery") {
+            //     // callback = openVideoDataset;
+            //     callback = openGalleryDataset;
+            // }
 
             if (tab_name === "about") {
                 callback = openAbout;
@@ -101,21 +101,16 @@ function openHomepage_ex() {
     // 界面异步加载
     $.ajax({
         // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/homepage_ex.html",
-        // url: "./assets/static/homepage_ex.html",
-        url: "./assets/static/studymaterial.html",
+        url: "./assets/static/homepage_ex.html",
         type: "get",
         contentType: "text/html",
         dataType: "html",
         success: function(res) {
             document.querySelector("main").innerHTML = res;
-            //Homepage_ex_loading();
-            StudyMaterial_loading();
+            Homepage_ex_loading();
 
         }
     });
-
-
-
 }
 
 
@@ -138,61 +133,61 @@ function openStudyMaterial() {
     });
 }
 
-function openVideoDataset() {
-    // 页面呈现loading
-    // document.querySelector("main").innerHTML = "";
+// function openVideoDataset() {
+//     // 页面呈现loading
+//     // document.querySelector("main").innerHTML = "";
 
-    // 界面异步加载
-    $.ajax({
-        // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/videodataset.html",
-        url: "./assets/static/videodataset.html",
-        type: "get",
-        contentType: "text/html",
-        dataType: "html",
-        success: function(res) {
-            document.querySelector("main").innerHTML = res;
-            videoDataset_loading();
-        }
-    });
-}
+//     // 界面异步加载
+//     $.ajax({
+//         // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/videodataset.html",
+//         url: "./assets/static/videodataset.html",
+//         type: "get",
+//         contentType: "text/html",
+//         dataType: "html",
+//         success: function(res) {
+//             document.querySelector("main").innerHTML = res;
+//             videoDataset_loading();
+//         }
+//     });
+// }
 
-function openGalleryDataset() {
-    // 页面呈现loading
-    // document.querySelector("main").innerHTML = "";
+// function openGalleryDataset() {
+//     // 页面呈现loading
+//     // document.querySelector("main").innerHTML = "";
 
-    // 界面异步加载
-    $.ajax({
-        // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/videodataset.html",
-        url: "./assets/static/gallery.html",
-        type: "get",
-        contentType: "text/html",
-        dataType: "html",
-        success: function(res) {
-            document.querySelector("main").innerHTML = res;
-            // videoDataset_loading();
-            gallery_loading();
-        }
-    });
-}
+//     // 界面异步加载
+//     $.ajax({
+//         // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/videodataset.html",
+//         url: "./assets/static/gallery.html",
+//         type: "get",
+//         contentType: "text/html",
+//         dataType: "html",
+//         success: function(res) {
+//             document.querySelector("main").innerHTML = res;
+//             // videoDataset_loading();
+//             gallery_loading();
+//         }
+//     });
+// }
 
 
-function openDownloads() {
-    // 页面呈现loading
-    // document.querySelector("main").innerHTML = "";
+// function openDownloads() {
+//     // 页面呈现loading
+//     // document.querySelector("main").innerHTML = "";
 
-    // 界面异步加载
-    $.ajax({
-        // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/downloads.html",
-        url: "./assets/static/downloads.html",
-        type: "get",
-        contentType: "text/html",
-        dataType: "html",
-        success: function(res) {
-            document.querySelector("main").innerHTML = res;
-            downloads_loading();
-        }
-    });
-}
+//     // 界面异步加载
+//     $.ajax({
+//         // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/downloads.html",
+//         url: "./assets/static/downloads.html",
+//         type: "get",
+//         contentType: "text/html",
+//         dataType: "html",
+//         success: function(res) {
+//             document.querySelector("main").innerHTML = res;
+//             downloads_loading();
+//         }
+//     });
+// }
 
 
 function openAbout() {
@@ -254,7 +249,7 @@ function Homepage_ex_loading() {
         var chart_child_that_node = chart_child_node[2];
         console.log(chart_child_that_node);
 
-        chart_child_that_node.insertAdjacentHTML('afterend', '<h3 class="sidebar-panel-title sidebar-panel-title-editorial">Editorial Layers</h3>');
+        // chart_child_that_node.insertAdjacentHTML('afterend', '<h3 class="sidebar-panel-title sidebar-panel-title-editorial">Editorial Layers</h3>');
 
     }, 100);
 
@@ -299,7 +294,7 @@ function modal_EventListener() {
 
 
 /* video dataset page init method */
-const video_dataset_url = "./assets/json/video_dataset.json";
+const video_dataset_url = "./assets/json/corpus.json";
 
 function videoDataset_loading() {
     const video_deck_node = document.querySelector(".video-deck");

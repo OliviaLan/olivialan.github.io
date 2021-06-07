@@ -16,13 +16,13 @@
     background-color: #a09daf !important;
 }
 
-.vns-joy,
-.joy .modal-header,
-.joy .modal-footer,
-.joy .mobile-nav-symbol,
-.joy .scrollSpy-btn-symbol,
-.joy .reminder-symbol,
-.joy .card-header {
+.vns-failure,
+.failure .modal-header,
+.failure .modal-footer,
+.failure .mobile-nav-symbol,
+.failure .scrollSpy-btn-symbol,
+.failure .reminder-symbol,
+.failure .card-header {
     background-color: #FFEFB1 !important;
 }
 
@@ -30,59 +30,59 @@
     background: transparent linear-gradient(180deg, #FFFCEF 50%, #FFFFFF 80%) !important;
 }
 
-.vns-amusement,
-.amusement .modal-header,
-.amusement .modal-footer,
-.amusement .mobile-nav-symbol,
-.amusement .scrollSpy-btn-symbol,
-.amusement .reminder-symbol,
-.amusement .card-header {
+.vns-controless,
+.controless .modal-header,
+.controless .modal-footer,
+.controless .mobile-nav-symbol,
+.controless .scrollSpy-btn-symbol,
+.controless .reminder-symbol,
+.controless .card-header {
     background-color: #FBC1CE !important;
 }
 
-.amusement .front {
+.controless .front {
     background: transparent linear-gradient(180deg, #FEF3F5 50%, #FFFFFF 80%) !important;
 }
 
-.vns-tenderness,
-.tenderness .modal-header,
-.tenderness .modal-footer,
-.tenderness .mobile-nav-symbol,
-.tenderness .scrollSpy-btn-symbol,
-.tenderness .reminder-symbol,
-.tenderness .card-header {
+.vns-repetition,
+.repetition .modal-header,
+.repetition .modal-footer,
+.repetition .mobile-nav-symbol,
+.repetition .scrollSpy-btn-symbol,
+.repetition .reminder-symbol,
+.repetition .card-header {
     background-color: #B8E4F9 !important;
 }
 
-.tenderness .front {
+.repetition .front {
     background: transparent linear-gradient(180deg, #F1FAFE 50%, #FFFFFF 80%) !important;
 }
 
-.vns-surprise,
-.surprise .modal-header,
-.surprise .modal-footer,
-.surprise .mobile-nav-symbol,
-.surprise .scrollSpy-btn-symbol,
-.surprise .reminder-symbol,
-.surprise .card-header {
+.vns-comparison,
+.comparison .modal-header,
+.comparison .modal-footer,
+.comparison .mobile-nav-symbol,
+.comparison .scrollSpy-btn-symbol,
+.comparison .reminder-symbol,
+.comparison .card-header {
     background-color: #E1D8FF !important;
 }
 
-.surprise .front {
+.comparison .front {
     background: transparent linear-gradient(180deg, #F9F7FF 50%, #FFFFFF 80%) !important;
 }
 
-.vns-excitement,
-.excitement .modal-header,
-.excitement .modal-footer,
-.excitement .mobile-nav-symbol,
-.excitement .scrollSpy-btn-symbol,
-.excitement .reminder-symbol,
-.excitement .card-header {
+.vns-challenge,
+.challenge .modal-header,
+.challenge .modal-footer,
+.challenge .mobile-nav-symbol,
+.challenge .scrollSpy-btn-symbol,
+.challenge .reminder-symbol,
+.challenge .card-header {
     background-color: #FFDAB4 !important;
 }
 
-.excitement .front {
+.challenge .front {
     background: transparent linear-gradient(180deg, #FFF8F0 50%, #FFFFFF 80%) !important;
 }
 
@@ -95,7 +95,7 @@
 
 /*左侧导航部分的 editorial layer的icon*/
 
-.el-Chart-as-a-whole .filter-btn-symbol {
+.el-Color .filter-btn-symbol {
     background-image: url("../icon/panel_whole chart.svg");
     background-position: 0px 3px;
     background-repeat: no-repeat;
@@ -103,7 +103,7 @@
     height: 15px;
 }
 
-.el-Chart-marks .filter-btn-symbol {
+.el-Imagery .filter-btn-symbol {
     background-image: url("../icon/panel_mark.svg");
     background-position: 1.5px 1px;
     background-repeat: no-repeat;
@@ -111,7 +111,7 @@
     height: 15px;
 }
 
-.el-Chart-axes .filter-btn-symbol {
+.el-Audio .filter-btn-symbol {
     background-image: url("../icon/panel_axes.svg");
     background-position: 2.5px 1px;
     background-repeat: no-repeat;
@@ -119,7 +119,7 @@
     height: 15px;
 }
 
-.el-Embellishment .filter-btn-symbol {
+.el-Interaction .filter-btn-symbol {
     background-image: url("../icon/panel_add.svg");
     background-position: 1.5px 0.5px;
     background-repeat: no-repeat;
@@ -127,7 +127,7 @@
     height: 15px;
 }
 
-.el-Camera .filter-btn-symbol {
+.el-Motion .filter-btn-symbol {
     background-image: url("../icon/panel_camera.svg");
     background-position: 1px 2px;
     background-repeat: no-repeat;
@@ -135,7 +135,7 @@
     height: 15px;
 }
 
-.el-Bar-chart .filter-btn-symbol {
+.el-Narratives .filter-btn-symbol {
     background-image: url("../icon/panel_bar.svg");
     background-position: 1px 1px;
     background-repeat: no-repeat;
@@ -143,7 +143,8 @@
     height: 15px;
 }
 
-.el-Line-chart .filter-btn-symbol {
+
+/* .el-Line-chart .filter-btn-symbol {
     background-image: url("../icon/panel_line.svg");
     background-position: 1px 2px;
     background-repeat: no-repeat;
@@ -157,12 +158,12 @@
     background-repeat: no-repeat;
     width: 15px;
     height: 15px;
-}
+} */
 
 
 /* EL symbol for card header 卡片上的icon以及文字样式*/
 
-.el-Chart-as-a-whole .card-header .header-symbol {
+.el-Color.card-header .header-symbol {
     background-image: url("../icon/whole chart.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -170,7 +171,7 @@
     height: 21px;
 }
 
-.el-Chart-marks .card-header .header-symbol {
+.el-Imagery .card-header .header-symbol {
     background-image: url("../icon/mark.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -178,7 +179,7 @@
     height: 21px;
 }
 
-.el-Chart-axes .card-header .header-symbol {
+.el-Audio .card-header .header-symbol {
     background-image: url("../icon/axes.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -186,7 +187,7 @@
     height: 21px;
 }
 
-.el-Embellishment .card-header .header-symbol {
+.el-Interaction .card-header .header-symbol {
     background-image: url("../icon/add.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -194,7 +195,7 @@
     height: 21px;
 }
 
-.el-Camera .card-header .header-symbol {
+.el-Motion .card-header .header-symbol {
     background-image: url("../icon/camera.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -205,7 +206,7 @@
 
 /*el_tag2的class名字 卡片头部的标签名称*/
 
-.Chart-as-a-whole {
+.Color {
     background-image: url("../icon/whole chart.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -213,7 +214,7 @@
     height: 21px;
 }
 
-.Chart-marks {
+.Imagery {
     background-image: url("../icon/mark.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -221,7 +222,7 @@
     height: 21px;
 }
 
-.Chart-axes {
+.Audio {
     background-image: url("../icon/axes.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -229,7 +230,7 @@
     height: 21px;
 }
 
-.Embellishment {
+.Interaction {
     background-image: url("../icon/add.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -237,7 +238,15 @@
     height: 21px;
 }
 
-.Camera {
+.Motion {
+    background-image: url("../icon/camera.svg");
+    background-position: 1 0px;
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 21px;
+}
+
+.Narratives {
     background-image: url("../icon/camera.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -248,7 +257,8 @@
 
 /* Chart symbol for card header */
 
-.ch-Bar-chart>.header_classification .chart-symbol {
+
+/* .ch-Bar-chart>.header_classification .chart-symbol {
     background-image: url("../icon/bar.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -270,7 +280,7 @@
     background-repeat: no-repeat;
     width: 23px;
     height: 21px;
-}
+} */
 
 
 /* Chart symbol for card footer */
@@ -1338,7 +1348,7 @@ footer .footer-text {
 .sidebar-panel-group .sidebar-btn.focus,
 .sidebar-panel-group .sidebar-btn.active {
     border-color: transparent;
-    background-color: #FCE7EC;
+    background-color: rgba(200, 191, 231, 0.5);
 }
 
 @media (max-width: 476px) {
@@ -1346,7 +1356,7 @@ footer .footer-text {
     .sidebar-panel-group .sidebar-btn:focus,
     .sidebar-panel-group .sidebar-btn.focus,
     .sidebar-panel-group .sidebar-btn.active {
-        border: 1px solid #FCE7EC;
+        border: 1px solid rgba(200, 191, 231, 0.5);
     }
 }
 
@@ -1439,7 +1449,7 @@ footer .footer-text {
     transform: translateY(-50%);
     right: 0;
     /*  background-color: #FFE1BD;*/
-    background-color: #F7B3CA;
+    background-color: rgb(200, 191, 231);
     border-top-right-radius: 0.1rem;
     border-top-left-radius: 0;
     border-bottom-right-radius: 0.1rem;
