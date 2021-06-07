@@ -1657,7 +1657,7 @@ footer .footer-text {
 .video-deck-single {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 2.15rem;
     max-width: 20rem;
 }
 
@@ -1686,7 +1686,7 @@ footer .footer-text {
 }
 
 .video-deck .story-card-body {
-    padding: 1.75rem 0.75rem 1.75rem;
+    padding: 1.75rem 1.00rem 1.75rem;
     word-break: break-all;
     /* overflow: hidden; */
     /* text-overflow: ellipsis; */
@@ -1770,7 +1770,7 @@ footer .footer-text {
     white-space: nowrap; */
     /* margin-top: 0.5rem; */
     margin-bottom: 0;
-    line-height: 1.0rem;
+    line-height: 1.4rem;
     bottom: 0;
 }
 
