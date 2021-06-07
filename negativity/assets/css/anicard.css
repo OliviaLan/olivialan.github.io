@@ -419,7 +419,7 @@ footer .footer-text {
 }
 
 .navbar-container {
-    background: transparent linear-gradient(90deg, #F9CED9 0%, #FFEFE6 100%);
+    background: transparent linear-gradient(90deg, rgb(200, 191, 231) 0%, rgb(198, 228, 245) 100%);
     background-color: #000000;
     background-position: bottom right;
     background-size: auto 100%;
@@ -432,7 +432,7 @@ footer .footer-text {
 
 @media (min-width: 852.5px) {
     .navbar-container {
-        background: transparent linear-gradient(90deg, #F9CED9 0%, #FFEFE6 100%);
+        background: transparent linear-gradient(90deg, rgb(200, 191, 231) 0%, rgb(198, 228, 245) 100%);
         /*background-image: url(../image/banner.png), linear-gradient(90deg, #FFF6E6 0%, #FEF6E7 100%);*/
         display: flex;
         flex-direction: row !important;
@@ -535,7 +535,7 @@ footer .footer-text {
     position: absolute;
     width: 0;
     height: 0.25rem;
-    background-color: #F7B3CA;
+    background-color: #271592;
     border-radius: 50vh;
     transform: translateX(-50%);
     left: 50%;
@@ -1634,7 +1634,7 @@ footer .footer-text {
     margin-top: 0.25rem;
     margin-bottom: -1rem;
     padding-top: 1rem;
-    justify-content: left;
+    justify-content: space-between;
 }
 
 .video-container .video-deck {
