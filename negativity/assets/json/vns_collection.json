@@ -1,0 +1,33 @@
+[
+{
+    "VNS_id":0,
+    "VNS_tag":"joy",
+    "VNS_color":"#f8e9af",
+    "VNS_desc":"Joy is a state when people feel delighted and pleasant. In data stories, joyous visual representations are often used to please people and echo topics such as vacations and entertainment. When expressing joy, animators usually use motion to mimic the body language of a joyous person and the overall pace of the motion is fast.",
+    "VNS_num":9
+},
+{"VNS_id":1,
+    "VNS_tag":"amusement",
+    "VNS_color":"#ea9081",
+    "VNS_desc":"Amusement is a state when people find something comic and humorous. Amusing data stories usually talk about funny topics such as pets, kids, and anecdotes. An important way to create amusement is to anthropomorphize the objects on the canvas and animate them like cartoon characters.",
+    "VNS_num":9
+},
+{"VNS_id":2,
+    "VNS_tag":"surprise",
+    "VNS_color":"#efbd9c",
+    "VNS_desc":"Surprise is an affect caused by unexpected events. In data stories, surprise usually happens when storytellers reveal some unusual or highly contrasting data facts to the audience. A sense of contrast is a critical contributor to surprise. Designers usually use visual contrast or timing contrast to elicit surprise.",
+    "VNS_num":15
+},
+{"VNS_id":3,
+    "VNS_tag":"tenderness",
+    "VNS_color":"#c0c96f",
+    "VNS_desc":"Tenderness refers to gentleness and softness. In data stories, typical topics concerning tenderness include mental health, the beauty of nature, and social welfare. The most common patterns of tenderness in animation include the use of a slow speed and the imitation of natural phenomena.",
+    "VNS_num":12
+},
+{"VNS_id":4,
+    "VNS_tag":"excitement",
+    "VNS_color":"#f5c8c0",
+    "VNS_desc":"Excitement is an energetic state when people feel very enthusiastic and eager. Data stories that aim to boost optimism or raise passion usually adopt an exciting tone. Relevant topics include economic development, social progress, sports, or games. In general, excitement requires fast and forceful motion.",
+    "VNS_num":15
+}
+]

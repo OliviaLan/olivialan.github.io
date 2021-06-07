@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+  <g id="饼图" transform="translate(2999 6421)">
+    <g id="椭圆_5" data-name="椭圆 5" transform="translate(-2999.036 -6421.036)" fill="none" stroke="#000" stroke-width="0.5">
+      <circle cx="10.5" cy="10.5" r="10.5" stroke="none"/>
+      <circle cx="10.5" cy="10.5" r="10.25" fill="none"/>
+    </g>
+    <path id="减去_1" data-name="减去 1" d="M4,8A4,4,0,0,1,2.443.314,3.975,3.975,0,0,1,4,0V4H8A4,4,0,0,1,4,8Z" transform="translate(-2992.2 -6414.3)"/>
+    <path id="交叉_1" data-name="交叉 1" d="M0,5V0A5,5,0,0,1,5,5Z" transform="translate(-2987.4 -6416)"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+  <g id="柱状图" transform="translate(2995.036 6417.036)">
+    <path id="矩形_1" data-name="矩形 1" d="M1,0H1A1,1,0,0,1,2,1V8A0,0,0,0,1,2,8H0A0,0,0,0,1,0,8V1A1,1,0,0,1,1,0Z" transform="translate(-2985.036 -6415.036)"/>
+    <path id="矩形_2" data-name="矩形 2" d="M1,0H1A1,1,0,0,1,2,1v9a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V1A1,1,0,0,1,1,0Z" transform="translate(-2991.036 -6417.036)"/>
+    <path id="矩形_5" data-name="矩形 5" d="M1,0H1A1,1,0,0,1,2,1V7A0,0,0,0,1,2,7H0A0,0,0,0,1,0,7V1A1,1,0,0,1,1,0Z" transform="translate(-2988.036 -6414.036)"/>
+    <path id="矩形_3" data-name="矩形 3" d="M1,0H1A1,1,0,0,1,2,1V5A0,0,0,0,1,2,5H0A0,0,0,0,1,0,5V1A1,1,0,0,1,1,0Z" transform="translate(-2994.036 -6412.036)"/>
+    <rect id="矩形_4" data-name="矩形 4" width="13" height="1" rx="0.5" transform="translate(-2995.036 -6406.036)"/>
+  </g>
+</svg>

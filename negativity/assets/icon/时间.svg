@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+  <g id="时间" transform="translate(-0.44)">
+    <g id="椭圆_5" data-name="椭圆 5" transform="translate(0.44)" fill="none" stroke="#000" stroke-width="0.5">
+      <circle cx="10.5" cy="10.5" r="10.5" stroke="none"/>
+      <circle cx="10.5" cy="10.5" r="10.25" fill="none"/>
+    </g>
+    <path id="时间-2" data-name="时间" d="M63.962,75.093a4.8,4.8,0,1,0,4.8,4.8A4.788,4.788,0,0,0,63.962,75.093Zm3.124,6.249a.371.371,0,0,1-.344.221.312.312,0,0,1-.148-.025L63.765,80.26a.386.386,0,0,1-.221-.344V77.258a.369.369,0,0,1,.738,0v2.436l2.608,1.181A.344.344,0,0,1,67.086,81.342Z" transform="translate(-52.724 -69.093)"/>
+  </g>
+</svg>

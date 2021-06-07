@@ -1,0 +1,14 @@
+<svg id="元素本身" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+  <g id="椭圆_5" data-name="椭圆 5" transform="translate(0)" fill="none" stroke="#000" stroke-width="0.5">
+    <circle cx="10.5" cy="10.5" r="10.5" stroke="none"/>
+    <circle cx="10.5" cy="10.5" r="10.25" fill="none"/>
+  </g>
+  <g id="椭圆_25" data-name="椭圆 25" transform="translate(3.372 6.045)" fill="none" stroke="#000" stroke-width="0.8">
+    <circle cx="4.455" cy="4.455" r="4.455" stroke="none"/>
+    <circle cx="4.455" cy="4.455" r="4.055" fill="none"/>
+  </g>
+  <g id="椭圆_26" data-name="椭圆 26" transform="translate(8.718 6.045)" fill="none" stroke="#000" stroke-width="0.8">
+    <circle cx="4.455" cy="4.455" r="4.455" stroke="none"/>
+    <circle cx="4.455" cy="4.455" r="4.055" fill="none"/>
+  </g>
+</svg>

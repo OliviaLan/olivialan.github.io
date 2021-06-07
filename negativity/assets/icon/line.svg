@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+  <g id="折线图" transform="translate(2999.372 6421.372)">
+    <g id="椭圆_5" data-name="椭圆 5" transform="translate(-2999.372 -6421.372)" fill="none" stroke="#000" stroke-width="0.5">
+      <circle cx="10.5" cy="10.5" r="10.5" stroke="none"/>
+      <circle cx="10.5" cy="10.5" r="10.25" fill="none"/>
+    </g>
+    <rect id="矩形_4" data-name="矩形 4" width="11" height="1" rx="0.5" transform="translate(-2994.372 -6406.372)"/>
+    <g id="组_19" data-name="组 19" transform="translate(-2993.893 -6415.894)">
+      <rect id="矩形_1" data-name="矩形 1" width="2" height="2" rx="1" transform="translate(8.522 0.522)"/>
+      <rect id="矩形_2" data-name="矩形 2" width="2" height="2" rx="1" transform="translate(2.522 2.522)"/>
+      <rect id="矩形_5" data-name="矩形 5" width="2" height="2" rx="1" transform="translate(5.522 4.522)"/>
+      <rect id="矩形_3" data-name="矩形 3" width="2" height="2" rx="1" transform="translate(-0.478 6.522)"/>
+      <path id="路径_21" data-name="路径 21" d="M-2848.985-6388.719c.188-.333,3.009-4.009,3.009-4.009l3,2.021,3.028-4.074" transform="translate(2849.536 6396.292)" fill="none" stroke="#000" stroke-linejoin="bevel" stroke-width="0.8"/>
+    </g>
+  </g>
+</svg>
