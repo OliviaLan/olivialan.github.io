@@ -408,8 +408,10 @@ body,
 
 footer {
     flex: 0 0 auto;
-    padding: 0.625rem 0;
-    background-color: #FFF6E6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* padding: 1.225rem 2.225rem; */
+    /* background-color: #f2f2f2; */
     min-height: 2.75rem;
 }
 
@@ -541,7 +543,8 @@ footer .footer-text {
 
 @media (min-width: 476px) {
     .navbar-ul li+li {
-        margin-left: 6rem;
+        /* 调整tab之间的间距 */
+        margin-left: 4rem;
     }
 }
 
@@ -2032,7 +2035,8 @@ footer .footer-text {
 .album-card {
     -ms-flex: 0 0 15%;
     flex: 0 0 15%;
-    max-width: 10rem;
+    /* 六个人设置最宽10rem */
+    /* max-width: 40rem; */
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     margin-bottom: 1rem;
