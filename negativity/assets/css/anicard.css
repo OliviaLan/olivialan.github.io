@@ -477,7 +477,8 @@ footer .footer-text {
     padding-bottom: 1.125rem;
     margin-left: 2rem;
     margin-right: 2rem;
-    max-width: 524px;
+    /* 限定标题的最大宽度 */
+    /* max-width: 524px; */
 }
 
 @media (max-width: 852.5px) {
