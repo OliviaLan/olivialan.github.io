@@ -179,8 +179,8 @@ class Homepage_Card {
         var num = this.parameters["card_id"];
         console.log(this.parameters["card_id"]);
         var newnum = num % 3;
-        let front_gif_html = `<img class="card-img front-gif" src="./assets/hp_front_gif/front_${this.parameters["card_id"]}.gif" alt="./assets/image/fail_loading.svg">`; // 缺少正面gif
-        let front_preview_html = `<img class="card-img front-preview" src="./assets/hp_front_preview/front_${newnum}.png">` // 缺少正面预览png
+        let front_gif_html = `<img class="card-img front-gif" src="./assets/card_gif/${this.parameters["card_id"]}.gif" alt="./assets/image/fail_loading.svg">`; // 正面gif
+        let front_preview_html = `<img class="card-img front-preview" src="./assets/card_preview/${this.parameters["card_id"]}.png">` // 正面预览png
 
         card_frontImg_node.classList.add("card-frontImg");
         card_frontImg_node.innerHTML = front_gif_html + front_preview_html;
@@ -314,8 +314,11 @@ class Homepage_Card {
 
         if (direction > 0) {
             // positive
+
+            //底部文字：来源
+            button_text = `<span class="card-footer-source">Source: ${this.parameters["eg_title"]}, ${this.parameters["eg_source"]}, <a href="${this.parameters["eg_url"]}">link</a></span>`;
+            //底部文字：卡片编号
             left_html = `<span class="card-footer-num">NO. ${this.parameters["card_id"]}</span>`;
-            button_text = " ";
         } else {
             // negative
             left_html = ``;
@@ -328,9 +331,11 @@ class Homepage_Card {
 
         card_footer_bottom_node.classList.add("card-footer-child");
 
-        card_footer_node.innerHTML = left_html;
-        card_footer_bottom_node.innerHTML = card_footer_bottom_icon_html + card_footer_bottom_html;
-        card_footer_node.appendChild(card_footer_bottom_node);
+        card_footer_node.innerHTML = button_text + left_html;
+
+        //在卡片底部加icon tag
+        // card_footer_bottom_node.innerHTML = card_footer_bottom_icon_html + card_footer_bottom_html;
+        // card_footer_node.appendChild(card_footer_bottom_node);
 
         return card_footer_node;
     }

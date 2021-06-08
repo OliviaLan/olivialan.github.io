@@ -23,11 +23,11 @@
 .failure .scrollSpy-btn-symbol,
 .failure .reminder-symbol,
 .failure .card-header {
-    background-color: #FFEFB1 !important;
+    background-color: rgb(227, 232, 252) !important;
 }
 
-.joy .front {
-    background: transparent linear-gradient(180deg, #FFFCEF 50%, #FFFFFF 80%) !important;
+.failure .front {
+    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
 .vns-controless,
@@ -37,11 +37,11 @@
 .controless .scrollSpy-btn-symbol,
 .controless .reminder-symbol,
 .controless .card-header {
-    background-color: #FBC1CE !important;
+    background-color: rgb(227, 232, 252) !important;
 }
 
 .controless .front {
-    background: transparent linear-gradient(180deg, #FEF3F5 50%, #FFFFFF 80%) !important;
+    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
 .vns-repetition,
@@ -51,11 +51,11 @@
 .repetition .scrollSpy-btn-symbol,
 .repetition .reminder-symbol,
 .repetition .card-header {
-    background-color: #B8E4F9 !important;
+    background-color: rgb(227, 232, 252) !important;
 }
 
 .repetition .front {
-    background: transparent linear-gradient(180deg, #F1FAFE 50%, #FFFFFF 80%) !important;
+    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
 .vns-comparison,
@@ -65,11 +65,11 @@
 .comparison .scrollSpy-btn-symbol,
 .comparison .reminder-symbol,
 .comparison .card-header {
-    background-color: #E1D8FF !important;
+    background-color: rgb(227, 232, 252) !important;
 }
 
 .comparison .front {
-    background: transparent linear-gradient(180deg, #F9F7FF 50%, #FFFFFF 80%) !important;
+    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
 .vns-challenge,
@@ -79,11 +79,25 @@
 .challenge .scrollSpy-btn-symbol,
 .challenge .reminder-symbol,
 .challenge .card-header {
-    background-color: #FFDAB4 !important;
+    background-color: rgb(227, 232, 252) !important;
 }
 
 .challenge .front {
-    background: transparent linear-gradient(180deg, #FFF8F0 50%, #FFFFFF 80%) !important;
+    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
+}
+
+.vns-accuse,
+.accuse .modal-header,
+.accuse .modal-footer,
+.accuse .mobile-nav-symbol,
+.accuse .scrollSpy-btn-symbol,
+.accuse .reminder-symbol,
+.accuse .card-header {
+    background-color: rgb(227, 232, 252) !important;
+}
+
+.accuse .front {
+    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
 
@@ -768,10 +782,18 @@ footer .footer-text {
     height: 3.5rem;
 }
 
-.card-deck .card-footer-num,
-.card-deck .card-footer a {
-    font-size: 1rem;
-    font-weight: 600;
+.card-footer-source {
+    font-size: 0.8rem;
+    font-weight: 400;
+    position: absolute;
+    left: 10px;
+}
+
+.card-deck .card-footer-num {
+    font-size: 0.8rem;
+    font-weight: 400;
+    position: absolute;
+    right: 10px;
 }
 
 .card-deck .card-footer-num {
