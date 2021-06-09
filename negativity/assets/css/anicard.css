@@ -1838,7 +1838,7 @@ footer .footer-text {
 .about-container {
     height: calc(100vh - 3.75rem);
     overflow-y: auto;
-    background-image: url(../image/background.png);
+    /* background-image: url(../image/background.png); */
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -1855,6 +1855,7 @@ footer .footer-text {
 
 .about-main {
     flex: 1 0 auto;
+    width: 70%;
     max-width: 61.25rem;
     margin: 0 auto;
     padding-left: 0.9375rem;
@@ -1885,7 +1886,7 @@ footer .footer-text {
 .about-para-text-s,
 .about-title-text,
 .citation-format {
-    font-size: 0.75rem;
+    font-size: 0.80rem;
     font-weight: 400;
     color: #000000;
 }

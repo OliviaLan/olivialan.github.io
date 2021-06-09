@@ -31,7 +31,7 @@ export const vns_method_to_btn_name = str => {
 
 window.onload = function() {
     // 定位到tab
-    VISIT_PAGE("home", openStudyMaterial);
+    VISIT_PAGE("home", openAbout);
     //openStudyMaterial
     //openHomepage_ex
 
