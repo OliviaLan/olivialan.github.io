@@ -36,7 +36,7 @@ class StudyMaterial_Card {
         let card_body = document.createElement("div");
         let cardTitle_Html = `<div class="story-card-title" target="_blank">${this._title}</div>`;
         // let cardNum_Html = `<div class="story-hidden-id">No. ${this._id}</div>`;
-        let cardText_Html = `<div class="card-text"><br><strong>作者</strong>: ${this._source}, <strong>时间</strong>: ${this._year}<a href="${this._link}" target="_blank">, <strong><u>链接</u></strong></a><br><br><div><strong>推荐理由</strong>: ${this._why}</div></div>`;
+        let cardText_Html = `<div class="card-text"><br><strong>来源</strong>: ${this._source}, <strong>时间</strong>: ${this._year}<a href="${this._link}" target="_blank">, <strong><u>原链接</u></strong></a><br><br><div><strong>推荐理由</strong>: ${this._why}</div></div>`;
         // let cardText_Html = `<p class="card-text"><span class="hidden-id">No. ${this._id}</span></p>`;
 
 
