@@ -1880,7 +1880,7 @@ footer .footer-text {
 .about-part-img {
     /* margin-top: 0.5rem; */
     /* margin: 0 auto 0.5rem; */
-    max-width: 20rem;
+    max-width: 18rem;
 }
 
 .about-para-text,
@@ -1930,7 +1930,7 @@ footer .footer-text {
 }
 
 .about-para a {
-    color: #D27575;
+    color: rgb(77, 6, 209);
     text-decoration: underline;
 }
 
