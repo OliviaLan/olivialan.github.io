@@ -1855,8 +1855,8 @@ footer .footer-text {
 
 .about-main {
     flex: 1 0 auto;
-    width: 80%;
-    max-width: 61.25rem;
+    width: 85%;
+    /* max-width: 68.25rem; */
     margin: 0 auto;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1877,8 +1877,8 @@ footer .footer-text {
 }
 
 .about-part-img {
-    margin-top: 0.5rem;
-    margin: 0 auto 0.5rem;
+    /* margin-top: 0.5rem; */
+    /* margin: 0 auto 0.5rem; */
     max-width: 20rem;
 }
 
