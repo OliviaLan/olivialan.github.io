@@ -15,13 +15,14 @@
 
 class StudyMaterial_Card {
 
-    constructor({ id, title, year, source, link, author, why }) {
+    constructor({ id, title, year, source, link, author, description, why }) {
         this._id = id + "";
         this._title = title + "";
         this._year = year + "";
         this._source = source + "";
         this._link = link + "";
         this._author = author + "";
+        this._description = description + "";
         this._why = why + "";
     }
 
@@ -36,7 +37,7 @@ class StudyMaterial_Card {
         let card_body = document.createElement("div");
         let cardTitle_Html = `<div class="story-card-title" target="_blank">${this._title}</div>`;
         // let cardNum_Html = `<div class="story-hidden-id">No. ${this._id}</div>`;
-        let cardText_Html = `<div class="card-text"><br><strong>来源</strong>: ${this._source}, <strong>时间</strong>: ${this._year}<a href="${this._link}" target="_blank">, <strong><u>原链接</u></strong></a><br><br><div><strong>推荐理由</strong>: ${this._why}</div></div>`;
+        let cardText_Html = `<div class="card-text"><br><strong>Source</strong>: ${this._source}, <strong>Year</strong>: ${this._year}<a href="${this._link}" target="_blank">, <strong><u>Link</u></strong></a><br><br><div><strong>Description</strong>: ${this._description}</div></div>`;
         // let cardText_Html = `<p class="card-text"><span class="hidden-id">No. ${this._id}</span></p>`;
 
 

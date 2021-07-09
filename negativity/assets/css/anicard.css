@@ -16,87 +16,101 @@
     background-color: #a09daf !important;
 }
 
-.vns-failure,
-.failure .modal-header,
-.failure .modal-footer,
-.failure .mobile-nav-symbol,
-.failure .scrollSpy-btn-symbol,
-.failure .reminder-symbol,
-.failure .card-header {
+.vns-Individual_misery,
+.Individual_misery .modal-header,
+.Individual_misery .modal-footer,
+.Individual_misery .mobile-nav-symbol,
+.Individual_misery .scrollSpy-btn-symbol,
+.Individual_misery .reminder-symbol,
+.Individual_misery .card-header {
     background-color: rgb(227, 232, 252) !important;
 }
 
-.failure .front {
+.Individual_misery .front {
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
-.vns-controless,
-.controless .modal-header,
-.controless .modal-footer,
-.controless .mobile-nav-symbol,
-.controless .scrollSpy-btn-symbol,
-.controless .reminder-symbol,
-.controless .card-header {
+.vns-Failure,
+.Failure .modal-header,
+.Failure .modal-footer,
+.Failure .mobile-nav-symbol,
+.Failure .scrollSpy-btn-symbol,
+.Failure .reminder-symbol,
+.Failure .card-header {
     background-color: rgb(227, 232, 252) !important;
 }
 
-.controless .front {
+.Failure .front {
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
-.vns-repetition,
-.repetition .modal-header,
-.repetition .modal-footer,
-.repetition .mobile-nav-symbol,
-.repetition .scrollSpy-btn-symbol,
-.repetition .reminder-symbol,
-.repetition .card-header {
+.vns-Lose_of_control,
+.Lose_of_control .modal-header,
+.Lose_of_control .modal-footer,
+.Lose_of_control .mobile-nav-symbol,
+.Lose_of_control .scrollSpy-btn-symbol,
+.Lose_of_control .reminder-symbol,
+.Lose_of_control .card-header {
     background-color: rgb(227, 232, 252) !important;
 }
 
-.repetition .front {
+.Lose_of_control .front {
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
-.vns-comparison,
-.comparison .modal-header,
-.comparison .modal-footer,
-.comparison .mobile-nav-symbol,
-.comparison .scrollSpy-btn-symbol,
-.comparison .reminder-symbol,
-.comparison .card-header {
+.vns-Persistent_uncertainty,
+.Persistent_uncertainty .modal-header,
+.Persistent_uncertainty .modal-footer,
+.Persistent_uncertainty .mobile-nav-symbol,
+.Persistent_uncertainty .scrollSpy-btn-symbol,
+.Persistent_uncertainty .reminder-symbol,
+.Persistent_uncertainty .card-header {
     background-color: rgb(227, 232, 252) !important;
 }
 
-.comparison .front {
+.Persistent_uncertainty .front {
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
-.vns-challenge,
-.challenge .modal-header,
-.challenge .modal-footer,
-.challenge .mobile-nav-symbol,
-.challenge .scrollSpy-btn-symbol,
-.challenge .reminder-symbol,
-.challenge .card-header {
+.vns-Upward_social_comparison,
+.Upward_social_comparison .modal-header,
+.Upward_social_comparison .modal-footer,
+.Upward_social_comparison .mobile-nav-symbol,
+.Upward_social_comparison .scrollSpy-btn-symbol,
+.Upward_social_comparison .reminder-symbol,
+.Upward_social_comparison .card-header {
     background-color: rgb(227, 232, 252) !important;
 }
 
-.challenge .front {
+.Upward_social_comparison .front {
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
-.vns-accuse,
-.accuse .modal-header,
-.accuse .modal-footer,
-.accuse .mobile-nav-symbol,
-.accuse .scrollSpy-btn-symbol,
-.accuse .reminder-symbol,
-.accuse .card-header {
+.vns-Viceral_challenge,
+.Viceral_challenge .modal-header,
+.Viceral_challenge .modal-footer,
+.Viceral_challenge .mobile-nav-symbol,
+.Viceral_challenge .scrollSpy-btn-symbol,
+.Viceral_challenge .reminder-symbol,
+.Viceral_challenge .card-header {
     background-color: rgb(227, 232, 252) !important;
 }
 
-.accuse .front {
+.Viceral_challenge .front {
+    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
+}
+
+.vns-Linguistic_attack,
+.Linguistic_attack .modal-header,
+.Linguistic_attack .modal-footer,
+.Linguistic_attack .mobile-nav-symbol,
+.Linguistic_attack .scrollSpy-btn-symbol,
+.Linguistic_attack .reminder-symbol,
+.Linguistic_attack .card-header {
+    background-color: rgb(227, 232, 252) !important;
+}
+
+.Linguistic_attack .front {
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 

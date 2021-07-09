@@ -2,8 +2,8 @@
 
 import { Homepage_Card, Homepage_Reminder } from './hp_card.js';
 
-const homepage_vns_url = "/assets/json/vns_collection.json";
-const homepage_cards_url = "/assets/json/anicard_dataset.json";
+const homepage_vns_url = "./assets/json/vns_collection.json";
+const homepage_cards_url = "./assets/json/anicard_dataset.json";
 const _HEAD_SIGN = "HEAD";
 
 class DisplayQueue {

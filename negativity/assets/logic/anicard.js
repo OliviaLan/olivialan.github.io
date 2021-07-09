@@ -30,8 +30,8 @@ export const vns_method_to_btn_name = str => {
 };
 
 window.onload = function() {
-    // 定位到tab
-    VISIT_PAGE("home", openAbout);
+    // 进入页面的时候定位到哪里
+    VISIT_PAGE("home", openStudyMaterial);
     //openStudyMaterial
     //openHomepage_ex
 
@@ -355,7 +355,7 @@ function gallery_loading() {
 }
 
 
-const studymaterial_url = "./assets/json/study_material.json";
+const studymaterial_url = "./assets/json/corpus.json";
 
 function StudyMaterial_loading() {
     const deck_node = document.querySelector(".video-deck");

@@ -1,43 +1,50 @@
 [{
         "VNS_id": 0,
-        "VNS_tag": "challenge",
+        "VNS_tag": "Viceral_challenge",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
         "VNS_num": 9
     },
     {
         "VNS_id": 1,
-        "VNS_tag": "repetition",
+        "VNS_tag": "Linguistic_attack",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
-        "VNS_num": 9
+        "VNS_num": 10
     },
     {
         "VNS_id": 2,
-        "VNS_tag": "accuse",
+        "VNS_tag": "Upward_social_comparison",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
-        "VNS_num": 15
+        "VNS_num": 10
     },
     {
         "VNS_id": 3,
-        "VNS_tag": "comparison",
+        "VNS_tag": "Individual_misery",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
-        "VNS_num": 15
+        "VNS_num": 10
     },
     {
         "VNS_id": 4,
-        "VNS_tag": "controless",
+        "VNS_tag": "Persistent_uncertainty",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
-        "VNS_num": 12
+        "VNS_num": 10
     },
     {
         "VNS_id": 5,
-        "VNS_tag": "failure",
+        "VNS_tag": "Lose_of_control",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
-        "VNS_num": 15
+        "VNS_num": 10
+    },
+    {
+        "VNS_id": 6,
+        "VNS_tag": "Failure",
+        "VNS_color": "rgb(214, 214, 214)",
+        "VNS_desc": "intro",
+        "VNS_num": 1
     }
 ]
