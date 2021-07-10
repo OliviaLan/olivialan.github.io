@@ -72,20 +72,6 @@
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
-.vns-Upward_social_comparison,
-.Upward_social_comparison .modal-header,
-.Upward_social_comparison .modal-footer,
-.Upward_social_comparison .mobile-nav-symbol,
-.Upward_social_comparison .scrollSpy-btn-symbol,
-.Upward_social_comparison .reminder-symbol,
-.Upward_social_comparison .card-header {
-    background-color: rgb(227, 232, 252) !important;
-}
-
-.Upward_social_comparison .front {
-    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
-}
-
 .vns-Viceral_challenge,
 .Viceral_challenge .modal-header,
 .Viceral_challenge .modal-footer,

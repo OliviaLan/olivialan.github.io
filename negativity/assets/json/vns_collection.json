@@ -14,34 +14,27 @@
     },
     {
         "VNS_id": 2,
-        "VNS_tag": "Upward_social_comparison",
-        "VNS_color": "rgb(214, 214, 214)",
-        "VNS_desc": "intro",
-        "VNS_num": 10
-    },
-    {
-        "VNS_id": 3,
         "VNS_tag": "Individual_misery",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
         "VNS_num": 10
     },
     {
-        "VNS_id": 4,
+        "VNS_id": 3,
         "VNS_tag": "Persistent_uncertainty",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
         "VNS_num": 10
     },
     {
-        "VNS_id": 5,
+        "VNS_id": 4,
         "VNS_tag": "Lose_of_control",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
         "VNS_num": 10
     },
     {
-        "VNS_id": 6,
+        "VNS_id": 5,
         "VNS_tag": "Failure",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
