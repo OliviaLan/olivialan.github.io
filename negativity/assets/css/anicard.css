@@ -16,62 +16,6 @@
     background-color: #a09daf !important;
 }
 
-.vns-Individual_misery,
-.Individual_misery .modal-header,
-.Individual_misery .modal-footer,
-.Individual_misery .mobile-nav-symbol,
-.Individual_misery .scrollSpy-btn-symbol,
-.Individual_misery .reminder-symbol,
-.Individual_misery .card-header {
-    background-color: rgb(227, 232, 252) !important;
-}
-
-.Individual_misery .front {
-    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
-}
-
-.vns-Failure,
-.Failure .modal-header,
-.Failure .modal-footer,
-.Failure .mobile-nav-symbol,
-.Failure .scrollSpy-btn-symbol,
-.Failure .reminder-symbol,
-.Failure .card-header {
-    background-color: rgb(227, 232, 252) !important;
-}
-
-.Failure .front {
-    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
-}
-
-.vns-Lose_of_control,
-.Lose_of_control .modal-header,
-.Lose_of_control .modal-footer,
-.Lose_of_control .mobile-nav-symbol,
-.Lose_of_control .scrollSpy-btn-symbol,
-.Lose_of_control .reminder-symbol,
-.Lose_of_control .card-header {
-    background-color: rgb(227, 232, 252) !important;
-}
-
-.Lose_of_control .front {
-    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
-}
-
-.vns-Persistent_uncertainty,
-.Persistent_uncertainty .modal-header,
-.Persistent_uncertainty .modal-footer,
-.Persistent_uncertainty .mobile-nav-symbol,
-.Persistent_uncertainty .scrollSpy-btn-symbol,
-.Persistent_uncertainty .reminder-symbol,
-.Persistent_uncertainty .card-header {
-    background-color: rgb(227, 232, 252) !important;
-}
-
-.Persistent_uncertainty .front {
-    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
-}
-
 .vns-Viceral_challenge,
 .Viceral_challenge .modal-header,
 .Viceral_challenge .modal-footer,
@@ -79,7 +23,7 @@
 .Viceral_challenge .scrollSpy-btn-symbol,
 .Viceral_challenge .reminder-symbol,
 .Viceral_challenge .card-header {
-    background-color: rgb(227, 232, 252) !important;
+    background-color: #C5DFFC !important;
 }
 
 .Viceral_challenge .front {
@@ -93,10 +37,66 @@
 .Linguistic_attack .scrollSpy-btn-symbol,
 .Linguistic_attack .reminder-symbol,
 .Linguistic_attack .card-header {
-    background-color: rgb(227, 232, 252) !important;
+    background-color: #FFEDAD !important;
 }
 
 .Linguistic_attack .front {
+    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
+}
+
+.vns-Individual_misery,
+.Individual_misery .modal-header,
+.Individual_misery .modal-footer,
+.Individual_misery .mobile-nav-symbol,
+.Individual_misery .scrollSpy-btn-symbol,
+.Individual_misery .reminder-symbol,
+.Individual_misery .card-header {
+    background-color: #E4D6FF !important;
+}
+
+.Individual_misery .front {
+    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
+}
+
+.vns-Persistent_uncertainty,
+.Persistent_uncertainty .modal-header,
+.Persistent_uncertainty .modal-footer,
+.Persistent_uncertainty .mobile-nav-symbol,
+.Persistent_uncertainty .scrollSpy-btn-symbol,
+.Persistent_uncertainty .reminder-symbol,
+.Persistent_uncertainty .card-header {
+    background-color: #F8D3C9 !important;
+}
+
+.Persistent_uncertainty .front {
+    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
+}
+
+.vns-Lose_of_control,
+.Lose_of_control .modal-header,
+.Lose_of_control .modal-footer,
+.Lose_of_control .mobile-nav-symbol,
+.Lose_of_control .scrollSpy-btn-symbol,
+.Lose_of_control .reminder-symbol,
+.Lose_of_control .card-header {
+    background-color: #CDF4DF !important;
+}
+
+.Lose_of_control .front {
+    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
+}
+
+.vns-Failure,
+.Failure .modal-header,
+.Failure .modal-footer,
+.Failure .mobile-nav-symbol,
+.Failure .scrollSpy-btn-symbol,
+.Failure .reminder-symbol,
+.Failure .card-header {
+    background-color: #FCDDF2 !important;
+}
+
+.Failure .front {
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 

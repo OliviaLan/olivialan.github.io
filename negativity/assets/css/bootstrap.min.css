@@ -5402,27 +5402,27 @@ input[type=submit].btn-block {
 }
 
 .badge_1 {
-    background-color: yellow;
+    background-color: #C5DFFC;
 }
 
 .badge_2 {
-    background-color: pink;
+    background-color: #FFEDAD;
 }
 
 .badge_3 {
-    background-color: cyan;
+    background-color: #E4D6FF;
 }
 
 .badge_4 {
-    background-color: peachpuff;
+    background-color: #F8D3C9;
 }
 
 .badge_5 {
-    background-color: olivedrab;
+    background-color: #CDF4DF;
 }
 
 .badge_6 {
-    background-color: burlywood;
+    background-color: #FCDDF2;
 }
 
 @media (prefers-reduced-motion:reduce) {
