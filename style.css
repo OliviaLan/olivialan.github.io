@@ -520,6 +520,27 @@ a:hover {}
     width: 384px;
 }
 
+#three-column-gallery {
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+}
+
+#three-column-gallery .tbox1 {
+    float: left;
+    width: 384px;
+    margin-right: 20px;
+}
+
+#three-column-gallery .tbox2 {
+    float: left;
+    width: 384px;
+}
+
+#three-column-gallery .tbox3 {
+    float: right;
+    width: 384px;
+}
+
 .box-style {
     background: #f2f2f2;
     text-align: center;
