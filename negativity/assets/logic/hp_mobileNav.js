@@ -118,7 +118,8 @@ class Mobile_Collapse_Btn {
         btn_node.setAttribute("data-hidden", this._hidden_id);
         hidden_board_node.classList.add("mobile-nav-hidden");
 
-        this._object_node.classList.add("collapse");
+        //去除左边的panel事件
+        // this._object_node.classList.add("collapse");
         document.querySelector(this._hidden_id).parentElement.insertBefore(hidden_board_node, hidden_node);
 
         $(this._object_id).collapse({ toggle: false });

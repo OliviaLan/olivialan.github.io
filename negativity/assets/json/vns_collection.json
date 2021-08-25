@@ -2,12 +2,12 @@
         "VNS_id": 0,
         "VNS_tag": "Viceral_challenge",
         "VNS_color": "rgb(214, 214, 214)",
-        "VNS_desc": "intro",
+        "VNS_desc": "impact people intuitively through coloring, sizing, shape, sound, or semantics.",
         "VNS_num": 9
     },
     {
         "VNS_id": 1,
-        "VNS_tag": "Linguistic_attack",
+        "VNS_tag": "Powerful_messaging",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
         "VNS_num": 10
@@ -21,14 +21,14 @@
     },
     {
         "VNS_id": 3,
-        "VNS_tag": "Persistent_uncertainty",
+        "VNS_tag": "Loss_of_control",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
         "VNS_num": 10
     },
     {
         "VNS_id": 4,
-        "VNS_tag": "Lose_of_control",
+        "VNS_tag": "Persistent_uncertainty",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
         "VNS_num": 10

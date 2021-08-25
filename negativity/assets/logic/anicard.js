@@ -3,8 +3,7 @@ import { MNav, Collapse_Btn } from './hp_mobileNav.js';
 import { init_card_display } from './hp_middle.js';
 import { VideoData_Card } from './video_dataset.js';
 import { downloads_loading } from './downloads.js';
-
-import { StudyMaterial_Card } from './study_material.js';
+import { Corpus_Card } from './corpus.js';
 
 const VISITED_PAGE_ARR = [];
 const VISIT_PAGE = function(page_name = "", callback) {
@@ -31,8 +30,8 @@ export const vns_method_to_btn_name = str => {
 
 window.onload = function() {
     // 进入页面的时候定位到哪里
-    VISIT_PAGE("home", openStudyMaterial);
-    //openStudyMaterial
+    VISIT_PAGE("corpus", openCorpus);
+    //openCorpus
     //openHomepage_ex
 
 
@@ -55,8 +54,8 @@ window.onload = function() {
             if (tab_name === "home") {
                 callback = openHomepage_ex;
             }
-            if (tab_name === "StudyMaterial") {
-                callback = openStudyMaterial;
+            if (tab_name === "corpus") {
+                callback = openCorpus;
             }
 
             // if (tab_name === "gallery") {
@@ -115,20 +114,20 @@ function openHomepage_ex() {
 
 
 
-function openStudyMaterial() {
+function openCorpus() {
     // 页面呈现loading
     // document.querySelector("main").innerHTML = "";
 
     // 界面异步加载
     $.ajax({
         // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/videodataset.html",
-        url: "./assets/static/studymaterial.html",
+        url: "./assets/static/corpus.html",
         type: "get",
         contentType: "text/html",
         dataType: "html",
         success: function(res) {
             document.querySelector("main").innerHTML = res;
-            StudyMaterial_loading();
+            Corpus_loading();
         }
     });
 }
@@ -225,15 +224,18 @@ function Homepage_ex_loading() {
 
     MNav.fillContainer(mobile_nav_node, mn_extraClass_toA_arr, mn_extraAttribute_toA, vns_method_to_btn_name);
 
-    VNS_panel.appendTo(sidebar_node, vns_extraNode_html, vns_extraClass_toA_arr, vns_extraAttribute_toA, vns_method_to_btn_name);
+    //去除vns panel
+    // VNS_panel.appendTo(sidebar_node, vns_extraNode_html, vns_extraClass_toA_arr, vns_extraAttribute_toA, vns_method_to_btn_name);
 
     // Chart_panel.appendTo(sidebar_node, "", chart_extraClass_toA_arr, {});
-    EL_panel.appendTo(sidebar_node, "", el_extraClass_toA_arr, {});
+    //去除el panel
+    // EL_panel.appendTo(sidebar_node, "", el_extraClass_toA_arr, {});
 
     const collapse_btn = new Collapse_Btn('.mobile-nav-btn', '#sidebar-ex', '.mobile-nav-scrollSpy');
 
     init_card_display(card_display_node);
-    searchBox_EventListener(card_display_node);
+    //去除筛选功能
+    // searchBox_EventListener(card_display_node);
     modal_EventListener();
 
     setTimeout(() => {
@@ -243,11 +245,11 @@ function Homepage_ex_loading() {
         var chart_node = document.getElementsByClassName("sidebar-panel-group");
         console.log(chart_node);
 
-        var chart_child_node = chart_node[1].childNodes;
-        console.log(chart_child_node);
+        // var chart_child_node = chart_node[1].childNodes;
+        // console.log(chart_child_node);
 
-        var chart_child_that_node = chart_child_node[2];
-        console.log(chart_child_that_node);
+        // var chart_child_that_node = chart_child_node[2];
+        // console.log(chart_child_that_node);
 
         // chart_child_that_node.insertAdjacentHTML('afterend', '<h3 class="sidebar-panel-title sidebar-panel-title-editorial">Editorial Layers</h3>');
 
@@ -257,32 +259,32 @@ function Homepage_ex_loading() {
 }
 
 /* homepage init related methods */
-function searchBox_EventListener(card_display_node = new HTMLElement()) {
-    const SEARCH_BOX = document.querySelector(".searchbox-input");
-    const BUTTON = document.querySelector(".searchbox-button");
+// function searchBox_EventListener(card_display_node = new HTMLElement()) {
+//     const SEARCH_BOX = document.querySelector(".searchbox-input");
+//     const BUTTON = document.querySelector(".searchbox-button");
 
-    document.querySelector(".searchbox-button").onclick = () => {
-        let search_text = document.querySelector(".searchbox-input").value;
-        init_card_display(card_display_node, search_text);
-    }
-    document.querySelector(".searchbox-input").onfocus = () => {
-        document.querySelector(".searchbox-input").value = "";
-    }
-    document.querySelector(".searchbox-input").onblur = () => {
-        let search_text = document.querySelector(".searchbox-input").value;
-        document.querySelector(".searchbox-input").value = search_text ? search_text : "Search";
-        // if(!search_text) {
-        //     init_card_display(card_display_node);
-        //     document.querySelector("input").value = "Search";
-        // }
-    }
-    document.querySelector(".searchbox-input").onkeydown = () => {
-        if (event.keyCode === 13) {
-            let search_text = document.querySelector(".searchbox-input").value;
-            init_card_display(card_display_node, search_text);
-        }
-    }
-}
+//     document.querySelector(".searchbox-button").onclick = () => {
+//         let search_text = document.querySelector(".searchbox-input").value;
+//         init_card_display(card_display_node, search_text);
+//     }
+//     document.querySelector(".searchbox-input").onfocus = () => {
+//         document.querySelector(".searchbox-input").value = "";
+//     }
+//     document.querySelector(".searchbox-input").onblur = () => {
+//         let search_text = document.querySelector(".searchbox-input").value;
+//         document.querySelector(".searchbox-input").value = search_text ? search_text : "Search";
+//         // if(!search_text) {
+//         //     init_card_display(card_display_node);
+//         //     document.querySelector("input").value = "Search";
+//         // }
+//     }
+//     document.querySelector(".searchbox-input").onkeydown = () => {
+//         if (event.keyCode === 13) {
+//             let search_text = document.querySelector(".searchbox-input").value;
+//             init_card_display(card_display_node, search_text);
+//         }
+//     }
+// }
 
 function modal_EventListener() {
     const modal_content_node = document.querySelector(".modal-content");
@@ -294,55 +296,55 @@ function modal_EventListener() {
 
 
 /* video dataset page init method */
-const video_dataset_url = "./assets/json/corpus.json";
+// const video_dataset_url = "./assets/json/corpus.json";
 
-function videoDataset_loading() {
-    const video_deck_node = document.querySelector(".video-deck");
-    const empty_deck_node = document.querySelector("#empty-deck-single");
+// function videoDataset_loading() {
+//     const video_deck_node = document.querySelector(".story-deck");
+//     const empty_deck_node = document.querySelector("#empty-deck-single");
 
-    $.getJSON(video_dataset_url, json => {
+//     $.getJSON(video_dataset_url, json => {
 
-        // console.log("Cards loading ......");
+//         // console.log("Cards loading ......");
 
-        $.each(json, (i, video_item) => {
-            // create card object
-            let {
-                id,
-                title,
-                year,
-                source,
-                link,
-                author,
-                why
-            } = video_item;
+//         $.each(json, (i, story_item) => {
+//             // create card object
+//             let {
+//                 id,
+//                 title,
+//                 year,
+//                 source,
+//                 link,
+//                 author,
+//                 why
+//             } = story_item;
 
-            let vd_object = new VideoData_Card(video_item);
+//             let vd_object = new VideoData_Card(story_item);
 
-            // insert card object to the deck
-            vd_object.appendTo(video_deck_node, empty_deck_node);
+//             // insert card object to the deck
+//             vd_object.appendTo(video_deck_node, empty_deck_node);
 
-            if (i === json.length - 1) {
-                // console.log("All cards were loaded on the page.");
-            }
-        });
-    });
-}
+//             if (i === json.length - 1) {
+//                 // console.log("All cards were loaded on the page.");
+//             }
+//         });
+//     });
+// }
 
 function gallery_loading() {
-    const video_deck_node = document.querySelector(".video-deck");
+    const video_deck_node = document.querySelector(".story-deck");
     const empty_deck_node = document.querySelector("#empty-deck-single");
 
     // $.getJSON(video_dataset_url, json => {
 
     //     // console.log("Cards loading ......");
 
-    //     $.each(json, (i, video_item) => {
+    //     $.each(json, (i, story_item) => {
     //         // create card object
     //         let {
     //             id, video_title, year, video_source, video_link
-    //         } = video_item;
+    //         } = story_item;
 
-    //         let vd_object = new VideoData_Card(video_item);
+    //         let vd_object = new VideoData_Card(story_item);
 
     //         // insert card object to the deck
     //         vd_object.appendTo(video_deck_node, empty_deck_node);
@@ -355,10 +357,10 @@ function gallery_loading() {
 }
 
 
-const studymaterial_url = "./assets/json/corpus.json";
+const corpus_url = "./assets/json/corpus.json";
 
-function StudyMaterial_loading() {
-    const deck_node = document.querySelector(".video-deck");
+function Corpus_loading() {
+    const deck_node = document.querySelector(".story-deck");
     const piece1_deck_node = document.querySelector("#piece1");
 
     // const joy2_deck_node = document.querySelector(".joy-deck2");
@@ -453,11 +455,11 @@ function StudyMaterial_loading() {
     // const piece30_deck_node = document.querySelector("#piece30");
 
 
-    $.getJSON(studymaterial_url, json => {
+    $.getJSON(corpus_url, json => {
 
         // console.log("Cards loading ......");
 
-        $.each(json, (i, video_item) => {
+        $.each(json, (i, story_item) => {
             // create card object
             let {
                 id,
@@ -466,10 +468,10 @@ function StudyMaterial_loading() {
                 video_source,
                 video_link,
                 emotion
-            } = video_item;
+            } = story_item;
 
             // insert card object to the deck
-            let vd_object = new StudyMaterial_Card(video_item);
+            let vd_object = new Corpus_Card(story_item);
             vd_object.appendTo(deck_node, piece1_deck_node);
 
             if (i === json.length - 1) {

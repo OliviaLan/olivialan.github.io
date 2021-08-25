@@ -2,7 +2,7 @@
 
 // video dataset card example
 /* * 
- * <div class="col video-deck-single">
+ * <div class="col story-deck-single">
  *     <div class="card">
  *         <img src="/assets/image/1.png" class="card-img-top" alt="...">
  *         <div class="card-body">
@@ -13,7 +13,7 @@
  * </div>
  */
 
-class StudyMaterial_Card {
+class Corpus_Card {
 
     constructor({ id, title, year, source, link, author, description, emotion, recommender, method }) {
         this._id = id + "";
@@ -43,7 +43,7 @@ class StudyMaterial_Card {
         // let cardText_Html = `<p class="card-text"><span class="hidden-id">No. ${this._id}</span></p>`;
 
 
-        deck_single_node.classList.add("col", "video-deck-single");
+        deck_single_node.classList.add("col", "story-deck-single");
         card.classList.add("card");
         card_body.classList.add("story-card-body");
 
@@ -68,17 +68,17 @@ class StudyMaterial_Card {
         // const front_img = this._deck_single_node.querySelector(".story-card-body");
 
         // front_img.addEventListener("mouseover", () => {
-        //     front_img.querySelector("video-deck-single.preview").style.visibility = "none";
-        //     $(front_img).find("video-deck-single.gifImg").fadeTo("fast", 0);
+        //     front_img.querySelector("story-deck-single.preview").style.visibility = "none";
+        //     $(front_img).find("story-deck-single.gifImg").fadeTo("fast", 0);
         // });
         // front_img.addEventListener("mouseout", () => {
-        //     front_img.querySelector("video-deck-single.preview").style.visibility = "block";
-        //     $(front_img).find("video-deck-single.gifImg").fadeTo("fast", 1);
+        //     front_img.querySelector("story-deck-single.preview").style.visibility = "block";
+        //     $(front_img).find("story-deck-single.gifImg").fadeTo("fast", 1);
         // });
     }
 }
 
-StudyMaterial_Card.prototype.appendTo = function(parentNode, nextNode) {
+Corpus_Card.prototype.appendTo = function(parentNode, nextNode) {
     if (!(parentNode instanceof HTMLElement)) {
         console.error(`${parentNode} is not a DOM node!`);
         return false;
@@ -93,7 +93,7 @@ StudyMaterial_Card.prototype.appendTo = function(parentNode, nextNode) {
 
 //绑定鼠标hover事件
 
-// StudyMaterial_Card.prototype._bindEvents = function ()  {
+// Corpus_Card.prototype._bindEvents = function ()  {
 //     let that = this;
 //     const this_card_node = this._deck_single_node;
 //     const card = this_card_node.querySelector(".card");
@@ -112,4 +112,4 @@ StudyMaterial_Card.prototype.appendTo = function(parentNode, nextNode) {
 
 
 
-export { StudyMaterial_Card as StudyMaterial_Card };
+export { Corpus_Card as Corpus_Card };

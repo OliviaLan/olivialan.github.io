@@ -159,26 +159,26 @@ class Homepage_Panel {
 
 Homepage_Panel.btn_name_regex = /\$\{(.*?)\}/gm;
 
-Homepage_Panel.prototype.appendTo = function(parentNode, extraNode_html, extraClass_toA_arr, extraAttribute_toA,
-    methodToBtnName) {
+// Homepage_Panel.prototype.appendTo = function(parentNode, extraNode_html, extraClass_toA_arr, extraAttribute_toA,
+//     methodToBtnName) {
 
-    extraNode_html = extraNode_html || "";
-    extraClass_toA_arr = extraClass_toA_arr || [];
-    extraAttribute_toA = extraAttribute_toA || {};
-    if (!(parentNode instanceof HTMLElement) ||
-        (typeof extraNode_html !== "string") ||
-        !(extraClass_toA_arr instanceof Array) ||
-        (typeof extraAttribute_toA !== "object")
-    ) {
-        console.error("Parameter(s) error! Panel creation failed.");
-        return false;
-    }
+//     extraNode_html = extraNode_html || "";
+//     extraClass_toA_arr = extraClass_toA_arr || [];
+//     extraAttribute_toA = extraAttribute_toA || {};
+//     if (!(parentNode instanceof HTMLElement) ||
+//         (typeof extraNode_html !== "string") ||
+//         !(extraClass_toA_arr instanceof Array) ||
+//         (typeof extraAttribute_toA !== "object")
+//     ) {
+//         console.error("Parameter(s) error! Panel creation failed.");
+//         return false;
+//     }
 
-    this._panel_node = this._createPanel(extraNode_html, extraClass_toA_arr, extraAttribute_toA, methodToBtnName);
+//     this._panel_node = this._createPanel(extraNode_html, extraClass_toA_arr, extraAttribute_toA, methodToBtnName);
 
-    parentNode.appendChild(this._panel_node);
-    return true;
-}
+//     parentNode.appendChild(this._panel_node);
+//     return true;
+// }
 
 // VNS callback
 
