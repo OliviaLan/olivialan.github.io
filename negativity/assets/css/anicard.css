@@ -608,7 +608,7 @@ footer .footer-text {
 }
 
 .card-deck-single {
-    max-width: 20.00rem;
+    max-width: 22.00rem;
     margin-bottom: 1.25rem;
     position: relative;
     padding-left: 0.625rem;
@@ -739,7 +739,7 @@ footer .footer-text {
 .card-deck .card-body {
     color: #000000;
     padding: 0 1rem;
-    margin: 1.5rem 0;
+    margin: 1.0rem 0;
     text-align: left;
     overflow-y: auto;
     /*display:flex;
@@ -783,7 +783,7 @@ footer .footer-text {
     border-bottom-right-radius: 0.375rem;
     display: inline-flex;
     align-content: space-between;
-    height: 3.5rem;
+    height: 4.5rem;
 }
 
 .card-footer-source {
@@ -798,6 +798,14 @@ footer .footer-text {
     font-weight: 400;
     position: absolute;
     right: 10px;
+}
+
+.card-deck .card-footer-rating {
+    font-size: 0.8rem;
+    font-weight: 400;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
 }
 
 .card-deck .card-footer-num {
@@ -907,7 +915,7 @@ footer .footer-text {
 
 .card-inner {
     position: relative;
-    height: 26.5rem;
+    height: 27.5rem;
 }
 
 .card-inner .front,

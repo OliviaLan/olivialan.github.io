@@ -307,6 +307,7 @@ class Homepage_Card {
 
         let left_html = "";
         let button_text = "";
+        let rating = "";
         let card_footer_bottom_html = "";
         let card_footer_bottom_icon_html = "";
         let card_footer_node = document.createElement("div");
@@ -319,6 +320,7 @@ class Homepage_Card {
             button_text = `<span class="card-footer-source">Source: ${this.parameters["eg_title"]}, ${this.parameters["eg_source"]}, <a href="${this.parameters["eg_url"]}">link</a></span>`;
             //底部文字：卡片编号
             left_html = `<span class="card-footer-num">NO. ${this.parameters["card_id"]}</span>`;
+            rating = `<span class="card-footer-rating">rating. ${this.parameters["card_id"]}</span>`;
         } else {
             // negative
             left_html = ``;
@@ -331,7 +333,7 @@ class Homepage_Card {
 
         card_footer_bottom_node.classList.add("card-footer-child");
 
-        card_footer_node.innerHTML = button_text + left_html;
+        card_footer_node.innerHTML = button_text + left_html + rating;
 
         //在卡片底部加icon tag
         // card_footer_bottom_node.innerHTML = card_footer_bottom_icon_html + card_footer_bottom_html;
@@ -371,7 +373,7 @@ Homepage_Card.prototype._bindEvents = function() {
     // });
 
     // card footer URL
-    $(card_inner_node.querySelector(".card-footer a")).tooltip({ title: "watch full video" });
+    $(card_inner_node.querySelector(".card-footer a")).tooltip({ title: "link to the original work" });
 
     // front gif static preview
     front_img.addEventListener("mouseover", () => {
