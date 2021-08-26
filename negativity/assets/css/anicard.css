@@ -802,7 +802,7 @@ footer .footer-text {
 }
 
 .star-ratings-sprite {
-    background: url("star.png") repeat-x;
+    background: url("../image/star.png") repeat-x;
     font-size: 0;
     height: 20px;
     line-height: 0;
@@ -815,7 +815,7 @@ footer .footer-text {
 }
 
 .star-ratings-sprite-rating {
-    background: url("star.png") repeat-x;
+    background: url("../image/star.png") repeat-x;
     background-position: 0 100%;
     float: left;
     height: 19px;
