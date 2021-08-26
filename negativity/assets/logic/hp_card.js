@@ -320,7 +320,7 @@ class Homepage_Card {
             button_text = `<span class="card-footer-source">Source: ${this.parameters["eg_title"]}, ${this.parameters["eg_source"]}, <a href="${this.parameters["eg_url"]}">link</a></span>`;
             //底部文字：卡片编号
             left_html = `<span class="card-footer-num">NO. ${this.parameters["card_id"]}</span>`;
-            rating = `<span class="card-footer-rating">rating. ${this.parameters["card_id"]}</span>`;
+            rating = `<span class="card-footer-rating">🌟🌟🌟🌟🌟 ${this.parameters["card_id"]}</span>`;
         } else {
             // negative
             left_html = ``;
