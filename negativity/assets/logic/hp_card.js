@@ -19,7 +19,8 @@ class Homepage_Card {
         eg_url,
         eg_year,
         eg_category,
-        eg_subcategory
+        eg_subcategory,
+        rating
     }) {
         this.parameters = {};
         this.parameters = parameters;
@@ -319,8 +320,8 @@ class Homepage_Card {
             //底部文字：来源
             button_text = `<span class="card-footer-source">Source: ${this.parameters["eg_title"]}, ${this.parameters["eg_source"]}, <a href="${this.parameters["eg_url"]}">link</a></span>`;
             //底部文字：卡片编号
-            left_html = `<span class="card-footer-num">NO. ${this.parameters["card_id"]}</span>`;
-            rating = `<span class="card-footer-rating">🌟🌟🌟🌟🌟 Not ready </span>`;
+            left_html = `<span class="card-footer-num">Effectiveness ratio (empirical):  ${this.parameters["rating"]}</span>`;
+            rating = `<div class="star-ratings-sprite"><span style="width:${this.parameters["rating"]}" class="star-ratings-sprite-rating"></span></div>`;
         } else {
             // negative
             left_html = ``;

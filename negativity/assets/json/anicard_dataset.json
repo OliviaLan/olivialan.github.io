@@ -11,7 +11,8 @@
         "how": "How: Using imagery such as photographs and illustrations to communicate negative sementics, such as death, violence, and danger.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "73%"
     },
     {
         "card_id": 2,
@@ -26,7 +27,8 @@
         "how": "How: Using metaphorical visualization to communicate negative sementics in a symbolic (and often implicit) way.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "29%"
     },
     {
         "card_id": 3,
@@ -41,7 +43,8 @@
         "how": "How: Using dark colors such black and grey as the background color.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "57%"
     },
     {
         "card_id": 4,
@@ -56,7 +59,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "53%"
     },
     {
         "card_id": 5,
@@ -71,7 +75,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "58%"
     },
     {
         "card_id": 6,
@@ -86,7 +91,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "47%"
     },
     {
         "card_id": 7,
@@ -101,7 +107,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "20%"
     },
     {
         "card_id": 8,
@@ -116,7 +123,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "25%"
     },
     {
         "card_id": 9,
@@ -131,7 +139,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "71%"
     },
     {
         "card_id": 10,
@@ -146,7 +155,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "58%"
     },
     {
         "card_id": 11,
@@ -161,7 +171,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "86%"
     },
 
     {
@@ -177,7 +188,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "69%"
     },
     {
         "card_id": 13,
@@ -192,7 +204,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "100%"
     },
     {
         "card_id": 14,
@@ -207,7 +220,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "88%"
     },
     {
         "card_id": 15,
@@ -222,7 +236,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "66%"
     },
     {
         "card_id": 16,
@@ -237,7 +252,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "82%"
     },
     {
         "card_id": 17,
@@ -252,7 +268,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "68%"
     },
     {
         "card_id": 18,
@@ -267,7 +284,8 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "53%"
     },
     {
         "card_id": 19,
@@ -282,6 +300,7 @@
         "how": "How: This is a definition to be written, please wait for a moment.",
         "eg_title": "title",
         "eg_source": "NYT",
-        "eg_url": "#"
+        "eg_url": "#",
+        "rating": "100%"
     }
 ]

@@ -1,6 +1,6 @@
 [{
         "id": 1,
-        "title": "[Stimuli-S1] How the coronavirus spread in Hong Kong",
+        "title": "[Stimuli - S1] How the coronavirus spread in Hong Kong",
         "genre": "infographic",
         "source": "SCMP",
         "year": "2020",
@@ -40,14 +40,14 @@
     },
     {
         "id": 2,
-        "title": "[Stimuli-S2] On the Front Page, a Wall of Grief",
+        "title": "[Stimuli - S2] On the Front Page, a Wall of Grief",
         "genre": "magazine",
         "source": "New York Times",
         "year": "2021",
         "link": "https://www.nytimes.com/2021/02/21/insider/covid-500k-front-page.html, https://www.nytimes.com/interactive/2021/01/27/us/us-coronavirus-deaths-rate.html",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "Using 500,000 dots along a timeline to represent the individuals who died because of Covid-19.",
+        "description": "A visualization that uses 500,000 dots to represent the individual people who died because of Covid-19, showing how fast the pandemic is crossing the US.",
         "recommender": "E2",
         "imagery with negative semantics": "",
         "metaphor with negative semantics": "",
@@ -80,7 +80,7 @@
     },
     {
         "id": 3,
-        "title": "[Stimuli-S3] An Incalculable Loss",
+        "title": "[Stimuli - S3] An Incalculable Loss",
         "genre": "magazine",
         "source": "New York Times",
         "year": "2020",
@@ -109,25 +109,25 @@
         "concrete scale": "",
         "detailed person behind data": "<span class='badge badge_3'>detailed person behind data</span>",
         "immersive role-play game": "",
-        "person-level visualization": "",
+        "person-level visualization": "<span class='badge badge_3'>person-level visualization</span>",
         "inevitable animation": "",
         "running timer": {
             "counter": "<span class='badge badge_4'>running timer/counter</span>"
         },
         "stretched layout": "<span class='badge badge_5'>stretched layout</span>",
         "tough task": "",
-        "method": "<span class='badge badge_3'>detailed person behind data</span><span class='badge badge_4'>running timer/counter</span><span class='badge badge_5'>stretched layout</span>"
+        "method": "<span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>running timer/counter</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 4,
-        "title": "[Stimuli-S4] What does 425,000 Covid deaths sound like?",
+        "title": "[Stimuli - S4] What does 425,000 Covid deaths sound like?",
         "genre": "video",
         "source": "CarniDC",
         "year": "2021",
         "link": "https://twitter.com/CarniDC/status/1356267830560366595",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "A data sonification based on S2. Using sound to encode the death toll provided by NYT.",
+        "description": "Using sound to encode the death toll provided by NYT.",
         "recommender": "E2",
         "imagery with negative semantics": "",
         "metaphor with negative semantics": "",
@@ -160,7 +160,7 @@
     },
     {
         "id": 5,
-        "title": "[Stimuli-S5] Who has died from Covid-19 in the US?",
+        "title": "[Stimuli - S5] Who has died from Covid-19 in the US?",
         "genre": "web",
         "source": "Vox",
         "year": "2021",
@@ -200,7 +200,7 @@
     },
     {
         "id": 6,
-        "title": "[Stimuli-S6] 500,000 dead, a number almost too large to grasp",
+        "title": "[Stimuli - S6] 500,000 dead, a number almost too large to grasp",
         "genre": "web",
         "source": "Washington Post",
         "year": "2021",
@@ -240,7 +240,7 @@
     },
     {
         "id": 7,
-        "title": "[Stimuli-S7] One Year, 500,000 Deaths",
+        "title": "[Stimuli - S7] One Year, 500,000 Deaths",
         "genre": "web",
         "source": "Buzzfeed",
         "year": "2021",
@@ -280,7 +280,7 @@
     },
     {
         "id": 8,
-        "title": "[Stimuli-S8] How the Virus Won",
+        "title": "[Stimuli - S8] How the Virus Won",
         "genre": "web",
         "source": "New York Times",
         "year": "2020",
@@ -316,11 +316,11 @@
         },
         "stretched layout": "",
         "tough task": "",
-        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dense encoding</span><span class='badge badge_3'>detailed person behind data</span>"
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dense encoding</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>immersive role-play game</span><span class='badge badge_4'>inevitable animation</span>"
     },
     {
         "id": 9,
-        "title": "[Stimuli-S9] People of the Pandemic",
+        "title": "[Stimuli - S9] People of the Pandemic",
         "genre": "web",
         "source": "Shirley Wu & Stephen Osserman",
         "year": "2020",
@@ -349,18 +349,18 @@
         "concrete scale": "",
         "detailed person behind data": "",
         "immersive role-play game": "<span class='badge badge_3'>immersive role-play game</span>",
-        "person-level visualization": "<span class='badge badge_3'>person-level visualization</span>",
+        "person-level visualization": "",
         "inevitable animation": "<span class='badge badge_4'>inevitable animation</span>",
         "running timer": {
             "counter": ""
         },
         "stretched layout": "",
         "tough task": "<span class='badge badge_6'>tough task</span>",
-        "method": "<span class='badge badge_2'>direct address</span><span class='badge badge_3'>immersive role-play game</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>inevitable animation</span><span class='badge badge_6'>tough task</span>"
+        "method": "<span class='badge badge_2'>direct address</span><span class='badge badge_6'>tough task</span>"
     },
     {
         "id": 10,
-        "title": "[Stimuli-S10] Coronavirus: How can we imagine the scale of Covid's death toll?",
+        "title": "[Stimuli - S10] Coronavirus: How can we imagine the scale of Covid's death toll?",
         "genre": "web",
         "source": "BBC",
         "year": "2020",
@@ -396,11 +396,11 @@
         },
         "stretched layout": "",
         "tough task": "",
-        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_1'>shrill/deep/pressing music</span>"
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_1'>shrill/deep/pressing music</span><span class='badge badge_4'>inevitable animation</span>"
     },
     {
         "id": 11,
-        "title": "[Stimuli-S11] The pace of death",
+        "title": "[Stimuli - S11] The pace of death",
         "genre": "web",
         "source": "Reuters",
         "year": "2021",
@@ -436,11 +436,11 @@
         },
         "stretched layout": "<span class='badge badge_5'>stretched layout</span>",
         "tough task": "",
-        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>inevitable animation</span><span class='badge badge_4'>running timer/counter</span><span class='badge badge_5'>stretched layout</span>"
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>running timer/counter</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 12,
-        "title": "[Stimuli-S12] Lifelines: a pandemic undertow",
+        "title": "[Stimuli - S12] Lifelines: a pandemic undertow",
         "genre": "web",
         "source": "Periscopic",
         "year": "2021",
@@ -480,7 +480,7 @@
     },
     {
         "id": 13,
-        "title": "[Stimuli-S13] What if all Covid‑19 deaths in Brazil happened in your neighborhood?",
+        "title": "[Stimuli - S13] What if all Covid‑19 deaths in Brazil happened in your neighborhood?",
         "genre": "web",
         "source": "Lupa, Google",
         "year": "2020",

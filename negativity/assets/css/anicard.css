@@ -797,15 +797,29 @@ footer .footer-text {
     font-size: 0.8rem;
     font-weight: 400;
     position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.star-ratings-sprite {
+    background: url("star.png") repeat-x;
+    font-size: 0;
+    height: 20px;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 90px;
+    position: absolute;
+    bottom: 10px;
     right: 10px;
 }
 
-.card-deck .card-footer-rating {
-    font-size: 0.8rem;
-    font-weight: 400;
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
+.star-ratings-sprite-rating {
+    background: url("star.png") repeat-x;
+    background-position: 0 100%;
+    float: left;
+    height: 19px;
+    display: block;
 }
 
 .card-deck .card-footer-num {
