@@ -20,7 +20,13 @@ class Homepage_Card {
         eg_year,
         eg_category,
         eg_subcategory,
-        rating
+        rating,
+        effective_1,
+        effective_2,
+        effective_3,
+        ineffective_1,
+        ineffective_2,
+        ineffective_3
     }) {
         this.parameters = {};
         this.parameters = parameters;
@@ -51,8 +57,11 @@ class Homepage_Card {
 
         // back
         let back_nodeList = [
-            card_back_header, this._createCard_backImgBox(),
-            this._createCard_backBody(), this._createCard_footer(0)
+            card_back_header,
+            //创建卡片背面的图片、身体、脚
+            // this._createCard_backImgBox(),
+            this._createCard_backBody(),
+            this._createCard_footer(0)
         ];
         back_nodeList.forEach((node, i, nodeList) => card_back_node.appendChild(node));
 
@@ -279,36 +288,66 @@ class Homepage_Card {
      */
     _createCard_backBody() {
         let card_body_node = document.createElement("div");
-        let card_body_subtitle_html = `<h6 class="card-body-subtitle"></h6>`;
-        let card_body_caption_node = document.createElement("div");
-        let caption_item_html = "";
-        let caption_valueArr = [
-            // this.parameters["eg_source"], this.parameters["eg_year"], 
-            // this.parameters["eg_category"], this.parameters["eg_subcategory"]
+        let card_body_subtitle_effective = `<h6 class="card-body-subtitle">Why effective:</h6>`;
+        let card_body_subtitle_ineffective = `<h6 class="card-body-subtitle">Why ineffective:</h6>`;
+        let card_body_effective_node = document.createElement("div");
+        let card_body_ineffective_node = document.createElement("div");
+
+        let effective_item_html = "";
+        let ineffective_item_html = "";
+
+        let effective_valueArr = [
+            this.parameters["effective_1"],
+            this.parameters["effective_2"],
+            this.parameters["effective_3"]
+        ];
+
+
+        let ineffective_valueArr = [
+            this.parameters["ineffective_1"],
+            this.parameters["ineffective_2"],
+            this.parameters["ineffective_3"]
         ];
 
         card_body_node.classList.add("card-body");
-        card_body_caption_node.classList.add("card-body-caption");
+        card_body_effective_node.classList.add("card-body-caption");
+        card_body_ineffective_node.classList.add("card-body-caption");
+
 
         Homepage_Card.caption_keyArr.forEach((key, i, keyList) => {
-            if (caption_valueArr[i] === "") {
+            if (effective_valueArr[i] === "") {
                 return;
             }
-
-            caption_item_html = ``;
-            card_body_caption_node.innerHTML += caption_item_html;
+            effective_item_html = `<div><span>${key}: </span>${effective_valueArr[i]}</div>`;
+            card_body_effective_node.innerHTML += effective_item_html;
         });
-        card_body_node.innerHTML = card_body_subtitle_html;
-        card_body_node.appendChild(card_body_caption_node);
+
+        Homepage_Card.caption_keyArr.forEach((key, i, keyList) => {
+            if (ineffective_valueArr[i] === "") {
+                return;
+            }
+            ineffective_item_html = `<div><span>${key}: </span>${ineffective_valueArr[i]}</div>`;
+            card_body_ineffective_node.innerHTML += ineffective_item_html;
+        });
+
+
+        card_body_node.innerHTML = card_body_subtitle_effective;
+        card_body_node.appendChild(card_body_effective_node);
+
+        card_body_node.innerHTML += "<br>" + card_body_subtitle_ineffective;
+        card_body_node.appendChild(card_body_ineffective_node);
+
         return card_body_node;
     }
 
 
     _createCard_footer(direction = 1) {
 
-        let left_html = "";
+        let source_text = "";
+        let rating_text = "";
+        let rating_star = "";
         let button_text = "";
-        let rating = "";
+        let index_text = "";
         let card_footer_bottom_html = "";
         let card_footer_bottom_icon_html = "";
         let card_footer_node = document.createElement("div");
@@ -316,25 +355,24 @@ class Homepage_Card {
 
         if (direction > 0) {
             // positive
-
+            //id编号
+            index_text = `<span class="card-footer-num">NO. ${this.parameters["card_id"]}</span>`;
             //底部文字：来源
-            button_text = `<span class="card-footer-source">Source: ${this.parameters["eg_title"]}, ${this.parameters["eg_source"]}, <a href="${this.parameters["eg_url"]}">link</a></span>`;
-            //底部文字：卡片编号
-            left_html = `<span class="card-footer-num">Effectiveness ratio (empirical):  ${this.parameters["rating"]}</span>`;
-            rating = `<div class="star-ratings-sprite"><span style="width:${this.parameters["rating"]}" class="star-ratings-sprite-rating"></span></div>`;
+            source_text = `<span class="card-footer-source">Source: ${this.parameters["eg_title"]}, ${this.parameters["eg_source"]}, <a href="${this.parameters["eg_url"]}">link</a></span>`;
+            //底部文字：得分和星星
+            rating_text = `<span class="card-footer-rating">Effectiveness ratio (empirical):  ${this.parameters["rating"]}</span>`;
+            rating_star = `<div class="star-ratings-sprite"><span style="width:${this.parameters["rating"]}" class="star-ratings-sprite-rating"></span></div>`;
+            //翻转按钮的文字
+            button_text = "View comments";
         } else {
             // negative
-            left_html = ``;
-            button_text = "";
+            button_text = "Back to front";
         }
 
-        card_footer_bottom_html = `<div class="card-footer-bottom-chart">${this.parameters["Chart_tag"]}</div>`;
-        card_footer_bottom_icon_html = `<div class="${this.parameters["Chart_tag"].replace(/\s+/g, "-")}"></div>`;
+        card_footer_bottom_html = `<button class="card-footer-bottom">${button_text}</button>`;
         card_footer_node.classList.add("card-footer");
 
-        card_footer_bottom_node.classList.add("card-footer-child");
-
-        card_footer_node.innerHTML = button_text + left_html + rating;
+        card_footer_node.innerHTML = source_text + rating_text + rating_star + index_text + card_footer_bottom_html;
 
         //在卡片底部加icon tag
         // card_footer_bottom_node.innerHTML = card_footer_bottom_icon_html + card_footer_bottom_html;
@@ -344,8 +382,10 @@ class Homepage_Card {
     }
 }
 
+//卡片正面需要的字段
 Homepage_Card.card_body_front_titleArray = ["HOW"];
-Homepage_Card.caption_keyArr = ["Source", "Year", "Category", "Subcategory"];
+//卡片背面需要的字段
+Homepage_Card.caption_keyArr = ["Quote1", "Quote2", "Quote3"];
 
 Homepage_Card.prototype._bindEvents = function() {
 
@@ -356,22 +396,23 @@ Homepage_Card.prototype._bindEvents = function() {
     const back_trans_button = card_inner_node.querySelector(".back .card-footer-bottom");
     const front_img = card_inner_node.querySelector(".front .card-frontImg");
     // const front_preview_img = this_card_node.querySelector("img.front-preview");
-    const back_img_box = this_card_node.querySelector(".card-imgBox");
-    const back_img_cover = back_img_box.querySelector(".img-cover");
-    const back_gif_zooming = back_img_cover.querySelector(".img-cover-overlay");
+    //背面的图片，以及放大图片的效果
+    // const back_img_box = this_card_node.querySelector(".card-imgBox");
+    // const back_img_cover = back_img_box.querySelector(".img-cover");
+    // const back_gif_zooming = back_img_cover.querySelector(".img-cover-overlay");
     const modal_title_node = document.querySelector(".modal-title");
 
     // card footer button
-    // front_trans_button.addEventListener("click", () => {
-    //     if(!card_inner_node.classList.contains("turned-over")) {
-    //         card_inner_node.classList.add("turned-over");
-    //     }
-    // });
-    // back_trans_button.addEventListener("click", () => {
-    //     if(card_inner_node.classList.contains("turned-over")) {
-    //         card_inner_node.classList.remove("turned-over");
-    //     }
-    // });
+    front_trans_button.addEventListener("click", () => {
+        if (!card_inner_node.classList.contains("turned-over")) {
+            card_inner_node.classList.add("turned-over");
+        }
+    });
+    back_trans_button.addEventListener("click", () => {
+        if (card_inner_node.classList.contains("turned-over")) {
+            card_inner_node.classList.remove("turned-over");
+        }
+    });
 
     // card footer URL
     $(card_inner_node.querySelector(".card-footer a")).tooltip({ title: "link to the original work" });
@@ -386,31 +427,33 @@ Homepage_Card.prototype._bindEvents = function() {
         $(front_img).find("img.front-preview").fadeTo("fast", 1);
     });
 
+    //背面gif的预览和放大功能
     // back gif zooming in modal window
-    $(back_img_box).hover(
-        function() {
-            $(back_img_cover).fadeTo("fast", 1);
-        },
-        function() {
-            $(back_img_cover).fadeTo("fast", 0);
-        }
-    );
-
+    // $(back_img_box).hover(
+    //     function() {
+    //         $(back_img_cover).fadeTo("fast", 1);
+    //     },
+    //     function() {
+    //         $(back_img_cover).fadeTo("fast", 0);
+    //     }
+    // );
     // modal window
-    $(back_gif_zooming).tooltip({ title: "zoom in" });
-    back_gif_zooming.addEventListener("click", () => {
-        $('#zooming-modal').modal({
-            backdrop: true,
-            keyboard: false,
-            focus: true,
-            show: true
-        });
+    // $(back_gif_zooming).tooltip({ title: "zoom in" });
+    // back_gif_zooming.addEventListener("click", () => {
+    //     $('#zooming-modal').modal({
+    //         backdrop: true,
+    //         keyboard: false,
+    //         focus: true,
+    //         show: true
+    //     });
 
-        document.querySelector(".modal-body > img").setAttribute("src", `./assets/back_gif_s/${this._back_gif_name}`);
-        document.querySelector(".modal-content").classList.add(this.parameters["VNS_tag"]);
-        modal_title_node.innerText = this.parameters["eg_title"];
-        modal_title_node.setAttribute("href", this.parameters["eg_url"]);
-    });
+    //     document.querySelector(".modal-body > img").setAttribute("src", `./assets/back_gif_s/${this._back_gif_name}`);
+    //     document.querySelector(".modal-content").classList.add(this.parameters["VNS_tag"]);
+    //     modal_title_node.innerText = this.parameters["eg_title"];
+    //     modal_title_node.setAttribute("href", this.parameters["eg_url"]);
+    // });
+
+
     // $('#zooming-modal').on('show.bs.modal', function() {
     //     let img = new Image();
     //     img.src = `./assets/back_gif_s/${that._back_gif_name}`;

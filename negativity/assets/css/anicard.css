@@ -297,42 +297,6 @@
 } */
 
 
-/* Chart symbol for card footer */
-
-
-/*卡片右下角的柱折饼icon*/
-
-.card-footer .Bar-chart {
-    background-image: url("../icon/bar.svg");
-    background-position: 1 0px;
-    background-repeat: no-repeat;
-    width: 23px;
-    height: 21px;
-    /*display:block;*/
-    display: inline-block;
-}
-
-.card-footer .Line-chart {
-    background-image: url("../icon/line.svg");
-    background-position: 1 0px;
-    background-repeat: no-repeat;
-    width: 23px;
-    height: 21px;
-    /*display:block;*/
-    display: inline-block;
-}
-
-.card-footer .Pie-chart {
-    background-image: url("../icon/pie.svg");
-    background-position: 1 0px;
-    background-repeat: no-repeat;
-    width: 23px;
-    height: 21px;
-    /*display:block;*/
-    display: inline-block;
-}
-
-
 /* default height */
 
 
@@ -783,21 +747,29 @@ footer .footer-text {
     border-bottom-right-radius: 0.375rem;
     display: inline-flex;
     align-content: space-between;
-    height: 4.5rem;
+    height: 6.5rem;
 }
 
 .card-footer-source {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 400;
     position: absolute;
     left: 10px;
 }
 
 .card-deck .card-footer-num {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+}
+
+.card-deck .card-footer-rating {
+    font-size: 0.75rem;
     font-weight: 400;
     position: absolute;
-    bottom: 10px;
+    bottom: 50px;
     left: 10px;
 }
 
@@ -810,7 +782,7 @@ footer .footer-text {
     text-indent: -999em;
     width: 90px;
     position: absolute;
-    bottom: 10px;
+    bottom: 50px;
     right: 10px;
 }
 
@@ -834,25 +806,23 @@ footer .footer-text {
     justify-content: flex-end;
 }
 
-.card-footer-bottom-chart {
-    color: #000000;
-    font-size: 0.875rem;
+.card-deck .card-footer-bottom {
+    color: black;
+    font-size: 0.75rem;
     font-weight: 400;
-    padding: 0rem 0.5rem;
-    /*background-color: #FFFFFF;*/
-    /*border: 1px solid #a6a6a610;
-  border-radius: 50vh;*/
-    margin-left: auto;
+    padding: 0.125rem 1rem;
+    background-color: rgb(210, 210, 210);
+    border: 1px solid #a6a6a610;
+    border-radius: 50vh;
     outline: none;
-    /*display:block;*/
-    /*display: inline-block;*/
-    /*text-align: top;*/
-    line-height: 21px;
-    /*border-bottom: 20px;*/
+    height: 30px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
 .card-deck .card-footer-bottom:active {
-    background-color: #FFFFFF;
+    background-color: #FDEFD8;
 }
 
 .card-deck .card-footer a {
@@ -929,7 +899,7 @@ footer .footer-text {
 
 .card-inner {
     position: relative;
-    height: 27.5rem;
+    height: 29.5rem;
 }
 
 .card-inner .front,
