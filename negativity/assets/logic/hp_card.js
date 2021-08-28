@@ -360,7 +360,7 @@ class Homepage_Card {
             //底部文字：来源
             source_text = `<span class="card-footer-source">Source: ${this.parameters["eg_title"]}, ${this.parameters["eg_source"]}, <a href="${this.parameters["eg_url"]}">link</a></span>`;
             //底部文字：得分和星星
-            rating_text = `<span class="card-footer-rating">Effectiveness ratio (empirical):  ${this.parameters["rating"]}</span>`;
+            rating_text = `<span class="card-footer-rating">Effectiveness ratio:  ${this.parameters["rating"]}</span>`;
             rating_star = `<div class="star-ratings-sprite"><span style="width:${this.parameters["rating"]}" class="star-ratings-sprite-rating"></span></div>`;
             //翻转按钮的文字
             button_text = "View comments";
