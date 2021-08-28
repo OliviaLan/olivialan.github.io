@@ -35,7 +35,7 @@
         "topic": "Health",
         "description": "Introducing who are the 100,000 people who died from COVID-19.",
         "recommender": "E2",
-        "method": "<span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>running timer/counter</span><span class='badge badge_5'>stretched layout</span>"
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_2'>emotional wording</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>running timer/counter</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 4,
@@ -87,7 +87,7 @@
         "topic": "Health",
         "description": "The coronavirus exposed the rampant inequality in the US.",
         "recommender": "E5",
-        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span><span class='badge badge_1'>big size</span><span class='badge badge_1'>sharp/distorted shape</span><span class='badge badge_4'>running timer/counter</span>"
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span><span class='badge badge_1'>big size</span><span class='badge badge_1'>sharp/distorted shape</span><span class='badge badge_2'>emotional wording</span><span class='badge badge_4'>running timer/counter</span>"
     },
     {
         "id": 8,
@@ -100,7 +100,7 @@
         "topic": "Health",
         "description": "A data story that explains how COVID-19 spread in the US.",
         "recommender": "E6",
-        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dense encoding</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>immersive role-play game</span><span class='badge badge_4'>inevitable animation</span>"
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dense encoding</span><span class='badge badge_3'>person-level visualization</span>"
     },
     {
         "id": 9,
@@ -113,7 +113,7 @@
         "topic": "Health",
         "description": "A newsgame that asks users to make decisions on their outdoor activities and see how the virus spreads.",
         "recommender": "E7",
-        "method": "<span class='badge badge_2'>direct address</span><span class='badge badge_6'>tough task</span>"
+        "method": "<span class='badge badge_2'>direct address</span><span class='badge badge_3'>immersive role-play game</span><span class='badge badge_4'>inevitable animation</span><span class='badge badge_6'>tough task</span>"
     },
     {
         "id": 10,
@@ -126,7 +126,7 @@
         "topic": "Health",
         "description": "Using animated flowers to show how COVID-19 cases increase over time.",
         "recommender": "E7",
-        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_1'>shrill/deep/pressing music</span><span class='badge badge_4'>inevitable animation</span>"
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_1'>shrill/deep/pressing music</span>"
     },
     {
         "id": 11,
@@ -139,7 +139,7 @@
         "topic": "Health",
         "description": "Showing more than 5,400 people are dying each day visually.",
         "recommender": "E9",
-        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>running timer/counter</span><span class='badge badge_5'>stretched layout</span>"
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>inevitable animation</span><span class='badge badge_4'>running timer/counter</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 12,
@@ -152,7 +152,7 @@
         "topic": "Health",
         "description": "This story calls for the attention to the need for mental health and addiction support after the outbreak of COVID-19.",
         "recommender": "E5",
-        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_2'>direct address</span>"
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_2'>direct address</span>"
     },
     {
         "id": 13,
@@ -176,9 +176,9 @@
         "link": "https://hurricanemariasdead.com/",
         "tag": "",
         "topic": "Natural disaster",
-        "description": "This project visualizes the death toll caused by a hurrican.",
+        "description": "Thousands of people were killed by Hurricane Maria but not publicly identified.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>sharp/distorted shape</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span>"
     },
     {
         "id": 15,
@@ -189,9 +189,9 @@
         "link": "https://www.propublica.org/article/lost-mothers-maternal-health-died-childbirth-pregnancy",
         "tag": "",
         "topic": "Health / Gender",
-        "description": "This work talks about the mothers who died in childbirth in the US and reported the stories of 16 mothers.",
+        "description": "This work talks about the mothers who died in childbirth and reported the stories of 16 mothers.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_2'>emotional wording</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>inevitable animation</span>"
     },
     {
         "id": 16,
@@ -202,9 +202,9 @@
         "link": "https://coronavirus.jhu.edu/map.html",
         "tag": "covid",
         "topic": "Health",
-        "description": "A dashboard of Covid-19 statistics.",
+        "description": "A dashboard of COVID-19 statistics.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span>"
     },
     {
         "id": 17,
@@ -217,7 +217,7 @@
         "topic": "Traffic",
         "description": "This project visualizes the accidents in sky in 2017.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span>"
     },
     {
         "id": 18,
@@ -228,9 +228,9 @@
         "link": "https://graphics.reuters.com/HEALTH-EBOLA-CONGO/010081G62NR/index.html",
         "tag": "",
         "topic": "Health",
-        "description": "A project about the outbreak of Ebola in Africa.",
+        "description": "A project that introduces the outbreak of Ebola in Africa.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span>"
     },
     {
         "id": 19,
@@ -243,7 +243,7 @@
         "topic": "Health / Economy",
         "description": "The cost of health care by different countries and regions.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 20,
@@ -256,7 +256,7 @@
         "topic": "Economy",
         "description": "The visualization of the jobless rate in the US.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_1'>big size</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 21,
@@ -269,7 +269,7 @@
         "topic": "Politics",
         "description": "The visualization of the protesters in Hong Kong.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span>"
     },
     {
         "id": 22,
@@ -277,12 +277,12 @@
         "genre": "web",
         "source": "Caixin Media",
         "year": "2020",
-        "link": "http://datanews.caixin.com/interactive/2020/THREEJS/blossom/ https://wemp.app/posts/41e921ee-d01a-42c4-b2f5-884f7a55c6ee",
+        "link": "https://datanews.caixin.com/interactive/2020/THREEJS/blossom/",
         "tag": "covid",
         "topic": "Health",
-        "description": "A visualization project that documents the dead people in the Covid-19 pandemic.",
+        "description": "Using flowers to memorize the dead people in the pandemic.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>inevitable animation</span>"
     },
     {
         "id": 23,
@@ -293,9 +293,9 @@
         "link": "https://www.thepaper.cn/newsDetail_forward_10432995",
         "tag": "covid",
         "topic": "Health",
-        "description": "The Covid-19 epidemiologic investigation in China.",
+        "description": "Stories based on the epidemiologic investigation data in China.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>sharp/distorted shape</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span>"
     },
     {
         "id": 24,
@@ -303,12 +303,12 @@
         "genre": "infographic",
         "source": "Mohamad Waked",
         "year": "2020",
-        "link": "https://www.alhadaqa.com/pompeii/",
+        "link": "https://www.alhadaqa.com/wp-content/uploads/2020/12/pompeii_v2.html",
         "tag": "",
         "topic": "Natural disaster",
         "description": "A project that visualizes the notable natural disasters in the world.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>sharp/distorted shape</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_1'>shrill/deep/pressing music</span><span class='badge badge_2'>emotional wording</span>"
     },
     {
         "id": 25,
@@ -321,20 +321,20 @@
         "topic": "Environment",
         "description": "The amount of the CO2 emission of China.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span>"
     },
     {
         "id": 26,
-        "title": "sepsin",
+        "title": "Sepsin",
         "genre": "web",
         "source": "Dan McCarey",
         "year": "2019",
-        "link": "http://sepsin.danmccarey.com/ https://www.informationisbeautifulawards.com/showcase/3795-sepsin",
+        "link": "http://sepsin.danmccarey.com/",
         "tag": "",
         "topic": "Politics / Media",
         "description": "This project visualizes the emotions expressed by Trump's twitters.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span>"
     },
     {
         "id": 27,
@@ -399,7 +399,7 @@
         "topic": "Military",
         "description": "An infographic that depicts the dead soldiers who sacrificed during the Iraq war.",
         "recommender": "E2",
-        "method": ""
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>heavy use of red</span>"
     },
     {
         "id": 32,
@@ -425,11 +425,11 @@
         "topic": "Society / Media",
         "description": "A visual analysis of the texts left by a melancholiac who has committed suicide.",
         "recommender": "E2",
-        "method": ""
+        "method": "<span class='badge badge_1'>shrill/deep/pressing music</span>"
     },
     {
         "id": 34,
-        "title": "going gray",
+        "title": "Going gray",
         "genre": "web",
         "source": "Reuters",
         "year": "2019",
@@ -438,7 +438,7 @@
         "topic": "Society",
         "description": "A project that visualizes the aged population in Japan.",
         "recommender": "E3",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>big size</span>"
     },
     {
         "id": 35,
@@ -472,12 +472,12 @@
         "genre": "physical art",
         "source": "Rogue Penguin",
         "year": "2020",
-        "link": "媒体报道：https://medium.com/nightingale/my-plastic-footprint-a-physical-data-visualisation-project-6a35eec32845项目网站的介绍：https://www.myplasticfootprint.co.nz/about",
+        "link": "https://www.myplasticfootprint.co.nz/about",
         "tag": "",
         "topic": "Environment",
         "description": "A data physicalization. The author recycled the plastic she used and made them into sea turtles.",
         "recommender": "E4",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>metaphor with negative semantics</span>"
     },
     {
         "id": 38,
