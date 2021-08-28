@@ -737,7 +737,7 @@
         "topic": "Society / Safety",
         "description": "展示了白俄罗斯执法部门如何有系统地、完全不受惩罚地殴打抗议者；利用人物插画剪影代表 1,406 名受伤人员来可视化这些伤害以及受伤位置。",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 58,
@@ -763,7 +763,7 @@
         "topic": "Economy",
         "description": "",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_1'>big size</span><span class='badge badge_2'>direct address</span>"
     },
     {
         "id": 60,
@@ -776,7 +776,7 @@
         "topic": "Society",
         "description": "可视化非洲地图，并让用户点击每个国家的地理位置",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_6'>tough task</span>"
     },
     {
         "id": 61,
@@ -789,7 +789,7 @@
         "topic": "Health",
         "description": "HeartSaver将纽约市可以治疗心脏病的医院可视化于地图上，并让用户将心脏病患者安置在最合适的医院。",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_3'>immersive role-play game</span><span class='badge badge_6'>tough task</span>"
     },
     {
         "id": 62,
@@ -815,7 +815,7 @@
         "topic": "Economy",
         "description": "",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_2'>concrete scale</span>"
     },
     {
         "id": 64,
@@ -854,7 +854,7 @@
         "topic": "Traffic",
         "description": "",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_3'>immersive role-play game</span><span class='badge badge_6'>tough task</span>"
     },
     {
         "id": 67,
@@ -867,7 +867,7 @@
         "topic": "Society",
         "description": "draw the Berlin wall",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_6'>tough task</span>"
     },
     {
         "id": 68,
