@@ -195,32 +195,6 @@
     },
     {
         "id": 16,
-        "title": "John Hopkins COVID-19 Map",
-        "genre": "web",
-        "source": "John Hopkins",
-        "year": "2020",
-        "link": "https://coronavirus.jhu.edu/map.html",
-        "tag": "covid",
-        "topic": "Health",
-        "description": "A dashboard of COVID-19 statistics.",
-        "recommender": "E1",
-        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span>"
-    },
-    {
-        "id": 17,
-        "title": "2017: the safest skies record",
-        "genre": "infographic",
-        "source": "SCMP",
-        "year": "2018",
-        "link": "https://multimedia.scmp.com/news/world/article/safety-aviation-2017/index.html",
-        "tag": "",
-        "topic": "Traffic",
-        "description": "This project visualizes the accidents in sky in 2017.",
-        "recommender": "E1",
-        "method": "<span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span>"
-    },
-    {
-        "id": 18,
         "title": "In Africa, a virus spreads",
         "genre": "web",
         "source": "Reuters",
@@ -233,46 +207,7 @@
         "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span>"
     },
     {
-        "id": 19,
-        "title": "Cost of Health Care by Country",
-        "genre": "infographic",
-        "source": "national geographic",
-        "year": "2011",
-        "link": "https://thesocietypages.org/graphicsociology/2011/04/26/cost-of-health-care-by-country-national-geographic/",
-        "tag": "",
-        "topic": "Health / Economy",
-        "description": "The cost of health care by different countries and regions.",
-        "recommender": "E1",
-        "method": "<span class='badge badge_5'>stretched layout</span>"
-    },
-    {
-        "id": 20,
-        "title": "How Bad Is Unemployment? ‘Literally Off the Charts’",
-        "genre": "infographic",
-        "source": "NYT",
-        "year": "2020",
-        "link": "https://www.nytimes.com/interactive/2020/05/08/business/economy/april-jobs-report.html",
-        "tag": "",
-        "topic": "Economy",
-        "description": "The visualization of the jobless rate in the US.",
-        "recommender": "E1",
-        "method": "<span class='badge badge_1'>big size</span><span class='badge badge_5'>stretched layout</span>"
-    },
-    {
-        "id": 21,
-        "title": "A Bird’s-Eye View of How Protesters Have Flooded Hong Kong Streets",
-        "genre": "infographic",
-        "source": "NYT",
-        "year": "2019",
-        "link": "https://www.nytimes.com/interactive/2019/06/20/world/asia/hong-kong-protest-size.html",
-        "tag": "",
-        "topic": "Politics",
-        "description": "The visualization of the protesters in Hong Kong.",
-        "recommender": "E1",
-        "method": "<span class='badge badge_1'>imagery with negative semantics</span>"
-    },
-    {
-        "id": 22,
+        "id": 17,
         "title": "Garden: A Memorial Dedicated to the Lives Lost in the Outbreak",
         "genre": "web",
         "source": "Caixin Media",
@@ -285,7 +220,7 @@
         "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>inevitable animation</span>"
     },
     {
-        "id": 23,
+        "id": 18,
         "title": "What 11699 Cases Tell Us About COVID-19?",
         "genre": "web",
         "source": "The Paper",
@@ -298,7 +233,7 @@
         "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>sharp/distorted shape</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span>"
     },
     {
-        "id": 24,
+        "id": 19,
         "title": "The angry face of nature",
         "genre": "infographic",
         "source": "Mohamad Waked",
@@ -311,20 +246,7 @@
         "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>sharp/distorted shape</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_1'>shrill/deep/pressing music</span><span class='badge badge_2'>emotional wording</span>"
     },
     {
-        "id": 25,
-        "title": "China is surprisingly carbon-efficient—but still the world’s biggest emitter",
-        "genre": "infographic",
-        "source": "The Economist",
-        "year": "2019",
-        "link": "https://www.economist.com/graphic-detail/2019/05/25/china-is-surprisingly-carbon-efficient-but-still-the-worlds-biggest-emitter?fsrc=scn%2Ftw%2Fte%2Fbl%2Fed%2Fchinaissurprisinglycarbonefficientbutstilltheworldsbiggestemitternotsocoldcomfort&%3Ffsrc%3Dscn%2F=tw%2Fdc",
-        "tag": "",
-        "topic": "Environment",
-        "description": "The amount of the CO2 emission of China.",
-        "recommender": "E1",
-        "method": "<span class='badge badge_1'>metaphor with negative semantics</span>"
-    },
-    {
-        "id": 26,
+        "id": 20,
         "title": "Sepsin",
         "genre": "web",
         "source": "Dan McCarey",
@@ -337,20 +259,7 @@
         "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span>"
     },
     {
-        "id": 27,
-        "title": "CEO pay ratio",
-        "genre": "web",
-        "source": "Bloomberg",
-        "year": "2021",
-        "link": "https://www.bloomberg.com/graphics/ceo-pay-ratio/",
-        "tag": "",
-        "topic": "Economy",
-        "description": "A comparison between the salary of CEOs and ordinary people.",
-        "recommender": "E1",
-        "method": "<span class='badge badge_1'>big size</span>"
-    },
-    {
-        "id": 28,
+        "id": 21,
         "title": "The terrible numbers that grow with each mass shooting",
         "genre": "web",
         "source": "Washington Post",
@@ -363,7 +272,7 @@
         "method": "<span class='badge badge_1'>big size</span><span class='badge badge_2'>emotional wording</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
-        "id": 29,
+        "id": 22,
         "title": "百万逝者：新冠何以成为全球悲剧？",
         "genre": "web",
         "source": "The paper",
@@ -376,7 +285,7 @@
         "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_4'>running timer/counter</span>"
     },
     {
-        "id": 30,
+        "id": 23,
         "title": "Out of Sight, Out of Mind",
         "genre": "web",
         "source": "Pitch Interactive",
@@ -389,7 +298,7 @@
         "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>inevitable animation</span><span class='badge badge_4'>running timer/counter</span>"
     },
     {
-        "id": 31,
+        "id": 24,
         "title": "Iraq's bloody toll",
         "genre": "infographic",
         "source": "SCMP",
@@ -402,20 +311,7 @@
         "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>heavy use of red</span>"
     },
     {
-        "id": 32,
-        "title": "A view on despair",
-        "genre": "infographic",
-        "source": "",
-        "year": "2019",
-        "link": "https://www.studioterp.nl/a-view-on-despair-a-datavisualization-project-by-studio-terp/",
-        "tag": "",
-        "topic": "Health / Society",
-        "description": "An infographic that visualizes the suicide in the Netherland in 2017.",
-        "recommender": "E2",
-        "method": "<span class='badge badge_1'>metaphor with negative semantics</span>"
-    },
-    {
-        "id": 33,
+        "id": 25,
         "title": "53027条留言背后，网络树洞里绝望者的自救与互助",
         "genre": "web",
         "source": "The paper",
@@ -428,7 +324,7 @@
         "method": "<span class='badge badge_1'>shrill/deep/pressing music</span>"
     },
     {
-        "id": 34,
+        "id": 26,
         "title": "Going gray",
         "genre": "web",
         "source": "Reuters",
@@ -441,7 +337,7 @@
         "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>big size</span>"
     },
     {
-        "id": 35,
+        "id": 27,
         "title": "The Stories behind a line",
         "genre": "web",
         "source": "Federica FragapaneAlex Piacentini",
@@ -451,23 +347,23 @@
         "topic": "Politics",
         "description": "A visual story of six asylum seekers' routes. They travelled from their hometown to Italy.",
         "recommender": "E4",
-        "method": ""
+        "method": "<span class='badge badge_3'>detailed person behind data</span>"
     },
     {
-        "id": 36,
-        "title": "The Ocean Cleanup",
+        "id": 28,
+        "title": "The Water We Eat",
         "genre": "web",
-        "source": "The Ocean Cleanup",
-        "year": "2021",
-        "link": "https://theoceancleanup.com/sources/#",
+        "source": "InfoDesignLab",
+        "year": "2017",
+        "link": "http://thewaterweeat.com/",
         "tag": "",
         "topic": "Environment",
-        "description": "A project that visualizes how plastic is sent to the ocean through various rivers in the world.",
-        "recommender": "E4",
-        "method": ""
+        "description": "可视化人类平均每天的用水量，以及这些用水是哪些地方产生的",
+        "recommender": "Experimenter",
+        "method": "<span class='badge badge_2'>direct address</span><span class='badge badge_2'>emotional wording</span><span class='badge badge_2'>concrete scale</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
-        "id": 37,
+        "id": 29,
         "title": "My Plastic Footprint",
         "genre": "physical art",
         "source": "Rogue Penguin",
@@ -480,7 +376,7 @@
         "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>metaphor with negative semantics</span>"
     },
     {
-        "id": 38,
+        "id": 30,
         "title": "Imaging Mental Health in America",
         "genre": "infographic",
         "source": "Giorgia Lupi",
@@ -493,20 +389,7 @@
         "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>sharp/distorted shape</span>"
     },
     {
-        "id": 39,
-        "title": "The true death toll of COVID-19",
-        "genre": "web",
-        "source": "WHO",
-        "year": "2021",
-        "link": "https://www.who.int/data/stories/the-true-death-toll-of-covid-19-estimating-global-excess-mortality",
-        "tag": "covid",
-        "topic": "Health",
-        "description": "The eatimated global excess mortality in the world.",
-        "recommender": "E5",
-        "method": "<span class='badge badge_1'>dark background</span>"
-    },
-    {
-        "id": 40,
+        "id": 31,
         "title": "What vets are experiencing",
         "genre": "web",
         "source": "Periscopic",
@@ -516,23 +399,10 @@
         "topic": "Society / Military",
         "description": "A story that reveals the current state of the ex-servicemen in the US.",
         "recommender": "E5",
-        "method": ""
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>dense encoding</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span>"
     },
     {
-        "id": 41,
-        "title": "The age of the “megafire”",
-        "genre": "web",
-        "source": "Reuters",
-        "year": "2021",
-        "link": "https://graphics.reuters.com/USA-WILDFIRES/EXTREMES/qzjvqmmravx/index.html",
-        "tag": "",
-        "topic": "Natural disaster",
-        "description": "This story visualizes the biggest 38 megafired in western US.",
-        "recommender": "E5",
-        "method": ""
-    },
-    {
-        "id": 42,
+        "id": 32,
         "title": "Beneath the blue: dive into a dazzling ocean under threat",
         "genre": "web",
         "source": "the Guardian",
@@ -540,13 +410,13 @@
         "link": "https://www.theguardian.com/environment/ng-interactive/2021/feb/23/beneath-the-blue-dive-into-a-dazzling-ocean-under-threat-interactive",
         "tag": "",
         "topic": "Environment",
-        "description": "A story about ocean pollution. The authors split the depth of the ocean into segments and explain the pollution in each segment.",
+        "description": "The author splits the depth of the ocean into segments and explain the pollution in each segment.",
         "recommender": "E5",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_2'>concrete scale</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
-        "id": 43,
-        "title": "A visual analysis of theMeToo Movement",
+        "id": 33,
+        "title": "A visual analysis of the MeToo Movement",
         "genre": "web",
         "source": "",
         "year": "2018",
@@ -555,10 +425,10 @@
         "topic": "Society / Gender",
         "description": "This story collected the posts about the #Metoo topic and analyzed these materials using data visualization.",
         "recommender": "E6",
-        "method": ""
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span>"
     },
     {
-        "id": 44,
+        "id": 34,
         "title": "A plateful of plastic: Visualising the amount of microplastic we eat",
         "genre": "web",
         "source": "Reuters",
@@ -568,10 +438,10 @@
         "topic": "Environment",
         "description": "This project uses data physicalization to show how much plastic we eat every day.",
         "recommender": "E6",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_2'>concrete scale</span>"
     },
     {
-        "id": 45,
+        "id": 35,
         "title": "Educate your child",
         "genre": "web",
         "source": "Gabrielle LaMarr LeMee",
@@ -581,23 +451,10 @@
         "topic": "Education",
         "description": "A newsgame that asks users to make decisions for the education of their children and shows the consequences.",
         "recommender": "E7",
-        "method": "<span class='badge badge_3'>immersive role-play game</span>"
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_3'>immersive role-play game</span>"
     },
     {
-        "id": 46,
-        "title": "Bulletin of the Atomic Scientists",
-        "genre": "infographic",
-        "source": "Pentagram(Giorgia Lupi)",
-        "year": "2021",
-        "link": "http://giorgialupi.com/bullettin-of-the-atomic-scientists",
-        "tag": "",
-        "topic": "Society",
-        "description": "A story that talks about the crisis for human beings, including the nuclear war, climate change, and disruptive technology.",
-        "recommender": "E7",
-        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>sharp/distorted shape</span>"
-    },
-    {
-        "id": 47,
+        "id": 36,
         "title": "India Elections 2019: The figures behind the faces",
         "genre": "web",
         "source": "Reuters",
@@ -610,7 +467,7 @@
         "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dense encoding</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
-        "id": 48,
+        "id": 37,
         "title": "Mapping Police Violence",
         "genre": "web",
         "source": "Samuel Sinyangwe et al.",
@@ -620,10 +477,10 @@
         "topic": "Society / Safety",
         "description": "A story that talks about the violence used by the police officers and how it affects the community.",
         "recommender": "E8",
-        "method": ""
+        "method": "<span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>big size</span><span class='badge badge_4'>inevitable animation</span>"
     },
     {
-        "id": 49,
+        "id": 38,
         "title": "Explore 17,369 officers who used force in N.J.",
         "genre": "web",
         "source": "NJ.com",
@@ -633,36 +490,23 @@
         "topic": "Society / Safety",
         "description": "A story that investigates how the policemen in NJ used force and why.",
         "recommender": "E8",
-        "method": ""
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span>"
     },
     {
-        "id": 50,
-        "title": "Using the Interaction Geography Slicer to Visualize New York City Stop & Frisk",
+        "id": 39,
+        "title": "O cálculo de uma tragédia",
         "genre": "web",
-        "source": "IEEE 2017 VISAP Paper, Ben Rydal Shapiro & Francis A. Pearman, II",
-        "year": "2017",
-        "link": "https://www.benrydal.com/nycstopfrisk\nhttps://www.researchgate.net/publication/320409543_Using_the_Interaction_Geography_Slicer_to_Visualize_New_York_City_Stop_Frisk",
-        "tag": "",
-        "topic": "Society / Safety",
-        "description": "The statistics of the Stop & Frisk in New York show that black people are more frequently stopped by cops.",
-        "recommender": "E8",
-        "method": ""
-    },
-    {
-        "id": 51,
-        "title": "A GROWING WHIRLPOOL",
-        "genre": "web",
-        "source": "Zhibang Jiang",
+        "source": "NEXO",
         "year": "2020",
-        "link": "https://zhibang.design/work/bird",
-        "tag": "",
-        "topic": "Environment",
-        "description": "A project that visualized the endangered birds, their current status, and how to protect them.",
-        "recommender": "E8",
-        "method": ""
+        "link": "https://www.nexojornal.com.br/especial/2020/08/08/100-mil-mortes-no-Brasil-o-c%C3%A1lculo-de-uma-trag%C3%A9dia",
+        "tag": "covid",
+        "topic": "Health",
+        "description": "brazil",
+        "recommender": "E9",
+        "method": "<span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>big size</span><span class='badge badge_2'>concrete scale</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>inevitable animation</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
-        "id": 52,
+        "id": 40,
         "title": "U.S. Gun Deaths",
         "genre": "web",
         "source": "Periscopic",
@@ -672,10 +516,10 @@
         "topic": "Society / Safety",
         "description": "可视化了美国执法部门报告的枪支凶杀案数据，并利用世界卫生组织的美国死亡率数据估算这些受害者本来的潜在寿命与死亡原因。",
         "recommender": "Experimenter",
-        "method": ""
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>big size</span><span class='badge badge_4'>inevitable animation</span><span class='badge badge_4'>running timer/counter</span>"
     },
     {
-        "id": 53,
+        "id": 41,
         "title": "The Fallen of World War II",
         "genre": "data video, web",
         "source": "Neil Hallora",
@@ -685,23 +529,10 @@
         "topic": "Military",
         "description": "第二次世界大战的死亡人数，并将数字与历史上的其他战争相比较，包括最近冲突的趋势",
         "recommender": "Experimenter",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>shrill/deep/pressing music</span><span class='badge badge_2'>emotional wording</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
-        "id": 54,
-        "title": "The Water We Eat",
-        "genre": "web",
-        "source": "InfoDesignLab",
-        "year": "2017",
-        "link": "http://thewaterweeat.com/",
-        "tag": "",
-        "topic": "Environment",
-        "description": "可视化人类平均每天的用水量，以及这些用水是哪些地方产生的",
-        "recommender": "Experimenter",
-        "method": ""
-    },
-    {
-        "id": 55,
+        "id": 42,
         "title": "One LGBT+ person is killed every day in Brazil",
         "genre": "infographic",
         "source": "Evandro Damiao",
@@ -711,10 +542,10 @@
         "topic": "Society",
         "description": "",
         "recommender": "Experimenter",
-        "method": ""
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>heavy use of red</span>"
     },
     {
-        "id": 56,
+        "id": 43,
         "title": "Do you know who's watching you",
         "genre": "infographic",
         "source": "Wordstream",
@@ -724,10 +555,10 @@
         "topic": "Society",
         "description": "",
         "recommender": "Experimenter",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_2'>direct address</span>"
     },
     {
-        "id": 57,
+        "id": 44,
         "title": "How Belarusian police beat protesters",
         "genre": "web",
         "source": "Mediazona",
@@ -740,7 +571,7 @@
         "method": "<span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
-        "id": 58,
+        "id": 45,
         "title": "Drowning in plastic",
         "genre": "web",
         "source": "Reuters",
@@ -750,10 +581,10 @@
         "topic": "Environment",
         "description": "可视化一小时、一天、一个月、一年和过去十年中全球塑料瓶的高度，并将之与世界知名景点的高度作对比",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_1'>big size</span><span class='badge badge_2'>concrete scale</span><span class='badge badge_4'>inevitable animation</span><span class='badge badge_4'>running timer/counter</span>"
     },
     {
-        "id": 59,
+        "id": 46,
         "title": "Are You Rich?",
         "genre": "web",
         "source": "NYT",
@@ -766,7 +597,33 @@
         "method": "<span class='badge badge_1'>big size</span><span class='badge badge_2'>direct address</span>"
     },
     {
-        "id": 60,
+        "id": 47,
+        "title": "The Ocean Cleanup",
+        "genre": "web",
+        "source": "The Ocean Cleanup",
+        "year": "2021",
+        "link": "https://theoceancleanup.com/sources/#",
+        "tag": "",
+        "topic": "Environment",
+        "description": "A project that visualizes how plastic is sent to the ocean through various rivers in the world.",
+        "recommender": "E4",
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_4'>running timer/counter</span>"
+    },
+    {
+        "id": 48,
+        "title": "The age of the “megafire”",
+        "genre": "web",
+        "source": "Reuters",
+        "year": "2021",
+        "link": "https://graphics.reuters.com/USA-WILDFIRES/EXTREMES/qzjvqmmravx/index.html",
+        "tag": "",
+        "topic": "Natural disaster",
+        "description": "This story visualizes the biggest 38 megafired in western US.",
+        "recommender": "E5",
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_4'>inevitable animation</span>"
+    },
+    {
+        "id": 49,
         "title": "Do you know Africa?",
         "genre": "web",
         "source": "Washington Post",
@@ -779,7 +636,7 @@
         "method": "<span class='badge badge_6'>tough task</span>"
     },
     {
-        "id": 61,
+        "id": 50,
         "title": "HeartSaver",
         "genre": "web",
         "source": "Propublica",
@@ -792,7 +649,7 @@
         "method": "<span class='badge badge_3'>immersive role-play game</span><span class='badge badge_6'>tough task</span>"
     },
     {
-        "id": 62,
+        "id": 51,
         "title": "Wealth shown to scale",
         "genre": "web",
         "source": "Mkorostoff",
@@ -805,7 +662,7 @@
         "method": "<span class='badge badge_2'>concrete scale</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
-        "id": 63,
+        "id": 52,
         "title": "Wie lange arbeiten Sie für das Gehalt der anderen?",
         "genre": "web",
         "source": "Morgenpost",
@@ -818,7 +675,7 @@
         "method": "<span class='badge badge_2'>concrete scale</span>"
     },
     {
-        "id": 64,
+        "id": 53,
         "title": "So schnell verdienen die deutschen Nationalspieler dein Monatsgehalt",
         "genre": "web",
         "source": "Morgenpost",
@@ -831,7 +688,7 @@
         "method": "<span class='badge badge_2'>concrete scale</span>"
     },
     {
-        "id": 65,
+        "id": 54,
         "title": "Printing Money",
         "genre": "web",
         "source": "Neal Agarwal",
@@ -844,7 +701,7 @@
         "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_2'>concrete scale</span>"
     },
     {
-        "id": 66,
+        "id": 55,
         "title": "Steer through the Suez Canal",
         "genre": "web",
         "source": "CNN",
@@ -857,7 +714,7 @@
         "method": "<span class='badge badge_3'>immersive role-play game</span><span class='badge badge_6'>tough task</span>"
     },
     {
-        "id": 67,
+        "id": 56,
         "title": "Wissen Sie noch, wo Deutschland geteilt war?",
         "genre": "web",
         "source": "Morgenpost",
@@ -870,7 +727,7 @@
         "method": "<span class='badge badge_6'>tough task</span>"
     },
     {
-        "id": 68,
+        "id": 57,
         "title": "How powerful was the Beirut blast?",
         "genre": "web",
         "source": "Reuters",
@@ -880,23 +737,10 @@
         "topic": "Society",
         "description": "",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>big size</span>"
     },
     {
-        "id": 69,
-        "title": "Drowning in plastic",
-        "genre": "web",
-        "source": "Reuters",
-        "year": "2019",
-        "link": "https://graphics.reuters.com/ENVIRONMENT-PLASTIC/0100B275155/index.html",
-        "tag": "",
-        "topic": "Environment",
-        "description": "",
-        "recommender": "E9",
-        "method": ""
-    },
-    {
-        "id": 70,
+        "id": 58,
         "title": "Derek Chauvin was found guilty – how typical is that of US police who kill?",
         "genre": "web",
         "source": "The Guardian",
@@ -906,10 +750,10 @@
         "topic": "Society / Safety",
         "description": "",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_5'>stretched layout</span>"
     },
     {
-        "id": 71,
+        "id": 59,
         "title": "Oil spilled at sea",
         "genre": "web",
         "source": "Reuters",
@@ -919,19 +763,175 @@
         "topic": "Environment",
         "description": "",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_4'>inevitable animation</span>"
+    },
+    {
+        "id": 60,
+        "title": "Swirling smoke: How Australia's bushfire smoke spread",
+        "genre": "web",
+        "source": "Reuters",
+        "year": "2020",
+        "link": "https://graphics.reuters.com/AUSTRALIA-BUSHFIRES-SMOK/0100B4W52R7/index.html",
+        "tag": "",
+        "topic": "Environment",
+        "description": "",
+        "recommender": "E9",
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_4'>inevitable animation</span>"
+    },
+    {
+        "id": 61,
+        "title": "Cost of Health Care by Country",
+        "genre": "infographic",
+        "source": "national geographic",
+        "year": "2011",
+        "link": "https://thesocietypages.org/graphicsociology/2011/04/26/cost-of-health-care-by-country-national-geographic/",
+        "tag": "",
+        "topic": "Health / Economy",
+        "description": "The cost of health care by different countries and regions.",
+        "recommender": "E1",
+        "method": "<span class='badge badge_5'>stretched layout</span>"
+    },
+    {
+        "id": 62,
+        "title": "How Bad Is Unemployment? ‘Literally Off the Charts’",
+        "genre": "infographic",
+        "source": "NYT",
+        "year": "2020",
+        "link": "https://www.nytimes.com/interactive/2020/05/08/business/economy/april-jobs-report.html",
+        "tag": "",
+        "topic": "Economy",
+        "description": "The visualization of the jobless rate in the US.",
+        "recommender": "E1",
+        "method": "<span class='badge badge_1'>big size</span><span class='badge badge_5'>stretched layout</span>"
+    },
+    {
+        "id": 63,
+        "title": "A Growing Whirlpool",
+        "genre": "web",
+        "source": "Zhibang Jiang",
+        "year": "2020",
+        "link": "https://zhibang.design/work/bird",
+        "tag": "",
+        "topic": "Environment",
+        "description": "A project that visualized the endangered birds, their current status, and how to protect them.",
+        "recommender": "E8",
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>shrill/deep/pressing music</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span>"
+    },
+    {
+        "id": 64,
+        "title": "Using the Interaction Geography Slicer to Visualize New York City Stop & Frisk",
+        "genre": "web",
+        "source": "IEEE 2017 VISAP",
+        "year": "2017",
+        "link": "https://www.benrydal.com/nycstopfrisk\nhttps://www.researchgate.net/publication/320409543_Using_the_Interaction_Geography_Slicer_to_Visualize_New_York_City_Stop_Frisk",
+        "tag": "",
+        "topic": "Society / Safety",
+        "description": "The statistics of the Stop & Frisk in New York show that black people are more frequently stopped by cops.",
+        "recommender": "E8",
+        "method": "<span class='badge badge_1'>dense encoding</span><span class='badge badge_3'>person-level visualization</span>"
+    },
+    {
+        "id": 65,
+        "title": "Bulletin of the Atomic Scientists",
+        "genre": "infographic",
+        "source": "Pentagram",
+        "year": "2021",
+        "link": "http://giorgialupi.com/bullettin-of-the-atomic-scientists",
+        "tag": "",
+        "topic": "Society",
+        "description": "A story that talks about the crisis for human beings, including the nuclear war, climate change, and disruptive technology.",
+        "recommender": "E7",
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>sharp/distorted shape</span>"
+    },
+    {
+        "id": 66,
+        "title": "China is surprisingly carbon-efficient—but still the world’s biggest emitter",
+        "genre": "infographic",
+        "source": "The Economist",
+        "year": "2019",
+        "link": "https://www.economist.com/graphic-detail/2019/05/25/china-is-surprisingly-carbon-efficient-but-still-the-worlds-biggest-emitter?fsrc=scn%2Ftw%2Fte%2Fbl%2Fed%2Fchinaissurprisinglycarbonefficientbutstilltheworldsbiggestemitternotsocoldcomfort&%3Ffsrc%3Dscn%2F=tw%2Fdc",
+        "tag": "",
+        "topic": "Environment",
+        "description": "The amount of the CO2 emission of China.",
+        "recommender": "E1",
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span>"
+    },
+    {
+        "id": 67,
+        "title": "A Bird’s-Eye View of How Protesters Have Flooded Hong Kong Streets",
+        "genre": "infographic",
+        "source": "NYT",
+        "year": "2019",
+        "link": "https://www.nytimes.com/interactive/2019/06/20/world/asia/hong-kong-protest-size.html",
+        "tag": "",
+        "topic": "Politics",
+        "description": "The visualization of the protesters in Hong Kong.",
+        "recommender": "E1",
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span>"
+    },
+    {
+        "id": 68,
+        "title": "CEO pay ratio",
+        "genre": "web",
+        "source": "Bloomberg",
+        "year": "2021",
+        "link": "https://www.bloomberg.com/graphics/ceo-pay-ratio/",
+        "tag": "",
+        "topic": "Economy",
+        "description": "A comparison between the salary of CEOs and ordinary people.",
+        "recommender": "E1",
+        "method": "<span class='badge badge_1'>big size</span>"
+    },
+    {
+        "id": 69,
+        "title": "2017: the safest skies record",
+        "genre": "infographic",
+        "source": "SCMP",
+        "year": "2018",
+        "link": "https://multimedia.scmp.com/news/world/article/safety-aviation-2017/index.html",
+        "tag": "",
+        "topic": "Traffic",
+        "description": "This project visualizes the accidents in sky in 2017.",
+        "recommender": "E1",
+        "method": "<span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span>"
+    },
+    {
+        "id": 70,
+        "title": "A view on despair",
+        "genre": "infographic",
+        "source": "",
+        "year": "2019",
+        "link": "https://www.studioterp.nl/a-view-on-despair-a-datavisualization-project-by-studio-terp/",
+        "tag": "",
+        "topic": "Health / Society",
+        "description": "An infographic that visualizes the suicide in the Netherland in 2017.",
+        "recommender": "E2",
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span>"
+    },
+    {
+        "id": 71,
+        "title": "The true death toll of COVID-19",
+        "genre": "web",
+        "source": "WHO",
+        "year": "2021",
+        "link": "https://www.who.int/data/stories/the-true-death-toll-of-covid-19-estimating-global-excess-mortality",
+        "tag": "covid",
+        "topic": "Health",
+        "description": "The eatimated global excess mortality in the world.",
+        "recommender": "E5",
+        "method": "<span class='badge badge_1'>dark background</span>"
     },
     {
         "id": 72,
-        "title": "O cálculo de uma tragédia",
+        "title": "John Hopkins COVID-19 Map",
         "genre": "web",
-        "source": "NEXO",
+        "source": "John Hopkins",
         "year": "2020",
-        "link": "https://www.nexojornal.com.br/especial/2020/08/08/100-mil-mortes-no-Brasil-o-c%C3%A1lculo-de-uma-trag%C3%A9dia",
+        "link": "https://coronavirus.jhu.edu/map.html",
         "tag": "covid",
         "topic": "Health",
-        "description": "brazil",
-        "recommender": "E9",
-        "method": ""
+        "description": "A dashboard of COVID-19 statistics. *whether it can be viewed as a data story is controversial.",
+        "recommender": "E1",
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span>"
     }
 ]
