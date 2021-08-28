@@ -503,7 +503,7 @@
         "topic": "Health",
         "description": "The eatimated global excess mortality in the world.",
         "recommender": "E5",
-        "method": ""
+        "method": "<span class='badge badge_1'>dark background</span>"
     },
     {
         "id": 40,
@@ -585,7 +585,7 @@
     },
     {
         "id": 46,
-        "title": "THE DOOMSDAY DATA VISUALIZATIONS (Bulletin of the Atomic Scientists)",
+        "title": "Bulletin of the Atomic Scientists",
         "genre": "infographic",
         "source": "Pentagram(Giorgia Lupi)",
         "year": "2021",
@@ -594,7 +594,7 @@
         "topic": "Society",
         "description": "A story that talks about the crisis for human beings, including the nuclear war, climate change, and disruptive technology.",
         "recommender": "E7",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>sharp/distorted shape</span>"
     },
     {
         "id": 47,
