@@ -23,7 +23,7 @@
 .Viceral_challenge .scrollSpy-btn-symbol,
 .Viceral_challenge .reminder-symbol,
 .Viceral_challenge .card-header {
-    background-color: #C5DFFC !important;
+    background-color: #b5b1dd !important;
 }
 
 .Viceral_challenge .front {
@@ -37,7 +37,7 @@
 .Powerful_messaging .scrollSpy-btn-symbol,
 .Powerful_messaging .reminder-symbol,
 .Powerful_messaging .card-header {
-    background-color: #FFEDAD !important;
+    background-color: #efcf8f !important;
 }
 
 .Powerful_messaging .front {
@@ -51,24 +51,10 @@
 .Individual_misery .scrollSpy-btn-symbol,
 .Individual_misery .reminder-symbol,
 .Individual_misery .card-header {
-    background-color: #E4D6FF !important;
+    background-color: #5ccee0 !important;
 }
 
 .Individual_misery .front {
-    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
-}
-
-.vns-Persistent_uncertainty,
-.Persistent_uncertainty .modal-header,
-.Persistent_uncertainty .modal-footer,
-.Persistent_uncertainty .mobile-nav-symbol,
-.Persistent_uncertainty .scrollSpy-btn-symbol,
-.Persistent_uncertainty .reminder-symbol,
-.Persistent_uncertainty .card-header {
-    background-color: #CDF4DF !important;
-}
-
-.Persistent_uncertainty .front {
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
@@ -79,10 +65,24 @@
 .Loss_of_control .scrollSpy-btn-symbol,
 .Loss_of_control .reminder-symbol,
 .Loss_of_control .card-header {
-    background-color: #F8D3C9 !important;
+    background-color: #a2dbbf !important;
 }
 
 .Loss_of_control .front {
+    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
+}
+
+.vns-Persistent_uncertainty,
+.Persistent_uncertainty .modal-header,
+.Persistent_uncertainty .modal-footer,
+.Persistent_uncertainty .mobile-nav-symbol,
+.Persistent_uncertainty .scrollSpy-btn-symbol,
+.Persistent_uncertainty .reminder-symbol,
+.Persistent_uncertainty .card-header {
+    background-color: #75a9cc !important;
+}
+
+.Persistent_uncertainty .front {
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
@@ -93,7 +93,7 @@
 .Failure .scrollSpy-btn-symbol,
 .Failure .reminder-symbol,
 .Failure .card-header {
-    background-color: #FCDDF2 !important;
+    background-color: #ddae97 !important;
 }
 
 .Failure .front {

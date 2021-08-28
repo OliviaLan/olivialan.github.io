@@ -7,115 +7,34 @@
         "link": "https://multimedia.scmp.com/culture/article/SCMP-printed-graphics-memory/lonelyGraphics/202004A256.html",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "How Covid-19 has been spread in Hong Kong.",
+        "description": "Where the COVID cases in Hong Kong came from.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "<span class='badge badge_1'>heavy use of red</span>",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": "<span class='badge badge_1'>sharp/distorted shape</span>"
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": "<span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>sharp/distorted shape</span>"
     },
     {
         "id": 2,
         "title": "[Stimuli - S2] On the Front Page, a Wall of Grief",
-        "genre": "magazine",
+        "genre": "web",
         "source": "New York Times",
         "year": "2021",
         "link": "https://www.nytimes.com/2021/02/21/insider/covid-500k-front-page.html, https://www.nytimes.com/interactive/2021/01/27/us/us-coronavirus-deaths-rate.html",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "A visualization that uses 500,000 dots to represent the individual people who died because of Covid-19, showing how fast the pandemic is crossing the US.",
+        "description": "Using 500,000 dots to represent trend of COVID-19 along a timeline.",
         "recommender": "E2",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "<span class='badge badge_3'>person-level visualization</span>",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "<span class='badge badge_5'>stretched layout</span>",
-        "tough task": "",
         "method": "<span class='badge badge_3'>person-level visualization</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 3,
         "title": "[Stimuli - S3] An Incalculable Loss",
-        "genre": "magazine",
+        "genre": "web",
         "source": "New York Times",
         "year": "2020",
         "link": "https://www.nytimes.com/interactive/2020/05/24/us/us-coronavirus-deaths-100000.html",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "A big list of the names of people who died in the Covid-19 pandemic.",
+        "description": "Introducing who are the 100,000 people who died from COVID-19.",
         "recommender": "E2",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "<span class='badge badge_2'>emotional wording</span>",
-        "concrete scale": "",
-        "detailed person behind data": "<span class='badge badge_3'>detailed person behind data</span>",
-        "immersive role-play game": "",
-        "person-level visualization": "<span class='badge badge_3'>person-level visualization</span>",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": "<span class='badge badge_4'>running timer/counter</span>"
-        },
-        "stretched layout": "<span class='badge badge_5'>stretched layout</span>",
-        "tough task": "",
         "method": "<span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>running timer/counter</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
@@ -127,35 +46,8 @@
         "link": "https://twitter.com/CarniDC/status/1356267830560366595",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "Using sound to encode the death toll provided by NYT.",
+        "description": "Using sound to encode the death toll based on Stimuli-S2.",
         "recommender": "E2",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": "<span class='badge badge_1'>shrill/deep/pressing music</span>"
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "<span class='badge badge_3'>person-level visualization</span>",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": "<span class='badge badge_1'>shrill/deep/pressing music</span><span class='badge badge_3'>person-level visualization</span>"
     },
     {
@@ -167,35 +59,8 @@
         "link": "https://www.vox.com/22252693/covid-19-deaths-us-who-died",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "Vox analyzed the mortality rate of Covid-19 in the past year by different genders, regions, and races.",
+        "description": "The mortality rate of COVID-19 by different genders, regions, and races.",
         "recommender": "E5",
-        "imagery with negative semantics": "<span class='badge badge_1'>imagery with negative semantics</span>",
-        "metaphor with negative semantics": "",
-        "dark background": "<span class='badge badge_1'>dark background</span>",
-        "heavy use of red": "",
-        "dense encoding": "<span class='badge badge_1'>dense encoding</span>",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>dense encoding</span>"
     },
     {
@@ -207,35 +72,8 @@
         "link": "https://www.washingtonpost.com/nation/interactive/2021/500000-covid-deaths-visualized/",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "Helping you understand how much is 500,000 from three different perspectives",
+        "description": "Explaining what does 500,000 death mean from three different perspectives.",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "<span class='badge badge_1'>dark background</span>",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "<span class='badge badge_2'>concrete scale</span>",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "<span class='badge badge_5'>stretched layout</span>",
-        "tough task": "",
         "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_2'>concrete scale</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
@@ -247,35 +85,8 @@
         "link": "https://www.buzzfeednews.com/article/peteraldhous/covid19-update-deaths-victims-america-half-million",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "A story that tells how serious the Covid-19 pandemic is in the US.",
+        "description": "The coronavirus exposed the rampant inequality in the US.",
         "recommender": "E5",
-        "imagery with negative semantics": "<span class='badge badge_1'>imagery with negative semantics</span>",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "<span class='badge badge_1'>heavy use of red</span>",
-        "dense encoding": "<span class='badge badge_1'>dense encoding</span>",
-        "big size": "<span class='badge badge_1'>big size</span>",
-        "sharp": {
-            "distorted shape": "<span class='badge badge_1'>sharp/distorted shape</span>"
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "<span class='badge badge_2'>emotional wording</span>",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": "<span class='badge badge_4'>running timer/counter</span>"
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense encoding</span><span class='badge badge_1'>big size</span><span class='badge badge_1'>sharp/distorted shape</span><span class='badge badge_4'>running timer/counter</span>"
     },
     {
@@ -287,35 +98,8 @@
         "link": "https://www.nytimes.com/interactive/2020/us/coronavirus-spread.html?smid=tw-nytimes&smtyp=cur",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "A data story that explains where the Covid-19 virus origined and how it spread to the world.",
+        "description": "A data story that explains how COVID-19 spread in the US.",
         "recommender": "E6",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "<span class='badge badge_1'>metaphor with negative semantics</span>",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "<span class='badge badge_1'>dense encoding</span>",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "<span class='badge badge_3'>detailed person behind data</span>",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dense encoding</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>immersive role-play game</span><span class='badge badge_4'>inevitable animation</span>"
     },
     {
@@ -327,35 +111,8 @@
         "link": "https://peopleofthepandemicgame.com/",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "A newsgame that mimics how your outdoor activities will influence the spread of the virus in the community.",
+        "description": "A newsgame that asks users to make decisions on their outdoor activities and see how the virus spreads.",
         "recommender": "E7",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "<span class='badge badge_2'>direct address</span>",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "<span class='badge badge_3'>immersive role-play game</span>",
-        "person-level visualization": "",
-        "inevitable animation": "<span class='badge badge_4'>inevitable animation</span>",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "<span class='badge badge_6'>tough task</span>",
         "method": "<span class='badge badge_2'>direct address</span><span class='badge badge_6'>tough task</span>"
     },
     {
@@ -367,35 +124,8 @@
         "link": "https://www.bbc.co.uk/news/resources/idt-7464500a-6368-4029-aa41-ab94e0ee09fb",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "A project that visualizes the spread and the death toll of Covid-19.",
+        "description": "Using animated flowers to show how COVID-19 cases increase over time.",
         "recommender": "E7",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "<span class='badge badge_1'>metaphor with negative semantics</span>",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "<span class='badge badge_1'>fade-out effect</span>",
-        "shrill": {
-            "deep": {
-                "pressing music": "<span class='badge badge_1'>shrill/deep/pressing music</span>"
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_1'>shrill/deep/pressing music</span><span class='badge badge_4'>inevitable animation</span>"
     },
     {
@@ -407,35 +137,8 @@
         "link": "https://graphics.reuters.com/HEALTH-CORONAVIRUS/DEATHS/xlbpgobgapq/index.html",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "xxx",
+        "description": "Showing more than 5,400 people are dying each day visually.",
         "recommender": "E9",
-        "imagery with negative semantics": "<span class='badge badge_1'>imagery with negative semantics</span>",
-        "metaphor with negative semantics": "",
-        "dark background": "<span class='badge badge_1'>dark background</span>",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "<span class='badge badge_3'>person-level visualization</span>",
-        "inevitable animation": "<span class='badge badge_4'>inevitable animation</span>",
-        "running timer": {
-            "counter": "<span class='badge badge_4'>running timer/counter</span>"
-        },
-        "stretched layout": "<span class='badge badge_5'>stretched layout</span>",
-        "tough task": "",
         "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>running timer/counter</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
@@ -447,35 +150,8 @@
         "link": "https://lifelines.periscopic.com/",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "This story calls for the attention to the need of psychological caring after the outbreak of Covid-19.",
+        "description": "This story calls for the attention to the need for mental health and addiction support after the outbreak of COVID-19.",
         "recommender": "E5",
-        "imagery with negative semantics": "<span class='badge badge_1'>imagery with negative semantics</span>",
-        "metaphor with negative semantics": "<span class='badge badge_1'>metaphor with negative semantics</span>",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "<span class='badge badge_1'>fade-out effect</span>",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "<span class='badge badge_2'>direct address</span>",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_2'>direct address</span>"
     },
     {
@@ -487,35 +163,8 @@
         "link": "https://piaui.folha.uol.com.br/lupa/epicentro/en/",
         "tag": "stimuli",
         "topic": "Health",
-        "description": "Imagine you live in Brazil and see how many of your neighbors have died",
+        "description": "Imagine you live in Brazil and see how many of your neighbors have died because of COVID-19.",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "<span class='badge badge_1'>dark background</span>",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "<span class='badge badge_2'>concrete scale</span>",
-        "detailed person behind data": "",
-        "immersive role-play game": "<span class='badge badge_3'>immersive role-play game</span>",
-        "person-level visualization": "<span class='badge badge_3'>person-level visualization</span>",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_2'>concrete scale</span><span class='badge badge_3'>immersive role-play game</span><span class='badge badge_3'>person-level visualization</span>"
     },
     {
@@ -529,33 +178,6 @@
         "topic": "Natural disaster",
         "description": "This project visualizes the death toll caused by a hurrican.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -569,33 +191,6 @@
         "topic": "Health / Gender",
         "description": "This work talks about the mothers who died in childbirth in the US and reported the stories of 16 mothers.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -609,33 +204,6 @@
         "topic": "Health",
         "description": "A dashboard of Covid-19 statistics.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -649,33 +217,6 @@
         "topic": "Traffic",
         "description": "This project visualizes the accidents in sky in 2017.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -689,33 +230,6 @@
         "topic": "Health",
         "description": "A project about the outbreak of Ebola in Africa.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -729,33 +243,6 @@
         "topic": "Health / Economy",
         "description": "The cost of health care by different countries and regions.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -769,33 +256,6 @@
         "topic": "Economy",
         "description": "The visualization of the jobless rate in the US.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -809,33 +269,6 @@
         "topic": "Politics",
         "description": "The visualization of the protesters in Hong Kong.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -849,33 +282,6 @@
         "topic": "Health",
         "description": "A visualization project that documents the dead people in the Covid-19 pandemic.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -889,33 +295,6 @@
         "topic": "Health",
         "description": "The Covid-19 epidemiologic investigation in China.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -929,33 +308,6 @@
         "topic": "Natural disaster",
         "description": "A project that visualizes the notable natural disasters in the world.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -969,33 +321,6 @@
         "topic": "Environment",
         "description": "The amount of the CO2 emission of China.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1009,33 +334,6 @@
         "topic": "Politics / Media",
         "description": "This project visualizes the emotions expressed by Trump's twitters.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1049,33 +347,6 @@
         "topic": "Economy",
         "description": "A comparison between the salary of CEOs and ordinary people.",
         "recommender": "E1",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1089,33 +360,6 @@
         "topic": "Society / Safety",
         "description": "A story that visualizes the gun shootings in the US and the gun death toll.",
         "recommender": "E2",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1129,33 +373,6 @@
         "topic": "Health",
         "description": "A visualization of the confired C0vid-19 cases and death in the world.",
         "recommender": "E2",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1169,33 +386,6 @@
         "topic": "Military",
         "description": "A stroy that visualizes the innocent Pakistan people who were attacked by drones.",
         "recommender": "E2",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1209,33 +399,6 @@
         "topic": "Military",
         "description": "An infographic that depicts the dead soldiers who sacrificed during the Iraq war.",
         "recommender": "E2",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1249,33 +412,6 @@
         "topic": "Health / Society",
         "description": "An infographic that visualizes the suicide in the Netherland in 2017.",
         "recommender": "E2",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1289,33 +425,6 @@
         "topic": "Society / Media",
         "description": "A visual analysis of the texts left by a melancholiac who has committed suicide.",
         "recommender": "E2",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1329,33 +438,6 @@
         "topic": "Society",
         "description": "A project that visualizes the aged population in Japan.",
         "recommender": "E3",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1369,33 +451,6 @@
         "topic": "Politics",
         "description": "A visual story of six asylum seekers' routes. They travelled from their hometown to Italy.",
         "recommender": "E4",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1409,33 +464,6 @@
         "topic": "Environment",
         "description": "A project that visualizes how plastic is sent to the ocean through various rivers in the world.",
         "recommender": "E4",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1449,33 +477,6 @@
         "topic": "Environment",
         "description": "A data physicalization. The author recycled the plastic she used and made them into sea turtles.",
         "recommender": "E4",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1489,33 +490,6 @@
         "topic": "Health",
         "description": "The psychological health of American people.",
         "recommender": "E4",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1529,33 +503,6 @@
         "topic": "Health",
         "description": "The eatimated global excess mortality in the world.",
         "recommender": "E5",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1569,33 +516,6 @@
         "topic": "Society / Military",
         "description": "A story that reveals the current state of the ex-servicemen in the US.",
         "recommender": "E5",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1609,33 +529,6 @@
         "topic": "Natural disaster",
         "description": "This story visualizes the biggest 38 megafired in western US.",
         "recommender": "E5",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1649,33 +542,6 @@
         "topic": "Environment",
         "description": "A story about ocean pollution. The authors split the depth of the ocean into segments and explain the pollution in each segment.",
         "recommender": "E5",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1689,33 +555,6 @@
         "topic": "Society / Gender",
         "description": "This story collected the posts about the #Metoo topic and analyzed these materials using data visualization.",
         "recommender": "E6",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1729,33 +568,6 @@
         "topic": "Environment",
         "description": "This project uses data physicalization to show how much plastic we eat every day.",
         "recommender": "E6",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1769,33 +581,6 @@
         "topic": "Education",
         "description": "A newsgame that asks users to make decisions for the education of their children and shows the consequences.",
         "recommender": "E7",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1809,33 +594,6 @@
         "topic": "Society",
         "description": "A story that talks about the crisis for human beings, including the nuclear war, climate change, and disruptive technology.",
         "recommender": "E7",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1849,33 +607,6 @@
         "topic": "Politics",
         "description": "The candidates in India elections. Women also account for a little part.",
         "recommender": "E7",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1889,33 +620,6 @@
         "topic": "Society / Safety",
         "description": "A story that talks about the violence used by the police officers and how it affects the community.",
         "recommender": "E8",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1929,33 +633,6 @@
         "topic": "Society / Safety",
         "description": "A story that investigates how the policemen in NJ used force and why.",
         "recommender": "E8",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -1969,33 +646,6 @@
         "topic": "Society / Safety",
         "description": "The statistics of the Stop & Frisk in New York show that black people are more frequently stopped by cops.",
         "recommender": "E8",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2009,33 +659,6 @@
         "topic": "Environment",
         "description": "A project that visualized the endangered birds, their current status, and how to protect them.",
         "recommender": "E8",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2049,33 +672,6 @@
         "topic": "Society / Safety",
         "description": "可视化了美国执法部门报告的枪支凶杀案数据，并利用世界卫生组织的美国死亡率数据估算这些受害者本来的潜在寿命与死亡原因。",
         "recommender": "Experimenter",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2089,33 +685,6 @@
         "topic": "Military",
         "description": "第二次世界大战的死亡人数，并将数字与历史上的其他战争相比较，包括最近冲突的趋势",
         "recommender": "Experimenter",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2129,33 +698,6 @@
         "topic": "Environment",
         "description": "可视化人类平均每天的用水量，以及这些用水是哪些地方产生的",
         "recommender": "Experimenter",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2169,33 +711,6 @@
         "topic": "Society",
         "description": "",
         "recommender": "Experimenter",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2209,33 +724,6 @@
         "topic": "Society",
         "description": "",
         "recommender": "Experimenter",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2249,33 +737,6 @@
         "topic": "Society / Safety",
         "description": "展示了白俄罗斯执法部门如何有系统地、完全不受惩罚地殴打抗议者；利用人物插画剪影代表 1,406 名受伤人员来可视化这些伤害以及受伤位置。",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2289,33 +750,6 @@
         "topic": "Environment",
         "description": "可视化一小时、一天、一个月、一年和过去十年中全球塑料瓶的高度，并将之与世界知名景点的高度作对比",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2329,33 +763,6 @@
         "topic": "Economy",
         "description": "",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2369,33 +776,6 @@
         "topic": "Society",
         "description": "可视化非洲地图，并让用户点击每个国家的地理位置",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2409,33 +789,6 @@
         "topic": "Health",
         "description": "HeartSaver将纽约市可以治疗心脏病的医院可视化于地图上，并让用户将心脏病患者安置在最合适的医院。",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2449,33 +802,6 @@
         "topic": "Economy",
         "description": "可视化1000美元、十亿美元和Jeff Bezos的财富量",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2489,33 +815,6 @@
         "topic": "Economy",
         "description": "",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2529,33 +828,6 @@
         "topic": "Economy",
         "description": "",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2569,33 +841,6 @@
         "topic": "Economy",
         "description": "",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2609,33 +854,6 @@
         "topic": "Traffic",
         "description": "",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2649,33 +867,6 @@
         "topic": "Society",
         "description": "draw the Berlin wall",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2689,33 +880,6 @@
         "topic": "Society",
         "description": "",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2729,33 +893,6 @@
         "topic": "Environment",
         "description": "",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2769,33 +906,6 @@
         "topic": "Society / Safety",
         "description": "",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2809,33 +919,6 @@
         "topic": "Environment",
         "description": "",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     },
     {
@@ -2849,33 +932,6 @@
         "topic": "Health",
         "description": "brazil",
         "recommender": "E9",
-        "imagery with negative semantics": "",
-        "metaphor with negative semantics": "",
-        "dark background": "",
-        "heavy use of red": "",
-        "dense encoding": "",
-        "big size": "",
-        "sharp": {
-            "distorted shape": ""
-        },
-        "fade-out effect": "",
-        "shrill": {
-            "deep": {
-                "pressing music": ""
-            }
-        },
-        "direct address": "",
-        "emotional wording": "",
-        "concrete scale": "",
-        "detailed person behind data": "",
-        "immersive role-play game": "",
-        "person-level visualization": "",
-        "inevitable animation": "",
-        "running timer": {
-            "counter": ""
-        },
-        "stretched layout": "",
-        "tough task": "",
         "method": ""
     }
 ]
