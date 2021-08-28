@@ -347,7 +347,7 @@
         "topic": "Economy",
         "description": "A comparison between the salary of CEOs and ordinary people.",
         "recommender": "E1",
-        "method": ""
+        "method": "<span class='badge badge_1'>big size</span>"
     },
     {
         "id": 28,
@@ -358,9 +358,9 @@
         "link": "https://www.washingtonpost.com/graphics/2018/national/mass-shootings-in-america/",
         "tag": "",
         "topic": "Society / Safety",
-        "description": "A story that visualizes the gun shootings in the US and the gun death toll.",
+        "description": "A story that visualizes the gun shootings in the US.",
         "recommender": "E2",
-        "method": ""
+        "method": "<span class='badge badge_1'>big size</span><span class='badge badge_2'>emotional wording</span><span class='badge badge_3'>detailed person behind data</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 29,
@@ -371,9 +371,9 @@
         "link": "http://h5.thepaper.cn/html/zt/2020/09/ybw/index.html",
         "tag": "covid",
         "topic": "Health",
-        "description": "A visualization of the confired C0vid-19 cases and death in the world.",
+        "description": "A visualization of the confired COVID-19 cases and death in the world.",
         "recommender": "E2",
-        "method": ""
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_4'>running timer/counter</span>"
     },
     {
         "id": 30,
@@ -384,9 +384,9 @@
         "link": "http://drones.pitchinteractive.com/",
         "tag": "",
         "topic": "Military",
-        "description": "A stroy that visualizes the innocent Pakistan people who were attacked by drones.",
+        "description": "An animated stroy that visualizes the innocent Pakistan people who were attacked by drones.",
         "recommender": "E2",
-        "method": ""
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_1'>dark background</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_4'>inevitable animation</span><span class='badge badge_4'>running timer/counter</span>"
     },
     {
         "id": 31,
@@ -412,7 +412,7 @@
         "topic": "Health / Society",
         "description": "An infographic that visualizes the suicide in the Netherland in 2017.",
         "recommender": "E2",
-        "method": ""
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span>"
     },
     {
         "id": 33,
@@ -490,7 +490,7 @@
         "topic": "Health",
         "description": "The psychological health of American people.",
         "recommender": "E4",
-        "method": ""
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>sharp/distorted shape</span>"
     },
     {
         "id": 39,
@@ -581,7 +581,7 @@
         "topic": "Education",
         "description": "A newsgame that asks users to make decisions for the education of their children and shows the consequences.",
         "recommender": "E7",
-        "method": ""
+        "method": "<span class='badge badge_3'>immersive role-play game</span>"
     },
     {
         "id": 46,
@@ -605,9 +605,9 @@
         "link": "https://graphics.reuters.com/INDIA-ELECTION-CRIMINAL-CANDIDATES/0100925031T/index.html",
         "tag": "",
         "topic": "Politics",
-        "description": "The candidates in India elections. Women also account for a little part.",
+        "description": "The candidates in India elections. Women only account for a little part.",
         "recommender": "E7",
-        "method": ""
+        "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>dense encoding</span><span class='badge badge_3'>person-level visualization</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 48,
@@ -800,9 +800,9 @@
         "link": "https://mkorostoff.github.io/1-pixel-wealth/",
         "tag": "",
         "topic": "Economy",
-        "description": "可视化1000美元、十亿美元和Jeff Bezos的财富量",
+        "description": "Understanding how much wealth Jeff Bezos owns.",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_2'>concrete scale</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 63,
@@ -826,9 +826,9 @@
         "link": "https://interaktiv.morgenpost.de/nationalmannschaft-gehalt/",
         "tag": "",
         "topic": "Economy",
-        "description": "",
+        "description": "Comparing your income with that of the famous soccer stars.",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_2'>concrete scale</span>"
     },
     {
         "id": 65,
@@ -839,9 +839,9 @@
         "link": "https://neal.fun/printing-money/",
         "tag": "",
         "topic": "Economy",
-        "description": "",
+        "description": "Comparing the income of laypeople with that of the billionnaires.",
         "recommender": "E9",
-        "method": ""
+        "method": "<span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_2'>concrete scale</span>"
     },
     {
         "id": 66,
