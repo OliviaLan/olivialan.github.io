@@ -978,7 +978,7 @@ footer .footer-text {
     width: 100%;
     padding: 0;
     margin: 0;
-    position: sticky;
+    /* position: sticky; */
     top: -1px;
     z-index: 500;
     opacity: 1;

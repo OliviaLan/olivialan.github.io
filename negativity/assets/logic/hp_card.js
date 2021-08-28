@@ -387,81 +387,81 @@ Homepage_Card.card_body_front_titleArray = ["HOW"];
 //卡片背面需要的字段
 Homepage_Card.caption_keyArr = ["Quote1", "Quote2", "Quote3"];
 
-Homepage_Card.prototype._bindEvents = function() {
+// Homepage_Card.prototype._bindEvents = function() {
 
-    let that = this;
-    const this_card_node = this._deck_single_node;
-    const card_inner_node = this_card_node.querySelector(".card-inner");
-    const front_trans_button = card_inner_node.querySelector(".front .card-footer-bottom");
-    const back_trans_button = card_inner_node.querySelector(".back .card-footer-bottom");
-    const front_img = card_inner_node.querySelector(".front .card-frontImg");
-    // const front_preview_img = this_card_node.querySelector("img.front-preview");
-    //背面的图片，以及放大图片的效果
-    // const back_img_box = this_card_node.querySelector(".card-imgBox");
-    // const back_img_cover = back_img_box.querySelector(".img-cover");
-    // const back_gif_zooming = back_img_cover.querySelector(".img-cover-overlay");
-    const modal_title_node = document.querySelector(".modal-title");
+//     let that = this;
+//     const this_card_node = this._deck_single_node;
+//     const card_inner_node = this_card_node.querySelector(".card-inner");
+//     const front_trans_button = card_inner_node.querySelector(".front .card-footer-bottom");
+//     const back_trans_button = card_inner_node.querySelector(".back .card-footer-bottom");
+//     const front_img = card_inner_node.querySelector(".front .card-frontImg");
+//     // const front_preview_img = this_card_node.querySelector("img.front-preview");
+//     //背面的图片，以及放大图片的效果
+//     // const back_img_box = this_card_node.querySelector(".card-imgBox");
+//     // const back_img_cover = back_img_box.querySelector(".img-cover");
+//     // const back_gif_zooming = back_img_cover.querySelector(".img-cover-overlay");
+//     const modal_title_node = document.querySelector(".modal-title");
 
-    // card footer button
-    front_trans_button.addEventListener("click", () => {
-        if (!card_inner_node.classList.contains("turned-over")) {
-            card_inner_node.classList.add("turned-over");
-        }
-    });
-    back_trans_button.addEventListener("click", () => {
-        if (card_inner_node.classList.contains("turned-over")) {
-            card_inner_node.classList.remove("turned-over");
-        }
-    });
+//     // card footer button
+//     front_trans_button.addEventListener("click", () => {
+//         if (!card_inner_node.classList.contains("turned-over")) {
+//             card_inner_node.classList.add("turned-over");
+//         }
+//     });
+//     back_trans_button.addEventListener("click", () => {
+//         if (card_inner_node.classList.contains("turned-over")) {
+//             card_inner_node.classList.remove("turned-over");
+//         }
+//     });
 
-    // card footer URL
-    $(card_inner_node.querySelector(".card-footer a")).tooltip({ title: "link to the original work" });
+//     // card footer URL
+//     $(card_inner_node.querySelector(".card-footer a")).tooltip({ title: "link to the original work" });
 
-    // front gif static preview
-    front_img.addEventListener("mouseover", () => {
-        front_img.querySelector("img.front-gif").style.visibility = "none";
-        $(front_img).find("img.front-preview").fadeTo("fast", 0);
-    });
-    front_img.addEventListener("mouseout", () => {
-        front_img.querySelector("img.front-gif").style.visibility = "block";
-        $(front_img).find("img.front-preview").fadeTo("fast", 1);
-    });
+//     // front gif static preview
+//     front_img.addEventListener("mouseover", () => {
+//         front_img.querySelector("img.front-gif").style.visibility = "none";
+//         $(front_img).find("img.front-preview").fadeTo("fast", 0);
+//     });
+//     front_img.addEventListener("mouseout", () => {
+//         front_img.querySelector("img.front-gif").style.visibility = "block";
+//         $(front_img).find("img.front-preview").fadeTo("fast", 1);
+//     });
 
-    //背面gif的预览和放大功能
-    // back gif zooming in modal window
-    // $(back_img_box).hover(
-    //     function() {
-    //         $(back_img_cover).fadeTo("fast", 1);
-    //     },
-    //     function() {
-    //         $(back_img_cover).fadeTo("fast", 0);
-    //     }
-    // );
-    // modal window
-    // $(back_gif_zooming).tooltip({ title: "zoom in" });
-    // back_gif_zooming.addEventListener("click", () => {
-    //     $('#zooming-modal').modal({
-    //         backdrop: true,
-    //         keyboard: false,
-    //         focus: true,
-    //         show: true
-    //     });
+//     //背面gif的预览和放大功能
+//     // back gif zooming in modal window
+//     // $(back_img_box).hover(
+//     //     function() {
+//     //         $(back_img_cover).fadeTo("fast", 1);
+//     //     },
+//     //     function() {
+//     //         $(back_img_cover).fadeTo("fast", 0);
+//     //     }
+//     // );
+//     // modal window
+//     // $(back_gif_zooming).tooltip({ title: "zoom in" });
+//     // back_gif_zooming.addEventListener("click", () => {
+//     //     $('#zooming-modal').modal({
+//     //         backdrop: true,
+//     //         keyboard: false,
+//     //         focus: true,
+//     //         show: true
+//     //     });
 
-    //     document.querySelector(".modal-body > img").setAttribute("src", `./assets/back_gif_s/${this._back_gif_name}`);
-    //     document.querySelector(".modal-content").classList.add(this.parameters["VNS_tag"]);
-    //     modal_title_node.innerText = this.parameters["eg_title"];
-    //     modal_title_node.setAttribute("href", this.parameters["eg_url"]);
-    // });
+//     //     document.querySelector(".modal-body > img").setAttribute("src", `./assets/back_gif_s/${this._back_gif_name}`);
+//     //     document.querySelector(".modal-content").classList.add(this.parameters["VNS_tag"]);
+//     //     modal_title_node.innerText = this.parameters["eg_title"];
+//     //     modal_title_node.setAttribute("href", this.parameters["eg_url"]);
+//     // });
 
 
-    // $('#zooming-modal').on('show.bs.modal', function() {
-    //     let img = new Image();
-    //     img.src = `./assets/back_gif_s/${that._back_gif_name}`;
-    //     document.querySelector(".modal-title").innerHTML = that.parameters["card_title"];
-    //     $(img).on("load", function(){$(".modal-body > img").replaceWith(img);});
-    // });
+//     // $('#zooming-modal').on('show.bs.modal', function() {
+//     //     let img = new Image();
+//     //     img.src = `./assets/back_gif_s/${that._back_gif_name}`;
+//     //     document.querySelector(".modal-title").innerHTML = that.parameters["card_title"];
+//     //     $(img).on("load", function(){$(".modal-body > img").replaceWith(img);});
+//     // });
 
-}
+// }
 
 Homepage_Card.prototype.appendTo = function(parentNode) {
     if (!(parentNode instanceof HTMLElement)) {
@@ -470,7 +470,7 @@ Homepage_Card.prototype.appendTo = function(parentNode) {
     }
 
     this._deck_single_node = this._createCard();
-    this._bindEvents();
+    // this._bindEvents();
 
     parentNode.appendChild(this._deck_single_node);
     return true;
@@ -514,48 +514,48 @@ class Homepage_Reminder {
     }
 }
 
-Homepage_Reminder.prototype._bindEvents = function() {
-    let that = this;
-    // scroll
-    const CARD_DISPLAY_NODE = document.querySelector("#card-display-ex");
-    // const reminder_bg_node = reminder_node.querySelector(".reminder-bg");
+// Homepage_Reminder.prototype._bindEvents = function() {
+//     let that = this;
+//     // scroll
+//     const CARD_DISPLAY_NODE = document.querySelector("#card-display-ex");
+//     // const reminder_bg_node = reminder_node.querySelector(".reminder-bg");
 
 
-    const event_callback = function() {
-        if (that._reminder_node) {
-            const reminder_node = that._reminder_node;
-            // console.log(reminder_node);
+//     const event_callback = function() {
+//         if (that._reminder_node) {
+//             const reminder_node = that._reminder_node;
+//             // console.log(reminder_node);
 
-            if (reminder_node.nextElementSibling) {
-                const card_deck_node = reminder_node.nextElementSibling;
+//             if (reminder_node.nextElementSibling) {
+//                 const card_deck_node = reminder_node.nextElementSibling;
 
-                let distance_to_top = card_deck_node.getBoundingClientRect().top - reminder_node.getBoundingClientRect().bottom;
-                // console.log(distance_to_top);
-                if (distance_to_top < -3 && !reminder_node.classList.contains("active-sticky")) {
-                    reminder_node.classList.add("active-sticky");
-                } else if (distance_to_top >= -3 && reminder_node.classList.contains("active-sticky")) {
-                    reminder_node.classList.remove("active-sticky");
-                }
+//                 let distance_to_top = card_deck_node.getBoundingClientRect().top - reminder_node.getBoundingClientRect().bottom;
+//                 // console.log(distance_to_top);
+//                 if (distance_to_top < -3 && !reminder_node.classList.contains("active-sticky")) {
+//                     reminder_node.classList.add("active-sticky");
+//                 } else if (distance_to_top >= -3 && reminder_node.classList.contains("active-sticky")) {
+//                     reminder_node.classList.remove("active-sticky");
+//                 }
 
-                // if(reminder_node.nextElementSibling && reminder_node.querySelector(".reminder-title").innerHTML == "Emphasis (15)" ) {
-                let distance_to_bottom = card_deck_node.getBoundingClientRect().bottom - reminder_node.getBoundingClientRect().top;
-                // if ((distance_to_bottom < CARD_DISPLAY_NODE.offsetHeight * 0.5) && !reminder_node.classList.contains("hidden-sticky")) {
-                if ((distance_to_bottom < CARD_DISPLAY_NODE.parentElement.offsetHeight * 0.5) && !reminder_node.classList.contains("hidden-sticky")) {
-                    reminder_node.classList.add("hidden-sticky");
-                    // console.log(distance_to_bottom)
-                    // } else if ((distance_to_bottom >= CARD_DISPLAY_NODE.offsetHeight * 0.5) && reminder_node.classList.contains("hidden-sticky")) {
-                } else if ((distance_to_bottom >= CARD_DISPLAY_NODE.parentElement.offsetHeight * 0.5) && reminder_node.classList.contains("hidden-sticky")) {
-                    reminder_node.classList.remove("hidden-sticky");
-                }
-            }
-        }
+//                 // if(reminder_node.nextElementSibling && reminder_node.querySelector(".reminder-title").innerHTML == "Emphasis (15)" ) {
+//                 let distance_to_bottom = card_deck_node.getBoundingClientRect().bottom - reminder_node.getBoundingClientRect().top;
+//                 // if ((distance_to_bottom < CARD_DISPLAY_NODE.offsetHeight * 0.5) && !reminder_node.classList.contains("hidden-sticky")) {
+//                 if ((distance_to_bottom < CARD_DISPLAY_NODE.parentElement.offsetHeight * 0.5) && !reminder_node.classList.contains("hidden-sticky")) {
+//                     reminder_node.classList.add("hidden-sticky");
+//                     // console.log(distance_to_bottom)
+//                     // } else if ((distance_to_bottom >= CARD_DISPLAY_NODE.offsetHeight * 0.5) && reminder_node.classList.contains("hidden-sticky")) {
+//                 } else if ((distance_to_bottom >= CARD_DISPLAY_NODE.parentElement.offsetHeight * 0.5) && reminder_node.classList.contains("hidden-sticky")) {
+//                     reminder_node.classList.remove("hidden-sticky");
+//                 }
+//             }
+//         }
 
-    }
+//     }
 
-    event_callback();
-    // CARD_DISPLAY_NODE.addEventListener("scroll", event_callback);
-    CARD_DISPLAY_NODE.parentElement.addEventListener("scroll", event_callback);
-}
+//     event_callback();
+//     // CARD_DISPLAY_NODE.addEventListener("scroll", event_callback);
+//     CARD_DISPLAY_NODE.parentElement.addEventListener("scroll", event_callback);
+// }
 
 Homepage_Reminder.prototype.appendTo = function(parentNode, nextNode, methodToReminderTitle) {
     if (!(parentNode instanceof HTMLElement) || !(nextNode instanceof HTMLElement)) {
@@ -564,7 +564,7 @@ Homepage_Reminder.prototype.appendTo = function(parentNode, nextNode, methodToRe
     }
 
     this._reminder_node = this._createReminder(methodToReminderTitle);
-    this._bindEvents();
+    // this._bindEvents();
 
     parentNode.insertBefore(this._reminder_node, nextNode);
     return true;
