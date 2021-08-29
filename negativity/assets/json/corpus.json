@@ -436,7 +436,7 @@
         "link": "https://graphics.reuters.com/ENVIRONMENT-PLASTIC/0100B4TF2MQ/index.html",
         "tag": "",
         "topic": "Environment",
-        "description": "This project uses data physicalization to show how much plastic we eat every day.",
+        "description": "Using data physicalization to show how much plastic we eat every day.",
         "recommender": "E6",
         "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_2'>concrete scale</span>"
     },
@@ -748,7 +748,7 @@
         "link": "https://www.theguardian.com/news/datablog/2021/apr/25/police-killings-statistics-derek-chauvin?utm_source=dlvr.it&utm_medium=twitter",
         "tag": "",
         "topic": "Society / Safety",
-        "description": "",
+        "description": "Statistics on consequences for police officers who killed people.",
         "recommender": "E9",
         "method": "<span class='badge badge_5'>stretched layout</span>"
     },
@@ -761,7 +761,7 @@
         "link": "http://fingfx.thomsonreuters.com/gfx/rngs/OIL-SPILLS/010060SL1GQ/index.html",
         "tag": "",
         "topic": "Environment",
-        "description": "",
+        "description": "The sinking of the tanker Sanchi was the worst oil shipping disaster in decades.",
         "recommender": "E9",
         "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_4'>inevitable animation</span>"
     },
@@ -774,7 +774,7 @@
         "link": "https://graphics.reuters.com/AUSTRALIA-BUSHFIRES-SMOK/0100B4W52R7/index.html",
         "tag": "",
         "topic": "Environment",
-        "description": "",
+        "description": "How Australia's bushfire smoke spread and influenced air quality.",
         "recommender": "E9",
         "method": "<span class='badge badge_1'>imagery with negative semantics</span><span class='badge badge_1'>metaphor with negative semantics</span><span class='badge badge_4'>inevitable animation</span>"
     },
@@ -865,7 +865,7 @@
         "link": "https://www.nytimes.com/interactive/2019/06/20/world/asia/hong-kong-protest-size.html",
         "tag": "",
         "topic": "Politics",
-        "description": "The visualization of the protesters in Hong Kong.",
+        "description": "Rebuilding the scene of the protest in Hong Kong.",
         "recommender": "E1",
         "method": "<span class='badge badge_1'>imagery with negative semantics</span>"
     },
@@ -923,9 +923,9 @@
     },
     {
         "id": 72,
-        "title": "John Hopkins COVID-19 Map",
+        "title": "Johns Hopkins COVID-19 Map",
         "genre": "web",
-        "source": "John Hopkins",
+        "source": "Johns Hopkins",
         "year": "2020",
         "link": "https://coronavirus.jhu.edu/map.html",
         "tag": "covid",
