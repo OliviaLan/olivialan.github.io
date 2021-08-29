@@ -79,7 +79,7 @@
 .Persistent_uncertainty .scrollSpy-btn-symbol,
 .Persistent_uncertainty .reminder-symbol,
 .Persistent_uncertainty .card-header {
-    background-color: #92b9d3 !important;
+    background-color: #d6b9aa !important;
 }
 
 .Persistent_uncertainty .front {
@@ -93,7 +93,7 @@
 .Failure .scrollSpy-btn-symbol,
 .Failure .reminder-symbol,
 .Failure .card-header {
-    background-color: #d6b9aa !important;
+    background-color: #92b9d3 !important;
 }
 
 .Failure .front {
