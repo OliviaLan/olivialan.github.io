@@ -493,10 +493,9 @@ class Homepage_Reminder {
         let reminder_head_node = document.createElement("div");
         let reminder_desc_node = document.createElement("div");
         let reminder_symbol_html = `<span class="reminder-symbol"></span>`;
-        let reminder_title_html = `<span class="reminder-title">${methodToReminderTitle(this._VNS_tag)}&nbsp;</span>
+        let reminder_title_html = `<span class="reminder-title">${methodToReminderTitle(this._VNS_tag).split('_').join(' ')}&nbsp;</span>
             <span class='reminder-sum'>(${this._VNS_num})</span>
             <span class='reminder-sum-s'>SUM: ${this._VNS_num}</span>`;
-
         reminder_node.classList.add("display-reminder");
         reminder_bg_node.classList.add("reminder-bg");
         reminder_content_node.classList.add("reminder-content");

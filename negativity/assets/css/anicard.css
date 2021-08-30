@@ -1728,7 +1728,7 @@ footer .footer-text {
 
 .story-deck .story-card-body {
     padding: 1.75rem 1.00rem 1.75rem;
-    word-break: break-all;
+    /* word-break: break-all; */
     /* overflow: hidden; */
     /* text-overflow: ellipsis; */
     /* white-space: nowrap; */
