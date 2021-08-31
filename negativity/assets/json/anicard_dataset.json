@@ -39,7 +39,7 @@
         "effective_2": "Sad. The music sounds like a death knell.",
         "effective_3": "The music has a deep note, which easily draws you into a low spirit.",
         "ineffective_1": "I think the music can be more frightening. It is a normal sound for me now.",
-        "ineffective_2": "Using music to present data is so interesting so I was thinking about how they made it.",
+        "ineffective_2": "Using music to present data is so interesting. I was thinking about how they made it.",
         "ineffective_3": "The music has made it easier for me to perceive the data. But I didn't feel emotions."
     },
     {
@@ -79,12 +79,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "57%",
-        "effective_1": "",
-        "effective_2": "",
-        "effective_3": "",
-        "ineffective_1": "",
-        "ineffective_2": "",
-        "ineffective_3": ""
+        "effective_1": "The grey background gives me a strong sense of stress.",
+        "effective_2": "Black delivers a heavy-hearted feeling. It immediately tells you this article is negative.",
+        "effective_3": "Dark blue itself looks sad and depressed.",
+        "ineffective_1": "Black makes me feel calm.",
+        "ineffective_2": "I think black is comfortable for my eyes.",
+        "ineffective_3": "It's common to see black pages. Black is beautiful and cool."
     },
     {
         "card_id": 5,
@@ -101,12 +101,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "53%",
-        "effective_1": "",
-        "effective_2": "",
-        "effective_3": "",
-        "ineffective_1": "",
-        "ineffective_2": "",
-        "ineffective_3": ""
+        "effective_1": "So much red makes me feel really anxious.",
+        "effective_2": "Red is the color of blood and death, so this design scares me.",
+        "effective_3": "This page is full of red. It alarms me, like telling me something bad is going to happen.",
+        "ineffective_1": "It is a good color for emphasis.",
+        "ineffective_2": "Too much red. Too bright for my eyes. I don't like this color.",
+        "ineffective_3": "I think it's same to change red into any other colors."
     },
     {
         "card_id": 6,
@@ -170,9 +170,9 @@
         "effective_1": "",
         "effective_2": "",
         "effective_3": "",
-        "ineffective_1": "",
-        "ineffective_2": "",
-        "ineffective_3": ""
+        "ineffective_1": "I don't understanding the meaning of this effect. What is this for?",
+        "ineffective_2": "Maybe they use it just for beauty?",
+        "ineffective_3": "Good to have it, but did not elicit any emotion from me."
     },
     {
         "card_id": 9,
@@ -192,9 +192,9 @@
         "effective_1": "",
         "effective_2": "",
         "effective_3": "",
-        "ineffective_1": "",
-        "ineffective_2": "",
-        "ineffective_3": ""
+        "ineffective_1": "Why they designed the shape in this way? I didn't get what they wanted to communicate.",
+        "ineffective_2": "I was intrigued by this shape in the beginning, but found it is meaningless in the end.",
+        "ineffective_3": "The twisted bars are funny to look at."
     },
     {
         "card_id": 10,
@@ -214,7 +214,7 @@
         "effective_1": "",
         "effective_2": "",
         "effective_3": "",
-        "ineffective_1": "",
+        "ineffective_1": "I don't think it is professional to use emotional expressions.",
         "ineffective_2": "",
         "ineffective_3": ""
     },
@@ -236,7 +236,7 @@
         "effective_1": "",
         "effective_2": "",
         "effective_3": "",
-        "ineffective_1": "",
+        "ineffective_1": "I am not familiar with this scale, so it has little impact on me.",
         "ineffective_2": "",
         "ineffective_3": ""
     },
@@ -258,7 +258,7 @@
         "effective_1": "",
         "effective_2": "",
         "effective_3": "",
-        "ineffective_1": "",
+        "ineffective_1": "This address is not persuasive for me.",
         "ineffective_2": "",
         "ineffective_3": ""
     },
@@ -302,9 +302,9 @@
         "effective_1": "",
         "effective_2": "",
         "effective_3": "",
-        "ineffective_1": "",
-        "ineffective_2": "",
-        "ineffective_3": ""
+        "ineffective_1": "It was so fun to play as a character that I almost forgot the tragedy behind the story.",
+        "ineffective_2": "Maybe the game settings are too crude? I did not really believe in the character.",
+        "ineffective_3": "I did not put myself into the settings. I just played it as a game."
     },
     {
         "card_id": 15,
