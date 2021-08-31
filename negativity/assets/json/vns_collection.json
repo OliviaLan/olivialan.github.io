@@ -14,7 +14,7 @@
     },
     {
         "VNS_id": 2,
-        "VNS_tag": "Individual_misery",
+        "VNS_tag": "Character_attachment",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
         "VNS_num": 10
@@ -35,7 +35,7 @@
     },
     {
         "VNS_id": 5,
-        "VNS_tag": "Failure",
+        "VNS_tag": "Obstacles_and_failure",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "intro",
         "VNS_num": 1

@@ -44,17 +44,17 @@
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
-.vns-Individual_misery,
-.Individual_misery .modal-header,
-.Individual_misery .modal-footer,
-.Individual_misery .mobile-nav-symbol,
-.Individual_misery .scrollSpy-btn-symbol,
-.Individual_misery .reminder-symbol,
-.Individual_misery .card-header {
+.vns-Character_attachment,
+.Character_attachment .modal-header,
+.Character_attachment .modal-footer,
+.Character_attachment .mobile-nav-symbol,
+.Character_attachment .scrollSpy-btn-symbol,
+.Character_attachment .reminder-symbol,
+.Character_attachment .card-header {
     background-color: #89cfdb !important;
 }
 
-.Individual_misery .front {
+.Character_attachment .front {
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
@@ -86,17 +86,17 @@
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
-.vns-Failure,
-.Failure .modal-header,
-.Failure .modal-footer,
-.Failure .mobile-nav-symbol,
-.Failure .scrollSpy-btn-symbol,
-.Failure .reminder-symbol,
-.Failure .card-header {
+.vns-Obstacles_and_failure,
+.Obstacles_and_failure .modal-header,
+.Obstacles_and_failure .modal-footer,
+.Obstacles_and_failure .mobile-nav-symbol,
+.Obstacles_and_failure .scrollSpy-btn-symbol,
+.Obstacles_and_failure .reminder-symbol,
+.Obstacles_and_failure .card-header {
     background-color: #92b9d3 !important;
 }
 
-.Failure .front {
+.Obstacles_and_failure .front {
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
@@ -715,10 +715,11 @@ footer .footer-text {
     font-weight: 600;
 }
 
-.card-deck .card-body .card-body-text+.card-body-subtitle,
+
+/* .card-deck .card-body .card-body-text+.card-body-subtitle,
 .card-deck .card-body-caption {
     margin-top: 1rem;
-}
+} */
 
 .card-deck .card-body-text {
     font-size: 0.75rem;
@@ -928,9 +929,10 @@ footer .footer-text {
     transform: rotateY(-180deg);
 }
 
-.card-inner .back .card-body-subtitle {
+
+/* .card-inner .back .card-body-subtitle {
     margin-bottom: 1rem;
-}
+} */
 
 .card-inner.turned-over .front {
     transform: rotateY(180deg);

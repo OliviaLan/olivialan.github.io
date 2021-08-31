@@ -13,12 +13,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "73%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "There is a patient lying on the bed. I can feel his pain.",
+        "effective_2": "This photo made me get goose bumps. It showed me the real impact of the disease.",
+        "effective_3": "I was calm when reading the death toll, but I become really sad when I see these coffins.",
+        "ineffective_1": "Confused. Who is the guy in this picture?",
+        "ineffective_2": "It's OK for me to see a graveyard because everyday there are people dying.",
+        "ineffective_3": "Good picture, but the scene it illustrates is a bit distant from me."
     },
     {
         "card_id": 2,
@@ -35,12 +35,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "71%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "I felt tension when the beat became more and more intense.",
+        "effective_2": "Sad. The music sounds like a death knell.",
+        "effective_3": "The music has a deep note, which easily draws you into a low spirit.",
+        "ineffective_1": "I think the music can be more frightening. It is a normal sound for me now.",
+        "ineffective_2": "Using music to present data is so interesting so I was thinking about how they made it.",
+        "ineffective_3": "The music has made it easier for me to perceive the data. But I didn't feel emotions."
     },
     {
         "card_id": 3,
@@ -57,12 +57,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "58%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "I was totally shocked by the full-screen text and picture in the beginning. Too many death!",
+        "effective_2": "The huge text made me worry about the seriousness of this issue.",
+        "effective_3": "The exaggerated sizing really overwhelmed my eyes and gave me a sense of stress.",
+        "ineffective_1": "Attention-grabbing, but not emotional.",
+        "ineffective_2": "It's normal to see big texts on the web.",
+        "ineffective_3": "I don't like being pushed to read a big text."
     },
     {
         "card_id": 4,
@@ -79,12 +79,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "57%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 5,
@@ -101,12 +101,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "53%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 6,
@@ -123,12 +123,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "42%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 7,
@@ -145,12 +145,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "27%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 8,
@@ -167,12 +167,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "23%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 9,
@@ -189,12 +189,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "20%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 10,
@@ -211,12 +211,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "87%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 11,
@@ -233,12 +233,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "70%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 12,
@@ -255,17 +255,17 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "62%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 13,
         "card_title": "Detailed human behind data",
-        "VNS_tag": "Individual_misery",
+        "VNS_tag": "Character_attachment",
         "EL_tag": "Narratives, Narratives, Pie chart",
         "EL_tag1": "Narratives",
         "EL_tag2": "Narratives",
@@ -277,17 +277,17 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "100%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 14,
         "card_title": "Immersive role-play game",
-        "VNS_tag": "Individual_misery",
+        "VNS_tag": "Character_attachment",
         "EL_tag": "Interaction, Interaction, Pie chart",
         "EL_tag1": "Interaction",
         "EL_tag2": "Interaction",
@@ -299,17 +299,17 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "88%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 15,
-        "card_title": "Unit visualization",
-        "VNS_tag": "Individual_misery",
+        "card_title": "Person-level visualization",
+        "VNS_tag": "Character_attachment",
         "EL_tag": "Imagery, Imagery, Pie chart",
         "EL_tag1": "Imagery",
         "EL_tag2": "Imagery",
@@ -321,12 +321,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "63%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 16,
@@ -343,12 +343,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "75%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 17,
@@ -365,12 +365,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "70%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 18,
@@ -387,17 +387,17 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "47%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "",
+        "ineffective_2": "",
+        "ineffective_3": ""
     },
     {
         "card_id": 19,
         "card_title": "Tough task",
-        "VNS_tag": "Failure",
+        "VNS_tag": "Obstacles_and_failure",
         "EL_tag": "Interaction, Interaction, Pie chart",
         "EL_tag1": "Interaction",
         "EL_tag2": "Interaction",
@@ -409,11 +409,11 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "100%",
-        "effective_1": "Real people striks you.",
-        "effective_2": "What's happening in real life is the most emotional.",
-        "effective_3": "The photos make me imagine the scene immadiately. This can hardly be done by numbers.",
-        "ineffective_1": "I don't know who are these guys.",
-        "ineffective_2": "It's OK for me to see the graves because everyday there are people dying.",
-        "ineffective_3": "Good picture that depicts the tradegy well, but not that emotional for me."
+        "effective_1": "I was very frustrated when I found I did not play well.",
+        "effective_2": "I wanted to win the game and achieve my goals, so I felt angry and a little bit annoyed when I actually failled.",
+        "effective_3": "I got really nervous when the epidemic could not be controlled.",
+        "ineffective_1": "-",
+        "ineffective_2": "-",
+        "ineffective_3": "-"
     }
 ]
