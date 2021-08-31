@@ -324,9 +324,9 @@
         "effective_1": "",
         "effective_2": "",
         "effective_3": "",
-        "ineffective_1": "",
-        "ineffective_2": "",
-        "ineffective_3": ""
+        "ineffective_1": "Those icons are not real people.",
+        "ineffective_2": "I can't imagine who are the people behind the dots. They are still cold numbers.",
+        "ineffective_3": "It just shows the data clearly."
     },
     {
         "card_id": 16,
@@ -346,9 +346,9 @@
         "effective_1": "",
         "effective_2": "",
         "effective_3": "",
-        "ineffective_1": "",
-        "ineffective_2": "",
-        "ineffective_3": ""
+        "ineffective_1": "The sticky clock keeps attracting my attention so that I can't focus on reading.",
+        "ineffective_2": "I think this design is a liitle bit rude. I couldn't control anything.",
+        "ineffective_3": "Curious about the design. I have never seen such design before."
     },
     {
         "card_id": 17,
@@ -368,9 +368,9 @@
         "effective_1": "",
         "effective_2": "",
         "effective_3": "",
-        "ineffective_1": "",
-        "ineffective_2": "",
-        "ineffective_3": ""
+        "ineffective_1": "I got numb with numbers. I didn't feel any emotion when the number increases.",
+        "ineffective_2": "Confused because I don't understand why the number is increasing.",
+        "ineffective_3": "It shows the growing trend clearly."
     },
     {
         "card_id": 18,
@@ -390,9 +390,9 @@
         "effective_1": "",
         "effective_2": "",
         "effective_3": "",
-        "ineffective_1": "",
-        "ineffective_2": "",
-        "ineffective_3": ""
+        "ineffective_1": "I lost patience with it. I just want to skip to its end.",
+        "ineffective_2": "It's so long. Why not make it shorter?",
+        "ineffective_3": "I got bored during the scrolling process."
     },
     {
         "card_id": 19,
