@@ -18,6 +18,8 @@ Released   : 20130406
     <title>Xingyu Lan</title>
     <!-- <link href="http://fonts.googleapis.com/css?family=Oxygen:400,700,300" rel="stylesheet" type="text/css" /> -->
     <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    <script language="javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -36,7 +38,7 @@ Released   : 20130406
 
         <!-- 个人介绍页 -->
         <div id="div_aboutme" class="container" style="display:block">
-            <div style="text-align: center; padding: 50px;">
+            <div style="padding: 50px;">
                 <div style="display: inline-block; vertical-align:middle;"><img src="images/me.png" width="280" height="280" alt="" /></div>
                 <div style="display: inline-block; vertical-align:middle; margin-left: 80px; text-align: left; line-height: 2; color:black; max-width: 720px;">
                     <h2 style="color: #5BA689; font-family:'Helvetica','myfont' "><strong>Xingyu Lan</strong> 🌱 蓝星宇</h2>
@@ -53,8 +55,37 @@ Released   : 20130406
                     </p>
 
                     <p style="margin-block-start:0em; margin-block-end:0em"><strong>Contact:</strong> xingyulan(at)tongji.edu.cn | <a href="https://scholar.google.com/citations?user=8h4rMjsAAAAJ&hl=zh-CN">Google Scholar</a></p>
-
                 </div>
+                <hr style="margin-top: 20px;"></hr>
+                <div style="display: inline-block; text-align:center; margin-top: 20px; width: 280px; color:#5BA689; font-weight: 600; font-size: 20px">
+                    <p>Latest News</p>
+                    <div class="expand" onclick=toggle()>Expand</div>
+                </div>
+
+                <div style="display: inline-block; margin-top: 20px; vertical-align:top; margin-left: 80px; text-align: left; line-height:1; color:black; max-width: 720px; ">
+                    <p>August, 2021 · Organized an event called "Data Visualization Roast" in Shanghai, China.</p>
+                    <p>July, 2021 · Delivered a presentation at ChinaVis2021 & hosted the student visiting to the art program</p>
+                    <p>July, 2021 · Our poster won Honorable Mention at ChinaVis2021</p>
+                    <p>July, 2021 · Two papers accepted by Vis2021</p>
+                    <p>May, 2021 · Delivered my first presentation at CHI</p>
+                    <p class="expand-content">May, 2020 · Hosted & presented at iDVX x AntV Intelligent Visualization Innovation Forum</p>
+                    <p class="expand-content">December, 2020 · One paper accepted by PacificVis2020 (TVCG track)</p>
+                    <p class="expand-content">November, 2020 · Two papers accepted by CHI2020</p>
+                    <p class="expand-content">November, 2020 · Delivered a presentation at the Doctorial Forum in my school</p>
+                    <p class="expand-content">October, 2020 · Published a MOOC called Data-Driven Storytelling</p>
+                    <p class="expand-content">July, 2020 · Student volunteer at ChinaVis2020</p>
+                    <p class="expand-content">November, 2019 · Teaching assistant - Data Visualization Practice</p>
+                    <p class="expand-content">September, 2019 · Started my Ph.D journey</p>
+                    <p class="expand-content">July, 2019 · Presented "Gradict" at ChinaVis2019</p>
+                    <p class="expand-content">July, 2019 · Graduated with honor from Peking University</p>
+                    <p class="expand-content">May, 2019 · Won the gold award in the 1st China Data Storytelling Contest (Best Data News)</p>
+                    <p class="expand-content">March, 2019 · Published "Gradict", the first Chinese online "dictionary" of data visualizations</p>
+                    <p class="expand-content">December, 2018 · Won the third prize in the 2nd New Concept Multimedia Award (Data Journalsm Group)</p>
+                    <p class="expand-content">July, 2018 · Won the first prize in the 3rd China Data Journalism Competition</p>
+                    <p class="expand-content">June, 2018 · Won the second prize in the 1st Huashu Data Analyst Competition</p>
+                    <p class="expand-content">Feburary, 2017 · Hosted "Data is Beautiful" talk at Shenzhen</p>
+                </div>
+
             </div>
         </div>
 
@@ -91,7 +122,7 @@ Released   : 20130406
                 <div style="display: inline-block; vertical-align: top; text-align: left; margin-left: 10px;">
                     <div class="paper"><strong>Calliope·Data: An Intelligent Visual Data Story Generation Platform for Mass</strong></div>
                     <p>Nan Cao, Danqing Shi, Yanqiu Wu, Xinyue Xu, Fuling Sun, Yi Guo, Nan Chen, Mengdi Sun, <strong>Xingyu Lan</strong>, Pei Liu, Siji Chen, <br>Ligan Cai, Yang Shi, Qing Chen</p>
-                    <div style="max-width:800px;padding-top:10px">ChinaVis Poster 2021</div>
+                    <div style="max-width:800px;padding-top:10px">ChinaVis Poster 2021 | 🏆Honorable Mention</div>
                     <div style="max-width:800px;padding-top:10px">Poster: <a href="https://sdq.github.io/calliopedata/calliopedata-chinavis-poster.pdf">Link</a> | Material: <a href="https://sdq.github.io/calliopedata/">Project Website</a></div>
                     <!-- <a href=" #" class="button">Learn More</a> -->
                 </div>
@@ -409,7 +440,6 @@ Released   : 20130406
                     <!-- <a href=" #" class="button">Learn More</a> -->
                 </div>
             </div>
-            <br>
 
             <div style="width: 1190px; text-align:left; margin:0px auto" class="box-style box-style01">
                 <!-- <div class="image" style="display: inline-block;"><img src="images/img01.jpg" width="324" height="200" alt="" /></div> -->
@@ -1148,6 +1178,19 @@ Released   : 20130406
 </body>
 
 <script>
+    function toggle() {
+        var ele = document.getElementsByClassName("expand-content");
+        for (let i = 0; i < ele.length; i++) {
+            if (ele[i].style.display == "block") {
+                ele[i].style.display = "none";
+                document.getElementsByClassName("expand")[0].innerHTML = "Expand"
+            } else {
+                ele[i].style.display = "block";
+                document.getElementsByClassName("expand")[0].innerHTML = "Collapse"
+            }
+        }
+    }
+
     function tab_aboutme() {
         document.getElementById("aboutme").className = "current_page_item"
         document.getElementById("publications").className = ""

@@ -63,8 +63,20 @@ ol {
     /* line-height: 180%; */
 }
 
-ul,
-ol {}
+.expand {
+    background-color: rgb(134, 206, 177);
+    color: white;
+    padding: 5px;
+    /* cursor: pointer; */
+    font-size: 14px;
+    width: 80px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.expand-content {
+    display: none;
+}
 
 a {
     text-decoration: none;
