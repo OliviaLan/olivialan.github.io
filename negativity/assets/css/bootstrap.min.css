@@ -5402,33 +5402,33 @@ input[type=submit].btn-block {
 }
 
 .badge_1 {
-    background-color: #857cb4;
-    color: white;
+    background-color: #dad7f5;
+    /* color: white; */
 }
 
 .badge_2 {
-    background-color: #edc46a;
-    color: white;
+    background-color: #f1d9a8;
+    /* color: white; */
 }
 
 .badge_3 {
-    background-color: #229fbd;
-    color: white;
+    background-color: #9adeeb;
+    /* color: white; */
 }
 
 .badge_4 {
-    background-color: #80b299;
-    color: white;
+    background-color: #bdecd6;
+    /* color: white; */
 }
 
 .badge_5 {
-    background-color: #a78373;
-    color: white;
+    background-color: #ecc2bb;
+    /* color: white; */
 }
 
 .badge_6 {
-    background-color: #517996;
-    color: white;
+    background-color: #aecee6;
+    /* color: white; */
 }
 
 @media (prefers-reduced-motion:reduce) {
