@@ -16,17 +16,31 @@
     background-color: #a09daf !important;
 }
 
-.vns-Viceral_challenge,
-.Viceral_challenge .modal-header,
-.Viceral_challenge .modal-footer,
-.Viceral_challenge .mobile-nav-symbol,
-.Viceral_challenge .scrollSpy-btn-symbol,
-.Viceral_challenge .reminder-symbol,
-.Viceral_challenge .card-header {
+.vns-Sensory_challenge,
+.Sensory_challenge .modal-header,
+.Sensory_challenge .modal-footer,
+.Sensory_challenge .mobile-nav-symbol,
+.Sensory_challenge .scrollSpy-btn-symbol,
+.Sensory_challenge .reminder-symbol,
+.Sensory_challenge .card-header {
     background-color: #c5c1e5 !important;
 }
 
-.Viceral_challenge .front {
+.Sensory_challenge .front {
+    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
+}
+
+.vns-Attachment_to_reality,
+.Attachment_to_reality .modal-header,
+.Attachment_to_reality .modal-footer,
+.Attachment_to_reality .mobile-nav-symbol,
+.Attachment_to_reality .scrollSpy-btn-symbol,
+.Attachment_to_reality .reminder-symbol,
+.Attachment_to_reality .card-header {
+    background-color: #efcf8f !important;
+}
+
+.Attachment_to_reality .front {
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 
@@ -37,24 +51,10 @@
 .Powerful_messaging .scrollSpy-btn-symbol,
 .Powerful_messaging .reminder-symbol,
 .Powerful_messaging .card-header {
-    background-color: #efcf8f !important;
-}
-
-.Powerful_messaging .front {
-    background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
-}
-
-.vns-Character_attachment,
-.Character_attachment .modal-header,
-.Character_attachment .modal-footer,
-.Character_attachment .mobile-nav-symbol,
-.Character_attachment .scrollSpy-btn-symbol,
-.Character_attachment .reminder-symbol,
-.Character_attachment .card-header {
     background-color: #89cfdb !important;
 }
 
-.Character_attachment .front {
+.Powerful_messaging .front {
     background: transparent linear-gradient(180deg, #f2f2f2 50%, #f2f2f2 80%) !important;
 }
 

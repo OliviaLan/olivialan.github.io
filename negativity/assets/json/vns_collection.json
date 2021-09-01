@@ -1,43 +1,43 @@
 [{
         "VNS_id": 0,
-        "VNS_tag": "Viceral_challenge",
+        "VNS_tag": "Sensory_challenge",
         "VNS_color": "rgb(214, 214, 214)",
-        "VNS_desc": "impact people intuitively through coloring, sizing, shape, sound, or semantics.",
+        "VNS_desc": "This strategy appeals to people's sensations (e.g., vision, hearing) to stimulate negative emotions intuitively.",
         "VNS_num": 9
     },
     {
         "VNS_id": 1,
-        "VNS_tag": "Powerful_messaging",
+        "VNS_tag": "Attachment_to_reality",
         "VNS_color": "rgb(214, 214, 214)",
-        "VNS_desc": "intro",
+        "VNS_desc": "This strategy is about linking readers with realistic things behind the data, such as the real scenes of something happening and real characters.",
         "VNS_num": 10
     },
     {
         "VNS_id": 2,
-        "VNS_tag": "Character_attachment",
+        "VNS_tag": "Powerful_messaging",
         "VNS_color": "rgb(214, 214, 214)",
-        "VNS_desc": "intro",
+        "VNS_desc": "This strategy elicits negative emotions by using punchy or forceful language to inform readers something bad.",
         "VNS_num": 10
     },
     {
         "VNS_id": 3,
         "VNS_tag": "Loss_of_control",
         "VNS_color": "rgb(214, 214, 214)",
-        "VNS_desc": "intro",
+        "VNS_desc": "This strategy triggers negative emotions by removing people's ability to control the things happening during their reading process.",
         "VNS_num": 10
     },
     {
         "VNS_id": 4,
         "VNS_tag": "Persistent_uncertainty",
         "VNS_color": "rgb(214, 214, 214)",
-        "VNS_desc": "intro",
+        "VNS_desc": "This strategy poses people at an uncertain status for a relatively long time and thus triggers negative emotions.",
         "VNS_num": 10
     },
     {
         "VNS_id": 5,
         "VNS_tag": "Obstacles_and_failure",
         "VNS_color": "rgb(214, 214, 214)",
-        "VNS_desc": "intro",
+        "VNS_desc": "This strategy elicits negative emotions by deliberately setting a task for readers and enticing them to fail.",
         "VNS_num": 1
     }
 ]
