@@ -224,7 +224,7 @@ a:hover {}
 #menu-wrapper {
     overflow: hidden;
     height: 52px;
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
     background: #B9DDD1;
 }
 
