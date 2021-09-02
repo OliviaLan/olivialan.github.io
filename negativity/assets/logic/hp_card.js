@@ -123,21 +123,24 @@ class Homepage_Card {
 
         card_header_node.classList.add("card-header", `el-${this.parameters["EL_tag1"].replace(/\s+/g, "-")}`);
         header_text_node.classList.add("header-text");
-        header_classification_node.classList.add("header_classification");
+        //header下面打icon标签
+        // header_classification_node.classList.add("header_classification");
         // header_symbol_node.classList.add("header-symbol");
 
         header_text_node.innerHTML = title_html;
+        card_header_node.appendChild(header_text_node)
 
-        if (this.parameters["VNS_ambiguity"] == 1) {
-            header_classification_node.innerHTML = classnewIcon_html + classnew_html + classIcon_html + class_html;
-        } else {
-            header_classification_node.innerHTML = classnewIcon_html + classnew_html;
-        }
+
+        // if (this.parameters["VNS_ambiguity"] == 1) {
+        //     header_classification_node.innerHTML = classnewIcon_html + classnew_html + classIcon_html + class_html;
+        // } else {
+        //     header_classification_node.innerHTML = classnewIcon_html + classnew_html;
+        // }
 
 
         // console.log (this.parameters["VNS_ambiguity"]);
 
-        [header_text_node, header_classification_node].forEach((node, i, nodeList) => card_header_node.appendChild(node));
+        // [header_text_node, header_classification_node].forEach((node, i, nodeList) => card_header_node.appendChild(node));
         // [header_text_node, header_symbol_node].forEach((node, i, nodeList) => card_header_node.appendChild(node));
         return card_header_node;
     }

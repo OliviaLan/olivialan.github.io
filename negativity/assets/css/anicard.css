@@ -117,7 +117,7 @@
     height: 15px;
 }
 
-.el-Imagery .filter-btn-symbol {
+.el-Graphics .filter-btn-symbol {
     background-image: url("../icon/panel_mark.svg");
     background-position: 1.5px 1px;
     background-repeat: no-repeat;
@@ -141,7 +141,7 @@
     height: 15px;
 }
 
-.el-Motion .filter-btn-symbol {
+.el-Animation .filter-btn-symbol {
     background-image: url("../icon/panel_camera.svg");
     background-position: 1px 2px;
     background-repeat: no-repeat;
@@ -185,7 +185,7 @@
     height: 21px;
 }
 
-.el-Imagery .card-header .header-symbol {
+.el-Graphics .card-header .header-symbol {
     background-image: url("../icon/mark.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -209,7 +209,7 @@
     height: 21px;
 }
 
-.el-Motion .card-header .header-symbol {
+.el-Animation .card-header .header-symbol {
     background-image: url("../icon/camera.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -228,7 +228,7 @@
     height: 21px;
 }
 
-.Imagery {
+.Graphics {
     background-image: url("../icon/mark.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -252,7 +252,7 @@
     height: 21px;
 }
 
-.Motion {
+.Animation {
     background-image: url("../icon/camera.svg");
     background-position: 1 0px;
     background-repeat: no-repeat;
@@ -572,7 +572,7 @@ footer .footer-text {
 }
 
 .card-deck-single {
-    max-width: 22.00rem;
+    max-width: 21.50rem;
     margin-bottom: 1.25rem;
     position: relative;
     padding-left: 0.625rem;
@@ -900,7 +900,7 @@ footer .footer-text {
 
 .card-inner {
     position: relative;
-    height: 29.5rem;
+    height: 27.5rem;
 }
 
 .card-inner .front,
