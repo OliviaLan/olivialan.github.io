@@ -330,7 +330,7 @@
     },
     {
         "card_id": 16,
-        "card_title": "Auto-played animation",
+        "card_title": "Self-run animation",
         "VNS_tag": "Loss_of_control",
         "EL_tag": "Animation, Animation, Pie chart",
         "EL_tag1": "Interaction",
@@ -352,7 +352,7 @@
     },
     {
         "card_id": 17,
-        "card_title": "Animation that must be triggered",
+        "card_title": "User behavior bound timer/counter",
         "VNS_tag": "Loss_of_control",
         "EL_tag": "Animation, Interaction, Pie chart",
         "EL_tag1": "Animation",
