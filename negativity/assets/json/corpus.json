@@ -74,7 +74,7 @@
         "topic": "Health",
         "description": "Explaining what does 500,000 death mean from three different perspectives.",
         "recommender": "E9",
-        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_2'>picture with negative semantics</span><span class='badge badge_3'>concrete number</span><span class='badge badge_5'>stretched layout</span>"
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_2'>picture with negative semantics</span><span class='badge badge_3'>concrete scale</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 7,
@@ -113,7 +113,7 @@
         "topic": "Health",
         "description": "A newsgame that asks users to make decisions on their outdoor activities and see how the virus spreads.",
         "recommender": "E7",
-        "method": "<span class='badge badge_2'>role-play game</span><span class='badge badge_3'>direct address</span><span class='badge badge_4'>self-run animation</span><span class='badge badge_6'>tough task</span>"
+        "method": "<span class='badge badge_2'>immersive role-play game</span><span class='badge badge_3'>direct address</span><span class='badge badge_4'>self-run animation</span><span class='badge badge_6'>tough task</span>"
     },
     {
         "id": 10,
@@ -139,7 +139,7 @@
         "topic": "Health",
         "description": "Showing more than 5,400 people are dying each day visually.",
         "recommender": "E9",
-        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>dense texture</span><span class='badge badge_2'>picture with negative semantics</span><span class='badge badge_3'>concrete number</span><span class='badge badge_3'>unit visualization</span><span class='badge badge_4'>self-run animation</span><span class='badge badge_4'>user behavior bound timer/counter</span><span class='badge badge_5'>stretched layout</span>"
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>dense texture</span><span class='badge badge_2'>picture with negative semantics</span><span class='badge badge_3'>concrete scale</span><span class='badge badge_3'>unit visualization</span><span class='badge badge_4'>self-run animation</span><span class='badge badge_4'>user behavior bound timer/counter</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 12,
@@ -152,7 +152,7 @@
         "topic": "Health",
         "description": "This story calls for the attention to the need for mental health and addiction support after the outbreak of COVID-19.",
         "recommender": "E5",
-        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_2'>picture with negative semantics</span><span class='badge badge_2'>metaphor with negative semantics</span><span class='badge badge_3'>concrete number</span><span class='badge badge_3'>direct address</span>"
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>fade-out effect</span><span class='badge badge_2'>picture with negative semantics</span><span class='badge badge_2'>metaphor with negative semantics</span><span class='badge badge_3'>concrete scale</span><span class='badge badge_3'>direct address</span>"
     },
     {
         "id": 13,
@@ -165,7 +165,7 @@
         "topic": "Health",
         "description": "Imagine you live in Brazil and see how many of your neighbors have died because of COVID-19.",
         "recommender": "E9",
-        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>dense texture</span><span class='badge badge_2'>role-play game</span><span class='badge badge_3'>concrete number</span><span class='badge badge_3'>unit visualization</span>"
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>dense texture</span><span class='badge badge_2'>immersive role-play game</span><span class='badge badge_3'>concrete scale</span><span class='badge badge_3'>unit visualization</span>"
     },
     {
         "id": 14,
@@ -191,7 +191,7 @@
         "topic": "Health / Gender",
         "description": "This work talks about the mothers who died in childbirth and reported the stories of 16 mothers.",
         "recommender": "E1",
-        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_2'>detailed person behind data</span><span class='badge badge_2'>picture with negative semantics</span><span class='badge badge_3'>emotional rhetoric</span><span class='badge badge_3'>unit visualization</span><span class='badge badge_4'>self-run animation</span>"
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>dense texture</span><span class='badge badge_2'>detailed person behind data</span><span class='badge badge_2'>picture with negative semantics</span><span class='badge badge_3'>emotional rhetoric</span><span class='badge badge_3'>unit visualization</span><span class='badge badge_4'>self-run animation</span>"
     },
     {
         "id": 16,
@@ -204,7 +204,7 @@
         "topic": "Health",
         "description": "A project that introduces the outbreak of Ebola in Africa.",
         "recommender": "E1",
-        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense texture</span><span class='badge badge_2'>picture with negative semantics</span>"
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_2'>picture with negative semantics</span>"
     },
     {
         "id": 17,
@@ -256,7 +256,7 @@
         "topic": "Politics / Media",
         "description": "This project visualizes the emotions expressed by Trump's twitters.",
         "recommender": "E1",
-        "method": "<span class='badge badge_1'>heavy use of red</span><span class='badge badge_2'>metaphor with negative semantics</span>"
+        "method": "<span class='badge badge_1'>heavy use of red</span><span class='badge badge_2'>metaphor with negative semantics</span><span class='badge badge_3'>emotional rhetoric</span>"
     },
     {
         "id": 21,
@@ -360,7 +360,7 @@
         "topic": "Environment",
         "description": "Showing how much water we use everyday and calling for water saving.",
         "recommender": "Experimenter",
-        "method": "<span class='badge badge_1'>dense texture</span><span class='badge badge_3'>emotional rhetoric</span><span class='badge badge_3'>concrete number</span><span class='badge badge_3'>direct address</span><span class='badge badge_5'>stretched layout</span>"
+        "method": "<span class='badge badge_1'>dense texture</span><span class='badge badge_3'>emotional rhetoric</span><span class='badge badge_3'>concrete scale</span><span class='badge badge_3'>direct address</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 29,
@@ -412,7 +412,7 @@
         "topic": "Environment",
         "description": "The author splits the depth of the ocean into segments and explain the pollution in each segment.",
         "recommender": "E5",
-        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_2'>picture with negative semantics</span><span class='badge badge_3'>concrete number</span><span class='badge badge_5'>stretched layout</span>"
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_2'>picture with negative semantics</span><span class='badge badge_3'>concrete scale</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 33,
@@ -425,7 +425,7 @@
         "topic": "Society / Gender",
         "description": "A visualization of the posts about the #Metoo topic.",
         "recommender": "E6",
-        "method": "<span class='badge badge_2'>detailed person behind data</span><span class='badge badge_2'>metaphor with negative semantics</span><span class='badge badge_3'>unit visualization</span>"
+        "method": "<span class='badge badge_1'>dense texture</span><span class='badge badge_2'>detailed person behind data</span><span class='badge badge_2'>metaphor with negative semantics</span><span class='badge badge_3'>unit visualization</span>"
     },
     {
         "id": 34,
@@ -438,7 +438,7 @@
         "topic": "Environment",
         "description": "Using data physicalization to show how much plastic we eat every day.",
         "recommender": "E6",
-        "method": "<span class='badge badge_2'>picture with negative semantics</span><span class='badge badge_3'>concrete number</span>"
+        "method": "<span class='badge badge_2'>picture with negative semantics</span><span class='badge badge_3'>concrete scale</span>"
     },
     {
         "id": 35,
@@ -451,7 +451,7 @@
         "topic": "Education",
         "description": "A newsgame that asks users to make decisions for the education of their children.",
         "recommender": "E7",
-        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_2'>role-play game</span>"
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_2'>immersive role-play game</span>"
     },
     {
         "id": 36,
@@ -477,7 +477,7 @@
         "topic": "Society / Safety",
         "description": "The violence used by police officers and how it affects the community.",
         "recommender": "E8",
-        "method": "<span class='badge badge_1'>big size</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_4'>self-run animation</span>"
+        "method": "<span class='badge badge_1'>big size</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense texture</span><span class='badge badge_4'>self-run animation</span>"
     },
     {
         "id": 38,
@@ -503,7 +503,7 @@
         "topic": "Health",
         "description": "Explaining the COVID-19 numbers in Brazil in a visual way.",
         "recommender": "E9",
-        "method": "<span class='badge badge_1'>big size</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_2'>detailed person behind data</span><span class='badge badge_3'>concrete number</span><span class='badge badge_3'>unit visualization</span><span class='badge badge_4'>self-run animation</span><span class='badge badge_5'>stretched layout</span>"
+        "method": "<span class='badge badge_1'>big size</span><span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense texture</span><span class='badge badge_2'>detailed person behind data</span><span class='badge badge_3'>concrete scale</span><span class='badge badge_3'>unit visualization</span><span class='badge badge_4'>self-run animation</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 40,
@@ -581,7 +581,7 @@
         "topic": "Environment",
         "description": "Visualising the world’s addiction to plastic bottles.",
         "recommender": "E9",
-        "method": "<span class='badge badge_1'>big size</span><span class='badge badge_3'>concrete number</span><span class='badge badge_4'>self-run animation</span><span class='badge badge_4'>user behavior bound timer/counter</span>"
+        "method": "<span class='badge badge_1'>big size</span><span class='badge badge_3'>concrete scale</span><span class='badge badge_4'>self-run animation</span><span class='badge badge_4'>user behavior bound timer/counter</span>"
     },
     {
         "id": 46,
@@ -646,7 +646,7 @@
         "topic": "Health",
         "description": "Play as a life server who needs to send the patients to the closest hospital.",
         "recommender": "E9",
-        "method": "<span class='badge badge_2'>role-play game</span><span class='badge badge_6'>tough task</span>"
+        "method": "<span class='badge badge_2'>immersive role-play game</span><span class='badge badge_6'>tough task</span>"
     },
     {
         "id": 51,
@@ -659,7 +659,7 @@
         "topic": "Economy",
         "description": "A project that helps people understand how much wealth Jeff Bezos owns.",
         "recommender": "E9",
-        "method": "<span class='badge badge_3'>concrete number</span><span class='badge badge_5'>stretched layout</span>"
+        "method": "<span class='badge badge_3'>concrete scale</span><span class='badge badge_5'>stretched layout</span>"
     },
     {
         "id": 52,
@@ -672,7 +672,7 @@
         "topic": "Economy",
         "description": "How much time you need to spend to earn others' salary.",
         "recommender": "E9",
-        "method": "<span class='badge badge_3'>concrete number</span>"
+        "method": "<span class='badge badge_3'>concrete scale</span>"
     },
     {
         "id": 53,
@@ -685,7 +685,7 @@
         "topic": "Economy",
         "description": "Comparing your income with that of the famous soccer stars.",
         "recommender": "E9",
-        "method": "<span class='badge badge_3'>concrete number</span>"
+        "method": "<span class='badge badge_3'>concrete scale</span>"
     },
     {
         "id": 54,
@@ -698,7 +698,7 @@
         "topic": "Economy",
         "description": "Comparing the income of laypeople with that of the billionnaires.",
         "recommender": "E9",
-        "method": "<span class='badge badge_2'>metaphor with negative semantics</span><span class='badge badge_3'>concrete number</span>"
+        "method": "<span class='badge badge_2'>metaphor with negative semantics</span><span class='badge badge_3'>concrete scale</span>"
     },
     {
         "id": 55,
@@ -711,7 +711,7 @@
         "topic": "Traffic",
         "description": "Understand how the ship gets stuck in the Suez Canal by playing a game.",
         "recommender": "E9",
-        "method": "<span class='badge badge_2'>role-play game</span><span class='badge badge_6'>tough task</span>"
+        "method": "<span class='badge badge_2'>immersive role-play game</span><span class='badge badge_6'>tough task</span>"
     },
     {
         "id": 56,
@@ -815,7 +815,7 @@
         "topic": "Environment",
         "description": "A project that visualized the endangered birds, their current status, and how to protect them.",
         "recommender": "E8",
-        "method": "<span class='badge badge_1'>shrill/deep/pressing music</span><span class='badge badge_2'>detailed person behind data</span><span class='badge badge_2'>metaphor with negative semantics</span><span class='badge badge_3'>unit visualization</span>"
+        "method": "<span class='badge badge_1'>shrill/deep/pressing music</span><span class='badge badge_1'>dense texture</span><span class='badge badge_2'>detailed person behind data</span><span class='badge badge_2'>metaphor with negative semantics</span><span class='badge badge_3'>unit visualization</span>"
     },
     {
         "id": 64,
@@ -893,7 +893,7 @@
         "topic": "Traffic",
         "description": "This project visualizes the accidents in sky in 2017.",
         "recommender": "E1",
-        "method": "<span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense texture</span>"
+        "method": "<span class='badge badge_1'>heavy use of red</span><span class='badge badge_1'>dense texture</span><span class='badge badge_3'>unit visualization</span>"
     },
     {
         "id": 70,
@@ -906,7 +906,7 @@
         "topic": "Health / Society",
         "description": "An infographic that visualizes the suicide in the Netherland in 2017.",
         "recommender": "E2",
-        "method": "<span class='badge badge_2'>metaphor with negative semantics</span>"
+        "method": "<span class='badge badge_2'>metaphor with negative semantics</span><span class='badge badge_3'>unit visualization</span>"
     },
     {
         "id": 71,
