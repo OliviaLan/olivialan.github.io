@@ -88,7 +88,7 @@
     },
     {
         "card_id": 5,
-        "card_title": "Dense data marks",
+        "card_title": "Dense texture",
         "VNS_tag": "Sensory_challenge",
         "EL_tag": "Graphics, Graphics, Line chart",
         "EL_tag1": "Graphics",
@@ -220,28 +220,6 @@
     },
     {
         "card_id": 11,
-        "card_title": "Person-level visualization",
-        "VNS_tag": "Attachment_to_reality",
-        "EL_tag": "Graphics, Graphics, Pie chart",
-        "EL_tag1": "Graphics",
-        "EL_tag2": "Graphics",
-        "Chart_tag": "Pie chart",
-        "VNS_ambiguity": 0,
-        "AVT_tag": "",
-        "how": "How: Using one mark to represent one person in the dataset to lower the granularity of data.",
-        "eg_title": "title",
-        "eg_source": "NYT",
-        "eg_url": "#",
-        "rating": "63%",
-        "effective_1": "",
-        "effective_2": "",
-        "effective_3": "",
-        "ineffective_1": "Those icons are not real people.",
-        "ineffective_2": "I can't imagine who are the people behind the dots. They are still cold numbers.",
-        "ineffective_3": "It just shows the data clearly."
-    },
-    {
-        "card_id": 12,
         "card_title": "Metaphor with negative semantics",
         "VNS_tag": "Attachment_to_reality",
         "EL_tag": "Graphics, Graphics, Line chart",
@@ -263,7 +241,7 @@
         "ineffective_3": ""
     },
     {
-        "card_id": 13,
+        "card_id": 12,
         "card_title": "Emotional rhetoric",
         "VNS_tag": "Powerful_messaging",
         "EL_tag": "Narratives, Narratives, Pie chart",
@@ -285,8 +263,8 @@
         "ineffective_3": ""
     },
     {
-        "card_id": 14,
-        "card_title": "Concrete number",
+        "card_id": 13,
+        "card_title": "Concrete scale",
         "VNS_tag": "Powerful_messaging",
         "EL_tag": "Narratives, Narratives, Pie chart",
         "EL_tag1": "Narratives",
@@ -305,6 +283,28 @@
         "ineffective_1": "I am not familiar with this scale, so it has little impact on me.",
         "ineffective_2": "",
         "ineffective_3": ""
+    },
+    {
+        "card_id": 14,
+        "card_title": "Unit visualization",
+        "VNS_tag": "Powerful_messaging",
+        "EL_tag": "Graphics, Graphics, Pie chart",
+        "EL_tag1": "Graphics",
+        "EL_tag2": "Graphics",
+        "Chart_tag": "Pie chart",
+        "VNS_ambiguity": 0,
+        "AVT_tag": "",
+        "how": "How: Using one mark to represent one person in the dataset to lower the granularity of data.",
+        "eg_title": "title",
+        "eg_source": "NYT",
+        "eg_url": "#",
+        "rating": "63%",
+        "effective_1": "",
+        "effective_2": "",
+        "effective_3": "",
+        "ineffective_1": "Those icons are not real people.",
+        "ineffective_2": "I can't imagine who are the people behind the dots. They are still cold numbers.",
+        "ineffective_3": "It just shows the data clearly."
     },
     {
         "card_id": 15,

@@ -10,14 +10,14 @@
         "VNS_tag": "Attachment_to_reality",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "This strategy is about linking readers with realistic things behind the data, such as the real scenes of something happening and real characters.",
-        "VNS_num": 5
+        "VNS_num": 4
     },
     {
         "VNS_id": 2,
         "VNS_tag": "Powerful_messaging",
         "VNS_color": "rgb(214, 214, 214)",
         "VNS_desc": "This strategy elicits negative emotions by using punchy or forceful language to inform readers something bad.",
-        "VNS_num": 3
+        "VNS_num": 4
     },
     {
         "VNS_id": 3,
