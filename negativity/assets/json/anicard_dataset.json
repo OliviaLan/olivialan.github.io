@@ -321,12 +321,12 @@
         "eg_source": "NYT",
         "eg_url": "#",
         "rating": "50%",
-        "effective_1": "",
-        "effective_2": "",
-        "effective_3": "",
+        "effective_1": "It helped me perceive the huge amount of death better.",
+        "effective_2": "Drawing every dead person as an individual icon is shocking and mind-blowing.",
+        "effective_3": "These dots make the data more concrete and imaginable",
         "ineffective_1": "Those icons are not real people.",
-        "ineffective_2": "I can't imagine who are the people behind the dots. They are still cold numbers.",
-        "ineffective_3": "It just shows the data clearly."
+        "ineffective_2": "I can't imagine who are the people behind the dots. They are still numbers.",
+        "ineffective_3": "For me, it is just a way to show data clearly."
     },
     {
         "card_id": 16,
