@@ -113,7 +113,7 @@
         "topic": "Health",
         "description": "A newsgame that asks users to make decisions on their outdoor activities and see how the virus spreads.",
         "recommender": "E7",
-        "method": "<span class='badge badge_2'>immersive role-play game</span><span class='badge badge_3'>direct address</span><span class='badge badge_4'>self-run animation</span><span class='badge badge_6'>tough task</span>"
+        "method": "<span class='badge badge_2'>role-play game</span><span class='badge badge_3'>direct address</span><span class='badge badge_4'>self-run animation</span><span class='badge badge_6'>tough task</span>"
     },
     {
         "id": 10,
@@ -165,7 +165,7 @@
         "topic": "Health",
         "description": "Imagine you live in Brazil and see how many of your neighbors have died because of COVID-19.",
         "recommender": "E9",
-        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>dense texture</span><span class='badge badge_2'>immersive role-play game</span><span class='badge badge_3'>concrete number</span><span class='badge badge_3'>unit visualization</span>"
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_1'>dense texture</span><span class='badge badge_2'>role-play game</span><span class='badge badge_3'>concrete number</span><span class='badge badge_3'>unit visualization</span>"
     },
     {
         "id": 14,
@@ -451,7 +451,7 @@
         "topic": "Education",
         "description": "A newsgame that asks users to make decisions for the education of their children.",
         "recommender": "E7",
-        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_2'>immersive role-play game</span>"
+        "method": "<span class='badge badge_1'>dark background</span><span class='badge badge_2'>role-play game</span>"
     },
     {
         "id": 36,
@@ -646,7 +646,7 @@
         "topic": "Health",
         "description": "Play as a life server who needs to send the patients to the closest hospital.",
         "recommender": "E9",
-        "method": "<span class='badge badge_2'>immersive role-play game</span><span class='badge badge_6'>tough task</span>"
+        "method": "<span class='badge badge_2'>role-play game</span><span class='badge badge_6'>tough task</span>"
     },
     {
         "id": 51,
@@ -711,7 +711,7 @@
         "topic": "Traffic",
         "description": "Understand how the ship gets stuck in the Suez Canal by playing a game.",
         "recommender": "E9",
-        "method": "<span class='badge badge_2'>immersive role-play game</span><span class='badge badge_6'>tough task</span>"
+        "method": "<span class='badge badge_2'>role-play game</span><span class='badge badge_6'>tough task</span>"
     },
     {
         "id": 56,
