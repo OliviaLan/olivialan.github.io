@@ -30,7 +30,7 @@ export const vns_method_to_btn_name = str => {
 
 window.onload = function() {
     // 进入页面的时候定位到哪里
-    VISIT_PAGE("corpus", openCorpus);
+    VISIT_PAGE("home", openHomepage_ex);
     //openCorpus
     //openHomepage_ex
 
