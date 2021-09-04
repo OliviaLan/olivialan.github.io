@@ -18,6 +18,7 @@ class Homepage_Card {
         eg_source,
         eg_url,
         eg_year,
+        snapshot,
         eg_category,
         eg_subcategory,
         rating,
@@ -192,11 +193,13 @@ class Homepage_Card {
         var num = this.parameters["card_id"];
         console.log(this.parameters["card_id"]);
         var newnum = num % 3;
-        let front_gif_html = `<img class="card-img front-gif" src="./assets/card_gif/${this.parameters["card_id"]}.gif" alt="./assets/image/fail_loading.svg">`; // 正面gif
-        let front_preview_html = `<img class="card-img front-preview" src="./assets/card_preview/${this.parameters["card_id"]}.png">` // 正面预览png
+        // let front_gif_html = `<img class="card-img front-gif" src="./assets/card_gif/${this.parameters["card_id"]}.png" alt="./assets/image/fail_loading.svg">`; // 正面gif
+        let front_preview_html = `<img class="card-img front-preview" src="./assets/card_img/${this.parameters["snapshot"]}">` // 正面预览png
 
         card_frontImg_node.classList.add("card-frontImg");
-        card_frontImg_node.innerHTML = front_gif_html + front_preview_html;
+        card_frontImg_node.innerHTML = front_preview_html;
+        // card_frontImg_node.innerHTML = front_gif_html + front_preview_html;
+
 
         return card_frontImg_node;
     }
@@ -361,7 +364,7 @@ class Homepage_Card {
             //id编号
             index_text = `<span class="card-footer-num">NO. ${this.parameters["card_id"]}</span>`;
             //底部文字：来源
-            source_text = `<span class="card-footer-source">Source: ${this.parameters["eg_title"]}, ${this.parameters["eg_source"]}, <a href="${this.parameters["eg_url"]}">link</a></span>`;
+            source_text = `<span class="card-footer-source">Source: ${this.parameters["eg_source"]}, <a href="${this.parameters["eg_url"]}">Link</a></span>`;
             //底部文字：得分和星星
             rating_text = `<span class="card-footer-rating">Effectiveness ratio:  ${this.parameters["rating"]}</span>`;
             rating_star = `<div class="star-ratings-sprite"><span style="width:${this.parameters["rating"]}" class="star-ratings-sprite-rating"></span></div>`;
@@ -420,15 +423,15 @@ Homepage_Card.prototype._bindEvents = function() {
     // card footer URL
     $(card_inner_node.querySelector(".card-footer a")).tooltip({ title: "link to the original work" });
 
-    // front gif static preview
-    front_img.addEventListener("mouseover", () => {
-        front_img.querySelector("img.front-gif").style.visibility = "none";
-        $(front_img).find("img.front-preview").fadeTo("fast", 0);
-    });
-    front_img.addEventListener("mouseout", () => {
-        front_img.querySelector("img.front-gif").style.visibility = "block";
-        $(front_img).find("img.front-preview").fadeTo("fast", 1);
-    });
+    // front gif static preview 鼠标hover播放gif的效果
+    // front_img.addEventListener("mouseover", () => {
+    //     front_img.querySelector("img.front-gif").style.visibility = "none";
+    //     $(front_img).find("img.front-preview").fadeTo("fast", 0);
+    // });
+    // front_img.addEventListener("mouseout", () => {
+    //     front_img.querySelector("img.front-gif").style.visibility = "block";
+    //     $(front_img).find("img.front-preview").fadeTo("fast", 1);
+    // });
 
     //背面gif的预览和放大功能
     // back gif zooming in modal window
