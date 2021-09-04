@@ -364,7 +364,7 @@ class Homepage_Card {
             //id编号
             index_text = `<span class="card-footer-num">NO. ${this.parameters["card_id"]}</span>`;
             //底部文字：来源
-            source_text = `<span class="card-footer-source">Source: ${this.parameters["eg_source"]}, <a href="${this.parameters["eg_url"]}">Link</a></span>`;
+            source_text = `<span class="card-footer-source">Source of the example: <a href="${this.parameters["eg_url"]}">Link</a></span>`;
             //底部文字：得分和星星
             rating_text = `<span class="card-footer-rating">Effectiveness ratio:  ${this.parameters["rating"]}</span>`;
             rating_star = `<div class="star-ratings-sprite"><span style="width:${this.parameters["rating"]}" class="star-ratings-sprite-rating"></span></div>`;
