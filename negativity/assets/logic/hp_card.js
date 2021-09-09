@@ -294,8 +294,8 @@ class Homepage_Card {
      */
     _createCard_backBody() {
         let card_body_node = document.createElement("div");
-        let card_body_subtitle_effective = `<h6 class="card-body-subtitle">Why effective:</h6>`;
-        let card_body_subtitle_ineffective = `<h6 class="card-body-subtitle">Why ineffective:</h6>`;
+        let card_body_subtitle_effective = `<h6 class="card-body-subtitle"><u>Why effective in augmenting negative emotions:</u></h6>`;
+        let card_body_subtitle_ineffective = `<h6 class="card-body-subtitle"><u>Why ineffective in augmenting negative emotions:</u></h6>`;
         let card_body_effective_node = document.createElement("div");
         let card_body_ineffective_node = document.createElement("div");
 

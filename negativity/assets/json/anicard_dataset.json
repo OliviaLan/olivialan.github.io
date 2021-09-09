@@ -60,12 +60,12 @@
         "eg_url": "https://www.buzzfeednews.com/article/peteraldhous/covid19-update-deaths-victims-america-half-million",
         "snapshot": "3.png",
         "rating": "64%",
-        "effective_1": "",
-        "effective_2": "",
-        "effective_3": "",
-        "ineffective_1": "",
-        "ineffective_2": "",
-        "ineffective_3": ""
+        "effective_1": "Anxious when seeing so many lines squeezed together. I think it also implies that things are getting worse.",
+        "effective_2": "Very dense and disgusting.",
+        "effective_3": "It triggered my trypophobia, really.",
+        "ineffective_1": "This graph is so clustered that I can't see data clearly. Why they made a chart like this?",
+        "ineffective_2": "Too many data points. I got tired when I tried to read them.",
+        "ineffective_3": "I think it is a normal chart. No emotion was evoked."
     },
     {
         "card_id": 4,
@@ -109,9 +109,9 @@
         "effective_1": "So much red makes me feel really anxious.",
         "effective_2": "Red is the color of blood and death, so this design scares me.",
         "effective_3": "This page is full of red. It alarms me, like telling me something bad is going to happen.",
-        "ineffective_1": "It is a good color for emphasis.",
+        "ineffective_1": "Red is a good color for emphasis.",
         "ineffective_2": "Too much red. Too bright for my eyes. I don't like this color.",
-        "ineffective_3": "I think it's same to change red into any other colors."
+        "ineffective_3": "I think it's same to change red into any other hues."
     },
     {
         "card_id": 6,
@@ -129,11 +129,11 @@
         "eg_url": "http://h5.thepaper.cn/html/zt/2020/09/ybw/index.html",
         "snapshot": "6.png",
         "rating": "23%",
-        "effective_1": "",
-        "effective_2": "",
-        "effective_3": "",
+        "effective_1": "The fading graph works for me. It give me a feeling that we are losing someone.",
+        "effective_2": "It reminds me of the scene of seeing someone's back and watching him walking away.",
+        "effective_3": "No strong emotional impact, but the fade-out effect did add some sad beauty to the graph.",
         "ineffective_1": "I don't understanding the meaning of this effect. What is this for?",
-        "ineffective_2": "Maybe they use it just for beauty?",
+        "ineffective_2": "Maybe using this effect can make the chart more appealing?",
         "ineffective_3": "Good to have it, but did not elicit any emotion from me."
     },
     {
@@ -152,9 +152,9 @@
         "eg_url": "https://www.rand.org/about/nextgen/art-plus-data/giorgia-lupi/imaging-mental-health-in-america.html",
         "snapshot": "7.png",
         "rating": "20%",
-        "effective_1": "",
-        "effective_2": "",
-        "effective_3": "",
+        "effective_1": "The twisted shape is horrible...It looks like our bodies are invaded by the virus.",
+        "effective_2": "This shape reminds me of animal tentacles, which is quite scary.",
+        "effective_3": "I don't understand why, but I felt anxious when seeing such a shape.",
         "ineffective_1": "Why they designed the shape in this way? I didn't get what they wanted to communicate.",
         "ineffective_2": "I was intrigued by this shape in the beginning, but found it is meaningless in the end.",
         "ineffective_3": "The twisted bars are funny to look at."
@@ -175,12 +175,12 @@
         "eg_url": "https://projects.propublica.org/graphics/heartsaver",
         "snapshot": "8.gif",
         "rating": "88%",
-        "effective_1": "",
+        "effective_1": "When I ",
         "effective_2": "",
         "effective_3": "",
-        "ineffective_1": "It was so fun to play as a character that I almost forgot the tragedy behind the story.",
+        "ineffective_1": "The game is so fun that I almost forgot the tragedies told by the game.",
         "ineffective_2": "Maybe the game settings are too crude? I did not really believe in the character.",
-        "ineffective_3": "I did not put myself into the settings. I just played it as a game."
+        "ineffective_3": "I did not immerse myself in the game. I just did the task it asked me to do."
     },
     {
         "card_id": 9,

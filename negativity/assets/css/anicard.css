@@ -711,8 +711,8 @@ footer .footer-text {
 }
 
 .card-deck .card-body-subtitle {
-    font-size: 0.875rem;
-    font-weight: 600;
+    font-size: 0.7rem;
+    font-weight: 500;
 }
 
 
@@ -735,7 +735,7 @@ footer .footer-text {
 
 .card-deck .card-body-caption span {
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .card-deck .card-footer {
