@@ -1,6 +1,6 @@
 var svg_map_2 = d3.select("#clickable_1")
     .append("svg")
-    .attr("viewBox", "0 0 " + width + " " + height)
+    .attr("viewBox", "0 0 " + 700 + " " + 700)
     .attr("preserveAspectRatio", "xMinYMin")
     // .attr("width", width + margin)
     // .attr("height", height + margin)
