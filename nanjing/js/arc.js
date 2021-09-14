@@ -11,19 +11,19 @@ var miserables = {
         { nodeName: "南京", group: 3 },
     ],
     links: [
-        { source: 1, target: 0, value: 20 },
-        { source: 1, target: 3, value: 4 },
-        { source: 1, target: 4, value: 4 },
-        { source: 1, target: 5, value: 24 },
-        { source: 1, target: 8, value: 4 },
-        { source: 2, target: 0, value: 8 },
-        { source: 2, target: 1, value: 14 },
-        { source: 3, target: 0, value: 5 },
-        { source: 3, target: 1, value: 6 },
-        { source: 4, target: 2, value: 1 },
-        { source: 6, target: 2, value: 1 },
-        { source: 7, target: 1, value: 1 },
-        { source: 8, target: 2, value: 1 },
+        { source: 1, target: 0, value: 90 },
+        { source: 1, target: 3, value: 14 },
+        { source: 1, target: 4, value: 14 },
+        { source: 1, target: 5, value: 124 },
+        { source: 1, target: 8, value: 40 },
+        { source: 2, target: 0, value: 84 },
+        { source: 2, target: 1, value: 94 },
+        { source: 3, target: 0, value: 15 },
+        { source: 3, target: 1, value: 16 },
+        { source: 4, target: 2, value: 11 },
+        { source: 6, target: 2, value: 11 },
+        { source: 7, target: 1, value: 10 },
+        { source: 8, target: 2, value: 9 },
     ]
 };
 
@@ -36,8 +36,9 @@ var i,
     nodeY = 380,
     nodes = miserables.nodes,
     links = miserables.links,
-    colors = d3.scaleOrdinal(d3.schemeCategory10),
+    colors = d3.scaleOrdinal(["brown", "orange", "black", "grey", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]),
     τ = 2 * Math.PI;
+
 
 var svg_arc = d3.select("#arc")
     // .attr("width", width)
@@ -99,6 +100,8 @@ function update() {
     path.enter()
         .append("path")
         .attr("class", "arcPath")
+        .attr("fill", "white")
+        .attr("opacity", 0.2)
         .attr("transform", function(d, i) {
             d.x1 = nodeDisplayX(nodes[d.target]);
             d.x2 = nodeDisplayX(nodes[d.source]);
@@ -106,7 +109,7 @@ function update() {
         })
         .attr("d", function(d, i) {
             //设定arc的粗细
-            d.thickness = 1 + d.value / 20;
+            d.thickness = 1 + d.value / 6;
             arcBuilder.setRadii(d);
             return arcBuilder();
         });
@@ -123,7 +126,8 @@ function update() {
         .append("circle")
         .attr("cy", nodeY)
         .attr("cx", function(d, i) { return nodeDisplayX(d); })
-        .attr("r", function(d, i) { return mapRange(d.value, nodeValMin, nodeValMax, 2.5, 13); })
+        //配置圆圈大小区间
+        .attr("r", function(d, i) { return mapRange(d.value, nodeValMin, nodeValMax, 1, 20); })
         .attr("fill", function(d, i) { return colors(d.group); })
         .attr("stroke", function(d, i) { return d3.rgb(colors(d.group)).darker(1); });
 
@@ -136,7 +140,7 @@ function update() {
     // UPDATE
     text.transition()
         .duration(transitionTime)
-        .attr("x", function(d, i) { return nodeDisplayX(d) - 5; })
+        .attr("x", function(d, i) { return nodeDisplayX(d) + 10; })
         .attr("transform", function(d, i) { return textTransform(d); });
     // ENTER
     text.enter()
@@ -175,7 +179,7 @@ function pathTween(transition, dummy) {
     });
 }
 
-d3.select("#selectSort").on("change", function() {
+d3.select(".selectSort").on("change", function() {
     doSort(this.selectedIndex);
     update();
 });

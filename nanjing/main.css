@@ -110,17 +110,14 @@ article {
 }
 
 .button:hover {
-    background-color: #4CAF50;
-    /* Green */
     color: white;
     background-color: brown;
 }
 
-.arcPath {
-    fill: white;
-    fill-opacity: 0.2;
-}
-
-circle {
-    stroke-width: 1;
+.selectSort {
+    background-color: brown;
+    color: white;
+    padding: 5px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border-radius: 5px;
 }
