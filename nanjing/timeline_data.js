@@ -3,7 +3,7 @@ let data = [{
         "date": 0,
         "type": "gun",
         "death": "false",
-        "value": 35,
+        "value": 5,
         "x": 10,
         "y": 50,
     }, {
@@ -11,7 +11,7 @@ let data = [{
         "date": 2,
         "type": "rape",
         "death": "true",
-        "value": 35,
+        "value": 5,
         "x": 340,
         "y": 50,
 
@@ -20,7 +20,7 @@ let data = [{
         "date": 3,
         "type": "bomb",
         "death": "true",
-        "value": 32,
+        "value": 2,
         "x": 10,
         "y": 150,
     }, {
@@ -28,7 +28,7 @@ let data = [{
         "date": 5,
         "type": "bomb",
         "death": "false",
-        "value": 31,
+        "value": 11,
         "x": 340,
         "y": 150,
     }, {
@@ -36,7 +36,7 @@ let data = [{
         "date": 10,
         "type": "bomb",
         "death": "false",
-        "value": 20,
+        "value": 10,
         "x": 10,
         "y": 250,
     }, {
@@ -44,7 +44,7 @@ let data = [{
         "date": 11,
         "type": "gun",
         "death": "false",
-        "value": 19,
+        "value": 9,
         "x": 340,
         "y": 250,
     }, {
@@ -60,7 +60,7 @@ let data = [{
         "date": 21,
         "type": "bomb",
         "death": "false",
-        "value": 17,
+        "value": 7,
         "x": 340,
         "y": 350,
     }, {
@@ -76,7 +76,7 @@ let data = [{
         "date": 23,
         "type": "rape",
         "death": "true",
-        "value": 7,
+        "value": 27,
         "x": 340,
         "y": 450,
     }, {
@@ -84,7 +84,7 @@ let data = [{
         "date": 26,
         "type": "bomb",
         "death": "true",
-        "value": 7,
+        "value": 17,
         "x": 340,
         "y": 450,
     }, {
@@ -100,7 +100,7 @@ let data = [{
         "date": 33,
         "type": "gun",
         "death": "true",
-        "value": 17,
+        "value": 27,
         "x": 340,
         "y": 450,
     },
@@ -109,7 +109,7 @@ let data = [{
         "date": 35,
         "type": "rape",
         "death": "true",
-        "value": 27,
+        "value": 37,
         "x": 340,
         "y": 450,
     }
