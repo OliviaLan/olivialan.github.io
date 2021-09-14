@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="title">Nanjing! Nanjing!</div>
+
+    <article>
+        <div id="svg-grid"></div>
+        <!-- <div class="text">Here is some explanatory text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id lacus quis mauris auctor euismod. Pellentesque consectetur turpis in lorem laoreet, at porta metus aliquam. Etiam eget purus et dolor auctor volutpat.
+            Nulla vitae nibh tempor, sollicitudin eros et, gravida enim. Duis tempor, nulla quis convallis venenatis, turpis erat molestie nibh, quis aliquet nibh ex in libero. Praesent interdum ipsum eu felis pellentesque, vel imperdiet neque ullamcorper.</div> -->
+    </article>
+
+    <div>
+        <svg id="bubble" width="1000" height="500"></svg>
+    </div>
+
+    <div style="text-align: center;">
+        <p class="title" style="margin:auto;">Keywords</p>
+        <select id="selectSort" style="display: block; margin:auto; margin-top: 30px;">
+        <option value="Group">by Cluster</option>
+        <option value="Frequency">by Frequency</option>
+        <option value="Name">by Name</option>
+    </select>
+
+        <svg id="arc" width="1000" height="500" style="margin:auto;"></svg>
+    </div>
+
+    <!-- <div>
+        <svg id="spirial" width="400" height="400"></svg>
+    </div>
+ -->
+
+    <!-- <div>
+        <svg id="curve" width="400" height="500"></svg>
+    </div> -->
+
+    <!-- <div id="map" style="background-image:url(./img/test.png);">
+        <svg id="clickable_1" width="800" height="680"></svg>
+    </div> -->
+
+    <div>
+        <svg id="clickable_2" width="800 " height="680 "></svg>
+        <div style="display: inline-block; vertical-align: top;">
+            <div id="time" class="counter" x="0" y="20">1970</div>
+            <div id="controls">
+                <input class="slider" type="range" id="year-input" value="1970" min="1970" max="1980" step="1" />
+                <button class="button" id="play-button">Play</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src='js/bubble.js'></script>
+    <script type="text/javascript" src='js/glyph.js'></script>
+    <!-- <script type="text/javascript " src='js/map.js'></script> -->
+    <script type="text/javascript " src='js/animated_map.js'></script>
+    <script type="text/javascript" src="js/arc.js"></script>
+    <!-- <script src='js/spirial.js'></script> -->
+    <!-- <script src='js/curve.js'></script> -->
+
+
+
+</body>
