@@ -75,7 +75,7 @@ function drawIcons(count, row, width, padding, canvas) {
 
     // draw icons
     area.selectAll("use")
-        .data(data)
+        .data(glyph_data)
         .enter()
         .append("use")
         .attr("xlink:href", function(d) {
@@ -110,7 +110,7 @@ function drawIcons(count, row, width, padding, canvas) {
             tooltip.transition()
                 .duration(200)
                 .style("opacity", .9);
-            tooltip.html("When: " + d.date + "<br/>How: " + d.type + "<br/>Age: " + d.value + "<br/>Death: " + d.death)
+            tooltip.html("When: " + d.date + "<br/>How: " + d.type + "<br/>When: " + d.when + "<br/>Where: " + d.where)
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY) + "px");
         })

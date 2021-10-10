@@ -45,12 +45,12 @@ article {
     max-width: 400px;
 }
 
-.gun {
+.kill {
     fill: rgb(243, 55, 55);
     opacity: 0.4;
 }
 
-.bomb {
+.hurt {
     fill: orange;
     opacity: 0.4;
 }
@@ -59,6 +59,19 @@ article {
     fill: rgb(171, 33, 212);
     opacity: 0.4;
 }
+
+
+/* .axis line {
+    stroke: white;
+}
+
+.axis path {
+    stroke: white;
+}
+
+.axis text {
+    fill: white;
+} */
 
 .slider {
     -webkit-appearance: none;

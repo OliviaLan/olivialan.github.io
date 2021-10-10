@@ -1,116 +1,277 @@
 let data = [{
-        "id": 0,
         "date": 0,
-        "type": "gun",
-        "death": "false",
-        "value": 5,
-        "x": 10,
-        "y": 50,
-    }, {
-        "id": 1,
-        "date": 2,
-        "type": "rape",
-        "death": "true",
-        "value": 5,
-        "x": 340,
-        "y": 50,
-
-    }, {
-        "id": 2,
-        "date": 3,
-        "type": "bomb",
-        "death": "true",
-        "value": 2,
-        "x": 10,
-        "y": 150,
-    }, {
-        "id": 3,
-        "date": 5,
-        "type": "bomb",
-        "death": "false",
-        "value": 11,
-        "x": 340,
-        "y": 150,
-    }, {
-        "id": 4,
-        "date": 10,
-        "type": "bomb",
-        "death": "false",
-        "value": 10,
-        "x": 10,
-        "y": 250,
-    }, {
-        "id": 5,
-        "date": 11,
-        "type": "gun",
-        "death": "false",
-        "value": 9,
-        "x": 340,
-        "y": 250,
-    }, {
-        "id": 6,
-        "date": 13,
-        "type": "rape",
-        "death": "false",
-        "value": 15,
-        "x": 10,
-        "y": 450,
-    }, {
-        "id": 7,
-        "date": 21,
-        "type": "bomb",
-        "death": "false",
-        "value": 7,
-        "x": 340,
-        "y": 350,
-    }, {
-        "id": 8,
-        "date": 22,
-        "type": "rape",
-        "death": "false",
-        "value": 17,
-        "x": 10,
-        "y": 350,
-    }, {
-        "id": 9,
-        "date": 23,
-        "type": "rape",
-        "death": "true",
-        "value": 27,
-        "x": 340,
-        "y": 450,
-    }, {
-        "id": 10,
-        "date": 26,
-        "type": "bomb",
-        "death": "true",
-        "value": 17,
-        "x": 340,
-        "y": 450,
-    }, {
-        "id": 11,
-        "date": 29,
-        "type": "bomb",
-        "death": "true",
-        "value": 27,
-        "x": 340,
-        "y": 450,
-    }, {
-        "id": 12,
-        "date": 33,
-        "type": "gun",
-        "death": "true",
-        "value": 27,
-        "x": 340,
-        "y": 450,
+        "kill": 1,
+        "hurt": 2,
+        "rape": 1
     },
     {
-        "id": 13,
+        "date": 1,
+        "kill": null,
+        "hurt": null,
+        "rape": 3
+    },
+    {
+        "date": 2,
+        "kill": 4,
+        "hurt": 4,
+        "rape": 4
+    },
+    {
+        "date": 3,
+        "kill": null,
+        "hurt": 2,
+        "rape": 4
+    },
+    {
+        "date": 4,
+        "kill": 2,
+        "hurt": 2,
+        "rape": 14
+    },
+    {
+        "date": 5,
+        "kill": 5,
+        "hurt": 1,
+        "rape": 9
+    },
+    {
+        "date": 6,
+        "kill": 2,
+        "hurt": 4,
+        "rape": 5
+    },
+    {
+        "date": 7,
+        "kill": 1,
+        "hurt": 2,
+        "rape": 11
+    },
+    {
+        "date": 8,
+        "kill": null,
+        "hurt": 1,
+        "rape": 7
+    },
+    {
+        "date": 9,
+        "kill": null,
+        "hurt": 1,
+        "rape": 2
+    },
+    {
+        "date": 10,
+        "kill": null,
+        "hurt": 1,
+        "rape": 2
+    },
+    {
+        "date": 11,
+        "kill": null,
+        "hurt": null,
+        "rape": null
+    },
+    {
+        "date": 12,
+        "kill": null,
+        "hurt": 1,
+        "rape": 1
+    },
+    {
+        "date": 13,
+        "kill": null,
+        "hurt": null,
+        "rape": 2
+    },
+    {
+        "date": 14,
+        "kill": null,
+        "hurt": null,
+        "rape": null
+    },
+    {
+        "date": 15,
+        "kill": null,
+        "hurt": null,
+        "rape": null
+    },
+    {
+        "date": 16,
+        "kill": null,
+        "hurt": null,
+        "rape": 1
+    },
+    {
+        "date": 17,
+        "kill": 1,
+        "hurt": 1,
+        "rape": 2
+    },
+    {
+        "date": 19,
+        "kill": null,
+        "hurt": 1,
+        "rape": 3
+    },
+    {
+        "date": 20,
+        "kill": 1,
+        "hurt": 1,
+        "rape": null
+    },
+    {
+        "date": 21,
+        "kill": null,
+        "hurt": null,
+        "rape": 1
+    },
+    {
+        "date": 25,
+        "kill": null,
+        "hurt": null,
+        "rape": null
+    },
+    {
+        "date": 26,
+        "kill": 2,
+        "hurt": null,
+        "rape": 4
+    },
+    {
+        "date": 27,
+        "kill": null,
+        "hurt": 2,
+        "rape": 2
+    },
+    {
+        "date": 31,
+        "kill": 1,
+        "hurt": 1,
+        "rape": 2
+    },
+    {
+        "date": 32,
+        "kill": null,
+        "hurt": null,
+        "rape": 1
+    },
+    {
+        "date": 34,
+        "kill": null,
+        "hurt": 1,
+        "rape": 1
+    },
+    {
         "date": 35,
-        "type": "rape",
-        "death": "true",
-        "value": 37,
-        "x": 340,
-        "y": 450,
+        "kill": 1,
+        "hurt": null,
+        "rape": 1
+    },
+    {
+        "date": 36,
+        "kill": 1,
+        "hurt": null,
+        "rape": null
+    },
+    {
+        "date": 37,
+        "kill": null,
+        "hurt": null,
+        "rape": 1
+    },
+    {
+        "date": 38,
+        "kill": 1,
+        "hurt": null,
+        "rape": 4
+    },
+    {
+        "date": 39,
+        "kill": null,
+        "hurt": null,
+        "rape": 1
+    },
+    {
+        "date": 41,
+        "kill": null,
+        "hurt": null,
+        "rape": null
+    },
+    {
+        "date": 42,
+        "kill": null,
+        "hurt": null,
+        "rape": null
+    },
+    {
+        "date": 43,
+        "kill": 2,
+        "hurt": null,
+        "rape": 2
+    },
+    {
+        "date": 45,
+        "kill": null,
+        "hurt": 1,
+        "rape": 1
+    },
+    {
+        "date": 46,
+        "kill": 1,
+        "hurt": 2,
+        "rape": 7
+    },
+    {
+        "date": 47,
+        "kill": 2,
+        "hurt": 3,
+        "rape": 22
+    },
+    {
+        "date": 48,
+        "kill": 1,
+        "hurt": 3,
+        "rape": 19
+    },
+    {
+        "date": 49,
+        "kill": 2,
+        "hurt": 4,
+        "rape": 7
+    },
+    {
+        "date": 50,
+        "kill": null,
+        "hurt": 1,
+        "rape": 5
+    },
+    {
+        "date": 51,
+        "kill": null,
+        "hurt": 3,
+        "rape": 4
+    },
+    {
+        "date": 52,
+        "kill": null,
+        "hurt": 3,
+        "rape": 6
+    },
+    {
+        "date": 53,
+        "kill": null,
+        "hurt": null,
+        "rape": null
+    },
+    {
+        "date": 54,
+        "kill": null,
+        "hurt": 1,
+        "rape": null
+    },
+    {
+        "date": 55,
+        "kill": 1,
+        "hurt": null,
+        "rape": null
     }
 ]

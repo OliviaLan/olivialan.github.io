@@ -2,9 +2,9 @@ var i,
     // width = 960,
     // height = 500,
     transitionTime = 2500,
-    spacing = 80,
-    arc_margin = 150,
-    nodeY = 380,
+    spacing = 22,
+    arc_margin = 100,
+    nodeY = 420,
     nodes = miserables.nodes,
     links = miserables.links,
     colors = d3.scaleOrdinal(["brown", "orange", "black", "grey", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]),
@@ -72,7 +72,7 @@ function update() {
         .append("path")
         .attr("class", "arcPath")
         .attr("fill", "white")
-        .attr("opacity", 0.2)
+        .attr("opacity", 0.3)
         .attr("transform", function(d, i) {
             d.x1 = nodeDisplayX(nodes[d.target]);
             d.x2 = nodeDisplayX(nodes[d.source]);
@@ -98,7 +98,7 @@ function update() {
         .attr("cy", nodeY)
         .attr("cx", function(d, i) { return nodeDisplayX(d); })
         //配置圆圈大小区间
-        .attr("r", function(d, i) { return mapRange(d.value, nodeValMin, nodeValMax, 1, 20); })
+        .attr("r", function(d, i) { return mapRange(d.value, nodeValMin, nodeValMax, 3, 13); })
         .attr("fill", function(d, i) { return colors(d.group); })
         .attr("stroke", function(d, i) { return d3.rgb(colors(d.group)).darker(1); });
 
@@ -124,6 +124,7 @@ function update() {
         .text(function(d, i) { return d.nodeName; });
 }
 
+//默认按什么sort
 doSort(0);
 update();
 
