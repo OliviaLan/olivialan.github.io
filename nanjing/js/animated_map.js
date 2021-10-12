@@ -260,7 +260,7 @@ function updateChart(sights_data) {
         .transition()
         .duration(animationInterval - 200)
         .attr("r", function(d) {
-            return d.value * 2
+            return d.value + 30
         });
 
 
@@ -274,7 +274,7 @@ function updateChart(sights_data) {
 
 }
 
-d3.json("data/sights_1.json", function(sights_data) {
+d3.json("data/sights_2.json", function(sights_data) {
     initializeEventHandlers(sights_data)
     initializeAnimation(sights_data)
         // initializeAxes
