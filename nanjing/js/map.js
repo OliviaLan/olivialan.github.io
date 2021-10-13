@@ -163,9 +163,9 @@ function draw_sights(sights_data) {
                 return "url(#grad1)"
             }
         })
-        .attr('opacity', 0.7)
+        .attr('opacity', 0.9)
         .attr("r", function(d) {
-            return d.value + 5
+            return d.value + 2
         })
         // .attr('stroke', '#505ab5')
         // .attr('stroke-opacity', '1')
@@ -193,17 +193,17 @@ function draw_sights(sights_data) {
     //点点放大缩小动画
     function repeat() {
         sights.attr("r", function() {
-                return this.__data__.value + 5
-            })
-            .transition()
-            .duration(1200)
-            .attr('r', function() {
-                return this.__data__.value + 10
+                return this.__data__.value + 2
             })
             .transition()
             .duration(1200)
             .attr('r', function() {
                 return this.__data__.value + 5
+            })
+            .transition()
+            .duration(1200)
+            .attr('r', function() {
+                return this.__data__.value + 2
             })
             //version4里面each变成了on
             .on("end", repeat)
