@@ -73,7 +73,7 @@ function initializeAnimation(sights_data) {
 //     });
 // }
 
-var svg_map = d3.select("#clickable_2")
+var svg_map = d3.select("#clickable_3")
 
 //设置地图映射方式
 var projection = d3.geoMercator()
@@ -274,7 +274,7 @@ function updateChart(sights_data) {
 
 }
 
-d3.json("data/sights_2.json", function(sights_data) {
+d3.json("data/animated_spot.json", function(sights_data) {
     initializeEventHandlers(sights_data)
     initializeAnimation(sights_data)
         // initializeAxes
