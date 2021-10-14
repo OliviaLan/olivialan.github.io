@@ -1,1063 +1,13 @@
 [{
-        "name": "金陵大学",
-        "value": 12,
-        "coordinate": [118.776490651095, 32.0523563545682],
-        "story": ["121)12月20日晚上8时～10时，日本士兵3次来到设在圣经师资培训学校的难民收容所，每次都强行拖走3个姑娘。(里格斯)", "122)12月21日，早上8时来了7名日本士兵，要求提供45名苦力和姑娘。下午2时，来了4名日本士兵找姑娘。", "下午3时30分，来了6名日本士兵和1名军官，强迫我们向他们提供10名姑娘，结果他们抢走了4名姑娘。(圣经师资培训学校难民收容所，里格斯)", "124)12月21日晚8时，在圣经师资培训学校的难民收容所，有7名妇女被日本士兵强奸。(王明德)", "125)12月21日下午5时，日本士兵抢劫了圣经师资培训学校难民收容所内的属于外国人的许多行李。(王明德)", "142)12月22日下午2时～4时，闯进一些士兵，抢走了11条被子和较大一笔钱，总共约100元。(圣经师资培训学校)", "145)12月23日晚8时15分，7名日本士兵劫走了4名姑娘。", "12月24日早上9时，日本士兵3次闯进我们这里骚扰难民，每次有日本士兵3人～4人，下午2时，他们抢走了衣服、钱和食品。(圣经师资培训学校难民收容所)", "148)12月24日～25日间夜晚，7名日本士兵闯入圣经师资培训学校难民收容所，并在那里滞留了一整夜。", "25日早晨9时和下午2时，分别闯进4名和3名日本士兵，他们抢走衣服和钱，强奸了2名姑娘，其中一名才12岁。(圣经师资培训学校难民收容所)", "159)12月26日，这一天有多组三四人为一组的士兵7次闯入圣经师资培训学校，从经过前面无数次抢掠还剩有一点东西的人们那儿抢走衣服、食品和钱。他们强奸了6名妇女和一个12岁的姑娘。夜里，由12人～14人组成的人数较多的士兵队伍4次闯入，他们强奸了20名妇女。(米尔斯牧师)", "170)12月29日夜间，被派来作哨兵的一个日本士兵闯入我们大楼的一个房间，强奸了一名姑娘。在这之前的12月27日，这些哨兵中就有一人喝醉酒后表示了要姑娘的念头。福井先生12月29日被告知了这起事件，他答应在12月30日夜间撤换这些哨兵。此后，如同我们感激地看到的那样，再也没有发生骚扰。(索恩，圣经师资培训学校)"]
-    },
-    {
-        "name": "城南",
-        "value": 9,
-        "coordinate": [118.63986647313, 32.0595634965044],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "金陵大学蚕厂难民收容所",
-        "value": 6,
-        "coordinate": [118.770925257391, 32.0634411280167],
-        "story": ["51)12月16日，我们一位官员马普英(音译)先生在前去安全区蚕厂(金陵大学)通知要进行搜家时，被日本士兵逮捕，虽然他带有证明他是难民收容所稽查官员的袖标和证章。另外，我们办公室一位姓王的男勤杂工也被抓走。(签名：吴国京，第六区工作人员)", "117)12月19日，据金陵大学蚕厂的难民收容所报告，昨天晚上8时到今天凌晨1时，共有8名妇女被强奸，其中一人被刺刀刺伤，还有4名试图保护自己妻子的男子也被刺刀刺伤。妇女被强行拖走，以后则是单独回来的。(吴国京，第六区)", "151)12月22日，2名日本士兵在金陵大学蚕厂难民收容所强奸了一名13岁的姑娘，其母亲想阻止对她女儿的奸污而被打伤。同一难民收容所中的另一名28岁的妇女也被强奸。12月23日，清晨4时，日本士兵在强行抢拉2名姑娘时被制止。士兵随即逃跑。(H．K．吴，警官)", "17日上午8时，又有2辆卡车和2辆载着军官的车子开来，从蚕厂带走一些男子和7个女子。当时在场看到全过程的贝茨博士承认，这些男子和女子(其中还有一名年轻女子)是自愿一起走的。(贝茨博士)", "256)1月30日，一姑娘在返回位于国府路住处的路上，遭到2个日本士兵的袭击。他们把她拖进一间空屋轮奸，因此她又回到难民收容所。", "257)1月30日，一位44岁的妇女在返回大中桥住处的途中，遭到日本士兵的袭击。他们把她拖进一间空屋强奸，她不得不又回到了蚕厂难民收容所。"]
-    },
-    {
-        "name": "大学医院",
-        "value": 6,
-        "coordinate": [118.772694030905, 32.0648231307506],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "北平路59号",
-        "value": 6,
-        "coordinate": [118.878444479758, 32.0439432318158],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "阴阳营",
-        "value": 5,
-        "coordinate": [118.766962976341, 32.0575633999866],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "汉西门",
-        "value": 4,
-        "coordinate": [118.761602068052, 32.0437985425324],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "陆军大学的难民收容所",
-        "value": 4,
-        "coordinate": [118.777837818317, 32.0582361822117],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "四象桥",
-        "value": 4,
-        "coordinate": [118.785006619548, 32.0291036028875],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "五台山小学难民收容所",
-        "value": 4,
-        "coordinate": [118.773538262724, 32.0509208970792],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "下关",
-        "value": 3,
-        "coordinate": [118.734148558266, 32.0903749595928],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "北平路",
-        "value": 3,
-        "coordinate": [118.75119430419, 32.0121699552506],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "天目路",
-        "value": 3,
-        "coordinate": [118.762130823818, 32.0611567407053],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "水西门",
-        "value": 3,
-        "coordinate": [118.764679418828, 32.0319549097967],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "金陵女子文理学院难民收容所",
-        "value": 3,
-        "coordinate": [118.7654744364, 32.0604058781108],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "宁海路",
-        "value": 3,
-        "coordinate": [118.7654744364, 32.0604058781108],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "阴阳营43号、44号、45号和46号",
-        "value": 3,
-        "coordinate": [118.766962976341, 32.0575633999866],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "阴阳营49号",
-        "value": 3,
-        "coordinate": [118.766962976341, 32.0575633999866],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "双塘",
-        "value": 3,
-        "coordinate": [118.76890586698, 32.0240694607298],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "平安巷",
-        "value": 3,
-        "coordinate": [118.770286698061, 32.0298810131213],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "彩霞街",
-        "value": 3,
-        "coordinate": [118.77331832533, 32.025853004904],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "新桥",
-        "value": 3,
-        "coordinate": [118.773603092766, 32.0210361913273],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "汉口路",
-        "value": 3,
-        "coordinate": [118.775427031519, 32.0557709533447],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "中华门",
-        "value": 3,
-        "coordinate": [118.776619269014, 32.0148449837839],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "珠江路",
-        "value": 3,
-        "coordinate": [118.779005831455, 32.0530303877716],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "颐和路6号",
-        "value": 3,
-        "coordinate": [118.810459770953, 32.1005364741131],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "和平门外蟠龙山",
-        "value": 2,
-        "coordinate": [116.144987252659, 39.9416089698407],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "天青街384号",
-        "value": 2,
-        "coordinate": [118.713838474344, 32.166727366478],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "黄泥岗",
-        "value": 2,
-        "coordinate": [118.741770574414, 31.942120364411],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "北平路64号意大利大使馆",
-        "value": 2,
-        "coordinate": [118.75119430419, 32.0121699552506],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "珞珈路5号",
-        "value": 2,
-        "coordinate": [118.759234047544, 32.0605639363167],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "龙蟠里",
-        "value": 2,
-        "coordinate": [118.759382302829, 32.047909198677],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "珞珈路17号",
-        "value": 2,
-        "coordinate": [118.760499309169, 32.0659178079999],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "三牌楼2号",
-        "value": 2,
-        "coordinate": [118.76072100568, 32.0815143140853],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "宁海路21号",
-        "value": 2,
-        "coordinate": [118.761906679043, 32.061055578132],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "颐和路18号",
-        "value": 2,
-        "coordinate": [118.762399607471, 32.0655248721701],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "宁海路2号红卍字会",
-        "value": 2,
-        "coordinate": [118.763901611977, 32.0665871051979],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "鼓楼",
-        "value": 2,
-        "coordinate": [118.764570967083, 32.0683819691249],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "福建路, 珠江路",
-        "value": 2,
-        "coordinate": [118.76505027666, 32.0908121280907],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "鼓楼新村",
-        "value": 2,
-        "coordinate": [118.765126853701, 32.063621329069],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "江苏路23号",
-        "value": 2,
-        "coordinate": [118.76554299488, 32.0657981160576],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "马台街29号",
-        "value": 2,
-        "coordinate": [118.767124532278, 32.074745293881],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "汉口路28号",
-        "value": 2,
-        "coordinate": [118.767588601096, 32.0568957583154],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "美国学校(五台山)",
-        "value": 2,
-        "coordinate": [118.768624111181, 32.0510023135846],
-        "story": ["wait a moment"]
-    },
-    {
         "name": "安品街千章巷13号",
         "value": 2,
         "coordinate": [118.769643937097, 32.0311317195003],
         "story": ["wait a moment"]
     },
     {
-        "name": "雨花路80号",
-        "value": 2,
-        "coordinate": [118.77030062435, 31.9982937665221],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "石鼓路",
-        "value": 2,
-        "coordinate": [118.770921130221, 32.0431095951617],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "云南路丁家桥",
-        "value": 2,
-        "coordinate": [118.772292616533, 32.0753530305302],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "绫庄巷",
-        "value": 2,
-        "coordinate": [118.774230073038, 32.0290886766528],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "沈举人巷22号",
-        "value": 2,
-        "coordinate": [118.774772171577, 32.0457650197898],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "豆菜桥30号",
-        "value": 2,
-        "coordinate": [118.775159242018, 32.0499983795576],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "汉口路5号",
-        "value": 2,
-        "coordinate": [118.775932696881, 32.0552273803522],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "金陵大学附近",
-        "value": 2,
-        "coordinate": [118.776490651095, 32.0523563545682],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "陆军大学",
-        "value": 2,
-        "coordinate": [118.777837818317, 32.0582361822117],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "高家酒馆45号",
-        "value": 2,
-        "coordinate": [118.778504471919, 32.0497310612177],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "张府园",
-        "value": 2,
-        "coordinate": [118.77873131183, 32.0330145556557],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "吉兆营",
-        "value": 2,
-        "coordinate": [118.78030347333, 32.0542832273462],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "估衣廊",
-        "value": 2,
-        "coordinate": [118.781243322666, 32.0484070755222],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "门东转龙巷",
-        "value": 2,
-        "coordinate": [118.786085716338, 32.0135145042294],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "大纱帽巷1号",
-        "value": 2,
-        "coordinate": [118.786989584277, 32.0521225291311],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "贵标",
-        "value": 2,
-        "coordinate": [118.789330782898, 32.0367804279982],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "红寺庙",
-        "value": 2,
-        "coordinate": [118.790910911326, 32.0641018687707],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "通济门附近",
-        "value": 2,
-        "coordinate": [118.796066316494, 32.0277207078583],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "二条巷30—35号",
-        "value": 2,
-        "coordinate": [118.796434011947, 32.0383397135708],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "华安里",
-        "value": 2,
-        "coordinate": [118.799176625391, 32.0217624333094],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "西郊",
-        "value": 2,
-        "coordinate": [118.807170671515, 32.3646829376974],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "中山东路路边的天明浴室",
-        "value": 2,
-        "coordinate": [118.807195445988, 32.0422499464225],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "黄泥巷30号",
-        "value": 2,
-        "coordinate": [118.829740600232, 31.9564690483703],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "小桃园",
-        "value": 2,
-        "coordinate": [118.851902353368, 31.940516972944],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "峨嵋路7号",
-        "value": 2,
-        "coordinate": [118.859657637907, 32.3399279847648],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "吴家花园",
-        "value": 2,
-        "coordinate": [119.076321516453, 32.2028513754087],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "九王村",
-        "value": 1,
-        "coordinate": [118.481394379749, 31.9106042285846],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "莫干路11号",
-        "value": 1,
-        "coordinate": [118.617758474796, 32.0550692854419],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "沅江新村6号",
-        "value": 1,
-        "coordinate": [118.728345385553, 32.0568067303498],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "莫干路2号",
-        "value": 1,
-        "coordinate": [118.729901007764, 32.0377975346279],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "中山北路244号",
-        "value": 1,
-        "coordinate": [118.736746058779, 32.0936216850109],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "热河路",
-        "value": 1,
-        "coordinate": [118.737331025516, 32.0915030608335],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "萨家湾附近盐仓桥",
-        "value": 1,
-        "coordinate": [118.746594692885, 32.0881552242959],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "建邺路30号",
-        "value": 1,
-        "coordinate": [118.747610917714, 32.0105950206044],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "莫愁路13号",
-        "value": 1,
-        "coordinate": [118.749484294255, 32.0304158003626],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "古林寺",
-        "value": 1,
-        "coordinate": [118.750502008476, 32.0678533562517],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "古林寺9号",
-        "value": 1,
-        "coordinate": [118.750502008476, 32.0678533562517],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "北平路69号中英文化协会大楼",
-        "value": 1,
-        "coordinate": [118.753859383292, 32.0627831318093],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "美国大使馆",
-        "value": 1,
-        "coordinate": [118.758350115422, 32.0653565409111],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "美国大使馆住房",
-        "value": 1,
-        "coordinate": [118.758350115422, 32.0653565409111],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "西康路",
-        "value": 1,
-        "coordinate": [118.759194789881, 32.0631074763782],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "莫干路5号",
-        "value": 1,
-        "coordinate": [118.759234047544, 32.0605639363167],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "古林寺附近琅玡路",
-        "value": 1,
-        "coordinate": [118.760153195875, 32.0648323743484],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "珞珈路16号",
-        "value": 1,
-        "coordinate": [118.760446293693, 32.065727736098],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "珞珈路25号对面",
-        "value": 1,
-        "coordinate": [118.760446293693, 32.065727736098],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "琅玡路11号",
-        "value": 1,
-        "coordinate": [118.760721614081, 32.0641335442807],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "牯岭路21号",
-        "value": 1,
-        "coordinate": [118.760777434904, 32.0664540857721],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "颐和路19号",
-        "value": 1,
-        "coordinate": [118.761198848685, 32.0649189973113],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "赤壁路9号",
-        "value": 1,
-        "coordinate": [118.761498802408, 32.0675597563999],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "东瓜市8号",
-        "value": 1,
-        "coordinate": [118.761505227661, 32.0846264432479],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "三牌楼区模范马路",
-        "value": 1,
-        "coordinate": [118.761734957691, 32.0784042528925],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "颐和路",
-        "value": 1,
-        "coordinate": [118.761851216693, 32.0656465536247],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "颐和路东头",
-        "value": 1,
-        "coordinate": [118.761851216693, 32.0656465536247],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "普陀路7号",
-        "value": 1,
-        "coordinate": [118.762075585877, 32.0633171819511],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "颐和路12号",
-        "value": 1,
-        "coordinate": [118.762420561355, 32.0661830298561],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "华侨大厦附近的房子",
-        "value": 1,
-        "coordinate": [118.762544897961, 32.0743058789842],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "莫干路8号",
-        "value": 1,
-        "coordinate": [118.762727112013, 32.0625834370075],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "汉口路132号",
-        "value": 1,
-        "coordinate": [118.763034842253, 32.0570914252103],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "莫干路6号",
-        "value": 1,
-        "coordinate": [118.763153362713, 32.06321685712],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "中山北路和三牌楼的交叉路口",
-        "value": 1,
-        "coordinate": [118.763280080006, 32.0780961803735],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "三牌楼火车站",
-        "value": 1,
-        "coordinate": [118.763301035553, 32.0787443338025],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "江苏路的草棚",
-        "value": 1,
-        "coordinate": [118.7637464035, 32.0675632117622],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "鼓楼附近",
-        "value": 1,
-        "coordinate": [118.764705080596, 32.0683070490901],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "广州路",
-        "value": 1,
-        "coordinate": [118.764887730291, 32.0520415885857],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "西门子难民收容所(广州路46号)",
-        "value": 1,
-        "coordinate": [118.764887730291, 32.0520415885857],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "止马村",
-        "value": 1,
-        "coordinate": [118.765230402113, 32.0369524460791],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "宁海路33号",
-        "value": 1,
-        "coordinate": [118.7654744364, 32.0604058781108],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "湖南路516号的中国工程开发公司",
-        "value": 1,
-        "coordinate": [118.765556631263, 32.0698540129383],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "中山路209号德士古公司",
-        "value": 1,
-        "coordinate": [118.76569353567, 32.0721236098149],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "回龙街",
-        "value": 1,
-        "coordinate": [118.76585556942, 32.0299343203289],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "三省里",
-        "value": 1,
-        "coordinate": [118.765972816276, 32.060816345535],
-        "story": ["wait a moment"]
-    },
-    {
         "name": "安全区内山西路",
         "value": 1,
         "coordinate": [118.766247258191, 32.0693894380584],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "止马营",
-        "value": 1,
-        "coordinate": [118.766572587898, 32.0363953427456],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "汉口路23号",
-        "value": 1,
-        "coordinate": [118.766859961265, 32.0567391350846],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "阴阳营47号",
-        "value": 1,
-        "coordinate": [118.766962976341, 32.0575633999866],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "阴阳营71-1号",
-        "value": 1,
-        "coordinate": [118.766965468284, 32.0630856217235],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "马台街",
-        "value": 1,
-        "coordinate": [118.767124532278, 32.074745293881],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "朝天宫黄鹂巷19号",
-        "value": 1,
-        "coordinate": [118.767424231939, 32.0376183009848],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "宁海路25号",
-        "value": 1,
-        "coordinate": [118.767456828572, 32.0639592104972],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "宁海路25号红十字会",
-        "value": 1,
-        "coordinate": [118.767456828572, 32.0639592104972],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "金陵大学的汉口路19号",
-        "value": 1,
-        "coordinate": [118.767818854604, 32.0564368462025],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "汉西门56号",
-        "value": 1,
-        "coordinate": [118.767849288733, 32.0412114624525],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "上海路46号",
-        "value": 1,
-        "coordinate": [118.767903755734, 32.0366974868714],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "鼓楼附近王条巷",
-        "value": 1,
-        "coordinate": [118.768706857831, 32.0654255785423],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "金陵大学胡家菜园11号",
-        "value": 1,
-        "coordinate": [118.768841309992, 32.0185931503069],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "莫愁路",
-        "value": 1,
-        "coordinate": [118.769067800547, 32.0373236186207],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "大方巷的房子附近",
-        "value": 1,
-        "coordinate": [118.769414456688, 32.0663724015902],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "北秀村6号",
-        "value": 1,
-        "coordinate": [118.769760555571, 32.0581869053873],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "北秀村8号",
-        "value": 1,
-        "coordinate": [118.769760555571, 32.0581869053873],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "柳叶街",
-        "value": 1,
-        "coordinate": [118.769857494645, 32.0273940582379],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "陶谷新村8号",
-        "value": 1,
-        "coordinate": [118.769870842546, 32.0562725795698],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "五台山永庆巷",
-        "value": 1,
-        "coordinate": [118.769980693063, 32.0482548897491],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "天妃巷",
-        "value": 1,
-        "coordinate": [118.770555922258, 32.0412708425771],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "七家湾",
-        "value": 1,
-        "coordinate": [118.770769913626, 32.0329181481487],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "锏银巷",
-        "value": 1,
-        "coordinate": [118.771602784349, 32.0438063946661],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "饮马巷",
-        "value": 1,
-        "coordinate": [118.771761437501, 32.0168804170858],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "陵园路12号",
-        "value": 1,
-        "coordinate": [118.77194661302, 32.0062871564648],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "王府巷",
-        "value": 1,
-        "coordinate": [118.772473429738, 32.0361935174751],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "鼓楼头条巷3号",
-        "value": 1,
-        "coordinate": [118.772624182757, 32.0623415159341],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "三牌楼和外交部之间的狮子桥",
-        "value": 1,
-        "coordinate": [118.772699654445, 32.0689670434934],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "大王府巷24号",
-        "value": 1,
-        "coordinate": [118.772736520939, 32.038354266338],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "朝平仓巷13号",
-        "value": 1,
-        "coordinate": [118.772848921591, 32.0570395664233],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "平仓巷16号",
-        "value": 1,
-        "coordinate": [118.772848921591, 32.0570395664233],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "平仓巷6号",
-        "value": 1,
-        "coordinate": [118.772848921591, 32.0570395664233],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "船板巷",
-        "value": 1,
-        "coordinate": [118.772857070668, 32.0230018908224],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "升州路171号",
-        "value": 1,
-        "coordinate": [118.77291775098, 32.0272029115262],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "鼓楼二条巷",
-        "value": 1,
-        "coordinate": [118.773279666211, 32.0650387629032],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "慈悲社2号",
-        "value": 1,
-        "coordinate": [118.773915140382, 32.0460891998906],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "慈悲社11号",
-        "value": 1,
-        "coordinate": [118.7741844572, 32.0460344656365],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "评事街",
-        "value": 1,
-        "coordinate": [118.77454630542, 32.0305803463631],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "汉口路25号",
-        "value": 1,
-        "coordinate": [118.774629115019, 32.0553850193053],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "华侨路4号",
-        "value": 1,
-        "coordinate": [118.774681659038, 32.0501609097884],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "豆菜桥",
-        "value": 1,
-        "coordinate": [118.775159242018, 32.0499983795576],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "干河沿18号",
-        "value": 1,
-        "coordinate": [118.775754882119, 32.0508632140744],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "华侨路",
-        "value": 1,
-        "coordinate": [118.776343831121, 32.0484263135478],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "中华门里",
-        "value": 1,
-        "coordinate": [118.776619269014, 32.0148449837839],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "中华门麦糖街",
-        "value": 1,
-        "coordinate": [118.776619269014, 32.0148449837839],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "金陵中学南边的安乐里",
-        "value": 1,
-        "coordinate": [118.77679521853, 32.0503342419214],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "铁管巷",
-        "value": 1,
-        "coordinate": [118.776839994782, 32.0425265390304],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "汉口路7号",
-        "value": 1,
-        "coordinate": [118.777417544574, 32.055348061089],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "黑廊巷",
-        "value": 1,
-        "coordinate": [118.777765904978, 32.0237433200477],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "下江考棚",
-        "value": 1,
-        "coordinate": [118.778101781727, 32.0189476080834],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "徐府巷4号",
-        "value": 1,
-        "coordinate": [118.778351982335, 32.085382673845],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "三元巷附近",
-        "value": 1,
-        "coordinate": [118.778486621927, 32.0370001733694],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "高家酒馆",
-        "value": 1,
-        "coordinate": [118.778504471919, 32.0497310612177],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "高家酒馆44号",
-        "value": 1,
-        "coordinate": [118.778504471919, 32.0497310612177],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "门东膺福街",
-        "value": 1,
-        "coordinate": [118.778600790284, 32.0150913033675],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "扫帚巷",
-        "value": 1,
-        "coordinate": [118.778678176646, 32.0120036838084],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "孔斯特-阿尔贝斯公司（位于中央路）",
-        "value": 1,
-        "coordinate": [118.778827534336, 32.0753630833552],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "汇文女子中学",
-        "value": 1,
-        "coordinate": [118.779186262639, 32.0509671413592],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "长乐路",
-        "value": 1,
-        "coordinate": [118.779827981202, 32.0200018908346],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "上海路115号",
-        "value": 1,
-        "coordinate": [118.779852985186, 32.3011612761349],
         "story": ["wait a moment"]
     },
     {
@@ -1073,117 +23,27 @@
         "story": ["wait a moment"]
     },
     {
-        "name": "中华路基督教女中",
-        "value": 1,
-        "coordinate": [118.78025263386, 32.0300767093302],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "双龙巷",
-        "value": 1,
-        "coordinate": [118.780520364774, 32.0587064748168],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "内桥一家当铺对面",
-        "value": 1,
-        "coordinate": [118.780999578863, 32.031058852162],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "唱经楼",
-        "value": 1,
-        "coordinate": [118.781272758375, 32.0549795795623],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "同仁街",
-        "value": 1,
-        "coordinate": [118.781680497603, 32.0532166987012],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "同仁街18号",
-        "value": 1,
-        "coordinate": [118.781680497603, 32.0532166987012],
-        "story": ["wait a moment"]
-    },
-    {
         "name": "北门桥",
         "value": 1,
         "coordinate": [118.782417796449, 32.0505870487068],
         "story": ["wait a moment"]
     },
     {
-        "name": "小王府园35号",
-        "value": 1,
-        "coordinate": [118.783392223877, 32.0288173914057],
+        "name": "北门桥15号",
+        "value": 0,
+        "coordinate": [118.782038228563, 32.0508236173416],
         "story": ["wait a moment"]
     },
     {
-        "name": "夫子庙",
-        "value": 1,
-        "coordinate": [118.783728281634, 32.0227294412821],
+        "name": "北平路",
+        "value": 3,
+        "coordinate": [118.75119430419, 32.0121699552506],
         "story": ["wait a moment"]
     },
     {
-        "name": "四象桥太平旅店",
-        "value": 1,
-        "coordinate": [118.783942286041, 32.0261445047557],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "石坝街",
-        "value": 1,
-        "coordinate": [118.788324349025, 32.023589966787],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "西玉壶坊",
-        "value": 1,
-        "coordinate": [118.789906282768, 32.0199644366805],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "长白街太平巷",
-        "value": 1,
-        "coordinate": [118.790560108468, 32.0337735577074],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "申家巷",
-        "value": 1,
-        "coordinate": [118.792206997821, 32.032886838195],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "四条巷",
-        "value": 1,
-        "coordinate": [118.79325434064, 32.0380996306],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "三条巷",
-        "value": 1,
-        "coordinate": [118.795567383035, 32.0389254551695],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "钢银巷",
-        "value": 1,
-        "coordinate": [118.795901684426, 32.04223773804],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "通济门",
-        "value": 1,
-        "coordinate": [118.796066316494, 32.0277207078583],
-        "story": ["wait a moment"]
-    },
-    {
-        "name": "西华门二条巷孙园",
-        "value": 1,
-        "coordinate": [118.796760488147, 32.0396635407914],
+        "name": "北平路59号",
+        "value": 6,
+        "coordinate": [118.878444479758, 32.0439432318158],
         "story": ["wait a moment"]
     },
     {
@@ -1193,39 +53,63 @@
         "story": ["wait a moment"]
     },
     {
-        "name": "公园路",
-        "value": 1,
-        "coordinate": [118.797662985052, 32.0305949525179],
+        "name": "北平路64号意大利大使馆",
+        "value": 2,
+        "coordinate": [118.75119430419, 32.0121699552506],
         "story": ["wait a moment"]
     },
     {
-        "name": "西华门",
+        "name": "北平路69号中英文化协会大楼",
         "value": 1,
-        "coordinate": [118.798246367491, 32.0382526493649],
+        "coordinate": [118.753859383292, 32.0627831318093],
         "story": ["wait a moment"]
     },
     {
-        "name": "珠江路附近的小纱帽巷",
+        "name": "北秀村6号",
         "value": 1,
-        "coordinate": [118.800110973882, 32.0481619848897],
+        "coordinate": [118.769760555571, 32.0581869053873],
         "story": ["wait a moment"]
     },
     {
-        "name": "中山东路",
+        "name": "北秀村8号",
         "value": 1,
-        "coordinate": [118.800440139258, 32.0423042219681],
+        "coordinate": [118.769760555571, 32.0581869053873],
         "story": ["wait a moment"]
     },
     {
-        "name": "中山东路的东面牌楼",
-        "value": 1,
-        "coordinate": [118.800783799646, 32.0422747957503],
+        "name": "彩霞街",
+        "value": 3,
+        "coordinate": [118.77331832533, 32.025853004904],
         "story": ["wait a moment"]
     },
     {
-        "name": "大中桥附近尚书巷",
+        "name": "唱经楼",
         "value": 1,
-        "coordinate": [118.801622578101, 32.0295823423438],
+        "coordinate": [118.781272758375, 32.0549795795623],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "朝平仓巷13号",
+        "value": 1,
+        "coordinate": [118.772848921591, 32.0570395664233],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "朝天宫黄鹂巷19号",
+        "value": 1,
+        "coordinate": [118.767424231939, 32.0376183009848],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "朝天宫西街47号",
+        "value": 0,
+        "coordinate": [118.765618522372, 32.0391222265287],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "沈举人巷22号",
+        "value": 2,
+        "coordinate": [118.774772171577, 32.0457650197898],
         "story": ["wait a moment"]
     },
     {
@@ -1241,9 +125,231 @@
         "story": ["wait a moment"]
     },
     {
-        "name": "后宰门321号",
+        "name": "城南",
+        "value": 9,
+        "coordinate": [118.63986647313, 32.0595634965044],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "赤壁路9号",
         "value": 1,
-        "coordinate": [118.813585996755, 32.0488900486661],
+        "coordinate": [118.761498802408, 32.0675597563999],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "船板巷",
+        "value": 1,
+        "coordinate": [118.772857070668, 32.0230018908224],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "慈悲社11号",
+        "value": 1,
+        "coordinate": [118.7741844572, 32.0460344656365],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "慈悲社2号",
+        "value": 1,
+        "coordinate": [118.773915140382, 32.0460891998906],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "慈悲社7号",
+        "value": 0,
+        "coordinate": [118.774659817355, 32.0481654400869],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "大方巷的房子附近",
+        "value": 1,
+        "coordinate": [118.769414456688, 32.0663724015902],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "大纱帽巷1号",
+        "value": 2,
+        "coordinate": [118.786989584277, 32.0521225291311],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "大王府巷24号",
+        "value": 1,
+        "coordinate": [118.772736520939, 32.038354266338],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "大学医院",
+        "value": 6,
+        "coordinate": [118.772694030905, 32.0648231307506],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "大中桥附近尚书巷",
+        "value": 1,
+        "coordinate": [118.801622578101, 32.0295823423438],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "东钓鱼巷",
+        "value": 0,
+        "coordinate": [118.792446009861, 32.0263697181872],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "东瓜市",
+        "value": 0,
+        "coordinate": [118.768066227476, 32.0548807062855],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "东瓜市8号",
+        "value": 1,
+        "coordinate": [118.761505227661, 32.0846264432479],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "豆菜桥",
+        "value": 1,
+        "coordinate": [118.775159242018, 32.0499983795576],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "豆菜桥30号",
+        "value": 2,
+        "coordinate": [118.775159242018, 32.0499983795576],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "峨嵋路7号",
+        "value": 2,
+        "coordinate": [118.859657637907, 32.3399279847648],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "二条巷30—35号",
+        "value": 2,
+        "coordinate": [118.796434011947, 32.0383397135708],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "夫子庙",
+        "value": 1,
+        "coordinate": [118.783728281634, 32.0227294412821],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "福建路, 珠江路",
+        "value": 2,
+        "coordinate": [118.76505027666, 32.0908121280907],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "富民坊",
+        "value": 0,
+        "coordinate": [118.777506473145, 32.0356647398529],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "干河沿18号",
+        "value": 1,
+        "coordinate": [118.775754882119, 32.0508632140744],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "钢银巷",
+        "value": 1,
+        "coordinate": [118.795901684426, 32.04223773804],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "高家酒馆",
+        "value": 1,
+        "coordinate": [118.778504471919, 32.0497310612177],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "高家酒馆44号",
+        "value": 1,
+        "coordinate": [118.778504471919, 32.0497310612177],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "高家酒馆45号",
+        "value": 2,
+        "coordinate": [118.778504471919, 32.0497310612177],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "公园路",
+        "value": 1,
+        "coordinate": [118.797662985052, 32.0305949525179],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "估衣廊",
+        "value": 2,
+        "coordinate": [118.781243322666, 32.0484070755222],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "古林寺",
+        "value": 1,
+        "coordinate": [118.750502008476, 32.0678533562517],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "古林寺9号",
+        "value": 1,
+        "coordinate": [118.750502008476, 32.0678533562517],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "古林寺附近琅玡路",
+        "value": 1,
+        "coordinate": [118.760153195875, 32.0648323743484],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "牯岭路21号",
+        "value": 1,
+        "coordinate": [118.760777434904, 32.0664540857721],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "鼓楼",
+        "value": 2,
+        "coordinate": [118.764570967083, 32.0683819691249],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "鼓楼二条巷",
+        "value": 1,
+        "coordinate": [118.773279666211, 32.0650387629032],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "鼓楼附近",
+        "value": 1,
+        "coordinate": [118.764705080596, 32.0683070490901],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "鼓楼附近王条巷",
+        "value": 1,
+        "coordinate": [118.768706857831, 32.0654255785423],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "鼓楼头条巷3号",
+        "value": 1,
+        "coordinate": [118.772624182757, 32.0623415159341],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "鼓楼新村",
+        "value": 2,
+        "coordinate": [118.765126853701, 32.063621329069],
         "story": ["wait a moment"]
     },
     {
@@ -1253,21 +359,297 @@
         "story": ["wait a moment"]
     },
     {
-        "name": "莫干路9号",
-        "value": 1,
-        "coordinate": [118.818465509443, 31.9146774770734],
-        "story": ["wait a moment"]
-    },
-    {
         "name": "光华路",
         "value": 1,
         "coordinate": [118.824901460338, 32.0214159742616],
         "story": ["wait a moment"]
     },
     {
-        "name": "梅楼街",
+        "name": "广州路",
         "value": 1,
-        "coordinate": [118.834042661136, 31.90025341553],
+        "coordinate": [118.764887730291, 32.0520415885857],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "贵标",
+        "value": 2,
+        "coordinate": [118.789330782898, 32.0367804279982],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "国府路西侧",
+        "value": 0,
+        "coordinate": [118.962541065373, 31.8651672155225],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "汉口路",
+        "value": 3,
+        "coordinate": [118.775427031519, 32.0557709533447],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "汉口路132号",
+        "value": 1,
+        "coordinate": [118.763034842253, 32.0570914252103],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "汉口路23号",
+        "value": 1,
+        "coordinate": [118.766859961265, 32.0567391350846],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "汉口路25号",
+        "value": 1,
+        "coordinate": [118.774629115019, 32.0553850193053],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "汉口路28号",
+        "value": 2,
+        "coordinate": [118.767588601096, 32.0568957583154],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "汉口路5号",
+        "value": 2,
+        "coordinate": [118.775932696881, 32.0552273803522],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "汉口路7号",
+        "value": 1,
+        "coordinate": [118.777417544574, 32.055348061089],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "汉口路8-10号",
+        "value": 0,
+        "coordinate": [118.774810304392, 32.0448148464612],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "汉口路小学",
+        "value": 0,
+        "coordinate": [118.774070565311, 32.0542681889607],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "汉西门",
+        "value": 4,
+        "coordinate": [118.761602068052, 32.0437985425324],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "汉西门56号",
+        "value": 1,
+        "coordinate": [118.767849288733, 32.0412114624525],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "和平门外蟠龙山",
+        "value": 2,
+        "coordinate": [116.144987252659, 39.9416089698407],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "黑廊巷",
+        "value": 1,
+        "coordinate": [118.777765904978, 32.0237433200477],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "红寺庙",
+        "value": 2,
+        "coordinate": [118.790910911326, 32.0641018687707],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "后宰门321号",
+        "value": 1,
+        "coordinate": [118.813585996755, 32.0488900486661],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "湖南路516号的中国工程开发公司",
+        "value": 1,
+        "coordinate": [118.765556631263, 32.0698540129383],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "虎踞关",
+        "value": 0,
+        "coordinate": [118.758302178064, 32.053590916116],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "户部街",
+        "value": 0,
+        "coordinate": [118.784237692199, 32.0374014577146],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "华安里",
+        "value": 2,
+        "coordinate": [118.799176625391, 32.0217624333094],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "华侨大厦附近的房子",
+        "value": 1,
+        "coordinate": [118.762544897961, 32.0743058789842],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "华侨路",
+        "value": 1,
+        "coordinate": [118.776343831121, 32.0484263135478],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "华侨路4号",
+        "value": 1,
+        "coordinate": [118.774681659038, 32.0501609097884],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "华侨路5号",
+        "value": 0,
+        "coordinate": [118.776937258906, 32.0518347361727],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "黄泥岗",
+        "value": 2,
+        "coordinate": [118.741770574414, 31.942120364411],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "黄泥巷30号",
+        "value": 2,
+        "coordinate": [118.829740600232, 31.9564690483703],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "回龙街",
+        "value": 1,
+        "coordinate": [118.76585556942, 32.0299343203289],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "汇文女子中学",
+        "value": 1,
+        "coordinate": [118.779186262639, 32.0509671413592],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "吉兆营",
+        "value": 2,
+        "coordinate": [118.78030347333, 32.0542832273462],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "锏银巷",
+        "value": 1,
+        "coordinate": [118.771602784349, 32.0438063946661],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "建邺路30号",
+        "value": 1,
+        "coordinate": [118.747610917714, 32.0105950206044],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "江苏路23号",
+        "value": 2,
+        "coordinate": [118.76554299488, 32.0657981160576],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "江苏路的草棚",
+        "value": 1,
+        "coordinate": [118.7637464035, 32.0675632117622],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "金陵大学",
+        "value": 12,
+        "coordinate": [118.776490651095, 32.0523563545682],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "金陵大学蚕厂难民收容所",
+        "value": 6,
+        "coordinate": [118.770925257391, 32.0634411280167],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "金陵大学的汉口路19号",
+        "value": 1,
+        "coordinate": [118.767818854604, 32.0564368462025],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "金陵大学附近",
+        "value": 2,
+        "coordinate": [118.776490651095, 32.0523563545682],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "金陵大学胡家菜园11号",
+        "value": 1,
+        "coordinate": [118.768841309992, 32.0185931503069],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "金陵大学农学院",
+        "value": 0,
+        "coordinate": [118.776490651095, 32.0523563545682],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "金陵大学小桃园",
+        "value": 0,
+        "coordinate": [118.851902353368, 31.940516972944],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "金陵女子文理学院难民收容所",
+        "value": 3,
+        "coordinate": [118.7654744364, 32.0604058781108],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "金陵中学南边的安乐里",
+        "value": 1,
+        "coordinate": [118.77679521853, 32.0503342419214],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "九王村",
+        "value": 1,
+        "coordinate": [118.481394379749, 31.9106042285846],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "孔斯特-阿尔贝斯公司（位于中央路）",
+        "value": 1,
+        "coordinate": [118.778827534336, 32.0753630833552],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "拉贝小桃园的家的邻居",
+        "value": 1,
+        "coordinate": [118.851536708627, 31.9406134242018],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "琅玡路11号",
+        "value": 1,
+        "coordinate": [118.760721614081, 32.0641335442807],
         "story": ["wait a moment"]
     },
     {
@@ -1277,9 +659,945 @@
         "story": ["wait a moment"]
     },
     {
-        "name": "拉贝小桃园的家的邻居",
+        "name": "陵园路12号",
         "value": 1,
-        "coordinate": [118.851536708627, 31.9406134242018],
+        "coordinate": [118.77194661302, 32.0062871564648],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "绫庄巷",
+        "value": 2,
+        "coordinate": [118.774230073038, 32.0290886766528],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "柳叶街",
+        "value": 1,
+        "coordinate": [118.769857494645, 32.0273940582379],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "龙蟠里",
+        "value": 2,
+        "coordinate": [118.759382302829, 32.047909198677],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "陆军大学",
+        "value": 2,
+        "coordinate": [118.777837818317, 32.0582361822117],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "陆军大学的难民收容所",
+        "value": 4,
+        "coordinate": [118.777837818317, 32.0582361822117],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "珞珈路",
+        "value": 0,
+        "coordinate": [118.760446293693, 32.065727736098],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "珞珈路16号",
+        "value": 1,
+        "coordinate": [118.760446293693, 32.065727736098],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "珞珈路17号",
+        "value": 2,
+        "coordinate": [118.760499309169, 32.0659178079999],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "珞珈路25号对面",
+        "value": 1,
+        "coordinate": [118.760446293693, 32.065727736098],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "珞珈路5号",
+        "value": 2,
+        "coordinate": [118.759234047544, 32.0605639363167],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "马台街",
+        "value": 1,
+        "coordinate": [118.767124532278, 32.074745293881],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "马台街29号",
+        "value": 2,
+        "coordinate": [118.767124532278, 32.074745293881],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "梅楼街",
+        "value": 1,
+        "coordinate": [118.834042661136, 31.90025341553],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "美国大使馆",
+        "value": 1,
+        "coordinate": [118.758350115422, 32.0653565409111],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "美国大使馆住房",
+        "value": 1,
+        "coordinate": [118.758350115422, 32.0653565409111],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "美国学校(五台山)",
+        "value": 2,
+        "coordinate": [118.768624111181, 32.0510023135846],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "门东膺福街",
+        "value": 1,
+        "coordinate": [118.778600790284, 32.0150913033675],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "门东转龙巷",
+        "value": 2,
+        "coordinate": [118.786085716338, 32.0135145042294],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "莫愁路",
+        "value": 1,
+        "coordinate": [118.769067800547, 32.0373236186207],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "莫愁路13号",
+        "value": 1,
+        "coordinate": [118.749484294255, 32.0304158003626],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "莫干路11号",
+        "value": 1,
+        "coordinate": [118.617758474796, 32.0550692854419],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "莫干路19号",
+        "value": 0,
+        "coordinate": [118.759234047544, 32.0605639363167],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "莫干路2号",
+        "value": 1,
+        "coordinate": [118.729901007764, 32.0377975346279],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "莫干路5号",
+        "value": 1,
+        "coordinate": [118.759234047544, 32.0605639363167],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "莫干路6号",
+        "value": 1,
+        "coordinate": [118.763153362713, 32.06321685712],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "莫干路7号",
+        "value": 0,
+        "coordinate": [118.738108239002, 32.0213263250326],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "莫干路8号",
+        "value": 1,
+        "coordinate": [118.762727112013, 32.0625834370075],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "莫干路9号",
+        "value": 1,
+        "coordinate": [118.818465509443, 31.9146774770734],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "内桥一家当铺对面",
+        "value": 1,
+        "coordinate": [118.780999578863, 32.031058852162],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "宁海路",
+        "value": 3,
+        "coordinate": [118.7654744364, 32.0604058781108],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "宁海路13号",
+        "value": 0,
+        "coordinate": [118.763422789586, 32.0607554953912],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "宁海路21号",
+        "value": 2,
+        "coordinate": [118.761906679043, 32.061055578132],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "宁海路25号",
+        "value": 1,
+        "coordinate": [118.767456828572, 32.0639592104972],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "宁海路25号红十字会",
+        "value": 1,
+        "coordinate": [118.767456828572, 32.0639592104972],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "宁海路2号红卍字会",
+        "value": 2,
+        "coordinate": [118.763901611977, 32.0665871051979],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "宁海路33号",
+        "value": 1,
+        "coordinate": [118.7654744364, 32.0604058781108],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "宁海路40号",
+        "value": 0,
+        "coordinate": [118.762834218254, 32.0730808014919],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "宁海路4号",
+        "value": 0,
+        "coordinate": [118.763932679592, 32.0661130228699],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "宁海路5号",
+        "value": 0,
+        "coordinate": [118.764186843887, 32.0664562754827],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "宁海路以东的华新巷",
+        "value": 0,
+        "coordinate": [118.767354203154, 32.0589000111143],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "平安巷",
+        "value": 3,
+        "coordinate": [118.770286698061, 32.0298810131213],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "平仓巷16号",
+        "value": 1,
+        "coordinate": [118.772848921591, 32.0570395664233],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "平仓巷6号",
+        "value": 1,
+        "coordinate": [118.772848921591, 32.0570395664233],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "评事街",
+        "value": 1,
+        "coordinate": [118.77454630542, 32.0305803463631],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "普陀路7号",
+        "value": 1,
+        "coordinate": [118.762075585877, 32.0633171819511],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "七家湾",
+        "value": 1,
+        "coordinate": [118.770769913626, 32.0329181481487],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "七家湾附近小礼拜寺",
+        "value": 0,
+        "coordinate": [118.764376500143, 32.0393123619187],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "热河路",
+        "value": 1,
+        "coordinate": [118.737331025516, 32.0915030608335],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "萨家湾附近盐仓桥",
+        "value": 1,
+        "coordinate": [118.746594692885, 32.0881552242959],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "三茅宫13号罗马天主教堂后面",
+        "value": 0,
+        "coordinate": [118.774701474444, 32.0415750018994],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "三牌楼2号",
+        "value": 2,
+        "coordinate": [118.76072100568, 32.0815143140853],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "三牌楼和外交部之间的狮子桥",
+        "value": 1,
+        "coordinate": [118.772699654445, 32.0689670434934],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "三牌楼火车站",
+        "value": 1,
+        "coordinate": [118.763301035553, 32.0787443338025],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "三牌楼区模范马路",
+        "value": 1,
+        "coordinate": [118.761734957691, 32.0784042528925],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "三省里",
+        "value": 1,
+        "coordinate": [118.765972816276, 32.060816345535],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "三条巷",
+        "value": 1,
+        "coordinate": [118.795567383035, 32.0389254551695],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "三元巷附近",
+        "value": 1,
+        "coordinate": [118.778486621927, 32.0370001733694],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "扫帚巷",
+        "value": 1,
+        "coordinate": [118.778678176646, 32.0120036838084],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "山西路大方巷6号",
+        "value": 0,
+        "coordinate": [118.767768888419, 32.0663960014054],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "上海路115号",
+        "value": 1,
+        "coordinate": [118.779852985186, 32.3011612761349],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "上海路46号",
+        "value": 1,
+        "coordinate": [118.767903755734, 32.0366974868714],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "申家巷",
+        "value": 1,
+        "coordinate": [118.792206997821, 32.032886838195],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "升州路171号",
+        "value": 1,
+        "coordinate": [118.77291775098, 32.0272029115262],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "石坝街",
+        "value": 1,
+        "coordinate": [118.788324349025, 32.023589966787],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "石鼓路",
+        "value": 2,
+        "coordinate": [118.770921130221, 32.0431095951617],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "双龙巷",
+        "value": 1,
+        "coordinate": [118.780520364774, 32.0587064748168],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "双塘",
+        "value": 3,
+        "coordinate": [118.76890586698, 32.0240694607298],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "水西门",
+        "value": 3,
+        "coordinate": [118.764679418828, 32.0319549097967],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "四条巷",
+        "value": 1,
+        "coordinate": [118.79325434064, 32.0380996306],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "四象桥",
+        "value": 4,
+        "coordinate": [118.785006619548, 32.0291036028875],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "四象桥太平旅店",
+        "value": 1,
+        "coordinate": [118.783942286041, 32.0261445047557],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "太平桥",
+        "value": 0,
+        "coordinate": [118.796353966179, 32.0481347909649],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "陶谷新村8号",
+        "value": 1,
+        "coordinate": [118.769870842546, 32.0562725795698],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "天妃巷",
+        "value": 1,
+        "coordinate": [118.770555922258, 32.0412708425771],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "天目路",
+        "value": 3,
+        "coordinate": [118.762130823818, 32.0611567407053],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "天青街384号",
+        "value": 2,
+        "coordinate": [118.713838474344, 32.166727366478],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "天竺路",
+        "value": 0,
+        "coordinate": [118.75919676538, 32.0633845383691],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "铁管巷",
+        "value": 1,
+        "coordinate": [118.776839994782, 32.0425265390304],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "通济门",
+        "value": 1,
+        "coordinate": [118.796066316494, 32.0277207078583],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "通济门附近",
+        "value": 2,
+        "coordinate": [118.796066316494, 32.0277207078583],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "同仁街",
+        "value": 1,
+        "coordinate": [118.781680497603, 32.0532166987012],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "同仁街18号",
+        "value": 1,
+        "coordinate": [118.781680497603, 32.0532166987012],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "王府巷",
+        "value": 1,
+        "coordinate": [118.772473429738, 32.0361935174751],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "吴家花园",
+        "value": 2,
+        "coordinate": [119.076321516453, 32.2028513754087],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "五台山附近",
+        "value": 0,
+        "coordinate": [118.773538262724, 32.0509208970792],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "五台山小学难民收容所",
+        "value": 4,
+        "coordinate": [118.773538262724, 32.0509208970792],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "五台山永庆巷",
+        "value": 1,
+        "coordinate": [118.769980693063, 32.0482548897491],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "西华门",
+        "value": 1,
+        "coordinate": [118.798246367491, 32.0382526493649],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "西华门二条巷孙园",
+        "value": 1,
+        "coordinate": [118.796760488147, 32.0396635407914],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "西华门三条巷",
+        "value": 0,
+        "coordinate": [118.795567383035, 32.0389254551695],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "西郊",
+        "value": 2,
+        "coordinate": [118.807170671515, 32.3646829376974],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "西康路",
+        "value": 1,
+        "coordinate": [118.759194789881, 32.0631074763782],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "西门太平桥",
+        "value": 0,
+        "coordinate": [118.793835493916, 32.0475606661434],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "西门子难民收容所(广州路46号)",
+        "value": 1,
+        "coordinate": [118.764887730291, 32.0520415885857],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "西石坝街",
+        "value": 0,
+        "coordinate": [118.77920587175, 31.771968262867],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "西玉壶坊",
+        "value": 1,
+        "coordinate": [118.789906282768, 32.0199644366805],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "下关",
+        "value": 3,
+        "coordinate": [118.734148558266, 32.0903749595928],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "下江考棚",
+        "value": 1,
+        "coordinate": [118.778101781727, 32.0189476080834],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "小桃园",
+        "value": 2,
+        "coordinate": [118.851902353368, 31.940516972944],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "小王府园35号",
+        "value": 1,
+        "coordinate": [118.783392223877, 32.0288173914057],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "新桥",
+        "value": 3,
+        "coordinate": [118.773603092766, 32.0210361913273],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "徐府巷4号",
+        "value": 1,
+        "coordinate": [118.778351982335, 32.085382673845],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "薛家巷4号",
+        "value": 0,
+        "coordinate": [118.781001245689, 32.05640755879],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "颐和路",
+        "value": 1,
+        "coordinate": [118.761851216693, 32.0656465536247],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "颐和路12号",
+        "value": 1,
+        "coordinate": [118.762420561355, 32.0661830298561],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "颐和路18号",
+        "value": 2,
+        "coordinate": [118.762399607471, 32.0655248721701],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "颐和路19号",
+        "value": 1,
+        "coordinate": [118.761198848685, 32.0649189973113],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "颐和路6号",
+        "value": 3,
+        "coordinate": [118.810459770953, 32.1005364741131],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "颐和路东头",
+        "value": 1,
+        "coordinate": [118.761851216693, 32.0656465536247],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "阴阳营",
+        "value": 5,
+        "coordinate": [118.766962976341, 32.0575633999866],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "阴阳营43号、44号、45号和46号",
+        "value": 3,
+        "coordinate": [118.766962976341, 32.0575633999866],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "阴阳营47号",
+        "value": 1,
+        "coordinate": [118.766962976341, 32.0575633999866],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "阴阳营49号",
+        "value": 3,
+        "coordinate": [118.766962976341, 32.0575633999866],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "阴阳营71-1号",
+        "value": 1,
+        "coordinate": [118.766965468284, 32.0630856217235],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "饮马巷",
+        "value": 1,
+        "coordinate": [118.771761437501, 32.0168804170858],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "鱼市街",
+        "value": 0,
+        "coordinate": [118.783441132037, 32.0523187607551],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "雨花路80号",
+        "value": 2,
+        "coordinate": [118.77030062435, 31.9982937665221],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "沅江新村6号",
+        "value": 1,
+        "coordinate": [118.728345385553, 32.0568067303498],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "云南路丁家桥",
+        "value": 2,
+        "coordinate": [118.772292616533, 32.0753530305302],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "瞻园路",
+        "value": 0,
+        "coordinate": [118.78033649006, 32.0220309736601],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "张府园",
+        "value": 2,
+        "coordinate": [118.77873131183, 32.0330145556557],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "张公桥22号",
+        "value": 0,
+        "coordinate": [118.765086187738, 32.0380005772154],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "长白街太平巷",
+        "value": 1,
+        "coordinate": [118.790560108468, 32.0337735577074],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "长乐路",
+        "value": 1,
+        "coordinate": [118.779827981202, 32.0200018908346],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "止马村",
+        "value": 1,
+        "coordinate": [118.765230402113, 32.0369524460791],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "止马营",
+        "value": 1,
+        "coordinate": [118.766572587898, 32.0363953427456],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "中华路基督教女中",
+        "value": 1,
+        "coordinate": [118.78025263386, 32.0300767093302],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "中华门",
+        "value": 3,
+        "coordinate": [118.776619269014, 32.0148449837839],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "中华门里",
+        "value": 1,
+        "coordinate": [118.776619269014, 32.0148449837839],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "中华门麦糖街",
+        "value": 1,
+        "coordinate": [118.776619269014, 32.0148449837839],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "中山北路244号",
+        "value": 1,
+        "coordinate": [118.736746058779, 32.0936216850109],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "中山北路和三牌楼的交叉路口",
+        "value": 1,
+        "coordinate": [118.763280080006, 32.0780961803735],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "中山东路",
+        "value": 1,
+        "coordinate": [118.800440139258, 32.0423042219681],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "中山东路的东面牌楼",
+        "value": 1,
+        "coordinate": [118.800783799646, 32.0422747957503],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "中山东路路边的天明浴室",
+        "value": 2,
+        "coordinate": [118.807195445988, 32.0422499464225],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "中山路209号德士古公司",
+        "value": 1,
+        "coordinate": [118.76569353567, 32.0721236098149],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "朱家苑",
+        "value": 0,
+        "coordinate": [119.184662712478, 31.6350898506803],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "珠江路",
+        "value": 3,
+        "coordinate": [118.779005831455, 32.0530303877716],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "珠江路附近的小纱帽巷",
+        "value": 1,
+        "coordinate": [118.800110973882, 32.0481619848897],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "竹丝巷",
+        "value": 0,
+        "coordinate": [118.925222664728, 31.3731768873305],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "自下路",
+        "value": 0,
+        "coordinate": [118.8698003003, 32.0199059350722],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "北秀村1号、4号、6号和8号（北秀村）",
+        "value": 1,
+        "coordinate": [118.770032854106, 32.0579090882865],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "大方巷的难民收容所（大方巷东口）",
+        "value": 2,
+        "coordinate": [118.769466504514, 32.0664094556417],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "鼓楼西难民收容所（鼓楼广场西侧）",
+        "value": 7,
+        "coordinate": [118.778892964695, 32.0608009783418],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "国府路",
+        "value": 1,
+        "coordinate": [118.963517029847, 31.8643074719416],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "汉口路小学难民收容所（汉口路）",
+        "value": 7,
+        "coordinate": [118.775427031519, 32.0557709533447],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "金陵女子文理学院（宁海路南端西侧）",
+        "value": 5,
+        "coordinate": [118.765372357144, 32.0603507898306],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "金陵女子文理学院对面田祥(音译)先生家的附近（宁海路南端东侧）",
+        "value": 1,
+        "coordinate": [118.7654744364, 32.0604058781108],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "金陵神学院（大锏银巷17号)",
+        "value": 2,
+        "coordinate": [118.772863914691, 32.0464602199805],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "里格斯的住所（汉口路）",
+        "value": 1,
+        "coordinate": [118.775427031519, 32.0557709533447],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "宁波同乡会的后屋（南京鼓楼头条巷4号）",
+        "value": 1,
+        "coordinate": [118.773134750968, 32.0623520263425],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "日本领事馆（鼓楼区五台山1-3号）",
+        "value": 1,
+        "coordinate": [118.770634205937, 32.0499038544704],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "首都饭店（中山北路178号）",
+        "value": 1,
+        "coordinate": [118.764894681559, 32.0742654822029],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "司法部大楼附近（中山路251号）",
+        "value": 1,
+        "coordinate": [118.778571058679, 32.0551633507907],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "新巷桥（新巷？）",
+        "value": 1,
+        "coordinate": [118.873364306713, 32.1393118306224],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "中华女校(基督教女子中学-北京东路4号)、基督会教堂",
+        "value": 1,
+        "coordinate": [118.78025263386, 32.0300767093302],
         "story": ["wait a moment"]
     }
 ]
