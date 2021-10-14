@@ -1,5 +1,5 @@
 var max_width = window.innerWidth
-document.getElementById("story_table").style['max-width'] = max_width - 950 + "px"
+document.getElementById("story_table").style['max-width'] = max_width - 900 + "px"
 
 var svg_map_2 = d3.select("#clickable_1")
     .append("svg")
@@ -372,7 +372,7 @@ function draw_refugee(refugee_data) {
             .transition()
             .duration(1200)
             .attr('r', function() {
-                return this.__data__.value + 8
+                return this.__data__.value + 6
             })
             .transition()
             .duration(1200)
