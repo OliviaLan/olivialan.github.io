@@ -1,0 +1,31 @@
+[{
+        "name": "金陵大学蚕厂难民收容所",
+        "value": 6,
+        "coordinate": [118.770925257391, 32.0634411280167],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "陆军大学的难民收容所",
+        "value": 4,
+        "coordinate": [118.777837818317, 32.0582361822117],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "五台山小学难民收容所",
+        "value": 4,
+        "coordinate": [118.773538262724, 32.0509208970792],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "金陵女子文理学院难民收容所",
+        "value": 3,
+        "coordinate": [118.7654744364, 32.0604058781108],
+        "story": ["wait a moment"]
+    },
+    {
+        "name": "西门子难民收容所(广州路46号)",
+        "value": 1,
+        "coordinate": [118.764887730291, 32.0520415885857],
+        "story": ["wait a moment"]
+    }
+]

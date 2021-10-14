@@ -37,12 +37,27 @@ article {
     /* width: 100px;
     height: 60px; */
     padding: 10px;
-    font: 16px sans-serif;
-    background: brown;
+    font: 14px sans-serif;
+    background: #A13924;
     border: 0px;
     border-radius: 8px;
     pointer-events: none;
     max-width: 400px;
+}
+
+.tooltip_network {
+    position: absolute;
+    color: black;
+    background-color: white;
+    max-width: 250px;
+    /* height: auto; */
+    padding: 5px;
+    line-height: 1.2;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+    pointer-events: none;
 }
 
 .kill {

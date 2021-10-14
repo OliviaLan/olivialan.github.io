@@ -1,3 +1,6 @@
+var max_width = window.innerWidth
+document.getElementById("story_table").style['max-width'] = max_width - 950 + "px"
+
 var svg_map_2 = d3.select("#clickable_1")
     .append("svg")
     .attr("viewBox", "0 0 " + 700 + " " + 700)
@@ -26,12 +29,11 @@ var projection_large = d3.geoMercator()
     // .translate([width / 2, height / 2]);
 
 var projection_small = d3.geoMercator()
-    .center([118.7789, 32.065])
-    .scale(100000)
+    .center([118.8089, 32.065])
+    .scale(300000)
     //整个上海.scale(23000)
     // .translate([width / 2, height / 2]);
 
-var refugee = ["金陵大学蚕厂难民收容所", "金陵女子文理学院难民收容所", "五台山小学难民收容所"];
 
 var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
@@ -47,8 +49,8 @@ function draw_large_city(geo_data) {
     // "use strict";
     var margin = 30,
         // width = $(window).width() / 2.5 - margin,
-        width = 800 - margin,
-        height = 800 - margin;
+        width = 700 - margin,
+        height = 700 - margin;
 
     svg_map_2
         .append("svg")
@@ -61,25 +63,25 @@ function draw_large_city(geo_data) {
         .attr('class', 'map');
 
     //生成一个渐变的defs
-    var gradient = svg_map_2.append("defs")
-        .append("radialGradient")
-        .attr("id", "grad1")
-        .attr("cx", "50%")
-        .attr("cy", "50%")
-        .attr("r", "50%")
-        .attr("fx", "50%")
-        .attr("fy", "50%")
+    // var gradient = svg_map_2.append("defs")
+    //     .append("radialGradient")
+    //     .attr("id", "grad1")
+    //     .attr("cx", "50%")
+    //     .attr("cy", "50%")
+    //     .attr("r", "50%")
+    //     .attr("fx", "50%")
+    //     .attr("fy", "50%")
 
-    gradient
-        .append("stop")
-        .attr("offset", "20%")
-        .style("stop-color", "brown")
+    // gradient
+    //     .append("stop")
+    //     .attr("offset", "20%")
+    //     .style("stop-color", "blue")
 
 
-    gradient
-        .append("stop")
-        .attr("offset", "100%")
-        .style("stop-color", "rgb(43, 43, 43)")
+    // gradient
+    //     .append("stop")
+    //     .attr("offset", "100%")
+    //     .style("stop-color", "rgb(43, 43, 43)")
 
 
     var tooltip = d3.select("body").append("div")
@@ -133,84 +135,14 @@ function draw_polygon(polygon_data) {
         .enter()
         .append('path')
         .attr('d', path)
-        .attr('fill', 'yellow')
-        .attr('opacity', 0.5)
+        .attr('fill', 'white')
+        .attr('opacity', 0.3)
         .attr('stroke', "white")
         .attr('stroke-width', 1)
         .attr('stroke-opacity', 1);
 };
 
-d3.json("data/anquanqu.json", draw_polygon);
 
-
-//下面是画散点的
-function draw_sights(sights_data) {
-    var sights = svg_map_3
-        .selectAll("circle")
-        .data(sights_data)
-        .enter()
-        .append('circle')
-        .attr('cx', function(d) {
-            return projection_small(d.coordinate)[0]
-        })
-        .attr('cy', function(d) {
-            return projection_small(d.coordinate)[1]
-        })
-        .attr('fill', function(d) {
-            if (refugee.includes(d.name)) {
-                return "orange"
-            } else {
-                return "url(#grad1)"
-            }
-        })
-        .attr('opacity', 0.9)
-        .attr("r", function(d) {
-            return d.value + 2
-        })
-        // .attr('stroke', '#505ab5')
-        // .attr('stroke-opacity', '1')
-        // .attr('stroke-width', '3')
-        .on("mouseover", function(d) {
-            // debugger;
-            sights_tooltip.transition()
-                .duration(200)
-                .style("opacity", 0.9);
-            sights_tooltip.html('<strong>' + d.name + '</strong><br>' + d.value)
-                .style("left", (d3.event.pageX) + "px")
-                .style("top", (d3.event.pageY - 28) + "px");
-        })
-        .on("mouseout", function(d) {
-            sights_tooltip.transition()
-                .duration(500)
-                .style("opacity", 0);
-        })
-        .on("click", function(d) {
-            document.getElementById("map").style['background-image'] = 'url("./img/' + (d.id + 1) + '.jpeg")'
-        });
-
-    // repeat();
-
-    //点点放大缩小动画
-    function repeat() {
-        sights.attr("r", function() {
-                return this.__data__.value + 2
-            })
-            .transition()
-            .duration(1200)
-            .attr('r', function() {
-                return this.__data__.value + 5
-            })
-            .transition()
-            .duration(1200)
-            .attr('r', function() {
-                return this.__data__.value + 2
-            })
-            //version4里面each变成了on
-            .on("end", repeat)
-    }
-}
-
-d3.json("data/spot.json", draw_sights);
 
 
 function draw(geo_data) {
@@ -243,7 +175,7 @@ function draw(geo_data) {
     gradient
         .append("stop")
         .attr("offset", "20%")
-        .style("stop-color", "brown")
+        .style("stop-color", "#A13924")
 
 
     gradient
@@ -251,6 +183,26 @@ function draw(geo_data) {
         .attr("offset", "100%")
         .style("stop-color", "rgb(43, 43, 43)")
 
+
+    var gradient_2 = svg_map_3.append("defs")
+        .append("radialGradient")
+        .attr("id", "grad2")
+        .attr("cx", "50%")
+        .attr("cy", "50%")
+        .attr("r", "50%")
+        .attr("fx", "50%")
+        .attr("fy", "50%")
+
+    gradient_2
+        .append("stop")
+        .attr("offset", "20%")
+        .style("stop-color", "#FCFCFC")
+
+
+    gradient_2
+        .append("stop")
+        .attr("offset", "100%")
+        .style("stop-color", "rgb(43, 43, 43)")
 
     var tooltip = d3.select("body").append("div")
         .attr("class", "tooltip")
@@ -358,4 +310,131 @@ function draw(geo_data) {
 
     //projection初次设定后，可以画个圆检查落点; 或用于添加景点、地标等
 };
-d3.json("data/nanjing.json", draw);
+
+//下面是画散点的
+
+//可以把难民营和其他sights分开，两次append
+
+function draw_refugee(refugee_data) {
+    var sights = svg_map_3
+        .append('g')
+        .selectAll("circle")
+        .data(refugee_data)
+        .enter()
+        .append('circle')
+        .attr('cx', function(d) {
+            return projection_small(d.coordinate)[0]
+        })
+        .attr('cy', function(d) {
+            return projection_small(d.coordinate)[1]
+        })
+        .attr('fill', "url(#grad2)")
+        //"url(#grad2)"
+        .attr('opacity', 0.9)
+        .attr("r", function(d) {
+            return d.value + 4
+        })
+        // .attr('stroke', '#505ab5')
+        // .attr('stroke-opacity', '1')
+        // .attr('stroke-width', '3')
+        .on("mouseover", function(d) {
+            // debugger;
+            sights_tooltip.transition()
+                .duration(200)
+                .style("opacity", 0.9);
+            sights_tooltip.html('<strong>' + d.name + '</strong><br>' + d.value + "条记录")
+                .style("left", (d3.event.pageX) + "px")
+                .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(d) {
+            sights_tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        })
+        .on("click", function(d) {
+            document.getElementById("story_table").innerHTML = ''
+                // document.getElementById("story_table").style['background-color'] = 'red'
+            for (i = 0; i < d.story.length; i++) {
+                document.getElementById("story_table").innerHTML += "<br><hr color='#A13924' size='0.5'>" + d.story[i]
+            }
+        });
+
+
+
+
+    repeat();
+
+    //点点放大缩小动画
+    function repeat() {
+        sights.attr("r", function() {
+                return this.__data__.value + 4
+            })
+            .transition()
+            .duration(1200)
+            .attr('r', function() {
+                return this.__data__.value + 8
+            })
+            .transition()
+            .duration(1200)
+            .attr('r', function() {
+                return this.__data__.value + 4
+            })
+            //version4里面each变成了on
+            .on("end", repeat)
+    }
+}
+
+
+function draw_spot(spot_data) {
+    var spots = svg_map_3
+        .append('g')
+        .selectAll("circle")
+        .data(spot_data)
+        .enter()
+        .append('circle')
+        .attr('cx', function(d) {
+            return projection_small(d.coordinate)[0]
+        })
+        .attr('cy', function(d) {
+            return projection_small(d.coordinate)[1]
+        })
+        .attr('fill', "url(#grad1)")
+        //"url(#grad1)"
+        .attr('opacity', 0.8)
+        .attr("r", function(d) {
+            return d.value + 4
+        })
+        // .attr('stroke', '#505ab5')
+        // .attr('stroke-opacity', '1')
+        // .attr('stroke-width', '3')
+        .on("mouseover", function(d) {
+            // debugger;
+            sights_tooltip.transition()
+                .duration(200)
+                .style("opacity", 0.9);
+            sights_tooltip.html('<strong>' + d.name + '</strong><br>' + d.value + "条记录")
+                .style("left", (d3.event.pageX) + "px")
+                .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(d) {
+            sights_tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        })
+        .on("click", function(d) {
+            document.getElementById("story_table").innerHTML = ''
+                // document.getElementById("story_table").style['background-color'] = 'red'
+            for (i = 0; i < d.story.length; i++) {
+                document.getElementById("story_table").innerHTML += "<br><hr color='#A13924' size='0.5'>" + d.story[i]
+            }
+        });
+
+    // .on("click", function(d) {
+    //     document.getElementById("map").style['background-image'] = 'url("./img/' + (d.id + 1) + '.jpeg")'
+    // });
+}
+
+d3.json("data/labei.json", draw);
+d3.json("data/anquanqu.json", draw_polygon);
+d3.json("data/spot.json", draw_spot);
+d3.json("data/refugee.json", draw_refugee);
