@@ -25,8 +25,8 @@ article {
     margin: 30px;
 }
 
-.counter {
-    font-size: 80px;
+.guidance {
+    font-size: 18px;
     text-align: left;
     font-weight: 600;
 }
@@ -121,14 +121,14 @@ article {
     height: 13px;
     /* border: 2px solid white; */
     border-radius: 50%;
-    background: brown;
+    background: #A13924;
     cursor: pointer;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 
 .button {
     border-radius: 5px;
-    width: 55px;
+    /* width: 55px; */
     /* font-size: 14px; */
     vertical-align: text-top;
     color: black;
@@ -139,11 +139,11 @@ article {
 
 .button:hover {
     color: white;
-    background-color: brown;
+    background-color: #A13924;
 }
 
 .selectSort {
-    background-color: brown;
+    background-color: #A13924;
     color: white;
     padding: 5px;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;

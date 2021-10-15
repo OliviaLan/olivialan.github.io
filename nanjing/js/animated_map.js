@@ -1,6 +1,10 @@
-var displayYear = 1970,
+var max_width = window.innerWidth
+document.getElementById("story_table_2").style['max-width'] = max_width - 900 + "px"
+
+
+var displayDay = 0,
     isPlaying = false,
-    animationInterval = 1000;
+    animationInterval = 1500;
 
 /* Event handling */
 
@@ -8,7 +12,7 @@ function initializeEventHandlers(sights_data) {
     d3.select("#year-input")
         .on("input", function() {
             isPlaying = false;
-            displayYear = +this.value;
+            displayDay = +this.value;
             updateChart(sights_data);
         });
 
@@ -17,6 +21,11 @@ function initializeEventHandlers(sights_data) {
             isPlaying = !isPlaying;
         });
 }
+
+var tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
 
 /* Initialization */
 // function initializeAxes() {
@@ -41,14 +50,14 @@ function initializeEventHandlers(sights_data) {
 function initializeAnimation(sights_data) {
     window.setInterval(function() {
         if (!isPlaying) {
-            d3.select("#play-button").node().innerText = "Play"
+            d3.select("#play-button").node().innerText = "播放动画"
             return;
         } else {
-            d3.select("#play-button").node().innerText = "Pause"
+            d3.select("#play-button").node().innerText = "停止动画"
         }
-        displayYear += 1;
-        if (displayYear > 1980) {
-            displayYear = 1970;
+        displayDay += 1;
+        if (displayDay > 55) {
+            displayDay = 0;
         }
         updateChart(sights_data);
     }, animationInterval);
@@ -73,11 +82,11 @@ function initializeAnimation(sights_data) {
 //     });
 // }
 
-var svg_map = d3.select("#clickable_3")
+var svg_map = d3.select("#animated_map")
 
 //设置地图映射方式
 var projection = d3.geoMercator()
-    .center([118.7789, 32.065])
+    .center([118.8089, 32.065])
     .scale(300000)
     //整个上海.scale(23000)
     // .translate([width / 2, height / 2]);
@@ -233,7 +242,7 @@ d3.json("data/labei.json", draw);
 function updateChart(sights_data) {
 
     var yearData = sights_data.filter(function(d) {
-        return d.year === displayYear;
+        return d.day_id === displayDay;
     });
 
     svg_map.selectAll("circle")
@@ -242,9 +251,6 @@ function updateChart(sights_data) {
     var sights = svg_map
         .selectAll("circle")
         .data(yearData)
-
-
-    sights
         .enter()
         .append('circle')
         .attr('cx', function(d) {
@@ -254,22 +260,47 @@ function updateChart(sights_data) {
             return projection(d.coordinate)[1]
         })
         .attr('fill', "url(#grad1)")
-        .attr('opacity', 0.7)
+        .attr('opacity', 0.9)
+        // .attr("r", function(d) {
+        //     return d.value + 4
+        // })
         .attr("r", 0)
+        .on("mouseover", function(d) {
+            // debugger;
+            sights_tooltip.transition()
+                .duration(200)
+                .style("opacity", 0.9);
+            sights_tooltip.html('<strong>' + d.name + '</strong><br>' + d.value + "条犯罪记录")
+                .style("left", (d3.event.pageX) + "px")
+                .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(d) {
+            sights_tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        })
+        .on("click", function(d) {
+            document.getElementById("story_table_2").innerHTML = ''
+                // document.getElementById("story_table").style['background-color'] = 'red'
+            for (i = 0; i < d.story.length; i++) {
+                document.getElementById("story_table_2").innerHTML += "<br><hr color='#A13924' size='0.5'>" + d.story[i]
+            }
+        })
         .transition()
-        .duration(animationInterval - 200)
+        .duration(1200)
         .attr("r", function(d) {
-            return d.value + 30
+            return d.value + 8
         });
 
 
+
     // Update main title
-    d3.select("#time").node().innerText = displayYear;
-    // .text("中国人口结构金字塔 (" + displayYear + ")");
+    d3.select("#time").node().innerText = "距12月13日南京大屠杀：" + displayDay + "天";
+    // .text("中国人口结构金字塔 (" + displayDay + ")");
 
     // Update slider
     d3.select("#year-input")
-        .node().value = displayYear;
+        .node().value = displayDay;
 
 }
 

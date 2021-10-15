@@ -39,7 +39,7 @@
     <div id="map" style="background-image:url();">
         <svg id="clickable_2" width="700" height="680"></svg>
         <div style="display: inline-block; vertical-align: top; margin-left: 50px;">
-            <div style="font-size: 16px; font-weight: bold;">点击地图上的地点查看拉贝日记（白点表示难民收容所）：</div>
+            <div class="guidance">点击地图上的地点查看拉贝日记（白点表示难民收容所）：</div>
             <div id="story_table">
             </div>
         </div>
@@ -47,50 +47,50 @@
 
 
     <div>
-        <svg id="clickable_3" width="800 " height="680 "></svg>
-        <div style="display: inline-block; vertical-align: top;">
-            <div id="time" class="counter" x="0" y="20">1970</div>
-            <div id="controls">
-                <input class="slider" type="range" id="year-input" value="1970" min="1970" max="1980" step="1" />
-                <button class="button" id="play-button">Play</button>
+        <svg id="animated_map" width="700 " height="680 "></svg>
+        <div style="display: inline-block; vertical-align: top; margin-left: 50px;">
+            <div id="time" class="guidance" x="0" y="20">0</div>
+            <div id="controls" style="margin-top: 20px;">
+                <input class="slider" type="range" id="year-input" value="0" min="0" max="55" step="1" />
+                <button class="button" id="play-button">播放动画</button>
+                <div id="story_table_2"></div>
             </div>
         </div>
-    </div>
 
 
-    <div style="text-align: center;">
-        <p class="title" style="margin:auto;">Keywords</p>
-        <select class="selectSort" style="display: block; margin:auto; margin-top: 30px;">
+        <div style="text-align: center;">
+            <p class="title" style="margin:auto;">Keywords</p>
+            <select class="selectSort" style="display: block; margin:auto; margin-top: 30px;">
             <option value="Group">by Cluster</option>
             <option value="Frequency">by Frequency</option>
             <option value="Name">by Name</option>
         </select>
-        <svg id="arc" width="1000" height="600" style="margin:auto;"></svg>
-    </div>
+            <svg id="arc" width="1000" height="600" style="margin:auto;"></svg>
+        </div>
 
-    <div style="text-align: center;">
-        <p class="title" style="margin:auto;">Network</p>
-        <svg id="network" width="1000" height="600" style="margin:auto;"></svg>
-    </div>
-
-
-
-    <!-- <iframe src="https://embed.kumu.io/62bdfd279e7ba91448b30a568f5d612e" width="940" height="600" frameborder="0"></iframe> -->
+        <div style="text-align: center;">
+            <p class="title" style="margin:auto;">Network</p>
+            <svg id="network" width="1000" height="600" style="margin:auto;"></svg>
+        </div>
 
 
 
-    <script type="text/javascript" src="timeline_data.js"></script>
-    <script type="text/javascript" src="glyph_data.js"></script>
-    <script type="text/javascript" src="arc_data.js"></script>
-    <script type="text/javascript" src='js/bubble.js'></script>
-    <script type="text/javascript" src='js/glyph.js'></script>
-    <script type="text/javascript " src='js/map.js'></script>
-    <script type="text/javascript " src='js/animated_map.js'></script>
-    <script type="text/javascript" src="js/arc.js"></script>
-    <script type="text/javascript" src="js/network.js"></script>
+        <!-- <iframe src="https://embed.kumu.io/62bdfd279e7ba91448b30a568f5d612e" width="940" height="600" frameborder="0"></iframe> -->
 
-    <!-- <script src='js/spirial.js'></script> -->
-    <!-- <script src='js/curve.js'></script> -->
+
+
+        <script type="text/javascript" src="timeline_data.js"></script>
+        <script type="text/javascript" src="glyph_data.js"></script>
+        <script type="text/javascript" src="arc_data.js"></script>
+        <script type="text/javascript" src='js/bubble.js'></script>
+        <script type="text/javascript" src='js/glyph.js'></script>
+        <script type="text/javascript " src='js/map.js'></script>
+        <script type="text/javascript " src='js/animated_map.js'></script>
+        <script type="text/javascript" src="js/arc.js"></script>
+        <script type="text/javascript" src="js/network.js"></script>
+
+        <!-- <script src='js/spirial.js'></script> -->
+        <!-- <script src='js/curve.js'></script> -->
 
 
 </body>

@@ -21,6 +21,11 @@ var svg_map_3 = d3.select("#clickable_2")
     .append('g')
     .attr('class', 'map');
 
+var layer1 = svg_map_3.append('g');
+var layer2 = svg_map_3.append('g');
+var layer3 = svg_map_3.append('g');
+
+
 //设置地图映射方式
 var projection_large = d3.geoMercator()
     .center([118.7789, 32.065])
@@ -124,26 +129,6 @@ function draw_polygon_city(polygon_data) {
 };
 
 // d3.json("data/anquanqu.json", draw_polygon_city);
-
-
-
-
-function draw_polygon(polygon_data) {
-    var path = d3.geoPath().projection(projection_small);
-    svg_map_3.selectAll('path')
-        .data(polygon_data.features)
-        .enter()
-        .append('path')
-        .attr('d', path)
-        .attr('fill', 'white')
-        .attr('opacity', 0.3)
-        .attr('stroke', "white")
-        .attr('stroke-width', 1)
-        .attr('stroke-opacity', 1);
-};
-
-
-
 
 function draw(geo_data) {
     // "use strict";
@@ -311,13 +296,36 @@ function draw(geo_data) {
     //projection初次设定后，可以画个圆检查落点; 或用于添加景点、地标等
 };
 
+d3.json("data/labei.json", draw);
+
+
+function draw_polygon(polygon_data) {
+    var path = d3.geoPath().projection(projection_small);
+
+    layer1.selectAll('path')
+        .data(polygon_data.features)
+        .enter()
+        .append('path')
+        .attr('d', path)
+        .attr('fill', 'white')
+        .attr('opacity', 0.3)
+        .attr('stroke', "white")
+        .attr('stroke-width', 1)
+        .attr('stroke-opacity', 1);
+};
+
+d3.json("data/anquanqu.json", draw_polygon);
+
+
+
+
 //下面是画散点的
 
 //可以把难民营和其他sights分开，两次append
 
+
 function draw_refugee(refugee_data) {
-    var sights = svg_map_3
-        .append('g')
+    var sights = layer3
         .selectAll("circle")
         .data(refugee_data)
         .enter()
@@ -342,7 +350,7 @@ function draw_refugee(refugee_data) {
             sights_tooltip.transition()
                 .duration(200)
                 .style("opacity", 0.9);
-            sights_tooltip.html('<strong>' + d.name + '</strong><br>' + d.value + "条记录")
+            sights_tooltip.html('<strong>' + d.name + '</strong><br>' + d.value + "条犯罪记录")
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY - 28) + "px");
         })
@@ -383,11 +391,13 @@ function draw_refugee(refugee_data) {
             .on("end", repeat)
     }
 }
+d3.json("data/refugee.json", draw_refugee);
 
 
 function draw_spot(spot_data) {
-    var spots = svg_map_3
+    var spots = layer2
         .append('g')
+        .attr('class', 'spot')
         .selectAll("circle")
         .data(spot_data)
         .enter()
@@ -400,7 +410,7 @@ function draw_spot(spot_data) {
         })
         .attr('fill', "url(#grad1)")
         //"url(#grad1)"
-        .attr('opacity', 0.8)
+        .attr('opacity', 0.9)
         .attr("r", function(d) {
             return d.value + 4
         })
@@ -412,7 +422,7 @@ function draw_spot(spot_data) {
             sights_tooltip.transition()
                 .duration(200)
                 .style("opacity", 0.9);
-            sights_tooltip.html('<strong>' + d.name + '</strong><br>' + d.value + "条记录")
+            sights_tooltip.html('<strong>' + d.name + '</strong><br>' + d.value + "条犯罪记录")
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY - 28) + "px");
         })
@@ -434,7 +444,4 @@ function draw_spot(spot_data) {
     // });
 }
 
-d3.json("data/labei.json", draw);
-d3.json("data/anquanqu.json", draw_polygon);
 d3.json("data/spot.json", draw_spot);
-d3.json("data/refugee.json", draw_refugee);
