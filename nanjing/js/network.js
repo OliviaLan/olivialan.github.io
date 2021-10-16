@@ -58,7 +58,8 @@ d3.json("data/network.json", function(error, graph) {
                 .style("opacity", .8);
             tooltip.html("Source:" + d.source.id +
                     "<br>Target:" + d.target.id +
-                    "<br>Strength:" + d.value)
+                    "<br>Strength:" + d.value +
+                    "<br>Dominant event:" + d.dominant_event)
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY + 10) + "px");
         })

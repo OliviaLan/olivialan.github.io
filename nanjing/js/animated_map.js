@@ -289,7 +289,7 @@ function updateChart(sights_data) {
         .transition()
         .duration(1200)
         .attr("r", function(d) {
-            return d.value + 8
+            return d.value + 4
         });
 
 

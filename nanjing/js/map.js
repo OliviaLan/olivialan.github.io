@@ -30,13 +30,11 @@ var layer3 = svg_map_3.append('g');
 var projection_large = d3.geoMercator()
     .center([118.7789, 32.065])
     .scale(30000)
-    //整个上海.scale(23000)
     // .translate([width / 2, height / 2]);
 
 var projection_small = d3.geoMercator()
     .center([118.8089, 32.065])
-    .scale(300000)
-    //整个上海.scale(23000)
+    .scale(25000)
     // .translate([width / 2, height / 2]);
 
 
