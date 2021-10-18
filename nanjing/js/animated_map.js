@@ -84,6 +84,12 @@ function initializeAnimation(sights_data) {
 
 var svg_map = d3.select("#animated_map")
 
+var animation_layer1 = svg_map.append('g');
+var animation_layer2 = svg_map.append('g');
+var animation_layer3 = svg_map.append('g');
+
+
+
 //设置地图映射方式
 var projection = d3.geoMercator()
     .center([118.8089, 32.065])
@@ -245,10 +251,10 @@ function updateChart(sights_data) {
         return d.day_id === displayDay;
     });
 
-    svg_map.selectAll("circle")
+    animation_layer2.selectAll("circle")
         .remove();
 
-    var sights = svg_map
+    var sights = animation_layer2
         .selectAll("circle")
         .data(yearData)
         .enter()
@@ -259,7 +265,13 @@ function updateChart(sights_data) {
         .attr('cy', function(d) {
             return projection(d.coordinate)[1]
         })
-        .attr('fill', "url(#grad1)")
+        .attr('fill', function(d) {
+            if (['鼓楼西难民收容所（鼓楼广场西侧）', '金陵大学蚕厂难民收容所', '陆军大学的难民收容所'].includes(d.name) == false) {
+                return "url(#grad1)"
+            } else {
+                return "white"
+            }
+        })
         .attr('opacity', 0.9)
         // .attr("r", function(d) {
         //     return d.value + 4
@@ -310,3 +322,21 @@ d3.json("data/animated_spot.json", function(sights_data) {
         // initializeAxes
     updateChart(sights_data)
 });
+
+
+function draw_polygon(polygon_data) {
+    var path = d3.geoPath().projection(projection);
+
+    animation_layer1.selectAll('path')
+        .data(polygon_data.features)
+        .enter()
+        .append('path')
+        .attr('d', path)
+        .attr('fill', 'white')
+        .attr('opacity', 0.3)
+        .attr('stroke', "white")
+        .attr('stroke-width', 1)
+        .attr('stroke-opacity', 1);
+};
+
+d3.json("data/anquanqu.json", draw_polygon);

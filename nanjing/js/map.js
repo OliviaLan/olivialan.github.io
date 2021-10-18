@@ -34,7 +34,7 @@ var projection_large = d3.geoMercator()
 
 var projection_small = d3.geoMercator()
     .center([118.8089, 32.065])
-    .scale(25000)
+    .scale(20000)
     // .translate([width / 2, height / 2]);
 
 
