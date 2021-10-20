@@ -11,6 +11,8 @@
 </head>
 
 <body>
+    <div class="chapter" style="color:burlywood; margin-top: 100px;">/～网页仍在快马加鞭建设中～/ </div>
+
     <div class="title">南京！南京！</div>
     <div class="subtitle">——基于《日本士兵在南京安全区的暴行》的文本挖掘</div>
     <div class="subsubtitle">@作者：蓝星宇、梁银妍</div>
@@ -102,13 +104,14 @@
         <img src="img/freq_narrators_cloud.png" style="width: 25%; margin-left:10%; margin-right:10%;float: left"></img>
         <div class="main_text">
             <p>在拉贝的日记中，总共有65位不同的叙述人。其中，叙述记录最多的分别是菲奇（23条）、贝茨（21条）和威尔逊（17条）。他们分别是xxx、xxx和xxx。从图16的文字云中可以看到，拉贝的记录中，绝大部分信源都来自于居住在南京的外国人。当然，还有少量来自于中国人，比如难民收容所的所长、基督教青年会行政秘书处工作人员、门房等等。</p>
-            <p>由于这些人是暴行的见证者和口述者，我们将其与暴行的受害者进行了区分。</p>
+            <p>由于这些人是暴行的见证者和口述者，我们将其与暴行的受害者进行了区分。排除“叙述人”后，基于所有“亲历者”的共现关系，我们首先对高频的共现关系进行了可视化。</p>
+            <p>这些共现关系都在我们的数据集里出现了2次及以上。 如下图所示，圆点的大小表示该人物出现的频次。连线的粗细表示这对关系出现的次数。比如，“妇女”和“日本士兵”的共现次数非常多，因此连线很粗。此外，节点的颜色表示该人物的国籍，红色代表中国人，黄色代表日本人，黑色代表西方人。</p>
         </div>
     </div>
 
     <div class="section">
         <div style="text-align: center;">
-            <p class="chart_title" style="margin:auto;">关键词共现关系（简略）</p>
+            <p class="chart_title" style="margin:auto;">高频人物共现关系</p>
             <select class="selectSort" style="display: block; margin:auto; margin-top: 30px;">
             <option value="Group">by Cluster</option>
             <option value="Frequency">by Frequency</option>
@@ -119,8 +122,17 @@
     </div>
 
     <div class="section">
+        <div class="main_text_full">
+            <p>此外，针对所有的人物，我们也制作了一个更加详细的人物共现图谱，效果如下图所示。所有的人物被组织到了一个网络上，如果两个人物曾经在一条记录中同时出现（即，共现），则在它们之间生成连线。同样，连线的宽度代表共现的次数，节点的大小表示出现频次，节点的颜色代表国籍。</p>
+            <p>整个网络几乎完全围绕“日本士兵”这一节点组织起来。巨大部分关系都是“一对一”的（距离“日本士兵”较近的、如蒲公英形状的众多节点），即事件发生在日本士兵与某一个人之间。还有一些关系相对复杂，可能发生在“日本士兵”与多个人之间，也可能发生在日本人、中国人、西方人之间。</p>
+            <p>你也可以拖动这个网络，或者高亮其中的一些节点、连线，查看具体的信息。比如，我们可以看到“日本士兵”和“妇女”之间总共有90条共现记录，且主导的事件类型是“强奸”。</p>
+        </div>
+    </div>
+
+
+    <div class="section">
         <div style="text-align: center;">
-            <p class="chart_title" style="margin:auto;">关键词共现关系（详细）</p>
+            <p class="chart_title" style="margin:auto;">所有人物共现关系</p>
             <svg id="network" width="1000" height="600" style="margin:auto;"></svg>
         </div>
     </div>
@@ -132,8 +144,8 @@
 
     <div class="section">
         <div class="main_text_full">
-            <p>xx ahahahha hahaha hahaha hahah </p>
-            <p>xx</p>
+            <!-- <p>xx ahahahha hahaha hahaha hahah </p>
+            <p>xx</p> -->
         </div>
     </div>
 
