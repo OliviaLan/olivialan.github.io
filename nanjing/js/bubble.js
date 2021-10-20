@@ -10,22 +10,26 @@ xscale = d3.scaleLinear()
 //     .range([240, 0]);
 xaxis = d3.axisBottom(xscale)
     //tick的长短
-    .tickSizeInner(0)
+    .tickSizeInner(10)
     //文字离线的距离
-    .tickPadding(40);
+    .tickPadding(0);
 
 //上下间隔
-interval = 100
-
-DrawBubbles("kill", 1)
-DrawBubbles("hurt", 2)
-DrawBubbles("rape", 3)
+interval = 70
 
 
-function DrawBubbles(type, index) {
+
+function DrawBubbles(data, type, index) {
 
     crime_type = type
         // Circles now easily reusable
+
+    svg_bubble.append('g')
+        .attr("class", "axis")
+        .attr('transform', 'translate(0,' + interval * index + ')')
+        .call(xaxis)
+
+
     circles_group = svg_bubble
         .append('g')
         .selectAll('g.circle')
@@ -34,7 +38,6 @@ function DrawBubbles(type, index) {
         // }))
         .data(data)
         .enter()
-        .append('g')
 
     circles_group.append('circle')
         // .attr('r', d => d.crime_type)
@@ -50,21 +53,48 @@ function DrawBubbles(type, index) {
         .attr('class', type)
         .attr('opacity', 0.3);
 
+    axis_label = svg_bubble
+        .append('g')
 
-    // circles_group.append('text')
-    //     .text(d => d.type)
-    //     .attr('text-anchor', 'middle')
-    //     .attr('alignment-baseline', 'middle')
-    //     .attr('x', function(d) {
-    //         return xscale(d.date);
-    //     })
-    //     .attr('y', function(d) {
-    //         return interval * index;
-    //     })
-    //     .attr('fill', 'white');
+    axis_label.append("text")
+        .attr("class", "x label")
+        // .attr("text-anchor", "end")
+        .attr("x", 0)
+        .attr("y", function(d) {
+            return interval * index + 10;
+        })
+        .text(function() {
+            if (type == "rape") {
+                return "强奸"
+            } else if (type == "rape_fail") {
+                return "强奸未遂"
+            } else if (type == "rob") {
+                return "偷盗"
+            } else if (type == "hurt") {
+                return "伤害"
+            } else if (type == "force_labor") {
+                return "强迫劳动"
+            } else if (type == "kill") {
+                return "杀人"
+            } else {
+                return "逮捕"
+            }
+        })
+        .attr("fill", "white");
 
-    circles_group.append('g')
-        .attr("class", "axis")
-        .attr('transform', 'translate(0,' + interval * index + ')')
-        .call(xaxis);
 }
+
+// DrawBubbles("kill", 1)
+// DrawBubbles("hurt", 2)
+// DrawBubbles("rape", 3)
+
+
+d3.json("data/bubble.json", function(data) {
+    DrawBubbles(data, "rape", 1)
+    DrawBubbles(data, "rape_fail", 2)
+    DrawBubbles(data, "rob", 3)
+    DrawBubbles(data, "hurt", 4)
+    DrawBubbles(data, "force_labor", 5)
+    DrawBubbles(data, "kill", 6)
+    DrawBubbles(data, "arrest", 7)
+});

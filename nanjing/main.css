@@ -92,11 +92,18 @@ article {
     padding-bottom: 50px;
 }
 
+.chart_title {
+    font-size: 26px;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'SimHei';
+}
+
 .guidance {
-    font-size: 18px;
+    font-size: 20px;
     text-align: left;
     font-weight: 600;
-    font-family: 'fengyasong';
+    font-family: 'SimHei';
 }
 
 .tooltip {
@@ -128,33 +135,52 @@ article {
     pointer-events: none;
 }
 
-.kill {
-    fill: rgb(243, 55, 55);
+.rape {
+    fill: #A13924;
+    opacity: 0.4;
+}
+
+.rape_fail {
+    fill: #FF7F0E;
+    opacity: 0.4;
+}
+
+.rob {
+    fill: #8C6B0C;
     opacity: 0.4;
 }
 
 .hurt {
-    fill: orange;
+    fill: #5CEAA6;
     opacity: 0.4;
 }
 
-.rape {
-    fill: rgb(171, 33, 212);
+.force_labor {
+    fill: #5CCFEA;
     opacity: 0.4;
 }
 
+.kill {
+    fill: #5C8FEA;
+    opacity: 0.4;
+}
 
-/* .axis line {
-    stroke: white;
+.arrest {
+    fill: #895CEA;
+    opacity: 0.4;
+}
+
+.axis line {
+    stroke: grey;
 }
 
 .axis path {
-    stroke: white;
+    stroke: grey;
 }
 
 .axis text {
-    fill: white;
-} */
+    fill: #A8A8A8;
+}
 
 .slider {
     -webkit-appearance: none;

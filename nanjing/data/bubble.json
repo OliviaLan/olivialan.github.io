@@ -1,0 +1,461 @@
+[{
+        "date": 0,
+        "kill": 1,
+        "hurt": 2,
+        "rape": 1,
+        "rape_fail": null,
+        "rob": 2,
+        "arrest": 1,
+        "force_labor": null
+    },
+    {
+        "date": 1,
+        "kill": null,
+        "hurt": null,
+        "rape": 3,
+        "rape_fail": null,
+        "rob": 5,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 2,
+        "kill": 4,
+        "hurt": 4,
+        "rape": 4,
+        "rape_fail": null,
+        "rob": 7,
+        "arrest": null,
+        "force_labor": 1
+    },
+    {
+        "date": 3,
+        "kill": 1,
+        "hurt": 2,
+        "rape": 4,
+        "rape_fail": null,
+        "rob": 9,
+        "arrest": 3,
+        "force_labor": 1
+    },
+    {
+        "date": 4,
+        "kill": 2,
+        "hurt": 2,
+        "rape": 15,
+        "rape_fail": null,
+        "rob": 8,
+        "arrest": 7,
+        "force_labor": null
+    },
+    {
+        "date": 5,
+        "kill": 5,
+        "hurt": 2,
+        "rape": 9,
+        "rape_fail": 1,
+        "rob": 12,
+        "arrest": 1,
+        "force_labor": 1
+    },
+    {
+        "date": 6,
+        "kill": 2,
+        "hurt": 4,
+        "rape": 5,
+        "rape_fail": 2,
+        "rob": 8,
+        "arrest": 1,
+        "force_labor": null
+    },
+    {
+        "date": 7,
+        "kill": 1,
+        "hurt": 2,
+        "rape": 11,
+        "rape_fail": 2,
+        "rob": 8,
+        "arrest": 1,
+        "force_labor": 1
+    },
+    {
+        "date": 8,
+        "kill": null,
+        "hurt": 1,
+        "rape": 7,
+        "rape_fail": null,
+        "rob": 5,
+        "arrest": 2,
+        "force_labor": 2
+    },
+    {
+        "date": 9,
+        "kill": null,
+        "hurt": 1,
+        "rape": 2,
+        "rape_fail": 3,
+        "rob": 5,
+        "arrest": null,
+        "force_labor": 1
+    },
+    {
+        "date": 10,
+        "kill": null,
+        "hurt": 1,
+        "rape": 2,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": 2,
+        "force_labor": null
+    },
+    {
+        "date": 11,
+        "kill": null,
+        "hurt": null,
+        "rape": null,
+        "rape_fail": null,
+        "rob": 1,
+        "arrest": 1,
+        "force_labor": null
+    },
+    {
+        "date": 12,
+        "kill": null,
+        "hurt": 1,
+        "rape": 1,
+        "rape_fail": null,
+        "rob": 4,
+        "arrest": 1,
+        "force_labor": null
+    },
+    {
+        "date": 13,
+        "kill": null,
+        "hurt": null,
+        "rape": 2,
+        "rape_fail": null,
+        "rob": 1,
+        "arrest": null,
+        "force_labor": 1
+    },
+    {
+        "date": 14,
+        "kill": null,
+        "hurt": null,
+        "rape": null,
+        "rape_fail": 2,
+        "rob": 1,
+        "arrest": null,
+        "force_labor": 1
+    },
+    {
+        "date": 15,
+        "kill": null,
+        "hurt": null,
+        "rape": null,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 16,
+        "kill": null,
+        "hurt": null,
+        "rape": 1,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 17,
+        "kill": 1,
+        "hurt": 1,
+        "rape": 2,
+        "rape_fail": 1,
+        "rob": 1,
+        "arrest": 1,
+        "force_labor": 1
+    },
+    {
+        "date": 19,
+        "kill": null,
+        "hurt": 1,
+        "rape": 3,
+        "rape_fail": 1,
+        "rob": null,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 20,
+        "kill": 1,
+        "hurt": 1,
+        "rape": null,
+        "rape_fail": 1,
+        "rob": null,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 21,
+        "kill": null,
+        "hurt": null,
+        "rape": 1,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 25,
+        "kill": null,
+        "hurt": null,
+        "rape": null,
+        "rape_fail": 1,
+        "rob": null,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 26,
+        "kill": 2,
+        "hurt": null,
+        "rape": 4,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 27,
+        "kill": null,
+        "hurt": 2,
+        "rape": 2,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": 1,
+        "force_labor": null
+    },
+    {
+        "date": 31,
+        "kill": 1,
+        "hurt": 1,
+        "rape": 3,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": 1,
+        "force_labor": null
+    },
+    {
+        "date": 32,
+        "kill": null,
+        "hurt": null,
+        "rape": 1,
+        "rape_fail": null,
+        "rob": 1,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 34,
+        "kill": null,
+        "hurt": 1,
+        "rape": 1,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 35,
+        "kill": 1,
+        "hurt": null,
+        "rape": 1,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": 1,
+        "force_labor": null
+    },
+    {
+        "date": 36,
+        "kill": 1,
+        "hurt": null,
+        "rape": null,
+        "rape_fail": null,
+        "rob": 1,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 37,
+        "kill": null,
+        "hurt": null,
+        "rape": 1,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 38,
+        "kill": 1,
+        "hurt": null,
+        "rape": 4,
+        "rape_fail": null,
+        "rob": 1,
+        "arrest": 1,
+        "force_labor": null
+    },
+    {
+        "date": 39,
+        "kill": null,
+        "hurt": null,
+        "rape": 1,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 41,
+        "kill": null,
+        "hurt": null,
+        "rape": null,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": 1,
+        "force_labor": null
+    },
+    {
+        "date": 42,
+        "kill": null,
+        "hurt": null,
+        "rape": null,
+        "rape_fail": 2,
+        "rob": null,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 43,
+        "kill": 2,
+        "hurt": null,
+        "rape": 2,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 45,
+        "kill": null,
+        "hurt": 1,
+        "rape": 1,
+        "rape_fail": 1,
+        "rob": 3,
+        "arrest": null,
+        "force_labor": 1
+    },
+    {
+        "date": 46,
+        "kill": 1,
+        "hurt": 2,
+        "rape": 7,
+        "rape_fail": 2,
+        "rob": 11,
+        "arrest": null,
+        "force_labor": 4
+    },
+    {
+        "date": 47,
+        "kill": 2,
+        "hurt": 3,
+        "rape": 22,
+        "rape_fail": 3,
+        "rob": 16,
+        "arrest": 2,
+        "force_labor": 7
+    },
+    {
+        "date": 48,
+        "kill": 1,
+        "hurt": 3,
+        "rape": 19,
+        "rape_fail": 4,
+        "rob": 15,
+        "arrest": 3,
+        "force_labor": 4
+    },
+    {
+        "date": 49,
+        "kill": 2,
+        "hurt": 4,
+        "rape": 7,
+        "rape_fail": 2,
+        "rob": 8,
+        "arrest": null,
+        "force_labor": 3
+    },
+    {
+        "date": 50,
+        "kill": null,
+        "hurt": 1,
+        "rape": 5,
+        "rape_fail": 1,
+        "rob": 12,
+        "arrest": null,
+        "force_labor": 2
+    },
+    {
+        "date": 51,
+        "kill": null,
+        "hurt": 3,
+        "rape": 4,
+        "rape_fail": 6,
+        "rob": 7,
+        "arrest": null,
+        "force_labor": 4
+    },
+    {
+        "date": 52,
+        "kill": null,
+        "hurt": 3,
+        "rape": 6,
+        "rape_fail": 3,
+        "rob": 3,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 53,
+        "kill": null,
+        "hurt": null,
+        "rape": null,
+        "rape_fail": 2,
+        "rob": null,
+        "arrest": null,
+        "force_labor": 3
+    },
+    {
+        "date": 54,
+        "kill": null,
+        "hurt": 1,
+        "rape": null,
+        "rape_fail": 4,
+        "rob": 1,
+        "arrest": null,
+        "force_labor": null
+    },
+    {
+        "date": 55,
+        "kill": 1,
+        "hurt": null,
+        "rape": null,
+        "rape_fail": null,
+        "rob": null,
+        "arrest": null,
+        "force_labor": null
+    }
+]
