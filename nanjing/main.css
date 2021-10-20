@@ -1,7 +1,10 @@
+@font-face {
+    font-family: "fengyasong";
+    src: url("./font/fengyasong.TTF");
+}
+
 body {
-    font-family: "avenir next", Arial, sans-serif;
-    font-size: 12px;
-    color: white;
+    color: #f9f9f9;
     margin: 0;
     background-color: rgb(43, 43, 43);
 }
@@ -19,16 +22,81 @@ article {
 }
 
 .title {
-    font-size: 50px;
+    font-size: 60px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
+    margin-top: 100px;
+    font-family: 'fengyasong';
+}
+
+.subtitle {
+    font-size: 34px;
+    text-align: center;
+    font-weight: 200;
     margin: 30px;
+    font-family: 'fengyasong';
+}
+
+.subsubtitle {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 100;
+    margin: 30px;
+    font-family: 'fengyasong';
+}
+
+.main_text {
+    font-family: "Arial", "SimHei";
+    font-size: 16px;
+    line-height: 1.6;
+    /* display: inline-block;
+    vertical-align: middle;
+    line-height: normal; */
+    margin-left: 6%;
+    margin-right: 6%;
+    /* width: 46%; */
+}
+
+.main_text_full {
+    font-family: "Arial", "SimHei";
+    font-size: 16px;
+    line-height: 1.6;
+    /* display: inline-block;
+    vertical-align: middle;
+    line-height: normal; */
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.section {
+    clear: both;
+    padding-top: 20px;
+}
+
+.wrapper {
+    /* text-align: center; */
+    display: flex;
+    /* width: 100%; */
+    /* height: 100vh; */
+    align-items: center;
+}
+
+.chapter {
+    clear: both;
+    display: block;
+    font-size: 34px;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'fengyasong';
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .guidance {
     font-size: 18px;
     text-align: left;
     font-weight: 600;
+    font-family: 'fengyasong';
 }
 
 .tooltip {

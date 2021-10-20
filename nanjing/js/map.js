@@ -34,7 +34,7 @@ var projection_large = d3.geoMercator()
 
 var projection_small = d3.geoMercator()
     .center([118.8089, 32.065])
-    .scale(20000)
+    .scale(160000)
     // .translate([width / 2, height / 2]);
 
 
@@ -120,7 +120,7 @@ function draw_polygon_city(polygon_data) {
         .append('path')
         .attr('d', path)
         .attr('fill', 'brown')
-        .attr('opacity', 0.5)
+        .attr('opacity', 1)
         .attr('stroke', "white")
         .attr('stroke-width', 1)
         .attr('stroke-opacity', 0.6);

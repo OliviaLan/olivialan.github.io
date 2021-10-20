@@ -11,15 +11,186 @@
 </head>
 
 <body>
-    <div class="title">Nanjing! Nanjing!</div>
+    <div class="title">南京！南京！</div>
+    <div class="subtitle">——基于《日本士兵在南京安全区的暴行》的文本挖掘</div>
+    <div class="subsubtitle">@作者：蓝星宇、梁银妍</div>
 
-    <img src="img/overview.jpg" style="width: 50%;"></img>
-    <div style="text-align: center;" id="svg-grid"></div>
-    <!-- <div class="text">Here is some explanatory text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id lacus quis mauris auctor euismod. Pellentesque consectetur turpis in lorem laoreet, at porta metus aliquam. Etiam eget purus et dolor auctor volutpat.
-            Nulla vitae nibh tempor, sollicitudin eros et, gravida enim. Duis tempor, nulla quis convallis venenatis, turpis erat molestie nibh, quis aliquet nibh ex in libero. Praesent interdum ipsum eu felis pellentesque, vel imperdiet neque ullamcorper.</div> -->
 
-    <div style="text-align: center;">
-        <svg id="bubble" width="1000" height="500"></svg>
+    <div class="section" style="margin-top: 100px;">
+        <img src="img/overview.png" style="width: 40%; margin-left:4%; margin-right:4%; float: left"></img>
+        <div class="main_text">
+            <p>1937年12月13日，六朝古都南京经历了一场腥风血雨，史称“南京大屠杀”。日本侵略者扫荡了南京城，并对南京的人民犯下的累累暴行。</p>
+            <p>尽管这道伤痕如此真实而深刻，日本政府却从未正式承认过这段历史。在那个缺乏科技、炮火连天的年代，留存证据成为一种奢侈。当代的研究者不得不面临史料缺乏的难题。</p>
+            <p>《拉贝日记》，由德国西门子洋行负责人约翰·拉贝撰写，其中关于南京安全区的记录，更是为相关研究提供了丰富的数据。南京安全区又称南京难民区，是1937年12月日本军队即将攻占中华民国首都南京时，南京城内的欧美侨民出于人道主义，为保护平民免遭战火而成立的难民区。安全区由南京安全区国际委员会进行管理，共设25个难民收容所。拉贝则是安全区国际委员会主席。</p>
+            <p>根据相关资料[1][2]，我们在南京地图上画出了安全区的位置（左图）。相比于现在庞大的市区范围，曾经的安全区只是其中的一小块，如一颗小小的宝石，镶嵌在南京核心城区——鼓楼区附近。</p>
+            <p>国际委员会与同样由西方侨民发起成立的世界红十字会南京委员会在日军南京大屠杀惨案期间，庇护了难民区内约25万中国难民。1938年2月18日，南京安全区国际委员会在日本占领军的逼迫下改为南京国际救济委员会，成为一个纯粹的救济机构，安全区随之解散，但区内的难民收容所直到6月才全部关闭。</p>
+            <p>以下，是我们对《日本士兵在南京安全区的暴行》进行文本挖掘的xxx。</p>
+        </div>
+    </div>
+
+    <!-- <div class="chapter">文本分析与可视化方法概述</div>
+    <div class="main_text_full">
+        <p>自然语言处理：</p>
+        <p>· jieba分词与词性标注：（1）去除标点（2）去除停用词（3）xxx（4）xxx</p>
+        <p>· nltk词语位置、共现、相似度分析：</p>
+        <p>数据清洗结构化处理：</p>
+        <p>· Python的pandas、json库</p>
+        <p>· 人工校正</p>
+        <p>地理信息提取：</p>
+        <p>· 路网信息：Open Street Map</p>
+        <p>· http://geojson.io/</p>
+        <p>· 高德地图开放平台</p>
+        <p>· 地理坐标系转换：coordtransform</p>
+        <p>数据可视化：</p>
+        <p>· Python的matplotlib、seaborn、wordcloud库</p>
+        <p>· Adobe Illustrator美化</p>
+        <p>· D3.js开发交互图表</p>
+        <p>历史背景信息收集：</p>
+        <p>· 电影《拉贝日记》</p>
+        <p>· 《拉贝日记》</p>
+        <p>· 维基百科</p>
+        <p>· xxx影视资料库</p>
+    </div> -->
+
+
+    <div class="chapter">Chapter 1: 文本概况 </div>
+
+    <div class="section">
+        <img src="img/freq_words_cloud.png" style="width: 30%; margin-left:4%; margin-right:4%; float: left"></img>
+        <div class="main_text">
+            <p>一共有几条记录</p>
+            <p>从何时到何时。分布在什么时间段</p>
+            <p>每条大概多少字</p>
+            <p>总体文字云</p>
+            <p>叙述人是谁</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="main_text_full">
+            <p>xxxx</p>
+            <div style="text-align: center;">
+                <img src="img/textrank.png" width="85%"></img>
+            </div>
+            <p>xxxx</p>
+            <div style="text-align: center;">
+                <img src="img/words_position.png" width="85%"></img>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="chapter">Chapter 2: 发生了什么事件？</div>
+
+    <div class="section">
+        <div class="main_text_full">
+            <p>总的来看，拉贝所记录的事件数量呈U字型分布：12月中旬是一个高峰，到1月明显下降，而到1月底又急剧上升。xx日达到最高峰，达到xx条记录。</p>
+            <div style="text-align: center;">
+                <img src="img/trend_all_design.png" width="85%"></img>
+            </div>
+            <p>按事件类型分类：</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div style="text-align: center;">
+            <svg id="bubble" width="1000" height="500"></svg>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <img src="img/freq_ages_cloud.png" style="width: 30%; margin-right:6%; float: right"></img>
+        <div class="main_text">
+            <p>几种事件类型</p>
+            <p>气泡图/螺旋？</p>
+            <p>强奸</p>
+            <p>物品</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="main_text_full">
+            <p>总的来看，拉贝所记录的事件数量呈U字型分布：12月中旬是一个高峰，到1月明显下降，而到1月底又急剧上升。xx日达到最高峰，达到xx条记录。</p>
+            <div style="text-align: center;">
+                <img src="img/trend_rape_age_design.png" width="85%"></img>
+            </div>
+            <p>随时间看。</p>
+        </div>
+    </div>
+
+
+
+
+    <div class="chapter">Chapter 3: 与谁相关？</div>
+
+    <div class="section">
+        <img src="img/freq_narrators_cloud.png" style="width: 25%; margin-left:6%; float: left"></img>
+        <div class="main_text">
+            <p>xx</p>
+            <p>xx</p>
+            <p>xx</p>
+            <p>xx</p>
+            <p>xx</p>
+            <p>xx</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div style="text-align: center;">
+            <p class="subtitle" style="margin:auto;">关键词共现关系（简略）</p>
+            <select class="selectSort" style="display: block; margin:auto; margin-top: 30px;">
+            <option value="Group">by Cluster</option>
+            <option value="Frequency">by Frequency</option>
+            <option value="Name">by Name</option>
+        </select>
+            <svg id="arc" width="1000" height="600" style="margin:auto;"></svg>
+        </div>
+    </div>
+
+    <div class="section">
+        <div style="text-align: center;">
+            <p class="subtitle" style="margin:auto;">关键词共现关系（详细）</p>
+            <svg id="network" width="1000" height="600" style="margin:auto;"></svg>
+        </div>
+    </div>
+
+
+
+
+    <div class="chapter">Chapter 4: 发生在哪里？</div>
+
+    <div class="section">
+        <img src="img/test.png" style="width: 40%; margin-left:4%"></img>
+        <div class="main_text">
+            <p>xx</p>
+            <p>xx</p>
+            <p>xx</p>
+            <p>xx</p>
+            <p>xx</p>
+            <p>xx</p>
+        </div>
+    </div>
+
+    <div id="map" style="margin-left:4%">
+        <svg id="clickable_2" width="700" height="680"></svg>
+        <div style="display: inline-block; vertical-align: top; margin-left: 50px;">
+            <div class="guidance">点击地图上的地点查看拉贝日记（白点表示难民收容所）：</div>
+            <div id="story_table">
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left:4%">
+        <svg id="animated_map" width="700 " height="680 "></svg>
+        <div style="display: inline-block; vertical-align: top; margin-left: 50px;">
+            <div id="time" class="guidance" x="0" y="20">0</div>
+            <div id="controls" style="margin-top: 20px;">
+                <input class="slider" type="range" id="year-input" value="0" min="0" max="55" step="1" />
+                <button class="button" id="play-button">播放动画</button>
+                <div id="story_table_2"></div>
+            </div>
+        </div>
     </div>
 
 
@@ -36,61 +207,42 @@
         <svg id="clickable_1" width="800" height="680"></svg>
     </div> -->
 
-    <div id="map" style="background-image:url();">
-        <svg id="clickable_2" width="700" height="680"></svg>
-        <div style="display: inline-block; vertical-align: top; margin-left: 50px;">
-            <div class="guidance">点击地图上的地点查看拉贝日记（白点表示难民收容所）：</div>
-            <div id="story_table">
-            </div>
-        </div>
+
+
+
+    <!-- <div style="text-align: center;" id="svg-grid"></div> -->
+    <!-- <div class="text">Here is some explanatory text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id lacus quis mauris auctor euismod. Pellentesque consectetur turpis in lorem laoreet, at porta metus aliquam. Etiam eget purus et dolor auctor volutpat.
+                Nulla vitae nibh tempor, sollicitudin eros et, gravida enim. Duis tempor, nulla quis convallis venenatis, turpis erat molestie nibh, quis aliquet nibh ex in libero. Praesent interdum ipsum eu felis pellentesque, vel imperdiet neque ullamcorper.</div> -->
+    <div class="main_text_full" style="margin-top: 50px;">
+        <div class="guidance">参考文献：</div>
+        <p>维基百科，南京安全区，https://zh.wikipedia.org/wiki/南京安全区</p>
+        <p>朱成山，考证南京难民收容所，http://neverforget.sina.com.cn/pl/2005-08-02/22161028.html</p>
+        <p>孙宅巍，南京大屠杀期间的难民收容所研究，http://www.js-skl.org.cn/uploads/Files/2017-09/14/1-1505358201-135.pdf</p>
+        <p>维基百科，南京大屠杀期间难民收容所列表，https://zh.wikipedia.org/wiki/南京大屠杀期间难民收容所列表</p>
+        <p>维基百科，拉贝日记，https://zh.wikipedia.org/wiki/拉贝日记</p>
+        <p>约翰·拉贝，《拉贝日记》，刘海宁 等(译) 第2版，南京: 江苏人民出版社</p>
+        <p>中新网，拉贝的1937年：家中最多挤入602个中国难民，http://www.chinanews.com/cul/2012/12-14/4409016.shtml</p>
+        <p>电影《拉贝日记》，https://movie.douban.com/subject/2294565/</p>
     </div>
 
 
-    <div>
-        <svg id="animated_map" width="700 " height="680 "></svg>
-        <div style="display: inline-block; vertical-align: top; margin-left: 50px;">
-            <div id="time" class="guidance" x="0" y="20">0</div>
-            <div id="controls" style="margin-top: 20px;">
-                <input class="slider" type="range" id="year-input" value="0" min="0" max="55" step="1" />
-                <button class="button" id="play-button">播放动画</button>
-                <div id="story_table_2"></div>
-            </div>
-        </div>
-
-
-        <div style="text-align: center;">
-            <p class="title" style="margin:auto;">Keywords</p>
-            <select class="selectSort" style="display: block; margin:auto; margin-top: 30px;">
-            <option value="Group">by Cluster</option>
-            <option value="Frequency">by Frequency</option>
-            <option value="Name">by Name</option>
-        </select>
-            <svg id="arc" width="1000" height="600" style="margin:auto;"></svg>
-        </div>
-
-        <div style="text-align: center;">
-            <p class="title" style="margin:auto;">Network</p>
-            <svg id="network" width="1000" height="600" style="margin:auto;"></svg>
-        </div>
 
 
 
-        <!-- <iframe src="https://embed.kumu.io/62bdfd279e7ba91448b30a568f5d612e" width="940" height="600" frameborder="0"></iframe> -->
 
 
+    <script type="text/javascript" src="timeline_data.js"></script>
+    <script type="text/javascript" src="glyph_data.js"></script>
+    <script type="text/javascript" src="arc_data.js"></script>
+    <script type="text/javascript" src='js/bubble.js'></script>
+    <script type="text/javascript" src='js/glyph.js'></script>
+    <script type="text/javascript " src='js/map.js'></script>
+    <script type="text/javascript " src='js/animated_map.js'></script>
+    <script type="text/javascript" src="js/arc.js"></script>
+    <script type="text/javascript" src="js/network.js"></script>
 
-        <script type="text/javascript" src="timeline_data.js"></script>
-        <script type="text/javascript" src="glyph_data.js"></script>
-        <script type="text/javascript" src="arc_data.js"></script>
-        <script type="text/javascript" src='js/bubble.js'></script>
-        <script type="text/javascript" src='js/glyph.js'></script>
-        <script type="text/javascript " src='js/map.js'></script>
-        <script type="text/javascript " src='js/animated_map.js'></script>
-        <script type="text/javascript" src="js/arc.js"></script>
-        <script type="text/javascript" src="js/network.js"></script>
-
-        <!-- <script src='js/spirial.js'></script> -->
-        <!-- <script src='js/curve.js'></script> -->
+    <!-- <script src='js/spirial.js'></script> -->
+    <!-- <script src='js/curve.js'></script> -->
 
 
 </body>
