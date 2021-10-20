@@ -52,8 +52,8 @@ article {
     /* display: inline-block;
     vertical-align: middle;
     line-height: normal; */
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: 10%;
+    margin-right: 10%;
     /* width: 46%; */
 }
 
@@ -64,13 +64,14 @@ article {
     /* display: inline-block;
     vertical-align: middle;
     line-height: normal; */
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .section {
     clear: both;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .wrapper {
