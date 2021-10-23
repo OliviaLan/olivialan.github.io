@@ -48,7 +48,7 @@ article {
 .main_text {
     font-family: "Arial", "SimHei";
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
     /* display: inline-block;
     vertical-align: middle;
     line-height: normal; */
@@ -66,6 +66,17 @@ article {
     line-height: normal; */
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.quote {
+    background-color: #A13924;
+    border-radius: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'fengyasong';
+    margin-bottom: 50px;
 }
 
 .section {
