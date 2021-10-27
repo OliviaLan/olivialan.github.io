@@ -7,7 +7,7 @@ var i,
     nodeY = 420,
     nodes = miserables.nodes,
     links = miserables.links,
-    colors = d3.scaleOrdinal(["brown", "orange", "black", "grey", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]),
+    colors = d3.scaleOrdinal(["white", "#A13924", "#E3B23C", "grey", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]),
     τ = 2 * Math.PI;
 
 

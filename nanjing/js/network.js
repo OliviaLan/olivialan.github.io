@@ -180,7 +180,7 @@ d3.json("data/network.json", function(error, graph) {
             if (d.group == "中国人") {
                 return "white"
             } else if (d.group == "日本人") {
-                return "brown"
+                return "#A13924"
             } else {
                 return "#E3B23C"
             }

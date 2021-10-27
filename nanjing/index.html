@@ -139,11 +139,20 @@
             <p>这些共现关系都在我们的数据集里出现了2次及以上。 如下图所示，圆点的大小表示该人物出现的频次。连线的粗细表示这对关系出现的次数。比如，“妇女”和“日本士兵”的共现次数非常多，因此连线很粗。此外，节点的颜色表示该人物的国籍，红色代表中国人，黄色代表日本人，黑色代表西方人。</p>
         </div>
         <div style="text-align: center; margin-top: 50px; ">
-            <p class="chart_title" style="margin:auto; ">高频人物共现关系</p>
+            <p class="chart_title" style="margin:auto; ">高频人物在文本中的共现关系</p>
+            <div style="text-align: center; margin-top: 30px">
+                <span class="dot" style="background-color: white;"></span>
+                <span style="margin-right: 10px;"> 中国人</span>
+                <span class="dot" style="background-color: #A13924;"></span>
+                <span style="margin-right: 10px;"> 日本人</span>
+                <span class="dot" style="background-color: #E3B23C;"></span>
+                <span> 西方人</span>
+                <p style="color: #a3a3a3;">*注：你可以点击下方的按钮，切换可视化的布局方式</p>
+            </div>
             <select class="selectSort" style="display: block; margin:auto; margin-top: 30px; ">
-            <option value="Group">by Cluster</option>
-            <option value="Frequency">by Frequency</option>
-            <option value="Name">by Name</option>
+            <option value="Group">根据聚类布局</option>
+            <option value="Frequency">根据词频布局</option>
+            <option value="Name">根据名称布局</option>
         </select>
             <svg id="arc" width="1000" height="600" style="margin:auto; "></svg>
         </div>
@@ -160,7 +169,16 @@
 
     <div class="section">
         <div style="text-align: center; ">
-            <p class="chart_title" style="margin:auto; ">所有人物共现关系</p>
+            <p class="chart_title" style="margin:auto; ">所有人物在文本中的共现关系</p>
+            <div style="text-align: center; margin-top: 30px">
+                <span class="dot" style="background-color: white;"></span>
+                <span style="margin-right: 10px;"> 中国人</span>
+                <span class="dot" style="background-color: #A13924;"></span>
+                <span style="margin-right: 10px;"> 日本人</span>
+                <span class="dot" style="background-color: #E3B23C;"></span>
+                <span> 西方人</span>
+                <p style="color: #a3a3a3;">*注：你可以将鼠标移动到节点/边上，查看详细信息</p>
+            </div>
             <svg id="network" width="1000 " height="600 " style="margin:auto; "></svg>
         </div>
     </div>
@@ -213,7 +231,6 @@
                 <span> 事件发生在其他地点</span>
                 <p style="color: #a3a3a3;">*注：你可以点击右侧的“播放动画”按钮，查看事件随事件的变化，或“停止动画”，以探索某日的具体事件</p>
             </div>
-
         </div>
     </div>
 
