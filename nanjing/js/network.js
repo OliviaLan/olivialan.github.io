@@ -13,8 +13,8 @@ var simulation = d3.forceSimulation()
     // .force('x', forceX)
     // .force('y', forceY)
     .force("link", d3.forceLink().id(function(d) { return d.id; }))
-    .force("charge", d3.forceManyBody().strength(-16))
-    .force("center", d3.forceCenter(width_network / 2, height_network / 2 - 50));
+    .force("charge", d3.forceManyBody().strength(-15))
+    .force("center", d3.forceCenter(width_network / 2, height_network / 2));
 
 
 // var sights_tooltip = d3.select("body").append("div")
@@ -173,8 +173,8 @@ d3.json("data/network.json", function(error, graph) {
 
     var circles = node.append("circle")
         .attr("r", function(d) {
-            return Math.sqrt(d.freq) + 2
-                //Math.sqrt(d.freq)
+            // return Math.sqrt(d.freq) + 2
+            return Math.sqrt(d.degree) + 2
         })
         .attr("fill", function(d) {
             if (d.group == "中国人") {
