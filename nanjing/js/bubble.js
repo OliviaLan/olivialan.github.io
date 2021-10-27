@@ -94,7 +94,8 @@ function DrawBubbles(data, type, index) {
                 return "逮捕"
             }
         })
-        .attr("fill", "white");
+        .attr("fill", "white")
+        .attr("font-size", "14px");
 
 }
 
