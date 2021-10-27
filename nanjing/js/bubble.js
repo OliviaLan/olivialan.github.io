@@ -17,6 +17,10 @@ xaxis = d3.axisBottom(xscale)
 //上下间隔
 interval = 70
 
+var tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
 
 
 function DrawBubbles(data, type, index) {
