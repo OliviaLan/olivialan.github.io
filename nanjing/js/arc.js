@@ -2,12 +2,12 @@ var i,
     // width = 960,
     // height = 500,
     transitionTime = 2500,
-    spacing = 22,
-    arc_margin = 100,
+    spacing = 24,
+    arc_margin = 140,
     nodeY = 420,
     nodes = miserables.nodes,
     links = miserables.links,
-    colors = d3.scaleOrdinal(["white", "#A13924", "#E3B23C", "grey", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]),
+    colors = d3.scaleOrdinal(["#A13924", "white", "#E3B23C", "grey", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]),
     τ = 2 * Math.PI;
 
 
