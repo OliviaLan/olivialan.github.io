@@ -11,8 +11,18 @@ var svg_map_2 = d3.select("#clickable_1")
     .append('g')
     .attr('class', 'map');
 
-var svg_map_3 = d3.select("#clickable_2")
+var svg_map_3 = d3.select("#map")
     .append("svg")
+    // .call(d3.zoom()
+    //     .scaleExtent([1, 4])
+    //     .translateExtent([
+    //         [0, 0],
+    //         [700, 680]
+    //     ])
+    //     .on("zoom", function() {
+    //         var svg_map_3 = d3.select("#map")
+    //             .attr("transform", d3.event.transform)
+    //     }))
     .attr("viewBox", "0 0 " + 700 + " " + 700)
     .attr("preserveAspectRatio", "xMinYMin")
     // .attr("width", width + margin)

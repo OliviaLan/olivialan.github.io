@@ -112,7 +112,7 @@ article {
 }
 
 .guidance {
-    font-size: 20px;
+    font-size: 16px;
     text-align: left;
     font-weight: 600;
     font-family: 'SimHei';
@@ -183,7 +183,7 @@ article {
 }
 
 .axis line {
-    stroke: grey;
+    stroke: rgb(128, 123, 123);
 }
 
 .axis path {
