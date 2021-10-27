@@ -88,7 +88,7 @@ var animation_layer1 = svg_map.append('g');
 var animation_layer2 = svg_map.append('g');
 var animation_layer3 = svg_map.append('g');
 
-
+var refugee_camps = ['鼓楼西难民收容所（鼓楼广场西侧）', '金陵大学蚕厂难民收容所', '陆军大学的难民收容所', '西门子难民收容所(广州路46号)', '大方巷的难民收容所（大方巷东口）', '五台山小学难民收容所', '金陵女子文理学院（宁海路南端西侧）', '汉口路小学难民收容所（汉口路）'];
 
 //设置地图映射方式
 var projection = d3.geoMercator()
@@ -157,7 +157,7 @@ function draw(geo_data) {
         .attr('fill', 'transparent')
         .attr('stroke', "white")
         .attr('stroke-width', 0.3)
-        .attr('stroke-opacity', 0.6);
+        .attr('stroke-opacity', 0.5);
 
     //debugger;
     //将小段小段的path按照名字集合，key是路名
@@ -266,10 +266,10 @@ function updateChart(sights_data) {
             return projection(d.coordinate)[1]
         })
         .attr('fill', function(d) {
-            if (['鼓楼西难民收容所（鼓楼广场西侧）', '金陵大学蚕厂难民收容所', '陆军大学的难民收容所'].includes(d.name) == false) {
-                return "url(#grad1)"
+            if (refugee_camps.includes(d.name) == true) {
+                return "url(#grad2)"
             } else {
-                return "white"
+                return "url(#grad1)"
             }
         })
         .attr('opacity', 0.9)
@@ -333,7 +333,7 @@ function draw_polygon(polygon_data) {
         .append('path')
         .attr('d', path)
         .attr('fill', 'white')
-        .attr('opacity', 0.3)
+        .attr('opacity', 0.2)
         .attr('stroke', "white")
         .attr('stroke-width', 1)
         .attr('stroke-opacity', 1);

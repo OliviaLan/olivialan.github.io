@@ -21,8 +21,8 @@ interval = 70
 
 function DrawBubbles(data, type, index) {
 
-    crime_type = type
-        // Circles now easily reusable
+    // crime_type = type
+    // Circles now easily reusable
 
     svg_bubble.append('g')
         .attr("class", "axis")
@@ -42,7 +42,7 @@ function DrawBubbles(data, type, index) {
     circles_group.append('circle')
         // .attr('r', d => d.crime_type)
         .attr('r', function(d) {
-            return d[crime_type] * 2;
+            return d[type] * 2;
         })
         .attr('cx', function(d) {
             return xscale(d.date);
@@ -51,7 +51,21 @@ function DrawBubbles(data, type, index) {
             return interval * index;
         })
         .attr('class', type)
-        .attr('opacity', 0.3);
+        .attr('opacity', 0.3)
+        .on("mouseover", function(d) {
+            // debugger;
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", 0.9);
+            tooltip.html("发生" + d[type] + "次")
+                .style("left", (d3.event.pageX) + "px")
+                .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(d) {
+            tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
 
     axis_label = svg_bubble
         .append('g')

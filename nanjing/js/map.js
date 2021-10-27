@@ -207,7 +207,7 @@ function draw(geo_data) {
         .attr('fill', 'transparent')
         .attr('stroke', "white")
         .attr('stroke-width', 0.3)
-        .attr('stroke-opacity', 0.6);
+        .attr('stroke-opacity', 0.5);
 
     //debugger;
     //将小段小段的path按照名字集合，key是路名
@@ -306,7 +306,7 @@ function draw_polygon(polygon_data) {
         .append('path')
         .attr('d', path)
         .attr('fill', 'white')
-        .attr('opacity', 0.3)
+        .attr('opacity', 0.2)
         .attr('stroke', "white")
         .attr('stroke-width', 1)
         .attr('stroke-opacity', 1);
