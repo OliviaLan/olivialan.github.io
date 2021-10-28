@@ -68,6 +68,12 @@ article {
     margin-right: 10%;
 }
 
+u {
+    /* text-decoration-color: #A13924; */
+    text-decoration: none;
+    border-bottom: 4px solid #A13924;
+}
+
 .quote {
     background-color: #A13924;
     border-radius: 5px;
