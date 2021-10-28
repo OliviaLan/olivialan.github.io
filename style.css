@@ -513,7 +513,8 @@ a:hover {}
 
 #three-column {
     overflow: hidden;
-    padding: 10px 0px 50px 0px;
+    padding: 10px 0px 30px 0px;
+    line-height: 1.6;
 }
 
 #three-column .tbox1 {
