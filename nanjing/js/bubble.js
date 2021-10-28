@@ -87,7 +87,7 @@ function DrawBubbles(data, type, index) {
             } else if (type == "rape_fail") {
                 return "强奸未遂"
             } else if (type == "rob") {
-                return "偷盗"
+                return "抢劫"
             } else if (type == "hurt") {
                 return "伤害"
             } else if (type == "force_labor") {
