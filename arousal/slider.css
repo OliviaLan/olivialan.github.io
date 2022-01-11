@@ -1,0 +1,53 @@
+.AScontainer {
+    margin: 2em 10% 2em 10%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, right;
+    background-size: contain;
+    padding: 0 75px 0 75px;
+}
+
+.arousal {
+    background-image: url(images/AS_sleepy.png), url(images/AS_wideawake.png);
+    background-size: contain;
+}
+
+.pleasure {
+    background-image: url(images/AS_unhappy.png), url(images/AS_happy.png);
+    background-size: contain;
+}
+
+.AffectiveSlider input {
+    /* Hide the number input */
+    display: none;
+}
+
+.AffectiveSlider .ui-slider-track {
+    display: block;
+    margin-left: 15px;
+    background-color: black;
+    border-color: #000;
+}
+
+.AffectiveSlider .ui-slider-handle {
+    height: 35px;
+    width: 35px;
+    border-radius: 60%;
+    background: white;
+    border: 2px solid #505050;
+}
+
+.AffectiveSlider .ui-slider-handle:hover {
+    background: #505050;
+    border: 2px solid white;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px #212121;
+}
+
+.ASintensityCue {
+    margin: 0 15px 0 15px;
+    height: 48px;
+    background-image: url("images/AS_intensity_cue.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}

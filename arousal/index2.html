@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Affective Slider (AS) Example</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="slider.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+
+<body>
+    <h1 style="text-align: center;">图1</h1>
+    <h3 style="text-align: center;">请观察下图，然后评分</h3>
+    <div style="text-align: center;">
+        <img src="images/test.png" style="width: 50%;"></img>
+    </div>
+    <form class="AffectiveSlider" style="text-align: center;">
+        Level of pleasure（悲伤-快乐）
+        <div class="AScontainer pleasure">
+            <input type="range" name="AS-pleasure" id="AS-pleasure" value=".5" min="0" max="1" step=".01" />
+            <div class="ASintensityCue"></div>
+        </div>
+        Level of arousal（沉睡-激动）
+        <div class="AScontainer arousal">
+            <input type="range" name="AS-arousal" id="AS-arousal" value=".5" min="0" max="1" step=".01" />
+            <div class="ASintensityCue"></div>
+        </div>
+    </form>
+    <div style="margin: 4em 4em;">
+        <button style="width:200px; margin:0 auto">Next</button>
+    </div>
+
+</body>
+
+<script src="test.js"></script>
+
+</html>
