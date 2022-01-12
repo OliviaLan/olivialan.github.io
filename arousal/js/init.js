@@ -10,7 +10,7 @@ chosen_patterns = []
 time_out = false
 questions_shuffle = []
     //一个人测多少张图
-testNum = 1
+testNum = 3
 
 //要提前在firebase里新建几个存数据的文件夹-collection
 mid_collection = 'ID_affective'

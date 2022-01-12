@@ -57,6 +57,7 @@ var save_form_answers = () => {
 
 
 var init_survey = () => {
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
     document.body.innerHTML = ''
     d = document.createElement('div')
     text = '<p><strong>Suvey:</strong>'
