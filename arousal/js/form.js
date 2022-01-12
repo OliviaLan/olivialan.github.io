@@ -7,7 +7,7 @@ var save_form_answers = () => {
 
     gender_all = document.getElementsByName('gender');
     education_all = document.getElementsByName('education');
-    prior_all = document.getElementsByName('prior');
+    // prior_all = document.getElementsByName('prior');
 
     for (i = 0; i < 4; i++) {
         if (gender_all[i].checked == true) {
@@ -22,19 +22,19 @@ var save_form_answers = () => {
     }
 
 
-    for (i = 0; i < 2; i++) {
-        if (prior_all[i].checked == true) {
-            var prior = prior_all[i].value
-        }
-    }
+    // for (i = 0; i < 2; i++) {
+    //     if (prior_all[i].checked == true) {
+    //         var prior = prior_all[i].value
+    //     }
+    // }
 
 
 
-    if (age && gender && education && country && prior && importance && data) {
+    if (age && gender && education && country && importance && data) {
         user_data['age'] = age;
         user_data['gender'] = gender;
         user_data['country'] = country;
-        user_data['prior'] = prior;
+        // user_data['prior'] = prior;
         user_data['education'] = education;
         user_data['importance'] = importance;
         user_data['data'] = data;
@@ -167,29 +167,29 @@ var init_survey = () => {
     d.innerHTML += ' Others'
 
 
-    d.innerHTML += '<br><br><p>5. Have you ever seen any of the 10 infographics before?</p>'
-    input_51 = document.createElement('input')
-    input_51.id = "prior"
-    input_51.type = "radio"
-    input_51.name = "prior"
-    input_51.value = "Yes";
-    input_52 = document.createElement('input')
-    input_52.id = "prior"
-    input_52.type = "radio"
-    input_52.name = "prior"
-    input_52.value = "No";
+    // d.innerHTML += '<br><br><p>5. Have you ever seen any of the 10 infographics before?</p>'
+    // input_51 = document.createElement('input')
+    // input_51.id = "prior"
+    // input_51.type = "radio"
+    // input_51.name = "prior"
+    // input_51.value = "Yes";
+    // input_52 = document.createElement('input')
+    // input_52.id = "prior"
+    // input_52.type = "radio"
+    // input_52.name = "prior"
+    // input_52.value = "No";
 
 
-    d.append(input_51)
-    d.innerHTML += ' Yes  '
+    // d.append(input_51)
+    // d.innerHTML += ' Yes  '
 
-    d.append(input_52)
-    d.innerHTML += ' No  '
-
-
+    // d.append(input_52)
+    // d.innerHTML += ' No  '
 
 
-    d.innerHTML += '<br><br><p>6.What do you think is the most important design factor(s) in infographics to augment affective arousal?</p><br>'
+
+
+    d.innerHTML += '<br><br><p>5.What do you think is the most important design factor(s) in infographics to augment affective arousal?</p><br>'
 
     textarea = document.createElement('textarea')
         // input.name = "reason"
@@ -200,7 +200,7 @@ var init_survey = () => {
 
     d.append(textarea)
 
-    d.innerHTML += '<br><br><p>7.Do you agree that augmenting the affective arousal of infographic design helps you absorb the data better? why?</p><br>'
+    d.innerHTML += '<br><br><p>6.Do you agree that augmenting the affective arousal of infographic design helps you absorb the data better? why?</p><br>'
 
     textarea_3 = document.createElement('textarea')
         // input.name = "reason"
@@ -212,7 +212,7 @@ var init_survey = () => {
     d.append(textarea_3)
 
 
-    d.innerHTML += '<br><br><p>8. Please leave your feedback or comments related to this study below (optional).</p><br>'
+    d.innerHTML += '<br><br><p>7. Please leave your feedback or comments related to this study below (optional).</p><br>'
 
     textarea_2 = document.createElement('textarea')
         // input.name = "reason"

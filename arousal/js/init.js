@@ -9,6 +9,8 @@ user_data = {}
 chosen_patterns = []
 time_out = false
 questions_shuffle = []
+    //一个人测多少张图
+testNum = 1
 
 //要提前在firebase里新建几个存数据的文件夹-collection
 mid_collection = 'ID_affective'
@@ -73,9 +75,9 @@ var init_end = () => {
     console.log('finalize')
 
     //实验人员在本地下载
-    get_firebase_data(complete_collection, true)
-        // get_firebase_data(incomplete_collection, true)
-        // get_firebase_data(mid_collection, true)
+    //get_firebase_data(complete_collection, true)
+    // get_firebase_data(incomplete_collection, true)
+    // get_firebase_data(mid_collection, true)
 
     // 最后提交完成才会生成final，包括做题的和问卷的结果
     final_user_data = {}
@@ -287,6 +289,8 @@ function generateRan() {
     return (random)
 }
 
+
+//有些图被看得很少的，专门抓出来看
 function generateSelected() {
 
     var selection = [72, 77, 78, 79, 81, 121, 123, 124, 179, 433];
@@ -312,10 +316,10 @@ async function init() {
     init_timestamp = Date.now()
     user_data['timestamp_start'] = init_timestamp
     user_data['mid'] = mID
-    assigned_pics = generateRan().slice(0, 10)
+    assigned_pics = generateRan().slice(0, testNum)
         // assigned_pics = generateSelected()
     user_data['assigned_pics'] = assigned_pics
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < testNum; i++) {
         questions_shuffle.push(questions[assigned_pics[i] - 1])
     }
 

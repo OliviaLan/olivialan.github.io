@@ -1,3 +1,17 @@
+var kkk = 50
+
+function doSomething() {
+    console.log("dododo")
+    debugger;
+    kkk = 100
+    document.getElementById('pleasure_score').innerHTML = 'Level of pleasure:' + kkk
+}
+
+while (document.getElementsByClassName('ui-slider-handle ui-btn ui-shadow').length != 0) {
+    //console.log("hahaha")
+}
+
+
 function save_answer() {
 
     pleasure = document.getElementById('AS-pleasure').nextSibling.children[0].getAttribute("aria-valuenow")
@@ -75,7 +89,6 @@ function save_answer() {
 
 function gen_pic() {
 
-
     document.body.innerHTML = ''
     progress_bar((current_question + 1) * window.innerWidth / questions_shuffle.length, 'rgb(115, 183, 192)', 'test')
 
@@ -90,6 +103,7 @@ function gen_pic() {
 
     //----------rating-----------
 
+
     d.innerHTML += '<br><br><br><p><strong>1. Please score the affective traits of the visualization</p><br>'
 
     sam = document.createElement('form');
@@ -97,71 +111,27 @@ function gen_pic() {
     // sam.className = "AffectiveSlider";
     sam.setAttribute("class", "AffectiveSlider");
 
+    sam.innerHTML += '<p id="pleasure_score">Level of pleasure:' + kkk + '</p>';
     pleasure = document.createElement('div');
     pleasure.className = "AScontainer pleasure";
-    pleasure.innerHTML = '<input type="range" name="AS-pleasure" id="AS-pleasure" value=".5" min="0" max="1" step=".01" /><div class="ASintensityCue"></div></div>'
+    pleasure.innerHTML = '<input type="range" name="AS-pleasure" id="AS-pleasure" value=".5" min="0" max="1" step=".01"><div class="ASintensityCue"></div></div>'
+    sam.append(pleasure);
 
+    sam.innerHTML += "Level of arousal";
     arousal = document.createElement('div');
     arousal.className = "AScontainer arousal";
-    arousal.innerHTML = '<input type="range" name="AS-arousal" id="AS-arousal" value=".5" min="0" max="1" step=".01" /><div class="ASintensityCue"></div></div>'
-
-    sam.append(pleasure);
+    arousal.innerHTML = ' <input type="range" name="AS-arousal" id="AS-arousal" value=".5" min="0" max="1" step=".01"><div class="ASintensityCue"></div></div>'
     sam.append(arousal);
 
     d.append(sam);
 
-    // sam = document.createElement('span');
-    // sam.style.lineHeight = "20px";
-    // d.append(sam);
-
-    // for (var i = 1; i < 6; i++) {
-    //     scale = document.createElement('span')
-    //     scale.style.display = "inline-block";
-    //     scale.style.width = "100px";
-    //     scale.style.verticalAlign = "top";
-    //     scale.style.marginRight = "50px";
-    //     scale.style.textAlign = "center";
-    //     scale.innerHTML = '<img src = "./img/sam_' + i + '.png" style="width:100%"></img>'
-    //     sam.append(scale)
-    // }
-
-    // d.innerHTML += '<br><br>'
-
-
-    // input = document.createElement('span');
-    // input.style.lineHeight = "20px";
-    // input.style.marginLeft = "20px";
-    // input.style.marginRight = "20px";
-    // d.append(input);
-
-    // for (var i = 1; i < 10; i++) {
-    //     choice = document.createElement("span");
-    //     choice.style.display = "inline-block";
-    //     choice.style.width = "75px";
-    //     choice.style.height = "20px";
-    //     choice.style.textAlign = "center";
-    //     r2 = document.createElement("input");
-    //     r2.type = "radio";
-    //     r2.name = "arousal";
-    //     r2.className = "r1 arousal";
-    //     r2.value = i;
-    //     l2 = document.createElement("label");
-    //     l2.for = i;
-    //     l2.innerHTML = i;
-    //     l2.className = "l1";
-    //     //依次添加radio button和label
-    //     choice.append(r2);
-    //     choice.append(l2);
-    //     input.append(choice)
-    //         // d.innerHTML += '<br>'
-    // }
 
     d.innerHTML += '<br><br>'
 
     // -----------------reason--------------------
 
 
-    d.innerHTML += '<p><strong>2. Please write down your reason:</strong></p><p>if you find more than one affective design factors, we encourage you to list them one by one.</p><p>if you find the infographic design low in affective arousal, please explain why.</p><br>'
+    d.innerHTML += '<p><strong>2. Please write down your reason (this question is used to check whether you are doing this xx)</p><br>'
 
     textarea = document.createElement('textarea')
     textarea.id = "reason"
@@ -280,7 +250,6 @@ function gen_pic() {
         save_answer()
     }
     document.body.append(btn)
-
 }
 
 var init_questions = () => {
