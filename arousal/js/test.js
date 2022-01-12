@@ -1,4 +1,5 @@
-var kkk = 0.5
+//初始分数
+var samInitialScore = 0.5
 
 function inputListener() {
     // debugger;
@@ -115,13 +116,13 @@ function gen_pic() {
     // sam.className = "AffectiveSlider";
     sam.setAttribute("class", "AffectiveSlider");
 
-    sam.innerHTML += '<p id="pleasure_score">Level of pleasure: ' + kkk + '</p>';
+    sam.innerHTML += '<p id="pleasure_score">Level of pleasure: ' + samInitialScore + '</p>';
     pleasure = document.createElement('div');
     pleasure.className = "AScontainer pleasure";
     pleasure.innerHTML = '<input type="range" name="AS-pleasure" id="AS-pleasure" value=".5" min="0" max="1" step=".01"><div class="ASintensityCue"></div></div>'
     sam.append(pleasure);
 
-    sam.innerHTML += '<p id="arousal_score">Level of arousal: ' + kkk + '</p>';
+    sam.innerHTML += '<p id="arousal_score">Level of arousal: ' + samInitialScore + '</p>';
     arousal = document.createElement('div');
     arousal.className = "AScontainer arousal";
     arousal.innerHTML = ' <input type="range" name="AS-arousal" id="AS-arousal" value=".5" min="0" max="1" step=".01"><div class="ASintensityCue"></div></div>'
