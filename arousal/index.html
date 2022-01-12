@@ -47,6 +47,11 @@
 </body>
 
 <script src="js/init.js"></script>
-
+<script type="text/javascript">
+    //判断所有东西加载完，才能获得打分部分的dom
+    window.addEventListener('load', function() {
+        inputListener()
+    })
+</script>
 
 </html>

@@ -1,14 +1,18 @@
-var kkk = 50
+var kkk = 0.5
 
-function doSomething() {
-    console.log("dododo")
-    debugger;
-    kkk = 100
-    document.getElementById('pleasure_score').innerHTML = 'Level of pleasure:' + kkk
+function inputListener() {
+    // debugger;
+    //$('.ui-slider-handle ui-btn ui-shadow')[0].click(function() { updateScore(); return false; });
+    document.getElementsByClassName('ui-slider-handle ui-btn ui-shadow')[0].addEventListener("mouseup", function() { updateScore() })
+    document.getElementsByClassName('ui-slider-handle ui-btn ui-shadow')[1].addEventListener("mouseup", function() { updateScore() })
 }
 
-while (document.getElementsByClassName('ui-slider-handle ui-btn ui-shadow').length != 0) {
-    //console.log("hahaha")
+function updateScore() {
+    pleasure = document.getElementById('AS-pleasure').nextSibling.children[0].getAttribute("aria-valuenow")
+    arousal = document.getElementById('AS-arousal').nextSibling.children[0].getAttribute("aria-valuenow")
+    document.getElementById('pleasure_score').innerHTML = 'Level of pleasure: ' + pleasure
+    document.getElementById('arousal_score').innerHTML = 'Level of arousal: ' + arousal
+
 }
 
 
@@ -111,13 +115,13 @@ function gen_pic() {
     // sam.className = "AffectiveSlider";
     sam.setAttribute("class", "AffectiveSlider");
 
-    sam.innerHTML += '<p id="pleasure_score">Level of pleasure:' + kkk + '</p>';
+    sam.innerHTML += '<p id="pleasure_score">Level of pleasure: ' + kkk + '</p>';
     pleasure = document.createElement('div');
     pleasure.className = "AScontainer pleasure";
     pleasure.innerHTML = '<input type="range" name="AS-pleasure" id="AS-pleasure" value=".5" min="0" max="1" step=".01"><div class="ASintensityCue"></div></div>'
     sam.append(pleasure);
 
-    sam.innerHTML += "Level of arousal";
+    sam.innerHTML += '<p id="arousal_score">Level of arousal: ' + kkk + '</p>';
     arousal = document.createElement('div');
     arousal.className = "AScontainer arousal";
     arousal.innerHTML = ' <input type="range" name="AS-arousal" id="AS-arousal" value=".5" min="0" max="1" step=".01"><div class="ASintensityCue"></div></div>'
@@ -250,6 +254,9 @@ function gen_pic() {
         save_answer()
     }
     document.body.append(btn)
+
+    // $('document').ready(inputListener());
+
 }
 
 var init_questions = () => {
