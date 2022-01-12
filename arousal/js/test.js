@@ -37,11 +37,19 @@ function save_answer() {
                 preference_share[s].checked = false
                 document.getElementById('AS-pleasure').nextSibling.children[0].style = "left: 50%;"
                 document.getElementById('AS-arousal').nextSibling.children[0].style = "left: 50%;"
+                errors = document.getElementsByClassName('error')
+                while (errors.length > 0) {
+                    for (i = 0; i < errors.length; i++) {
+                        errors[i].remove()
+                    }
+                }
 
                 //前进一张图，在原网页上把图替换掉
                 if (current_question < questions_shuffle.length - 1) {
                     current_question++
-                    progress_bar((current_question + 1) * window.innerWidth / questions_shuffle.length, '#0000cc', 'test')
+                    $('html, body').animate({ scrollTop: 0 }, 'fast');
+                    document.getElementsByClassName('timeclass')[0].style.width = Math.round((current_question + 1) * window.innerWidth / questions_shuffle.length) + "px"
+                    document.getElementsByClassName('timeclass')[1].innerHTML = 'pic number: ' + (1 + current_question) + '/' + (questions_shuffle.length)
                     document.getElementById("stimuli").src = './data/' + questions_shuffle[current_question]['src']
                 } else {
                     // user_data['full_questions_time'] = Date.now() - init_timestamp
@@ -52,6 +60,7 @@ function save_answer() {
                 counter++
                 if (counter == 5 * 5) {
                     var error = document.createElement('div')
+                    error.className = "error"
                     error.innerHTML = 'Please answer all the questions'
                     error.style.color = 'red'
                     d.append(error)
@@ -68,7 +77,7 @@ function gen_pic() {
 
 
     document.body.innerHTML = ''
-    progress_bar((current_question + 1) * window.innerWidth / questions_shuffle.length, '#0000cc', 'test')
+    progress_bar((current_question + 1) * window.innerWidth / questions_shuffle.length, 'rgb(115, 183, 192)', 'test')
 
 
     d = document.createElement('div')
@@ -166,7 +175,7 @@ function gen_pic() {
 
 
     // -----------------preference 1--------------------
-    d.innerHTML += '<p><strong>3. I feel that I like this infographic.</strong></p>'
+    d.innerHTML += '<p><strong>3. I feel that I like this data visualization.</strong></p>'
     d.innerHTML += '<br>'
 
 
@@ -210,7 +219,7 @@ function gen_pic() {
     d.innerHTML += '<br><br>'
 
     // -----------------preference 2--------------------
-    d.innerHTML += '<p><strong>4. I feel that I want to share this infographic.</strong></p>'
+    d.innerHTML += '<p><strong>4. I feel that I want to share this data visualization.</strong></p>'
     d.innerHTML += '<br>'
 
 
@@ -268,7 +277,6 @@ function gen_pic() {
         // btn.style.display = 'block'
         // btn.style.fontSize = 'large'
     btn.onclick = () => {
-        console.log("hit")
         save_answer()
     }
     document.body.append(btn)

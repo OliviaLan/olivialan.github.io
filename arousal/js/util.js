@@ -62,21 +62,21 @@
   	    d = document.createElement('div')
   	    d.style.position = 'absolute'
   	    d.className = 'timeclass'
-  	    d.style.top = '1vh'
-  	    d.style.left = '1vh'
+  	    d.style.top = '10px'
+  	    d.style.left = '10px'
   	    d.style.color = color
   	    if (section == 'tutorial') d.innerHTML = 'tutorial progress: ' + (1 + current_slide) + '/' + (tutorial_length)
-  	    else if (section == 'test') d.innerHTML = 'infographics number: ' + (1 + current_question) + '/' + (questions_shuffle.length)
+  	    else if (section == 'test') d.innerHTML = 'pic number: ' + (1 + current_question) + '/' + (questions_shuffle.length)
   	    document.body.append(d)
 
-  	    d = document.createElement('div')
-  	    d.id = 'timediv'
-  	    d.className = 'timeclass'
-  	    d.style.position = 'absolute'
-  	    d.style.top = '4%'
-  	    d.style.left = '1vh'
-  	    d.style.color = color
-  	    document.body.append(d)
+  	    // d = document.createElement('div')
+  	    // d.id = 'timediv'
+  	    // d.className = 'timeclass'
+  	    // d.style.position = 'absolute'
+  	    // d.style.top = '4%'
+  	    // d.style.left = '1vh'
+  	    // d.style.color = color
+  	    // document.body.append(d)
   	}
 
   	// function startTimer(duration) {
