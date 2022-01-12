@@ -4,16 +4,29 @@ var samInitialScore = 0.5
 function inputListener() {
     // debugger;
     //$('.ui-slider-handle ui-btn ui-shadow')[0].click(function() { updateScore(); return false; });
-    document.getElementsByClassName('ui-slider-handle ui-btn ui-shadow')[0].addEventListener("mouseup", function() { updateScore() })
-    document.getElementsByClassName('ui-slider-handle ui-btn ui-shadow')[1].addEventListener("mouseup", function() { updateScore() })
+    document.getElementsByClassName('ui-slider-handle ui-btn ui-shadow')[0].addEventListener("mouseup", function() { updatePleasureScore() })
+    document.getElementsByClassName('ui-slider-handle ui-btn ui-shadow')[1].addEventListener("mouseup", function() { updateArousalScore() })
 }
 
-function updateScore() {
+//拖动条导致上方显示的数字更新
+function updatePleasureScore() {
     pleasure = document.getElementById('AS-pleasure').nextSibling.children[0].getAttribute("aria-valuenow")
-    arousal = document.getElementById('AS-arousal').nextSibling.children[0].getAttribute("aria-valuenow")
     document.getElementById('pleasure_score').innerHTML = 'Level of pleasure: ' + pleasure
-    document.getElementById('arousal_score').innerHTML = 'Level of arousal: ' + arousal
+}
 
+function updateArousalScore() {
+    arousal = document.getElementById('AS-arousal').nextSibling.children[0].getAttribute("aria-valuenow")
+    document.getElementById('arousal_score').innerHTML = 'Level of arousal: ' + arousal
+}
+
+
+//隐藏介绍页，显示图片页
+function showPic() {
+    document.getElementById("showPic").style.display = "block"
+    document.getElementById("introPage").style.display = "none"
+    document.getElementsByClassName('timeclass')[0].style.display = "block"
+    document.getElementsByClassName('timeclass')[1].style.display = "block"
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
 }
 
 
@@ -56,6 +69,9 @@ function save_answer() {
                 preference_share[s].checked = false
                 document.getElementById('AS-pleasure').nextSibling.children[0].style = "left: 50%;"
                 document.getElementById('AS-arousal').nextSibling.children[0].style = "left: 50%;"
+                document.getElementById('pleasure_score').innerHTML = 'Level of pleasure: ' + samInitialScore
+                document.getElementById('arousal_score').innerHTML = 'Level of arousal: ' + samInitialScore
+
                 errors = document.getElementsByClassName('error')
                 while (errors.length > 0) {
                     for (i = 0; i < errors.length; i++) {
@@ -70,6 +86,7 @@ function save_answer() {
                     document.getElementsByClassName('timeclass')[0].style.width = Math.round((current_question + 1) * window.innerWidth / questions_shuffle.length) + "px"
                     document.getElementsByClassName('timeclass')[1].innerHTML = 'pic number: ' + (1 + current_question) + '/' + (questions_shuffle.length)
                     document.getElementById("stimuli").src = './data/' + questions_shuffle[current_question]['src']
+
                 } else {
                     // user_data['full_questions_time'] = Date.now() - init_timestamp
                     init_survey()
@@ -94,16 +111,53 @@ function save_answer() {
 
 function gen_pic() {
 
+
     document.body.innerHTML = ''
+
+    intro = document.createElement('div')
+    text = '<p><strong>What Triggers Emotions in Data Visualization Design?</strong></p> <br> <p>Data visualization definition xxx. In this study, we are interested in what design factors can be emotional. You are going to view 30 different data visualizations randomly chosen from our corpus, rate how emotional they are, and explain why. To prevent the influence of content, we have blurred all the texts so that you can focus on perceiving the design and experience the differences brought by colors, graphics, layouts, etc. </p><br><p>To evaluate the emotional traits of the designs, you will use the following scales: (1) Level of pleasure, an indicator about how positive an emotion is, ranging from "Unhappy" to "Happy", (2) Level of arousal, an indicator about excitement or how intense an emotion is, ranging from "Sleepy" to "Wideawake". You can drag the cursor to set the score. The cursor would be placed at 0.5 by default, which means "Neutral".</p><br><img width=100% src="img/tutorial_3.jpeg"></img><br><br><p><strong>Acceptance Criteria: The whole survey will last about 15 minutes. IRRELEVANT OR INCOMPLETE ANSWERS WILL NOT BE ACCEPTED. </strong></p>Therefore, we encourage you to provide your answers as required clearly to help us distinguish qualified answers and pay bonuses to very supportive workers (up to $1).</p> <p style="color:red"><strong>Attention: do not close or reload the page after this step. If you do, the study will end without being finished.</p>'
+    intro.innerHTML = text
+    intro.style.textAlign = 'center'
+    intro.style.fontSize = 'large'
+    intro.style.marginTop = '5%'
+    intro.style.marginLeft = '20%'
+    intro.style.marginRight = '20%'
+    intro.setAttribute("id", "introPage")
+    document.body.append(intro)
+
+
+    intro_btn = document.createElement('button')
+    intro_btn.innerHTML = 'Accept and Proceed'
+        // btn.style.margin = '3%'
+        // btn.style.class = 'large'
+    intro_btn.style.width = "200px"
+    intro_btn.style.margin = "2em auto"
+    intro_btn.className = "begin"
+
+    intro_btn.onclick = () => {
+        // find_mid()
+        if (mID == undefined || mID == '' || mID == 'preview') end_preview()
+            // else init_warning()
+            // else init_survey()
+            // else init_tutorial_1()
+            //else init_questions()
+        else showPic()
+    }
+
+    intro.append(intro_btn)
+
+
     progress_bar((current_question + 1) * window.innerWidth / questions_shuffle.length, 'rgb(115, 183, 192)', 'test')
 
 
     d = document.createElement('div')
     d.style.textAlign = 'center'
     d.style.margin = '2%'
+    d.setAttribute("id", "showPic")
+    d.style.display = "none"
     document.body.append(d)
     d.innerHTML += '<h1 style="text-align: center;">请阅读下图，然后按要求打分</h1>'
-    d.innerHTML += '<br><br><img id = "stimuli" src =./data/' + questions_shuffle[current_question]['src'] + ' style="width: 50%;"></img>'
+    d.innerHTML += '<br><br><img id = "stimuli" src =./data/' + questions_shuffle[current_question]['src'] + ' style="width: 70%;"></img>'
 
 
     //----------rating-----------
@@ -254,7 +308,7 @@ function gen_pic() {
     btn.onclick = () => {
         save_answer()
     }
-    document.body.append(btn)
+    d.append(btn)
 
     // $('document').ready(inputListener());
 

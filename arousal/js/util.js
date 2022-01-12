@@ -57,6 +57,7 @@
   	    bar.id = 'timebar'
   	    bar.style.width = Math.round(progress) + 'px'
   	    bar.style.backgroundColor = color
+  	    bar.style.display = "none"
   	    document.body.append(bar)
   	        //进行到第几个，显示红色bar
   	    d = document.createElement('div')
@@ -65,6 +66,7 @@
   	    d.style.top = '10px'
   	    d.style.left = '10px'
   	    d.style.color = color
+  	    d.style.display = "none"
   	    if (section == 'tutorial') d.innerHTML = 'tutorial progress: ' + (1 + current_slide) + '/' + (tutorial_length)
   	    else if (section == 'test') d.innerHTML = 'pic number: ' + (1 + current_question) + '/' + (questions_shuffle.length)
   	    document.body.append(d)

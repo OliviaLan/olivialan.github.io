@@ -19,28 +19,16 @@
   	        btn.style.margin = "2em auto"
   	        btn.className = "begin"
 
-  	        $(document).on('click', '.begin', function() {
-  	            init_questions()
-  	                // document.body.innerHTML = ''
-  	                //     // find_mid()
-  	                // if (mID == undefined || mID == '' || mID == 'preview') end_preview()
-  	                //     // else init_warning()
-  	                //     // else init_survey()
-  	                //     // else init_tutorial_1()
-  	                //     //else init_questions()
-  	                // else init_questions()
-  	        })
-
-  	        // btn.onclick = () => {
-  	        //     document.body.innerHTML = ''
-  	        //         // find_mid()
-  	        //     if (mID == undefined || mID == '' || mID == 'preview') end_preview()
-  	        //         // else init_warning()
-  	        //         // else init_survey()
-  	        //         // else init_tutorial_1()
-  	        //         //else init_questions()
-  	        //     else init_questions()
-  	        // }
+  	        btn.onclick = () => {
+  	            document.body.innerHTML = ''
+  	                // find_mid()
+  	            if (mID == undefined || mID == '' || mID == 'preview') end_preview()
+  	                // else init_warning()
+  	                // else init_survey()
+  	                // else init_tutorial_1()
+  	                //else init_questions()
+  	            else init_questions()
+  	        }
 
   	        document.body.append(btn)
 
