@@ -2,8 +2,8 @@ var save_form_answers = () => {
 
     age = document.getElementById('age').value;
     country = document.getElementById('country').value;
-    importance = document.getElementById('importance').value;
-    data = document.getElementById('data').value;
+    importance_arousal = document.getElementById('importance_arousal').value;
+    importance_pleasure = document.getElementById('importance_pleasure').value;
 
     gender_all = document.getElementsByName('gender');
     education_all = document.getElementsByName('education');
@@ -30,14 +30,14 @@ var save_form_answers = () => {
 
 
 
-    if (age && gender && education && country && importance && data) {
+    if (age && gender && education && country && importance) {
         user_data['age'] = age;
         user_data['gender'] = gender;
         user_data['country'] = country;
         // user_data['prior'] = prior;
         user_data['education'] = education;
-        user_data['importance'] = importance;
-        user_data['data'] = data;
+        user_data['importance_arousal'] = importance_arousal;
+        user_data['importance_pleasure'] = importance_pleasure;
         user_data['feedback'] = document.getElementById('feedback').value;
         user_data['timestamp_end'] = Date.now();
         user_data['worktime_in_seconds'] = (user_data['timestamp_end'] - user_data['timestamp_start']) / 1000;
@@ -46,7 +46,6 @@ var save_form_answers = () => {
 
         init_end()
     } else {
-        console.log('pls fill in')
         error = document.createElement('div')
         error.innerHTML = 'Please fill in your answer'
         error.style.color = 'red'
@@ -190,37 +189,35 @@ var init_survey = () => {
 
 
 
-    d.innerHTML += '<br><br><p>5.What do you think is the most important design factor(s) in infographics to augment affective arousal?</p><br>'
+    d.innerHTML += '<br><br><p>5.What do you think is the most important design factor(s) to achieve a high level of arousal in data visualization?</p><br>'
 
     textarea = document.createElement('textarea')
         // input.name = "reason"
-    textarea.id = "importance"
+    textarea.id = "importance_arousal"
         // input.size = "35"
     textarea.style.width = "500px"
     textarea.style.height = "80px"
 
     d.append(textarea)
 
-    d.innerHTML += '<br><br><p>6.Do you agree that augmenting the affective arousal of infographic design helps you absorb the data better? why?</p><br>'
+    d.innerHTML += '<br><br><p>6.What do you think is the most important design factor(s) to achieve a high level of pleasure in data visualization?</p><br>'
 
     textarea_3 = document.createElement('textarea')
-        // input.name = "reason"
-    textarea_3.id = "data"
-        // input.size = "35"
+    textarea_3.id = "importance_pleasure"
     textarea_3.style.width = "500px"
     textarea_3.style.height = "80px"
 
     d.append(textarea_3)
 
 
-    d.innerHTML += '<br><br><p>7. Please leave your feedback or comments related to this study below (optional).</p><br>'
+    d.innerHTML += '<br><br><p>*Your feedback or comments related to this study (optional).</p><br>'
 
     textarea_2 = document.createElement('textarea')
         // input.name = "reason"
     textarea_2.id = "feedback"
         // input.size = "35"
     textarea_2.style.width = "500px"
-    textarea_2.style.height = "120px"
+    textarea_2.style.height = "80px"
 
     d.append(textarea_2)
 

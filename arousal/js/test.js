@@ -4,19 +4,19 @@ var samInitialScore = 0.5
 function inputListener() {
     // debugger;
     //$('.ui-slider-handle ui-btn ui-shadow')[0].click(function() { updateScore(); return false; });
-    document.getElementsByClassName('ui-slider-handle ui-btn ui-shadow')[0].addEventListener("mouseup", function() { updatePleasureScore() })
-    document.getElementsByClassName('ui-slider-handle ui-btn ui-shadow')[1].addEventListener("mouseup", function() { updateArousalScore() })
+    document.getElementsByClassName('ui-slider-handle ui-btn ui-shadow')[0].addEventListener("mouseup", function() { updateArousalScore() })
+    document.getElementsByClassName('ui-slider-handle ui-btn ui-shadow')[1].addEventListener("mouseup", function() { updatePleasureScore() })
 }
 
 //拖动条导致上方显示的数字更新
 function updatePleasureScore() {
     pleasure = document.getElementById('AS-pleasure').nextSibling.children[0].getAttribute("aria-valuenow")
-    document.getElementById('pleasure_score').innerHTML = 'Level of pleasure: ' + pleasure
+    document.getElementById('pleasure_score').innerHTML = 'Move the slider to rate your level of Pleasure: ' + pleasure
 }
 
 function updateArousalScore() {
     arousal = document.getElementById('AS-arousal').nextSibling.children[0].getAttribute("aria-valuenow")
-    document.getElementById('arousal_score').innerHTML = 'Level of arousal: ' + arousal
+    document.getElementById('arousal_score').innerHTML = 'Move the slider to rate your level of Arousal: ' + arousal
 }
 
 
@@ -24,8 +24,9 @@ function updateArousalScore() {
 function showPic() {
     document.getElementById("showPic").style.display = "block"
     document.getElementById("introPage").style.display = "none"
-    document.getElementsByClassName('timeclass')[0].style.display = "block"
-    document.getElementsByClassName('timeclass')[1].style.display = "block"
+        //显示进度条
+        // document.getElementsByClassName('timeclass')[0].style.display = "block"
+        // document.getElementsByClassName('timeclass')[1].style.display = "block"
     $('html, body').animate({ scrollTop: 0 }, 'fast');
 }
 
@@ -36,75 +37,76 @@ function save_answer() {
     arousal = document.getElementById('AS-arousal').nextSibling.children[0].getAttribute("aria-valuenow")
 
     preference_like = Array.prototype.slice.call(document.getElementsByClassName('preference_like'))
-    preference_share = Array.prototype.slice.call(document.getElementsByClassName('preference_share'))
+        // preference_share = Array.prototype.slice.call(document.getElementsByClassName('preference_share'))
 
 
     var counter = 0
 
     for (var l in preference_like) {
-        for (var s in preference_share) {
-            if (preference_like[l].checked == true && preference_share[s].checked == true && document.getElementById('reason').value != '') {
-                console.log('finished')
-                new_answer = {
-                    'pleasure': pleasure,
-                    'arousal': arousal,
-                    'pic_id': questions_shuffle[current_question]['id'],
-                    'reason': document.getElementById('reason').value,
-                    'preference_like': preference_like[l].value,
-                    'preference_share': preference_share[s].value,
-                }
-                user_answers.push(new_answer)
-                user_data['answers'] = user_answers
-                    // db.collection(incomplete_collection).add(user_data)
-                    // .then(involvementction(docRef) {
-                    //     console.log("Document written with ID: ", docRef.id);
-                    // })
-                    // .catch(involvementction(error) {
-                    //     console.error("Error adding document: ", error);
-                    // });
+        if (preference_like[l].checked == true && document.getElementById('reason').value != '') {
+            // console.log('finished')
+            new_answer = {
+                'pleasure': pleasure,
+                'arousal': arousal,
+                'pic_id': questions_shuffle[current_question]['id'],
+                'reason': document.getElementById('reason').value,
+                'preference_like': preference_like[l].value,
+                // 'preference_share': preference_share[s].value,
+            }
+            user_answers.push(new_answer)
+            user_data['answers'] = user_answers
+                // db.collection(incomplete_collection).add(user_data)
+                // .then(involvementction(docRef) {
+                //     console.log("Document written with ID: ", docRef.id);
+                // })
+                // .catch(involvementction(error) {
+                //     console.error("Error adding document: ", error);
+                // });
 
-                //清空答案
-                document.getElementById('reason').value = ''
-                preference_like[l].checked = false
-                preference_share[s].checked = false
-                document.getElementById('AS-pleasure').nextSibling.children[0].style = "left: 50%;"
-                document.getElementById('AS-arousal').nextSibling.children[0].style = "left: 50%;"
-                document.getElementById('pleasure_score').innerHTML = 'Level of pleasure: ' + samInitialScore
-                document.getElementById('arousal_score').innerHTML = 'Level of arousal: ' + samInitialScore
+            //清空答案
+            document.getElementById('reason').value = ''
+            preference_like[l].checked = false
+                // preference_share[s].checked = false
+            document.getElementById('AS-pleasure').nextSibling.children[0].style = "left: 50%;"
+            document.getElementById('AS-arousal').nextSibling.children[0].style = "left: 50%;"
+            document.getElementById('pleasure_score').innerHTML = 'Move the slider to rate your level of Pleasure: ' + samInitialScore
+            document.getElementById('arousal_score').innerHTML = 'Move the slider to rate your level of Arousal: ' + samInitialScore
 
-                errors = document.getElementsByClassName('error')
-                while (errors.length > 0) {
-                    for (i = 0; i < errors.length; i++) {
-                        errors[i].remove()
-                    }
-                }
-
-                //前进一张图，在原网页上把图替换掉
-                if (current_question < questions_shuffle.length - 1) {
-                    current_question++
-                    $('html, body').animate({ scrollTop: 0 }, 'fast');
-                    document.getElementsByClassName('timeclass')[0].style.width = Math.round((current_question + 1) * window.innerWidth / questions_shuffle.length) + "px"
-                    document.getElementsByClassName('timeclass')[1].innerHTML = 'pic number: ' + (1 + current_question) + '/' + (questions_shuffle.length)
-                    document.getElementById("stimuli").src = './data/' + questions_shuffle[current_question]['src']
-
-                } else {
-                    // user_data['full_questions_time'] = Date.now() - init_timestamp
-                    init_survey()
-                }
-
-            } else {
-                counter++
-                if (counter == 5 * 5) {
-                    var error = document.createElement('div')
-                    error.className = "error"
-                    error.innerHTML = 'Please answer all the questions'
-                    error.style.color = 'red'
-                    d.append(error)
+            errors = document.getElementsByClassName('error')
+            while (errors.length > 0) {
+                for (i = 0; i < errors.length; i++) {
+                    errors[i].remove()
                 }
             }
 
+            //前进一张图，在原网页上把图替换掉
+            if (current_question < questions_shuffle.length - 1) {
+                current_question++
+                $('html, body').animate({ scrollTop: 0 }, 'fast');
+                //更新进度条
+                // document.getElementsByClassName('timeclass')[0].style.width = Math.round((current_question + 1) * window.innerWidth / questions_shuffle.length) + "px"
+                // document.getElementsByClassName('timeclass')[1].innerHTML = 'pic number: ' + (1 + current_question) + '/' + (questions_shuffle.length)
+                document.getElementById("headline").innerHTML = 'Data Visualization #' + (current_question + 1)
+                document.getElementById("stimuli").src = './data/' + questions_shuffle[current_question]['src']
+
+            } else {
+                // user_data['full_questions_time'] = Date.now() - init_timestamp
+                init_survey()
+            }
+
+        } else {
+            counter++
+            if (counter == 5) {
+                var error = document.createElement('div')
+                error.className = "error"
+                error.innerHTML = 'Please answer all the questions'
+                error.style.color = 'red'
+                d.append(error)
+            }
         }
+
     }
+
 
 }
 
@@ -115,13 +117,13 @@ function gen_pic() {
     document.body.innerHTML = ''
 
     intro = document.createElement('div')
-    text = '<p><strong>What Triggers Emotions in Data Visualization Design?</strong></p> <br> <p>Data visualization definition xxx. In this study, we are interested in what design factors can be emotional. You are going to view 30 different data visualizations randomly chosen from our corpus, rate how emotional they are, and explain why. To prevent the influence of content, we have blurred all the texts so that you can focus on perceiving the design and experience the differences brought by colors, graphics, layouts, etc. </p><br><p>To evaluate the emotional traits of the designs, you will use the following scales: (1) Level of pleasure, an indicator about how positive an emotion is, ranging from "Unhappy" to "Happy", (2) Level of arousal, an indicator about excitement or how intense an emotion is, ranging from "Sleepy" to "Wideawake". You can drag the cursor to set the score. The cursor would be placed at 0.5 by default, which means "Neutral".</p><br><img width=100% src="img/tutorial_3.jpeg"></img><br><br><p><strong>Acceptance Criteria: The whole survey will last about 15 minutes. IRRELEVANT OR INCOMPLETE ANSWERS WILL NOT BE ACCEPTED. </strong></p>Therefore, we encourage you to provide your answers as required clearly to help us distinguish qualified answers and pay bonuses to very supportive workers (up to $1).</p> <p style="color:red"><strong>Attention: do not close or reload the page after this step. If you do, the study will end without being finished.</p>'
+    text = '<p><strong>What Makes A Data Visualization Emotional?</strong></p> <br> <p>Data visualization is the graphical representation of data. Anthough data itself is rational and objective, different design of data may trigger different subjective perceptions. In this study, we are interested in what design factors in data visualization can trigger emotional feelings. You are going to view 30 different data visualizations randomly chosen from our corpus, rate how emotional they are, and explain why. To prevent the influence of content, <strong>we have blurred all the texts</strong> so that you can focus on perceiving the design only. </p><br><p>To evaluate the emotional traits of the designs, you will use the following sliders: (1) <strong>Level of arousal, an indicator about excitement or how intense an emotion is</strong>, ranging from "Sleepy" to "Wide awake", (2) <strong>Level of pleasure, an indicator about how positive an emotion is</strong>, ranging from "Unhappy" to "Happy".</p><br><img width=100% src="images/tutorial.png"></img><br><br><p>The whole survey will last about 15 minutes. <strong>IRRELEVANT OR INCOMPLETE ANSWERS WILL NOT BE ACCEPTED. </strong>We encourage you to provide your answers as required clearly to help us distinguish qualified answers and pay bonuses to very supportive workers (up to $1).</p> <p style="color:red"><strong>Attention: do not close or reload the page after this step. If you do, the study will end without being finished.</p>'
     intro.innerHTML = text
     intro.style.textAlign = 'center'
     intro.style.fontSize = 'large'
     intro.style.marginTop = '5%'
-    intro.style.marginLeft = '20%'
-    intro.style.marginRight = '20%'
+    intro.style.marginLeft = '15%'
+    intro.style.marginRight = '15%'
     intro.setAttribute("id", "introPage")
     document.body.append(intro)
 
@@ -146,8 +148,8 @@ function gen_pic() {
 
     intro.append(intro_btn)
 
-
-    progress_bar((current_question + 1) * window.innerWidth / questions_shuffle.length, 'rgb(115, 183, 192)', 'test')
+    //顶部进度条
+    // progress_bar((current_question + 1) * window.innerWidth / questions_shuffle.length, 'rgb(115, 183, 192)', 'test')
 
 
     d = document.createElement('div')
@@ -156,31 +158,31 @@ function gen_pic() {
     d.setAttribute("id", "showPic")
     d.style.display = "none"
     document.body.append(d)
-    d.innerHTML += '<h1 style="text-align: center;">请阅读下图，然后按要求打分</h1>'
+    d.innerHTML += '<h1 style="text-align: center" id="headline">Data Visualization #' + (current_question + 1) + '</h1>'
     d.innerHTML += '<br><br><img id = "stimuli" src =./data/' + questions_shuffle[current_question]['src'] + ' style="width: 70%;"></img>'
 
 
     //----------rating-----------
 
 
-    d.innerHTML += '<br><br><br><p><strong>1. Please score the affective traits of the visualization</p><br>'
+    d.innerHTML += '<br><br><br><p><strong>1. Please rate the data visualization using BOTH the sliders. Do not think too much about it, just rate how you feel when watching it.</p><br>'
 
     sam = document.createElement('form');
     sam.style.textAlign = "center";
     // sam.className = "AffectiveSlider";
     sam.setAttribute("class", "AffectiveSlider");
 
-    sam.innerHTML += '<p id="pleasure_score">Level of pleasure: ' + samInitialScore + '</p>';
-    pleasure = document.createElement('div');
-    pleasure.className = "AScontainer pleasure";
-    pleasure.innerHTML = '<input type="range" name="AS-pleasure" id="AS-pleasure" value=".5" min="0" max="1" step=".01"><div class="ASintensityCue"></div></div>'
-    sam.append(pleasure);
-
-    sam.innerHTML += '<p id="arousal_score">Level of arousal: ' + samInitialScore + '</p>';
+    sam.innerHTML += '<p id="arousal_score">Move the slider to rate your level of Arousal: ' + samInitialScore + '</p>';
     arousal = document.createElement('div');
     arousal.className = "AScontainer arousal";
     arousal.innerHTML = ' <input type="range" name="AS-arousal" id="AS-arousal" value=".5" min="0" max="1" step=".01"><div class="ASintensityCue"></div></div>'
     sam.append(arousal);
+
+    sam.innerHTML += '<p id="pleasure_score">Move the slider to rate your level of Pleasure: ' + samInitialScore + '</p>';
+    pleasure = document.createElement('div');
+    pleasure.className = "AScontainer pleasure";
+    pleasure.innerHTML = '<input type="range" name="AS-pleasure" id="AS-pleasure" value=".5" min="0" max="1" step=".01"><div class="ASintensityCue"></div></div>'
+    sam.append(pleasure);
 
     d.append(sam);
 
@@ -190,7 +192,7 @@ function gen_pic() {
     // -----------------reason--------------------
 
 
-    d.innerHTML += '<p><strong>2. Please write down your reason (this question is used to check whether you are doing this xx)</p><br>'
+    d.innerHTML += '<p><strong>2. Please explain your ratings briefly:</p><br>'
 
     textarea = document.createElement('textarea')
     textarea.id = "reason"
@@ -204,7 +206,7 @@ function gen_pic() {
 
 
     // -----------------preference 1--------------------
-    d.innerHTML += '<p><strong>3. I feel that I like this data visualization.</strong></p>'
+    d.innerHTML += '<p><strong>3. Do you like this data visualization?</strong></p>'
     d.innerHTML += '<br>'
 
 
@@ -235,7 +237,7 @@ function gen_pic() {
     d.append(likert);
 
 
-    for (i of['Strongly disagree', 'Disagree', 'Neither agree nor disagree', 'Agree', 'Strongly agree']) {
+    for (i of['Strongly dislike', 'Somewhat dislike', 'Neither like nor dislike', 'Somewhat like', 'Strongly like']) {
         scale = document.createElement('span')
         scale.style.display = "inline-block";
         scale.style.width = "100px";
@@ -247,49 +249,49 @@ function gen_pic() {
 
     d.innerHTML += '<br><br>'
 
-    // -----------------preference 2--------------------
-    d.innerHTML += '<p><strong>4. I feel that I want to share this data visualization.</strong></p>'
-    d.innerHTML += '<br>'
+    // // -----------------preference 2--------------------
+    // d.innerHTML += '<p><strong>4. I feel that I want to share this data visualization.</strong></p>'
+    // d.innerHTML += '<br>'
 
 
-    for (var i = 1; i < 6; i++) {
-        choice = document.createElement("span");
-        choice.style.display = "inline-block";
-        choice.style.width = "100px";
-        choice.style.height = "20px";
-        choice.style.textAlign = "center";
-        r1 = document.createElement("input");
-        r1.type = "radio";
-        r1.name = "preference_share";
-        r1.className = "r1 preference_share";
-        r1.value = i;
-        l1 = document.createElement("label");
-        l1.for = i;
-        l1.innerHTML = i;
-        l1.className = "l1";
-        choice.append(r1);
-        choice.append(l1);
-        d.append(choice)
-    }
+    // for (var i = 1; i < 6; i++) {
+    //     choice = document.createElement("span");
+    //     choice.style.display = "inline-block";
+    //     choice.style.width = "100px";
+    //     choice.style.height = "20px";
+    //     choice.style.textAlign = "center";
+    //     r1 = document.createElement("input");
+    //     r1.type = "radio";
+    //     r1.name = "preference_share";
+    //     r1.className = "r1 preference_share";
+    //     r1.value = i;
+    //     l1 = document.createElement("label");
+    //     l1.for = i;
+    //     l1.innerHTML = i;
+    //     l1.className = "l1";
+    //     choice.append(r1);
+    //     choice.append(l1);
+    //     d.append(choice)
+    // }
 
-    d.innerHTML += '<br>'
+    // d.innerHTML += '<br>'
 
-    likert = document.createElement('span');
-    likert.style.lineHeight = "20px";
-    d.append(likert);
+    // likert = document.createElement('span');
+    // likert.style.lineHeight = "20px";
+    // d.append(likert);
 
 
-    for (i of['Strongly disagree', 'Disagree', 'Neither agree nor disagree', 'Agree', 'Strongly agree']) {
-        scale = document.createElement('span')
-        scale.style.display = "inline-block";
-        scale.style.width = "100px";
-        scale.style.verticalAlign = "top";
-        scale.style.textAlign = "center";
-        scale.innerHTML = i
-        likert.append(scale)
-    }
+    // for (i of['Strongly disagree', 'Disagree', 'Neither agree nor disagree', 'Agree', 'Strongly agree']) {
+    //     scale = document.createElement('span')
+    //     scale.style.display = "inline-block";
+    //     scale.style.width = "100px";
+    //     scale.style.verticalAlign = "top";
+    //     scale.style.textAlign = "center";
+    //     scale.innerHTML = i
+    //     likert.append(scale)
+    // }
 
-    d.innerHTML += '<br><br>'
+    // d.innerHTML += '<br><br>'
 
     //去掉jquery里的样式。累死我了！
     $(".r1").css({ 'position': 'static' });
