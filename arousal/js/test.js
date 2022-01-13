@@ -86,7 +86,7 @@ function save_answer() {
                 //更新进度条
                 // document.getElementsByClassName('timeclass')[0].style.width = Math.round((current_question + 1) * window.innerWidth / questions_shuffle.length) + "px"
                 // document.getElementsByClassName('timeclass')[1].innerHTML = 'pic number: ' + (1 + current_question) + '/' + (questions_shuffle.length)
-                document.getElementById("headline").innerHTML = 'Data Visualization #' + (current_question + 1)
+                document.getElementById("headline").innerHTML = 'Data Visualization #' + (current_question + 1) + '/20'
                 document.getElementById("stimuli").src = './data/' + questions_shuffle[current_question]['src']
 
             } else {
