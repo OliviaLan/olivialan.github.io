@@ -87,7 +87,7 @@ function save_answer() {
                 // document.getElementsByClassName('timeclass')[0].style.width = Math.round((current_question + 1) * window.innerWidth / questions_shuffle.length) + "px"
                 // document.getElementsByClassName('timeclass')[1].innerHTML = 'pic number: ' + (1 + current_question) + '/' + (questions_shuffle.length)
                 document.getElementById("headline").innerHTML = 'Data Visualization #' + (current_question + 1) + '/20'
-                document.getElementById("stimuli").src = './data/' + questions_shuffle[current_question]['src']
+                document.getElementById("stimuli").src = './stimuli_pilot/' + questions_shuffle[current_question]['src']
 
             } else {
                 // user_data['full_questions_time'] = Date.now() - init_timestamp
@@ -159,7 +159,7 @@ function gen_pic() {
     d.style.display = "none"
     document.body.append(d)
     d.innerHTML += '<h1 style="text-align: center" id="headline">Data Visualization #' + (current_question + 1) + '/20</h1>'
-    d.innerHTML += '<br><br><img id = "stimuli" src =./data/' + questions_shuffle[current_question]['src'] + ' style="width: 70%;"></img>'
+    d.innerHTML += '<br><br><img id = "stimuli" src =./stimuli_pilot/' + questions_shuffle[current_question]['src'] + ' style="width: 70%;"></img>'
 
 
     //----------rating-----------
