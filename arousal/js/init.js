@@ -73,7 +73,6 @@ var init_end = () => {
     document.body.append(d)
         // document.body.append(d2)
 
-    console.log('finalize')
 
     //实验人员在本地下载
     //get_firebase_data(complete_collection, true)
@@ -89,6 +88,7 @@ var init_end = () => {
     }
 
     if (PRODUCTION && mID != test_mID) {
+        console.log('finalize')
         db.collection(complete_collection).add(final_user_data)
             .then(function(docRef) {
                 console.log(complete_collection + "Document written with ID: ", docRef.id);
@@ -263,7 +263,7 @@ async function find_mid() {
         returning_mid(mID)
         return
     } else {
-        //新账号，生成一个独有的code并存储
+        //新账号，生成一个独有的code并存储。mturk做完测试需要给用户一个独特的code，让用户输进去。
         uniquecode = 'se' + ID()
         user_data['code'] = uniquecode
             //但是test_mID的数据不会被存储

@@ -69,6 +69,8 @@ function save_answer() {
                 // preference_share[s].checked = false
             document.getElementById('AS-pleasure').nextSibling.children[0].style = "left: 50%;"
             document.getElementById('AS-arousal').nextSibling.children[0].style = "left: 50%;"
+            document.getElementById('AS-pleasure').nextSibling.children[0].setAttribute("aria-valuenow", "0.5")
+            document.getElementById('AS-arousal').nextSibling.children[0].setAttribute("aria-valuenow", "0.5")
             document.getElementById('pleasure_score').innerHTML = 'Move the slider to rate your level of Pleasure: ' + samInitialScore
             document.getElementById('arousal_score').innerHTML = 'Move the slider to rate your level of Arousal: ' + samInitialScore
 
