@@ -38,10 +38,10 @@
          "id": 10,
          "src": "economist_daily_chart_18.jpg"
      },
-     {
-         "id": 11,
-         "src": "economist_daily_chart_187.jpg"
-     },
+     //  {
+     //      "id": 11,
+     //      "src": "economist_daily_chart_187.jpg"
+     //  },
      {
          "id": 12,
          "src": "economist_daily_chart_202.jpg"
@@ -386,10 +386,10 @@
          "id": 97,
          "src": "visMost601.jpg"
      },
-     {
-         "id": 98,
-         "src": "visMost602.jpg"
-     },
+     //  {
+     //      "id": 98,
+     //      "src": "visMost602.jpg"
+     //  },
      {
          "id": 99,
          "src": "visMost635.jpg"
@@ -826,10 +826,10 @@
          "id": 207,
          "src": "wsj521.jpg"
      },
-     {
-         "id": 208,
-         "src": "wsj529.jpg"
-     },
+     //  {
+     //      "id": 208,
+     //      "src": "wsj529.jpg"
+     //  },
      {
          "id": 209,
          "src": "wsj533.jpg"
@@ -878,10 +878,10 @@
          "id": 220,
          "src": "vis83.jpg"
      },
-     {
-         "id": 221,
-         "src": "vis103.jpg"
-     },
+     //  {
+     //      "id": 221,
+     //      "src": "vis103.jpg"
+     //  },
      {
          "id": 222,
          "src": "vis163.jpg"
@@ -930,10 +930,10 @@
          "id": 233,
          "src": "vis732.jpg"
      },
-     {
-         "id": 234,
-         "src": "vis739.jpg"
-     },
+     //  {
+     //      "id": 234,
+     //      "src": "vis739.jpg"
+     //  },
      {
          "id": 235,
          "src": "vis780.jpg"
@@ -1074,10 +1074,10 @@
          "id": 269,
          "src": "visMost573.jpg"
      },
-     {
-         "id": 270,
-         "src": "visMost576.jpg"
-     },
+     //  {
+     //      "id": 270,
+     //      "src": "visMost576.jpg"
+     //  },
      {
          "id": 271,
          "src": "visMost621.jpg"

@@ -161,7 +161,7 @@ function gen_pic() {
     d.style.display = "none"
     document.body.append(d)
     d.innerHTML += '<h1 style="text-align: center" id="headline">Data Visualization #' + (current_question + 1) + '/20</h1>'
-    d.innerHTML += '<br><br><img id = "stimuli" src =./stimuli_pilot/' + questions_shuffle[current_question]['src'] + ' style="width: 70%;"></img>'
+    d.innerHTML += '<br><br><img id = "stimuli" src =./stimuli_pilot/' + questions_shuffle[current_question]['src'] + ' style="width: 50%;"></img>'
 
 
     //----------rating-----------
