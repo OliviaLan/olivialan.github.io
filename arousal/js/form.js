@@ -189,7 +189,7 @@ var init_survey = () => {
 
 
 
-    d.innerHTML += '<br><br><p>5.What do you think is the most important design factor(s) to achieve a high level of arousal in data visualization?</p><br>'
+    d.innerHTML += '<br><br><p>5.Please recall the data visualizations you have viewed and list the design factor(s) that help increase the arousal level.</p><br>'
 
     textarea = document.createElement('textarea')
         // input.name = "reason"
@@ -200,7 +200,7 @@ var init_survey = () => {
 
     d.append(textarea)
 
-    d.innerHTML += '<br><br><p>6.What do you think is the most important design factor(s) to achieve a high level of pleasure in data visualization?</p><br>'
+    d.innerHTML += '<br><br><p>6.Please recall the data visualizations you have viewed and list the design factor(s) that help increase the pleasure level.</p><br>'
 
     textarea_3 = document.createElement('textarea')
     textarea_3.id = "importance_pleasure"
