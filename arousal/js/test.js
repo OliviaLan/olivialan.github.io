@@ -11,12 +11,12 @@ function inputListener() {
 //拖动条导致上方显示的数字更新
 function updatePleasureScore() {
     pleasure = document.getElementById('AS-pleasure').nextSibling.children[0].getAttribute("aria-valuenow")
-    document.getElementById('pleasure_score').innerHTML = 'Move the slider to rate the <strong style="color:red">Pleasure</strong> level of this design: ' + pleasure
+    document.getElementById('pleasure_score').innerHTML = 'Move the slider to rate your level of Pleasure: ' + pleasure
 }
 
 function updateArousalScore() {
     arousal = document.getElementById('AS-arousal').nextSibling.children[0].getAttribute("aria-valuenow")
-    document.getElementById('arousal_score').innerHTML = 'Move the slider to rate the <strong style="color:red">Arousal</strong> level of this design: ' + arousal
+    document.getElementById('arousal_score').innerHTML = 'Move the slider to rate your level of Arousal: ' + arousal
 }
 
 
@@ -69,8 +69,8 @@ function save_answer() {
                 // preference_share[s].checked = false
             document.getElementById('AS-pleasure').nextSibling.children[0].style = "left: 50%;"
             document.getElementById('AS-arousal').nextSibling.children[0].style = "left: 50%;"
-            document.getElementById('pleasure_score').innerHTML = 'Move the slider to rate the <strong style="color:red">Pleasure</strong> level of this design: ' + samInitialScore
-            document.getElementById('arousal_score').innerHTML = 'Move the slider to rate the <strong style="color:red">Arousal</strong> level of this design: ' + samInitialScore
+            document.getElementById('pleasure_score').innerHTML = 'Move the slider to rate your level of Pleasure: ' + samInitialScore
+            document.getElementById('arousal_score').innerHTML = 'Move the slider to rate your level of Arousal: ' + samInitialScore
 
             errors = document.getElementsByClassName('error')
             while (errors.length > 0) {
@@ -172,13 +172,13 @@ function gen_pic() {
     // sam.className = "AffectiveSlider";
     sam.setAttribute("class", "AffectiveSlider");
 
-    sam.innerHTML += '<p id="arousal_score">Move the slider to rate the <strong style="color:red">Arousal</strong> level of this design: ' + samInitialScore + '</p>';
+    sam.innerHTML += '<p id="arousal_score">Move the slider to rate your level of Arousal: ' + samInitialScore + '</p>';
     arousal = document.createElement('div');
     arousal.className = "AScontainer arousal";
     arousal.innerHTML = ' <input type="range" name="AS-arousal" id="AS-arousal" value=".5" min="0" max="1" step=".01"><div class="ASintensityCue"></div></div>'
     sam.append(arousal);
 
-    sam.innerHTML += '<p id="pleasure_score">Move the slider to rate the <strong style="color:red">Pleasure</strong> level of this design: ' + samInitialScore + '</p>';
+    sam.innerHTML += '<p id="pleasure_score">Move the slider to rate your level of Pleasure: ' + samInitialScore + '</p>';
     pleasure = document.createElement('div');
     pleasure.className = "AScontainer pleasure";
     pleasure.innerHTML = '<input type="range" name="AS-pleasure" id="AS-pleasure" value=".5" min="0" max="1" step=".01"><div class="ASintensityCue"></div></div>'
