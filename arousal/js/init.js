@@ -13,9 +13,9 @@ questions_shuffle = []
 testNum = 20
 
 //要提前在firebase里新建几个存数据的文件夹-collection
-mid_collection = 'ID_affective'
-complete_collection = 'result_affective'
-incomplete_collection = 'result_incomplete_affective'
+mid_collection = 'ID_arousal'
+complete_collection = 'result_arousal'
+incomplete_collection = 'result_incomplete_arousal'
 
 // replacement_mid_collection = 'ID_replacement'
 // experiment_replacement = 'pilot_test1_replacement'
@@ -310,8 +310,8 @@ function generateSelected() {
 
 async function init() {
     //连接到数据库
-    // init_firebase()
-    //记录mturk id
+    init_firebase()
+        //记录mturk id
     mID = getUrlVars()['PROLIFIC_PID'];
     //开始时间
     init_timestamp = Date.now()

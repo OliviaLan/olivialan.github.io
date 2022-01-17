@@ -137,7 +137,7 @@ function gen_pic() {
     intro_btn.className = "begin"
 
     intro_btn.onclick = () => {
-        // find_mid()
+        find_mid()
         if (mID == undefined || mID == '' || mID == 'preview') end_preview()
             // else init_warning()
             // else init_survey()

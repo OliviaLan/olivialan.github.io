@@ -30,7 +30,7 @@ var save_form_answers = () => {
 
 
 
-    if (age && gender && education && country && importance) {
+    if (age && gender && education && country && importance_arousal && importance_pleasure) {
         user_data['age'] = age;
         user_data['gender'] = gender;
         user_data['country'] = country;

@@ -20,8 +20,9 @@
   	        btn.className = "begin"
 
   	        btn.onclick = () => {
-  	            document.body.innerHTML = ''
-  	                // find_mid()
+  	            // document.body.innerHTML = ''
+  	            //首页点击接受后，查询其id是否在数据库中（已做过测试）
+  	            // find_mid()
   	            if (mID == undefined || mID == '' || mID == 'preview') end_preview()
   	                // else init_warning()
   	                // else init_survey()
