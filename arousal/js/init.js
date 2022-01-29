@@ -63,7 +63,7 @@ var init_end = () => {
         // numright = count_correct_answers()
         // user_data['num_correct_answers'] = numright
         //这里放submit之后的跳转链接
-    d.innerHTML = '<p>Thank you for participating! <br>Please <a href = "#" >click here to completed your study.</a></p>'
+    d.innerHTML = '<p>Thank you for participating! <br>Please <a href = "https://app.prolific.co/submissions/complete?cc=4D52EE3F" >click here to completed your study.</a></p>'
         // 生成一个独有的随机码
         // d2 = document.createElement('div')
         // d2.innerHTML = uniquecode
