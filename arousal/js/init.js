@@ -294,9 +294,9 @@ function generateRan() {
 //有些图被看得很少的，专门抓出来看
 function generateSelected() {
 
-    var selection = [72, 77, 78, 79, 81, 121, 123, 124, 179, 433];
+    var selection = [1, 2, 4, 5, 8, 11, 12, 13, 14, 15, 17, 18, 20, 21, 22, 23, 24, 25, 26, 29, 35, 37, 40, 42, 44, 45, 46, 47, 49, 51, 59, 60, 63, 64, 66, 68, 70, 75, 76, 77, 81, 82, 83, 84, 85, 86, 87, 88, 90, 91, 92, 93, 95, 101, 102, 103, 104, 105, 106, 107, 108, 111, 112, 120, 121, 122, 124, 126, 127, 130, 131, 134, 136, 138, 139, 140, 141, 142, 144, 146, 147, 148, 149, 151, 152, 154, 155, 157, 158, 160, 161, 162, 164, 165, 167, 169, 171, 172, 173, 176, 177, 178, 181, 182, 183, 184, 185, 186, 187, 188, 189, 192, 194, 195, 196, 197, 198, 199, 200, 203, 204, 205, 206, 208, 209, 211, 213, 215, 216, 217, 218, 219, 220, 222, 223, 225, 226, 227, 228, 229, 231, 232, 234, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 254, 255, 260, 261, 262, 266, 269, 271, 275, 276, 277, 279, 280];
     var selected = [];
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < testNum; i++) {
         var temp = Math.floor(Math.random() * selection.length);
         if (selected.indexOf(selection[temp]) == -1) {
             selected.push(selection[temp]);
@@ -317,8 +317,8 @@ async function init() {
     init_timestamp = Date.now()
     user_data['timestamp_start'] = init_timestamp
     user_data['mid'] = mID
-    assigned_pics = generateRan().slice(0, testNum)
-        // assigned_pics = generateSelected()
+        // assigned_pics = generateRan().slice(0, testNum)
+    assigned_pics = generateSelected()
     user_data['assigned_pics'] = assigned_pics
     for (i = 0; i < testNum; i++) {
         questions_shuffle.push(questions[assigned_pics[i] - 1])
