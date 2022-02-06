@@ -293,8 +293,8 @@ function generateRan() {
 
 //有些图被看得很少的，专门抓出来看
 function generateSelected() {
-    console.log("patch4")
-    var selection = [11, 12, 13, 14, 15, 40, 49, 51, 59, 64, 66, 76, 77, 83, 85, 86, 88, 102, 103, 107, 120, 122, 124, 136, 138, 141, 142, 152, 154, 155, 157, 162, 164, 177, 178, 184, 186, 196, 197, 198, 203, 208, 220, 222, 225, 227, 231, 239, 241, 242, 248, 251, 262];
+    console.log("patch5")
+    var selection = [15, 40, 49, 64, 66, 76, 77, 83, 88, 103, 122, 142, 152, 157, 177, 197, 198, 208, 220, 222, 227, 231, 242, 251];
     var selected = [];
     for (var i = 0; i < testNum; i++) {
         var temp = Math.floor(Math.random() * selection.length);
