@@ -1862,8 +1862,8 @@ footer .footer-text {
 
 .about-main {
     flex: 1 0 auto;
-    width: 85%;
-    /* max-width: 68.25rem; */
+    /* width: 65%; */
+    max-width: 61.25rem;
     margin: 0 auto;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1915,7 +1915,7 @@ footer .footer-text {
 }
 
 .downloads-mid-l {
-    background-image: url(../image/text-l-bg.png);
+    /* background-image: url(../image/text-l-bg.png); */
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-color: #FFFFFF;
