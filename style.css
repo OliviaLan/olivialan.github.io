@@ -65,14 +65,18 @@ ol {
 }
 
 .expand {
-    background-color: rgb(134, 206, 177);
-    color: white;
+    background: linear-gradient(rgb(255, 255, 255) 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(to right, rgb(145, 177, 238), rgb(169, 223, 205)) border-box;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    /* background-color: rgb(134, 206, 177); */
+    color: black;
     padding: 5px;
     /* cursor: pointer; */
     font-size: 14px;
+    font-weight: bold;
     width: 80px;
     margin: 0 auto;
-    border-radius: 15px;
 }
 
 .expand-content {
