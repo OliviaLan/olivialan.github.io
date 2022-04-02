@@ -38,8 +38,8 @@ h2,
 h3 {
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
-    font-weight: 300;
+    /* text-transform: uppercase; */
+    font-weight: 500;
     color: #7D7764;
     font-family: 'Oxygen', 'myfont';
 }
@@ -49,7 +49,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.8em;
+    font-size: 2em;
 }
 
 h3 {
@@ -60,7 +60,7 @@ p,
 ul,
 ol {
     font-size: 15px;
-    margin-top: 0;
+    /* margin-top: 0; */
     /* line-height: 180%; */
 }
 
@@ -255,9 +255,9 @@ a:hover {}
     text-transform: lowercase;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Helvetica', sans-serif;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: bold;
     color: black;
 }
 
@@ -514,7 +514,7 @@ a:hover {}
 
 #three-column {
     overflow: hidden;
-    padding: 10px 0px 30px 0px;
+    padding: 0px 0px 30px 0px;
     line-height: 1.6;
 }
 
@@ -536,7 +536,7 @@ a:hover {}
 
 #three-column-gallery {
     overflow: hidden;
-    padding: 10px 0px 10px 0px;
+    padding: 0px 0px 10px 0px;
 }
 
 #three-column-gallery .tbox1 {
@@ -560,16 +560,24 @@ a:hover {}
     text-align: center;
 }
 
-.box-style01 {}
+.box-style01 h2 {
+    /* padding: 1px 0px; */
+    /* letter-spacing: -1px; */
+    font-size: 16px;
+    color: #2D2D2D;
+    line-height: 1.7;
+}
 
-.box-style02 {}
+.box-style01 {
+    margin-bottom: 30px;
+}
 
 .box-style03 {}
 
 .box-style h2 {
     padding: 10px 0px;
     letter-spacing: -1px;
-    font-size: 20px;
+    font-size: 16px;
     color: #2D2D2D;
 }
 
@@ -614,4 +622,30 @@ a:hover {}
 
 .badge_3 {
     background-color: #f58e85;
+}
+
+.blog_items {
+    font-family: 'Oxygen', 'myfont';
+    display: inline-block;
+}
+
+.subtitles {
+    /* background-color: #B9DDD1; */
+    /* border: 3px solid rgb(241, 230, 167); */
+    background: linear-gradient(rgb(255, 255, 255) 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(to right, rgb(145, 177, 238), rgb(169, 223, 205)) border-box;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* cursor: pointer; */
+    width: 110px;
+    color: black;
+    font-weight: 400;
+    font-size: 1.4em;
+    /* margin: 0;
+    padding: 0; */
+    text-transform: uppercase;
+    font-family: 'Helvetica', 'myfont';
 }
