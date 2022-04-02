@@ -225,7 +225,6 @@ var init_survey = () => {
     btn = document.createElement('button')
     btn.innerHTML = 'Submit'
     btn.className = 'button f_button'
-        // btn.style.margin = '5%'
         // btn.style.fontSize = 'large'
     btn.onclick = () => {
         save_form_answers()
