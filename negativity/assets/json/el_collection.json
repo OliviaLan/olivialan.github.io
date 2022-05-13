@@ -1,8 +1,0 @@
-[
-    { "EL_id": 0, "EL_tag": "Color" },
-    { "EL_id": 1, "EL_tag": "Graphics" },
-    { "EL_id": 2, "EL_tag": "Audio" },
-    { "EL_id": 3, "EL_tag": "Interaction" },
-    { "EL_id": 4, "EL_tag": "Animation" },
-    { "EL_id": 5, "EL_tag": "Narratives" }
-]
