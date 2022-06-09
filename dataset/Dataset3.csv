@@ -1,0 +1,52 @@
+No;Country;Level of development;European Union Membership;Currency;Women Entrepreneurship Index;Entrepreneurship Index;Inflation rate;Female Labor Force Participation Rate
+4;Austria;Developed;Member;Euro;54.9;64.9;0.9;67.1
+6;Belgium;Developed;Member;Euro;63.6;65.5;0.6;58
+17;Estonia;Developed;Member;Euro;55.4;60.2;-0.88;68.5
+18;Finland;Developed;Member;Euro;66.4;65.7;-0.2;67.7
+19;France;Developed;Member;Euro;68.8;67.3;0;60.6
+20;Germany;Developed;Member;Euro;63.6;67.4;0.5;69.9
+22;Greece;Developed;Member;Euro;43;42;-1.7;42.5
+28;Ireland;Developed;Member;Euro;64.3;65.3;-0.3;59.4
+30;Italy;Developed;Member;Euro;51.4;41.3;0;47.2
+34;Latvia;Developed;Member;Euro;56.6;54.5;0.2;66.4
+35;Lithuania;Developed;Member;Euro;58.5;54.6;-0.9;66.5
+39;Netherlands;Developed;Member;Euro;69.3;66.5;0.6;69.2
+50;Slovakia;Developed;Member;Euro;54.8;45.4;-0.3;55.9
+51;Slovenia;Developed;Member;Euro;55.9;53.1;-0.5;61
+53;Spain;Developed;Member;Euro;52.5;49.6;-0.5;52.7
+12;Croatia;Developed;Member;National Currency;49.9;40.6;-0.5;60.4
+13;Denmark;Developed;Member;National Currency;69.7;71.4;0.5;70.3
+24;Hungary;Developed;Member;National Currency;53.7;42.7;-0.1;57.8
+44;Poland;Developed;Member;National Currency;57.7;47.4;-0.9;56.6
+54;Sweden;Developed;Member;National Currency;66.7;71.8;0;74
+3;Australia;Developed;Not Member;National Currency;74.8;77.6;1.5;66.8
+25;Iceland;Developed;Not Member;National Currency;68;70.4;1.6;82.3
+32;Japan;Developed;Not Member;National Currency;40;49.5;0.8;64.7
+40;Norway;Developed;Not Member;National Currency;66.3;65.6;2.17;69.2
+49;Singapore;Developed;Not Member;National Currency;59.8;68.1;-0.5;59.18
+55;Switzerland;Developed;Not Member;National Currency;63.7;68.6;-1.1;74.7
+56;Taiwan;Developed;Not Member;National Currency;53.4;69.1;-0.61;55
+1;Algeria;Developing;Not Member;National Currency;27.4;30.2;4.8;18
+2;Argentina;Developing;Not Member;National Currency;35.7;37.2;26.5;47.3
+7;Bolivia;Developing;Not Member;National Currency;29.7;28;4.1;69.4
+8;Bosnia and Herzegovina;Developing;Not Member;National Currency;31.6;28.9;-1;51.9
+9;Brazil;Developing;Not Member;National Currency;31.1;25.8;10.67;55.9
+10;China;Developing;Not Member;National Currency;38.3;36.4;1.4;62.4
+11;Costa Rica;Developing;Not Member;National Currency;36.1;37.7;0.8;59.4
+14;Ecuador;Developing;Not Member;National Currency;32.3;28.2;-0.5;63.5
+15;Egypt;Developing;Not Member;National Currency;27.7;28.1;11;64.6
+16;El Salvador;Developing;Not Member;National Currency;29.9;29.6;-2.25;55.7
+21;Ghana;Developing;Not Member;National Currency;25.8;24.8;17.2;60.8
+26;India;Developing;Not Member;National Currency;25.3;25.3;5.9;61.1
+31;Jamaica;Developing;Not Member;National Currency;38.6;27.2;3.7;37.7
+36;Macedonia;Developing;Not Member;National Currency;41.2;37.1;3.7;73
+37;Malaysia;Developing;Not Member;National Currency;39.2;40;2.3;58.5
+38;Mexico;Developing;Not Member;National Currency;42.8;30.7;2.7;44.7
+42;Panama;Developing;Not Member;National Currency;36.9;32.2;0.1;67.9
+43;Peru;Developing;Not Member;National Currency;43.6;30.9;3.5;63.4
+47;Russia;Developing;Not Member;National Currency;35.6;31.7;15.5;65.2
+48;Saudi Arabia;Developing;Not Member;National Currency;37;49.6;1.2;13
+57;Thailand;Developing;Not Member;National Currency;36.6;32.1;-0.9;62
+58;Tunisia;Developing;Not Member;National Currency;30.7;35.5;4.8;25.19
+59;Turkey;Developing;Not Member;National Currency;39.3;54.6;7.7;30.4
+60;Uruguay;Developing;Not Member;National Currency;44.5;41.4;8.67;68
