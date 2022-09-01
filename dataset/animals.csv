@@ -1,0 +1,1309 @@
+Class,Order,Family,Genus,Species,Common name,Gestation/Incubation (days),Maximum longevity (yrs)
+Amphibia,Anura,Bufonidae,Anaxyrus,americanus,American toad,8,36
+Amphibia,Anura,Bufonidae,Anaxyrus,boreas,Western toad,6,11.5
+Amphibia,Anura,Bufonidae,Anaxyrus,canorus,Yosemite toad,11,15
+Amphibia,Anura,Bufonidae,Anaxyrus,retiformis,Sonoran green toad,2,15.3
+Amphibia,Anura,Bufonidae,Anaxyrus,terrestris,Southern toad,3,10
+Amphibia,Anura,Bufonidae,Rhinella,marina,Cane toad,2,24.8
+Amphibia,Anura,Dendrobatidae,Dendrobates,auratus,Green and black dart-poison frog,12,20.5
+Amphibia,Anura,Dendrobatidae,Dendrobates,leucomelas,Yellow-banded poison frog,12,11.5
+Amphibia,Anura,Hylidae,Hyla,chrysoscelis,Cope's gray treefrog,21,7.8
+Amphibia,Anura,Hylidae,Hyla,squirella,Squirrel treefrog,1,8.5
+Amphibia,Anura,Hylidae,Hyla,versicolor,Gray treefrog,4,7.8
+Amphibia,Anura,Hylidae,Osteopilus,septentrionalis,Cuban treefrog,1,12.9
+Amphibia,Anura,Leiopelmatidae,Ascaphus,truei,Coastal tailed frog,32,14
+Amphibia,Anura,Mantellidae,Mantella,aurantiaca,Golden mantella,14,10.9
+Amphibia,Anura,Microhylidae,Gastrophryne,carolinensis,Eastern narrow-mouthed toad,1,6.8
+Amphibia,Anura,Pelobatidae,Pelobates,fuscus,Common Eurasian spadefoot toad,8,11
+Amphibia,Anura,Pipidae,Xenopus,laevis,African clawed frog,2,30.3
+Amphibia,Anura,Ranidae,Lithobates,catesbeianus,American bullfrog,4,16
+Amphibia,Anura,Ranidae,Pelophylax,perezi,Italian green frog,6,6.8
+Amphibia,Anura,Scaphiopodidae,Scaphiopus,holbrookii,Eastern spadefoot,8,12.3
+Amphibia,Anura,Scaphiopodidae,Spea,intermontana,Great Basin spadefoot,3,20
+Amphibia,Caudata,Ambystomatidae,Ambystoma,macrodactylum,Long-toed salamander,40,10
+Amphibia,Caudata,Ambystomatidae,Ambystoma,mexicanum,Axolotl,18,17
+Amphibia,Caudata,Ambystomatidae,Ambystoma,texanum,Small-mouthed salamander,35,13.8
+Amphibia,Caudata,Ambystomatidae,Ambystoma,tigrinum,Tiger salamander,28,25
+Amphibia,Caudata,Ambystomatidae,Dicamptodon,ensatus,California giant salamander,150,16.9
+Amphibia,Caudata,Amphiumidae,Amphiuma,means,Two-toed amphiuma,150,27
+Amphibia,Caudata,Amphiumidae,Amphiuma,tridactylum,Three-toed amphiuma,135,15.9
+Amphibia,Caudata,Cryptobranchidae,Andrias,japonicus,Japanese giant salamander,60,55
+Amphibia,Caudata,Cryptobranchidae,Cryptobranchus,alleganiensis,Hellbender,72,29
+Amphibia,Caudata,Hynobiidae,Salamandrella,keyserlingii,Siberian salamander,23,8
+Amphibia,Caudata,Plethodontidae,Desmognathus,monticola,Seal salamander,45,17.7
+Amphibia,Caudata,Plethodontidae,Eurycea,lucifuga,Cave salamander,13,9.1
+Amphibia,Caudata,Plethodontidae,Plethodon,dunni,Dunn's salamander,70,11
+Amphibia,Caudata,Plethodontidae,Pseudotriton,ruber,Red salamander,75,20.1
+Amphibia,Caudata,Plethodontidae,Speleomantes,italicus,Italian cave salamander,304,10.6
+Amphibia,Caudata,Proteidae,Necturus,maculosus,Mudpuppy,50,34
+Amphibia,Caudata,Proteidae,Proteus,anguinus,Olm,133,102
+Amphibia,Caudata,Salamandridae,Cynops,pyrrhogaster,Japanese firebelly newt,20,25
+Amphibia,Caudata,Salamandridae,Pleurodeles,waltl,Iberian ribbed newt,13,19.5
+Amphibia,Caudata,Salamandridae,Taricha,torosa,California newt,45,21.8
+Amphibia,Caudata,Salamandridae,Triturus,cristatus,Northern crested newt,16,28
+Amphibia,Caudata,Sirenidae,Siren,intermedia,Lesser siren,60,25.7
+Aves,Accipitriformes,Accipitridae,Accipiter,cooperii,Cooper's hawk,24,20.3
+Aves,Accipitriformes,Accipitridae,Accipiter,gentilis,Northern goshawk,33,22
+Aves,Accipitriformes,Accipitridae,Accipiter,striatus,Sharp-shinned hawk,34,19.9
+Aves,Accipitriformes,Accipitridae,Aquila,chrysaetos,Golden eagle,40,48
+Aves,Accipitriformes,Accipitridae,Buteo,jamaicensis,Red-tailed hawk,31,30.7
+Aves,Accipitriformes,Accipitridae,Buteo,lagopus,Rough-legged hawk,29,18.8
+Aves,Accipitriformes,Accipitridae,Buteo,lineatus,Red-shouldered hawk,33,22.4
+Aves,Accipitriformes,Accipitridae,Buteo,platypterus,Broad-winged hawk,25,18.3
+Aves,Accipitriformes,Accipitridae,Buteo,regalis,Ferruginous hawk,32,23.7
+Aves,Accipitriformes,Accipitridae,Buteo,solitarius,Hawaiian hawk,38,17
+Aves,Accipitriformes,Accipitridae,Buteo,swainsoni,Swainson's hawk,31,24.9
+Aves,Accipitriformes,Accipitridae,Buteogallus,anthracinus,Common black hawk,38,13.5
+Aves,Accipitriformes,Accipitridae,Circus,cyaneus,Northern harrier,31,17.1
+Aves,Accipitriformes,Accipitridae,Elanus,leucurus,White-tailed kite,30,6
+Aves,Accipitriformes,Accipitridae,Haliaeetus,albicilla,White-tailed sea-eagle,41,42
+Aves,Accipitriformes,Accipitridae,Haliaeetus,leucocephalus,Bald eagle,35,48
+Aves,Accipitriformes,Accipitridae,Ictinia,mississippiensis,Mississippi kite,31,11.2
+Aves,Accipitriformes,Accipitridae,Parabuteo,unicinctus,Harris's hawk,34,25
+Aves,Accipitriformes,Accipitridae,Pithecophaga,jefferyi,Philippine eagle,63,41
+Aves,Accipitriformes,Accipitridae,Rostrhamus,sociabilis,Snail kite,30,17
+Aves,Accipitriformes,Cathartidae,Cathartes,aura,Turkey vulture,39,20.8
+Aves,Accipitriformes,Cathartidae,Coragyps,atratus,Black vulture,35,25.5
+Aves,Accipitriformes,Cathartidae,Gymnogyps,californianus,California condor,57,45
+Aves,Accipitriformes,Cathartidae,Sarcoramphus,papa,King vulture,57,40
+Aves,Accipitriformes,Cathartidae,Vultur,gryphus,Andean condor,56,79
+Aves,Accipitriformes,Pandionidae,Pandion,haliaetus,Osprey,38,32
+Aves,Anseriformes,Anatidae,Aix,sponsa,Wood duck,31,22.5
+Aves,Anseriformes,Anatidae,Alopochen,aegyptiaca,Egyptian goose,29,25.5
+Aves,Anseriformes,Anatidae,Anas,acuta,Northern pintail,22,27.4
+Aves,Anseriformes,Anatidae,Anas,americana,American wigeon,23,21.3
+Aves,Anseriformes,Anatidae,Anas,clypeata,Northern shoveler,23,22.6
+Aves,Anseriformes,Anatidae,Anas,crecca,Green-winged teal,22,27.1
+Aves,Anseriformes,Anatidae,Anas,cyanoptera,Cinnamon teal,23,12.9
+Aves,Anseriformes,Anatidae,Anas,discors,Blue-winged teal,24,23.2
+Aves,Anseriformes,Anatidae,Anas,fulvigula,Mottled duck,26,20
+Aves,Anseriformes,Anatidae,Anas,laysanensis,Laysan duck,28,12
+Aves,Anseriformes,Anatidae,Anas,penelope,Eurasian wigeon,24,35.2
+Aves,Anseriformes,Anatidae,Anas,platyrhynchos,Mallard,26,29.1
+Aves,Anseriformes,Anatidae,Anas,rubripes,American black duck,28,26.6
+Aves,Anseriformes,Anatidae,Anas,strepera,Gadwall,26,28
+Aves,Anseriformes,Anatidae,Anser,albifrons,Greater white-fronted goose,27,47
+Aves,Anseriformes,Anatidae,Anser,fabalis,Bean goose,28,25.6
+Aves,Anseriformes,Anatidae,Aythya,affinis,Lesser scaup,24,18.3
+Aves,Anseriformes,Anatidae,Aythya,americana,Redhead,26,22.6
+Aves,Anseriformes,Anatidae,Aythya,collaris,Ring-necked duck,27,20.4
+Aves,Anseriformes,Anatidae,Aythya,marila,Greater scaup,26,22.1
+Aves,Anseriformes,Anatidae,Aythya,valisineria,Canvasback,24,29.5
+Aves,Anseriformes,Anatidae,Branta,bernicla,Brent goose,24,28.8
+Aves,Anseriformes,Anatidae,Branta,canadensis,Canada goose,26,42
+Aves,Anseriformes,Anatidae,Branta,sandvicensis,Hawaiian goose,30,42
+Aves,Anseriformes,Anatidae,Bucephala,albeola,Bufflehead,30,18.7
+Aves,Anseriformes,Anatidae,Bucephala,clangula,Common goldeneye,30,18.4
+Aves,Anseriformes,Anatidae,Bucephala,islandica,Barrow's goldeneye,29,18
+Aves,Anseriformes,Anatidae,Chen,caerulescens,Snow goose,24,27.5
+Aves,Anseriformes,Anatidae,Chen,canagica,Emperor goose,24,12
+Aves,Anseriformes,Anatidae,Chen,rossii,Ross's goose,21,22.5
+Aves,Anseriformes,Anatidae,Clangula,hyemalis,Oldsquaw,24,22.7
+Aves,Anseriformes,Anatidae,Cygnus,buccinator,Trumpeter swan,35,32.5
+Aves,Anseriformes,Anatidae,Cygnus,columbianus,Tundra swan,31,24.1
+Aves,Anseriformes,Anatidae,Cygnus,olor,Mute swan,36,70
+Aves,Anseriformes,Anatidae,Dendrocygna,autumnalis,Black-bellied whistling duck,27,8.2
+Aves,Anseriformes,Anatidae,Dendrocygna,viduata,White-faced whistling duck,27,12
+Aves,Anseriformes,Anatidae,Histrionicus,histrionicus,Harlequin duck,28,14.6
+Aves,Anseriformes,Anatidae,Lophodytes,cucullatus,Hooded merganser,31,15.7
+Aves,Anseriformes,Anatidae,Melanitta,fusca,White-winged scoter,28,21.4
+Aves,Anseriformes,Anatidae,Melanitta,nigra,Black scoter,29,16.8
+Aves,Anseriformes,Anatidae,Mergus,merganser,Common merganser,30,14.8
+Aves,Anseriformes,Anatidae,Mergus,serrator,Red-breasted merganser,32,21.3
+Aves,Anseriformes,Anatidae,Oxyura,jamaicensis,Ruddy duck,23,13.6
+Aves,Anseriformes,Anatidae,Polysticta,stelleri,Steller's eider,26,23
+Aves,Anseriformes,Anatidae,Somateria,mollissima,Common eider,28,37.8
+Aves,Apodiformes,Apodidae,Aeronautes,saxatalis,White-throated swift,24,10
+Aves,Apodiformes,Apodidae,Chaetura,pelagica,Chimney swift,20,15
+Aves,Apodiformes,Apodidae,Cypseloides,niger,Black swift,24,16.1
+Aves,Apodiformes,Trochilidae,Archilochus,colubris,Ruby-throated hummingbird,13,9.1
+Aves,Apodiformes,Trochilidae,Calothorax,lucifer,Lucifer hummingbird,15,4.1
+Aves,Apodiformes,Trochilidae,Calypte,anna,Anna's hummingbird,16,8.5
+Aves,Apodiformes,Trochilidae,Calypte,costae,Costa's hummingbird,16,6
+Aves,Apodiformes,Trochilidae,Cynanthus,latirostris,Broad-billed hummingbird,17,8.8
+Aves,Apodiformes,Trochilidae,Eugenes,fulgens,Magnificent hummingbird,14,11
+Aves,Apodiformes,Trochilidae,Lampornis,clemenciae,Blue-throated hummingbird,18,12
+Aves,Apodiformes,Trochilidae,Selasphorus,platycercus,Broad-tailed hummingbird,16,14
+Aves,Apodiformes,Trochilidae,Selasphorus,rufus,Rufous hummingbird,16,8.9
+Aves,Apodiformes,Trochilidae,Stellula,calliope,Calliope hummingbird,15,7
+Aves,Apterygiformes,Apterygidae,Apteryx,australis,Brown kiwi,75,35
+Aves,Caprimulgiformes,Caprimulgidae,Caprimulgus,carolinensis,Chuck-will's-widow,20,14.8
+Aves,Caprimulgiformes,Caprimulgidae,Caprimulgus,vociferus,Whip-poor-will,19,15
+Aves,Caprimulgiformes,Caprimulgidae,Chordeiles,minor,Common nighthawk,19,10
+Aves,Charadriiformes,Alcidae,Aethia,cristatella,Crested auklet,34,10.8
+Aves,Charadriiformes,Alcidae,Aethia,pusilla,Least auklet,30,8.1
+Aves,Charadriiformes,Alcidae,Alca,torda,Razorbill,36,42
+Aves,Charadriiformes,Alcidae,Cepphus,columba,Pigeon guillemot,31,15.2
+Aves,Charadriiformes,Alcidae,Cepphus,grylle,Black guillemot,25,29.9
+Aves,Charadriiformes,Alcidae,Cerorhinca,monocerata,Rhinoceros auklet,45,28.2
+Aves,Charadriiformes,Alcidae,Fratercula,arctica,Atlantic puffin,42,40.8
+Aves,Charadriiformes,Alcidae,Synthliboramphus,hypoleucus,Xantus' murrelet,34,15
+Aves,Charadriiformes,Alcidae,Uria,aalge,Common murre,31,42.8
+Aves,Charadriiformes,Alcidae,Uria,lomvia,Thick-billed murre,33,29
+Aves,Charadriiformes,Charadriidae,Charadrius,alexandrinus,Snowy plover,24,19
+Aves,Charadriiformes,Charadriidae,Charadrius,melodus,Piping plover,28,14
+Aves,Charadriiformes,Charadriidae,Charadrius,semipalmatus,Semipalmated plover,24,9.2
+Aves,Charadriiformes,Charadriidae,Charadrius,vociferus,Killdeer,24,10.9
+Aves,Charadriiformes,Charadriidae,Pluvialis,squatarola,Black-bellied plover,27,25.6
+Aves,Charadriiformes,Charadriidae,Vanellus,armatus,Blacksmith lapwing,29,18.6
+Aves,Charadriiformes,Charadriidae,Vanellus,vanellus,Northern lapwing,24,24.5
+Aves,Charadriiformes,Haematopodidae,Haematopus,bachmani,Black oystercatcher,26,16
+Aves,Charadriiformes,Haematopodidae,Haematopus,palliatus,American oystercatcher,27,17
+Aves,Charadriiformes,Laridae,Anous,minutus,Black noddy,34,27.1
+Aves,Charadriiformes,Laridae,Anous,stolidus,Noddy tern,35,26.2
+Aves,Charadriiformes,Laridae,Chlidonias,niger,Black tern,21,21
+Aves,Charadriiformes,Laridae,Chroicocephalus,ridibundus,Black-headed gull,22,32.9
+Aves,Charadriiformes,Laridae,Gelochelidon,nilotica,Gull-billed tern,22,16
+Aves,Charadriiformes,Laridae,Gygis,alba,Fairy tern,36,35.9
+Aves,Charadriiformes,Laridae,Hydrocoloeus,minutus,Little gull,21,20.9
+Aves,Charadriiformes,Laridae,Hydroprogne,caspia,Caspian tern,21,30
+Aves,Charadriiformes,Laridae,Larosterna,inca,Inca tern,28,26
+Aves,Charadriiformes,Laridae,Larus,argentatus,Herring gull,26,49
+Aves,Charadriiformes,Laridae,Larus,californicus,California gull,25,30
+Aves,Charadriiformes,Laridae,Larus,canus,Mew gull,23,33.7
+Aves,Charadriiformes,Laridae,Larus,delawarensis,Ring-billed gull,21,31.8
+Aves,Charadriiformes,Laridae,Larus,glaucescens,Glaucous-winged gull,27,32
+Aves,Charadriiformes,Laridae,Larus,glaucoides,Iceland gull,25,33
+Aves,Charadriiformes,Laridae,Larus,hyperboreus,Glaucous gull,27,21.1
+Aves,Charadriiformes,Laridae,Larus,marinus,Great black-backed gull,27,29.2
+Aves,Charadriiformes,Laridae,Larus,occidentalis,Western gull,27,33.9
+Aves,Charadriiformes,Laridae,Leucophaeus,atricilla,Laughing gull,24,22
+Aves,Charadriiformes,Laridae,Onychoprion,fuscatus,Sooty tern,28,35.8
+Aves,Charadriiformes,Laridae,Pagophila,eburnea,Ivory gull,25,23.9
+Aves,Charadriiformes,Laridae,Rissa,tridactyla,Black-legged kittiwake,27,28.5
+Aves,Charadriiformes,Laridae,Rynchops,niger,Black skimmer,23,20.2
+Aves,Charadriiformes,Laridae,Sterna,dougallii,Roseate tern,23,25.7
+Aves,Charadriiformes,Laridae,Sterna,forsteri,Forster's tern,23,15.8
+Aves,Charadriiformes,Laridae,Sterna,hirundo,Common tern,24,33
+Aves,Charadriiformes,Laridae,Sterna,paradisaea,Arctic tern,21,34
+Aves,Charadriiformes,Laridae,Sternula,albifrons,Little tern,21,23.9
+Aves,Charadriiformes,Laridae,Sternula,antillarum,Least tern,21,24.1
+Aves,Charadriiformes,Laridae,Thalasseus,elegans,Elegant tern,26,20.9
+Aves,Charadriiformes,Laridae,Thalasseus,maximus,Royal tern,28,28.6
+Aves,Charadriiformes,Laridae,Thalasseus,sandvicensis,Sandwich tern,22,30.8
+Aves,Charadriiformes,Recurvirostridae,Himantopus,mexicanus,Black-necked (Hawaiian) stilt,25,19.1
+Aves,Charadriiformes,Scolopacidae,Actitis,macularius,Spotted sandpiper,20,12
+Aves,Charadriiformes,Scolopacidae,Arenaria,interpres,Ruddy turnstone,22,22.3
+Aves,Charadriiformes,Scolopacidae,Bartramia,longicauda,Upland sandpiper,22,8.9
+Aves,Charadriiformes,Scolopacidae,Calidris,alba,Sanderling,27,18.6
+Aves,Charadriiformes,Scolopacidae,Calidris,alpina,Dunlin,21,28.8
+Aves,Charadriiformes,Scolopacidae,Calidris,canutus,Red knot,22,27.3
+Aves,Charadriiformes,Scolopacidae,Calidris,maritima,Purple sandpiper,22,20.8
+Aves,Charadriiformes,Scolopacidae,Calidris,mauri,Western sandpiper,21,9.2
+Aves,Charadriiformes,Scolopacidae,Calidris,minutilla,Least sandpiper,20,16
+Aves,Charadriiformes,Scolopacidae,Calidris,pusilla,Semipalmated sandpiper,20,19.3
+Aves,Charadriiformes,Scolopacidae,Gallinago,gallinago,Common snipe,19,18.2
+Aves,Charadriiformes,Scolopacidae,Limnodromus,griseus,Short-billed dowitcher,21,13.3
+Aves,Charadriiformes,Scolopacidae,Limnodromus,scolopaceus,Long-billed dowitcher,20,13.2
+Aves,Charadriiformes,Scolopacidae,Limosa,fedoa,Marbled godwit,24,13.7
+Aves,Charadriiformes,Scolopacidae,Limosa,lapponica,Bar-tailed godwit,21,34
+Aves,Charadriiformes,Scolopacidae,Numenius,phaeopus,Whimbrel,22,24.2
+Aves,Charadriiformes,Scolopacidae,Phalaropus,tricolor,Wilson's phalarope,23,10
+Aves,Charadriiformes,Scolopacidae,Scolopax,minor,American woodcock,20,20.9
+Aves,Charadriiformes,Scolopacidae,Tringa,semipalmata,Willet,22,12.6
+Aves,Charadriiformes,Stercorariidae,Stercorarius,longicaudus,Long-tailed jaeger,23,14
+Aves,Charadriiformes,Stercorariidae,Stercorarius,parasiticus,Parasidic jaeger,26,31.1
+Aves,Ciconiiformes,Ciconiidae,Ciconia,ciconia,European white stork,33,39
+Aves,Ciconiiformes,Ciconiidae,Leptoptilos,crumeniferus,Marabou,30,44.7
+Aves,Ciconiiformes,Ciconiidae,Mycteria,americana,Wood stork,30,27
+Aves,Coliiformes,Coliidae,Colius,striatus,Speckled mousebird,14,11.5
+Aves,Columbiformes,Columbidae,Caloenas,nicobarica,Nicobar pigeon,17,20.5
+Aves,Columbiformes,Columbidae,Columbina,inca,Inca dove,14,13.3
+Aves,Columbiformes,Columbidae,Columbina,passerina,Common ground dove,13,7.2
+Aves,Columbiformes,Columbidae,Leptotila,verreauxi,White-tipped dove,14,8.6
+Aves,Columbiformes,Columbidae,Patagioenas,fasciata,Band-tailed pigeon,19,18.5
+Aves,Columbiformes,Columbidae,Streptopelia,chinensis,Spotted dove,15,9.8
+Aves,Columbiformes,Columbidae,Streptopelia,decaocto,Eurasian collared-dove,15,17.9
+Aves,Columbiformes,Columbidae,Zenaida,asiatica,White-winged dove,13,25
+Aves,Columbiformes,Columbidae,Zenaida,macroura,Mourning dove,14,31.3
+Aves,Coraciiformes,Alcedinidae,Dacelo,novaeguineae,Laughing kookaburra,25,26.8
+Aves,Coraciiformes,Coraciidae,Coracias,caudatus,Lilac-breasted roller,21,13.7
+Aves,Coraciiformes,Momotidae,Momotus,momota,Blue-crowned motmot,21,20.3
+Aves,Cuculiformes,Cuculidae,Coccyzus,americanus,Yellow-billed cuckoo,14,5
+Aves,Cuculiformes,Cuculidae,Coccyzus,erythropthalmus,Black-billed cuckoo,14,5
+Aves,Cuculiformes,Cuculidae,Geococcyx,californianus,Greater roadrunner,20,9
+Aves,Eurypygiformes,Eurypygidae,Eurypyga,helias,Sunbittern,27,15
+Aves,Falconiformes,Falconidae,Caracara,cheriway,Crested caracara,32,25.8
+Aves,Falconiformes,Falconidae,Falco,columbarius,Merlin,30,12.7
+Aves,Falconiformes,Falconidae,Falco,femoralis,Aplomado falcon,32,12
+Aves,Falconiformes,Falconidae,Falco,mexicanus,Prairie falcon,31,17.2
+Aves,Falconiformes,Falconidae,Falco,peregrinus,Peregrine falcon,30,25
+Aves,Falconiformes,Falconidae,Falco,rusticolus,Gyrfalcon,35,13.5
+Aves,Falconiformes,Falconidae,Falco,sparverius,American kestrel,29,17
+Aves,Galliformes,Cracidae,Ortalis,vetula,Plain chachalaca,23,8.8
+Aves,Galliformes,Odontophoridae,Callipepla,californica,California quail,22,9.6
+Aves,Galliformes,Odontophoridae,Callipepla,gambelii,Gambel's quail,22,7.4
+Aves,Galliformes,Odontophoridae,Colinus,virginianus,Northern bobwhite,23,6.4
+Aves,Galliformes,Phasianidae,Bonasa,umbellus,Ruffed grouse,24,11
+Aves,Galliformes,Phasianidae,Centrocercus,urophasianus,Sage grouse,26,7
+Aves,Galliformes,Phasianidae,Chrysolophus,amherstiae,Lady Amherst's pheasant,24,19.6
+Aves,Galliformes,Phasianidae,Coturnix,japonica,Japanese quail,17,6
+Aves,Galliformes,Phasianidae,Dendragapus,obscurus,Blue grouse,26,14
+Aves,Galliformes,Phasianidae,Falcipennis,canadensis,Spruce grouse,20,13
+Aves,Galliformes,Phasianidae,Francolinus,francolinus,Black francolin,19,7
+Aves,Galliformes,Phasianidae,Francolinus,pondicerianus,Grey francolin,18,8
+Aves,Galliformes,Phasianidae,Lagopus,lagopus,Willow ptarmigan,21,9
+Aves,Galliformes,Phasianidae,Lagopus,leucura,White-tailed ptarmigan,23,15
+Aves,Galliformes,Phasianidae,Meleagris,gallopavo,Wild turkey,28,13
+Aves,Galliformes,Phasianidae,Pavo,cristatus,Indian peafowl,29,23.2
+Aves,Galliformes,Phasianidae,Perdix,perdix,Grey partridge,24,5.2
+Aves,Galliformes,Phasianidae,Polyplectron,napoleonis,Palawan peacock-pheasant,19,15
+Aves,Galliformes,Phasianidae,Tympanuchus,cupido,Greater prairie chicken,23,5
+Aves,Galliformes,Phasianidae,Tympanuchus,pallidicinctus,Lesser prairie chicken,23,13.5
+Aves,Galliformes,Phasianidae,Tympanuchus,phasianellus,Sharp-tailed grouse,23,7.5
+Aves,Gaviiformes,Gaviidae,Gavia,arctica,Black-throated diver,29,28
+Aves,Gaviiformes,Gaviidae,Gavia,immer,Great northern diver,28,24.1
+Aves,Gaviiformes,Gaviidae,Gavia,stellata,Red-throated diver,28,24
+Aves,Gruiformes,Gruidae,Balearica,regulorum,Grey crowned crane,30,27.2
+Aves,Gruiformes,Gruidae,Grus,americana,Whooping crane,31,40
+Aves,Gruiformes,Gruidae,Grus,antigone,Sarus crane,32,41.8
+Aves,Gruiformes,Gruidae,Grus,canadensis,Sandhill crane,29,36.6
+Aves,Gruiformes,Gruidae,Grus,japonensis,Red-crowned crane,31,25.2
+Aves,Gruiformes,Gruidae,Grus,vipio,White-naped crane,31,45
+Aves,Gruiformes,Rallidae,Fulica,americana,American coot,23,22.3
+Aves,Gruiformes,Rallidae,Gallinula,chloropus,Common moorhen,19,18.6
+Aves,Gruiformes,Rallidae,Rallus,longirostris,Clapper rail,22,7.5
+Aves,Passeriformes,Aegithalidae,Psaltriparus,minimus,Bushtit,12,9.1
+Aves,Passeriformes,Alaudidae,Alauda,arvensis,Eurasian skylark,11,10.1
+Aves,Passeriformes,Alaudidae,Eremophila,alpestris,Horned lark,11,8
+Aves,Passeriformes,Bombycillidae,Bombycilla,cedrorum,Cedar waxwing,14,8.2
+Aves,Passeriformes,Bombycillidae,Bombycilla,garrulus,Bohemian waxwing,14,13.5
+Aves,Passeriformes,Calcariidae,Calcarius,lapponicus,Lapland longspur,12,6
+Aves,Passeriformes,Calcariidae,Calcarius,pictus,Smith's longspur,12,5
+Aves,Passeriformes,Calcariidae,Plectrophenax,nivalis,Snow bunting,12,9.6
+Aves,Passeriformes,Cardinalidae,Cardinalis,cardinalis,Northern cardinal,12,28.5
+Aves,Passeriformes,Cardinalidae,Passerina,amoena,Lazuli bunting,12,9.9
+Aves,Passeriformes,Cardinalidae,Passerina,caerulea,Blue grosbeak,11,10.2
+Aves,Passeriformes,Cardinalidae,Passerina,ciris,Painted bunting,11,12
+Aves,Passeriformes,Cardinalidae,Passerina,cyanea,Indigo bunting,12,11
+Aves,Passeriformes,Cardinalidae,Pheucticus,ludovicianus,Rose-breasted grosbeak,12,24
+Aves,Passeriformes,Cardinalidae,Pheucticus,melanocephalus,Black-headed grosbeak,12,25
+Aves,Passeriformes,Cardinalidae,Piranga,ludoviciana,Western tanager,13,15.3
+Aves,Passeriformes,Cardinalidae,Piranga,olivacea,Scarlet tanager,13,11.9
+Aves,Passeriformes,Cardinalidae,Piranga,rubra,Summer tanager,12,7.9
+Aves,Passeriformes,Cardinalidae,Spiza,americana,Dickcissel,12,4.8
+Aves,Passeriformes,Corvidae,Aphelocoma,californica,Western scrub jay,18,15.8
+Aves,Passeriformes,Corvidae,Aphelocoma,coerulescens,Scrub jay,17,15
+Aves,Passeriformes,Corvidae,Aphelocoma,insularis,Island scrub jay,18,15.3
+Aves,Passeriformes,Corvidae,Aphelocoma,ultramarina,Mexican jay,18,25
+Aves,Passeriformes,Corvidae,Corvus,brachyrhynchos,American crow,18,20
+Aves,Passeriformes,Corvidae,Corvus,caurinus,Northwestern crow,18,16.7
+Aves,Passeriformes,Corvidae,Corvus,corax,Common raven,19,69
+Aves,Passeriformes,Corvidae,Corvus,cryptoleucus,Chihuahuan raven,21,21.8
+Aves,Passeriformes,Corvidae,Corvus,hawaiiensis,Hawaiian crow,20,25
+Aves,Passeriformes,Corvidae,Corvus,ossifragus,Fish crow,17,14.5
+Aves,Passeriformes,Corvidae,Cyanocitta,cristata,Blue jay,17,26.2
+Aves,Passeriformes,Corvidae,Cyanocitta,stelleri,Steller's jay,16,16.1
+Aves,Passeriformes,Corvidae,Gymnorhinus,cyanocephalus,Pinyon jay,17,14.6
+Aves,Passeriformes,Corvidae,Nucifraga,columbiana,Clark's nutcracker,18,17.4
+Aves,Passeriformes,Corvidae,Perisoreus,canadensis,Gray jay,17,19.2
+Aves,Passeriformes,Corvidae,Pica,hudsonia,Black-billed magpie,18,20
+Aves,Passeriformes,Corvidae,Pica,pica,Eurasian magpie,21,21.7
+Aves,Passeriformes,Emberizidae,Aimophila,ruficeps,Rufous-crowned sparrow,12,5.1
+Aves,Passeriformes,Emberizidae,Ammodramus,caudacutus,Saltmarsh sharp-tailed sparrow,11,10
+Aves,Passeriformes,Emberizidae,Ammodramus,maritimus,Seaside sparrow,12,9
+Aves,Passeriformes,Emberizidae,Ammodramus,savannarum,Grasshopper sparrow,11,9.1
+Aves,Passeriformes,Emberizidae,Amphispiza,bilineata,Black-throated sparrow,12,6
+Aves,Passeriformes,Emberizidae,Calamospiza,melanocorys,Lark bunting,12,4.8
+Aves,Passeriformes,Emberizidae,Chondestes,grammacus,Lark sparrow,12,7.8
+Aves,Passeriformes,Emberizidae,Junco,hyemalis,Dark-eyed junco,11,11.3
+Aves,Passeriformes,Emberizidae,Junco,phaeonotus,Yellow-eyed junco,13,6.6
+Aves,Passeriformes,Emberizidae,Melospiza,georgiana,Swamp sparrow,13,7.8
+Aves,Passeriformes,Emberizidae,Melospiza,lincolnii,Lincoln's sparrow,11,7.6
+Aves,Passeriformes,Emberizidae,Melospiza,melodia,Song sparrow,12,11.3
+Aves,Passeriformes,Emberizidae,Melozone,aberti,Abert's towhee,14,8.6
+Aves,Passeriformes,Emberizidae,Melozone,crissalis,California towhee,13,12.8
+Aves,Passeriformes,Emberizidae,Melozone,fusca,Canyon towhee,11,12.8
+Aves,Passeriformes,Emberizidae,Passerculus,sandwichensis,Savannah sparrow,12,18
+Aves,Passeriformes,Emberizidae,Passerella,iliaca,Fox sparrow,13,10.3
+Aves,Passeriformes,Emberizidae,Peucaea,aestivalis,Bachman's sparrow,13,3.9
+Aves,Passeriformes,Emberizidae,Pipilo,chlorurus,Green-tailed towhee,12,7.7
+Aves,Passeriformes,Emberizidae,Pipilo,erythrophthalmus,Eastern towhee,12,12.3
+Aves,Passeriformes,Emberizidae,Pooecetes,gramineus,Vesper sparrow,12,7.9
+Aves,Passeriformes,Emberizidae,Spizella,breweri,Brewer's sparrow,11,6.2
+Aves,Passeriformes,Emberizidae,Spizella,pallida,Clay-colored sparrow,12,6.9
+Aves,Passeriformes,Emberizidae,Spizella,passerina,Chipping sparrow,12,11.8
+Aves,Passeriformes,Emberizidae,Spizella,pusilla,Field sparrow,12,10.3
+Aves,Passeriformes,Emberizidae,Spizelloides,arborea,American tree sparrow,12,10.8
+Aves,Passeriformes,Emberizidae,Zonotrichia,albicollis,White-throated sparrow,13,14.9
+Aves,Passeriformes,Emberizidae,Zonotrichia,atricapilla,Golden-crowned sparrow,12,10.5
+Aves,Passeriformes,Emberizidae,Zonotrichia,leucophrys,White-crowned sparrow,12,13.3
+Aves,Passeriformes,Emberizidae,Zonotrichia,querula,Harris's sparrow,13,11.7
+Aves,Passeriformes,Estrildidae,Erythrura,gouldiae,Gouldian finch,13,6
+Aves,Passeriformes,Fringillidae,Acanthis,flammea,Common redpoll,10,12.2
+Aves,Passeriformes,Fringillidae,Acanthis,hornemanni,Hoary redpoll,12,6.8
+Aves,Passeriformes,Fringillidae,Chlorodrepanis,stejnegeri,Kauai amakihi,14,9
+Aves,Passeriformes,Fringillidae,Chlorodrepanis,virens,Hawaii amakihi,14,12
+Aves,Passeriformes,Fringillidae,Haemorhous,cassinii,Cassin's finch,13,7
+Aves,Passeriformes,Fringillidae,Haemorhous,mexicanus,House finch,14,11.6
+Aves,Passeriformes,Fringillidae,Haemorhous,purpureus,Purple finch,13,14
+Aves,Passeriformes,Fringillidae,Hesperiphona,vespertina,Evening grosbeak,13,17
+Aves,Passeriformes,Fringillidae,Himatione,sanguinea,Apapane,13,11
+Aves,Passeriformes,Fringillidae,Leucosticte,atrata,Black rosy-finch,13,8.6
+Aves,Passeriformes,Fringillidae,Leucosticte,tephrocotis,Gray-crowned rosy-finch,14,6.6
+Aves,Passeriformes,Fringillidae,Loxia,curvirostra,Red crossbill,13,16.1
+Aves,Passeriformes,Fringillidae,Loxioides,bailleui,Palila,16,13
+Aves,Passeriformes,Fringillidae,Loxops,coccineus,Akepa,15,10
+Aves,Passeriformes,Fringillidae,Magumma,parva,Anianiau,14,9.5
+Aves,Passeriformes,Fringillidae,Palmeria,dolei,Akohekohe or crested honeycreeper,17,9.2
+Aves,Passeriformes,Fringillidae,Pinicola,enucleator,Pine grosbeak,13,9.8
+Aves,Passeriformes,Fringillidae,Spinus,pinus,Pine siskin,13,11
+Aves,Passeriformes,Fringillidae,Spinus,psaltria,Lesser goldfinch,12,5.7
+Aves,Passeriformes,Fringillidae,Spinus,tristis,American goldfinch,13,13
+Aves,Passeriformes,Fringillidae,Telespiza,cantans,Laysan finch,16,12
+Aves,Passeriformes,Fringillidae,Telespiza,ultima,Nihoa finch,15,12
+Aves,Passeriformes,Hirundinidae,Hirundo,rustica,Barn swallow,15,16
+Aves,Passeriformes,Hirundinidae,Petrochelidon,pyrrhonota,Cliff swallow,14,11.8
+Aves,Passeriformes,Hirundinidae,Progne,subis,Purple martin,15,13.8
+Aves,Passeriformes,Hirundinidae,Riparia,riparia,Bank swallow,15,10
+Aves,Passeriformes,Hirundinidae,Stelgidopteryx,ruficollis,Southern rough-winged swallow,14,5.9
+Aves,Passeriformes,Hirundinidae,Tachycineta,bicolor,Tree swallow,14,12.1
+Aves,Passeriformes,Hirundinidae,Tachycineta,thalassina,Violet-green swallow,14,9.1
+Aves,Passeriformes,Icteridae,Agelaius,phoeniceus,Red-winged blackbird,12,20
+Aves,Passeriformes,Icteridae,Agelaius,tricolor,Tricolored blackbird,11,13.2
+Aves,Passeriformes,Icteridae,Dolichonyx,oryzivorus,Bobolink,13,9
+Aves,Passeriformes,Icteridae,Euphagus,carolinus,Rusty blackbird,14,8.8
+Aves,Passeriformes,Icteridae,Euphagus,cyanocephalus,Brewer's blackbird,13,12.5
+Aves,Passeriformes,Icteridae,Icterus,bullockii,Bullock's oriole,11,8.9
+Aves,Passeriformes,Icteridae,Icterus,cucullatus,Hooded oriole,13,6
+Aves,Passeriformes,Icteridae,Icterus,galbula,Baltimore oriole,13,14
+Aves,Passeriformes,Icteridae,Icterus,parisorum,Scott's oriole,14,6.4
+Aves,Passeriformes,Icteridae,Icterus,spurius,Orchard oriole,13,17.7
+Aves,Passeriformes,Icteridae,Molothrus,ater,Brown-headed cowbird,11,16.9
+Aves,Passeriformes,Icteridae,Quiscalus,quiscula,Common grackle,14,23.1
+Aves,Passeriformes,Icteridae,Sturnella,magna,Eastern meadowlark,13,12.6
+Aves,Passeriformes,Icteridae,Sturnella,neglecta,Western meadowlark,14,10
+Aves,Passeriformes,Icteridae,Xanthocephalus,xanthocephalus,Yellow-headed blackbird,12,18
+Aves,Passeriformes,Laniidae,Lanius,ludovicianus,Loggerhead shrike,11,12.5
+Aves,Passeriformes,Leiothrichidae,Leiothrix,lutea,Red-billed leothrix,12,15
+Aves,Passeriformes,Mimidae,Dumetella,carolinensis,Gray catbird,13,17.9
+Aves,Passeriformes,Mimidae,Mimus,polyglottos,Northern mockingbird,12,20
+Aves,Passeriformes,Mimidae,Toxostoma,crissale,Crissal thrasher,14,4.8
+Aves,Passeriformes,Mimidae,Toxostoma,curvirostre,Curve-billed thrasher,13,10.8
+Aves,Passeriformes,Mimidae,Toxostoma,lecontei,Le conte's thrasher,16,5.7
+Aves,Passeriformes,Mimidae,Toxostoma,longirostre,Long-billed thrasher,14,7.8
+Aves,Passeriformes,Mimidae,Toxostoma,redivivum,California thrasher,14,6.9
+Aves,Passeriformes,Mimidae,Toxostoma,rufum,Brown thrasher,13,12.8
+Aves,Passeriformes,Motacillidae,Anthus,rubescens,American pipit,14,5.1
+Aves,Passeriformes,Motacillidae,Anthus,spinoletta,Water pipit,14,8.8
+Aves,Passeriformes,Motacillidae,Motacilla,alba,White wagtail,13,13.7
+Aves,Passeriformes,Motacillidae,Motacilla,flava,Yellow wagtail,11,8.8
+Aves,Passeriformes,Muscicapidae,Copsychus,malabaricus,White-rumped shama,14,7
+Aves,Passeriformes,Muscicapidae,Luscinia,svecica,Bluethroat,13,11.4
+Aves,Passeriformes,Muscicapidae,Oenanthe,oenanthe,Northern wheatear,14,10.1
+Aves,Passeriformes,Paridae,Baeolophus,bicolor,Tufted titmouse,13,13.3
+Aves,Passeriformes,Paridae,Baeolophus,inornatus,Plain titmouse or oak titmouse,15,9
+Aves,Passeriformes,Paridae,Baeolophus,wollweberi,Bridled titmouse,13,6.6
+Aves,Passeriformes,Paridae,Poecile,atricapillus,Black-capped chickadee,12,12.4
+Aves,Passeriformes,Paridae,Poecile,carolinensis,Carolina chickadee,13,10.9
+Aves,Passeriformes,Paridae,Poecile,cinctus,Siberian tit or gray-headed chickadee,15,9
+Aves,Passeriformes,Paridae,Poecile,gambeli,Mountain chickadee,14,10.1
+Aves,Passeriformes,Paridae,Poecile,hudsonicus,Boreal chickadee,15,7
+Aves,Passeriformes,Paridae,Poecile,rufescens,Chestnut-backed chickadee,13,9.5
+Aves,Passeriformes,Parulidae,Cardellina,canadensis,Canada warbler,12,8
+Aves,Passeriformes,Parulidae,Cardellina,pusilla,Wilson's warbler,10,8.9
+Aves,Passeriformes,Parulidae,Cardellina,rubrifrons,Red-faced warbler,13,3
+Aves,Passeriformes,Parulidae,Geothlypis,formosa,Kentucky warbler,12,6.9
+Aves,Passeriformes,Parulidae,Geothlypis,philadelphia,Mourning warbler,12,7.9
+Aves,Passeriformes,Parulidae,Geothlypis,trichas,Common yellowthroat,12,11.5
+Aves,Passeriformes,Parulidae,Helmitheros,vermivorum,Worm-eating warbler,13,8.1
+Aves,Passeriformes,Parulidae,Icteria,virens,Yellow-breasted chat,11,8.9
+Aves,Passeriformes,Parulidae,Leiothlypis,celata,Orange-crowned warbler,12,8.6
+Aves,Passeriformes,Parulidae,Leiothlypis,luciae,Lucy's warbler,11,5.8
+Aves,Passeriformes,Parulidae,Leiothlypis,peregrina,Tennessee warbler,11,6.4
+Aves,Passeriformes,Parulidae,Leiothlypis,ruficapilla,Nashville warbler,11,10.2
+Aves,Passeriformes,Parulidae,Limnothlypis,swainsonii,Swainson's warbler,14,9.9
+Aves,Passeriformes,Parulidae,Mniotilta,varia,Black-and-white warbler,11,12.2
+Aves,Passeriformes,Parulidae,Myioborus,pictus,Painted redstart,13,6.6
+Aves,Passeriformes,Parulidae,Parkesia,motacilla,Louisiana waterthrush,13,11.9
+Aves,Passeriformes,Parulidae,Parkesia,noveboracensis,Northern waterthrush,12,8.9
+Aves,Passeriformes,Parulidae,Protonotaria,citrea,Prothonotary warbler,13,8.1
+Aves,Passeriformes,Parulidae,Seiurus,aurocapilla,Ovenbird,12,11
+Aves,Passeriformes,Parulidae,Setophaga,americana,Northern parula,13,7
+Aves,Passeriformes,Parulidae,Setophaga,caerulescens,Black-throated blue warbler,13,10
+Aves,Passeriformes,Parulidae,Setophaga,castanea,Bay-breasted warbler,12,4.9
+Aves,Passeriformes,Parulidae,Setophaga,cerulea,Cerulean warbler,12,6
+Aves,Passeriformes,Parulidae,Setophaga,citrina,Hooded warbler,12,8.2
+Aves,Passeriformes,Parulidae,Setophaga,coronata,Yellow-rumped (myrtle) warbler,12,10
+Aves,Passeriformes,Parulidae,Setophaga,discolor,Prairie warbler,12,10.3
+Aves,Passeriformes,Parulidae,Setophaga,dominica,Yellow-throated warbler,12,6.1
+Aves,Passeriformes,Parulidae,Setophaga,fusca,Blackburnian warbler,11,8.2
+Aves,Passeriformes,Parulidae,Setophaga,kirtlandii,Kirtland's warbler,14,9
+Aves,Passeriformes,Parulidae,Setophaga,magnolia,Magnolia warbler,12,8
+Aves,Passeriformes,Parulidae,Setophaga,palmarum,Western palm warbler,12,6.6
+Aves,Passeriformes,Parulidae,Setophaga,pensylvanica,Chestnut-sided warbler,12,6.9
+Aves,Passeriformes,Parulidae,Setophaga,petechia,Yellow warbler,12,11
+Aves,Passeriformes,Parulidae,Setophaga,pinus,Pine warbler,13,10.2
+Aves,Passeriformes,Parulidae,Setophaga,ruticilla,American redstart,12,10.1
+Aves,Passeriformes,Parulidae,Setophaga,striata,Blackpoll warbler,12,8.1
+Aves,Passeriformes,Parulidae,Setophaga,townsendi,Townsend's warbler,12,10.7
+Aves,Passeriformes,Parulidae,Setophaga,virens,Black-throated green warbler,12,6
+Aves,Passeriformes,Parulidae,Vermivora,chrysoptera,Golden-winged warbler,10,7.9
+Aves,Passeriformes,Parulidae,Vermivora,cyanoptera,Blue-winged warbler,11,9
+Aves,Passeriformes,Passeridae,Passer,domesticus,House sparrow,11,23
+Aves,Passeriformes,Passeridae,Passer,montanus,Eurasian tree sparrow,13,13.1
+Aves,Passeriformes,Polioptilidae,Polioptila,caerulea,Blue-grey gnatcatcher,13,4.2
+Aves,Passeriformes,Polioptilidae,Polioptila,californica,California gnatcatcher,14,8
+Aves,Passeriformes,Pycnonotidae,Pycnonotus,jocosus,Red-whiskered bulbul,12,11.1
+Aves,Passeriformes,Regulidae,Regulus,calendula,Ruby-crowned kinglet,12,5.6
+Aves,Passeriformes,Regulidae,Regulus,satrapa,Golden-crowned kinglet,14,6.3
+Aves,Passeriformes,Remizidae,Auriparus,flaviceps,Verdin,14,5.6
+Aves,Passeriformes,Sittidae,Sitta,canadensis,Red-breasted nuthatch,12,7.5
+Aves,Passeriformes,Sittidae,Sitta,carolinensis,White-breasted nuthatch,12,9.8
+Aves,Passeriformes,Sittidae,Sitta,pusilla,Brown-headed nuthatch,14,5.8
+Aves,Passeriformes,Sittidae,Sitta,pygmaea,Pygmy nuthatch,15,8.2
+Aves,Passeriformes,Sturnidae,Acridotheres,cristatellus,Crested myna,15,13
+Aves,Passeriformes,Sturnidae,Leucopsar,rothschildi,Bali mynah,13,25
+Aves,Passeriformes,Sturnidae,Sturnus,vulgaris,European starling,12,22.9
+Aves,Passeriformes,Sylviidae,Chamaea,fasciata,Wrentit,15,12.6
+Aves,Passeriformes,Thraupidae,Sporophila,torqueola,White-collared seedeater,13,11.7
+Aves,Passeriformes,Thraupidae,Thraupis,episcopus,Blue-grey tanager,13,9.5
+Aves,Passeriformes,Troglodytidae,Campylorhynchus,brunneicapillus,Cactus wren,16,7.3
+Aves,Passeriformes,Troglodytidae,Thryomanes,bewickii,Bewick's wren,14,8
+Aves,Passeriformes,Troglodytidae,Thryothorus,ludovicianus,Carolina wren,14,9.2
+Aves,Passeriformes,Troglodytidae,Troglodytes,aedon,House wren,13,9
+Aves,Passeriformes,Troglodytidae,Troglodytes,troglodytes,Winter wren,15,7
+Aves,Passeriformes,Turdidae,Catharus,bicknelli,Bicknell's thrush,12,11.9
+Aves,Passeriformes,Turdidae,Catharus,fuscescens,Veery,11,10.1
+Aves,Passeriformes,Turdidae,Catharus,guttatus,Hermit thrush,12,10.8
+Aves,Passeriformes,Turdidae,Catharus,minimus,Grey-cheeked thrush,13,7.3
+Aves,Passeriformes,Turdidae,Catharus,ustulatus,Swainson's thrush,12,11
+Aves,Passeriformes,Turdidae,Hylocichla,mustelina,Wood thrush,13,10.2
+Aves,Passeriformes,Turdidae,Ixoreus,naevius,Varied thrush,14,5.6
+Aves,Passeriformes,Turdidae,Sialia,currucoides,Mountain bluebird,13,9
+Aves,Passeriformes,Turdidae,Sialia,mexicana,Western bluebird,14,8.7
+Aves,Passeriformes,Turdidae,Sialia,sialis,Eastern bluebird,14,10.5
+Aves,Passeriformes,Turdidae,Turdus,grayi,Clay-colored robin,12,9.6
+Aves,Passeriformes,Turdidae,Turdus,migratorius,American robin,13,17
+Aves,Passeriformes,Tyrannidae,Contopus,cooperi,Olive-sided flycatcher,15,11.1
+Aves,Passeriformes,Tyrannidae,Contopus,sordidulus,Western wood pewee,14,8.1
+Aves,Passeriformes,Tyrannidae,Contopus,virens,Eastern wood pewee,13,8.2
+Aves,Passeriformes,Tyrannidae,Empidonax,alnorum,Alder flycatcher,13,9.1
+Aves,Passeriformes,Tyrannidae,Empidonax,difficilis,Pacific-slope flycatcher,14,6.9
+Aves,Passeriformes,Tyrannidae,Empidonax,minimus,Least flycatcher,14,8
+Aves,Passeriformes,Tyrannidae,Empidonax,oberholseri,Dusky flycatcher,15,9
+Aves,Passeriformes,Tyrannidae,Empidonax,traillii,Willow flycatcher,13,11
+Aves,Passeriformes,Tyrannidae,Empidonax,virescens,Acadian flycatcher,13,12.1
+Aves,Passeriformes,Tyrannidae,Myiarchus,cinerascens,Ash-throated flycatcher,15,11.9
+Aves,Passeriformes,Tyrannidae,Myiarchus,crinitus,Great crested flycatcher,14,14.9
+Aves,Passeriformes,Tyrannidae,Pyrocephalus,rubinus,Vermilion flycatcher,14,5.5
+Aves,Passeriformes,Tyrannidae,Sayornis,nigricans,Black phoebe,16,8
+Aves,Passeriformes,Tyrannidae,Sayornis,phoebe,Eastern phoebe,16,10.3
+Aves,Passeriformes,Tyrannidae,Tyrannus,tyrannus,Eastern kingbird,12,11.1
+Aves,Passeriformes,Tyrannidae,Tyrannus,verticalis,Western kingbird,13,6.9
+Aves,Passeriformes,Vireonidae,Vireo,atricapilla,Black-capped vireo,15,12
+Aves,Passeriformes,Vireonidae,Vireo,bellii,Bell's vireo,14,9.1
+Aves,Passeriformes,Vireonidae,Vireo,flavifrons,Yellow-throated vireo,15,6.1
+Aves,Passeriformes,Vireonidae,Vireo,gilvus,Warbling vireo,13,13.1
+Aves,Passeriformes,Vireonidae,Vireo,griseus,White-eyed vireo,13,10.9
+Aves,Passeriformes,Vireonidae,Vireo,huttoni,Hutton's vireo,14,13.5
+Aves,Passeriformes,Vireonidae,Vireo,olivaceus,Red-eyed vireo,12,10.2
+Aves,Passeriformes,Vireonidae,Vireo,philadelphicus,Philadelphia vireo,14,9.8
+Aves,Passeriformes,Vireonidae,Vireo,solitarius,Blue-headed vireo,12,7.4
+Aves,Passeriformes,Zosteropidae,Zosterops,japonicus,Japanese white-eye,11,5.1
+Aves,Pelecaniformes,Ardeidae,Ardea,alba,Great egret,23,22.8
+Aves,Pelecaniformes,Ardeidae,Ardea,herodias,Great blue heron,28,24.5
+Aves,Pelecaniformes,Ardeidae,Botaurus,lentiginosus,American bittern,34,8.3
+Aves,Pelecaniformes,Ardeidae,Bubulcus,ibis,Cattle egret,22,23
+Aves,Pelecaniformes,Ardeidae,Butorides,virescens,Green heron,20,11.6
+Aves,Pelecaniformes,Ardeidae,Egretta,caerulea,Little blue heron,23,13.9
+Aves,Pelecaniformes,Ardeidae,Egretta,thula,Snowy egret,18,22.8
+Aves,Pelecaniformes,Ardeidae,Egretta,tricolor,Tricolored heron,21,17.7
+Aves,Pelecaniformes,Ardeidae,Nycticorax,nycticorax,Black-crowned night heron,25,21.1
+Aves,Pelecaniformes,Pelecanidae,Pelecanus,erythrorhynchos,American white pelican,36,54
+Aves,Pelecaniformes,Pelecanidae,Pelecanus,occidentalis,Brown pelican,29,43
+Aves,Pelecaniformes,Threskiornithidae,Eudocimus,albus,White ibis,22,27.6
+Aves,Pelecaniformes,Threskiornithidae,Eudocimus,ruber,Scarlet ibis,23,33.2
+Aves,Pelecaniformes,Threskiornithidae,Platalea,ajaja,Roseate spoonbill,23,28
+Aves,Pelecaniformes,Threskiornithidae,Plegadis,chihi,White-faced ibis,21,20.4
+Aves,Phaethontiformes,Phaethontidae,Phaethon,aethereus,Red-billed tropicbird,44,17.6
+Aves,Phaethontiformes,Phaethontidae,Phaethon,rubricauda,Red-tailed tropicbird,45,32.7
+Aves,Phoenicopteriformes,Phoenicopteridae,Phoenicopterus,roseus,Greater flamingo,30,44
+Aves,Piciformes,Picidae,Colaptes,auratus,Northern flicker,11,12.5
+Aves,Piciformes,Picidae,Dryocopus,pileatus,Pileated woodpecker,18,13
+Aves,Piciformes,Picidae,Melanerpes,carolinus,Red-bellied woodpecker,12,20.7
+Aves,Piciformes,Picidae,Melanerpes,erythrocephalus,Red-headed woodpecker,14,10
+Aves,Piciformes,Picidae,Melanerpes,formicivorus,Acorn woodpecker,14,17.2
+Aves,Piciformes,Picidae,Melanerpes,uropygialis,Gila woodpecker,14,11
+Aves,Piciformes,Picidae,Picoides,borealis,Red-cockaded woodpecker,11,16.1
+Aves,Piciformes,Picidae,Picoides,pubescens,Downy woodpecker,12,11.9
+Aves,Piciformes,Picidae,Picoides,villosus,Hairy woodpecker,14,15.9
+Aves,Piciformes,Picidae,Sphyrapicus,varius,Yellow-bellied sapsucker,12,7.8
+Aves,Piciformes,Ramphastidae,Ramphastos,toco,Toco toucan,16,16.2
+Aves,Podicipediformes,Podicipedidae,Aechmophorus,occidentalis,Western grebe,23,14
+Aves,Podicipediformes,Podicipedidae,Podiceps,nigricollis,Eared grebe,21,13.1
+Aves,Procellariiformes,Diomedeidae,Phoebastria,immutabilis,Laysan albatross,64,65
+Aves,Procellariiformes,Diomedeidae,Phoebastria,nigripes,Black-footed albatross,65,42.1
+Aves,Procellariiformes,Hydrobatidae,Hydrobates,pelagicus,European storm petrel,35,33.8
+Aves,Procellariiformes,Hydrobatidae,Oceanodroma,castro,Harcourt's storm petrel,42,36
+Aves,Procellariiformes,Hydrobatidae,Oceanodroma,leucorhoa,Leach's storm petrel,41,36
+Aves,Procellariiformes,Procellariidae,Bulweria,bulwerii,Bulwer's petrel,44,22.9
+Aves,Procellariiformes,Procellariidae,Fulmarus,glacialis,Northern fulmar,55,51
+Aves,Procellariiformes,Procellariidae,Pterodroma,hypoleuca,Bonin Island petrel,49,30.8
+Aves,Procellariiformes,Procellariidae,Puffinus,pacificus,Wedge-tailed shearwater,53,29
+Aves,Procellariiformes,Procellariidae,Puffinus,puffinus,Manx shearwater,51,50.9
+Aves,Procellariiformes,Procellariidae,Puffinus,tenuirostris,Short-tailed shearwater,53,39.9
+Aves,Psittaciformes,Psittacidae,Ara,chloropterus,Red-and-green macaw,28,50.1
+Aves,Psittaciformes,Psittacidae,Brotogeris,chiriri,Yellow-chevroned parakeet,26,19
+Aves,Psittaciformes,Psittacidae,Brotogeris,versicolurus,Canary-winged parakeet,25,10.3
+Aves,Psittaciformes,Psittacidae,Cacatua,alba,White cockatoo,30,26.9
+Aves,Psittaciformes,Psittacidae,Cacatua,galerita,Sulphur-crested cockatoo,27,57
+Aves,Psittaciformes,Psittacidae,Conuropsis,carolinensis,Carolina parakeet,22,30
+Aves,Psittaciformes,Psittacidae,Myiopsitta,monachus,Monk parakeet,31,22.1
+Aves,Psittaciformes,Psittacidae,Rhynchopsitta,pachyrhyncha,Thick-billed parrot,26,33
+Aves,Psittaciformes,Psittacidae,Strigops,habroptila,Kakapo,30,60
+Aves,Sphenisciformes,Spheniscidae,Eudyptula,minor,Little penguin,39,25.6
+Aves,Sphenisciformes,Spheniscidae,Spheniscus,magellanicus,Magellanic penguin,40,30
+Aves,Strigiformes,Strigidae,Aegolius,acadicus,Northern saw-whet owl,27,17.5
+Aves,Strigiformes,Strigidae,Aegolius,funereus,Boreal owl,27,15.9
+Aves,Strigiformes,Strigidae,Asio,flammeus,Short-eared owl,25,21.8
+Aves,Strigiformes,Strigidae,Asio,otus,Long-eared owl,27,27.8
+Aves,Strigiformes,Strigidae,Athene,cunicularia,Burrowing owl,28,11
+Aves,Strigiformes,Strigidae,Bubo,scandiacus,Snowy owl,32,28
+Aves,Strigiformes,Strigidae,Bubo,virginianus,Great horned owl,27,29
+Aves,Strigiformes,Strigidae,Megascops,asio,Eastern screech-owl,29,20.7
+Aves,Strigiformes,Strigidae,Megascops,kennicottii,Western screech-owl,30,19
+Aves,Strigiformes,Strigidae,Micrathene,whitneyi,Elf owl,24,14
+Aves,Strigiformes,Strigidae,Otus,flammeolus,Flammulated owl,22,8.1
+Aves,Strigiformes,Strigidae,Pulsatrix,perspicillata,Spectacled owl,36,25
+Aves,Strigiformes,Strigidae,Strix,nebulosa,Great grey owl,30,15.9
+Aves,Strigiformes,Strigidae,Strix,occidentalis,Spotted owl,30,25
+Aves,Strigiformes,Strigidae,Strix,varia,Barred owl,28,24
+Aves,Strigiformes,Strigidae,Surnia,ulula,Northern hawk-owl,27,16.2
+Aves,Strigiformes,Tytonidae,Tyto,alba,Barn owl,33,34
+Aves,Suliformes,Anhingidae,Anhinga,anhinga,Anhinga,28,16.4
+Aves,Suliformes,Fregatidae,Fregata,magnificens,Magnificent frigatebird,56,34
+Aves,Suliformes,Fregatidae,Fregata,minor,Great frigatebird,56,43
+Aves,Suliformes,Phalacrocoracidae,Phalacrocorax,auritus,Double-crested cormorant,24,22.5
+Aves,Suliformes,Phalacrocoracidae,Phalacrocorax,brasilianus,Neotropic cormorant,26,12.6
+Aves,Suliformes,Phalacrocoracidae,Phalacrocorax,carbo,Great cormorant,30,27.2
+Aves,Suliformes,Phalacrocoracidae,Phalacrocorax,pelagicus,Pelagic cormorant,22,17.8
+Aves,Suliformes,Phalacrocoracidae,Phalacrocorax,penicillatus,Brandt's cormorant,30,18
+Aves,Suliformes,Sulidae,Morus,bassanus,Northern gannet,43,37.4
+Aves,Suliformes,Sulidae,Sula,dactylatra,Masked booby,43,25.5
+Aves,Suliformes,Sulidae,Sula,leucogaster,Brown booby,41,27.2
+Aves,Suliformes,Sulidae,Sula,nebouxii,Blue-footed booby,41,18
+Aves,Suliformes,Sulidae,Sula,sula,Red-footed booby,44,23
+Chondrostei,Acipenseriformes,Acipenseridae,Acipenser,brevirostrum,Shortnose sturgeon,13,67
+Chondrostei,Acipenseriformes,Acipenseridae,Acipenser,fulvescens,Lake sturgeon,6,152
+Mammalia,Afrosoricida,Tenrecidae,Echinops,telfairi,Lesser hedgehog tenrec,55,19
+Mammalia,Afrosoricida,Tenrecidae,Microgale,dobsoni,Dobson's shrew tenrec,61,5.6
+Mammalia,Afrosoricida,Tenrecidae,Microgale,talazaci,Talazac's shrew tenrec,61,5.8
+Mammalia,Afrosoricida,Tenrecidae,Setifer,setosus,Greater hedgehog tenrec,54,14.1
+Mammalia,Afrosoricida,Tenrecidae,Tenrec,ecaudatus,Tenrec,58,8.7
+Mammalia,Artiodactyla,Antilocapridae,Antilocapra,americana,Pronghorn,235,15.5
+Mammalia,Artiodactyla,Bovidae,Alcelaphus,buselaphus,Hartebeest,247,22.5
+Mammalia,Artiodactyla,Bovidae,Ammotragus,lervia,Aoudad,149,21.7
+Mammalia,Artiodactyla,Bovidae,Bison,bonasus,European bison,270,26.4
+Mammalia,Artiodactyla,Bovidae,Bos,frontalis,Gaur,275,26.2
+Mammalia,Artiodactyla,Bovidae,Bos,javanicus,Banteng,295,27.1
+Mammalia,Artiodactyla,Bovidae,Bubalus,bubalis,Water buffalo,311,34.9
+Mammalia,Artiodactyla,Bovidae,Bubalus,depressicornis,Anoa,300,36.1
+Mammalia,Artiodactyla,Bovidae,Bubalus,quarlesi,Mountain anoa,295,29.2
+Mammalia,Artiodactyla,Bovidae,Budorcas,taxicolor,Takin,210,21.9
+Mammalia,Artiodactyla,Bovidae,Capra,caucasica,West Caucasian tur,157,19.3
+Mammalia,Artiodactyla,Bovidae,Capra,cylindricornis,East Caucasian tur,161,20.2
+Mammalia,Artiodactyla,Bovidae,Capra,nubiana,Nubian ibex,150,22.4
+Mammalia,Artiodactyla,Bovidae,Capra,sibirica,Siberian ibex,175,22.3
+Mammalia,Artiodactyla,Bovidae,Capricornis,crispus,Japanese serow,215,24
+Mammalia,Artiodactyla,Bovidae,Capricornis,sumatraensis,Serow,213,18.5
+Mammalia,Artiodactyla,Bovidae,Cephalophus,dorsalis,Bay duiker,236,17.5
+Mammalia,Artiodactyla,Bovidae,Cephalophus,natalensis,Natal duiker,213,15.2
+Mammalia,Artiodactyla,Bovidae,Cephalophus,niger,Black duiker,128,14.8
+Mammalia,Artiodactyla,Bovidae,Cephalophus,rufilatus,Red-flanked duiker,230,15.2
+Mammalia,Artiodactyla,Bovidae,Cephalophus,silvicultor,Yellow-backed duiker,165,22.5
+Mammalia,Artiodactyla,Bovidae,Connochaetes,gnou,Black wildebeest,259,21.8
+Mammalia,Artiodactyla,Bovidae,Damaliscus,lunatus,Topi,238,23.6
+Mammalia,Artiodactyla,Bovidae,Eudorcas,rufifrons,Red-fronted gazelle,175,14.5
+Mammalia,Artiodactyla,Bovidae,Eudorcas,thomsonii,Thomson's gazelle,170,20
+Mammalia,Artiodactyla,Bovidae,Gazella,cuvieri,Cuvier's gazelle,171,17.9
+Mammalia,Artiodactyla,Bovidae,Gazella,leptoceros,Rhim gazelle,176,14.6
+Mammalia,Artiodactyla,Bovidae,Hemitragus,hylocrius,Nilgiri tahr,188,17.3
+Mammalia,Artiodactyla,Bovidae,Hemitragus,jemlahicus,Himalayan tahr,183,21.8
+Mammalia,Artiodactyla,Bovidae,Hippotragus,equinus,Roan antelope,284,25.9
+Mammalia,Artiodactyla,Bovidae,Kobus,kob,Kob,251,21.9
+Mammalia,Artiodactyla,Bovidae,Litocranius,walleri,Gerenuk,204,17.3
+Mammalia,Artiodactyla,Bovidae,Madoqua,guentheri,Gunther's dik-dik,178,17.5
+Mammalia,Artiodactyla,Bovidae,Madoqua,kirkii,Kirk's dik-dik,172,17.3
+Mammalia,Artiodactyla,Bovidae,Naemorhedus,baileyi,Red goral,213,19
+Mammalia,Artiodactyla,Bovidae,Naemorhedus,goral,Goral,215,17.6
+Mammalia,Artiodactyla,Bovidae,Nanger,dama,Dama gazelle,208,19.3
+Mammalia,Artiodactyla,Bovidae,Nanger,granti,Grant's gazelle,196,19.7
+Mammalia,Artiodactyla,Bovidae,Nanger,soemmerringii,Soemmering's gazelle,190,15.5
+Mammalia,Artiodactyla,Bovidae,Neotragus,moschatus,Suni,180,13.5
+Mammalia,Artiodactyla,Bovidae,Neotragus,pygmaeus,Royal antelope,183,11.1
+Mammalia,Artiodactyla,Bovidae,Oreamnos,americanus,Mountain goat,184,20.8
+Mammalia,Artiodactyla,Bovidae,Oreotragus,oreotragus,Klipspringer,196,25.9
+Mammalia,Artiodactyla,Bovidae,Ourebia,ourebi,Oribi,193,15.9
+Mammalia,Artiodactyla,Bovidae,Ovibos,moschatus,Muskox,258,27.4
+Mammalia,Artiodactyla,Bovidae,Ovis,ammon,Argali,170,16.8
+Mammalia,Artiodactyla,Bovidae,Ovis,canadensis,Bighorn sheep,180,20.6
+Mammalia,Artiodactyla,Bovidae,Ovis,dalli,Dall's sheep,173,19.6
+Mammalia,Artiodactyla,Bovidae,Philantomba,maxwellii,Maxwell's duiker,120,18.3
+Mammalia,Artiodactyla,Bovidae,Philantomba,monticola,Blue duiker,193,15.9
+Mammalia,Artiodactyla,Bovidae,Procapra,gutturosa,Mongolian gazelle,185,12
+Mammalia,Artiodactyla,Bovidae,Pseudois,nayaur,Bharal,160,20.9
+Mammalia,Artiodactyla,Bovidae,Raphicerus,campestris,Steenbok,197,9.3
+Mammalia,Artiodactyla,Bovidae,Redunca,arundinum,Southern reedbuck,224,16.8
+Mammalia,Artiodactyla,Bovidae,Redunca,fulvorufula,Mountain reedbuck,216,15
+Mammalia,Artiodactyla,Bovidae,Rupicapra,rupicapra,Chamois,122,17.6
+Mammalia,Artiodactyla,Bovidae,Sylvicapra,grimmia,Bush duiker,165,15.4
+Mammalia,Artiodactyla,Bovidae,Syncerus,caffer,African buffalo,331,32.8
+Mammalia,Artiodactyla,Bovidae,Taurotragus,derbianus,Giant eland,264,20.3
+Mammalia,Artiodactyla,Bovidae,Tetracerus,quadricornis,Four-horned antelope,212,17.4
+Mammalia,Artiodactyla,Bovidae,Tragelaphus,angasii,Nyala,224,18.5
+Mammalia,Artiodactyla,Bovidae,Tragelaphus,imberbis,Lesser kudu,235,19.8
+Mammalia,Artiodactyla,Bovidae,Tragelaphus,scriptus,Bushbuck,188,15.3
+Mammalia,Artiodactyla,Camelidae,Camelus,dromedarius,Dromedary,405,28.4
+Mammalia,Artiodactyla,Camelidae,Vicugna,vicugna,Vicugna,340,31.6
+Mammalia,Artiodactyla,Cervidae,Axis,calamianensis,Calamian deer,224,17.2
+Mammalia,Artiodactyla,Cervidae,Axis,kuhlii,Bawean deer,227,17.8
+Mammalia,Artiodactyla,Cervidae,Axis,porcinus,Hog deer,232,22.9
+Mammalia,Artiodactyla,Cervidae,Capreolus,capreolus,Western roe deer,153,17.5
+Mammalia,Artiodactyla,Cervidae,Elaphodus,cephalophus,Tufted deer,180,22.7
+Mammalia,Artiodactyla,Cervidae,Hydropotes,inermis,Chinese water deer,190,13.9
+Mammalia,Artiodactyla,Cervidae,Mazama,americana,Red brocket,225,17.1
+Mammalia,Artiodactyla,Cervidae,Mazama,gouazoubira,Gray brocket,212,14.8
+Mammalia,Artiodactyla,Cervidae,Muntiacus,muntjak,Indian muntjac,210,18.8
+Mammalia,Artiodactyla,Cervidae,Odocoileus,hemionus,Mule deer,207,22
+Mammalia,Artiodactyla,Cervidae,Ozotoceros,bezoarticus,Pampas deer,213,21.9
+Mammalia,Artiodactyla,Cervidae,Przewalskium,albirostre,Thorold's deer,253,21.3
+Mammalia,Artiodactyla,Cervidae,Pudu,puda,Southern pudu,200,18.3
+Mammalia,Artiodactyla,Cervidae,Rusa,alfredi,Visayan spotted deer,243,18.5
+Mammalia,Artiodactyla,Cervidae,Rusa,timorensis,Timor deer,251,21.1
+Mammalia,Artiodactyla,Cervidae,Rusa,unicolor,Sambar,232,26.4
+Mammalia,Artiodactyla,Giraffidae,Okapia,johnstoni,Okapi,458,33.5
+Mammalia,Artiodactyla,Hippopotamidae,Hexaprotodon,liberiensis,Pygmy hippopotamus,199,42.3
+Mammalia,Artiodactyla,Hippopotamidae,Hippopotamus,amphibius,Hippopotamus,234,61.2
+Mammalia,Artiodactyla,Suidae,Babyrousa,babyrussa,Babirusa,153,22.9
+Mammalia,Artiodactyla,Suidae,Sus,barbatus,Bearded pig,122,16.2
+Mammalia,Artiodactyla,Suidae,Sus,salvanius,Pygmy hog,108,14
+Mammalia,Artiodactyla,Suidae,Sus,verrucosus,Javan pig,120,17
+Mammalia,Artiodactyla,Tayassuidae,Tayassu,pecari,White-lipped peccary,158,28.5
+Mammalia,Artiodactyla,Tragulidae,Moschiola,meminna,Indian spotted chevrotain,150,14.5
+Mammalia,Artiodactyla,Tragulidae,Tragulus,javanicus,Lesser mouse-deer,144,14
+Mammalia,Artiodactyla,Tragulidae,Tragulus,napu,Greater mouse-deer,153,16.7
+Mammalia,Carnivora,Canidae,Canis,adustus,Side-striped jackal,64,13.7
+Mammalia,Carnivora,Canidae,Canis,aureus,Golden jackal,63,18.8
+Mammalia,Carnivora,Canidae,Canis,familiaris,Domestic dog,63,24
+Mammalia,Carnivora,Canidae,Canis,latrans,Coyote,63,21.8
+Mammalia,Carnivora,Canidae,Canis,mesomelas,Black-backed jackal,60,16.7
+Mammalia,Carnivora,Canidae,Cerdocyon,thous,Crab-eating fox,55,12.7
+Mammalia,Carnivora,Canidae,Chrysocyon,brachyurus,Maned wolf,64,16.8
+Mammalia,Carnivora,Canidae,Cuon,alpinus,Dhole,61,16.1
+Mammalia,Carnivora,Canidae,Lycalopex,culpaeus,Culpeo,61,13.1
+Mammalia,Carnivora,Canidae,Lycalopex,griseus,Argentinian gray fox,56,10.9
+Mammalia,Carnivora,Canidae,Lycalopex,gymnocercus,Pampas fox,57,13.7
+Mammalia,Carnivora,Canidae,Nyctereutes,procyonoides,Raccoon dog,61,16.6
+Mammalia,Carnivora,Canidae,Otocyon,megalotis,Bat-eared fox,68,17
+Mammalia,Carnivora,Canidae,Speothos,venaticus,Bush dog,68,14.1
+Mammalia,Carnivora,Canidae,Urocyon,cinereoargenteus,Gray fox,57,16.2
+Mammalia,Carnivora,Canidae,Vulpes,corsac,Corsac fox,53,13
+Mammalia,Carnivora,Canidae,Vulpes,lagopus,Arctic fox,52,16.3
+Mammalia,Carnivora,Canidae,Vulpes,macrotis,Kit fox,54,15.8
+Mammalia,Carnivora,Canidae,Vulpes,pallida,Pale fox,52,16
+Mammalia,Carnivora,Canidae,Vulpes,velox,Swift fox,55,15.9
+Mammalia,Carnivora,Canidae,Vulpes,vulpes,Red fox,52,21.3
+Mammalia,Carnivora,Canidae,Vulpes,zerda,Fennec,51,16.3
+Mammalia,Carnivora,Eupleridae,Cryptoprocta,ferox,Fossa,90,23.1
+Mammalia,Carnivora,Eupleridae,Fossa,fossana,Malagasy civet,82,21.4
+Mammalia,Carnivora,Eupleridae,Galidia,elegans,Ring-tailed mongoose,72,26
+Mammalia,Carnivora,Felidae,Caracal,caracal,Caracal,74,20.3
+Mammalia,Carnivora,Felidae,Catopuma,temminckii,Asiatic golden cat,95,23
+Mammalia,Carnivora,Felidae,Felis,chaus,Jungle cat,60,20
+Mammalia,Carnivora,Felidae,Felis,manul,Pallas' cat,72,15.9
+Mammalia,Carnivora,Felidae,Felis,margarita,Sand cat,67,13.9
+Mammalia,Carnivora,Felidae,Felis,nigripes,Black-footed cat,66,15.6
+Mammalia,Carnivora,Felidae,Felis,silvestris,Wild cat,64,19
+Mammalia,Carnivora,Felidae,Leopardus,geoffroyi,Geoffroy's cat,75,23
+Mammalia,Carnivora,Felidae,Leopardus,pardalis,Ocelot,77,28.2
+Mammalia,Carnivora,Felidae,Leopardus,tigrinus,Little spotted cat,75,21.9
+Mammalia,Carnivora,Felidae,Leopardus,wiedii,Margay,81,24
+Mammalia,Carnivora,Felidae,Lynx,canadensis,Canada lynx,63,26.8
+Mammalia,Carnivora,Felidae,Lynx,rufus,Bobcat,65,32.3
+Mammalia,Carnivora,Felidae,Neofelis,nebulosa,Clouded leopard,89,19.8
+Mammalia,Carnivora,Felidae,Prionailurus,bengalensis,Leopard cat,62,17
+Mammalia,Carnivora,Felidae,Prionailurus,planiceps,Flat-headed cat,56,14
+Mammalia,Carnivora,Felidae,Prionailurus,rubiginosus,Rusty-spotted cat,68,17.9
+Mammalia,Carnivora,Felidae,Prionailurus,viverrinus,Fishing cat,72,17.2
+Mammalia,Carnivora,Felidae,Profelis,aurata,African golden cat,81,21
+Mammalia,Carnivora,Felidae,Puma,concolor,Cougar,92,23.8
+Mammalia,Carnivora,Felidae,Puma,yagouaroundi,Jaguarundi,73,18.6
+Mammalia,Carnivora,Herpestidae,Atilax,paludinosus,Marsh mongoose,76,20.8
+Mammalia,Carnivora,Herpestidae,Crossarchus,obscurus,Long-nosed cusimanse,58,13.3
+Mammalia,Carnivora,Herpestidae,Cynictis,penicillata,Yellow mongoose,56,15.2
+Mammalia,Carnivora,Herpestidae,Galerella,pulverulenta,Cape gray mongoose,61,11.7
+Mammalia,Carnivora,Herpestidae,Galerella,sanguinea,Slender mongoose,65,12.6
+Mammalia,Carnivora,Herpestidae,Herpestes,edwardsi,Indian gray mongoose,59,12.3
+Mammalia,Carnivora,Herpestidae,Herpestes,javanicus,Javan mongoose,49,16.6
+Mammalia,Carnivora,Herpestidae,Herpestes,urva,Crab-eating mongoose,66,13.3
+Mammalia,Carnivora,Hyaenidae,Crocuta,crocuta,Spotted hyena,110,41.1
+Mammalia,Carnivora,Hyaenidae,Hyaena,brunnea,Brown hyena,92,31.9
+Mammalia,Carnivora,Hyaenidae,Hyaena,hyaena,Striped hyena,90,25
+Mammalia,Carnivora,Hyaenidae,Proteles,cristata,Aardwolf,84,20
+Mammalia,Carnivora,Mephitidae,Conepatus,leuconotus,Hog-nosed skunk,56,10.2
+Mammalia,Carnivora,Mephitidae,Mephitis,mephitis,Striped skunk,63,13.9
+Mammalia,Carnivora,Mephitidae,Spilogale,putorius,Eastern spotted skunk,31,10.5
+Mammalia,Carnivora,Mustelidae,Aonyx,capensis,African clawless otter,63,14.2
+Mammalia,Carnivora,Mustelidae,Aonyx,cinereus,Oriental small-clawed otter,63,23
+Mammalia,Carnivora,Mustelidae,Arctonyx,collaris,Hog badger,42,15.8
+Mammalia,Carnivora,Mustelidae,Eira,barbara,Tayra,66,22.3
+Mammalia,Carnivora,Mustelidae,Enhydra,lutris,Sea otter,140,27
+Mammalia,Carnivora,Mustelidae,Galictis,vittata,Greater grison,40,12.5
+Mammalia,Carnivora,Mustelidae,Gulo,gulo,Wolverine,35,19.5
+Mammalia,Carnivora,Mustelidae,Hydrictis,maculicollis,Spotted-necked otter,61,22.9
+Mammalia,Carnivora,Mustelidae,Ictonyx,striatus,Striped polecat,36,14
+Mammalia,Carnivora,Mustelidae,Lontra,canadensis,Northern river otter,62,27
+Mammalia,Carnivora,Mustelidae,Lutra,lutra,European otter,61,18.2
+Mammalia,Carnivora,Mustelidae,Martes,americana,American marten,28,17.8
+Mammalia,Carnivora,Mustelidae,Martes,flavigula,Yellow-throated marten,150,16
+Mammalia,Carnivora,Mustelidae,Martes,foina,Beech marten,30,18.2
+Mammalia,Carnivora,Mustelidae,Martes,martes,European pine marten,28,18.2
+Mammalia,Carnivora,Mustelidae,Martes,pennanti,Fisher,45,14.3
+Mammalia,Carnivora,Mustelidae,Martes,zibellina,Sable,30,18.4
+Mammalia,Carnivora,Mustelidae,Meles,meles,Old World badger,49,18.6
+Mammalia,Carnivora,Mustelidae,Mellivora,capensis,Honey badger,180,31.3
+Mammalia,Carnivora,Mustelidae,Mustela,erminea,Ermine,43,12.5
+Mammalia,Carnivora,Mustelidae,Mustela,eversmanii,Steppe polecat,36,9.1
+Mammalia,Carnivora,Mustelidae,Mustela,frenata,Long-tailed weasel,25,8.8
+Mammalia,Carnivora,Mustelidae,Mustela,lutreola,European mink,54,8.4
+Mammalia,Carnivora,Mustelidae,Mustela,nigripes,Black-footed ferret,43,9.4
+Mammalia,Carnivora,Mustelidae,Mustela,nivalis,Least weasel,36,9.1
+Mammalia,Carnivora,Mustelidae,Mustela,putorius,European polecat,42,11.1
+Mammalia,Carnivora,Mustelidae,Mustela,sibirica,Siberian weasel,29,8.8
+Mammalia,Carnivora,Mustelidae,Neovison,vison,American mink,42,11.4
+Mammalia,Carnivora,Mustelidae,Pteronura,brasiliensis,Giant otter,68,17.3
+Mammalia,Carnivora,Mustelidae,Taxidea,taxus,American badger,41,25
+Mammalia,Carnivora,Mustelidae,Vormela,peregusna,Marbled polecat,61,8.8
+Mammalia,Carnivora,Nandiniidae,Nandinia,binotata,African palm civet,64,21
+Mammalia,Carnivora,Otariidae,Arctocephalus,australis,South American fur seal,236,30.6
+Mammalia,Carnivora,Otariidae,Arctocephalus,pusillus,South African fur seal,368,32.1
+Mammalia,Carnivora,Otariidae,Eumetopias,jubatus,Steller sea lion,274,32.8
+Mammalia,Carnivora,Otariidae,Neophoca,cinerea,Australian sea lion,258,24.1
+Mammalia,Carnivora,Otariidae,Otaria,flavescens,Southern sea lion,357,29
+Mammalia,Carnivora,Phocidae,Halichoerus,grypus,Gray seal,240,42.9
+Mammalia,Carnivora,Phocidae,Phoca,vitulina,Harbor seal,253,47.6
+Mammalia,Carnivora,Phocidae,Pusa,hispida,Ringed seal,251,46
+Mammalia,Carnivora,Phocidae,Pusa,sibirica,Baikal seal,273,56
+Mammalia,Carnivora,Procyonidae,Bassaricyon,gabbii,Olingo,73,21.8
+Mammalia,Carnivora,Procyonidae,Bassariscus,astutus,Ringtail,52,19
+Mammalia,Carnivora,Procyonidae,Bassariscus,sumichrasti,Cacomistle,64,24
+Mammalia,Carnivora,Procyonidae,Nasua,narica,White-nosed coati,78,26.4
+Mammalia,Carnivora,Procyonidae,Potos,flavus,Kinkajou,115,38.4
+Mammalia,Carnivora,Procyonidae,Procyon,cancrivorus,Crab-eating raccoon,63,19
+Mammalia,Carnivora,Procyonidae,Procyon,lotor,Common raccoon,63,21
+Mammalia,Carnivora,Ursidae,Ailuropoda,melanoleuca,Giant panda,48,36.8
+Mammalia,Carnivora,Ursidae,Helarctos,malayanus,Sun bear,95,35.9
+Mammalia,Carnivora,Ursidae,Melursus,ursinus,Sloth bear,198,33.3
+Mammalia,Carnivora,Ursidae,Tremarctos,ornatus,Spectacled bear,228,39
+Mammalia,Carnivora,Ursidae,Ursus,americanus,American black bear,70,34
+Mammalia,Carnivora,Ursidae,Ursus,arctos,Brown bear,103,40
+Mammalia,Carnivora,Ursidae,Ursus,maritimus,Polar bear,65,43.8
+Mammalia,Carnivora,Ursidae,Ursus,thibetanus,Asiatic black bear,228,39.2
+Mammalia,Carnivora,Viverridae,Arctictis,binturong,Binturong,92,27
+Mammalia,Carnivora,Viverridae,Arctogalidia,trivirgata,Small-toothed palm civet,45,16.1
+Mammalia,Carnivora,Viverridae,Civettictis,civetta,African civet,65,28
+Mammalia,Carnivora,Viverridae,Genetta,genetta,Small-spotted genet,78,22.7
+Mammalia,Carnivora,Viverridae,Genetta,tigrina,Large-spotted genet,70,21.3
+Mammalia,Carnivora,Viverridae,Paradoxurus,hermaphroditus,Asian palm civet,60,24.5
+Mammalia,Carnivora,Viverridae,Viverra,zibetha,Large indian civet,80,21.7
+Mammalia,Cetacea,Balaenidae,Balaena,mysticetus,Bowhead whale,396,211
+Mammalia,Cetacea,Balaenidae,Eubalaena,australis,Southern right whale,365,70
+Mammalia,Cetacea,Balaenidae,Eubalaena,glacialis,North atlantic right whale,350,67
+Mammalia,Cetacea,Balaenopteridae,Balaenoptera,acutorostrata,Common minke whale,312,50
+Mammalia,Cetacea,Balaenopteridae,Balaenoptera,borealis,Sei whale,345,74
+Mammalia,Cetacea,Balaenopteridae,Balaenoptera,edeni,Bryde's whale,376,72
+Mammalia,Cetacea,Balaenopteridae,Balaenoptera,musculus,Blue whale,350,110
+Mammalia,Cetacea,Balaenopteridae,Balaenoptera,physalus,Fin whale,342,114
+Mammalia,Cetacea,Balaenopteridae,Megaptera,novaeangliae,Humpback whale,342,95
+Mammalia,Cetacea,Delphinidae,Globicephala,macrorhynchus,Short-finned pilot whale,452,63
+Mammalia,Cetacea,Delphinidae,Globicephala,melas,Long-finned pilot whale,450,60
+Mammalia,Cetacea,Delphinidae,Grampus,griseus,Risso's dolphin,365,42.5
+Mammalia,Cetacea,Delphinidae,Lagenorhynchus,acutus,Atlantic white-sided dolphin,316,27
+Mammalia,Cetacea,Delphinidae,Lagenorhynchus,obliquidens,Pacific white-sided dolphin,320,46
+Mammalia,Cetacea,Delphinidae,Orcaella,brevirostris,Irrawaddy dolphin,426,30
+Mammalia,Cetacea,Delphinidae,Orcinus,orca,Killer whale,435,90
+Mammalia,Cetacea,Delphinidae,Peponocephala,electra,Melon-headed whale,365,47
+Mammalia,Cetacea,Delphinidae,Pseudorca,crassidens,False killer whale,451,62.5
+Mammalia,Cetacea,Delphinidae,Stenella,attenuata,Pantropical spotted dolphin,345,46
+Mammalia,Cetacea,Delphinidae,Stenella,coeruleoalba,Striped dolphin,350,57.5
+Mammalia,Cetacea,Delphinidae,Tursiops,truncatus,Bottlenosed dolphin,365,51.6
+Mammalia,Cetacea,Eschrichtiidae,Eschrichtius,robustus,Gray whale,395,77
+Mammalia,Cetacea,Hyperoodontidae,Berardius,bairdii,Baird's beaked whale,517,84
+Mammalia,Cetacea,Hyperoodontidae,Hyperoodon,ampullatus,Northern bottlenose whale,365,37
+Mammalia,Cetacea,Hyperoodontidae,Ziphius,cavirostris,Cuvier's beaked whale,365,62
+Mammalia,Cetacea,Iniidae,Inia,geoffrensis,Amazon dolphin,287,31.3
+Mammalia,Cetacea,Kogiidae,Kogia,breviceps,Pygmy sperm whale,335,17
+Mammalia,Cetacea,Monodontidae,Delphinapterus,leucas,Beluga,416,40
+Mammalia,Cetacea,Monodontidae,Monodon,monoceros,Narwhal,450,50
+Mammalia,Cetacea,Phocoenidae,Neophocaena,phocaenoides,Finless porpoise,320,33
+Mammalia,Cetacea,Phocoenidae,Phocoena,phocoena,Harbor porpoise,320,20.4
+Mammalia,Cetacea,Phocoenidae,Phocoenoides,dalli,Dall's porpoise,347,22
+Mammalia,Cetacea,Physeteridae,Physeter,macrocephalus,Sperm whale,502,77
+Mammalia,Chiroptera,Hipposideridae,Hipposideros,fulvus,Fulvus roundleaf bat,158,13
+Mammalia,Chiroptera,Megadermatidae,Megaderma,lyra,Greater false vampire bat,150,14
+Mammalia,Chiroptera,Miniopteridae,Miniopterus,schreibersii,Schreibers's long-fingered bat,100,22
+Mammalia,Chiroptera,Molossidae,Molossus,molossus,Pallas's mastiff bat,108,5.6
+Mammalia,Chiroptera,Molossidae,Tadarida,brasiliensis,Brazilian free-tailed bat,78,12
+Mammalia,Chiroptera,Phyllostomidae,Anoura,geoffroyi,Geoffroy's tailless bat,120,10
+Mammalia,Chiroptera,Phyllostomidae,Artibeus,jamaicensis,Jamaican fruit-eating bat,76,19.2
+Mammalia,Chiroptera,Phyllostomidae,Desmodus,rotundus,Vampire bat,189,29.2
+Mammalia,Chiroptera,Phyllostomidae,Glossophaga,soricina,Pallas's long-tongued bat,106,11
+Mammalia,Chiroptera,Phyllostomidae,Leptonycteris,curasoae,Southern long-nosed bat,122,10.1
+Mammalia,Chiroptera,Phyllostomidae,Macrotus,californicus,California leaf-nosed bat,270,17
+Mammalia,Chiroptera,Phyllostomidae,Phyllostomus,discolor,Pale spear-nosed bat,105,9
+Mammalia,Chiroptera,Phyllostomidae,Phyllostomus,hastatus,Greater spear-nosed bat,120,18
+Mammalia,Chiroptera,Phyllostomidae,Platyrrhinus,lineatus,White-lined broad-nosed bat,106,13
+Mammalia,Chiroptera,Phyllostomidae,Sturnira,lilium,Little yellow-shouldered bat,105,12
+Mammalia,Chiroptera,Pteropodidae,Cynopterus,brachyotis,Lesser short-nosed fruit bat,112,10.1
+Mammalia,Chiroptera,Pteropodidae,Cynopterus,sphinx,Greater short-nosed fruit bat,120,10
+Mammalia,Chiroptera,Pteropodidae,Dobsonia,moluccensis,Moluccan naked-backed fruit bat,150,12.3
+Mammalia,Chiroptera,Pteropodidae,Eidolon,helvum,Straw-colored fruit bat,275,21.8
+Mammalia,Chiroptera,Pteropodidae,Epomophorus,gambianus,Gambian epauletted fruit bat,150,7.8
+Mammalia,Chiroptera,Pteropodidae,Epomophorus,wahlbergi,Wahlberg's epauletted fruit bat,165,10.1
+Mammalia,Chiroptera,Pteropodidae,Haplonycteris,fischeri,Philippine pygmy fruit bat,90,10
+Mammalia,Chiroptera,Pteropodidae,Pteropus,livingstonii,Comoro black flying fox,152,15
+Mammalia,Chiroptera,Pteropodidae,Pteropus,poliocephalus,Gray-headed flying fox,190,23.6
+Mammalia,Chiroptera,Pteropodidae,Pteropus,rodricensis,Rodriguez flying fox,198,28
+Mammalia,Chiroptera,Pteropodidae,Rousettus,aegyptiacus,Egyptian rousette,116,22.9
+Mammalia,Chiroptera,Pteropodidae,Rousettus,leschenaultii,Leschenault's rousette,115,14
+Mammalia,Chiroptera,Rhinolophidae,Rhinolophus,ferrumequinum,Greater horseshoe bat,80,30.5
+Mammalia,Chiroptera,Rhinolophidae,Rhinolophus,hipposideros,Lesser horseshoe bat,67,29.4
+Mammalia,Chiroptera,Vespertilionidae,Antrozous,pallidus,Pallid bat,62,14.8
+Mammalia,Chiroptera,Vespertilionidae,Corynorhinus,townsendii,Townsend's big-eared bat,78,20.5
+Mammalia,Chiroptera,Vespertilionidae,Eptesicus,fuscus,Big brown bat,35,19
+Mammalia,Chiroptera,Vespertilionidae,Eptesicus,serotinus,Serotine,68,21
+Mammalia,Chiroptera,Vespertilionidae,Lasionycteris,noctivagans,Silver-haired bat,55,12
+Mammalia,Chiroptera,Vespertilionidae,Lasiurus,cinereus,Hoary bat,56,14
+Mammalia,Chiroptera,Vespertilionidae,Myotis,daubentonii,Daubenton's bat,54,28
+Mammalia,Chiroptera,Vespertilionidae,Myotis,lucifugus,Little brown bat,55,34
+Mammalia,Chiroptera,Vespertilionidae,Myotis,myotis,Mouse-eared bat,65,37.1
+Mammalia,Chiroptera,Vespertilionidae,Myotis,nigricans,Black myotis,55,7
+Mammalia,Chiroptera,Vespertilionidae,Myotis,thysanodes,Fringed myotis,55,18.3
+Mammalia,Chiroptera,Vespertilionidae,Myotis,velifer,Cave myotis,65,11.3
+Mammalia,Chiroptera,Vespertilionidae,Nyctalus,noctula,Noctule,60,12
+Mammalia,Chiroptera,Vespertilionidae,Perimyotis,subflavus,Eastern pipistrelle,44,14.8
+Mammalia,Chiroptera,Vespertilionidae,Pipistrellus,pipistrellus,Common pipistrelle,42,16.6
+Mammalia,Chiroptera,Vespertilionidae,Plecotus,auritus,Brown big-eared bat,65,30
+Mammalia,Chiroptera,Vespertilionidae,Scotorepens,balstoni,Western broad-nosed bat,210,9.7
+Mammalia,Cingulata,Dasypodidae,Chaetophractus,villosus,Large hairy armadillo,67,25.2
+Mammalia,Cingulata,Dasypodidae,Dasypus,novemcinctus,Nine-banded armadillo,133,22.3
+Mammalia,Cingulata,Dasypodidae,Euphractus,sexcinctus,Six-banded armadillo,68,22.1
+Mammalia,Cingulata,Dasypodidae,Priodontes,maximus,Giant armadillo,122,15
+Mammalia,Cingulata,Dasypodidae,Tolypeutes,matacus,Southern three-banded armadillo,120,36.8
+Mammalia,Cingulata,Dasypodidae,Zaedyus,pichiy,Pichi,60,12.5
+Mammalia,Dasyuromorphia,Dasyuridae,Antechinomys,laniger,Kultarr,12,3.5
+Mammalia,Dasyuromorphia,Dasyuridae,Antechinus,agilis,Agile antechinus,27,4.7
+Mammalia,Dasyuromorphia,Dasyuridae,Antechinus,bellus,Fawn antechinus,30,3.4
+Mammalia,Dasyuromorphia,Dasyuridae,Antechinus,flavipes,Yellow-footed antechinus,25,3.9
+Mammalia,Dasyuromorphia,Dasyuridae,Antechinus,stuartii,Brown antechinus,30,5.4
+Mammalia,Dasyuromorphia,Dasyuridae,Antechinus,swainsonii,Dusky antechinus,28,3.3
+Mammalia,Dasyuromorphia,Dasyuridae,Dasycercus,cristicauda,Mulgara,38,7.4
+Mammalia,Dasyuromorphia,Dasyuridae,Dasyuroides,byrnei,Kowari,33,8
+Mammalia,Dasyuromorphia,Dasyuridae,Dasyurus,geoffroii,Western quoll,16,6.2
+Mammalia,Dasyuromorphia,Dasyuridae,Dasyurus,maculatus,Australian tiger cat,21,6.8
+Mammalia,Dasyuromorphia,Dasyuridae,Dasyurus,viverrinus,Eastern quoll,20,6.8
+Mammalia,Dasyuromorphia,Dasyuridae,Parantechinus,apicalis,Southern dibbler,48,5.5
+Mammalia,Dasyuromorphia,Dasyuridae,Phascogale,calura,Red-tailed phascogale,29,4.7
+Mammalia,Dasyuromorphia,Dasyuridae,Phascogale,tapoatafa,Brush-tailed phascogale,29,5.9
+Mammalia,Dasyuromorphia,Dasyuridae,Planigale,maculata,Pygmy planigale,20,5.8
+Mammalia,Dasyuromorphia,Dasyuridae,Planigale,tenuirostris,Narrow-nosed planigale,19,5.2
+Mammalia,Dasyuromorphia,Dasyuridae,Pseudantechinus,macdonnellensis,Fat-tailed marsupial mouse,43,7
+Mammalia,Dasyuromorphia,Dasyuridae,Sarcophilus,harrisii,Tasmanian devil,26,13
+Mammalia,Dasyuromorphia,Dasyuridae,Sminthopsis,crassicaudata,Fat-tailed dunnart,14,5
+Mammalia,Dasyuromorphia,Dasyuridae,Sminthopsis,macroura,Stripe-faced dunnart,12,4.9
+Mammalia,Dasyuromorphia,Dasyuridae,Sminthopsis,virginiae,Red-cheeked dunnart,15,5.3
+Mammalia,Dasyuromorphia,Myrmecobiidae,Myrmecobius,fasciatus,Numbat,14,11
+Mammalia,Didelphimorphia,Didelphidae,Caluromys,philander,Bare-tailed woolly opossum,24,8.9
+Mammalia,Didelphimorphia,Didelphidae,Didelphis,marsupialis,Southern opossum,12,4.2
+Mammalia,Didelphimorphia,Didelphidae,Didelphis,virginiana,Virginia opossum,12,6.6
+Mammalia,Didelphimorphia,Didelphidae,Lutreolina,crassicaudata,Lutrine opossum,14,2.9
+Mammalia,Didelphimorphia,Didelphidae,Marmosa,robinsoni,Robinson's mouse opossum,14,5
+Mammalia,Didelphimorphia,Didelphidae,Monodelphis,domestica,Gray short-tailed opossum,15,5.1
+Mammalia,Diprotodontia,Burramyidae,Burramys,parvus,Mountain pygmy possum,15,12
+Mammalia,Diprotodontia,Macropodidae,Dendrolagus,goodfellowi,Goodfellow's tree kangaroo,45,23.6
+Mammalia,Diprotodontia,Macropodidae,Dendrolagus,matschiei,Matschie's tree kangaroo,32,26.9
+Mammalia,Diprotodontia,Macropodidae,Lagorchestes,conspicillatus,Spectacled hare-wallaby,30,8.8
+Mammalia,Diprotodontia,Macropodidae,Macropus,agilis,Agile wallaby,29,16.9
+Mammalia,Diprotodontia,Macropodidae,Macropus,antilopinus,Antilopine wallaroo,34,19.8
+Mammalia,Diprotodontia,Macropodidae,Macropus,eugenii,Tammar wallaby,28,15.1
+Mammalia,Diprotodontia,Macropodidae,Macropus,robustus,Wallaroo,32,22
+Mammalia,Diprotodontia,Macropodidae,Macropus,rufogriseus,Red-necked wallaby,29,15.2
+Mammalia,Diprotodontia,Macropodidae,Onychogalea,fraenata,Ridled nail-tailed wallaby,23,7.4
+Mammalia,Diprotodontia,Macropodidae,Petrogale,concinna,Nabarlek,30,11.7
+Mammalia,Diprotodontia,Macropodidae,Petrogale,penicillata,Brush-tailed rock wallaby,30,14.3
+Mammalia,Diprotodontia,Macropodidae,Petrogale,xanthopus,Ringtailed rock wallaby,31,14.4
+Mammalia,Diprotodontia,Macropodidae,Setonix,brachyurus,Quokka,26,13.8
+Mammalia,Diprotodontia,Macropodidae,Thylogale,billardierii,Tasmanian pademelon,29,8.8
+Mammalia,Diprotodontia,Macropodidae,Thylogale,stigmatica,Red-legged pademelon,29,9.7
+Mammalia,Diprotodontia,Macropodidae,Wallabia,bicolor,Swamp wallaby,36,16.8
+Mammalia,Diprotodontia,Petauridae,Gymnobelideus,leadbeateri,Leadbeater's possum,16,14.1
+Mammalia,Diprotodontia,Petauridae,Petaurus,norfolcensis,Squirrel glider,20,14.8
+Mammalia,Diprotodontia,Phalangeridae,Phalanger,gymnotis,Ground cuscus,13,18.9
+Mammalia,Diprotodontia,Phalangeridae,Spilocuscus,maculatus,Spotted cuscus,13,17
+Mammalia,Diprotodontia,Phalangeridae,Trichosurus,vulpecula,Brush-tailed possum,17,15.9
+Mammalia,Diprotodontia,Potoroidae,Aepyprymnus,rufescens,Rufous 'rat'-kangaroo,23,12.8
+Mammalia,Diprotodontia,Potoroidae,Bettongia,penicillata,Woylie,18,18.8
+Mammalia,Diprotodontia,Potoroidae,Potorous,longipes,Long-footed potoroo,38,15.3
+Mammalia,Diprotodontia,Potoroidae,Potorous,tridactylus,Long-nosed potoroo,30,14.5
+Mammalia,Diprotodontia,Vombatidae,Lasiorhinus,latifrons,Southern hairy-nosed wombat,21,29.9
+Mammalia,Diprotodontia,Vombatidae,Vombatus,ursinus,Coarse-haired wombat,27,30
+Mammalia,Erinaceomorpha,Erinaceidae,Erinaceus,concolor,Eastern European hedgehog,35,7
+Mammalia,Erinaceomorpha,Erinaceidae,Erinaceus,europaeus,Western European hedgehog,30,11.7
+Mammalia,Erinaceomorpha,Erinaceidae,Hemiechinus,auritus,Long-eared hedgehog,39,7.6
+Mammalia,Erinaceomorpha,Erinaceidae,Paraechinus,aethiopicus,Desert hedgehog,37,6.3
+Mammalia,Hyracoidea,Procaviidae,Dendrohyrax,arboreus,Tree hyrax,229,13.6
+Mammalia,Hyracoidea,Procaviidae,Procavia,capensis,Rock hyrax,215,14.8
+Mammalia,Lagomorpha,Leporidae,Lepus,brachyurus,Japanese hare,38,13
+Mammalia,Lagomorpha,Leporidae,Lepus,californicus,Black-tailed jackrabbit,44,11.8
+Mammalia,Lagomorpha,Leporidae,Lepus,europaeus,European hare,42,10.7
+Mammalia,Lagomorpha,Leporidae,Lepus,timidus,Mountain hare,50,18
+Mammalia,Lagomorpha,Leporidae,Sylvilagus,audubonii,Audubon's cottontail rabbit,29,7.8
+Mammalia,Lagomorpha,Leporidae,Sylvilagus,floridanus,Eastern cottontail,30,9.8
+Mammalia,Lagomorpha,Leporidae,Sylvilagus,nuttallii,Mountain cottontail,30,7.4
+Mammalia,Lagomorpha,Leporidae,Sylvilagus,palustris,Marsh rabbit,34,7.6
+Mammalia,Lagomorpha,Leporidae,Sylvilagus,transitionalis,New England cottontail,28,9.3
+Mammalia,Lagomorpha,Ochotonidae,Ochotona,hyperborea,Northern pika,28,9.4
+Mammalia,Lagomorpha,Ochotonidae,Ochotona,princeps,American pika,30,7
+Mammalia,Macroscelidea,Macroscelididae,Elephantulus,intufi,Long-eared elephant shrew,52,9.3
+Mammalia,Macroscelidea,Macroscelididae,Elephantulus,rozeti,North African elephant shrew,76,7.2
+Mammalia,Macroscelidea,Macroscelididae,Elephantulus,rufescens,Rufous elephant shrew,61,7.9
+Mammalia,Macroscelidea,Macroscelididae,Macroscelides,proboscideus,Short-eared elephant shrew,65,8.7
+Mammalia,Macroscelidea,Macroscelididae,Rhynchocyon,chrysopygus,Golden-rumped elephant shrew,42,11
+Mammalia,Monotremata,Ornithorhynchidae,Ornithorhynchus,anatinus,Duck-billed platypus,17,22.6
+Mammalia,Monotremata,Tachyglossidae,Tachyglossus,aculeatus,Short-beaked echidna,22,49.5
+Mammalia,Monotremata,Tachyglossidae,Zaglossus,bruijni,Long-nosed echidna,10,41.2
+Mammalia,Peramelemorphia,Peramelidae,Isoodon,auratus,Golden bandicoot,12,6.7
+Mammalia,Peramelemorphia,Peramelidae,Isoodon,macrourus,Northern brown bandicoot,12,6.8
+Mammalia,Peramelemorphia,Peramelidae,Isoodon,obesulus,Southern brown bandicoot,15,6.5
+Mammalia,Peramelemorphia,Peramelidae,Perameles,bougainville,Western barred bandicoot,12,5.8
+Mammalia,Peramelemorphia,Peramelidae,Perameles,gunnii,Eastern barred bandicoot,12,6.1
+Mammalia,Peramelemorphia,Peramelidae,Perameles,nasuta,Long-nosed bandicoot,12,5.6
+Mammalia,Peramelemorphia,Thylacomyidae,Macrotis,lagotis,Rabbit-bandicoot or bilby,17,9.6
+Mammalia,Perissodactyla,Equidae,Equus,hemionus,Kulan,339,31.6
+Mammalia,Perissodactyla,Equidae,Equus,kiang,Kiang,299,30.1
+Mammalia,Perissodactyla,Equidae,Equus,zebra,Mountain zebra,362,33.2
+Mammalia,Perissodactyla,Rhinocerotidae,Dicerorhinus,sumatrensis,Sumatran rhinoceros,236,32.8
+Mammalia,Perissodactyla,Rhinocerotidae,Diceros,bicornis,Black rhinoceros,474,49
+Mammalia,Perissodactyla,Rhinocerotidae,Rhinoceros,unicornis,Indian rhinoceros,479,43.5
+Mammalia,Perissodactyla,Tapiridae,Acrocodia,indica,Malayan tapir,392,36.5
+Mammalia,Perissodactyla,Tapiridae,Tapirella,bairdii,Baird's tapir,401,29.6
+Mammalia,Perissodactyla,Tapiridae,Tapirus,pinchaque,Mountain tapir,398,28.5
+Mammalia,Pilosa,Megalonychidae,Choloepus,didactylus,Southern two-toed sloth,279,36.8
+Mammalia,Pilosa,Megalonychidae,Choloepus,hoffmanni,Hoffmann's two-toed sloth,350,41
+Mammalia,Pilosa,Myrmecophagidae,Myrmecophaga,tridactyla,Giant anteater,184,31
+Mammalia,Pilosa,Myrmecophagidae,Tamandua,mexicana,Northern tamandua,163,16
+Mammalia,Pilosa,Myrmecophagidae,Tamandua,tetradactyla,Southern tamandua,160,19
+Mammalia,Primates,Aotidae,Aotus,lemurinus,Lemurine night monkey,135,33.8
+Mammalia,Primates,Aotidae,Aotus,trivirgatus,Northern night monkey,142,30.1
+Mammalia,Primates,Atelidae,Alouatta,caraya,Black howler monkey,187,32.4
+Mammalia,Primates,Atelidae,Alouatta,palliata,Mantled howler monkey,186,24
+Mammalia,Primates,Atelidae,Alouatta,seniculus,Red howler monkey,190,25
+Mammalia,Primates,Atelidae,Ateles,belzebuth,White-bellied spider monkey,184,37
+Mammalia,Primates,Atelidae,Ateles,fusciceps,Brown-headed spider monkey,227,46
+Mammalia,Primates,Atelidae,Ateles,geoffroyi,Central American spider monkey,232,47.1
+Mammalia,Primates,Atelidae,Ateles,paniscus,Black spider monkey,229,46
+Mammalia,Primates,Atelidae,Brachyteles,arachnoides,Woolly spider monkey or muriqui,232,40
+Mammalia,Primates,Atelidae,Lagothrix,lagothricha,Humboldt's woolly monkey,223,32
+Mammalia,Primates,Callitrichidae,Leontocebus,fuscicollis,Saddlebacked tamarin,147,24.9
+Mammalia,Primates,Callitrichidae,Leontocebus,nigricollis,Black-mantled tamarin,140,20.2
+Mammalia,Primates,Callitrichidae,Mico,argentatus,Silvery marmoset,144,16.5
+Mammalia,Primates,Callitrichidae,Mico,humeralifer,Tassel-eared marmoset,144,15
+Mammalia,Primates,Callitrichidae,Saguinus,bicolor,Brazilian bare-faced tamarin,160,19
+Mammalia,Primates,Callitrichidae,Saguinus,geoffroyi,Geoffroy's tamarin,142,20.5
+Mammalia,Primates,Callitrichidae,Saguinus,labiatus,Red-chested mustached tamarin,147,20.5
+Mammalia,Primates,Callitrichidae,Saguinus,leucopus,Silvery-brown bare-face tamarin,142,15.2
+Mammalia,Primates,Callitrichidae,Saguinus,mystax,Black-chested mustached tamarin,145,20
+Mammalia,Primates,Cebidae,Cebus,albifrons,White-fronted capuchin,158,40.4
+Mammalia,Primates,Cebidae,Cebus,capucinus,White-faced capuchin,162,54
+Mammalia,Primates,Cebidae,Cebus,olivaceus,Weeping capuchin,162,47
+Mammalia,Primates,Cebidae,Saimiri,boliviensis,Bolivian squirrel monkey,158,30.3
+Mammalia,Primates,Cercopithecidae,Cercocebus,torquatus,Red-capped mangabey,167,46
+Mammalia,Primates,Cercopithecidae,Cercopithecus,ascanius,Black-cheeked white-nosed monkey,147,31.2
+Mammalia,Primates,Cercopithecidae,Cercopithecus,campbelli,Campbell's monkey,180,30
+Mammalia,Primates,Cercopithecidae,Cercopithecus,cephus,Moustached monkey,172,36
+Mammalia,Primates,Cercopithecidae,Cercopithecus,mitis,Blue monkey,132,37.8
+Mammalia,Primates,Cercopithecidae,Cercopithecus,neglectus,De Brazza's monkey,177,30.8
+Mammalia,Primates,Cercopithecidae,Cercopithecus,nictitans,White-nosed guenon,172,31
+Mammalia,Primates,Cercopithecidae,Cercopithecus,pogonias,Crowned guenon,165,27
+Mammalia,Primates,Cercopithecidae,Chlorocebus,aethiops,Vervet,162,30.8
+Mammalia,Primates,Cercopithecidae,Colobus,polykomos,King colobus,185,33.9
+Mammalia,Primates,Cercopithecidae,Erythrocebus,patas,Patas monkey,167,28.3
+Mammalia,Primates,Cercopithecidae,Lophocebus,albigena,Gray-cheeked mangabey,181,36
+Mammalia,Primates,Cercopithecidae,Macaca,arctoides,Stump-tailed macaque,177,29.2
+Mammalia,Primates,Cercopithecidae,Macaca,fascicularis,Long-tailed macaque,165,39
+Mammalia,Primates,Cercopithecidae,Macaca,maura,Moor macaque,165,33
+Mammalia,Primates,Cercopithecidae,Macaca,nemestrina,Pigtail macaque,172,37.6
+Mammalia,Primates,Cercopithecidae,Macaca,nigra,Celebes crested macaque,176,34
+Mammalia,Primates,Cercopithecidae,Macaca,radiata,Bonnet macaque,161,30
+Mammalia,Primates,Cercopithecidae,Macaca,sinica,Toque macaque,152,29.3
+Mammalia,Primates,Cercopithecidae,Macaca,thibetana,Tibetan macaque,170,27
+Mammalia,Primates,Cercopithecidae,Macaca,tonkeana,Tonkean macaque,173,28.4
+Mammalia,Primates,Cercopithecidae,Mandrillus,leucophaeus,Drill,179,39
+Mammalia,Primates,Cercopithecidae,Miopithecus,talapoin,Talapoin,169,27.7
+Mammalia,Primates,Cercopithecidae,Nasalis,larvatus,Proboscis monkey,166,25.1
+Mammalia,Primates,Cercopithecidae,Pygathrix,nemaeus,Douc langur,171,26
+Mammalia,Primates,Cercopithecidae,Rhinopithecus,roxellana,Golden snub-nosed monkey,199,29.5
+Mammalia,Primates,Cercopithecidae,Semnopithecus,entellus,Hanuman langur,192,29
+Mammalia,Primates,Cercopithecidae,Semnopithecus,vetulus,Purple-faced leaf monkey,211,26.1
+Mammalia,Primates,Cercopithecidae,Theropithecus,gelada,Gelada baboon,168,36
+Mammalia,Primates,Cercopithecidae,Trachypithecus,obscurus,Dusky leaf monkey,145,33.9
+Mammalia,Primates,Cercopithecidae,Trachypithecus,phayrei,Phayre's leaf monkey,167,28.3
+Mammalia,Primates,Cheirogaleidae,Cheirogaleus,medius,Fat-tailed dwarf lemur,61,29
+Mammalia,Primates,Cheirogaleidae,Microcebus,murinus,Gray mouse lemur,61,18.2
+Mammalia,Primates,Cheirogaleidae,Mirza,coquereli,Giant mouse lemur,89,17.4
+Mammalia,Primates,Cheirogaleidae,Phaner,furcifer,Fork-marked lemur,174,25
+Mammalia,Primates,Daubentoniidae,Daubentonia,madagascariensis,Aye-aye,165,32.3
+Mammalia,Primates,Galagidae,Galago,moholi,South African galago,124,16.6
+Mammalia,Primates,Galagidae,Galago,senegalensis,Senegal galago,126,17.1
+Mammalia,Primates,Galagidae,Galagoides,demidoff,Demidoff's galago,111,13.4
+Mammalia,Primates,Galagidae,Otolemur,crassicaudatus,Greater galago,130,22.7
+Mammalia,Primates,Galagidae,Otolemur,garnettii,Small-eared galago,132,20
+Mammalia,Primates,Hominidae,Gorilla,gorilla,Gorilla,256,60.1
+Mammalia,Primates,Hominidae,Pan,paniscus,Pygmy chimpanzee or bonobo,232,55
+Mammalia,Primates,Hominidae,Pan,troglodytes,Chimpanzee,229,59.4
+Mammalia,Primates,Hominidae,Pongo,pygmaeus,Orangutan,249,59
+Mammalia,Primates,Hylobatidae,Hylobates,klossii,Kloss's gibbon,213,37
+Mammalia,Primates,Hylobatidae,Hylobates,moloch,Silvery gibbon,243,45
+Mammalia,Primates,Hylobatidae,Hylobates,muelleri,Borneo gibbon,207,60
+Mammalia,Primates,Hylobatidae,Hylobates,pileatus,Pileated gibbon,228,38
+Mammalia,Primates,Hylobatidae,Nomascus,concolor,Crested gibbon,207,46.1
+Mammalia,Primates,Hylobatidae,Symphalangus,syndactylus,Siamang,231,43
+Mammalia,Primates,Indriidae,Propithecus,verreauxi,Verreaux's sifaka,148,31
+Mammalia,Primates,Lemuridae,Eulemur,coronatus,Crowned lemur,126,27
+Mammalia,Primates,Lemuridae,Eulemur,fulvus,Brown lemur,118,35.5
+Mammalia,Primates,Lemuridae,Eulemur,macaco,Black lemur,120,37.5
+Mammalia,Primates,Lemuridae,Eulemur,mongoz,Mongoose lemur,120,36.2
+Mammalia,Primates,Lemuridae,Eulemur,rubriventer,Red-bellied lemur,120,31.7
+Mammalia,Primates,Lemuridae,Hapalemur,griseus,Bamboo lemur,145,23.3
+Mammalia,Primates,Lemuridae,Prolemur,simus,Greater bamboo lemur,142,17.6
+Mammalia,Primates,Lemuridae,Varecia,rubra,Red ruffed lemur,98,37.5
+Mammalia,Primates,Lorisidae,Arctocebus,calabarensis,Calabar angwantibo,133,13
+Mammalia,Primates,Lorisidae,Loris,tardigradus,Slender loris,166,21.6
+Mammalia,Primates,Lorisidae,Nycticebus,coucang,Slow loris,188,25.8
+Mammalia,Primates,Lorisidae,Nycticebus,pygmaeus,Pygmy slow loris,188,19.3
+Mammalia,Primates,Lorisidae,Perodicticus,potto,Potto,170,32.4
+Mammalia,Primates,Pitheciidae,Cacajao,calvus,Red uakari,182,35.8
+Mammalia,Primates,Pitheciidae,Chiropotes,albinasus,White-nosed bearded saki,160,20
+Mammalia,Primates,Pitheciidae,Chiropotes,satanas,Brown-bearded saki,160,19.6
+Mammalia,Primates,Pitheciidae,Plecturocebus,cupreus,Coppery titi,132,26.4
+Mammalia,Primates,Pitheciidae,Plecturocebus,moloch,Dusky titi,163,26.2
+Mammalia,Primates,Tarsiidae,Carlito,syrichta,Philippine tarsier,179,16
+Mammalia,Primates,Tarsiidae,Cephalopachus,bancanus,Western tarsier,178,16.3
+Mammalia,Proboscidea,Elephantidae,Elephas,maximus,Asiatic elephant,644,65.5
+Mammalia,Proboscidea,Elephantidae,Loxodonta,africana,African bush elephant,670,65
+Mammalia,Rodentia,Bathyergidae,Cryptomys,damarensis,Damaraland mole-rat,93,15.5
+Mammalia,Rodentia,Capromyidae,Capromys,pilorides,Desmarest's hutia,125,13.8
+Mammalia,Rodentia,Capromyidae,Geocapromys,brownii,Brown's hutia,123,13.5
+Mammalia,Rodentia,Capromyidae,Plagiodontia,aedium,Hispaniolan hutia,119,15.9
+Mammalia,Rodentia,Castoridae,Castor,canadensis,American beaver,128,23.4
+Mammalia,Rodentia,Caviidae,Cavia,tschudii,Montane guinea pig,64,6.3
+Mammalia,Rodentia,Caviidae,Galea,musteloides,Common yellow-toothed cavy,54,3.5
+Mammalia,Rodentia,Caviidae,Galea,spixii,Spix's yellow-toothed cavy,53,4.6
+Mammalia,Rodentia,Caviidae,Kerodon,rupestris,Rock cavy,75,12.9
+Mammalia,Rodentia,Chinchillidae,Chinchilla,lanigera,Long-tailed chinchilla,111,17.2
+Mammalia,Rodentia,Chinchillidae,Lagidium,viscacia,Mountain viscacha,134,19.5
+Mammalia,Rodentia,Chinchillidae,Lagostomus,maximus,Plains viscacha,154,10.8
+Mammalia,Rodentia,Cricetidae,Arvicola,amphibius,European water vole,21,2.5
+Mammalia,Rodentia,Cricetidae,Baiomys,taylori,Northern pygmy mouse,20,3.3
+Mammalia,Rodentia,Cricetidae,Cricetus,cricetus,Black-bellied hamster,20,3.6
+Mammalia,Rodentia,Cricetidae,Dicrostonyx,groenlandicus,Collared lemming,20,3.3
+Mammalia,Rodentia,Cricetidae,Ellobius,talpinus,Northern mole vole,26,5
+Mammalia,Rodentia,Cricetidae,Lagurus,lagurus,Steppe lemming,20,3.8
+Mammalia,Rodentia,Cricetidae,Lemmus,lemmus,Norway lemming,19,3.3
+Mammalia,Rodentia,Cricetidae,Mesocricetus,auratus,Golden hamster,16,3.9
+Mammalia,Rodentia,Cricetidae,Mesocricetus,brandti,Brandt's hamster,15,4.4
+Mammalia,Rodentia,Cricetidae,Microtus,agrestis,Field vole,21,4.8
+Mammalia,Rodentia,Cricetidae,Microtus,arvalis,Common vole,21,4.8
+Mammalia,Rodentia,Cricetidae,Microtus,guentheri,Vole,21,3.9
+Mammalia,Rodentia,Cricetidae,Microtus,ochrogaster,Prairie vole,23,5.3
+Mammalia,Rodentia,Cricetidae,Microtus,pinetorum,Woodland vole,21,3.8
+Mammalia,Rodentia,Cricetidae,Myodes,glareolus,Bank vole,20,4.9
+Mammalia,Rodentia,Cricetidae,Neotoma,albigula,White-throated woodrat,29,9.5
+Mammalia,Rodentia,Cricetidae,Neotoma,floridana,Eastern woodrat,33,8.6
+Mammalia,Rodentia,Cricetidae,Neotoma,lepida,Desert woodrat,33,10.5
+Mammalia,Rodentia,Cricetidae,Nyctomys,sumichrasti,Vesper rat,30,5.7
+Mammalia,Rodentia,Cricetidae,Ochrotomys,nuttalli,Golden mouse,30,8.4
+Mammalia,Rodentia,Cricetidae,Onychomys,leucogaster,Northern grasshopper mouse,31,5.6
+Mammalia,Rodentia,Cricetidae,Onychomys,torridus,Southern grasshopper mouse,30,4.6
+Mammalia,Rodentia,Cricetidae,Peromyscus,californicus,California mouse,30,5.5
+Mammalia,Rodentia,Cricetidae,Peromyscus,crinitus,Canyon mouse,24,7.7
+Mammalia,Rodentia,Cricetidae,Peromyscus,eremicus,Cactus mouse,26,7.4
+Mammalia,Rodentia,Cricetidae,Peromyscus,leucopus,White-footed mouse,26,7.9
+Mammalia,Rodentia,Cricetidae,Peromyscus,maniculatus,Deer mouse,24,8.3
+Mammalia,Rodentia,Cricetidae,Peromyscus,polionotus,Oldfield mouse,24,5.5
+Mammalia,Rodentia,Cricetidae,Peromyscus,truei,Pinyon mouse,26,5.4
+Mammalia,Rodentia,Cricetidae,Phodopus,roborovskii,Desert hamster,21,4.8
+Mammalia,Rodentia,Cricetidae,Phodopus,sungorus,Dzhungarian hamster,20,3.9
+Mammalia,Rodentia,Cricetidae,Podomys,floridanus,Florida mouse,23,7.4
+Mammalia,Rodentia,Cricetidae,Sigmodon,hispidus,Hispid cotton rat,27,5.2
+Mammalia,Rodentia,Cricetidae,Tylomys,nudicaudus,Peters's climbing rat,40,5.4
+Mammalia,Rodentia,Ctenodactylidae,Ctenodactylus,gundi,Gundi,74,5.8
+Mammalia,Rodentia,Cuniculidae,Cuniculus,paca,Lowland paca,116,16.3
+Mammalia,Rodentia,Dasyproctidae,Dasyprocta,punctata,Central American agouti,112,13.8
+Mammalia,Rodentia,Dasyproctidae,Myoprocta,acouchy,Red acouchi,99,14.8
+Mammalia,Rodentia,Dinomyidae,Dinomys,branickii,Pacarana,253,12.8
+Mammalia,Rodentia,Dipodidae,Jaculus,jaculus,Lesser Egyptian jerboa,38,7.3
+Mammalia,Rodentia,Dipodidae,Jaculus,orientalis,Greater Egyptian jerboa,35,5.5
+Mammalia,Rodentia,Dipodidae,Zapus,hudsonius,Meadow jumping mouse,19,5.6
+Mammalia,Rodentia,Echimyidae,Hoplomys,gymnurus,Armored rat,60,7
+Mammalia,Rodentia,Echimyidae,Proechimys,semispinosus,Spiny rat,64,5.8
+Mammalia,Rodentia,Echimyidae,Thrichomys,apereoides,Brazilian spiny rat,94,7
+Mammalia,Rodentia,Erethizontidae,Coendou,prehensilis,Prehensile-tailed porcupine,203,26.6
+Mammalia,Rodentia,Erethizontidae,Erethizon,dorsatus,North American porcupine,210,23.4
+Mammalia,Rodentia,Geomyidae,Geomys,bursarius,Plains pocket gopher,51,12
+Mammalia,Rodentia,Geomyidae,Thomomys,bottae,Botta's pocket gopher,19,6.1
+Mammalia,Rodentia,Gliridae,Dryomys,nitedula,Forest dormouse,28,4.1
+Mammalia,Rodentia,Gliridae,Eliomys,melanurus,Asian garden dormouse,25,6.2
+Mammalia,Rodentia,Gliridae,Eliomys,quercinus,Garden dormouse,23,5.5
+Mammalia,Rodentia,Gliridae,Glirulus,japonicus,Japanese dormouse,30,7
+Mammalia,Rodentia,Gliridae,Glis,glis,Fat dormouse,25,8.7
+Mammalia,Rodentia,Gliridae,Graphiurus,murinus,Woodland dormouse,24,6.9
+Mammalia,Rodentia,Gliridae,Muscardinus,avellanarius,Hazel dormouse,23,5.3
+Mammalia,Rodentia,Heteromyidae,Chaetodipus,fallax,San Diego pocket mouse,25,8.3
+Mammalia,Rodentia,Heteromyidae,Chaetodipus,formosus,Long-tailed pocket mouse,28,7.1
+Mammalia,Rodentia,Heteromyidae,Dipodomys,deserti,Desert kangaroo rat,30,8.6
+Mammalia,Rodentia,Heteromyidae,Dipodomys,heermanni,Heermann's kangaroo rat,31,8.3
+Mammalia,Rodentia,Heteromyidae,Dipodomys,merriami,Merriam's kangaroo rat,28,9.7
+Mammalia,Rodentia,Heteromyidae,Dipodomys,ordii,Ord's kangaroo rat,29,9.9
+Mammalia,Rodentia,Heteromyidae,Dipodomys,spectabilis,Banner-tailed kangaroo rat,23,12.7
+Mammalia,Rodentia,Heteromyidae,Perognathus,longimembris,Little pocket mouse,22,8.3
+Mammalia,Rodentia,Heteromyidae,Perognathus,parvus,Great Basin pocket mouse,24,5.8
+Mammalia,Rodentia,Hystricidae,Atherurus,africanus,African brush-tailed porcupine,106,22.9
+Mammalia,Rodentia,Hystricidae,Hystrix,africaeaustralis,Cape porcupine,94,23.1
+Mammalia,Rodentia,Hystricidae,Hystrix,brachyura,Malayan porcupine,112,27.3
+Mammalia,Rodentia,Hystricidae,Hystrix,cristata,African porcupine,66,28
+Mammalia,Rodentia,Hystricidae,Hystrix,indica,Indian crested porcupine,113,27.1
+Mammalia,Rodentia,Muridae,Acomys,wilsoni,Wilson's spiny mouse,39,5.6
+Mammalia,Rodentia,Muridae,Apodemus,flavicollis,Yellow-necked mouse,26,4.5
+Mammalia,Rodentia,Muridae,Apodemus,sylvaticus,Long-tailed field mouse,23,6.3
+Mammalia,Rodentia,Muridae,Arvicanthis,niloticus,Nile kusu,22,6.7
+Mammalia,Rodentia,Muridae,Chiropodomys,gliroides,Pencil-tailed tree mouse,20,3.6
+Mammalia,Rodentia,Muridae,Conilurus,penicillatus,Brush-tailed rabbit rat,35,4.5
+Mammalia,Rodentia,Muridae,Desmodillus,auricularis,Cape short-eared gerbil,29,6.1
+Mammalia,Rodentia,Muridae,Gerbilliscus,afra,Cape gerbil,23,5.7
+Mammalia,Rodentia,Muridae,Gerbilliscus,validus,Southern savanna gerbil,25,5
+Mammalia,Rodentia,Muridae,Gerbillus,perpallidus,Pale gerbil,20,5.5
+Mammalia,Rodentia,Muridae,Gerbillus,pyramidum,Greater Egyptian gerbil,21,8.2
+Mammalia,Rodentia,Muridae,Grammomys,dolichurus,Woodland mouse,24,4.4
+Mammalia,Rodentia,Muridae,Hydromys,chrysogaster,Golden-bellied water rat,36,7.3
+Mammalia,Rodentia,Muridae,Lemniscomys,striatus,Typical striped grass mouse,25,4.8
+Mammalia,Rodentia,Muridae,Leporillus,conditor,Greater stick-nest rat,38,5.3
+Mammalia,Rodentia,Muridae,Meriones,crassus,Sundevall's jird,22,5.6
+Mammalia,Rodentia,Muridae,Meriones,libycus,Libyan jird,26,5.2
+Mammalia,Rodentia,Muridae,Meriones,meridianus,Mid-day jird,23,6.8
+Mammalia,Rodentia,Muridae,Meriones,persicus,Persian jird,26,6
+Mammalia,Rodentia,Muridae,Meriones,unguiculatus,Mongolian jird,25,6.3
+Mammalia,Rodentia,Muridae,Meriones,vinogradovi,Vinogradov's jird,22,6.7
+Mammalia,Rodentia,Muridae,Mesembriomys,gouldii,Black-footed tree rat,44,7.8
+Mammalia,Rodentia,Muridae,Mesembriomys,macrurus,Golden-backed tree rat,48,7.1
+Mammalia,Rodentia,Muridae,Micaelamys,namaquensis,Rock mouse,22,4.7
+Mammalia,Rodentia,Muridae,Micromys,minutus,Old World harvest mouse,20,3.8
+Mammalia,Rodentia,Muridae,Mus,minutoides,Mouse,20,4.3
+Mammalia,Rodentia,Muridae,Notomys,alexis,Spinifex hopping mouse,35,6.4
+Mammalia,Rodentia,Muridae,Notomys,mitchellii,Mitchell's hopping mouse,37,5.3
+Mammalia,Rodentia,Muridae,Pachyuromys,duprasi,Fat-tailed gerbil,20,8.3
+Mammalia,Rodentia,Muridae,Praomys,tullbergi,Tullberg's rock rat,24,5.2
+Mammalia,Rodentia,Muridae,Psammomys,obesus,Fat sand rat,24,3.2
+Mammalia,Rodentia,Muridae,Pseudomys,australis,Australian native mouse,31,7.9
+Mammalia,Rodentia,Muridae,Rattus,fuscipes,Bush rat,26,5.3
+Mammalia,Rodentia,Muridae,Rattus,lutreolus,Australian swamp rat,27,4.4
+Mammalia,Rodentia,Muridae,Rattus,norvegicus,Norway rat,21,3.8
+Mammalia,Rodentia,Muridae,Rattus,rattus,Rat,22,4.2
+Mammalia,Rodentia,Muridae,Rhabdomys,pumilio,Four-striped grass mouse,25,4.5
+Mammalia,Rodentia,Muridae,Rhombomys,opimus,Great gerbil,28,4.5
+Mammalia,Rodentia,Muridae,Tatera,indica,Indian gerbil,26,7
+Mammalia,Rodentia,Nesomyidae,Cricetomys,gambianus,Gambian rat,34,8.4
+Mammalia,Rodentia,Nesomyidae,Dendromus,melanotis,Gray climbing mouse,25,4.2
+Mammalia,Rodentia,Nesomyidae,Hypogeomys,antimena,Malagasy giant rat,120,12.6
+Mammalia,Rodentia,Nesomyidae,Mystromys,albicaudatus,White-tailed mouse,38,6.3
+Mammalia,Rodentia,Nesomyidae,Saccostomus,campestris,Pouched mouse,21,4.5
+Mammalia,Rodentia,Octodontidae,Octodon,degus,Degu,90,14
+Mammalia,Rodentia,Octodontidae,Spalacopus,cyanus,Coruro,80,10.8
+Mammalia,Rodentia,Pedetidae,Pedetes,capensis,Springhare,80,20
+Mammalia,Rodentia,Sciuridae,Ammospermophilus,harrisii,Harris's antelope squirrel,30,10.6
+Mammalia,Rodentia,Sciuridae,Ammospermophilus,leucurus,White-tailed antelope squirrel,29,11.2
+Mammalia,Rodentia,Sciuridae,Callosciurus,prevostii,Prevost's squirrel,48,21.1
+Mammalia,Rodentia,Sciuridae,Callospermophilus,lateralis,Golden-mantled ground squirrel,30,10.4
+Mammalia,Rodentia,Sciuridae,Glaucomys,sabrinus,Northern flying squirrel,40,14.2
+Mammalia,Rodentia,Sciuridae,Glaucomys,volans,Southern flying squirrel,40,19
+Mammalia,Rodentia,Sciuridae,Ictidomys,tridecemlineatus,Thirteen-lined ground squirrel,28,7.9
+Mammalia,Rodentia,Sciuridae,Marmota,flaviventris,Yellow-bellied marmot,30,21.2
+Mammalia,Rodentia,Sciuridae,Marmota,marmota,Alpine marmot,35,17.4
+Mammalia,Rodentia,Sciuridae,Marmota,monax,Woodchuck,32,14
+Mammalia,Rodentia,Sciuridae,Marmota,vancouverensis,Vancouver marmot,30,12.1
+Mammalia,Rodentia,Sciuridae,Otospermophilus,variegatus,Rock squirrel,30,9.8
+Mammalia,Rodentia,Sciuridae,Poliocitellus,franklinii,Franklin's ground squirrel,28,7.2
+Mammalia,Rodentia,Sciuridae,Pteromys,volans,Siberian flying squirrel,30,11.4
+Mammalia,Rodentia,Sciuridae,Ratufa,bicolor,Black giant squirrel,32,19
+Mammalia,Rodentia,Sciuridae,Ratufa,indica,Indian giant squirrel,84,20
+Mammalia,Rodentia,Sciuridae,Sciurus,carolinensis,Eastern gray squirrel,44,23.6
+Mammalia,Rodentia,Sciuridae,Sciurus,niger,Eastern fox squirrel,44,16
+Mammalia,Rodentia,Sciuridae,Sciurus,vulgaris,Eurasian red squirrel,38,14.8
+Mammalia,Rodentia,Sciuridae,Spermophilus,citellus,European ground squirrel,27,6.7
+Mammalia,Rodentia,Sciuridae,Spermophilus,pygmaeus,Little ground squirrel,27,7.1
+Mammalia,Rodentia,Sciuridae,Tamias,dorsalis,Cliff chipmunk,30,12.6
+Mammalia,Rodentia,Sciuridae,Tamias,minimus,Least chipmunk,30,10
+Mammalia,Rodentia,Sciuridae,Tamias,sibiricus,Siberian chipmunk,35,9.6
+Mammalia,Rodentia,Sciuridae,Tamias,striatus,Eastern chipmunk,31,9.5
+Mammalia,Rodentia,Sciuridae,Tamias,townsendii,Townsend's chipmunk,28,9.3
+Mammalia,Rodentia,Sciuridae,Tamiasciurus,hudsonicus,Red squirrel,37,9.8
+Mammalia,Rodentia,Sciuridae,Xerospermophilus,mohavensis,Mohave ground squirrel,24,7.8
+Mammalia,Rodentia,Sciuridae,Xerospermophilus,tereticaudus,Round-tailed ground squirrel,28,8.9
+Mammalia,Rodentia,Sciuridae,Xerus,erythropus,Striped ground squirrel,71,10.3
+Mammalia,Rodentia,Sciuridae,Xerus,inauris,South African ground squirrel,45,11.5
+Mammalia,Rodentia,Spalacidae,Cannomys,badius,Lesser bamboo rat,42,4.8
+Mammalia,Rodentia,Thryonomyidae,Thryonomys,swinderianus,Greater cane rat,155,5.4
+Mammalia,Scandentia,Tupaiidae,Tupaia,belangeri,Northern tree shrew,46,11.1
+Mammalia,Scandentia,Tupaiidae,Tupaia,glis,Common tree shrew,46,12.4
+Mammalia,Scandentia,Tupaiidae,Urogale,everetti,Mindanao tree shrew,55,11.5
+Mammalia,Sirenia,Dugongidae,Dugong,dugon,Dugong,374,73
+Mammalia,Sirenia,Trichechidae,Trichechus,inunguis,Amazonian manatee,328,40
+Mammalia,Sirenia,Trichechidae,Trichechus,manatus,West Indian manatee,335,69
+Mammalia,Soricomorpha,Solenodontidae,Solenodon,paradoxus,Hispaniolan solenodon,50,12.1
+Mammalia,Soricomorpha,Soricidae,Blarina,brevicauda,Northern short-tailed shrew,17,2.2
+Mammalia,Soricomorpha,Soricidae,Blarina,hylophaga,Elliot's short-tailed shrew,23,2.8
+Mammalia,Soricomorpha,Soricidae,Crocidura,flavescens,Greater red musk shrew,25,2.2
+Mammalia,Soricomorpha,Soricidae,Crocidura,leucodon,Bicolored shrew,30,2.9
+Mammalia,Soricomorpha,Soricidae,Crocidura,russula,White-toothed shrew,29,4
+Mammalia,Soricomorpha,Soricidae,Crocidura,suaveolens,Lesser shrew,27,2.8
+Mammalia,Soricomorpha,Soricidae,Cryptotis,parva,Least shrew,21,3.5
+Mammalia,Soricomorpha,Soricidae,Neomys,fodiens,Eurasian water shrew,20,3.1
+Mammalia,Soricomorpha,Soricidae,Sorex,araneus,Eurasian shrew,21,3.2
+Mammalia,Soricomorpha,Soricidae,Suncus,murinus,Asian house shrew,30,3.2
+Mammalia,Soricomorpha,Talpidae,Condylura,cristata,Star-nosed mole,40,2.5
+Mammalia,Soricomorpha,Talpidae,Mogera,wogura,Japanese mole,40,3.2
+Mammalia,Tubulidentata,Orycteropodidae,Orycteropus,afer,Aardvark,225,29.8
+Reptilia,Squamata,Anguidae,Pseudopus,apodus,Armored glass lizard,42,54
+Reptilia,Squamata,Boidae,Boa,constrictor,Boa constrictor,125,40.4
+Reptilia,Squamata,Chamaeleonidae,Furcifer,labordi,Labord's chameleon,260,0.4
+Reptilia,Squamata,Charinidae,Lichanura,trivirgata,Rosy boa,130,31
+Reptilia,Squamata,Colubridae,Heterodon,nasicus,Mexican hognose snake,56,19.8
+Reptilia,Squamata,Colubridae,Thamnophis,sirtalis,Common garter snake,100,14
+Reptilia,Squamata,Eublepharidae,Eublepharis,macularius,Leopard gecko,55,28.5
+Reptilia,Squamata,Pythonidae,Python,molurus,Indian python,100,34.2
+Reptilia,Squamata,Pythonidae,Python,regius,Ball python,77,47.5
+Reptilia,Squamata,Viperidae,Crotalus,durissus,Neotropical rattlesnake,120,19.8
+Reptilia,Squamata,Viperidae,Crotalus,horridus,Timber rattlesnake,135,30.2
+Reptilia,Squamata,Viperidae,Lachesis,muta,Bushmaster,77,31.6
+Reptilia,Testudines,Cheloniidae,Caretta,caretta,Loggerhead sea turtle,60,37
+Reptilia,Testudines,Cheloniidae,Chelonia,mydas,Green sea turtle,59,75
+Reptilia,Testudines,Chelydridae,Macrochelys,temminckii,Alligator snapping turtle,120,70.3
+Reptilia,Testudines,Dermochelyidae,Dermochelys,coriacea,Leatherback sea turtle,60,30
+Reptilia,Testudines,Emydidae,Clemmys,guttata,Spotted turtle,77,30
+Reptilia,Testudines,Emydidae,Glyptemys,muhlenbergii,Bog turtle,90,40
+Reptilia,Testudines,Emydidae,Terrapene,ornata,Ornate box turtle,63,28.4
+Reptilia,Testudines,Emydidae,Trachemys,scripta,Common slider,75,41.3
+Reptilia,Testudines,Kinosternidae,Kinosternon,subrubrum,Common mud turtle,76,40
+Reptilia,Testudines,Testudinidae,Gopherus,agassizii,Desert tortoise,118,62.8
+Teleostei,Beloniformes,Adrianichthyidae,Oryzias,latipes,Japanese medaka,10,5
+Teleostei,Cypriniformes,Cyprinidae,Cyprinus,carpio,Common carp,4,47
+Teleostei,Cypriniformes,Cyprinidae,Pimephales,promelas,Fathead minnow,5,2
+Teleostei,Perciformes,Moronidae,Morone,chrysops,White bass,2,9
+Teleostei,Perciformes,Percidae,Perca,flavescens,Yellow perch,16,12
+Teleostei,Perciformes,Percidae,Percina,caprodes,Logperch,7,3
+Teleostei,Perciformes,Percidae,Sander,canadensis,Sauger,20,18
+Teleostei,Perciformes,Sciaenidae,Aplodinotus,grunniens,Freshwater drum,2,13
+Teleostei,Salmoniformes,Salmonidae,Oncorhynchus,mykiss,Steelhead,18,11
+Teleostei,Salmoniformes,Salmonidae,Prosopium,cylindraceum,Round whitefish,140,16
+Teleostei,Siluriformes,Ictaluridae,Ameiurus,melas,Black bullhead,7,10
