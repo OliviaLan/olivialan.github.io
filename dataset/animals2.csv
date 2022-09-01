@@ -1,0 +1,39 @@
+Class,Order,Family,Genus,Species,Common name,Gestation/Incubation (days),Maximum longevity (yrs),Data quality,Body mass (g)
+Mammalia,Artiodactyla,Bovidae,Connochaetes,taurinus,Blue wildebeest,253,24.3,high,196500
+Mammalia,Artiodactyla,Bovidae,Kobus,ellipsiprymnus,Waterbuck,264,30,high,100000
+Mammalia,Artiodactyla,Bovidae,Taurotragus,oryx,Eland,274,26.1,high,141404
+Mammalia,Artiodactyla,Camelidae,Lama,glama,Llama,330,28.9,high,115000
+Mammalia,Artiodactyla,Cervidae,Cervus,elaphus,Red deer,245,31.5,high,67000
+Mammalia,Artiodactyla,Cervidae,Odocoileus,virginianus,White-tailed deer,198,23,high,61862.5
+Mammalia,Artiodactyla,Cervidae,Rangifer,tarandus,Caribou and reindeer,228,21.8,high,85000
+Mammalia,Artiodactyla,Suidae,Sus,scrofa,Wild boar,115,27,high,135000
+Mammalia,Artiodactyla,Tayassuidae,Pecari,tajacu,Collared peccary,145,31.5,high,20500
+Mammalia,Carnivora,Ailuridae,Ailurus,fulgens,Red panda,116,19,high,5740
+Mammalia,Carnivora,Canidae,Lycaon,pictus,African wild dog,72,17,high,8750
+Mammalia,Carnivora,Felidae,Acinonyx,jubatus,Cheetah,88,20.5,high,38446.1
+Mammalia,Carnivora,Felidae,Leptailurus,serval,Serval,70,22.4,high,1012
+Mammalia,Carnivora,Felidae,Panthera,leo,Lion,109,27,high,98000
+Mammalia,Carnivora,Felidae,Panthera,onca,Jaguar,99,28,high,50400
+Mammalia,Carnivora,Felidae,Panthera,tigris,Tiger,105,26.3,high,137900
+Mammalia,Carnivora,Herpestidae,Suricata,suricatta,Meerkat,77,20.6,high,850
+Mammalia,Carnivora,Procyonidae,Nasua,nasua,South american coati,73,23.7,high,3924.3
+Mammalia,Chiroptera,Phyllostomidae,Carollia,perspicillata,Seba's short-tailed bat,95,17,high,14.9
+Mammalia,Chiroptera,Pteropodidae,Pteropus,giganteus,Indian flying fox,145,40,high,562.2
+Mammalia,Diprotodontia,Macropodidae,Macropus,rufus,Red kangaroo,33,25,high,28500
+Mammalia,Diprotodontia,Petauridae,Petaurus,breviceps,Sugar glider,16,17.8,high,129.3
+Mammalia,Diprotodontia,Phascolarctidae,Phascolarctos,cinereus,Koala,31,22.1,high,4732.4
+Mammalia,Erinaceomorpha,Erinaceidae,Atelerix,albiventris,Four-toed hedgehog,35,11.4,high,450
+Mammalia,Perissodactyla,Equidae,Equus,asinus,African wild ass,359,47,high,177500
+Mammalia,Primates,Callitrichidae,Callithrix,jacchus,White-tufted-ear marmoset,144,22.8,high,190
+Mammalia,Primates,Callitrichidae,Cebuella,pygmaea,Pygmy marmoset,125,18.6,high,110.7
+Mammalia,Primates,Cebidae,Saimiri,sciureus,South American squirrel monkey,161,30.2,high,836.7
+Mammalia,Primates,Cercopithecidae,Colobus,guereza,Guereza,175,35,high,10623.6
+Mammalia,Primates,Cercopithecidae,Papio,hamadryas,Hamadryas baboon,171,37.5,high,12670.8
+Mammalia,Primates,Hominidae,Homo,sapiens,Human,280,122.5,high,70000
+Mammalia,Rodentia,Bathyergidae,Heterocephalus,glaber,Naked mole-rat,70,31,high,35.3
+Mammalia,Rodentia,Caviidae,Cavia,porcellus,Guinea pig,68,12,high,639.1
+Mammalia,Rodentia,Caviidae,Hydrochoerus,hydrochaeris,Capybara,150,15.1,high,26385
+Mammalia,Rodentia,Dasyproctidae,Dasyprocta,leporina,Agouti,112,17.8,high,2687
+Mammalia,Rodentia,Muridae,Acomys,cahirinus,Spiny mouse,38,5.9,high,42
+Mammalia,Rodentia,Muridae,Mus,musculus,House mouse,19,4,high,18
+Mammalia,Rodentia,Sciuridae,Cynomys,ludovicianus,Black-tailed prairie dog,30,11,high,1112.3
