@@ -710,7 +710,7 @@ a:hover {}
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: .25rem;
-    background-color: rgb(142, 195, 238);
+    background-color: rgb(162, 205, 239);
     margin-right: 2;
 }
 
@@ -724,7 +724,7 @@ a:hover {}
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: .25rem;
-    background-color: rgb(186, 187, 238);
+    background-color: rgb(201, 202, 241);
     margin-right: 2;
 }
 
@@ -755,6 +755,21 @@ a:hover {}
     background-color: rgb(202, 202, 202);
     margin-right: 2;
 }
+
+.badge_pin {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    background-color: rgb(247, 202, 165);
+    margin-right: 2;
+}
+
 
 
 /* .blog_items {
