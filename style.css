@@ -802,3 +802,21 @@ a:hover {}
     font-family: 'Arial', 'myfont';
     font-weight: 600;
 }
+
+.subsubtitles {
+    /* background-color: #B9DDD1; */
+    /* border: 3px solid rgb(241, 230, 167); */
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* cursor: pointer; */
+    /* width: 110px; */
+    color: black;
+    font-weight: 400;
+    font-size: 16;
+    /* margin: 0;
+    padding: 0; */
+    /* text-transform: uppercase; */
+    font-family: 'Arial', 'myfont';
+    font-weight: 600;
+}

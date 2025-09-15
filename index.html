@@ -9,6 +9,13 @@
     <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
     <script language="javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .data-storytelling-expand, .affective-design-expand, .ai-society-expand {
+            overflow: hidden;
+            transition: max-height 0.6s ease-in-out;
+            max-height: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +39,7 @@
                 </p>
             </div>
             <div class="cv_containter">
-                <h2 style="color: #5BA689; font-family:'Arial','myfont' "><strong>Xingyu Lan</strong> 🌱 蓝星宇</h2>
+                <h2 style="color: #5BA689; font-family:'Arial','myfont' "><strong>Xingyu Lan</strong> ✨ 蓝星宇</h2>
                 <p>Researching in 📊 data visualization, 🖊 visual storytelling, 🖥️ user experience, 🤖 AI for social good.</p>
 
                 <!-- <h3 style="color:black; font-weight: bold;">Research Interest:</h3> -->
@@ -138,17 +145,10 @@
         <div id="div_publications" style="display: none; margin-top: 50px;" class="container">
 
             <div class="subtitle_container"><span class="subtitles">Research Work:</span></div>
+            
+            <div id="data-storytelling-title" class="subtitle_container" style="margin-top: 30px; margin-left: 0px;"><span class="subsubtitles">Data Communication & Storytelling:</span></div>
 
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/vis2023_affective.jpeg" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge_pin">Pinned</span><span class="badge">Journal</span><strong> Affective Visualization Design: Leveraging the Emotional Power of Data</strong>
-                    <br><u>Xingyu Lan</u>, Yanqiu Wu,Nan Cao
-                    <br>IEEE Transactions on Visualization and Computer Graphics (VIS 2023). 🏆 Best Paper Award
-                    <br>Paper: <a href="https://arxiv.org/abs/2308.02831" target="_blank">Link</a> | Material: <a href="https://affectivevis.github.io/" target="_blank">Website</a>
-                </div>
-            </div>
-
+            <!-- 前3个默认显示 -->
             <div class="box-style">
                 <div class="snap_containter"><img src="images/vis2024_flaw.png" alt="" /></div>
                 <div class="pub_containter">
@@ -169,14 +169,162 @@
                 </div>
             </div>
 
+            <div class="box-style">
+                <div class="snap_containter"><img src="images/cscw2025_tap.png" alt="" /></div>
+                <div class="pub_containter">
+                    <span class="badge_2">Conference</span><strong> Double Tap for This Post: Understanding the Communication of Data Visualization on Social Media</strong>
+                    <br>Yang Shi, Yechun Peng, Jieying Ding, <u>Xingyu Lan</u>, Nan Cao
+                    <br>Proceedings of the ACM on Human-Computer Interaction (CSCW 2025)
+                    <br>Paper: <a href="https://www.researchgate.net/publication/391423559_Double_Tap_for_This_Post_Understanding_the_Communication_of_Data_Visualization_on_Social_Media" target="_blank">Link</a> 
+                </div>
+            </div>
 
             <div class="box-style">
-                <div class="snap_containter"><img src="images/chi2025_east.png" alt="" /></div>
+                <div class="snap_containter"><img src="images/eurovis2025_dj.png" alt="" /></div>
                 <div class="pub_containter">
-                    <span class="badge_pin">Pinned</span><span class="badge_2">Conference</span><strong> Imagining the Far East: Exploring Perceived Biases in AI-Generated Images of East Asian Women</strong>
-                    <br><u>Xingyu Lan</u>, Jiaxi An, Yisu Guo, Chiyou Tong, Xintong Cai, Jun Zhang
-                    <br>In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2025 LBW)
-                    <br>Paper: <a href="https://arxiv.org/abs/2504.04865" target="_blank">Link</a> 
+                    <span class="badge_2">Conference</span><strong> Reflections on Teaching Data-Driven Storytelling at the Journalism School</strong>
+                    <br><u>Xingyu Lan</u>
+                    <br>EuroVis Education Paper (EuroVis 2025)
+                    <br>Paper: <a href="https://diglib.eg.org/items/152e1731-d68b-45f7-8d94-52a852b3de11" target="_blank">Link</a> 
+                </div>
+            </div>
+
+            <!-- 展开内容 -->
+            <div class="data-storytelling-expand">
+
+                <div class="box-style">
+                    <div class="snap_containter"><img src="images/chinavis2025_planet.png" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge_2">Conference</span><strong> 科普数据视频中的可视化设计及叙事研究——以"星球研究所"为例</strong>
+                        <br>Wenyue Huang, <u>Xingyu Lan</u>
+                        <br>ChinaVis 2025 Conference
+                        <br>Paper: <a href="https://chinavis.org/2025/papers/%E7%A7%91%E6%99%AE%E6%95%B0%E6%8D%AE%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96%E8%AE%BE%E8%AE%A1%E5%8F%8A%E5%8F%99%E4%BA%8B%E7%A0%94%E7%A9%B6%E2%80%94%E2%80%94%E4%BB%A5%E2%80%9C%E6%98%9F%E7%90%83%E7%A0%94%E7%A9%B6%E6%89%80%E2%80%9D%E4%B8%BA%E4%BE%8B.pdf" target="_blank">Link</a> 
+                    </div>
+                </div>
+                    
+                <div class="box-style">
+                    <div class="snap_containter"><img src="images/chinagraph2025_fact.png" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge">Journal</span><strong> Optimizing Insight Communication: Evaluating the Effects of Visualization Designs in Presenting Data Facts</strong>
+                        <br>Shixiong Cao, <u>Xingyu Lan</u>, Yuqi Liu, Qing Chen, Nan Cao
+                        <br>Communications in Information and Systems
+                        <br>Paper: <a href="https://intlpress.com/JDetail/1917574993987993602" target="_blank">Link</a> 
+                    </div>
+                </div>
+
+
+                <div class="box-style">
+                    <div class="snap_containter"><img src="images/book.jpeg" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge_3">Book</span><strong>数据可视化设计指南：从数据到新知（Data Visualization Design Guide: From Data to Knowledge）</strong>
+                        <br><u>Xingyu Lan</u>
+                        <br>电子工业出版社，2023年3月
+                        <br>本书介绍: <a href="https://mp.weixin.qq.com/s/3OOBBu7wLc53kSdr2gzvqg" target="_blank">Link</a> ｜ 京东/当当/天猫在售
+                    </div>
+                </div>
+
+                <!-- <div class="box-style">
+                    <div class="snap_containter"><img src="images/tvcg_embellish.jpg" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge">Journal</span><strong>VizBelle: A Design Space of Embellishments for Data Visualization</strong>
+                        <br>Qing Chen, Ziyan Liu, Chengwei Wang, <u>Xingyu Lan</u>, Ying Chen, Siming Chen, Nan Cao
+                        <br>arXiv preprint arXiv:2209.03642
+                        <br>Paper: <a href="https://arxiv.org/pdf/2209.03642.pdf" target="_blank">Link</a> | Material: <a href="https://vizbelle.github.io/" target="_blank">Website</a>
+                    </div>
+                </div> -->
+
+                <div class="box-style">
+                    <div class="snap_containter"><img src="images/meishudaguan_tuzhidian.png" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge">Journal</span><strong>数据可视化设计的类型学实践（Exploring the Typology of Visualization Design）</strong>
+                        <br><u>Xingyu Lan</u>, Jiazhe Wang
+                        <br>《美术大观》2022年第3期
+                        <br>Paper: <a href="https://www.cnki.com.cn/Article/CJFDTotal-MSDG202203021.htm" target="_blank">Link</a> | Material: <a href="https://github.com/antvis/AVA" target="_blank">Relevant Project - AntV AVA</a>, <a href="http://www.tuzhidian.com/"
+                            target="_blank">Relevant Project - Gradict</a>
+                    </div>
+                </div>
+
+                <div class="box-style">
+                    <div class="snap_containter"><img src="images/vis2021_pyramid.png" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge">Journal</span><strong>A Design Space for Applying the Freytag's Pyramid Structure to Data Stories</strong>
+                        <br>Leni Yang, Xian Xu, <u>Xingyu Lan</u>, Ziyan Liu, Shunan Guo, Yang Shi, Huamin Qu, Nan Cao
+                        <br>IEEE Transactions on Visualization and Computer Graphics (VIS 2021)
+                        <br>Paper: <a href="https://idvxlab.com/papers/2021VIS_Pyramid_Yang.pdf" target="_blank">Link</a> | Material: <a href="http://pyramidstory.idvxlab.com/" target="_blank">Website</a>, <a href="https://www.youtube.com/watch?v=Ore_17Nkr0o"
+                            target="_blank">Video Preview</a>,
+                        <a href="https://www.youtube.com/watch?v=mkZDFyOXxa8" target="_blank">Video Presentation</a>
+                    </div>
+                </div>
+
+                <div class="box-style">
+                    <div class="snap_containter"><img src="images/eurovis2021_autoclips.png" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge">Journal</span><strong>AutoClips: An Automatic Approach to Video Generation from Data Facts</strong>
+                        <br>Danqing Shi, Fuling Sun, Xinyue Xu, <u>Xingyu Lan</u>, David Gotz, Nan Cao
+                        <br>Computer Graphics Forum (EuroVis 2021)
+                        <br>Paper: <a href="https://sdq.github.io/autoclips/autoclips.pdf" target="_blank">Link</a> | Material: <a href="https://sdq.github.io/autoclips/" target="_blank">Website</a>
+                    </div>
+                </div>
+
+                <div class="box-style">
+                    <div class="snap_containter"><img src="images/chi2021_linearity.png" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge_2">Conference</span><strong>Understanding Narrative Linearity for Telling Expressive Time-Oriented Stories</strong>
+                        <br><u>Xingyu Lan</u>, Xinyue Xu, Nan Cao
+                        <br>In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2021)
+                        <br>Paper: <a href="https://idvxlab.com/papers/2021CHI_DataStory_Lan.pdf" target="_blank">Link</a> | Material: <a href="https://osf.io/eusjn/" target="_blank">Study Data</a>, <a href="https://www.youtube.com/watch?v=4v-OL5ylaQk" target="_blank">Video Presentation</a>
+                    </div>
+                </div>
+
+
+                <div class="box-style">
+                    <div class="snap_containter"><img src="images/chi2021_videos.jpg" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge_2">Conference</span><strong>Communicating with Motion: A Design Space for Animated Visual Narratives in Data Videos</strong>
+                        <br>Yang Shi, <u>Xingyu Lan</u>, Jingwen Li, Zhaorui Li, Nan Cao
+                        <br>In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2021)
+                        <br>Paper: <a href="https://idvxlab.com/papers/2021CHI_DataVideo_Shi.pdf" target="_blank">Link</a> | Material: <a href="https://videoexplorer.idvxlab.com/" target="_blank">Website</a>, <a href="https://www.youtube.com/watch?v=apd2SaNTmbk"
+                            target="_blank">Video Preview</a>, <a href="https://www.youtube.com/watch?v=Wl9hcrW2lZY" target="_blank">Video Presentation</a>
+                    </div>
+                </div>
+
+                <div class="box-style">
+                    <div class="snap_containter"><img src="images/chinavis2021_calliope.png" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge_4">Poster</span><strong>Calliope·Data: An Intelligent Visual Data Story Generation Platform for Mass</strong>
+                        <br>Nan Cao, Danqing Shi, Yanqiu Wu, Xinyue Xu, Fuling Sun, Yi Guo, Nan Chen, Mengdi Sun, <u>Xingyu Lan</u>, Pei Liu, Siji Chen, Ligan Cai, Yang Shi, Qing Chen
+                        <br>ChinaVis Poster 2021 | 🏆 Honorable Mention
+                        <br>Poster: <a href="https://sdq.github.io/calliopedata/calliopedata-chinavis-poster.pdf" target="_blank">Link</a> | Material: <a href="https://sdq.github.io/calliopedata/" target="_blank">Website</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="margin: 10px 0;">
+                <button id="data-storytelling-btn" onclick="toggleDataStorytelling()" style="background-color: #5BA689; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Show More</button>
+            </div>
+
+            <div id="affective-design-title" class="subtitle_container" style="margin-top: 50px"><span class="subsubtitles">Affective Design:</span></div>
+
+            <!-- 前3个默认显示 -->
+            <div class="box-style">
+                <div class="snap_containter"><img src="images/vis2023_affective.jpeg" alt="" /></div>
+                <div class="pub_containter">
+                    <span class="badge_pin">Pinned</span><span class="badge">Journal</span><strong> Affective Visualization Design: Leveraging the Emotional Power of Data</strong>
+                    <br><u>Xingyu Lan</u>, Yanqiu Wu,Nan Cao
+                    <br>IEEE Transactions on Visualization and Computer Graphics (VIS 2023). 🏆 Best Paper Award
+                    <br>Paper: <a href="https://arxiv.org/abs/2308.02831" target="_blank">Link</a> | Material: <a href="https://affectivevis.github.io/" target="_blank">Website</a>
+                </div>
+            </div>
+
+            <div class="box-style">
+                <div class="snap_containter"><img src="images/vis2021_kineticharts.png" alt="" /></div>
+                <div class="pub_containter">
+                    <span class="badge_pin">Pinned</span><span class="badge">Journal</span><strong>Kineticharts: Augmenting Affective Expressiveness of Charts in Data Stories with Animation Design</strong>
+                    <br><u>Xingyu Lan</u>, Yang Shi, Yanqiu Wu, Xiaohan Jiao, Nan Cao
+                    <br>IEEE Transactions on Visualization and Computer Graphics (VIS 2021)
+                    <br>Paper: <a href="https://idvxlab.com/papers/2021VIS_Charts_Lan.pdf" target="_blank">Link</a> | Material: <a href="http://kineticharts.idvxlab.com/" target="_blank">Website</a>, <a href="https://vimeo.com/644191526" target="_blank">Video Preview</a>,
+                    <a href="https://vimeo.com/644192276" target="_blank">Video Presentation</a>
                 </div>
             </div>
 
@@ -190,7 +338,7 @@
                 </div>
             </div>
 
-                        <div class="box-style">
+            <div class="box-style">
                 <div class="snap_containter"><img src="images/vis2025_geo.png" alt="" /></div>
                 <div class="pub_containter">
                     <span class="badge">Journal</span><strong> "Mapping What I Feel": Understanding Affective Geovisualization Design Through the Lens of People-Place Relationships</strong>
@@ -200,55 +348,76 @@
                 </div>
             </div>
 
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/chinavis2025_planet.png" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge_2">Conference</span><strong> 科普数据视频中的可视化设计及叙事研究——以“星球研究所”为例</strong>
-                    <br>Wenyue Huang, <u>Xingyu Lan</u>
-                    <br>ChinaVis 2025 Conference
-                    <br>Paper: <a href="https://chinavis.org/2025/papers/%E7%A7%91%E6%99%AE%E6%95%B0%E6%8D%AE%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96%E8%AE%BE%E8%AE%A1%E5%8F%8A%E5%8F%99%E4%BA%8B%E7%A0%94%E7%A9%B6%E2%80%94%E2%80%94%E4%BB%A5%E2%80%9C%E6%98%9F%E7%90%83%E7%A0%94%E7%A9%B6%E6%89%80%E2%80%9D%E4%B8%BA%E4%BE%8B.pdf" target="_blank">Link</a> 
+            <!-- 展开内容 -->
+            <div class="affective-design-expand">
+                
+                <div class="box-style">
+                    <div class="snap_containter"><img src="images/chi2022_negativity.png" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge_2">Conference</span><strong>Negative Emotions, Positive Outcomes? Exploring the Communication of Negativity in Serious Data Stories</strong>
+                        <br><u>Xingyu Lan</u>, Yanqiu Wu, Yang Shi, Qing Chen, Nan Cao
+                        <br>In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2022)
+                        <br>Paper: <a href="https://idvxlab.com/papers/2022CHI_Negativity_Lan.pdf" target="_blank">Link</a> | Material: <a href="http://negativity.idvxlab.com/" target="_blank">Website</a>, <a href="https://www.youtube.com/watch?v=hHwLUmJkmhU" target="_blank">Video Preview</a>,
+                        <a href="https://www.youtube.com/watch?v=E6v8UCaLqW8" target="_blank">Video Presentation</a>
+                    </div>
+                </div>
+
+                <div class="box-style">
+                    <div class="snap_containter"><img src="images/pvis_affect.png" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge">Journal</span><strong>Smile or Scowl? Looking at Infographic Design Through the Affective Lens</strong>
+                        <br><u>Xingyu Lan</u>, Yang Shi, Yueyao Zhang, Nan Cao
+                        <br>IEEE Transactions on Visualization and Computer Graphics (IEEE PacificVis 2021)
+                        <br>Paper: <a href="https://idvxlab.com/papers/2021TVCG_Smile_Lan.pdf" target="_blank">Link</a> | Material: <a href="http://affectiveinfographics.idvxlab.com/" target="_blank">Website</a>, <a href="https://www.youtube.com/watch?v=jUFSso9ZjXk"
+                            target="_blank">Video Presentation</a>
+                    </div>
+                </div>
+
+                <div class="box-style">
+                    <div class="snap_containter"><img src="images/tvcg_arousal.jpg" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge">Journal</span><strong>The Chart Excites Me! Exploring How Data Visualization Design Influences Affective Arousal</strong>
+                        <br><u>Xingyu Lan</u>, Yanqiu Wu, Qing Chen, Nan Cao
+                        <br>arXiv preprint arXiv:2211.03296
+                        <br>Paper: <a href="https://arxiv.org/pdf/2211.03296.pdf" target="_blank">Link</a> | Material: <a href="https://osf.io/yphjb/?view_only=fc03063420b44cba842c6807c19f66ce" target="_blank">Study Data</a>
+                    </div>
                 </div>
             </div>
 
+            <div style="margin: 10px 0;">
+                <button id="affective-design-btn" onclick="toggleAffectiveDesign()" style="background-color: #5BA689; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Show More</button>
+            </div>
 
+            <div id="ai-society-title" class="subtitle_container" style="margin-top: 50px"><span class="subsubtitles">AI + Social Science (e.g., Gender, Age, Labor, Ethics):</span></div>
+
+            <!-- 前4个默认显示 -->
             <div class="box-style">
-                <div class="snap_containter"><img src="images/eurovis2025_dj.png" alt="" /></div>
+                <div class="snap_containter"><img src="images/chi2025_east.png" alt="" /></div>
                 <div class="pub_containter">
-                    <span class="badge_2">Conference</span><strong> Reflections on Teaching Data-Driven Storytelling at the Journalism School</strong>
-                    <br><u>Xingyu Lan</u>
-                    <br>EuroVis Education Paper (EuroVis 2025)
-                    <br>Paper: <a href="https://diglib.eg.org/items/152e1731-d68b-45f7-8d94-52a852b3de11" target="_blank">Link</a> 
+                    <span class="badge_pin">Pinned</span><span class="badge_2">Conference</span><strong> Imagining the Far East: Exploring Perceived Biases in AI-Generated Images of East Asian Women</strong>
+                    <br><u>Xingyu Lan</u>, Jiaxi An, Yisu Guo, Chiyou Tong, Xintong Cai, Jun Zhang
+                    <br>In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2025 LBW)
+                    <br>Paper: <a href="https://arxiv.org/abs/2504.04865" target="_blank">Link</a> 
                 </div>
             </div>
 
             <div class="box-style">
-                <div class="snap_containter"><img src="images/cscw2025_tap.png" alt="" /></div>
+                <div class="snap_containter"><img src="images/nca2025baby.jpg" alt="" /></div>
                 <div class="pub_containter">
-                    <span class="badge_2">Conference</span><strong> Double Tap for This Post: Understanding the Communication of Data Visualization on Social Media</strong>
-                    <br>Yang Shi, Yechun Peng, Jieying Ding, <u>Xingyu Lan</u>, Nan Cao
-                    <br>Proceedings of the ACM on Human-Computer Interaction (CSCW 2025)
-                    <br>Paper: <a href="https://www.researchgate.net/publication/391423559_Double_Tap_for_This_Post_Understanding_the_Communication_of_Data_Visualization_on_Social_Media" target="_blank">Link</a> 
-                </div>
-            </div>
-
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/hcii2025_elder.png" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge_2">Conference</span><strong> Examining the Impact of Embodied Conversational Agents’ Emotional Expressions and Empathetic Communication on Companionship for Middle-Aged and Older Adults</strong>
-                    <br>Xueyang Wang, Lingjie Pan, <u>Xingyu Lan</u>
-                    <br>Proceedings of the International Conference on Human-Computer Interaction
+                    <span class="badge_2">Conference</span><strong> Spatial Contestation under the "Male-Avoidance Code": A Case Study of the Hashtag #babyfood# on RedNote</strong>
+                    <br>Yifan Li, <u>Xingyu Lan</u>
+                    <br>National Communication Association Annual Convention (NCA 2025)
                     <br>Paper: to appear
                 </div>
             </div>
 
-
             <div class="box-style">
-                <div class="snap_containter"><img src="images/chinagraph2025_fact.png" alt="" /></div>
+                <div class="snap_containter"><img src="images/nca2025cancer.jpg" alt="" /></div>
                 <div class="pub_containter">
-                    <span class="badge">Journal</span><strong> Optimizing Insight Communication: Evaluating the Effects of Visualization Designs in Presenting Data Facts</strong>
-                    <br>Shixiong Cao, <u>Xingyu Lan</u>, Yuqi Liu, Qing Chen, Nan Cao
-                    <br>Communications in Information and Systems
-                    <br>Paper: <a href="https://intlpress.com/JDetail/1917574993987993602" target="_blank">Link</a> 
+                    <span class="badge_2">Conference</span><strong> The Dual Role of Virtual Communities for Cancer Caregivers: An Analysis of Social Support in a Chinese Online Health Forum</strong>
+                    <br>Yu Zhou, <u>Xingyu Lan</u>
+                    <br>National Communication Association Annual Convention (NCA 2025)
+                    <br>Paper: to appear
                 </div>
             </div>
 
@@ -262,146 +431,24 @@
                 </div>
             </div>
 
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/book.jpeg" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge_3">Book</span><strong>数据可视化设计指南：从数据到新知（Data Visualization Design Guide: From Data to Knowledge）</strong>
-                    <br><u>Xingyu Lan</u>
-                    <br>电子工业出版社，2023年3月
-                    <br>本书介绍: <a href="https://mp.weixin.qq.com/s/3OOBBu7wLc53kSdr2gzvqg" target="_blank">Link</a> ｜ 京东/当当/天猫在售
+            <!-- 展开内容 -->
+            <div class="ai-society-expand">
+                <div class="box-style">
+                    <div class="snap_containter"><img src="images/hcii2025_elder.png" alt="" /></div>
+                    <div class="pub_containter">
+                        <span class="badge_2">Conference</span><strong> Examining the Impact of Embodied Conversational Agents' Emotional Expressions and Empathetic Communication on Companionship for Middle-Aged and Older Adults</strong>
+                        <br>Xueyang Wang, Lingjie Pan, <u>Xingyu Lan</u>
+                        <br>Proceedings of the International Conference on Human-Computer Interaction
+                        <br>Paper: to appear
+                    </div>
                 </div>
             </div>
 
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/chi2022_negativity.png" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge_2">Conference</span><strong>Negative Emotions, Positive Outcomes? Exploring the Communication of Negativity in Serious Data Stories</strong>
-                    <br><u>Xingyu Lan</u>, Yanqiu Wu, Yang Shi, Qing Chen, Nan Cao
-                    <br>In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2022)
-                    <br>Paper: <a href="https://idvxlab.com/papers/2022CHI_Negativity_Lan.pdf" target="_blank">Link</a> | Material: <a href="http://negativity.idvxlab.com/" target="_blank">Website</a>, <a href="https://www.youtube.com/watch?v=hHwLUmJkmhU" target="_blank">Video Preview</a>,
-                    <a href="https://www.youtube.com/watch?v=E6v8UCaLqW8" target="_blank">Video Presentation</a>
-                </div>
+            <div style="margin: 10px 0;">
+                <button id="ai-society-btn" onclick="toggleAISociety()" style="background-color: #5BA689; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Show More</button>
             </div>
 
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/vis2021_kineticharts.png" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge">Journal</span><strong>Kineticharts: Augmenting Affective Expressiveness of Charts in Data Stories with Animation Design</strong>
-                    <br><u>Xingyu Lan</u>, Yang Shi, Yanqiu Wu, Xiaohan Jiao, Nan Cao
-                    <br>IEEE Transactions on Visualization and Computer Graphics (VIS 2021)
-                    <br>Paper: <a href="https://idvxlab.com/papers/2021VIS_Charts_Lan.pdf" target="_blank">Link</a> | Material: <a href="http://kineticharts.idvxlab.com/" target="_blank">Website</a>, <a href="https://vimeo.com/644191526" target="_blank">Video Preview</a>,
-                    <a href="https://vimeo.com/644192276" target="_blank">Video Presentation</a>
-                </div>
-            </div>
-
-
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/tvcg_arousal.jpg" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge">Journal</span><strong>The Chart Excites Me! Exploring How Data Visualization Design Influences Affective Arousal</strong>
-                    <br><u>Xingyu Lan</u>, Yanqiu Wu, Qing Chen, Nan Cao
-                    <br>arXiv preprint arXiv:2211.03296
-                    <br>Paper: <a href="https://arxiv.org/pdf/2211.03296.pdf" target="_blank">Link</a> | Material: <a href="https://osf.io/yphjb/?view_only=fc03063420b44cba842c6807c19f66ce" target="_blank">Study Data</a>
-                </div>
-            </div>
-
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/tvcg_embellish.jpg" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge">Journal</span><strong>VizBelle: A Design Space of Embellishments for Data Visualization</strong>
-                    <br>Qing Chen, Ziyan Liu, Chengwei Wang, <u>Xingyu Lan</u>, Ying Chen, Siming Chen, Nan Cao
-                    <br>arXiv preprint arXiv:2209.03642
-                    <br>Paper: <a href="https://arxiv.org/pdf/2209.03642.pdf" target="_blank">Link</a> | Material: <a href="https://vizbelle.github.io/" target="_blank">Website</a>
-                </div>
-            </div>
-
-
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/meishudaguan_tuzhidian.png" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge">Journal</span><strong>数据可视化设计的类型学实践（Exploring the Typology of Visualization Design）</strong>
-                    <br><u>Xingyu Lan</u>, Jiazhe Wang
-                    <br>《美术大观》2022年第3期
-                    <br>Paper: <a href="https://www.cnki.com.cn/Article/CJFDTotal-MSDG202203021.htm" target="_blank">Link</a> | Material: <a href="https://github.com/antvis/AVA" target="_blank">Relevant Project - AntV AVA</a>, <a href="http://www.tuzhidian.com/"
-                        target="_blank">Relevant Project - Gradict</a>
-                </div>
-            </div>
-
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/vis2021_pyramid.png" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge">Journal</span><strong>A Design Space for Applying the Freytag’s Pyramid Structure to Data Stories</strong>
-                    <br>Leni Yang, Xian Xu, <u>Xingyu Lan</u>, Ziyan Liu, Shunan Guo, Yang Shi, Huamin Qu, Nan Cao
-                    <br>IEEE Transactions on Visualization and Computer Graphics (VIS 2021)
-                    <br>Paper: <a href="https://idvxlab.com/papers/2021VIS_Pyramid_Yang.pdf" target="_blank">Link</a> | Material: <a href="http://pyramidstory.idvxlab.com/" target="_blank">Website</a>, <a href="https://www.youtube.com/watch?v=Ore_17Nkr0o"
-                        target="_blank">Video Preview</a>,
-                    <a href="https://www.youtube.com/watch?v=mkZDFyOXxa8" target="_blank">Video Presentation</a>
-                </div>
-            </div>
-
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/chinavis2021_calliope.png" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge_4">Poster</span><strong>Calliope·Data: An Intelligent Visual Data Story Generation Platform for Mass</strong>
-                    <br>Nan Cao, Danqing Shi, Yanqiu Wu, Xinyue Xu, Fuling Sun, Yi Guo, Nan Chen, Mengdi Sun, <u>Xingyu Lan</u>, Pei Liu, Siji Chen, Ligan Cai, Yang Shi, Qing Chen
-                    <br>ChinaVis Poster 2021 | 🏆 Honorable Mention
-                    <br>Poster: <a href="https://sdq.github.io/calliopedata/calliopedata-chinavis-poster.pdf" target="_blank">Link</a> | Material: <a href="https://sdq.github.io/calliopedata/" target="_blank">Website</a>
-                </div>
-            </div>
-
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/eurovis2021_autoclips.png" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge">Journal</span><strong>AutoClips: An Automatic Approach to Video Generation from Data Facts</strong>
-                    <br>Danqing Shi, Fuling Sun, Xinyue Xu, <u>Xingyu Lan</u>, David Gotz, Nan Cao
-                    <br>Computer Graphics Forum (EuroVis 2021)
-                    <br>Paper: <a href="https://sdq.github.io/autoclips/autoclips.pdf" target="_blank">Link</a> | Material: <a href="https://sdq.github.io/autoclips/" target="_blank">Website</a>
-                </div>
-            </div>
-
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/pvis_affect.png" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge">Journal</span><strong>Smile or Scowl? Looking at Infographic Design Through the Affective Lens</strong>
-                    <br><u>Xingyu Lan</u>, Yang Shi, Yueyao Zhang, Nan Cao
-                    <br>IEEE Transactions on Visualization and Computer Graphics (IEEE PacificVis 2021)
-                    <br>Paper: <a href="https://idvxlab.com/papers/2021TVCG_Smile_Lan.pdf" target="_blank">Link</a> | Material: <a href="http://affectiveinfographics.idvxlab.com/" target="_blank">Website</a>, <a href="https://www.youtube.com/watch?v=jUFSso9ZjXk"
-                        target="_blank">Video Presentation</a>
-                </div>
-            </div>
-
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/chi2021_linearity.png" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge_2">Conference</span><strong>Understanding Narrative Linearity for Telling Expressive Time-Oriented Stories</strong>
-                    <br><u>Xingyu Lan</u>, Xinyue Xu, Nan Cao
-                    <br>In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2021)
-                    <br>Paper: <a href="https://idvxlab.com/papers/2021CHI_DataStory_Lan.pdf" target="_blank">Link</a> | Material: <a href="https://osf.io/eusjn/" target="_blank">Study Data</a>, <a href="https://www.youtube.com/watch?v=4v-OL5ylaQk" target="_blank">Video Presentation</a>
-                </div>
-            </div>
-
-            <div class="box-style">
-                <div class="snap_containter"><img src="images/chi2021_videos.jpg" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge_2">Conference</span><strong>Communicating with Motion: A Design Space for Animated Visual Narratives in Data Videos</strong>
-                    <br>Yang Shi, <u>Xingyu Lan</u>, Jingwen Li, Zhaorui Li, Nan Cao
-                    <br>In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2021)
-                    <br>Paper: <a href="https://idvxlab.com/papers/2021CHI_DataVideo_Shi.pdf" target="_blank">Link</a> | Material: <a href="https://videoexplorer.idvxlab.com/" target="_blank">Website</a>, <a href="https://www.youtube.com/watch?v=apd2SaNTmbk"
-                        target="_blank">Video Preview</a>, <a href="https://www.youtube.com/watch?v=Wl9hcrW2lZY" target="_blank">Video Presentation</a>
-                </div>
-            </div>
-
-            <!-- <div class="box-style">
-                <div class="snap_containter"><img src="images/comment2018_wenchuan.png" alt="" /></div>
-                <div class="pub_containter">
-                    <span class="badge">Journal</span><strong>以用户驱动的数据新闻产品打捞“汶川记忆”——浅谈澎湃新闻如何挖掘“UGC”富矿</strong>
-                    <br><u>Xingyu Lan</u>
-                    <br>《传媒评论》2018年第5期
-                    <br>Paper: <a href="https://www.sohu.com/a/232753582_644338" target="_blank">Link</a>
-                </div>
-            </div> -->
-
-            <div class="subtitle_container" style="margin-top: 50px;"><span class="subtitles"> Selected Projects:</span>
+            <div class="subtitle_container" style="margin-top: 50px;"><span class="subtitles">Selected Projects:</span>
             </div>
 
             <div class="box-style">
@@ -412,7 +459,7 @@
                     <strong>Narrative Chart&nbsp</strong> <img src="./images/view.png" style="width:20px; height:20px; vertical-align: -5px;"><a href="https://narchart.github.io/" target="_blank">Visit the Project</a>
                     <br>Narrative Chart is an open-source visualization library specialized for authoring charts that facilitate data storytelling with a high-level action-driven grammar. The library is implemented in JavaScript and compatible with most
                     modern web browsers.
-                    <br>纳图是由同济大学智能大数据可视化实验室设计开发的一款专门用于支持“叙事图表”创作的数据可视化图表库。与已有的图表库相比，Narrative Chart 将可视化的创作过程分解成独立的设计行为，并实现了数据标注、动效、装饰等一系列核心操作。利用 Narrative Chart ，开发者、设计师、分析师，甚至是有作图需求的大众用户，都可以通过直观易懂的语法创作出丰富的图表效果。
+                    <br>纳图是由同济大学智能大数据可视化实验室设计开发的一款专门用于支持"叙事图表"创作的数据可视化图表库。与已有的图表库相比，Narrative Chart 将可视化的创作过程分解成独立的设计行为，并实现了数据标注、动效、装饰等一系列核心操作。利用 Narrative Chart ，开发者、设计师、分析师，甚至是有作图需求的大众用户，都可以通过直观易懂的语法创作出丰富的图表效果。
                 </div>
             </div>
 
@@ -458,7 +505,7 @@
                     <span class="badge_3">Data Story</span>
                     <strong>莆田医网（Putian Network）🏆Award winner &nbsp</strong> <img src="./images/view.png" style="width:20px; height:20px; vertical-align: -5px;"><a href="http://olivialan.github.io/putian/index.html" target="_blank">Visit the Project</a>
                     <br>Investigating China's private hospitals & Putian families. *The language of this project is Chinese.
-                    <br>2014年，大学生魏则西之死牵出了百度的医疗广告竞价机制，以及借助此机制而不断壮大的莆田系医院。一时，莆田系的“罪恶”起家史、四大家族控制了70%中国民营医院的传说席卷网络。然而，最为当事人的莆田系医院却鲜少发声、几乎隐身。为了揭开莆田系医院的神秘面纱，我们从一份名单开始，步步挖掘莆田系医院的资本势力和交织在股权中的家族关系。
+                    <br>2014年，大学生魏则西之死牵出了百度的医疗广告竞价机制，以及借助此机制而不断壮大的莆田系医院。一时，莆田系的"罪恶"起家史、四大家族控制了70%中国民营医院的传说席卷网络。然而，最为当事人的莆田系医院却鲜少发声、几乎隐身。为了揭开莆田系医院的神秘面纱，我们从一份名单开始，步步挖掘莆田系医院的资本势力和交织在股权中的家族关系。
                 </div>
             </div>
 
@@ -492,7 +539,7 @@
                     <strong>层层拨开范冰冰关系网，你会鼻酸，你会流泪（The Business Empire of Fan）&nbsp</strong> <img src="./images/view.png" style="width:20px; height:20px; vertical-align: -5px;"><a href="https://mp.weixin.qq.com/s?__biz=MzU2OTMyMTg0MA==&mid=2247484061&idx=1&sn=0dac71e0b5763d733a2bd379e3c4ec45&source=41#wechat_redirect"
                         target="_blank">Visit the Project</a>
                     <br>Investigating the business network of <a href="https://www.bbc.com/news/business-45728459" target="_blank">Fan Bingbing</a>, a famous actresses in China. *The language of this project is Chinese.
-                    <br>2018年，著名影星范冰冰因“阴阳合同”陷入税务风波，并被罚款8亿余元，震惊全国。明星在经济金融领域的操盘行为，亦受到公众关注。事件爆出后，我们立即对范冰冰的公司版图、及其关联的明星投资圈进行了挖掘。结果发现，范冰冰并非个例，甚至并非称得上资本大玩家。诸多明星的商业布局已相当成熟，且与大型互联网企业、财团、风投机构等有密切联系。该项目于当年发布后即登上百度搜索首页。
+                    <br>2018年，著名影星范冰冰因"阴阳合同"陷入税务风波，并被罚款8亿余元，震惊全国。明星在经济金融领域的操盘行为，亦受到公众关注。事件爆出后，我们立即对范冰冰的公司版图、及其关联的明星投资圈进行了挖掘。结果发现，范冰冰并非个例，甚至并非称得上资本大玩家。诸多明星的商业布局已相当成熟，且与大型互联网企业、财团、风投机构等有密切联系。该项目于当年发布后即登上百度搜索首页。
                 </div>
             </div>
 
@@ -505,7 +552,7 @@
                         target="_blank">Visit the Project</a>
                     <br><a href="https://en.wikipedia.org/wiki/Dream_of_the_Red_Chamber" target="_blank">Dream of the Red Chamber (Honglou Meng)</a> is a novel written in 1760s and is one of the Four Great Classical Novels of Chinese literature. This
                     project analyzed the color palettes in this novel and revealed their rich connotations. *The language of this project is Chinese.
-                    <br>最为四大名著之一，《红楼梦》在写作上的深邃韵味堪称无双。有趣的是，曹雪芹在小说中使用了诸多的色彩描述，而这些色彩似乎又与小说的情节起伏、人物性格暗合。受此启发，我们对87版《红楼梦》电视剧进行了抽帧分析。从元妃省亲的“红”，到结局的“白茫茫一片真干净”，贾府的兴衰荣枯，亦在色彩的流变之中。
+                    <br>最为四大名著之一，《红楼梦》在写作上的深邃韵味堪称无双。有趣的是，曹雪芹在小说中使用了诸多的色彩描述，而这些色彩似乎又与小说的情节起伏、人物性格暗合。受此启发，我们对87版《红楼梦》电视剧进行了抽帧分析。从元妃省亲的"红"，到结局的"白茫茫一片真干净"，贾府的兴衰荣枯，亦在色彩的流变之中。
                 </div>
             </div>
 
@@ -514,8 +561,7 @@
 
 
 
-        <!-- 文章 -->
-        <div id="div_misc" style="display: none; margin-top: 50px;" class="container">
+        <!-- 文章 -->        <div id="div_misc" style="display: none; margin-top: 50px;" class="container">
 
                         <div class="subtitle_container" style="margin-top: 30px;"><span class="subtitles">Media Coverage:</span></div>
             <div><strong>Research & Teaching 教学科研：</strong>
@@ -782,6 +828,105 @@
         }
     }
 
+    function smoothScrollToElement(element, duration) {
+        const targetPosition = element.offsetTop;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+    }
+
+    function toggleDataStorytelling() {
+        var ele = document.getElementsByClassName("data-storytelling-expand");
+        var btn = document.getElementById("data-storytelling-btn");
+        var title = document.getElementById("data-storytelling-title");
+        for (let i = 0; i < ele.length; i++) {
+            if (ele[i].classList.contains("expanded")) {
+                // 收起：先设置实际高度，然后动画到0
+                ele[i].style.maxHeight = ele[i].scrollHeight + "px";
+                ele[i].offsetHeight; // 强制重排
+                ele[i].style.maxHeight = "0px";
+                ele[i].classList.remove("expanded");
+                btn.innerHTML = "Show More";
+                // 同时开始滚动到标题位置，使用自定义滚动时长
+                smoothScrollToElement(title, 600);
+            } else {
+                // 展开：先设置实际高度，然后动画到完整高度
+                ele[i].style.maxHeight = "0px";
+                ele[i].classList.add("expanded");
+                ele[i].offsetHeight; // 强制重排
+                ele[i].style.maxHeight = ele[i].scrollHeight + "px";
+                btn.innerHTML = "Show Less";
+            }
+        }
+    }
+
+    function toggleAffectiveDesign() {
+        var ele = document.getElementsByClassName("affective-design-expand");
+        var btn = document.getElementById("affective-design-btn");
+        var title = document.getElementById("affective-design-title");
+        for (let i = 0; i < ele.length; i++) {
+            if (ele[i].classList.contains("expanded")) {
+                // 收起：先设置实际高度，然后动画到0
+                ele[i].style.maxHeight = ele[i].scrollHeight + "px";
+                ele[i].offsetHeight; // 强制重排
+                ele[i].style.maxHeight = "0px";
+                ele[i].classList.remove("expanded");
+                btn.innerHTML = "Show More";
+                // 同时开始滚动到标题位置，使用自定义滚动时长
+                smoothScrollToElement(title, 600);
+            } else {
+                // 展开：先设置实际高度，然后动画到完整高度
+                ele[i].style.maxHeight = "0px";
+                ele[i].classList.add("expanded");
+                ele[i].offsetHeight; // 强制重排
+                ele[i].style.maxHeight = ele[i].scrollHeight + "px";
+                btn.innerHTML = "Show Less";
+            }
+        }
+    }
+
+    function toggleAISociety() {
+        var ele = document.getElementsByClassName("ai-society-expand");
+        var btn = document.getElementById("ai-society-btn");
+        var title = document.getElementById("ai-society-title");
+        for (let i = 0; i < ele.length; i++) {
+            if (ele[i].classList.contains("expanded")) {
+                // 收起：先设置实际高度，然后动画到0
+                ele[i].style.maxHeight = ele[i].scrollHeight + "px";
+                ele[i].offsetHeight; // 强制重排
+                ele[i].style.maxHeight = "0px";
+                ele[i].classList.remove("expanded");
+                btn.innerHTML = "Show More";
+                // 同时开始滚动到标题位置，使用自定义滚动时长
+                smoothScrollToElement(title, 600);
+            } else {
+                // 展开：先设置实际高度，然后动画到完整高度
+                ele[i].style.maxHeight = "0px";
+                ele[i].classList.add("expanded");
+                ele[i].offsetHeight; // 强制重排
+                ele[i].style.maxHeight = ele[i].scrollHeight + "px";
+                btn.innerHTML = "Show Less";
+            }
+        }
+    }
+
     function tab_aboutme() {
         document.getElementById("aboutme").className = "current_page_item"
         document.getElementById("publications").className = ""
@@ -835,6 +980,6 @@
         document.getElementById("div_personal").style.display = "block"
 
     }
-</script>
-
+  </script>
+  
 </html>
