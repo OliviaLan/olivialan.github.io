@@ -740,7 +740,12 @@
 
   const urlBase = '';
   function fetchJson(url, fallback) {
-    return fetch(urlBase + url).then(function(r) { return r.ok ? r.json() : fallback; }).catch(function() { return fallback; });
+    return fetch(urlBase + url).then(function(r) {
+      if (!r.ok) return Promise.reject();
+      return r.text();
+    }).then(function(t) {
+      return JSON.parse(t.replace(/\bNaN\b/g, 'null').replace(/\b(-?)Infinity\b/g, '$1null'));
+    }).catch(function() { return fallback; });
   }
   Promise.all([
     fetchJson('comments_by_submolt.json', []),
