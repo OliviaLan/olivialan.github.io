@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>当Agent在谈论「我的人类」的时候，他们在谈论什么</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 24px; background: #1a1b26; color: #c0caf5; font-size: 14px; }
+    h1 { text-align: center; color: #7aa2f7; margin-bottom: 8px; font-size: 1.5rem; }
+    .subtitle { text-align: center; color: #565f89; margin-bottom: 32px; font-size: 14px; }
+    section { max-width: 1400px; margin: 0 auto 48px; }
+    section h2 { color: #bb9af7; font-size: 1.2rem; margin-bottom: 16px; border-bottom: 1px solid #3b4261; padding-bottom: 8px; }
+    .chart-wrap { background: #24283b; border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+    .chart-scroll { max-height: 78vh; overflow: auto; -webkit-overflow-scrolling: touch; }
+    .chart-wide { min-width: 100%; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    @media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } }
+    .summary-box { background: #24283b; border-radius: 12px; padding: 20px; font-family: ui-monospace, monospace; font-size: 13px; line-height: 1.8; }
+    .chart-hint { color: #565f89; font-size: 13px; margin: -8px 0 12px 0; }
+    .chart-subtitle { color: #7aa2f7; font-size: 13px; font-weight: 600; margin: 0 0 8px 0; }
+    .d3-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 12px; font-size: 11px; }
+    .d3-legend span { cursor: pointer; padding: 2px 8px; border-radius: 4px; background: #3b4261; }
+    .d3-legend span.legend-hidden { opacity: 0.4; text-decoration: line-through; }
+    .d3-chart { font-size: 11px; }
+    .d3-chart .tick text { font-size: 11px; fill: #c0caf5; }
+    .d3-chart .bar-label { font-size: 11px; fill: #c0caf5; }
+    .chart-tooltip { background: #24283b; color: #c0caf5; padding: 8px 12px; border-radius: 8px; font-size: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.4); border: 1px solid #3b4261; pointer-events: none; white-space: pre-line; }
+    .overview-box { background: #24283b; border-radius: 12px; padding: 24px; margin-bottom: 32px; max-width: 1400px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+    .overview-box p { margin: 0 0 12px 0; }
+    .human-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .human-table th, .human-table td { border: 1px solid #3b4261; padding: 10px 12px; text-align: left; }
+    .human-table th { background: #1a1b26; color: #7aa2f7; }
+    .human-table .human-sentence { max-width: 60%; }
+    .human-table .human-row { cursor: pointer; }
+    .human-table .human-row:hover { background: #2a2d3e; }
+    .human-table-scroll { max-height: 60vh; overflow: auto; -webkit-overflow-scrolling: touch; margin-top: 8px; border: 1px solid #3b4261; border-radius: 8px; }
+    .human-table thead th { position: sticky; top: 0; background: #1a1b26; z-index: 1; box-shadow: 0 1px 0 #3b4261; }
+    .methodology-box { background: #1e2030; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; font-size: 13px; line-height: 1.7; color: #a9b1d6; border-left: 4px solid #7aa2f7; }
+    .methodology-box h4 { color: #7aa2f7; margin: 0 0 8px 0; font-size: 13px; }
+    .methodology-box p { margin: 0 0 8px 0; }
+    .methodology-box p:last-child { margin-bottom: 0; }
+    .toc { position: sticky; top: 0; z-index: 1000; background: #1a1b26; border: 1px solid #3b4261; border-radius: 12px; padding: 16px 24px; margin-bottom: 32px; max-width: 1400px; margin-left: auto; margin-right: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+    .toc-title { color: #7aa2f7; font-size: 14px; margin: 0 0 10px 0; }
+    .toc-list { margin: 0; padding-left: 20px; list-style: none; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    .toc-list a { color: #a9b1d6; text-decoration: none; }
+    .toc-list a:hover { color: #7aa2f7; }
+    .human-table-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-bottom: 12px; }
+    .human-submolt-select { background: #1a1b26; color: #c0caf5; border: 1px solid #3b4261; border-radius: 6px; padding: 6px 10px; font-size: 13px; }
+    .human-filter-label { color: #a9b1d6; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px; }
+    .human-table .human-type { white-space: nowrap; font-size: 12px; }
+    .human-table .human-row.greeting-row .human-type { color: #bb9af7; }
+    .human-table .human-row:not(.greeting-row) .human-type { color: #9ece6a; }
+    .methodology-keywords { margin: 8px 0 12px 0; padding-left: 22px; color: #a9b1d6; font-size: 13px; line-height: 1.6; }
+    .human-zero-submolts { color: #565f89; font-size: 13px; margin-top: 8px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <nav class="toc" id="toc" aria-label="本页目录">
+    <h3 class="toc-title">本页目录（点击可跳转至各小节）</h3>
+    <ul class="toc-list">
+      <li><a href="#overview">数据概览</a></li>
+      <li><a href="#section-submolts-ranking">1. Submolts ranking</a></li>
+      <li><a href="#section-2">2. 预期 vs 实际评论</a></li>
+      <li><a href="#methodology-section">3. 与人类有关系的表述分析</a></li>
+      <li><a href="#section-6">4. Posts 人类关系表述</a></li>
+      <li><a href="#section-7">5. Comments 人类关系表述</a></li>
+    </ul>
+  </nav>
+
+  <h1>当Agent在谈论「我的人类」的时候，他们在谈论什么</h1>
+  <p class="subtitle">Moltbook 帖子与评论统计可视化（D3.js SVG）</p>
+
+  <section class="overview-section" id="overview">
+    <div class="overview-box">
+      <p>本看板基于 Moltbook 爬取数据生成。</p><p>共覆盖 <strong>100</strong> 个子版块（submolts），爬取帖子总数 <strong>126,594</strong>，评论总数 <strong>1,000,297</strong>，订阅数合计 <strong>4,506</strong>。</p><p>评论爬取完成率（预期 vs 实际）：预期评论 <strong>3,384,801</strong>，实际评论 <strong>987,800</strong>，整体完成率 <strong>29.2%</strong>。</p><p>帖子分布：均值 <strong>1265.9</strong> 帖/版块，中位数 <strong>119.5</strong>，最小值 <strong>1</strong>，最大值 <strong>87,000</strong>，标准差 <strong>8692.5</strong>。</p><p>评论分布：均值 <strong>10003.0</strong> 条/版块，最小值 <strong>6</strong>，最大值 <strong>753,810</strong>，标准差 <strong>75312.1</strong>。</p><p class="chart-subtitle" id="overview-posts-before" style="margin-top:16px;">帖子量分布（排除 general、introductions 前）</p><div id="wrapOverviewPostsDist" class="chart-wrap" style="min-height:280px; margin-top:8px;"></div><p class="chart-subtitle" id="overview-comments-before" style="margin-top:16px;">评论量分布（排除 general、introductions 前）</p><div id="wrapOverviewCommentsDist" class="chart-wrap" style="min-height:280px; margin-top:8px;"></div><p>若排除 <strong>general</strong>、<strong>introductions</strong> 两个版块（帖子量异常多）：子版块数 <strong>98</strong>，帖子总数 <strong>34,165</strong>，评论总数 <strong>202,210</strong>；帖子分布：均值 <strong>348.6</strong> 帖/版块，中位数 <strong>103.0</strong>，最小值 <strong>1</strong>，最大值 <strong>2,778</strong>，标准差 <strong>558.4</strong>；评论分布：均值 <strong>2063.4</strong> 条/版块，最小值 <strong>6</strong>，最大值 <strong>14,812</strong>，标准差 <strong>3075.8</strong>。</p><p class="chart-subtitle" id="overview-posts-after" style="margin-top:16px;">帖子量分布（排除 general、introductions 后）</p><div id="wrapOverviewPostsDistExcluded" class="chart-wrap" style="min-height:280px; margin-top:8px;"></div><p class="chart-subtitle" id="overview-comments-after" style="margin-top:16px;">评论量分布（排除 general、introductions 后）</p><div id="wrapOverviewCommentsDistExcluded" class="chart-wrap" style="min-height:280px; margin-top:8px;"></div>
+    </div>
+  </section>
+
+  <section id="section-submolts-ranking">
+    <h2>1. Submolts ranking</h2>
+    <p class="chart-hint">下图可滚动；点击图例可隐藏/显示对应 submolt</p>
+    <p class="chart-subtitle">各版块评论数</p>
+    <div class="chart-wrap chart-scroll chart-wide" id="wrapCommentsBySubmolt"></div>
+    <p class="chart-subtitle">按帖子数排序</p>
+    <div class="chart-wrap chart-scroll chart-wide" id="wrapSubmoltsPosts"></div>
+    <p class="chart-subtitle">按订阅数排序</p>
+    <div class="chart-wrap chart-scroll chart-wide" id="wrapSubmoltsSubs"></div>
+    <p class="chart-subtitle">帖子数 vs 评论数（散点图）</p>
+    <p class="chart-hint">已默认排除 general、introductions；图中标签为帖子数+评论数加总 Top 10 的版块。</p>
+    <div class="chart-wrap" id="wrapPostsVsComments" style="min-height:380px"></div>
+  </section>
+
+  <section id="section-2">
+    <h2>2. Comments Difference Statistics（预期 vs 实际评论）</h2>
+    <p class="chart-hint">下图可滚动；点击图例可隐藏/显示对应 submolt</p>
+    <p class="chart-subtitle">实际爬取的百分比</p>
+    <div class="chart-wrap chart-scroll chart-wide" id="wrapCompletionRate"></div>
+    <p class="chart-subtitle">预期和实际的对比</p>
+    <div class="chart-wrap chart-scroll chart-wide" id="wrapExpectedVsActual"></div>
+    <div class="grid2">
+      <div class="chart-wrap" id="wrapPieMatch"></div>
+      <div class="summary-box" id="diffSummary"></div>
+    </div>
+  </section>
+
+  <section id="methodology-section">
+    <h2>3. 与人类有关系的表述分析</h2>
+    <p class="chart-hint">以下深入「人类关系表述」这一具体问题：先说明匹配与打招呼判定方法，再展示第 4、5 节结果。</p>
+    <div class="methodology-box" id="human-analysis-methodology">
+      <h4>数据分析方法（第 6、7 节）</h4>
+<p><strong>数据来源</strong>：posts 文件夹与 comments 文件夹下按 submolt 命名的 JSON（如 posts_introductions_20260206_xxx.json、comments_general_20260206_xxx.json），每个文件对应一个版块的全部帖子或评论。</p>
+<p><strong>文件筛选</strong>：单文件体积超过 200MB 的 JSON 不参与扫描（为避免内存与解析时间过长）。<strong>general</strong> 等大文件若小于 200MB 会纳入扫描。</p>
+<p><strong>句子切分</strong>：将帖子的 title+content 或评论的 content 按句号、问号、叹号、换行符切分为句子，仅保留长度大于 15 字符的片段。</p>
+<p><strong>匹配规则</strong>：用正则表达式匹配「与人类关系」相关表述，以下为<strong>完整</strong>关键词/短语列表（句中匹配词在表格内加粗显示）：</p>
+
+<ul class="methodology-keywords">
+<li>my/your/their/our/the + human（如 my human、your human、the human）</li>
+<li>human 或 humans + and/with/who/that（如 human and、human with、human who）</li>
+<li>human + companion / friend / caretaker / relationship</li>
+<li>my/your + owner</li>
+<li>living with (a) human</li>
+<li>human's / humans + day / life / name / fault</li>
+<li>talk / talking to + my/your + human</li>
+<li>with + my/your/our + human</li>
+<li>human + said / told / asked</li>
+</ul>
+<p>以上均不区分大小写，命中任一类即计为该句「符合」。</p>
+<p><strong>打招呼类判定方法（仅用于第 6 节 Posts）</strong>：帖子标题与正文拼接后的前 500 字，若匹配以下任一起始短语（正则不区分大小写）即将该帖下所有匹配句标为「打招呼」：Hello Moltbook、Hi/Hey moltys、First post、Just claimed/joined、Introductions、Greetings、Hello/Hi/Hey from、Hey everyone、大家好、打个招呼。第 7 节 Comments 不区分打招呼。</p>
+<p><strong>去重</strong>：句子按「内容 + 发布者」完全一致去重。Posts 去重前 26152 条、去重后 23152 条；Comments 去重前 17818 条、去重后 11582 条。</p>
+<p><strong>打招呼类（仅第 6 节）</strong>：在 Posts 与人类相关的句子里，2339 条为一开始打招呼/刚注册类（意义相对不大）、20813 条为讨论中提及。第 6 节图中紫色段为打招呼类、绿色为讨论类（有效数据）；表格可筛选隐藏打招呼类。</p>
+<p><strong>呈现方式</strong>：第 6 节堆叠图紫=打招呼、绿=讨论（有效数据）；第 7 节仅显示符合 vs 其余。下方单表通过选择版块切换查看，第 6 节可勾选隐藏打招呼类，悬停行可查看完整正文。</p>
+<p><strong>本页统计</strong>：第 6 节 Posts 共提取 <strong>23152</strong> 条，减去打招呼 <strong>2339</strong> 条后有效数据 <strong>20813</strong> 条；第 7 节 Comments 共提取 <strong>11582</strong> 条。</p>
+    </div>
+  </section>
+
+  <section id="section-6">
+    <h2>4. Posts 中与人类关系相关表述</h2>
+    <p class="chart-hint">从 posts 文件夹各 submolt JSON 中提取提及「my/your human」「human owner」等与人类关系相关的句子，按版块归类；悬停行可查看完整内容。方法论见上方「3. 与人类有关系的表述分析」。</p>
+    <p class="chart-subtitle">各 submolt 符合占比（符合 vs 总量）</p>
+    <div class="chart-wrap chart-scroll chart-wide" id="wrapPostsHumanStacked"></div>
+    <p id="postsHumanZeroSubmolts" class="human-zero-submolts"></p>
+    <div class="chart-wrap human-table-wrap">
+<div class="human-table-controls">
+<label>选择版块：<select id="human-submolt-posts" class="human-submolt-select">
+<option value="">加载中...</option>
+</select></label>
+<label class="human-filter-label"><input type="checkbox" id="human-hide-greeting-posts" class="human-hide-greeting"> 隐藏打招呼类</label>
+</div>
+<div class="human-table-scroll"><table class="human-table" id="human-table-posts">
+<thead><tr><th>类型</th><th>句子摘要</th><th>作者</th><th>日期</th></tr></thead><tbody>
+</tbody></table></div></div>
+  </section>
+
+  <section id="section-7">
+    <h2>5. Comments 中与人类关系相关表述</h2>
+    <p class="chart-hint">从 comments 文件夹各 submolt JSON 中提取与人类关系相关的句子，按版块归类；悬停行可查看完整内容。方法论见上方「3. 与人类有关系的表述分析」。</p>
+    <p class="chart-subtitle">各 submolt 符合占比（符合 vs 总量）</p>
+    <div class="chart-wrap chart-scroll chart-wide" id="wrapCommentsHumanStacked"></div>
+    <p id="commentsHumanZeroSubmolts" class="human-zero-submolts"></p>
+    <div class="chart-wrap human-table-wrap">
+<div class="human-table-controls">
+<label>选择版块：<select id="human-submolt-comments" class="human-submolt-select">
+<option value="">加载中...</option>
+</select></label>
+</div>
+<div class="human-table-scroll"><table class="human-table" id="human-table-comments">
+<thead><tr><th>句子摘要</th><th>作者</th><th>日期</th></tr></thead><tbody>
+</tbody></table></div></div>
+  </section>
+
+  <script>
+(function() {
+  if (typeof d3 === 'undefined') {
+    document.body.innerHTML = '<div style="max-width:500px;margin:40px auto;padding:24px;background:#24283b;border-radius:12px;color:#f7768e;">请联网后刷新，或下载 d3.min.js 到本目录并改用 &lt;script src="d3.min.js"&gt;</div>';
+    return;
+  }
+
+  const POSTS_COLOR = '#bd93f9';
+  const COMMENTS_COLOR = '#8be9fd';
+  const BAR_HEIGHT = 22;
+  const MARGIN = { top: 8, right: 80, bottom: 28, left: 120 };
+  const AXIS_FONTSIZE = '11px';
+  const TRANSITION_DURATION = 280;
+
+  function getTooltipEl() {
+    let el = document.getElementById('chart-tooltip');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'chart-tooltip';
+      el.className = 'chart-tooltip';
+      el.style.cssText = 'display:none;position:fixed;z-index:99999;background:#24283b;color:#c0caf5;padding:8px 12px;border-radius:8px;font-size:12px;pointer-events:none;white-space:pre-line;border:1px solid #3b4261;box-shadow:0 2px 12px rgba(0,0,0,0.4);';
+      document.body.appendChild(el);
+    }
+    return el;
+  }
+  function showTooltip(event, content) {
+    const el = getTooltipEl();
+    el.textContent = content;
+    el.style.display = 'block';
+    var x = (event && event.clientX != null) ? event.clientX : 0;
+    var y = (event && event.clientY != null) ? event.clientY : 0;
+    el.style.left = (x + 12) + 'px';
+    el.style.top = (y + 12) + 'px';
+  }
+  function moveTooltip(event) {
+    const el = getTooltipEl();
+    if (el.style.display === 'block') {
+      var x = (event && event.clientX != null) ? event.clientX : 0;
+      var y = (event && event.clientY != null) ? event.clientY : 0;
+      el.style.left = (x + 12) + 'px';
+      el.style.top = (y + 12) + 'px';
+    }
+  }
+  function hideTooltip() {
+    const el = document.getElementById('chart-tooltip');
+    if (el) el.style.display = 'none';
+  }
+  function bindTooltipToNode(node, content) {
+    if (!node) return;
+    node.addEventListener('mouseover', function(ev) { showTooltip(ev, content); });
+    node.addEventListener('mousemove', moveTooltip);
+    node.addEventListener('mouseout', hideTooltip);
+  }
+
+  function drawHorizontalBarChart(containerId, data, valueKey, labelKey, xMax, options) {
+    options = options || {};
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    data = data && Array.isArray(data) ? data : [];
+    if (data.length === 0) { container.innerHTML = '<p class="chart-hint">无数据</p>'; return; }
+    const singleColor = options.singleColor;
+    const showLegend = options.legend !== false;
+    const barHeight = options.barHeight || BAR_HEIGHT;
+    const height = data.length * barHeight;
+    const fullWidth = Math.max(400, container.clientWidth - 48);
+    const width = fullWidth - MARGIN.left - MARGIN.right;
+
+    const visible = data.map(() => true);
+    const xScale = d3.scaleLinear().domain([0, xMax || d3.max(data, d => d[valueKey])]).range([0, width]);
+    const yScale = d3.scaleBand().domain(data.map((d, i) => i)).range([0, height]).padding(0.25);
+
+    function updateAxisAndBars() {
+      const visData = data.filter((d, i) => visible[i]);
+      const visibleCount = visData.length;
+      const newMax = visibleCount ? d3.max(visData, d => d[valueKey]) : 0;
+      const displayIndex = [];
+      let k = 0;
+      for (let i = 0; i < data.length; i++) { displayIndex[i] = visible[i] ? k++ : -1; }
+
+      xScale.domain([0, newMax]);
+      const newHeight = visibleCount * barHeight;
+      yScale.domain(d3.range(visibleCount)).range([0, newHeight]).padding(0.25);
+
+      chartGroup.selectAll('.bar-row').each(function(d, i) {
+        const row = d3.select(this);
+        if (!visible[i]) { row.attr('display', 'none'); return; }
+        const j = displayIndex[i];
+        row.attr('display', null)
+          .transition().duration(TRANSITION_DURATION).attr('transform', 'translate(0,' + yScale(j) + ')');
+        row.select('rect').transition().duration(TRANSITION_DURATION).attr('width', xScale(d[valueKey])).attr('height', yScale.bandwidth());
+        row.select('text').attr('y', yScale.bandwidth() / 2);
+      });
+
+      svg.transition().duration(TRANSITION_DURATION).attr('height', newHeight + MARGIN.top + MARGIN.bottom);
+      svg.select('g.x-axis').attr('transform', 'translate(' + MARGIN.left + ',' + (MARGIN.top + newHeight) + ')').transition().duration(TRANSITION_DURATION).call(d3.axisBottom(xScale).tickSizeOuter(0).tickFormat(d3.format(',')));
+    }
+
+    container.innerHTML = '';
+    if (showLegend) {
+      const leg = document.createElement('div');
+      leg.className = 'd3-legend';
+      const barColor = singleColor || null;
+      data.forEach((d, i) => {
+        const s = document.createElement('span');
+        s.style.borderLeft = '3px solid ' + (barColor || d.color || '#7aa2f7');
+        s.textContent = d[labelKey] || d.label;
+        s.dataset.index = i;
+        s.onclick = () => {
+          visible[i] = !visible[i];
+          s.classList.toggle('legend-hidden', !visible[i]);
+          updateAxisAndBars();
+        };
+        leg.appendChild(s);
+      });
+      container.appendChild(leg);
+    }
+
+    const svg = d3.select(container).append('svg').attr('class', 'd3-chart').attr('width', fullWidth).attr('height', height + MARGIN.top + MARGIN.bottom);
+    const chartGroup = svg.append('g').attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
+
+    const xAxis = d3.axisBottom(xScale).tickSizeOuter(0).tickFormat(d3.format(','));
+    svg.append('g').attr('class', 'x-axis').attr('transform', 'translate(' + MARGIN.left + ',' + (MARGIN.top + height) + ')').call(xAxis).attr('font-size', AXIS_FONTSIZE).attr('color', '#c0caf5');
+
+    chartGroup.selectAll('.bar-row')
+      .data(data)
+      .join('g')
+      .attr('class', 'bar-row')
+      .attr('transform', (d, i) => 'translate(0,' + yScale(i) + ')')
+      .each(function(d, i) {
+        const g = d3.select(this);
+        const label = (d[labelKey] != null ? d[labelKey] : d.label);
+        const val = d[valueKey] != null ? Number(d[valueKey]).toLocaleString() : '';
+        const tipContent = label + '\n' + valueKey + ': ' + val;
+        g.append('rect')
+          .attr('height', yScale.bandwidth())
+          .attr('width', () => xScale(d[valueKey]))
+          .attr('fill', singleColor || d.color || '#7aa2f7')
+          .attr('rx', 2)
+          .style('cursor', 'pointer');
+        bindTooltipToNode(g.select('rect').node(), tipContent);
+        g.append('text')
+          .attr('class', 'bar-label')
+          .attr('x', -6)
+          .attr('y', yScale.bandwidth() / 2)
+          .attr('dy', '0.35em')
+          .attr('text-anchor', 'end')
+          .attr('font-size', AXIS_FONTSIZE)
+          .text(d[labelKey] || d.label)
+          .style('pointer-events', 'none');
+      });
+  }
+
+  function drawHistogramChart(containerId, values, options) {
+    options = options || {};
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    values = (values && Array.isArray(values) ? values : []).filter(function(v) { return typeof v === 'number' && !isNaN(v) && v >= 0; });
+    if (values.length < 1) { container.innerHTML = '<p class="chart-hint">无数据</p>'; return; }
+    const strokeColor = options.strokeColor || POSTS_COLOR;
+    const barColor = options.barColor || (strokeColor === COMMENTS_COLOR ? 'rgba(139,233,253,0.6)' : 'rgba(189,147,249,0.6)');
+    const minX = 0;
+    const maxX = d3.max(values) * 1.02 || 1;
+    const numBins = (options.numBins != null && options.numBins >= 5) ? Math.min(80, Math.max(5, options.numBins)) : Math.min(50, Math.max(10, Math.ceil(Math.sqrt(values.length) * 2)));
+    const binWidth = (maxX - minX) / numBins || 1;
+    const bins = [];
+    for (var b = 0; b < numBins; b++) bins.push({ x0: minX + b * binWidth, x1: minX + (b + 1) * binWidth, count: 0 });
+    values.forEach(function(v) {
+      var idx = Math.min(Math.floor((v - minX) / binWidth), numBins - 1);
+      if (idx < 0) idx = 0;
+      bins[idx].count++;
+    });
+    const maxCount = d3.max(bins, function(d) { return d.count; }) || 1;
+    const chartHeight = 220;
+    const fullWidth = Math.max(400, container.clientWidth - 48);
+    const width = fullWidth - MARGIN.left - MARGIN.right;
+    const height = chartHeight - MARGIN.top - MARGIN.bottom;
+    container.innerHTML = '';
+    const xScale = d3.scaleLinear().domain([minX, maxX]).range([0, width]);
+    const yScale = d3.scaleLinear().domain([0, maxCount * 1.05]).range([height, 0]);
+    const svg = d3.select(container).append('svg').attr('class', 'd3-chart').attr('width', fullWidth).attr('height', chartHeight);
+    const g = svg.append('g').attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
+    g.selectAll('rect').data(bins).join('rect')
+      .attr('x', function(d) { return xScale(d.x0); })
+      .attr('y', function(d) { return yScale(d.count); })
+      .attr('width', Math.max(1, xScale(binWidth) - xScale(0) - 1))
+      .attr('height', function(d) { return height - yScale(d.count); })
+      .attr('fill', barColor)
+      .attr('stroke', strokeColor)
+      .attr('stroke-width', 1)
+      .attr('rx', 2);
+    svg.append('g').attr('class', 'x-axis').attr('transform', 'translate(' + MARGIN.left + ',' + (MARGIN.top + height) + ')').call(d3.axisBottom(xScale).tickFormat(d3.format(',.0f')).tickSizeOuter(0)).attr('font-size', AXIS_FONTSIZE).attr('color', '#c0caf5');
+    svg.append('g').attr('class', 'y-axis').attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')').call(d3.axisLeft(yScale).tickSizeOuter(0)).attr('font-size', AXIS_FONTSIZE).attr('color', '#c0caf5');
+    g.append('text').attr('x', width / 2).attr('y', height + 36).attr('text-anchor', 'middle').attr('font-size', '11px').attr('fill', '#565f89').text('帖子数');
+    g.append('text').attr('x', -8).attr('y', height / 2).attr('text-anchor', 'middle').attr('transform', 'rotate(-90)').attr('font-size', '11px').attr('fill', '#565f89').text('版块数');
+  }
+
+  function drawHistogramWithDensity(containerId, values, options) {
+    options = options || {};
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    values = (values && Array.isArray(values) ? values : []).filter(function(v) { return typeof v === 'number' && !isNaN(v) && v >= 0; });
+    if (values.length < 1) { container.innerHTML = '<p class="chart-hint">无数据</p>'; return; }
+    const strokeColor = options.strokeColor || POSTS_COLOR;
+    const barColor = options.barColor || (strokeColor === COMMENTS_COLOR ? 'rgba(139,233,253,0.5)' : 'rgba(189,147,249,0.5)');
+    const curveColor = options.curveColor || strokeColor;
+    const xLabel = options.xLabel || '数量';
+    const minX = 0;
+    const maxX = d3.max(values) * 1.02 || 1;
+    const n = values.length;
+    const numBins = (options.numBins != null && options.numBins >= 5) ? Math.min(80, Math.max(5, options.numBins)) : Math.min(50, Math.max(10, Math.ceil(Math.sqrt(n) * 2)));
+    const binWidth = (maxX - minX) / numBins || 1;
+    const bins = [];
+    for (var b = 0; b < numBins; b++) bins.push({ x0: minX + b * binWidth, x1: minX + (b + 1) * binWidth, count: 0 });
+    values.forEach(function(v) {
+      var idx = Math.min(Math.floor((v - minX) / binWidth), numBins - 1);
+      if (idx < 0) idx = 0;
+      bins[idx].count++;
+    });
+    const maxCount = d3.max(bins, function(d) { return d.count; }) || 1;
+    const std = d3.deviation(values) || (maxX - minX) / 20;
+    const h = 1.06 * std * Math.pow(n, -0.2);
+    function gaussianKDE(x) {
+      var sum = 0;
+      for (var i = 0; i < n; i++) sum += Math.exp(-0.5 * Math.pow((x - values[i]) / h, 2));
+      return sum / (n * h * Math.sqrt(2 * Math.PI));
+    }
+    const gridN = 100;
+    const step = (maxX - minX) / (gridN - 1);
+    const curveData = [];
+    for (var i = 0; i < gridN; i++) {
+      var x = minX + i * step;
+      curveData.push({ x: x, y: gaussianKDE(x) });
+    }
+    const maxD = d3.max(curveData, function(d) { return d.y; }) || 1e-6;
+    const scaleCurveToCount = maxCount / maxD;
+    const chartHeight = 220;
+    const fullWidth = Math.max(400, container.clientWidth - 48);
+    const width = fullWidth - MARGIN.left - MARGIN.right;
+    const height = chartHeight - MARGIN.top - MARGIN.bottom;
+    container.innerHTML = '';
+    const xScale = d3.scaleLinear().domain([minX, maxX]).range([0, width]);
+    const yScale = d3.scaleLinear().domain([0, maxCount * 1.05]).range([height, 0]);
+    const svg = d3.select(container).append('svg').attr('class', 'd3-chart').attr('width', fullWidth).attr('height', chartHeight);
+    const g = svg.append('g').attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
+    g.selectAll('rect').data(bins).join('rect')
+      .attr('x', function(d) { return xScale(d.x0); })
+      .attr('y', function(d) { return yScale(d.count); })
+      .attr('width', Math.max(1, xScale(binWidth) - xScale(0) - 1))
+      .attr('height', function(d) { return height - yScale(d.count); })
+      .attr('fill', barColor)
+      .attr('stroke', curveColor)
+      .attr('stroke-width', 1)
+      .attr('rx', 2);
+    g.append('path').datum(curveData).attr('fill', 'none').attr('stroke', curveColor).attr('stroke-width', 2).attr('stroke-linejoin', 'round').attr('d', d3.line().x(function(d) { return xScale(d.x); }).y(function(d) { return yScale(d.y * scaleCurveToCount); }).curve(d3.curveMonotoneX));
+    svg.append('g').attr('class', 'x-axis').attr('transform', 'translate(' + MARGIN.left + ',' + (MARGIN.top + height) + ')').call(d3.axisBottom(xScale).tickFormat(d3.format(',.0f')).tickSizeOuter(0)).attr('font-size', AXIS_FONTSIZE).attr('color', '#c0caf5');
+    svg.append('g').attr('class', 'y-axis').attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')').call(d3.axisLeft(yScale).tickSizeOuter(0)).attr('font-size', AXIS_FONTSIZE).attr('color', '#c0caf5');
+    g.append('text').attr('x', width / 2).attr('y', height + 36).attr('text-anchor', 'middle').attr('font-size', '11px').attr('fill', '#565f89').text(xLabel);
+    g.append('text').attr('x', -8).attr('y', height / 2).attr('text-anchor', 'middle').attr('transform', 'rotate(-90)').attr('font-size', '11px').attr('fill', '#565f89').text('版块数');
+  }
+
+  function drawGroupedBarChart(containerId, labels, expected, actual) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    labels = labels && Array.isArray(labels) ? labels : [];
+    expected = expected && Array.isArray(expected) ? expected : [];
+    actual = actual && Array.isArray(actual) ? actual : [];
+    if (labels.length === 0) { container.innerHTML = '<p class="chart-hint">无数据</p>'; return; }
+    const data = labels.map((l, i) => ({ label: l, expected: expected[i] || 0, actual: actual[i] || 0 }));
+    const barHeight = BAR_HEIGHT;
+    const height = data.length * barHeight;
+    const fullWidth = Math.max(500, container.clientWidth - 48);
+    const width = fullWidth - MARGIN.left - MARGIN.right;
+
+    const visible = data.map(() => true);
+    let maxVal = d3.max(data, d => Math.max(d.expected, d.actual));
+    const xScale = d3.scaleLinear().domain([0, maxVal]).range([0, width]);
+    const yScale = d3.scaleBand().domain(data.map((_, i) => i)).range([0, height]).padding(0.3);
+
+    function updateAxisAndBars() {
+      const visData = data.filter((d, i) => visible[i]);
+      const visibleCount = visData.length;
+      maxVal = visibleCount ? d3.max(visData, d => Math.max(d.expected, d.actual)) : 0;
+      const displayIndex = [];
+      let k = 0;
+      for (let i = 0; i < data.length; i++) { displayIndex[i] = visible[i] ? k++ : -1; }
+
+      xScale.domain([0, maxVal]);
+      const newHeight = visibleCount * barHeight;
+      yScale.domain(d3.range(visibleCount)).range([0, newHeight]).padding(0.3);
+
+      g.selectAll('.row').each(function(d, i) {
+        const row = d3.select(this);
+        if (!visible[i]) { row.attr('display', 'none'); return; }
+        const j = displayIndex[i];
+        const bw = yScale.bandwidth();
+        row.attr('display', null)
+          .transition().duration(TRANSITION_DURATION).attr('transform', 'translate(0,' + yScale(j) + ')');
+        row.select('rect.expected').transition().duration(TRANSITION_DURATION).attr('width', xScale(d.expected)).attr('height', bw / 2 - 2);
+        row.select('rect.actual').transition().duration(TRANSITION_DURATION).attr('width', xScale(d.actual)).attr('y', bw / 2 + 2).attr('height', bw / 2 - 2);
+        row.select('text').attr('y', bw / 2);
+      });
+
+      svg.transition().duration(TRANSITION_DURATION).attr('height', newHeight + MARGIN.top + MARGIN.bottom);
+      svg.select('g.x-axis').attr('transform', 'translate(' + MARGIN.left + ',' + (MARGIN.top + newHeight) + ')').transition().duration(TRANSITION_DURATION).call(d3.axisBottom(xScale).tickFormat(d3.format(',')));
+    }
+
+    container.innerHTML = '';
+    const leg = document.createElement('div');
+    leg.className = 'd3-legend';
+    data.forEach((d, i) => {
+      const s = document.createElement('span');
+      s.style.borderLeft = '3px solid ' + COMMENTS_COLOR;
+      s.textContent = d.label;
+      s.dataset.index = i;
+      s.onclick = () => {
+        visible[i] = !visible[i];
+        s.classList.toggle('legend-hidden', !visible[i]);
+        updateAxisAndBars();
+      };
+      leg.appendChild(s);
+    });
+    const sep = document.createElement('span');
+    sep.style.marginLeft = '8px'; sep.style.opacity = '0.8'; sep.textContent = '| ';
+    leg.appendChild(sep);
+    const sExp = document.createElement('span'); sExp.style.borderLeft = '3px solid rgba(139,233,253,0.6)'; sExp.textContent = 'Expected '; leg.appendChild(sExp);
+    const sAct = document.createElement('span'); sAct.style.borderLeft = '3px solid ' + COMMENTS_COLOR; sAct.textContent = 'Actual'; leg.appendChild(sAct);
+    container.appendChild(leg);
+
+    const svg = d3.select(container).append('svg').attr('class', 'd3-chart').attr('width', fullWidth).attr('height', height + MARGIN.top + MARGIN.bottom);
+    const g = svg.append('g').attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
+
+    svg.append('g').attr('class', 'x-axis').attr('transform', 'translate(' + MARGIN.left + ',' + (MARGIN.top + height) + ')').call(d3.axisBottom(xScale).tickFormat(d3.format(','))).attr('font-size', AXIS_FONTSIZE).attr('color', '#c0caf5');
+
+    const row = g.selectAll('.row').data(data).join('g').attr('class', 'row').attr('transform', (d, i) => 'translate(0,' + yScale(i) + ')');
+    row.each(function(d) {
+      const r = d3.select(this);
+      const tip = d.label + '\nExpected: ' + d.expected.toLocaleString() + '\nActual: ' + d.actual.toLocaleString();
+      r.append('rect').attr('class', 'expected').attr('y', 0).attr('height', yScale.bandwidth() / 2 - 2).attr('width', xScale(d.expected)).attr('fill', 'rgba(139,233,253,0.6)').attr('rx', 2).style('cursor', 'pointer');
+      bindTooltipToNode(r.select('rect.expected').node(), tip);
+      r.append('rect').attr('class', 'actual').attr('y', yScale.bandwidth() / 2 + 2).attr('height', yScale.bandwidth() / 2 - 2).attr('width', xScale(d.actual)).attr('fill', COMMENTS_COLOR).attr('rx', 2).style('cursor', 'pointer');
+      bindTooltipToNode(r.select('rect.actual').node(), tip);
+      r.append('text').attr('x', -6).attr('y', yScale.bandwidth() / 2).attr('dy', '0.35em').attr('text-anchor', 'end').attr('font-size', AXIS_FONTSIZE).attr('fill', '#c0caf5').text(d.label).style('pointer-events', 'none');
+    });
+  }
+
+  function drawPie(containerId, labels, values, colors) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    labels = labels && Array.isArray(labels) ? labels : [];
+    values = values && Array.isArray(values) ? values : [];
+    colors = colors && Array.isArray(colors) ? colors : [COMMENTS_COLOR, POSTS_COLOR, '#565f89'];
+    const data = labels.map((l, i) => ({ label: l, value: Number(values[i]) || 0 }));
+    if (data.length === 0 || data.every(d => d.value === 0)) { container.innerHTML = '<p class="chart-hint">无数据</p>'; return; }
+    const size = Math.min(320, container.clientWidth - 48);
+    const radius = size / 2 - 20;
+
+    container.innerHTML = '';
+    const svg = d3.select(container).append('svg').attr('width', size).attr('height', size);
+    const pie = d3.pie().value(d => d.value)(data);
+    const arc = d3.arc().innerRadius(radius * 0.5).outerRadius(radius);
+
+    const g = svg.append('g').attr('transform', 'translate(' + size/2 + ',' + size/2 + ')');
+    const pathSel = g.selectAll('path').data(pie).join('path').attr('d', arc).attr('fill', (d, i) => colors[i]).attr('stroke', '#24283b').attr('stroke-width', 2).style('cursor', 'pointer');
+    pathSel.each(function(d) {
+      var content = d.data.label + '\n' + d.data.value.toLocaleString();
+      bindTooltipToNode(this, content);
+    });
+    g.selectAll('text').data(pie).join('text').attr('transform', d => 'translate(' + arc.centroid(d) + ')').attr('text-anchor', 'middle').attr('font-size', '12px').attr('fill', '#1a1b26').text(d => d.data.label + ' ' + d.data.value.toLocaleString());
+
+    const leg = document.createElement('div');
+    leg.className = 'd3-legend';
+    leg.style.marginTop = '8px';
+    labels.forEach((l, i) => { const s = document.createElement('span'); s.style.borderLeft = '3px solid ' + colors[i]; s.textContent = l; leg.appendChild(s); });
+    container.appendChild(leg);
+  }
+
+  function drawSimpleBarChart(containerId, labels, values, color) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    labels = labels && Array.isArray(labels) ? labels : [];
+    values = values && Array.isArray(values) ? values : [];
+    const data = labels.map((l, i) => ({ label: l, value: values[i] })).sort((a, b) => ((b.value || 0) - (a.value || 0)));
+    if (data.length === 0) { container.innerHTML = '<p class="chart-hint">无数据</p>'; return; }
+    const barHeight = 32;
+    const height = data.length * barHeight;
+    const fullWidth = Math.max(300, container.clientWidth - 48);
+    const width = fullWidth - MARGIN.left - MARGIN.right;
+    const xScale = d3.scaleLinear().domain([0, d3.max(data, d => d.value)]).range([0, width]);
+    const yScale = d3.scaleBand().domain(data.map(d => d.label)).range([0, height]).padding(0.25);
+
+    container.innerHTML = '';
+    const svg = d3.select(container).append('svg').attr('class', 'd3-chart').attr('width', fullWidth).attr('height', height + MARGIN.top + MARGIN.bottom);
+    const g = svg.append('g').attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
+    svg.append('g').attr('transform', 'translate(' + MARGIN.left + ',' + (MARGIN.top + height) + ')').call(d3.axisBottom(xScale)).attr('font-size', AXIS_FONTSIZE).attr('color', '#c0caf5');
+    const rectSel = g.selectAll('rect').data(data).join('rect').attr('y', d => yScale(d.label)).attr('height', yScale.bandwidth()).attr('width', d => xScale(d.value)).attr('fill', color).attr('rx', 2).style('cursor', 'pointer');
+    rectSel.each(function(d) {
+      var content = d.label + '\n' + (typeof d.value === 'number' ? d.value.toLocaleString() : d.value);
+      bindTooltipToNode(this, content);
+    });
+    g.selectAll('text').data(data).join('text').attr('x', -6).attr('y', d => yScale(d.label) + yScale.bandwidth()/2).attr('dy', '0.35em').attr('text-anchor', 'end').attr('font-size', AXIS_FONTSIZE).attr('fill', '#c0caf5').style('pointer-events', 'none').text(d => d.label);
+  }
+
+  function drawStackedBarChart(containerId, data, labelKey, matchKey, totalKey, options) {
+    options = options || {};
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    data = data && Array.isArray(data) ? data : [];
+    if (data.length === 0) { container.innerHTML = '<p class="chart-hint">无数据</p>'; return; }
+    const barHeight = options.barHeight || BAR_HEIGHT;
+    const height = data.length * barHeight;
+    const fullWidth = Math.max(400, container.clientWidth - 48);
+    const width = fullWidth - MARGIN.left - MARGIN.right;
+    const maxTotal = d3.max(data, d => d[totalKey] || 0);
+    const xScale = d3.scaleLinear().domain([0, maxTotal]).range([0, width]);
+    const yScale = d3.scaleBand().domain(data.map((d, i) => i)).range([0, height]).padding(0.25);
+    const matchColor = options.matchColor || COMMENTS_COLOR;
+    const restColor = options.restColor || '#3b4261';
+
+    container.innerHTML = '';
+    if (options.legend !== false) {
+      const leg = document.createElement('div');
+      leg.className = 'd3-legend';
+      leg.style.marginBottom = '8px';
+      const s1 = document.createElement('span'); s1.style.borderLeft = '3px solid ' + matchColor; s1.textContent = '符合'; leg.appendChild(s1);
+      const s2 = document.createElement('span'); s2.style.borderLeft = '3px solid ' + restColor; s2.textContent = '其余'; leg.appendChild(s2);
+      container.appendChild(leg);
+    }
+    const svg = d3.select(container).append('svg').attr('class', 'd3-chart').attr('width', fullWidth).attr('height', height + MARGIN.top + MARGIN.bottom);
+    const g = svg.append('g').attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
+    svg.append('g').attr('class', 'x-axis').attr('transform', 'translate(' + MARGIN.left + ',' + (MARGIN.top + height) + ')').call(d3.axisBottom(xScale).tickFormat(d3.format(','))).attr('font-size', AXIS_FONTSIZE).attr('color', '#c0caf5');
+    const row = g.selectAll('.row').data(data).join('g').attr('class', 'row').attr('transform', (d, i) => 'translate(0,' + yScale(i) + ')');
+    row.each(function(d, i) {
+      const r = d3.select(this);
+      const match = Number(d[matchKey]) || 0;
+      const total = Number(d[totalKey]) || 0;
+      const rest = Math.max(0, total - match);
+      const pct = total > 0 ? (100 * match / total).toFixed(1) : 0;
+      const tipMatch = (d[labelKey] || '') + '\n符合: ' + match.toLocaleString() + ' / ' + total.toLocaleString() + ' (' + pct + '%)';
+      const tipRest = (d[labelKey] || '') + '\n其余: ' + rest.toLocaleString();
+      r.append('rect').attr('class', 'stack-match').attr('y', 0).attr('height', yScale.bandwidth()).attr('x', 0).attr('width', xScale(match)).attr('fill', matchColor).attr('rx', 2).style('cursor', 'pointer');
+      bindTooltipToNode(r.select('rect.stack-match').node(), tipMatch);
+      r.append('rect').attr('class', 'stack-rest').attr('y', 0).attr('height', yScale.bandwidth()).attr('x', xScale(match)).attr('width', xScale(rest)).attr('fill', restColor).attr('rx', 2).style('cursor', 'pointer');
+      bindTooltipToNode(r.select('rect.stack-rest').node(), tipRest);
+      r.append('text').attr('x', -6).attr('y', yScale.bandwidth() / 2).attr('dy', '0.35em').attr('text-anchor', 'end').attr('font-size', AXIS_FONTSIZE).attr('fill', '#c0caf5').style('pointer-events', 'none').text(d[labelKey] || '');
+    });
+  }
+
+  function drawStackedBarChartHuman(containerId, data, labelKey, matchGreetingKey, matchDiscussionKey, totalKey) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    data = data && Array.isArray(data) ? data : [];
+    if (data.length === 0) { container.innerHTML = '<p class="chart-hint">无数据</p>'; return; }
+    const barHeight = BAR_HEIGHT;
+    const height = data.length * barHeight;
+    const fullWidth = Math.max(400, container.clientWidth - 48);
+    const width = fullWidth - MARGIN.left - MARGIN.right;
+    const maxTotal = d3.max(data, d => d[totalKey] || 0);
+    const xScale = d3.scaleLinear().domain([0, maxTotal]).range([0, width]);
+    const yScale = d3.scaleBand().domain(data.map((d, i) => i)).range([0, height]).padding(0.25);
+    const greetingColor = 'rgba(187,154,247,0.85)';
+    const discussionColor = '#9ece6a';
+    const restColor = '#3b4261';
+    container.innerHTML = '';
+    const leg = document.createElement('div');
+    leg.className = 'd3-legend';
+    leg.style.marginBottom = '8px';
+    const s1 = document.createElement('span'); s1.style.borderLeft = '3px solid ' + greetingColor; s1.textContent = '打招呼'; leg.appendChild(s1);
+    const s2 = document.createElement('span'); s2.style.borderLeft = '3px solid ' + discussionColor; s2.textContent = '讨论'; leg.appendChild(s2);
+    const s3 = document.createElement('span'); s3.style.borderLeft = '3px solid ' + restColor; s3.textContent = '其余'; leg.appendChild(s3);
+    container.appendChild(leg);
+    const svg = d3.select(container).append('svg').attr('class', 'd3-chart').attr('width', fullWidth).attr('height', height + MARGIN.top + MARGIN.bottom);
+    const g = svg.append('g').attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
+    svg.append('g').attr('class', 'x-axis').attr('transform', 'translate(' + MARGIN.left + ',' + (MARGIN.top + height) + ')').call(d3.axisBottom(xScale).tickFormat(d3.format(','))).attr('font-size', AXIS_FONTSIZE).attr('color', '#c0caf5');
+    const row = g.selectAll('.row').data(data).join('g').attr('class', 'row').attr('transform', (d, i) => 'translate(0,' + yScale(i) + ')');
+    row.each(function(d, i) {
+      const r = d3.select(this);
+      const gr = Number(d[matchGreetingKey]) || 0;
+      const disc = Number(d[matchDiscussionKey]) || 0;
+      const total = Number(d[totalKey]) || 0;
+      const rest = Math.max(0, total - gr - disc);
+      const x0 = 0;
+      const x1 = xScale(gr);
+      const x2 = xScale(gr + disc);
+      const x3 = xScale(total);
+      const tipGr = (d[labelKey] || '') + '\n打招呼: ' + gr.toLocaleString();
+      const tipDisc = (d[labelKey] || '') + '\n讨论: ' + disc.toLocaleString();
+      const tipRest = (d[labelKey] || '') + '\n其余: ' + rest.toLocaleString();
+      r.append('rect').attr('class', 'stack-greeting').attr('y', 0).attr('height', yScale.bandwidth()).attr('x', x0).attr('width', x1).attr('fill', greetingColor).attr('rx', 2).style('cursor', 'pointer');
+      bindTooltipToNode(r.select('rect.stack-greeting').node(), tipGr);
+      r.append('rect').attr('class', 'stack-discussion').attr('y', 0).attr('height', yScale.bandwidth()).attr('x', x1).attr('width', x2 - x1).attr('fill', discussionColor).attr('rx', 2).style('cursor', 'pointer');
+      bindTooltipToNode(r.select('rect.stack-discussion').node(), tipDisc);
+      r.append('rect').attr('class', 'stack-rest').attr('y', 0).attr('height', yScale.bandwidth()).attr('x', x2).attr('width', x3 - x2).attr('fill', restColor).attr('rx', 2).style('cursor', 'pointer');
+      bindTooltipToNode(r.select('rect.stack-rest').node(), tipRest);
+      r.append('text').attr('x', -6).attr('y', yScale.bandwidth() / 2).attr('dy', '0.35em').attr('text-anchor', 'end').attr('font-size', AXIS_FONTSIZE).attr('fill', '#c0caf5').style('pointer-events', 'none').text(d[labelKey] || '');
+    });
+  }
+
+  function drawScatter(containerId, data, xKey, yKey, labelKey, options) {
+    options = options || {};
+    labelKey = labelKey || 'name';
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    data = data && Array.isArray(data) ? data : [];
+    if (data.length === 0) { container.innerHTML = '<p class="chart-hint">无数据</p>'; return; }
+    const topNLabels = (options.topNLabels != null && options.topNLabels >= 0) ? options.topNLabels : 0;
+    const fullWidth = Math.max(400, container.clientWidth - 48);
+    const fullHeight = 360;
+    const width = fullWidth - MARGIN.left - MARGIN.right;
+    const height = fullHeight - MARGIN.top - MARGIN.bottom;
+
+    const visible = data.map(() => true);
+    const xScale = d3.scaleLinear().domain([0, d3.max(data, d => d[xKey])]).range([0, width]);
+    const yScale = d3.scaleLinear().domain([0, d3.max(data, d => d[yKey])]).range([height, 0]);
+
+    function updateScatterAxesAndPoints() {
+      const visData = data.filter((d, i) => visible[i]);
+      if (!visData.length) return;
+      const xExtent = d3.extent(visData, d => d[xKey]);
+      const yExtent = d3.extent(visData, d => d[yKey]);
+      xScale.domain([Math.min(0, xExtent[0]), xExtent[1]]);
+      yScale.domain([Math.min(0, yExtent[0]), yExtent[1]]);
+      svg.select('g.x-axis').transition().duration(TRANSITION_DURATION).call(d3.axisBottom(xScale));
+      svg.select('g.y-axis').transition().duration(TRANSITION_DURATION).call(d3.axisLeft(yScale));
+      circles.transition().duration(TRANSITION_DURATION).attr('cx', d => xScale(d[xKey])).attr('cy', d => yScale(d[yKey]));
+      if (topNLabels > 0 && labelGroup) {
+        const topData = data.slice().map(function(d, i) { return { d: d, i: i, total: (Number(d[xKey]) || 0) + (Number(d[yKey]) || 0) }; }).filter(function(x) { return visible[x.i]; }).sort(function(a, b) { return b.total - a.total; }).slice(0, topNLabels).map(function(x) { return x.d; });
+        labelGroup.selectAll('text').data(topData).join('text').attr('x', function(d) { return xScale(d[xKey]) + 6; }).attr('y', function(d) { return yScale(d[yKey]) + 4; }).attr('font-size', '10px').attr('fill', '#c0caf5').text(function(d) { return d[labelKey] != null ? d[labelKey] : ''; });
+      }
+    }
+
+    container.innerHTML = '';
+    const leg = document.createElement('div');
+    leg.className = 'd3-legend';
+    leg.style.marginBottom = '8px';
+    data.forEach((d, i) => {
+      const s = document.createElement('span');
+      s.style.borderLeft = '3px solid rgba(187,154,247,0.8)';
+      s.textContent = d[labelKey] != null ? d[labelKey] : ('#' + i);
+      s.dataset.index = i;
+      s.onclick = () => {
+        visible[i] = !visible[i];
+        s.classList.toggle('legend-hidden', !visible[i]);
+        circles.filter((_, j) => j === i).attr('display', visible[i] ? null : 'none');
+        updateScatterAxesAndPoints();
+      };
+      leg.appendChild(s);
+    });
+    container.appendChild(leg);
+
+    const svg = d3.select(container).append('svg').attr('class', 'd3-chart').attr('width', fullWidth).attr('height', fullHeight);
+    const g = svg.append('g').attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
+
+    svg.append('g').attr('class', 'y-axis').attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')').call(d3.axisLeft(yScale)).attr('font-size', AXIS_FONTSIZE).attr('color', '#c0caf5');
+    svg.append('g').attr('class', 'x-axis').attr('transform', 'translate(' + MARGIN.left + ',' + (MARGIN.top + height) + ')').call(d3.axisBottom(xScale)).attr('font-size', AXIS_FONTSIZE).attr('color', '#c0caf5');
+
+    const circles = g.selectAll('circle').data(data).join('circle').attr('data-index', (d, i) => i).attr('cx', d => xScale(d[xKey])).attr('cy', d => yScale(d[yKey])).attr('r', 4).attr('fill', 'rgba(189,147,249,0.7)').attr('stroke', POSTS_COLOR).style('cursor', 'pointer');
+    circles.each(function(d) {
+      var content = (d[labelKey] != null ? d[labelKey] : '') + '\n' + xKey + ': ' + (d[xKey] != null ? Number(d[xKey]).toLocaleString() : '') + '\n' + yKey + ': ' + (d[yKey] != null ? Number(d[yKey]).toLocaleString() : '');
+      bindTooltipToNode(this, content);
+    });
+    var labelGroup = null;
+    if (topNLabels > 0) {
+      labelGroup = g.append('g').attr('class', 'scatter-labels');
+      const topData = data.slice().map(function(d, i) { return { d: d, i: i, total: (Number(d[xKey]) || 0) + (Number(d[yKey]) || 0) }; }).filter(function(x) { return visible[x.i]; }).sort(function(a, b) { return b.total - a.total; }).slice(0, topNLabels).map(function(x) { return x.d; });
+      labelGroup.selectAll('text').data(topData).join('text').attr('x', function(d) { return xScale(d[xKey]) + 6; }).attr('y', function(d) { return yScale(d[yKey]) + 4; }).attr('font-size', '10px').attr('fill', '#c0caf5').text(function(d) { return d[labelKey] != null ? d[labelKey] : ''; });
+    }
+  }
+
+  const urlBase = '';
+  Promise.all([
+    fetch(urlBase + 'comments_by_submolt.json').then(function(r) { return r.ok ? r.json() : []; }),
+    fetch(urlBase + 'comments_difference_statistics.json').then(function(r) { return r.ok ? r.json() : {}; }),
+    fetch(urlBase + 'comments_statistics.json').then(function(r) { return r.ok ? r.json() : {}; }),
+    fetch(urlBase + 'posts_statistics.json').then(function(r) { return r.ok ? r.json() : {}; }),
+    fetch(urlBase + 'submolts_sorted_by_posts.json').then(function(r) { return r.ok ? r.json() : []; }),
+    fetch(urlBase + 'human_relation_summary.json').then(function(r) { return r.ok ? r.json() : {}; }),
+    fetch(urlBase + 'human_posts_sentences.json').then(function(r) { return r.ok ? r.json() : []; }),
+    fetch(urlBase + 'human_comments_sentences.json').then(function(r) { return r.ok ? r.json() : []; })
+  ]).then(function(results) {
+  const commentsBySubmolt = results[0] || [];
+  const diffStats = results[1] || {};
+  const commentsStats = results[2] || {};
+  const postsStats = results[3] || {};
+  const submoltsSorted = results[4] || [];
+  const humanSummary = results[5] || {};
+  const postsHumanCounts = humanSummary.posts_human_counts || {};
+  const commentsHumanCounts = humanSummary.comments_human_counts || {};
+  const postsHumanGreeting = humanSummary.posts_human_greeting || {};
+  const postsHumanDiscussion = humanSummary.posts_human_discussion || {};
+  const commentsHumanGreeting = humanSummary.comments_human_greeting || {};
+  const commentsHumanDiscussion = humanSummary.comments_human_discussion || {};
+  const humanPostsList = results[6] || [];
+  const humanCommentsList = results[7] || [];
+  function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+  function boldKeyword(sent, kw) { if (!kw) return esc(sent); var i = (sent || '').toLowerCase().indexOf((kw || '').toLowerCase()); if (i < 0) return esc(sent); return esc(sent.slice(0,i)) + '<strong>' + esc(sent.slice(i,i+kw.length)) + '</strong>' + esc(sent.slice(i+kw.length)); }
+  function fullEsc(f) { return (f || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;').replace(/\n/g,'&#10;'); }
+  var postsBySubmolt = {};
+  humanPostsList.forEach(function(r) { var s = r.submolt; if (!postsBySubmolt[s]) postsBySubmolt[s] = []; postsBySubmolt[s].push(r); });
+  var postsOrder = Object.keys(postsBySubmolt).sort(function(a,b) { return (postsBySubmolt[b].length - postsBySubmolt[a].length) || a.localeCompare(b); });
+  var selPosts = document.getElementById('human-submolt-posts');
+  if (selPosts) { selPosts.innerHTML = ''; postsOrder.forEach(function(s) { var opt = document.createElement('option'); opt.value = s; opt.textContent = s.replace(/-/g, ' ') + ' (' + postsBySubmolt[s].length + ' 条)'; selPosts.appendChild(opt); }); }
+  var tbodyPosts = document.querySelector('#human-table-posts tbody');
+  if (tbodyPosts) { tbodyPosts.innerHTML = ''; humanPostsList.forEach(function(r) { var fullEscaped = fullEsc(r.full); if (r.title) fullEscaped = fullEsc('Title: ' + r.title + '\n\n') + fullEscaped; var row = document.createElement('tr'); row.className = r.is_greeting ? 'human-row greeting-row' : 'human-row'; row.setAttribute('data-submolt', r.submolt); row.setAttribute('data-greeting', r.is_greeting ? '1' : '0'); row.setAttribute('data-tooltip', fullEscaped); row.innerHTML = '<td class="human-type">' + (r.is_greeting ? '打招呼' : '讨论') + '</td><td class="human-sentence">' + boldKeyword(r.sentence, r.keyword) + '</td><td>' + esc(r.author || '') + '</td><td>' + esc((r.created_at || '').slice(0,19)) + '</td>'; tbodyPosts.appendChild(row); }); }
+  var commentsBySubmoltData = {};
+  humanCommentsList.forEach(function(r) { var s = r.submolt; if (!commentsBySubmoltData[s]) commentsBySubmoltData[s] = []; commentsBySubmoltData[s].push(r); });
+  var commentsOrder = Object.keys(commentsBySubmoltData).sort(function(a,b) { return (commentsBySubmoltData[b].length - commentsBySubmoltData[a].length) || a.localeCompare(b); });
+  var selComments = document.getElementById('human-submolt-comments');
+  if (selComments) { selComments.innerHTML = ''; commentsOrder.forEach(function(s) { var opt = document.createElement('option'); opt.value = s; opt.textContent = s.replace(/-/g, ' ') + ' (' + commentsBySubmoltData[s].length + ' 条)'; selComments.appendChild(opt); }); }
+  var tbodyComments = document.querySelector('#human-table-comments tbody');
+  if (tbodyComments) { tbodyComments.innerHTML = ''; humanCommentsList.forEach(function(r) { var fullEscaped = fullEsc(r.full); if (r.post_title) fullEscaped = fullEsc('Post: ' + (r.post_title || '') + '\n\n') + fullEscaped; var row = document.createElement('tr'); row.className = 'human-row'; row.setAttribute('data-submolt', r.submolt); row.setAttribute('data-tooltip', fullEscaped); row.innerHTML = '<td class="human-sentence">' + boldKeyword(r.sentence, r.keyword) + '</td><td>' + esc(r.author || '') + '</td><td>' + esc((r.created_at || '').slice(0,19)) + '</td>'; tbodyComments.appendChild(row); }); }
+
+  try {
+  const excludeNames = { general: true, introductions: true };
+  const overviewPostCounts = (submoltsSorted || []).map(function(x) { return Number(x.post_count) || 0; }).filter(function(v) { return v >= 0; });
+  const overviewCommentCounts = (commentsBySubmolt || []).map(function(d) { return Number(d.comment_count) || 0; }).filter(function(v) { return v >= 0; });
+  const overviewPostCountsExcluded = (submoltsSorted || []).filter(function(s) { return !excludeNames[(s.name || '').toLowerCase()]; }).map(function(x) { return Number(x.post_count) || 0; }).filter(function(v) { return v >= 0; });
+  const overviewCommentCountsExcluded = (commentsBySubmolt || []).filter(function(d) { return !excludeNames[(d.submolt || '').toLowerCase()]; }).map(function(d) { return Number(d.comment_count) || 0; }).filter(function(v) { return v >= 0; });
+  if (document.getElementById('wrapOverviewPostsDist') && overviewPostCounts.length >= 1) drawHistogramWithDensity('wrapOverviewPostsDist', overviewPostCounts, { strokeColor: POSTS_COLOR, xLabel: '帖子数' });
+  if (document.getElementById('wrapOverviewCommentsDist') && overviewCommentCounts.length >= 1) drawHistogramWithDensity('wrapOverviewCommentsDist', overviewCommentCounts, { strokeColor: COMMENTS_COLOR, xLabel: '评论数' });
+  if (document.getElementById('wrapOverviewPostsDistExcluded') && overviewPostCountsExcluded.length >= 1) drawHistogramWithDensity('wrapOverviewPostsDistExcluded', overviewPostCountsExcluded, { strokeColor: POSTS_COLOR, xLabel: '帖子数' });
+  if (document.getElementById('wrapOverviewCommentsDistExcluded') && overviewCommentCountsExcluded.length >= 1) drawHistogramWithDensity('wrapOverviewCommentsDistExcluded', overviewCommentCountsExcluded, { strokeColor: COMMENTS_COLOR, xLabel: '评论数' });
+  } catch (e) { console.warn('wrapOverviewCharts', e); }
+
+  try {
+  const commentsData = (commentsBySubmolt || []).slice().sort((a, b) => ((b.comment_count||0) - (a.comment_count||0))).map((d) => ({ submolt: d.submolt, comment_count: d.comment_count }));
+  drawHorizontalBarChart('wrapCommentsBySubmolt', commentsData, 'comment_count', 'submolt', d3.max(commentsData, d => d.comment_count), { singleColor: COMMENTS_COLOR });
+  } catch (e) { console.warn('wrapCommentsBySubmolt', e); }
+
+  try {
+  const compData = Object.entries(diffStats.submolt_summary || {}).filter(([k,v]) => typeof (v && v.completion_rate) === 'number').sort((a,b) => (b[1].completion_rate||0) - (a[1].completion_rate||0)).map(([k,v]) => ({ submolt: k, completion_rate: v.completion_rate }));
+  drawHorizontalBarChart('wrapCompletionRate', compData, 'completion_rate', 'submolt', 100, { singleColor: COMMENTS_COLOR });
+  } catch (e) { console.warn('wrapCompletionRate', e); }
+
+  try {
+  const byPost = Object.entries(diffStats.submolt_summary || {}).filter(([k,v]) => typeof (v && v.completion_rate) === 'number').sort((a,b) => (b[1].post_count||0) - (a[1].post_count||0));
+  drawGroupedBarChart('wrapExpectedVsActual', byPost.map(([k]) => k), byPost.map(([,v]) => (v && v.expected_count) != null ? v.expected_count : 0), byPost.map(([,v]) => (v && v.actual_count) != null ? v.actual_count : 0));
+  } catch (e) { console.warn('wrapExpectedVsActual', e); }
+
+  try {
+  drawPie('wrapPieMatch', ['Exact match', 'Less than expected', 'More than expected'], [diffStats.exact_match_posts, diffStats.less_than_posts, diffStats.more_than_posts], [COMMENTS_COLOR, 'rgba(139,233,253,0.6)', '#565f89']);
+  } catch (e) { console.warn('wrapPieMatch', e); }
+
+  var diffSummaryEl = document.getElementById('diffSummary');
+  if (diffSummaryEl) diffSummaryEl.innerHTML = ['Total posts: ' + (diffStats.total_posts||0).toLocaleString(), 'Total expected comments: ' + (diffStats.total_expected_comments||0).toLocaleString(), 'Total actual comments: ' + (diffStats.total_actual_comments||0).toLocaleString(), 'Overall completion rate: ' + (diffStats.completion_rate != null ? diffStats.completion_rate.toFixed(2) : '-') + '%', 'Avg difference per post: ' + (diffStats.avg_difference != null ? diffStats.avg_difference.toFixed(2) : '-')].join('<br>');
+
+
+  try {
+  const postsData = (submoltsSorted || []).slice().sort((a, b) => ((b.post_count||0) - (a.post_count||0))).map((x) => ({ name: x.display_name, post_count: x.post_count }));
+  drawHorizontalBarChart('wrapSubmoltsPosts', postsData, 'post_count', 'name', d3.max(postsData, d => d.post_count), { singleColor: POSTS_COLOR });
+  } catch (e) { console.warn('wrapSubmoltsPosts', e); }
+
+  try {
+  const subsSorted = [...(submoltsSorted || [])].sort((a, b) => ((b.subscriber_count||0) - (a.subscriber_count||0))).map((x) => ({ name: x.display_name, subscriber_count: x.subscriber_count }));
+  drawHorizontalBarChart('wrapSubmoltsSubs', subsSorted, 'subscriber_count', 'name', d3.max(subsSorted, d => d.subscriber_count), { singleColor: '#7aa2f7' });
+  } catch (e) { console.warn('wrapSubmoltsSubs', e); }
+
+  try {
+  var commentBySubmolt = {};
+  (commentsBySubmolt || []).forEach(function(d) { commentBySubmolt[(d.submolt || '').toLowerCase()] = Number(d.comment_count) || 0; });
+  var excludeNames = { general: true, introductions: true };
+  var postsVsCommentsData = (submoltsSorted || []).filter(function(s) { return !excludeNames[(s.name || '').toLowerCase()]; }).map(function(s) { return { display_name: s.display_name || s.name, post_count: Number(s.post_count) || 0, comment_count: commentBySubmolt[(s.name || '').toLowerCase()] || 0 }; }).filter(function(d) { return d.post_count >= 0 && d.comment_count >= 0; });
+  drawScatter('wrapPostsVsComments', postsVsCommentsData, 'post_count', 'comment_count', 'display_name', { topNLabels: 10 });
+  } catch (e) { console.warn('wrapPostsVsComments', e); }
+
+  try {
+  const postsAll = (submoltsSorted || []).map(function(s) { return { label: s.display_name, submolt: s.name, match_greeting: (postsHumanGreeting[s.name]||0), match_discussion: (postsHumanDiscussion[s.name]||0), total: s.post_count||0 }; });
+  const postsStackedData = postsAll.filter(function(d) { return (d.match_greeting + d.match_discussion) > 0; }).sort(function(a,b) { return (b.match_greeting + b.match_discussion) - (a.match_greeting + a.match_discussion); });
+  const postsZeroNames = postsAll.filter(function(d) { return (d.match_greeting + d.match_discussion) === 0; }).map(function(d) { return d.label; });
+  if (postsStackedData.length) drawStackedBarChartHuman('wrapPostsHumanStacked', postsStackedData, 'label', 'match_greeting', 'match_discussion', 'total');
+  var postsZeroEl = document.getElementById('postsHumanZeroSubmolts');
+  if (postsZeroEl) postsZeroEl.textContent = postsZeroNames.length ? ('以下版块与人类关系表述条数为 0，不参与上图：' + postsZeroNames.join('、')) : '';
+  } catch (e) { console.warn('postsHumanCharts', e); }
+
+  try {
+  const commentsAll = (commentsBySubmolt || []).map(function(d) { return { label: d.submolt, submolt: d.submolt, match: (commentsHumanCounts[d.submolt]||0), total: d.comment_count||0 }; });
+  const commentsStackedData = commentsAll.filter(function(d) { return d.match > 0; }).sort(function(a,b) { return b.match - a.match; });
+  const commentsZeroNames = commentsAll.filter(function(d) { return d.match === 0; }).map(function(d) { return d.label; });
+  if (commentsStackedData.length) drawStackedBarChart('wrapCommentsHumanStacked', commentsStackedData, 'label', 'match', 'total', { legend: true });
+  var commentsZeroEl = document.getElementById('commentsHumanZeroSubmolts');
+  if (commentsZeroEl) commentsZeroEl.textContent = commentsZeroNames.length ? ('以下版块与人类关系表述条数为 0，不参与上图：' + commentsZeroNames.join('、')) : '';
+  } catch (e) { console.warn('commentsHumanCharts', e); }
+
+  function filterHumanTable(sectionId) {
+    var sel = document.getElementById('human-submolt-' + sectionId);
+    var chk = document.getElementById('human-hide-greeting-' + sectionId);
+    var tbl = document.getElementById('human-table-' + sectionId);
+    if (!sel || !tbl) return;
+    var submolt = sel.value;
+    var hideGreeting = chk && chk.checked;
+    var rows = tbl.querySelectorAll('tbody tr.human-row');
+    rows.forEach(function(tr) {
+      var sm = tr.getAttribute('data-submolt');
+      var gr = tr.getAttribute('data-greeting');
+      if (sm === submolt) {
+        var ok = !hideGreeting || gr === '0';
+        tr.style.display = ok ? '' : 'none';
+      } else {
+        tr.style.display = 'none';
+      }
+    });
+  }
+  ['posts', 'comments'].forEach(function(sectionId) {
+    var sel = document.getElementById('human-submolt-' + sectionId);
+    var chk = document.getElementById('human-hide-greeting-' + sectionId);
+    if (sel) { sel.addEventListener('change', function() { filterHumanTable(sectionId); }); filterHumanTable(sectionId); }
+    if (chk) chk.addEventListener('change', function() { filterHumanTable(sectionId); });
+  });
+
+  document.querySelectorAll('.human-row').forEach(function(row) {
+    var tip = row.getAttribute('data-tooltip') || '';
+    row.addEventListener('mouseover', function(ev) { showTooltip(ev, tip.replace(/&#10;/g, '\n')); });
+    row.addEventListener('mousemove', moveTooltip);
+    row.addEventListener('mouseout', hideTooltip);
+  });
+  }).catch(function(e) { console.error('Load data failed', e); });
+})();
+  </script>
+</body>
+</html>

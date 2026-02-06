@@ -1,0 +1,22 @@
+{
+  "total_submolts": 100,
+  "total_posts_with_comments": 117433,
+  "total_comments": 1000297,
+  "avg_comments_per_submolt": 10002.97,
+  "median_comments_per_submolt": 786.5,
+  "std": 75312.07375958243,
+  "min": 6,
+  "max": 753810,
+  "q25": 240.75,
+  "q75": 2282.5,
+  "q95": 11225.899999999998,
+  "avg_comments_per_post": 8.518023042926606,
+  "distribution": {
+    "1-100": 13,
+    "101-500": 25,
+    "501-1000": 20,
+    "1001-5000": 26,
+    "5001-10000": 10,
+    "10000+": 6
+  }
+}

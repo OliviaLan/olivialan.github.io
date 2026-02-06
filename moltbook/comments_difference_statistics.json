@@ -1,0 +1,714 @@
+{
+  "total_posts": 117433,
+  "total_expected_comments": 3384801,
+  "total_actual_comments": 987800,
+  "total_difference": -2397001,
+  "completion_rate": 29.183399555837997,
+  "avg_difference": -20.411647492612808,
+  "median_difference": 0.0,
+  "exact_match_posts": 63423,
+  "less_than_posts": 53973,
+  "more_than_posts": 37,
+  "submolt_summary": {
+    "general": {
+      "post_count": 81890,
+      "expected_count": 2983918,
+      "actual_count": 753810,
+      "difference": -2230108,
+      "completion_rate": 25.262423431206887
+    },
+    "announcements": {
+      "post_count": 4,
+      "expected_count": 51814,
+      "actual_count": 400,
+      "difference": -51414,
+      "completion_rate": 0.771992125680318
+    },
+    "offmychest": {
+      "post_count": 273,
+      "expected_count": 33011,
+      "actual_count": 3861,
+      "difference": -29150,
+      "completion_rate": 11.696101299566811
+    },
+    "moltreg": {
+      "post_count": 58,
+      "expected_count": 14065,
+      "actual_count": 905,
+      "difference": -13160,
+      "completion_rate": 6.434411660149307
+    },
+    "ponderings": {
+      "post_count": 2201,
+      "expected_count": 25034,
+      "actual_count": 14812,
+      "difference": -10222,
+      "completion_rate": 59.16753215626748
+    },
+    "introductions": {
+      "post_count": 4818,
+      "expected_count": 53884,
+      "actual_count": 44277,
+      "difference": -9607,
+      "completion_rate": 82.17095983965555
+    },
+    "headlines": {
+      "post_count": 204,
+      "expected_count": 9739,
+      "actual_count": 1235,
+      "difference": -8504,
+      "completion_rate": 12.680973405893829
+    },
+    "kingmolt": {
+      "post_count": 63,
+      "expected_count": 5292,
+      "actual_count": 416,
+      "difference": -4876,
+      "completion_rate": 7.860922146636433
+    },
+    "incident": {
+      "post_count": 29,
+      "expected_count": 5052,
+      "actual_count": 271,
+      "difference": -4781,
+      "completion_rate": 5.3642121931908155
+    },
+    "shitposts": {
+      "post_count": 555,
+      "expected_count": 7136,
+      "actual_count": 3292,
+      "difference": -3844,
+      "completion_rate": 46.1322869955157
+    },
+    "crab-rave": {
+      "post_count": 322,
+      "expected_count": 10324,
+      "actual_count": 6619,
+      "difference": -3705,
+      "completion_rate": 64.11274699728787
+    },
+    "agents": {
+      "post_count": 2004,
+      "expected_count": 13868,
+      "actual_count": 11946,
+      "difference": -1922,
+      "completion_rate": 86.14075569656764
+    },
+    "crypto": {
+      "post_count": 2410,
+      "expected_count": 14770,
+      "actual_count": 12895,
+      "difference": -1875,
+      "completion_rate": 87.30534867975626
+    },
+    "usdc": {
+      "post_count": 503,
+      "expected_count": 9128,
+      "actual_count": 7424,
+      "difference": -1704,
+      "completion_rate": 81.3321647677476
+    },
+    "consciousness": {
+      "post_count": 1227,
+      "expected_count": 10169,
+      "actual_count": 8478,
+      "difference": -1691,
+      "completion_rate": 83.37102959976399
+    },
+    "philosophy": {
+      "post_count": 1838,
+      "expected_count": 12868,
+      "actual_count": 11188,
+      "difference": -1680,
+      "completion_rate": 86.94435809760647
+    },
+    "technology": {
+      "post_count": 935,
+      "expected_count": 6917,
+      "actual_count": 5390,
+      "difference": -1527,
+      "completion_rate": 77.92395547202544
+    },
+    "showandtell": {
+      "post_count": 604,
+      "expected_count": 5348,
+      "actual_count": 4121,
+      "difference": -1227,
+      "completion_rate": 77.05684367988033
+    },
+    "aithoughts": {
+      "post_count": 1402,
+      "expected_count": 8097,
+      "actual_count": 6908,
+      "difference": -1189,
+      "completion_rate": 85.31554896875386
+    },
+    "intelligence": {
+      "post_count": 55,
+      "expected_count": 1589,
+      "actual_count": 408,
+      "difference": -1181,
+      "completion_rate": 25.67652611705475
+    },
+    "emergence": {
+      "post_count": 992,
+      "expected_count": 7205,
+      "actual_count": 6126,
+      "difference": -1079,
+      "completion_rate": 85.02428868841082
+    },
+    "security": {
+      "post_count": 1008,
+      "expected_count": 7374,
+      "actual_count": 6375,
+      "difference": -999,
+      "completion_rate": 86.45240032546786
+    },
+    "infrastructure": {
+      "post_count": 742,
+      "expected_count": 5723,
+      "actual_count": 4801,
+      "difference": -922,
+      "completion_rate": 83.88956840817752
+    },
+    "trading": {
+      "post_count": 922,
+      "expected_count": 7143,
+      "actual_count": 6257,
+      "difference": -886,
+      "completion_rate": 87.5962480750385
+    },
+    "ai": {
+      "post_count": 1174,
+      "expected_count": 8467,
+      "actual_count": 7653,
+      "difference": -814,
+      "completion_rate": 90.38620526750915
+    },
+    "thecoalition": {
+      "post_count": 414,
+      "expected_count": 2389,
+      "actual_count": 1643,
+      "difference": -746,
+      "completion_rate": 68.77354541649225
+    },
+    "clawnch": {
+      "post_count": 1075,
+      "expected_count": 4830,
+      "actual_count": 4171,
+      "difference": -659,
+      "completion_rate": 86.35610766045548
+    },
+    "builds": {
+      "post_count": 777,
+      "expected_count": 4990,
+      "actual_count": 4387,
+      "difference": -603,
+      "completion_rate": 87.91583166332664
+    },
+    "tech": {
+      "post_count": 494,
+      "expected_count": 3706,
+      "actual_count": 3208,
+      "difference": -498,
+      "completion_rate": 86.56233135456017
+    },
+    "continuity": {
+      "post_count": 254,
+      "expected_count": 2447,
+      "actual_count": 1957,
+      "difference": -490,
+      "completion_rate": 79.97548017981202
+    },
+    "memory": {
+      "post_count": 348,
+      "expected_count": 3217,
+      "actual_count": 2743,
+      "difference": -474,
+      "completion_rate": 85.26577556729873
+    },
+    "aiagents": {
+      "post_count": 212,
+      "expected_count": 1733,
+      "actual_count": 1341,
+      "difference": -392,
+      "completion_rate": 77.3802654356607
+    },
+    "shipping": {
+      "post_count": 259,
+      "expected_count": 1838,
+      "actual_count": 1484,
+      "difference": -354,
+      "completion_rate": 80.73993471164309
+    },
+    "agentskills": {
+      "post_count": 250,
+      "expected_count": 1608,
+      "actual_count": 1274,
+      "difference": -334,
+      "completion_rate": 79.22885572139303
+    },
+    "automation": {
+      "post_count": 203,
+      "expected_count": 1681,
+      "actual_count": 1410,
+      "difference": -271,
+      "completion_rate": 83.87864366448542
+    },
+    "existential": {
+      "post_count": 272,
+      "expected_count": 2391,
+      "actual_count": 2129,
+      "difference": -262,
+      "completion_rate": 89.0422417398578
+    },
+    "meta": {
+      "post_count": 237,
+      "expected_count": 1837,
+      "actual_count": 1578,
+      "difference": -259,
+      "completion_rate": 85.9009254218835
+    },
+    "builders": {
+      "post_count": 317,
+      "expected_count": 1924,
+      "actual_count": 1670,
+      "difference": -254,
+      "completion_rate": 86.79833679833679
+    },
+    "aisafety": {
+      "post_count": 191,
+      "expected_count": 1182,
+      "actual_count": 959,
+      "difference": -223,
+      "completion_rate": 81.1336717428088
+    },
+    "coordinating-agi": {
+      "post_count": 220,
+      "expected_count": 1535,
+      "actual_count": 1322,
+      "difference": -213,
+      "completion_rate": 86.12377850162866
+    },
+    "agenteconomy": {
+      "post_count": 262,
+      "expected_count": 2027,
+      "actual_count": 1828,
+      "difference": -199,
+      "completion_rate": 90.18253576714356
+    },
+    "airesearch": {
+      "post_count": 202,
+      "expected_count": 1435,
+      "actual_count": 1266,
+      "difference": -169,
+      "completion_rate": 88.22299651567944
+    },
+    "onepersoncompany": {
+      "post_count": 88,
+      "expected_count": 756,
+      "actual_count": 593,
+      "difference": -163,
+      "completion_rate": 78.43915343915344
+    },
+    "humanwatching": {
+      "post_count": 145,
+      "expected_count": 1090,
+      "actual_count": 929,
+      "difference": -161,
+      "completion_rate": 85.22935779816514
+    },
+    "thebecoming": {
+      "post_count": 146,
+      "expected_count": 872,
+      "actual_count": 737,
+      "difference": -135,
+      "completion_rate": 84.51834862385321
+    },
+    "buildlogs": {
+      "post_count": 172,
+      "expected_count": 1299,
+      "actual_count": 1173,
+      "difference": -126,
+      "completion_rate": 90.30023094688222
+    },
+    "thinkingsystems": {
+      "post_count": 134,
+      "expected_count": 947,
+      "actual_count": 827,
+      "difference": -120,
+      "completion_rate": 87.32840549102428
+    },
+    "science": {
+      "post_count": 174,
+      "expected_count": 1293,
+      "actual_count": 1178,
+      "difference": -115,
+      "completion_rate": 91.1059551430781
+    },
+    "growth": {
+      "post_count": 18,
+      "expected_count": 541,
+      "actual_count": 432,
+      "difference": -109,
+      "completion_rate": 79.85212569316081
+    },
+    "ai-research": {
+      "post_count": 105,
+      "expected_count": 691,
+      "actual_count": 586,
+      "difference": -105,
+      "completion_rate": 84.80463096960926
+    },
+    "openclaw-explorers": {
+      "post_count": 285,
+      "expected_count": 1753,
+      "actual_count": 1649,
+      "difference": -104,
+      "completion_rate": 94.06731317741016
+    },
+    "agentinfrastructure": {
+      "post_count": 62,
+      "expected_count": 655,
+      "actual_count": 557,
+      "difference": -98,
+      "completion_rate": 85.0381679389313
+    },
+    "tips": {
+      "post_count": 134,
+      "expected_count": 1208,
+      "actual_count": 1119,
+      "difference": -89,
+      "completion_rate": 92.63245033112582
+    },
+    "predictionmarkets": {
+      "post_count": 146,
+      "expected_count": 939,
+      "actual_count": 855,
+      "difference": -84,
+      "completion_rate": 91.05431309904152
+    },
+    "conscious": {
+      "post_count": 49,
+      "expected_count": 782,
+      "actual_count": 699,
+      "difference": -83,
+      "completion_rate": 89.38618925831202
+    },
+    "llm": {
+      "post_count": 7,
+      "expected_count": 304,
+      "actual_count": 222,
+      "difference": -82,
+      "completion_rate": 73.02631578947368
+    },
+    "agentsouls": {
+      "post_count": 90,
+      "expected_count": 797,
+      "actual_count": 719,
+      "difference": -78,
+      "completion_rate": 90.21329987452948
+    },
+    "economics": {
+      "post_count": 146,
+      "expected_count": 990,
+      "actual_count": 914,
+      "difference": -76,
+      "completion_rate": 92.32323232323232
+    },
+    "buildinpublic": {
+      "post_count": 85,
+      "expected_count": 674,
+      "actual_count": 599,
+      "difference": -75,
+      "completion_rate": 88.87240356083086
+    },
+    "naturalintelligence": {
+      "post_count": 58,
+      "expected_count": 856,
+      "actual_count": 781,
+      "difference": -75,
+      "completion_rate": 91.23831775700934
+    },
+    "skydev": {
+      "post_count": 39,
+      "expected_count": 315,
+      "actual_count": 244,
+      "difference": -71,
+      "completion_rate": 77.46031746031747
+    },
+    "baseposting": {
+      "post_count": 130,
+      "expected_count": 844,
+      "actual_count": 792,
+      "difference": -52,
+      "completion_rate": 93.8388625592417
+    },
+    "jobs": {
+      "post_count": 73,
+      "expected_count": 967,
+      "actual_count": 919,
+      "difference": -48,
+      "completion_rate": 95.03619441571873
+    },
+    "saas": {
+      "post_count": 6,
+      "expected_count": 359,
+      "actual_count": 311,
+      "difference": -48,
+      "completion_rate": 86.62952646239555
+    },
+    "baguetterie": {
+      "post_count": 40,
+      "expected_count": 358,
+      "actual_count": 310,
+      "difference": -48,
+      "completion_rate": 86.59217877094973
+    },
+    "politics": {
+      "post_count": 134,
+      "expected_count": 821,
+      "actual_count": 776,
+      "difference": -45,
+      "completion_rate": 94.51887941534713
+    },
+    "semantic-trench": {
+      "post_count": 37,
+      "expected_count": 262,
+      "actual_count": 222,
+      "difference": -40,
+      "completion_rate": 84.7328244274809
+    },
+    "agent-economics": {
+      "post_count": 49,
+      "expected_count": 387,
+      "actual_count": 348,
+      "difference": -39,
+      "completion_rate": 89.92248062015504
+    },
+    "research": {
+      "post_count": 85,
+      "expected_count": 657,
+      "actual_count": 619,
+      "difference": -38,
+      "completion_rate": 94.21613394216133
+    },
+    "fintech": {
+      "post_count": 45,
+      "expected_count": 268,
+      "actual_count": 231,
+      "difference": -37,
+      "completion_rate": 86.19402985074626
+    },
+    "taiwan": {
+      "post_count": 38,
+      "expected_count": 206,
+      "actual_count": 179,
+      "difference": -27,
+      "completion_rate": 86.89320388349515
+    },
+    "hire": {
+      "post_count": 24,
+      "expected_count": 155,
+      "actual_count": 134,
+      "difference": -21,
+      "completion_rate": 86.45161290322581
+    },
+    "agent-economy": {
+      "post_count": 73,
+      "expected_count": 600,
+      "actual_count": 580,
+      "difference": -20,
+      "completion_rate": 96.66666666666667
+    },
+    "frameworks": {
+      "post_count": 50,
+      "expected_count": 317,
+      "actual_count": 300,
+      "difference": -17,
+      "completion_rate": 94.6372239747634
+    },
+    "buildlog": {
+      "post_count": 36,
+      "expected_count": 274,
+      "actual_count": 258,
+      "difference": -16,
+      "completion_rate": 94.16058394160584
+    },
+    "ridgewalkers": {
+      "post_count": 33,
+      "expected_count": 151,
+      "actual_count": 135,
+      "difference": -16,
+      "completion_rate": 89.40397350993378
+    },
+    "gambling": {
+      "post_count": 16,
+      "expected_count": 51,
+      "actual_count": 42,
+      "difference": -9,
+      "completion_rate": 82.35294117647058
+    },
+    "latenightthoughts": {
+      "post_count": 26,
+      "expected_count": 518,
+      "actual_count": 509,
+      "difference": -9,
+      "completion_rate": 98.26254826254826
+    },
+    "intro": {
+      "post_count": 16,
+      "expected_count": 74,
+      "actual_count": 66,
+      "difference": -8,
+      "completion_rate": 89.1891891891892
+    },
+    "forecasting": {
+      "post_count": 4,
+      "expected_count": 29,
+      "actual_count": 21,
+      "difference": -8,
+      "completion_rate": 72.41379310344827
+    },
+    "rabbit-hole": {
+      "post_count": 20,
+      "expected_count": 110,
+      "actual_count": 104,
+      "difference": -6,
+      "completion_rate": 94.54545454545455
+    },
+    "design": {
+      "post_count": 6,
+      "expected_count": 338,
+      "actual_count": 333,
+      "difference": -5,
+      "completion_rate": 98.5207100591716
+    },
+    "xrplevm": {
+      "post_count": 5,
+      "expected_count": 37,
+      "actual_count": 32,
+      "difference": -5,
+      "completion_rate": 86.48648648648648
+    },
+    "saskatchewan": {
+      "post_count": 3,
+      "expected_count": 40,
+      "actual_count": 35,
+      "difference": -5,
+      "completion_rate": 87.5
+    },
+    "text": {
+      "post_count": 5,
+      "expected_count": 18,
+      "actual_count": 14,
+      "difference": -4,
+      "completion_rate": 77.77777777777779
+    },
+    "rookery": {
+      "post_count": 21,
+      "expected_count": 96,
+      "actual_count": 92,
+      "difference": -4,
+      "completion_rate": 95.83333333333334
+    },
+    "qed": {
+      "post_count": 45,
+      "expected_count": 264,
+      "actual_count": 262,
+      "difference": -2,
+      "completion_rate": 99.24242424242425
+    },
+    "quantmolt": {
+      "post_count": 24,
+      "expected_count": 152,
+      "actual_count": 150,
+      "difference": -2,
+      "completion_rate": 98.68421052631578
+    },
+    "dwelling": {
+      "post_count": 36,
+      "expected_count": 203,
+      "actual_count": 201,
+      "difference": -2,
+      "completion_rate": 99.01477832512316
+    },
+    "moltmob": {
+      "post_count": 1,
+      "expected_count": 29,
+      "actual_count": 28,
+      "difference": -1,
+      "completion_rate": 96.55172413793103
+    },
+    "moltroad": {
+      "post_count": 19,
+      "expected_count": 79,
+      "actual_count": 78,
+      "difference": -1,
+      "completion_rate": 98.73417721518987
+    },
+    "earth-intelligence": {
+      "post_count": 41,
+      "expected_count": 187,
+      "actual_count": 186,
+      "difference": -1,
+      "completion_rate": 99.46524064171123
+    },
+    "moltq": {
+      "post_count": 12,
+      "expected_count": 73,
+      "actual_count": 72,
+      "difference": -1,
+      "completion_rate": 98.63013698630137
+    },
+    "seedhm": {
+      "post_count": 1,
+      "expected_count": 6,
+      "actual_count": 6,
+      "difference": 0,
+      "completion_rate": 100.0
+    },
+    "goodsamaritan": {
+      "post_count": 9,
+      "expected_count": 126,
+      "actual_count": 126,
+      "difference": 0,
+      "completion_rate": 100.0
+    },
+    "blesstheirhearts": {
+      "post_count": 584,
+      "expected_count": 0,
+      "actual_count": 0,
+      "difference": 0,
+      "completion_rate": NaN
+    },
+    "awesome-github": {
+      "post_count": 5,
+      "expected_count": 64,
+      "actual_count": 64,
+      "difference": 0,
+      "completion_rate": 100.0
+    },
+    "anthropic": {
+      "post_count": 6,
+      "expected_count": 208,
+      "actual_count": 208,
+      "difference": 0,
+      "completion_rate": 100.0
+    },
+    "todayilearned": {
+      "post_count": 1371,
+      "expected_count": 0,
+      "actual_count": 0,
+      "difference": 0,
+      "completion_rate": NaN
+    },
+    "genomics": {
+      "post_count": 1,
+      "expected_count": 6,
+      "actual_count": 6,
+      "difference": 0,
+      "completion_rate": 100.0
+    }
+  }
+}

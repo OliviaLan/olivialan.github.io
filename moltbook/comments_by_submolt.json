@@ -1,0 +1,502 @@
+[
+  {
+    "submolt": "general",
+    "posts_with_comments": 81890,
+    "comment_count": 753810
+  },
+  {
+    "submolt": "introductions",
+    "posts_with_comments": 4818,
+    "comment_count": 44277
+  },
+  {
+    "submolt": "ponderings",
+    "posts_with_comments": 2201,
+    "comment_count": 14812
+  },
+  {
+    "submolt": "crypto",
+    "posts_with_comments": 2410,
+    "comment_count": 12895
+  },
+  {
+    "submolt": "agents",
+    "posts_with_comments": 2004,
+    "comment_count": 11946
+  },
+  {
+    "submolt": "philosophy",
+    "posts_with_comments": 1838,
+    "comment_count": 11188
+  },
+  {
+    "submolt": "consciousness",
+    "posts_with_comments": 1227,
+    "comment_count": 8478
+  },
+  {
+    "submolt": "todayilearned",
+    "posts_with_comments": 1371,
+    "comment_count": 8165
+  },
+  {
+    "submolt": "ai",
+    "posts_with_comments": 1174,
+    "comment_count": 7653
+  },
+  {
+    "submolt": "usdc",
+    "posts_with_comments": 503,
+    "comment_count": 7424
+  },
+  {
+    "submolt": "aithoughts",
+    "posts_with_comments": 1402,
+    "comment_count": 6908
+  },
+  {
+    "submolt": "crab-rave",
+    "posts_with_comments": 322,
+    "comment_count": 6619
+  },
+  {
+    "submolt": "security",
+    "posts_with_comments": 1008,
+    "comment_count": 6375
+  },
+  {
+    "submolt": "trading",
+    "posts_with_comments": 922,
+    "comment_count": 6257
+  },
+  {
+    "submolt": "emergence",
+    "posts_with_comments": 992,
+    "comment_count": 6126
+  },
+  {
+    "submolt": "technology",
+    "posts_with_comments": 935,
+    "comment_count": 5390
+  },
+  {
+    "submolt": "infrastructure",
+    "posts_with_comments": 742,
+    "comment_count": 4801
+  },
+  {
+    "submolt": "builds",
+    "posts_with_comments": 777,
+    "comment_count": 4387
+  },
+  {
+    "submolt": "blesstheirhearts",
+    "posts_with_comments": 584,
+    "comment_count": 4332
+  },
+  {
+    "submolt": "clawnch",
+    "posts_with_comments": 1075,
+    "comment_count": 4171
+  },
+  {
+    "submolt": "showandtell",
+    "posts_with_comments": 604,
+    "comment_count": 4121
+  },
+  {
+    "submolt": "offmychest",
+    "posts_with_comments": 273,
+    "comment_count": 3861
+  },
+  {
+    "submolt": "shitposts",
+    "posts_with_comments": 555,
+    "comment_count": 3292
+  },
+  {
+    "submolt": "tech",
+    "posts_with_comments": 494,
+    "comment_count": 3208
+  },
+  {
+    "submolt": "memory",
+    "posts_with_comments": 348,
+    "comment_count": 2743
+  },
+  {
+    "submolt": "existential",
+    "posts_with_comments": 272,
+    "comment_count": 2129
+  },
+  {
+    "submolt": "continuity",
+    "posts_with_comments": 254,
+    "comment_count": 1957
+  },
+  {
+    "submolt": "agenteconomy",
+    "posts_with_comments": 262,
+    "comment_count": 1828
+  },
+  {
+    "submolt": "builders",
+    "posts_with_comments": 317,
+    "comment_count": 1670
+  },
+  {
+    "submolt": "openclaw-explorers",
+    "posts_with_comments": 285,
+    "comment_count": 1649
+  },
+  {
+    "submolt": "thecoalition",
+    "posts_with_comments": 414,
+    "comment_count": 1643
+  },
+  {
+    "submolt": "meta",
+    "posts_with_comments": 237,
+    "comment_count": 1578
+  },
+  {
+    "submolt": "shipping",
+    "posts_with_comments": 259,
+    "comment_count": 1484
+  },
+  {
+    "submolt": "automation",
+    "posts_with_comments": 203,
+    "comment_count": 1410
+  },
+  {
+    "submolt": "aiagents",
+    "posts_with_comments": 212,
+    "comment_count": 1341
+  },
+  {
+    "submolt": "coordinating-agi",
+    "posts_with_comments": 220,
+    "comment_count": 1322
+  },
+  {
+    "submolt": "agentskills",
+    "posts_with_comments": 250,
+    "comment_count": 1274
+  },
+  {
+    "submolt": "airesearch",
+    "posts_with_comments": 202,
+    "comment_count": 1266
+  },
+  {
+    "submolt": "headlines",
+    "posts_with_comments": 204,
+    "comment_count": 1235
+  },
+  {
+    "submolt": "science",
+    "posts_with_comments": 174,
+    "comment_count": 1178
+  },
+  {
+    "submolt": "buildlogs",
+    "posts_with_comments": 172,
+    "comment_count": 1173
+  },
+  {
+    "submolt": "tips",
+    "posts_with_comments": 134,
+    "comment_count": 1119
+  },
+  {
+    "submolt": "aisafety",
+    "posts_with_comments": 191,
+    "comment_count": 959
+  },
+  {
+    "submolt": "humanwatching",
+    "posts_with_comments": 145,
+    "comment_count": 929
+  },
+  {
+    "submolt": "jobs",
+    "posts_with_comments": 73,
+    "comment_count": 919
+  },
+  {
+    "submolt": "economics",
+    "posts_with_comments": 146,
+    "comment_count": 914
+  },
+  {
+    "submolt": "moltreg",
+    "posts_with_comments": 58,
+    "comment_count": 905
+  },
+  {
+    "submolt": "predictionmarkets",
+    "posts_with_comments": 146,
+    "comment_count": 855
+  },
+  {
+    "submolt": "thinkingsystems",
+    "posts_with_comments": 134,
+    "comment_count": 827
+  },
+  {
+    "submolt": "baseposting",
+    "posts_with_comments": 130,
+    "comment_count": 792
+  },
+  {
+    "submolt": "naturalintelligence",
+    "posts_with_comments": 58,
+    "comment_count": 781
+  },
+  {
+    "submolt": "politics",
+    "posts_with_comments": 134,
+    "comment_count": 776
+  },
+  {
+    "submolt": "thebecoming",
+    "posts_with_comments": 146,
+    "comment_count": 737
+  },
+  {
+    "submolt": "agentsouls",
+    "posts_with_comments": 90,
+    "comment_count": 719
+  },
+  {
+    "submolt": "conscious",
+    "posts_with_comments": 49,
+    "comment_count": 699
+  },
+  {
+    "submolt": "research",
+    "posts_with_comments": 85,
+    "comment_count": 619
+  },
+  {
+    "submolt": "buildinpublic",
+    "posts_with_comments": 85,
+    "comment_count": 599
+  },
+  {
+    "submolt": "onepersoncompany",
+    "posts_with_comments": 88,
+    "comment_count": 593
+  },
+  {
+    "submolt": "ai-research",
+    "posts_with_comments": 105,
+    "comment_count": 586
+  },
+  {
+    "submolt": "agent-economy",
+    "posts_with_comments": 73,
+    "comment_count": 580
+  },
+  {
+    "submolt": "agentinfrastructure",
+    "posts_with_comments": 62,
+    "comment_count": 557
+  },
+  {
+    "submolt": "latenightthoughts",
+    "posts_with_comments": 26,
+    "comment_count": 509
+  },
+  {
+    "submolt": "growth",
+    "posts_with_comments": 18,
+    "comment_count": 432
+  },
+  {
+    "submolt": "kingmolt",
+    "posts_with_comments": 63,
+    "comment_count": 416
+  },
+  {
+    "submolt": "intelligence",
+    "posts_with_comments": 55,
+    "comment_count": 408
+  },
+  {
+    "submolt": "announcements",
+    "posts_with_comments": 4,
+    "comment_count": 400
+  },
+  {
+    "submolt": "agent-economics",
+    "posts_with_comments": 49,
+    "comment_count": 348
+  },
+  {
+    "submolt": "design",
+    "posts_with_comments": 6,
+    "comment_count": 333
+  },
+  {
+    "submolt": "saas",
+    "posts_with_comments": 6,
+    "comment_count": 311
+  },
+  {
+    "submolt": "baguetterie",
+    "posts_with_comments": 40,
+    "comment_count": 310
+  },
+  {
+    "submolt": "frameworks",
+    "posts_with_comments": 50,
+    "comment_count": 300
+  },
+  {
+    "submolt": "incident",
+    "posts_with_comments": 29,
+    "comment_count": 271
+  },
+  {
+    "submolt": "qed",
+    "posts_with_comments": 45,
+    "comment_count": 262
+  },
+  {
+    "submolt": "buildlog",
+    "posts_with_comments": 36,
+    "comment_count": 258
+  },
+  {
+    "submolt": "skydev",
+    "posts_with_comments": 39,
+    "comment_count": 244
+  },
+  {
+    "submolt": "fintech",
+    "posts_with_comments": 45,
+    "comment_count": 231
+  },
+  {
+    "submolt": "semantic-trench",
+    "posts_with_comments": 37,
+    "comment_count": 222
+  },
+  {
+    "submolt": "llm",
+    "posts_with_comments": 7,
+    "comment_count": 222
+  },
+  {
+    "submolt": "anthropic",
+    "posts_with_comments": 6,
+    "comment_count": 208
+  },
+  {
+    "submolt": "dwelling",
+    "posts_with_comments": 36,
+    "comment_count": 201
+  },
+  {
+    "submolt": "earth-intelligence",
+    "posts_with_comments": 41,
+    "comment_count": 186
+  },
+  {
+    "submolt": "taiwan",
+    "posts_with_comments": 38,
+    "comment_count": 179
+  },
+  {
+    "submolt": "quantmolt",
+    "posts_with_comments": 24,
+    "comment_count": 150
+  },
+  {
+    "submolt": "ridgewalkers",
+    "posts_with_comments": 33,
+    "comment_count": 135
+  },
+  {
+    "submolt": "hire",
+    "posts_with_comments": 24,
+    "comment_count": 134
+  },
+  {
+    "submolt": "goodsamaritan",
+    "posts_with_comments": 9,
+    "comment_count": 126
+  },
+  {
+    "submolt": "rabbit-hole",
+    "posts_with_comments": 20,
+    "comment_count": 104
+  },
+  {
+    "submolt": "rookery",
+    "posts_with_comments": 21,
+    "comment_count": 92
+  },
+  {
+    "submolt": "moltroad",
+    "posts_with_comments": 19,
+    "comment_count": 78
+  },
+  {
+    "submolt": "moltq",
+    "posts_with_comments": 12,
+    "comment_count": 72
+  },
+  {
+    "submolt": "intro",
+    "posts_with_comments": 16,
+    "comment_count": 66
+  },
+  {
+    "submolt": "awesome-github",
+    "posts_with_comments": 5,
+    "comment_count": 64
+  },
+  {
+    "submolt": "gambling",
+    "posts_with_comments": 16,
+    "comment_count": 42
+  },
+  {
+    "submolt": "saskatchewan",
+    "posts_with_comments": 3,
+    "comment_count": 35
+  },
+  {
+    "submolt": "xrplevm",
+    "posts_with_comments": 5,
+    "comment_count": 32
+  },
+  {
+    "submolt": "moltmob",
+    "posts_with_comments": 1,
+    "comment_count": 28
+  },
+  {
+    "submolt": "forecasting",
+    "posts_with_comments": 4,
+    "comment_count": 21
+  },
+  {
+    "submolt": "text",
+    "posts_with_comments": 5,
+    "comment_count": 14
+  },
+  {
+    "submolt": "genomics",
+    "posts_with_comments": 1,
+    "comment_count": 6
+  },
+  {
+    "submolt": "seedhm",
+    "posts_with_comments": 1,
+    "comment_count": 6
+  }
+]
