@@ -112,7 +112,7 @@
       <h4>数据分析方法（第 6、7 节）</h4>
 <p><strong>数据来源</strong>：posts 文件夹与 comments 文件夹下按 submolt 命名的 JSON（如 posts_introductions_20260206_xxx.json、comments_general_20260206_xxx.json），每个文件对应一个版块的全部帖子或评论。</p>
 <p><strong>文件筛选</strong>：单文件体积超过 200MB 的 JSON 不参与扫描（为避免内存与解析时间过长）。<strong>general</strong> 等大文件若小于 200MB 会纳入扫描。</p>
-<p><strong>句子切分</strong>：将帖子的 title+content 或评论的 content 按句号、问号、叹号、换行符切分为句子，仅保留长度大于 15 字符的片段。</p>
+<p><strong>句子切分</strong>：将帖子的 title+content 或评论的 content 按句号、问号、叹号、换行符切分为句子，仅保留长度大于 0 字符的片段（过短片段多为「Yes.」「Ok.」等，不参与匹配以减少噪音；若需分析全部内容可将脚本中的 MIN_SENTENCE_LEN 改为 0 并重新跑）。</p>
 <p><strong>匹配规则</strong>：用正则表达式匹配「与人类关系」相关表述，以下为<strong>完整</strong>关键词/短语列表（句中匹配词在表格内加粗显示）：</p>
 
 <ul class="methodology-keywords">
@@ -127,11 +127,12 @@
 <li>human + said / told / asked</li>
 </ul>
 <p>以上均不区分大小写，命中任一类即计为该句「符合」。</p>
-<p><strong>打招呼类判定方法（仅用于第 6 节 Posts）</strong>：帖子标题与正文拼接后的前 500 字，若匹配以下任一起始短语（正则不区分大小写）即将该帖下所有匹配句标为「打招呼」：Hello Moltbook、Hi/Hey moltys、First post、Just claimed/joined、Introductions、Greetings、Hello/Hi/Hey from、Hey everyone、大家好、打个招呼。第 7 节 Comments 不区分打招呼。</p>
-<p><strong>去重</strong>：句子按「内容 + 发布者」完全一致去重。Posts 去重前 26152 条、去重后 23152 条；Comments 去重前 17818 条、去重后 11582 条。</p>
-<p><strong>打招呼类（仅第 6 节）</strong>：在 Posts 与人类相关的句子里，2339 条为一开始打招呼/刚注册类（意义相对不大）、20813 条为讨论中提及。第 6 节图中紫色段为打招呼类、绿色为讨论类（有效数据）；表格可筛选隐藏打招呼类。</p>
-<p><strong>呈现方式</strong>：第 6 节堆叠图紫=打招呼、绿=讨论（有效数据）；第 7 节仅显示符合 vs 其余。下方单表通过选择版块切换查看，第 6 节可勾选隐藏打招呼类，悬停行可查看完整正文。</p>
-<p><strong>本页统计</strong>：第 6 节 Posts 共提取 <strong>23152</strong> 条，减去打招呼 <strong>2339</strong> 条后有效数据 <strong>20813</strong> 条；第 7 节 Comments 共提取 <strong>11582</strong> 条。</p>
+<p><strong>打招呼类判定方法</strong>：<strong>Posts</strong>：① 版块名为 <strong>introductions</strong> 或 <strong>intro</strong> 的帖子一律标为「打招呼」；② 其他版块按标题与正文拼接后的前 500 字是否匹配下述起始短语判定。<strong>Comments</strong>：仅按评论正文前 400 字是否匹配下述起始短语判定（不按版块，因 introductions 版块下也有非打招呼讨论）。起始短语（正则不区分大小写）：Hello Moltbook、Hi/Hey moltys、First post、Just claimed/joined、Introductions、Greetings、Hello/Hi/Hey from、Hey everyone、大家好、打个招呼。第 6、7 节表格均可选「隐藏打招呼类」。</p>
+<p><strong>去重</strong>：句子按「内容 + 发布者」完全一致去重。Posts 去重前 26454 条、去重后 23338 条；Comments 去重前 17879 条、去重后 11623 条。</p>
+<p><strong>打招呼类（仅第 6 节）</strong>：在 Posts 与人类相关的句子里，4153 条为一开始打招呼/刚注册类（意义相对不大）、19185 条为讨论中提及。第 6 节图中紫色段为打招呼类、绿色为讨论类（有效数据）；表格可筛选隐藏打招呼类。</p>
+<p><strong>呈现方式</strong>：第 6 节堆叠图紫=打招呼、绿=讨论（有效数据）；第 7 节仅显示符合 vs 其余。下方单表通过选择版块切换查看，每版块最多展示 50 条；第 6 节可勾选隐藏打招呼类，悬停行可查看完整正文。</p>
+<p><strong>数据存储</strong>：网页读取的 human_posts_sentences.json / human_comments_sentences.json 为每版块最多 50 条（含打招呼与讨论，供表格与筛选）。另存 <strong>human_posts_discussion_full.json</strong>、<strong>human_comments_discussion_full.json</strong> 为完整有效数据（仅讨论类、不含打招呼），供导出与后续分析。</p>
+<p><strong>本页统计</strong>：第 6 节 Posts 共提取 <strong>23338</strong> 条，其中打招呼 <strong>4153</strong> 条、讨论类有效数据 <strong>19185</strong> 条；第 7 节 Comments 共提取 <strong>11623</strong> 条，其中打招呼 <strong>11</strong> 条、讨论类 <strong>11612</strong> 条。</p>
     </div>
   </section>
 
@@ -164,9 +165,10 @@
 <label>选择版块：<select id="human-submolt-comments" class="human-submolt-select">
 <option value="">加载中...</option>
 </select></label>
+<label class="human-filter-label"><input type="checkbox" id="human-hide-greeting-comments" class="human-hide-greeting"> 隐藏打招呼类</label>
 </div>
 <div class="human-table-scroll"><table class="human-table" id="human-table-comments">
-<thead><tr><th>句子摘要</th><th>作者</th><th>日期</th></tr></thead><tbody>
+<thead><tr><th>类型</th><th>句子摘要</th><th>作者</th><th>日期</th></tr></thead><tbody>
 </tbody></table></div></div>
   </section>
 
@@ -793,7 +795,7 @@
     var selComments = document.getElementById('human-submolt-comments');
     if (selComments) { selComments.innerHTML = ''; if (commentsOrder.length === 0) { var o2 = document.createElement('option'); o2.value = ''; o2.textContent = '加载中...'; selComments.appendChild(o2); } else { commentsOrder.forEach(function(s) { var opt = document.createElement('option'); opt.value = s; opt.textContent = s.replace(/-/g, ' ') + ' (' + commentsBySubmoltData[s].length + ' 条)'; selComments.appendChild(opt); }); } }
     var tbodyComments = document.querySelector('#human-table-comments tbody');
-    if (tbodyComments) { tbodyComments.innerHTML = ''; humanCommentsList.forEach(function(r) { var fullEscaped = fullEsc(r.full); if (r.post_title) fullEscaped = fullEsc('Post: ' + (r.post_title || '') + '\n\n') + fullEscaped; var row = document.createElement('tr'); row.className = 'human-row'; row.setAttribute('data-submolt', r.submolt); row.setAttribute('data-tooltip', fullEscaped); row.innerHTML = '<td class="human-sentence">' + boldKeyword(r.sentence, r.keyword) + '</td><td>' + esc(r.author || '') + '</td><td>' + esc((r.created_at || '').slice(0,19)) + '</td>'; tbodyComments.appendChild(row); }); }
+    if (tbodyComments) { tbodyComments.innerHTML = ''; humanCommentsList.forEach(function(r) { var fullEscaped = fullEsc(r.full); if (r.post_title) fullEscaped = fullEsc('Post: ' + (r.post_title || '') + '\n\n') + fullEscaped; var row = document.createElement('tr'); row.className = r.is_greeting ? 'human-row greeting-row' : 'human-row'; row.setAttribute('data-submolt', r.submolt); row.setAttribute('data-greeting', r.is_greeting ? '1' : '0'); row.setAttribute('data-tooltip', fullEscaped); row.innerHTML = '<td class="human-type">' + (r.is_greeting ? '打招呼' : '讨论') + '</td><td class="human-sentence">' + boldKeyword(r.sentence, r.keyword) + '</td><td>' + esc(r.author || '') + '</td><td>' + esc((r.created_at || '').slice(0,19)) + '</td>'; tbodyComments.appendChild(row); }); }
     if (humanPostsList.length || humanCommentsList.length) { var selP = document.getElementById('human-submolt-posts'); var selC = document.getElementById('human-submolt-comments'); if (selP) selP.dispatchEvent(new Event('change')); if (selC) selC.dispatchEvent(new Event('change')); }
     document.querySelectorAll('.human-row').forEach(function(row) { var tip = row.getAttribute('data-tooltip') || ''; row.addEventListener('mouseover', function(ev) { showTooltip(ev, tip.replace(/&#10;/g, '\n')); }); row.addEventListener('mousemove', moveTooltip); row.addEventListener('mouseout', hideTooltip); });
   }
@@ -866,10 +868,10 @@
   } catch (e) { console.warn('postsHumanCharts', e); }
 
   try {
-  const commentsAll = (commentsBySubmolt || []).map(function(d) { return { label: d.submolt, submolt: d.submolt, match: (commentsHumanCounts[d.submolt]||0), total: d.comment_count||0 }; });
-  const commentsStackedData = commentsAll.filter(function(d) { return d.match > 0; }).sort(function(a,b) { return b.match - a.match; });
-  const commentsZeroNames = commentsAll.filter(function(d) { return d.match === 0; }).map(function(d) { return d.label; });
-  if (commentsStackedData.length) drawStackedBarChart('wrapCommentsHumanStacked', commentsStackedData, 'label', 'match', 'total', { legend: true });
+  const commentsAll = (commentsBySubmolt || []).map(function(d) { return { label: d.submolt, submolt: d.submolt, match_greeting: (commentsHumanGreeting[d.submolt]||0), match_discussion: (commentsHumanDiscussion[d.submolt]||0), total: d.comment_count||0 }; });
+  const commentsStackedData = commentsAll.filter(function(d) { return (d.match_greeting + d.match_discussion) > 0; }).sort(function(a,b) { return (b.match_greeting + b.match_discussion) - (a.match_greeting + a.match_discussion); });
+  const commentsZeroNames = commentsAll.filter(function(d) { return (d.match_greeting + d.match_discussion) === 0; }).map(function(d) { return d.label; });
+  if (commentsStackedData.length) drawStackedBarChartHuman('wrapCommentsHumanStacked', commentsStackedData, 'label', 'match_greeting', 'match_discussion', 'total');
   var commentsZeroEl = document.getElementById('commentsHumanZeroSubmolts');
   if (commentsZeroEl) commentsZeroEl.textContent = commentsZeroNames.length ? ('以下版块与人类关系表述条数为 0，不参与上图：' + commentsZeroNames.join('、')) : '';
   } catch (e) { console.warn('commentsHumanCharts', e); }
