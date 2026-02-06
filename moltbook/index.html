@@ -739,14 +739,25 @@
   }
 
   const urlBase = '';
+  function fetchJson(url, fallback) {
+    return fetch(urlBase + url).then(function(r) { return r.ok ? r.json() : fallback; }).catch(function() { return fallback; });
+  }
   Promise.all([
-    fetch(urlBase + 'comments_by_submolt.json').then(function(r) { return r.ok ? r.json() : []; }),
-    fetch(urlBase + 'comments_difference_statistics.json').then(function(r) { return r.ok ? r.json() : {}; }),
-    fetch(urlBase + 'comments_statistics.json').then(function(r) { return r.ok ? r.json() : {}; }),
-    fetch(urlBase + 'posts_statistics.json').then(function(r) { return r.ok ? r.json() : {}; }),
-    fetch(urlBase + 'submolts_sorted_by_posts.json').then(function(r) { return r.ok ? r.json() : []; }),
-    fetch(urlBase + 'human_relation_summary.json').then(function(r) { return r.ok ? r.json() : {}; })
+    fetchJson('comments_by_submolt.json', []),
+    fetchJson('comments_difference_statistics.json', {}),
+    fetchJson('comments_statistics.json', {}),
+    fetchJson('posts_statistics.json', {}),
+    fetchJson('submolts_sorted_by_posts.json', []),
+    fetchJson('human_relation_summary.json', {})
   ]).then(function(results) {
+  var hasChartData = (results[0] && results[0].length > 0) || (results[4] && results[4].length > 0);
+  if (!hasChartData) {
+    var notice = document.createElement('p');
+    notice.style.cssText = 'text-align:center;color:#f7768e;background:#24283b;padding:12px;border-radius:8px;margin:0 0 24px 0;';
+    notice.textContent = '图表数据未加载。请确认在「general stats」目录下启动服务器（cd "general stats" 后运行 python3 -m http.server 8000），并访问 http://localhost:8000/general_stats_dashboard.html';
+    var first = document.querySelector('section, .overview-box');
+    if (first && first.parentNode) first.parentNode.insertBefore(notice, first);
+  }
   const commentsBySubmolt = results[0] || [];
   const diffStats = results[1] || {};
   const commentsStats = results[2] || {};
