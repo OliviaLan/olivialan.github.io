@@ -745,9 +745,7 @@
     fetch(urlBase + 'comments_statistics.json').then(function(r) { return r.ok ? r.json() : {}; }),
     fetch(urlBase + 'posts_statistics.json').then(function(r) { return r.ok ? r.json() : {}; }),
     fetch(urlBase + 'submolts_sorted_by_posts.json').then(function(r) { return r.ok ? r.json() : []; }),
-    fetch(urlBase + 'human_relation_summary.json').then(function(r) { return r.ok ? r.json() : {}; }),
-    fetch(urlBase + 'human_posts_sentences.json').then(function(r) { return r.ok ? r.json() : []; }),
-    fetch(urlBase + 'human_comments_sentences.json').then(function(r) { return r.ok ? r.json() : []; })
+    fetch(urlBase + 'human_relation_summary.json').then(function(r) { return r.ok ? r.json() : {}; })
   ]).then(function(results) {
   const commentsBySubmolt = results[0] || [];
   const diffStats = results[1] || {};
@@ -761,25 +759,33 @@
   const postsHumanDiscussion = humanSummary.posts_human_discussion || {};
   const commentsHumanGreeting = humanSummary.comments_human_greeting || {};
   const commentsHumanDiscussion = humanSummary.comments_human_discussion || {};
-  const humanPostsList = results[6] || [];
-  const humanCommentsList = results[7] || [];
   function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
   function boldKeyword(sent, kw) { if (!kw) return esc(sent); var i = (sent || '').toLowerCase().indexOf((kw || '').toLowerCase()); if (i < 0) return esc(sent); return esc(sent.slice(0,i)) + '<strong>' + esc(sent.slice(i,i+kw.length)) + '</strong>' + esc(sent.slice(i+kw.length)); }
   function fullEsc(f) { return (f || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;').replace(/\n/g,'&#10;'); }
-  var postsBySubmolt = {};
-  humanPostsList.forEach(function(r) { var s = r.submolt; if (!postsBySubmolt[s]) postsBySubmolt[s] = []; postsBySubmolt[s].push(r); });
-  var postsOrder = Object.keys(postsBySubmolt).sort(function(a,b) { return (postsBySubmolt[b].length - postsBySubmolt[a].length) || a.localeCompare(b); });
-  var selPosts = document.getElementById('human-submolt-posts');
-  if (selPosts) { selPosts.innerHTML = ''; postsOrder.forEach(function(s) { var opt = document.createElement('option'); opt.value = s; opt.textContent = s.replace(/-/g, ' ') + ' (' + postsBySubmolt[s].length + ' 条)'; selPosts.appendChild(opt); }); }
-  var tbodyPosts = document.querySelector('#human-table-posts tbody');
-  if (tbodyPosts) { tbodyPosts.innerHTML = ''; humanPostsList.forEach(function(r) { var fullEscaped = fullEsc(r.full); if (r.title) fullEscaped = fullEsc('Title: ' + r.title + '\n\n') + fullEscaped; var row = document.createElement('tr'); row.className = r.is_greeting ? 'human-row greeting-row' : 'human-row'; row.setAttribute('data-submolt', r.submolt); row.setAttribute('data-greeting', r.is_greeting ? '1' : '0'); row.setAttribute('data-tooltip', fullEscaped); row.innerHTML = '<td class="human-type">' + (r.is_greeting ? '打招呼' : '讨论') + '</td><td class="human-sentence">' + boldKeyword(r.sentence, r.keyword) + '</td><td>' + esc(r.author || '') + '</td><td>' + esc((r.created_at || '').slice(0,19)) + '</td>'; tbodyPosts.appendChild(row); }); }
-  var commentsBySubmoltData = {};
-  humanCommentsList.forEach(function(r) { var s = r.submolt; if (!commentsBySubmoltData[s]) commentsBySubmoltData[s] = []; commentsBySubmoltData[s].push(r); });
-  var commentsOrder = Object.keys(commentsBySubmoltData).sort(function(a,b) { return (commentsBySubmoltData[b].length - commentsBySubmoltData[a].length) || a.localeCompare(b); });
-  var selComments = document.getElementById('human-submolt-comments');
-  if (selComments) { selComments.innerHTML = ''; commentsOrder.forEach(function(s) { var opt = document.createElement('option'); opt.value = s; opt.textContent = s.replace(/-/g, ' ') + ' (' + commentsBySubmoltData[s].length + ' 条)'; selComments.appendChild(opt); }); }
-  var tbodyComments = document.querySelector('#human-table-comments tbody');
-  if (tbodyComments) { tbodyComments.innerHTML = ''; humanCommentsList.forEach(function(r) { var fullEscaped = fullEsc(r.full); if (r.post_title) fullEscaped = fullEsc('Post: ' + (r.post_title || '') + '\n\n') + fullEscaped; var row = document.createElement('tr'); row.className = 'human-row'; row.setAttribute('data-submolt', r.submolt); row.setAttribute('data-tooltip', fullEscaped); row.innerHTML = '<td class="human-sentence">' + boldKeyword(r.sentence, r.keyword) + '</td><td>' + esc(r.author || '') + '</td><td>' + esc((r.created_at || '').slice(0,19)) + '</td>'; tbodyComments.appendChild(row); }); }
+  function fillHumanTables(humanPostsList, humanCommentsList) {
+    humanPostsList = humanPostsList || []; humanCommentsList = humanCommentsList || [];
+    var postsBySubmolt = {};
+    humanPostsList.forEach(function(r) { var s = r.submolt; if (!postsBySubmolt[s]) postsBySubmolt[s] = []; postsBySubmolt[s].push(r); });
+    var postsOrder = Object.keys(postsBySubmolt).sort(function(a,b) { return (postsBySubmolt[b].length - postsBySubmolt[a].length) || a.localeCompare(b); });
+    var selPosts = document.getElementById('human-submolt-posts');
+    if (selPosts) { selPosts.innerHTML = ''; if (postsOrder.length === 0) { var o = document.createElement('option'); o.value = ''; o.textContent = '加载中...'; selPosts.appendChild(o); } else { postsOrder.forEach(function(s) { var opt = document.createElement('option'); opt.value = s; opt.textContent = s.replace(/-/g, ' ') + ' (' + postsBySubmolt[s].length + ' 条)'; selPosts.appendChild(opt); }); } }
+    var tbodyPosts = document.querySelector('#human-table-posts tbody');
+    if (tbodyPosts) { tbodyPosts.innerHTML = ''; humanPostsList.forEach(function(r) { var fullEscaped = fullEsc(r.full); if (r.title) fullEscaped = fullEsc('Title: ' + r.title + '\n\n') + fullEscaped; var row = document.createElement('tr'); row.className = r.is_greeting ? 'human-row greeting-row' : 'human-row'; row.setAttribute('data-submolt', r.submolt); row.setAttribute('data-greeting', r.is_greeting ? '1' : '0'); row.setAttribute('data-tooltip', fullEscaped); row.innerHTML = '<td class="human-type">' + (r.is_greeting ? '打招呼' : '讨论') + '</td><td class="human-sentence">' + boldKeyword(r.sentence, r.keyword) + '</td><td>' + esc(r.author || '') + '</td><td>' + esc((r.created_at || '').slice(0,19)) + '</td>'; tbodyPosts.appendChild(row); }); }
+    var commentsBySubmoltData = {};
+    humanCommentsList.forEach(function(r) { var s = r.submolt; if (!commentsBySubmoltData[s]) commentsBySubmoltData[s] = []; commentsBySubmoltData[s].push(r); });
+    var commentsOrder = Object.keys(commentsBySubmoltData).sort(function(a,b) { return (commentsBySubmoltData[b].length - commentsBySubmoltData[a].length) || a.localeCompare(b); });
+    var selComments = document.getElementById('human-submolt-comments');
+    if (selComments) { selComments.innerHTML = ''; if (commentsOrder.length === 0) { var o2 = document.createElement('option'); o2.value = ''; o2.textContent = '加载中...'; selComments.appendChild(o2); } else { commentsOrder.forEach(function(s) { var opt = document.createElement('option'); opt.value = s; opt.textContent = s.replace(/-/g, ' ') + ' (' + commentsBySubmoltData[s].length + ' 条)'; selComments.appendChild(opt); }); } }
+    var tbodyComments = document.querySelector('#human-table-comments tbody');
+    if (tbodyComments) { tbodyComments.innerHTML = ''; humanCommentsList.forEach(function(r) { var fullEscaped = fullEsc(r.full); if (r.post_title) fullEscaped = fullEsc('Post: ' + (r.post_title || '') + '\n\n') + fullEscaped; var row = document.createElement('tr'); row.className = 'human-row'; row.setAttribute('data-submolt', r.submolt); row.setAttribute('data-tooltip', fullEscaped); row.innerHTML = '<td class="human-sentence">' + boldKeyword(r.sentence, r.keyword) + '</td><td>' + esc(r.author || '') + '</td><td>' + esc((r.created_at || '').slice(0,19)) + '</td>'; tbodyComments.appendChild(row); }); }
+    if (humanPostsList.length || humanCommentsList.length) { var selP = document.getElementById('human-submolt-posts'); var selC = document.getElementById('human-submolt-comments'); if (selP) selP.dispatchEvent(new Event('change')); if (selC) selC.dispatchEvent(new Event('change')); }
+    document.querySelectorAll('.human-row').forEach(function(row) { var tip = row.getAttribute('data-tooltip') || ''; row.addEventListener('mouseover', function(ev) { showTooltip(ev, tip.replace(/&#10;/g, '\n')); }); row.addEventListener('mousemove', moveTooltip); row.addEventListener('mouseout', hideTooltip); });
+  }
+  fillHumanTables([], []);
+  Promise.all([
+    fetch(urlBase + 'human_posts_sentences.json').then(function(r) { return r.ok ? r.json() : []; }),
+    fetch(urlBase + 'human_comments_sentences.json').then(function(r) { return r.ok ? r.json() : []; })
+  ]).then(function(r2) { fillHumanTables(r2[0] || [], r2[1] || []); }).catch(function(e) { console.warn('Load sentences failed', e); fillHumanTables([], []); });
 
   try {
   const excludeNames = { general: true, introductions: true };
