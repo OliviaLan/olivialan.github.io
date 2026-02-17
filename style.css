@@ -819,3 +819,351 @@ a:hover {}
     font-family: 'Arial', 'myfont';
     font-weight: 600;
 }
+
+/* ========================================
+   汉堡菜单 - 手机端
+   ======================================== */
+#hamburger-btn {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 44px;
+    height: 44px;
+    background: #B9DDD1;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.3s;
+}
+
+#hamburger-btn.active {
+    transform: rotate(90deg);
+}
+
+#hamburger-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+#mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+#mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+    overflow: hidden;
+    min-width: 160px;
+}
+
+#mobile-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#mobile-menu li {
+    border-bottom: 1px solid #eee;
+}
+
+#mobile-menu li:last-child {
+    border-bottom: none;
+}
+
+#mobile-menu a {
+    display: block;
+    padding: 14px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#mobile-menu a:hover,
+#mobile-menu .current_page_item a {
+    background: #B9DDD1;
+}
+
+/* ========================================
+   About Me 手机端头像和联系方式
+   ======================================== */
+.aboutme-photo-mobile {
+    display: none;
+}
+
+.aboutme-contact-mobile {
+    display: none;
+}
+
+.footprints-subtitle-mobile {
+    display: none;
+}
+
+.footprints-subtitle-desktop {
+    display: inline;
+}
+
+/* ========================================
+   手机端响应式设计 (max-width: 600px)
+   ======================================== */
+@media screen and (max-width: 600px) {
+    /* 汉堡菜单 */
+    #hamburger-btn {
+        display: flex;
+    }
+
+    #menu-wrapper {
+        display: none;
+    }
+
+    /* 容器 */
+    .container {
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+
+    /* About Me 页面：垂直居中布局 */
+    #div_aboutme .photo_containter {
+        display: none;
+    }
+
+    #div_aboutme .aboutme-photo-mobile {
+        display: block;
+        width: 50%;
+        max-width: 200px;
+        margin: 0 auto 10px auto;
+    }
+
+    #div_aboutme .aboutme-photo-mobile img {
+        width: 100%;
+        height: auto;
+    }
+
+    #div_aboutme .aboutme-contact-mobile {
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #div_aboutme .aboutme-contact-mobile h2 {
+        text-align: center;
+        margin: 0 0 10px 0;
+    }
+
+    #div_aboutme .aboutme-contact-mobile p {
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    #div_aboutme .cv_containter {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #div_aboutme .cv_containter h2 {
+        text-align: center;
+    }
+
+    #div_aboutme .cv_containter > p {
+        text-align: left;
+    }
+
+    #div_aboutme .cv_containter ul {
+        text-align: left;
+        padding-left: 20px;
+        display: inline-block;
+    }
+
+    #div_aboutme .cv_containter li {
+        text-align: left;
+    }
+
+    /* News & Travels：标题和按钮分两行，都居中 */
+    #div_aboutme > hr + div {
+        display: block !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #div_aboutme > hr + div p {
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    #div_aboutme > hr + div .expand {
+        display: inline-block;
+        margin-top: 8px;
+    }
+
+    .news_containter {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* 标题居中 */
+    h1, h2, h3 {
+        text-align: center;
+    }
+
+    .subtitle_container {
+        text-align: center;
+    }
+
+    /* Research Work 标题居中 */
+    .box-style {
+        text-align: center;
+    }
+
+    .box-style .pub_containter {
+        text-align: center;
+    }
+
+    /* Publications 图片拉满 */
+    #div_publications .snap_containter {
+        display: block;
+        width: 100%;
+        margin: 0 auto 10px auto;
+    }
+
+    #div_publications .snap_containter img {
+        width: 100%;
+        height: auto;
+    }
+
+    #div_publications .pub_containter {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .pub_containter {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* My Footprints 副标题换行居中 */
+    .footprints-subtitle {
+        display: block;
+        text-align: center;
+        margin-top: 8px;
+        word-wrap: break-word;
+    }
+
+    .footprints-subtitle-mobile {
+        display: block;
+        text-align: center;
+        margin-top: 8px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .footprints-subtitle-desktop {
+        display: none;
+    }
+
+    /* 图集 */
+    .gallery_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gallery_container img {
+        width: 45%;
+        padding: 2%;
+        margin: 1%;
+    }
+
+    /* 新闻区域 */
+    .news_containter {
+        font-size: 14px;
+    }
+
+    /* 字体大小 */
+    h1 { font-size: 1.6em; }
+    h2 { font-size: 1.4em; }
+    h3 { font-size: 1.2em; }
+    p, ul, ol { font-size: 14px; }
+
+    .subtitles { font-size: 16px; padding: 4px 8px; }
+    .subsubtitles { font-size: 15px; padding: 4px 8px; }
+
+    .badge, .badge_2, .badge_3, .badge_4, .badge_pin {
+        font-size: 70%;
+        padding: .2em .3em;
+    }
+
+    .expand {
+        width: 70px;
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    #footer {
+        height: 40px;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 70px;
+        margin-bottom: 15px;
+    }
+
+    #div_aboutme .photo_containter {
+        width: 70%;
+    }
+
+    h1 { font-size: 1.4em; }
+    h2 { font-size: 1.2em; }
+    p, ul, ol { font-size: 13px; }
+
+    .subtitles { font-size: 14px; }
+    .subsubtitles { font-size: 13px; }
+
+    .expand {
+        width: 60px;
+        font-size: 11px;
+    }
+
+    .gallery_container img {
+        width: 44%;
+        padding: 2%;
+        margin: 1%;
+    }
+}

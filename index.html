@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -19,6 +20,22 @@
 </head>
 
 <body>
+    <!-- 汉堡菜单按钮（手机端显示） -->
+    <div id="hamburger-btn" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+    </div>
+
+    <!-- 手机端浮窗目录 -->
+    <div id="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+    <div id="mobile-menu">
+        <ul>
+            <li id="mobile-aboutme" class="current_page_item"><a href="#aboutme" onclick="tab_aboutme_mobile()">About Me</a></li>
+            <li id="mobile-publications"><a href="#publications" onclick="tab_publications_mobile()">Publications</a></li>
+            <li id="mobile-misc"><a href="#misc" onclick="tab_misc_mobile()">Misc</a></li>
+            <li id="mobile-personal"><a href="#personal" onclick="tab_personal_mobile()">Personal</a></li>
+        </ul>
+    </div>
+
     <div id="wrapper">
         <div id="menu-wrapper">
             <div id="menu">
@@ -34,12 +51,19 @@
 
         <!-- 个人介绍页 -->
         <div id="div_aboutme" class="container" style="display:block">
-            <div class="photo_containter"><img src="images/me2.png" alt="" />
-                <p>440 Handan Rd., Shanghai, China<br>Zip code: 200433<br> xingyulan96(at)gmail.com
-                </p>
+            <!-- 大屏：头像和联系方式 -->
+            <div class="photo_containter">
+                <img src="images/me2.png" alt="" />
+                <p>440 Handan Rd., Shanghai, China<br>Zip code: 200433<br> xingyulan96(at)gmail.com</p>
+            </div>
+            <!-- 小屏：头像 -->
+            <div class="aboutme-photo-mobile"><img src="images/me2.png" alt="" /></div>
+            <!-- 小屏：名字和联系方式 -->
+            <div class="aboutme-contact-mobile">
+                <h2 style="color: #5BA689; font-family:'Arial','myfont' "><strong>Xingyu Lan</strong> ✨ 蓝星宇</h2>
+                <p>440 Handan Rd., Shanghai, China<br>Zip code: 200433<br> xingyulan96(at)gmail.com</p>
             </div>
             <div class="cv_containter">
-                <h2 style="color: #5BA689; font-family:'Arial','myfont' "><strong>Xingyu Lan</strong> ✨ 蓝星宇</h2>
                 <p>Researching in 📊 data visualization, 🖊 visual storytelling, 🖥️ user experience, 🤖 AI for social good.</p>
 
                 <!-- <h3 style="color:black; font-weight: bold;">Research Interest:</h3> -->
@@ -57,20 +81,22 @@
                 </p>
                 <p style="color:#5BA689; font-weight:500;">⭐ I am looking for highly motivated students and research interns! 招收硕士生及暑期/日常学生科研，有意请联系邮箱</p>
 
-                <p><strong>Teaching</strong>: 
+                <p><strong>Teaching</strong>:</p>
+                <ul>
                     <li>User Experience Design 用户体验设计（原信息互动设计，秋季，本科）</li>
                     <li>Data Analysis and Information Visualization 数据分析与信息可视化（秋季，本科）</li>
                     <li>AI Journalism and Communication 智能新闻传播（春季，本研贯通）</li>
                     <li>Research Methodology 新闻传播学研究方法（秋季，研究生）</li>
                     <li>AI-Mediated Communication 智能传播（春季，研究生）</li>
-                </p>
-                <p><strong>Service</strong>: 
+                </ul>
+                <p><strong>Service</strong>:</p>
+                <ul>
                     <li>ACM CHI conference, associate chair, 2024-2025</li>
                     <li>AAAI/ACM AIES conference, program committee, 2025</li>
                     <li>ChinaVis conference, program committee, 2023-2025</li>
                     <!-- <li>ChinaVis session chair, 2022; Host of the data art exhibition for teenagers, 2021</li> -->
                     <li>Reviewer of IEEE TVCG, Eurographics, ACM CHI, CSCW, TIST, Computer Science Review etc.</li>
-                </p>
+                </ul>
 
 
                 <!-- <p style="margin-block-start:0em; margin-block-end:0em"><a href="https://scholar.google.com/citations?user=8h4rMjsAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a>, <a href="https://drive.google.com/file/d/1q59HYLpOkCsD9_pLbAmSVoFhQGCz_DmS/view?usp=sharing" target="_blank">Curriculum Vitae</a></p> -->
@@ -834,7 +860,7 @@
 
         <!-- 个人照片 -->
         <div id="div_personal" class="container" style="display: none; margin-top: 50px;">
-            <div class="subtitle_container"><span class="subtitles">My Footprints:</span> &nbsp&nbsp Always on the road :D
+            <div class="subtitle_container"><span class="subtitles">My Footprints:</span> <span class="footprints-subtitle-mobile">Always on the road :D</span><span class="footprints-subtitle-desktop">Always on the road :D</span>
             </div>
             <div class="gallery_container">
                 <img src="images/japan_4.jpeg" alt="" />
@@ -1038,6 +1064,34 @@
         document.getElementById("div_personal").style.display = "block"
 
     }
+
+    /* 汉堡菜单交互 */
+    function toggleMobileMenu() {
+        const btn = document.getElementById('hamburger-btn');
+        const menu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+
+        btn.classList.toggle('active');
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+            overlay.style.display = 'none';
+        } else {
+            menu.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+    }
+
+    function closeMobileMenu() {
+        document.getElementById('hamburger-btn').classList.remove('active');
+        document.getElementById('mobile-menu').style.display = 'none';
+        document.getElementById('mobile-menu-overlay').style.display = 'none';
+    }
+
+    // 手机端菜单点击后关闭
+    function tab_aboutme_mobile() { tab_aboutme(); closeMobileMenu(); }
+    function tab_publications_mobile() { tab_publications(); closeMobileMenu(); }
+    function tab_misc_mobile() { tab_misc(); closeMobileMenu(); }
+    function tab_personal_mobile() { tab_personal(); closeMobileMenu(); }
   </script>
-  
+
 </html>
