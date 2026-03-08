@@ -1428,6 +1428,7 @@
             });
 
             let assignments = new Array(points.length).fill(0);
+            // k=1 时统一用 RGB 计算平均值
             if (k === 1) {
                 if (isRgb) {
                     centers[0] = {
@@ -2064,8 +2065,26 @@
                             z = center.b;
                             tooltipText = `RGB: R=${Math.round(center.r)}, G=${Math.round(center.g)}, B=${Math.round(center.b)}`;
                         } else {
-                            const rgb = hsvToRgb(center.hue, center.saturation, center.value);
-                            colorStr = `rgb(${rgb.join(',')})`;
+                            // HSV 空间：直接用 HSV 平均值计算颜色
+                            const hNorm = center.hue / 360;
+                            const sNorm = center.saturation / 100;
+                            const vNorm = center.value / 100;
+                            // 用 HSV 直接算 RGB
+                            const i = Math.floor(hNorm * 6);
+                            const f = hNorm * 6 - i;
+                            const p = vNorm * (1 - sNorm);
+                            const q = vNorm * (1 - f * sNorm);
+                            const t = vNorm * (1 - (1 - f) * sNorm);
+                            let r, g, b;
+                            switch (i % 6) {
+                                case 0: r = vNorm; g = t; b = p; break;
+                                case 1: r = q; g = vNorm; b = p; break;
+                                case 2: r = p; g = vNorm; b = t; break;
+                                case 3: r = p; g = q; b = vNorm; break;
+                                case 4: r = t; g = p; b = vNorm; break;
+                                case 5: r = vNorm; g = p; b = q; break;
+                            }
+                            colorStr = `rgb(${Math.round(r*255)},${Math.round(g*255)},${Math.round(b*255)})`;
                             const rad = center.hue * Math.PI / 180;
                             x = center.saturation * Math.cos(rad);
                             y = center.saturation * Math.sin(rad);
@@ -2073,18 +2092,19 @@
                             tooltipText = `HSV: H=${Math.round(center.hue)}°, S=${Math.round(center.saturation)}%, V=${Math.round(center.value)}%`;
                         }
                         const proj = project3D(x, y, z);
+                        const fillColor = colorStr;
 
                         g.append('circle')
                             .attr('cx', cx + proj.x * scale)
                             .attr('cy', cy - proj.y * scale)
                             .attr('r', 12)
-                            .attr('fill', colorStr)
+                            .attr('fill', fillColor)
                             .attr('stroke', '#fff')
                             .attr('stroke-width', 3)
                             .attr('class', 'cluster-center')
                             .on('mouseenter', function(e) {
                                 const label = getLabelText('male', scatterCategory);
-                                showTooltip(e, `${label} Cluster Center`, tooltipText, colorStr);
+                                showTooltip(e, `${label} Cluster Center`, tooltipText, '');
                             })
                             .on('mouseleave', function() {
                                 hideTooltip();
@@ -2102,8 +2122,26 @@
                             z = center.b;
                             tooltipText = `RGB: R=${Math.round(center.r)}, G=${Math.round(center.g)}, B=${Math.round(center.b)}`;
                         } else {
-                            const rgb = hsvToRgb(center.hue, center.saturation, center.value);
-                            colorStr = `rgb(${rgb.join(',')})`;
+                            // HSV 空间：直接用 HSV 平均值计算颜色
+                            const hNorm = center.hue / 360;
+                            const sNorm = center.saturation / 100;
+                            const vNorm = center.value / 100;
+                            // 用 HSV 直接算 RGB
+                            const i = Math.floor(hNorm * 6);
+                            const f = hNorm * 6 - i;
+                            const p = vNorm * (1 - sNorm);
+                            const q = vNorm * (1 - f * sNorm);
+                            const t = vNorm * (1 - (1 - f) * sNorm);
+                            let r, g, b;
+                            switch (i % 6) {
+                                case 0: r = vNorm; g = t; b = p; break;
+                                case 1: r = q; g = vNorm; b = p; break;
+                                case 2: r = p; g = vNorm; b = t; break;
+                                case 3: r = p; g = q; b = vNorm; break;
+                                case 4: r = t; g = p; b = vNorm; break;
+                                case 5: r = vNorm; g = p; b = q; break;
+                            }
+                            colorStr = `rgb(${Math.round(r*255)},${Math.round(g*255)},${Math.round(b*255)})`;
                             const rad = center.hue * Math.PI / 180;
                             x = center.saturation * Math.cos(rad);
                             y = center.saturation * Math.sin(rad);
@@ -2122,7 +2160,7 @@
                             .attr('class', 'cluster-center')
                             .on('mouseenter', function(e) {
                                 const label = getLabelText('female', scatterCategory);
-                                showTooltip(e, `${label} Cluster Center`, tooltipText, colorStr);
+                                showTooltip(e, `${label} Cluster Center`, tooltipText, '');
                             })
                             .on('mouseleave', function() {
                                 hideTooltip();
@@ -2270,7 +2308,7 @@
                             .attr('stroke-width', 2)
                             .on('mouseenter', function(e) {
                                 const label = getLabelText('male', scatterCategory);
-                                showTooltip(e, `${label} Cluster Center`, tooltipText, colorStr);
+                                showTooltip(e, `${label} Cluster Center`, tooltipText, '');
                             })
                             .on('mouseleave', function() {
                                 hideTooltip();
@@ -2316,7 +2354,7 @@
                             .attr('stroke-width', 2)
                             .on('mouseenter', function(e) {
                                 const label = getLabelText('female', scatterCategory);
-                                showTooltip(e, `${label} Cluster Center`, tooltipText, colorStr);
+                                showTooltip(e, `${label} Cluster Center`, tooltipText, '');
                             })
                             .on('mouseleave', function() {
                                 hideTooltip();
