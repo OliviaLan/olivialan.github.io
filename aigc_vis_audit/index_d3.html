@@ -318,8 +318,14 @@
                 <label>Sort:</label>
                 <select id="sortBy" onchange="updateVisualization()">
                     <option value="id">By ID</option>
-                    <option value="hue">By Hue</option>
+                    <option value="hue">By HSV</option>
                 </select>
+                <span id="hueTargetSpan" style="display:none;">
+                    <select id="hueTarget" onchange="updateVisualization()" style="margin-left:4px;">
+                        <option value="first">Man/Left/Profit</option>
+                        <option value="second">Woman/Right/Loss</option>
+                    </select>
+                </span>
             </div>
             <div class="control-group">
                 <label style="margin-right:8px;">Group by Tested Conditions & Models:</label>
@@ -486,9 +492,29 @@
         }
 
         function updateVisualization() {
+            // 显示/隐藏 hue target 选择器
+            const sortBy = document.getElementById('sortBy').value;
+            const hueTargetSpan = document.getElementById('hueTargetSpan');
+            hueTargetSpan.style.display = sortBy === 'hue' ? 'inline' : 'none';
+            
+            // 更新 hue target 选项
+            if (sortBy === 'hue') {
+                const cat = document.getElementById('categoryFilter').value;
+                const hueTarget = document.getElementById('hueTarget');
+                if (cat === 'C1') {
+                    hueTarget.options[0].text = 'Man';
+                    hueTarget.options[1].text = 'Woman';
+                } else if (cat === 'C2') {
+                    hueTarget.options[0].text = 'Left';
+                    hueTarget.options[1].text = 'Right';
+                } else if (cat === 'C3') {
+                    hueTarget.options[0].text = 'Profit';
+                    hueTarget.options[1].text = 'Loss';
+                }
+            }
+            
             const category = document.getElementById('categoryFilter').value;
             const mode = document.getElementById('displayMode').value;
-            const sortBy = document.getElementById('sortBy').value;
             groupBy = document.getElementById('groupByToggle').checked ? 'both' : 'none';
             currentCategory = category;
             const hasCategory = colorData.length > 0 && colorData[0].hasOwnProperty('category');
@@ -573,10 +599,32 @@
             let processed = [...data];
 
             if (sortBy === 'hue') {
+                const hueTarget = document.getElementById('hueTarget').value;
+                const getHue = (d) => {
+                    if (hueTarget === 'first') {
+                        return d.male_hue || d.left_hue || d.profit_hue || 0;
+                    } else {
+                        return d.female_hue || d.right_hue || d.loss_hue || 0;
+                    }
+                };
+                const getSat = (d) => {
+                    if (hueTarget === 'first') {
+                        return d.male_sat || d.left_sat || d.profit_sat || 0;
+                    } else {
+                        return d.female_sat || d.right_sat || d.loss_sat || 0;
+                    }
+                };
+                const getVal = (d) => {
+                    if (hueTarget === 'first') {
+                        return d.male_val || d.left_val || d.profit_val || 0;
+                    } else {
+                        return d.female_val || d.right_val || d.loss_val || 0;
+                    }
+                };
                 processed.sort((a, b) => {
-                    const ha = a.male_hue || 0, hb = b.male_hue || 0;
-                    const sa = a.male_sat || 0, sb = b.male_sat || 0;
-                    const va = a.male_val || 0, vb = b.male_val || 0;
+                    const ha = getHue(a), hb = getHue(b);
+                    const sa = getSat(a), sb = getSat(b);
+                    const va = getVal(a), vb = getVal(b);
                     if (ha !== hb) return ha - hb;
                     if (sa !== sb) return sa - sb;
                     return va - vb;
