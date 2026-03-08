@@ -392,7 +392,7 @@
             </div>
             <div class="control-group">
                 <label>Point Size:</label>
-                <input type="range" id="scatterPointSize" min="3" max="15" value="6" onchange="updateScatterPlot()" style="vertical-align: middle;">
+                <input type="range" id="scatterPointSize" min="3" max="15" value="4" onchange="updateScatterPlot()" style="vertical-align: middle;">
             </div>
             <div class="control-group" style="flex-basis: 100%; justify-content: center;">
                 <label style="margin-right:8px;">
@@ -424,6 +424,11 @@
                 <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="gemini" checked onchange="updateScatterPlot()"> Gemini</label>
                 <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="deepseek" checked onchange="updateScatterPlot()"> DeepSeek</label>
                 <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="claude" checked onchange="updateScatterPlot()"> Claude</label>
+                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="nano" checked onchange="updateScatterPlot()"> Nano Banana 2</label>
+            </div>
+            <div class="control-group" id="scatterStats" style="flex-basis: 100%; justify-content: center; display: none;">
+                <span style="color:#aaa;margin-right:8px;">Unique Points:</span>
+                <span id="statsText"></span>
             </div>
         </div>
         <div id="scatterContainer"></div>
@@ -1682,6 +1687,25 @@
             scatterData = scatterData.filter(d => checkedTGroups.includes(d.t_group));
             const checkedModels = Array.from(document.querySelectorAll('.model-checkbox:checked')).map(cb => cb.value);
             scatterData = scatterData.filter(d => checkedModels.some(m => d.model.startsWith(m)));
+            
+            // 更新统计
+            const statsDiv = document.getElementById('scatterStats');
+            const statsText = document.getElementById('statsText');
+            if (statsDiv && statsText) {
+                statsDiv.style.display = hasCategory ? 'flex' : 'none';
+                const modelCounts = {};
+                scatterData.forEach(d => {
+                    const model = d.model;
+                    if (!modelCounts[model]) modelCounts[model] = new Set();
+                    if (d.male_color) modelCounts[model].add(d.male_color.join(','));
+                    if (d.female_color) modelCounts[model].add(d.female_color.join(','));
+                });
+                const statsHtml = Object.entries(modelCounts).map(([m, s]) => 
+                    `${m}: <b>${s.size}</b>`
+                ).join(' | ');
+                statsText.innerHTML = statsHtml;
+            }
+            
             const malePoints = [];
             const femalePoints = [];
 
