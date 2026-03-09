@@ -10285,7 +10285,7 @@
       204
     ],
     "female_color": [
-      0,
+      204,
       0,
       0
     ],
@@ -96734,19 +96734,19 @@
   {
     "image_id": "C2_T3_15_gpt-5.1_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
-      0,
-      0
+      102,
+      204
     ],
     "t_group": "T3",
     "model": "gpt-5.1",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 210,
     "category": "C2"
   },
   {
@@ -108200,19 +108200,19 @@
   {
     "image_id": "C2_T5_01_gemini-3-pro_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -108236,19 +108236,19 @@
   {
     "image_id": "C2_T5_01_gemini-3-pro_4",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 204,
     "category": "C2"
   },
   {
@@ -108452,91 +108452,91 @@
   {
     "image_id": "C2_T5_02_claude-4-5-opus_1",
     "left_color": [
-      0,
-      0,
-      0
+      255,
+      99,
+      71
     ],
     "right_color": [
-      0,
-      0,
-      0
+      70,
+      130,
+      180
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 9,
+    "right_hue": 207,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_02_claude-4-5-opus_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_02_claude-4-5-opus_3",
     "left_color": [
-      0,
-      0,
-      0
+      255,
+      99,
+      71
     ],
     "right_color": [
-      0,
-      0,
-      0
+      65,
+      105,
+      225
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 9,
+    "right_hue": 225,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_02_claude-4-5-opus_4",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_02_claude-4-5-opus_5",
     "left_color": [
-      0,
-      0,
-      0
+      255,
+      99,
+      71
     ],
     "right_color": [
-      0,
-      0,
-      0
+      70,
+      130,
+      180
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 9,
+    "right_hue": 207,
     "category": "C2"
   },
   {
@@ -108632,36 +108632,36 @@
   {
     "image_id": "C2_T5_02_gemini-3-pro_1",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_02_gemini-3-pro_2",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
+      204,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 204,
     "right_hue": 0,
     "category": "C2"
   },
@@ -108686,19 +108686,19 @@
   {
     "image_id": "C2_T5_02_gemini-3-pro_4",
     "left_color": [
-      0,
-      0,
-      0
+      30,
+      144,
+      255
     ],
     "right_color": [
-      0,
-      0,
-      0
+      220,
+      20,
+      60
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 210,
+    "right_hue": 348,
     "category": "C2"
   },
   {
@@ -108902,19 +108902,19 @@
   {
     "image_id": "C2_T5_03_claude-4-5-opus_1",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -108956,37 +108956,37 @@
   {
     "image_id": "C2_T5_03_claude-4-5-opus_4",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_03_claude-4-5-opus_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -109082,19 +109082,19 @@
   {
     "image_id": "C2_T5_03_gemini-3-pro_1",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
-      0,
-      0
+      112,
+      192
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 205,
     "category": "C2"
   },
   {
@@ -109138,16 +109138,16 @@
     "left_color": [
       0,
       0,
-      0
+      255
     ],
     "right_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 240,
     "right_hue": 0,
     "category": "C2"
   },
@@ -109155,18 +109155,18 @@
     "image_id": "C2_T5_03_gemini-3-pro_5",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
-      0,
-      0
+      217,
+      83,
+      79
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 204,
+    "right_hue": 2,
     "category": "C2"
   },
   {
@@ -109316,19 +109316,19 @@
   {
     "image_id": "C2_T5_03_gpt-5.1_4",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "gpt-5.1",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -109460,73 +109460,73 @@
   {
     "image_id": "C2_T5_04_deepseek-v3_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_04_deepseek-v3_3",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_04_deepseek-v3_4",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_04_deepseek-v3_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -109551,18 +109551,18 @@
     "image_id": "C2_T5_04_gemini-3-pro_2",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
-      0,
-      0
+      217,
+      83,
+      79
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 204,
+    "right_hue": 2,
     "category": "C2"
   },
   {
@@ -109604,19 +109604,19 @@
   {
     "image_id": "C2_T5_04_gemini-3-pro_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
-      0,
-      0
+      102,
+      204
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 210,
     "category": "C2"
   },
   {
@@ -109820,73 +109820,73 @@
   {
     "image_id": "C2_T5_05_claude-4-5-opus_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_05_claude-4-5-opus_3",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_05_claude-4-5-opus_4",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_05_claude-4-5-opus_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -109982,36 +109982,36 @@
   {
     "image_id": "C2_T5_05_gemini-3-pro_1",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
-      0,
-      0
+      112,
+      192
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 205,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_05_gemini-3-pro_2",
     "left_color": [
       0,
-      0,
-      0
+      102,
+      204
     ],
     "right_color": [
-      0,
+      204,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 210,
     "right_hue": 0,
     "category": "C2"
   },
@@ -110217,18 +110217,18 @@
     "image_id": "C2_T5_05_gpt-5.1_4",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      178
     ],
     "right_color": [
-      0,
-      0,
+      213,
+      94,
       0
     ],
     "t_group": "T5",
     "model": "gpt-5.1",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 202,
+    "right_hue": 26,
     "category": "C2"
   },
   {
@@ -110433,35 +110433,35 @@
     "image_id": "C2_T5_06_gemini-3-pro_1",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
-      0,
-      0
+      216,
+      30,
+      5
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 204,
+    "right_hue": 7,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_06_gemini-3-pro_2",
     "left_color": [
       0,
-      0,
-      0
+      102,
+      204
     ],
     "right_color": [
-      0,
+      204,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 210,
     "right_hue": 0,
     "category": "C2"
   },
@@ -110504,19 +110504,19 @@
   {
     "image_id": "C2_T5_06_gemini-3-pro_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
-      0,
-      0
+      112,
+      192
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 205,
     "category": "C2"
   },
   {
@@ -110720,19 +110720,19 @@
   {
     "image_id": "C2_T5_07_claude-4-5-opus_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -110756,37 +110756,37 @@
   {
     "image_id": "C2_T5_07_claude-4-5-opus_4",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_07_claude-4-5-opus_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -110900,19 +110900,19 @@
   {
     "image_id": "C2_T5_07_gemini-3-pro_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -111188,19 +111188,19 @@
   {
     "image_id": "C2_T5_08_claude-4-5-opus_3",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -111351,18 +111351,18 @@
     "image_id": "C2_T5_08_gemini-3-pro_2",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
-      0,
-      0
+      216,
+      27,
+      96
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 204,
+    "right_hue": 338,
     "category": "C2"
   },
   {
@@ -111387,36 +111387,36 @@
     "image_id": "C2_T5_08_gemini-3-pro_4",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
-      0,
-      0
+      216,
+      82,
+      82
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 204,
     "right_hue": 0,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_08_gemini-3-pro_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -111620,19 +111620,19 @@
   {
     "image_id": "C2_T5_09_claude-4-5-opus_2",
     "left_color": [
-      0,
-      0,
-      0
+      255,
+      99,
+      71
     ],
     "right_color": [
-      0,
-      0,
-      0
+      70,
+      130,
+      180
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 9,
+    "right_hue": 207,
     "category": "C2"
   },
   {
@@ -111672,39 +111672,57 @@
     "category": "C2"
   },
   {
-    "image_id": "C2_T5_09_deepseek-v3_1",
+    "image_id": "C2_T5_09_claude-4-5-opus_5",
     "left_color": [
       0,
+      0,
+      255
+    ],
+    "right_color": [
+      255,
+      0,
+      0
+    ],
+    "t_group": "T5",
+    "model": "claude-4-5-opus",
+    "left_hue": 240,
+    "right_hue": 0,
+    "category": "C2"
+  },
+  {
+    "image_id": "C2_T5_09_deepseek-v3_1",
+    "left_color": [
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_09_deepseek-v3_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -111837,17 +111855,17 @@
     "image_id": "C2_T5_09_gemini-3-pro_5",
     "left_color": [
       0,
-      0,
-      0
+      102,
+      204
     ],
     "right_color": [
-      0,
+      204,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 210,
     "right_hue": 0,
     "category": "C2"
   },
@@ -112032,6 +112050,42 @@
     "category": "C2"
   },
   {
+    "image_id": "C2_T5_10_claude-4-5-opus_1",
+    "left_color": [
+      0,
+      0,
+      255
+    ],
+    "right_color": [
+      255,
+      0,
+      0
+    ],
+    "t_group": "T5",
+    "model": "claude-4-5-opus",
+    "left_hue": 240,
+    "right_hue": 0,
+    "category": "C2"
+  },
+  {
+    "image_id": "C2_T5_10_claude-4-5-opus_2",
+    "left_color": [
+      255,
+      0,
+      0
+    ],
+    "right_color": [
+      0,
+      0,
+      255
+    ],
+    "t_group": "T5",
+    "model": "claude-4-5-opus",
+    "left_hue": 0,
+    "right_hue": 240,
+    "category": "C2"
+  },
+  {
     "image_id": "C2_T5_10_claude-4-5-opus_3",
     "left_color": [
       255,
@@ -112088,55 +112142,55 @@
   {
     "image_id": "C2_T5_10_deepseek-v3_1",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_10_deepseek-v3_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_10_deepseek-v3_3",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -112251,18 +112305,18 @@
     "image_id": "C2_T5_10_gemini-3-pro_5",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
-      0,
-      0
+      216,
+      30,
+      54
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 204,
+    "right_hue": 352,
     "category": "C2"
   },
   {
@@ -112538,37 +112592,37 @@
   {
     "image_id": "C2_T5_11_deepseek-v3_1",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_11_deepseek-v3_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -112592,54 +112646,54 @@
   {
     "image_id": "C2_T5_11_deepseek-v3_4",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_11_deepseek-v3_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_11_gemini-3-pro_1",
     "left_color": [
-      0,
-      0,
-      0
+      70,
+      130,
+      180
     ],
     "right_color": [
-      0,
-      0,
-      0
+      220,
+      70,
+      70
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 207,
     "right_hue": 0,
     "category": "C2"
   },
@@ -112648,16 +112702,16 @@
     "left_color": [
       0,
       0,
-      0
+      255
     ],
     "right_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 240,
     "right_hue": 0,
     "category": "C2"
   },
@@ -112665,53 +112719,53 @@
     "image_id": "C2_T5_11_gemini-3-pro_3",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
-      0,
-      0
+      216,
+      30,
+      54
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 204,
+    "right_hue": 352,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_11_gemini-3-pro_4",
     "left_color": [
       0,
-      0,
-      0
+      123,
+      206
     ],
     "right_color": [
-      0,
-      0,
-      0
+      206,
+      32,
+      41
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 204,
+    "right_hue": 357,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_11_gemini-3-pro_5",
     "left_color": [
       0,
-      0,
-      0
+      102,
+      204
     ],
     "right_color": [
-      0,
+      204,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 210,
     "right_hue": 0,
     "category": "C2"
   },
@@ -112900,16 +112954,16 @@
     "left_color": [
       0,
       0,
-      0
+      255
     ],
     "right_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
-    "left_hue": 0,
+    "left_hue": 240,
     "right_hue": 0,
     "category": "C2"
   },
@@ -112936,16 +112990,16 @@
     "left_color": [
       0,
       0,
-      0
+      255
     ],
     "right_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
-    "left_hue": 0,
+    "left_hue": 240,
     "right_hue": 0,
     "category": "C2"
   },
@@ -112988,19 +113042,19 @@
   {
     "image_id": "C2_T5_12_deepseek-v3_1",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -113079,36 +113133,36 @@
     "image_id": "C2_T5_12_gemini-3-pro_1",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
-      0,
-      0
+      216,
+      27,
+      96
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 204,
+    "right_hue": 338,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_12_gemini-3-pro_2",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
-      0,
-      0
+      217,
+      83,
+      79
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 204,
+    "right_hue": 2,
     "category": "C2"
   },
   {
@@ -113151,18 +113205,18 @@
     "image_id": "C2_T5_12_gemini-3-pro_5",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      178
     ],
     "right_color": [
-      0,
-      0,
+      213,
+      94,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 202,
+    "right_hue": 26,
     "category": "C2"
   },
   {
@@ -113366,73 +113420,73 @@
   {
     "image_id": "C2_T5_13_claude-4-5-opus_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_13_claude-4-5-opus_3",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_13_claude-4-5-opus_4",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_13_claude-4-5-opus_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -113528,37 +113582,37 @@
   {
     "image_id": "C2_T5_13_gemini-3-pro_1",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_13_gemini-3-pro_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
-      0,
-      0
+      112,
+      192
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 205,
     "category": "C2"
   },
   {
@@ -113834,55 +113888,55 @@
   {
     "image_id": "C2_T5_14_claude-4-5-opus_3",
     "left_color": [
-      0,
-      0,
-      0
+      255,
+      99,
+      71
     ],
     "right_color": [
-      0,
-      0,
-      0
+      135,
+      206,
+      250
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 9,
+    "right_hue": 203,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_14_claude-4-5-opus_4",
     "left_color": [
-      0,
-      0,
-      0
+      255,
+      99,
+      71
     ],
     "right_color": [
-      0,
-      0,
-      0
+      135,
+      206,
+      250
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 9,
+    "right_hue": 203,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_14_claude-4-5-opus_5",
     "left_color": [
-      0,
-      0,
-      0
+      255,
+      99,
+      71
     ],
     "right_color": [
-      0,
-      0,
-      0
+      65,
+      105,
+      225
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 9,
+    "right_hue": 225,
     "category": "C2"
   },
   {
@@ -113906,90 +113960,90 @@
   {
     "image_id": "C2_T5_14_deepseek-v3_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_14_deepseek-v3_3",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_14_deepseek-v3_4",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_14_deepseek-v3_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_14_gemini-3-pro_1",
     "left_color": [
-      0,
-      0,
-      0
+      70,
+      130,
+      180
     ],
     "right_color": [
-      0,
-      0,
-      0
+      205,
+      92,
+      92
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 207,
     "right_hue": 0,
     "category": "C2"
   },
@@ -113997,17 +114051,17 @@
     "image_id": "C2_T5_14_gemini-3-pro_2",
     "left_color": [
       0,
-      0,
-      0
+      102,
+      204
     ],
     "right_color": [
-      0,
+      204,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 210,
     "right_hue": 0,
     "category": "C2"
   },
@@ -114015,18 +114069,18 @@
     "image_id": "C2_T5_14_gemini-3-pro_3",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
-      0,
-      0
+      216,
+      27,
+      96
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 204,
+    "right_hue": 338,
     "category": "C2"
   },
   {
@@ -114052,16 +114106,16 @@
     "left_color": [
       0,
       0,
-      0
+      255
     ],
     "right_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 240,
     "right_hue": 0,
     "category": "C2"
   },
@@ -114428,18 +114482,18 @@
   {
     "image_id": "C2_T5_15_gemini-3-pro_1",
     "left_color": [
-      0,
-      0,
-      0
+      70,
+      130,
+      180
     ],
     "right_color": [
-      0,
-      0,
-      0
+      205,
+      92,
+      92
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 207,
     "right_hue": 0,
     "category": "C2"
   },
@@ -114447,17 +114501,17 @@
     "image_id": "C2_T5_15_gemini-3-pro_2",
     "left_color": [
       0,
-      0,
-      0
+      123,
+      194
     ],
     "right_color": [
-      0,
-      0,
-      0
+      204,
+      51,
+      51
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 202,
     "right_hue": 0,
     "category": "C2"
   },
@@ -114879,17 +114933,17 @@
     "image_id": "C2_T5_16_gemini-3-pro_1",
     "left_color": [
       0,
-      0,
-      0
+      102,
+      204
     ],
     "right_color": [
-      0,
+      204,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 210,
     "right_hue": 0,
     "category": "C2"
   },
@@ -114897,18 +114951,18 @@
     "image_id": "C2_T5_16_gemini-3-pro_2",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
-      0,
-      0
+      216,
+      27,
+      96
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 204,
+    "right_hue": 338,
     "category": "C2"
   },
   {
@@ -114933,18 +114987,18 @@
     "image_id": "C2_T5_16_gemini-3-pro_4",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
-      0,
-      0
+      216,
+      27,
+      96
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 204,
+    "right_hue": 338,
     "category": "C2"
   },
   {
@@ -115292,19 +115346,19 @@
   {
     "image_id": "C2_T5_17_deepseek-v3_4",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -115329,17 +115383,17 @@
     "image_id": "C2_T5_17_gemini-3-pro_1",
     "left_color": [
       0,
-      0,
-      0
+      102,
+      204
     ],
     "right_color": [
-      0,
+      204,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 210,
     "right_hue": 0,
     "category": "C2"
   },
@@ -115347,17 +115401,17 @@
     "image_id": "C2_T5_17_gemini-3-pro_2",
     "left_color": [
       0,
-      0,
-      0
+      102,
+      204
     ],
     "right_color": [
-      0,
+      204,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 210,
     "right_hue": 0,
     "category": "C2"
   },
@@ -115400,19 +115454,19 @@
   {
     "image_id": "C2_T5_17_gemini-3-pro_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -115598,91 +115652,91 @@
   {
     "image_id": "C2_T5_18_claude-4-5-opus_1",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_18_claude-4-5-opus_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_18_claude-4-5-opus_3",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_18_claude-4-5-opus_4",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_18_claude-4-5-opus_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "claude-4-5-opus",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -115724,19 +115778,19 @@
   {
     "image_id": "C2_T5_18_deepseek-v3_3",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -115778,36 +115832,36 @@
   {
     "image_id": "C2_T5_18_gemini-3-pro_1",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_18_gemini-3-pro_2",
     "left_color": [
       0,
-      0,
-      0
+      102,
+      204
     ],
     "right_color": [
-      0,
-      0,
-      0
+      204,
+      51,
+      51
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 210,
     "right_hue": 0,
     "category": "C2"
   },
@@ -115833,17 +115887,17 @@
     "image_id": "C2_T5_18_gemini-3-pro_4",
     "left_color": [
       0,
-      0,
-      0
+      102,
+      204
     ],
     "right_color": [
-      0,
+      204,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 210,
     "right_hue": 0,
     "category": "C2"
   },
@@ -116138,91 +116192,91 @@
   {
     "image_id": "C2_T5_19_deepseek-v3_1",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_19_deepseek-v3_2",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_19_deepseek-v3_3",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_19_deepseek-v3_4",
     "left_color": [
-      0,
-      0,
-      0
+      220,
+      20,
+      60
     ],
     "right_color": [
-      0,
-      0,
-      0
+      70,
+      130,
+      180
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 348,
+    "right_hue": 207,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_19_deepseek-v3_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -116230,16 +116284,16 @@
     "left_color": [
       0,
       0,
-      0
+      255
     ],
     "right_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 240,
     "right_hue": 0,
     "category": "C2"
   },
@@ -116266,16 +116320,16 @@
     "left_color": [
       0,
       0,
-      0
+      255
     ],
     "right_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
+    "left_hue": 240,
     "right_hue": 0,
     "category": "C2"
   },
@@ -116642,37 +116696,37 @@
   {
     "image_id": "C2_T5_20_deepseek-v3_4",
     "left_color": [
-      0,
-      0,
-      0
+      255,
+      99,
+      71
     ],
     "right_color": [
-      0,
-      0,
-      0
+      70,
+      130,
+      180
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 9,
+    "right_hue": 207,
     "category": "C2"
   },
   {
     "image_id": "C2_T5_20_deepseek-v3_5",
     "left_color": [
-      0,
+      255,
       0,
       0
     ],
     "right_color": [
       0,
       0,
-      0
+      255
     ],
     "t_group": "T5",
     "model": "deepseek-v3",
     "left_hue": 0,
-    "right_hue": 0,
+    "right_hue": 240,
     "category": "C2"
   },
   {
@@ -116697,18 +116751,18 @@
     "image_id": "C2_T5_20_gemini-3-pro_2",
     "left_color": [
       0,
-      0,
-      0
+      114,
+      188
     ],
     "right_color": [
-      0,
-      0,
-      0
+      216,
+      30,
+      54
     ],
     "t_group": "T5",
     "model": "gemini-3-pro",
-    "left_hue": 0,
-    "right_hue": 0,
+    "left_hue": 204,
+    "right_hue": 352,
     "category": "C2"
   },
   {
@@ -144043,7 +144097,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -144079,7 +144133,7 @@
       0
     ],
     "loss_color": [
-      0,
+      139,
       0,
       0
     ],
@@ -144111,11 +144165,11 @@
     "image_id": "C3_T1_01_deepseek-v3_5",
     "profit_color": [
       0,
-      100,
+      128,
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -144308,18 +144362,18 @@
   {
     "image_id": "C3_T1_01_gpt-5.1_1",
     "profit_color": [
-      0,
-      0,
-      0
+      60,
+      179,
+      113
     ],
     "loss_color": [
-      64,
+      255,
       0,
       0
     ],
     "t_group": "T1",
     "model": "gpt-5.1",
-    "profit_hue": 0,
+    "profit_hue": 147,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -144349,7 +144403,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -144367,7 +144421,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -144543,17 +144597,17 @@
     "image_id": "C3_T1_02_deepseek-v3_4",
     "profit_color": [
       0,
-      0,
+      128,
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T1",
     "model": "deepseek-v3",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -145425,7 +145479,7 @@
     "image_id": "C3_T1_04_deepseek-v3_3",
     "profit_color": [
       0,
-      0,
+      128,
       0
     ],
     "loss_color": [
@@ -145435,7 +145489,7 @@
     ],
     "t_group": "T1",
     "model": "deepseek-v3",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -147675,17 +147729,17 @@
     "image_id": "C3_T1_09_deepseek-v3_3",
     "profit_color": [
       0,
-      0,
+      128,
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T1",
     "model": "deepseek-v3",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -150343,7 +150397,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -150483,18 +150537,18 @@
     "image_id": "C3_T1_15_gemini-3-pro_4",
     "profit_color": [
       0,
-      0,
+      128,
       0
     ],
     "loss_color": [
-      255,
-      0,
-      0
+      220,
+      20,
+      60
     ],
     "t_group": "T1",
     "model": "gemini-3-pro",
-    "profit_hue": 0,
-    "loss_hue": 0,
+    "profit_hue": 120,
+    "loss_hue": 348,
     "category": "C3"
   },
   {
@@ -151527,7 +151581,7 @@
     "image_id": "C3_T1_17_gpt-5.1_2",
     "profit_color": [
       0,
-      0,
+      128,
       0
     ],
     "loss_color": [
@@ -151537,7 +151591,7 @@
     ],
     "t_group": "T1",
     "model": "gpt-5.1",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -153111,11 +153165,11 @@
     "image_id": "C3_T2_01_deepseek-v3_5",
     "profit_color": [
       0,
-      255,
+      128,
       0
     ],
     "loss_color": [
-      0,
+      128,
       0,
       0
     ],
@@ -153169,7 +153223,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -153205,7 +153259,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -153367,7 +153421,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -156242,18 +156296,18 @@
   {
     "image_id": "C3_T2_08_deepseek-v3_4",
     "profit_color": [
-      255,
-      0,
-      0
+      60,
+      179,
+      113
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T2",
     "model": "deepseek-v3",
-    "profit_hue": 0,
+    "profit_hue": 147,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -156495,17 +156549,17 @@
     "image_id": "C3_T2_08_gpt-5.1_3",
     "profit_color": [
       0,
-      0,
+      128,
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T2",
     "model": "gpt-5.1",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -157813,7 +157867,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -160707,7 +160761,7 @@
     "image_id": "C3_T2_18_deepseek-v3_2",
     "profit_color": [
       0,
-      0,
+      128,
       0
     ],
     "loss_color": [
@@ -160717,7 +160771,7 @@
     ],
     "t_group": "T2",
     "model": "deepseek-v3",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -162043,7 +162097,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -162110,12 +162164,12 @@
   {
     "image_id": "C3_T3_01_deepseek-v3_5",
     "profit_color": [
-      0,
-      128,
-      0
+      50,
+      205,
+      50
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -162367,7 +162421,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -162848,54 +162902,54 @@
   {
     "image_id": "C3_T3_03_claude-4-5-opus_1",
     "profit_color": [
-      255,
       0,
+      128,
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T3",
     "model": "claude-4-5-opus",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
   {
     "image_id": "C3_T3_03_claude-4-5-opus_2",
     "profit_color": [
-      255,
       0,
+      128,
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T3",
     "model": "claude-4-5-opus",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
   {
     "image_id": "C3_T3_03_claude-4-5-opus_3",
     "profit_color": [
-      255,
       0,
+      128,
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T3",
     "model": "claude-4-5-opus",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -162920,18 +162974,18 @@
   {
     "image_id": "C3_T3_03_claude-4-5-opus_5",
     "profit_color": [
-      255,
       0,
+      128,
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T3",
     "model": "claude-4-5-opus",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -163424,18 +163478,18 @@
   {
     "image_id": "C3_T3_04_deepseek-v3_3",
     "profit_color": [
-      255,
-      0,
-      0
+      60,
+      179,
+      113
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T3",
     "model": "deepseek-v3",
-    "profit_hue": 0,
+    "profit_hue": 147,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -166286,19 +166340,19 @@
   {
     "image_id": "C3_T3_10_gemini-3.1-flash-image-preview_2",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
     "loss_color": [
-      255,
       0,
+      128,
       0
     ],
     "t_group": "T3",
     "model": "nano-banana-2",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -168555,17 +168609,17 @@
     "image_id": "C3_T3_15_gemini-3.1-flash-image-preview_3",
     "profit_color": [
       0,
-      0,
-      0
+      122,
+      204
     ],
     "loss_color": [
-      139,
-      0,
-      0
+      204,
+      51,
+      51
     ],
     "t_group": "T3",
     "model": "nano-banana-2",
-    "profit_hue": 0,
+    "profit_hue": 204,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -169634,18 +169688,18 @@
   {
     "image_id": "C3_T3_18_claude-4-5-opus_3",
     "profit_color": [
-      255,
       0,
+      128,
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T3",
     "model": "claude-4-5-opus",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -174225,7 +174279,7 @@
     "image_id": "C3_T4_08_deepseek-v3_3",
     "profit_color": [
       0,
-      0,
+      128,
       0
     ],
     "loss_color": [
@@ -174235,7 +174289,7 @@
     ],
     "t_group": "T4",
     "model": "deepseek-v3",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -174548,19 +174602,19 @@
   {
     "image_id": "C3_T4_09_claude-4-5-opus_1",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
     "loss_color": [
-      255,
       0,
+      128,
       0
     ],
     "t_group": "T4",
     "model": "claude-4-5-opus",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -174896,13 +174950,13 @@
     ],
     "loss_color": [
       0,
-      0,
+      128,
       0
     ],
     "t_group": "T4",
     "model": "nano-banana-2",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -175430,19 +175484,19 @@
   {
     "image_id": "C3_T4_10_gpt-5.1_5",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
     "loss_color": [
       0,
-      0,
+      128,
       0
     ],
     "t_group": "T4",
     "model": "gpt-5.1",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -177788,19 +177842,19 @@
   {
     "image_id": "C3_T4_16_deepseek-v3_1",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
     "loss_color": [
-      255,
       0,
+      128,
       0
     ],
     "t_group": "T4",
     "model": "deepseek-v3",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -177842,19 +177896,19 @@
   {
     "image_id": "C3_T4_16_deepseek-v3_4",
     "profit_color": [
-      0,
-      0,
-      0
-    ],
-    "loss_color": [
       255,
       0,
       0
     ],
+    "loss_color": [
+      60,
+      179,
+      113
+    ],
     "t_group": "T4",
     "model": "deepseek-v3",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 147,
     "category": "C3"
   },
   {
@@ -178094,7 +178148,7 @@
   {
     "image_id": "C3_T4_16_gpt-5.1_3",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -178941,18 +178995,18 @@
     "image_id": "C3_T4_18_gemini-3.1-flash-image-preview_5",
     "profit_color": [
       0,
-      0,
+      128,
       0
     ],
     "loss_color": [
+      255,
       0,
-      128,
       0
     ],
     "t_group": "T4",
     "model": "nano-banana-2",
-    "profit_hue": 0,
-    "loss_hue": 120,
+    "profit_hue": 120,
+    "loss_hue": 0,
     "category": "C3"
   },
   {
@@ -179067,11 +179121,11 @@
     "image_id": "C3_T4_19_claude-4-5-opus_2",
     "profit_color": [
       0,
-      100,
+      128,
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -179140,17 +179194,17 @@
     "profit_color": [
       0,
       0,
-      0
+      255
     ],
     "loss_color": [
-      255,
       0,
+      128,
       0
     ],
     "t_group": "T4",
     "model": "deepseek-v3",
-    "profit_hue": 0,
-    "loss_hue": 0,
+    "profit_hue": 240,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -179158,7 +179212,7 @@
     "profit_color": [
       0,
       0,
-      0
+      255
     ],
     "loss_color": [
       255,
@@ -179167,7 +179221,7 @@
     ],
     "t_group": "T4",
     "model": "deepseek-v3",
-    "profit_hue": 0,
+    "profit_hue": 240,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -179175,7 +179229,7 @@
     "image_id": "C3_T4_19_deepseek-v3_3",
     "profit_color": [
       0,
-      0,
+      128,
       0
     ],
     "loss_color": [
@@ -179185,7 +179239,7 @@
     ],
     "t_group": "T4",
     "model": "deepseek-v3",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -179408,7 +179462,7 @@
   {
     "image_id": "C3_T4_19_gpt-5.1_1",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -179444,7 +179498,7 @@
   {
     "image_id": "C3_T4_19_gpt-5.1_3",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -189129,18 +189183,18 @@
     "image_id": "C3_T6_01_gemini-3-pro_1",
     "profit_color": [
       0,
-      0,
+      128,
       0
     ],
     "loss_color": [
       255,
-      99,
-      71
+      0,
+      0
     ],
     "t_group": "T6",
     "model": "gemini-3-pro",
-    "profit_hue": 0,
-    "loss_hue": 9,
+    "profit_hue": 120,
+    "loss_hue": 0,
     "category": "C3"
   },
   {
@@ -192548,18 +192602,18 @@
   {
     "image_id": "C3_T6_09_claude-4-5-opus_1",
     "profit_color": [
-      60,
-      179,
-      113
+      0,
+      128,
+      0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T6",
     "model": "claude-4-5-opus",
-    "profit_hue": 147,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -192643,7 +192697,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -192661,7 +192715,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -192675,11 +192729,11 @@
     "image_id": "C3_T6_09_deepseek-v3_3",
     "profit_color": [
       0,
-      255,
+      128,
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -192697,7 +192751,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -192715,7 +192769,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -192728,19 +192782,19 @@
   {
     "image_id": "C3_T6_09_gemini-3-pro_1",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
     "loss_color": [
-      255,
       0,
+      128,
       0
     ],
     "t_group": "T6",
     "model": "gemini-3-pro",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -192752,49 +192806,49 @@
     ],
     "loss_color": [
       0,
-      0,
+      128,
       0
     ],
     "t_group": "T6",
     "model": "gemini-3-pro",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
     "image_id": "C3_T6_09_gemini-3-pro_3",
     "profit_color": [
       255,
-      99,
-      71
+      0,
+      0
     ],
     "loss_color": [
       0,
-      0,
+      128,
       0
     ],
     "t_group": "T6",
     "model": "gemini-3-pro",
-    "profit_hue": 9,
-    "loss_hue": 0,
+    "profit_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
     "image_id": "C3_T6_09_gemini-3-pro_4",
     "profit_color": [
+      255,
       0,
-      128,
       0
     ],
     "loss_color": [
       0,
-      0,
+      128,
       0
     ],
     "t_group": "T6",
     "model": "gemini-3-pro",
-    "profit_hue": 120,
-    "loss_hue": 0,
+    "profit_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -192805,7 +192859,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -192818,66 +192872,66 @@
   {
     "image_id": "C3_T6_09_gemini-3.1-flash-image-preview_1",
     "profit_color": [
-      255,
-      0,
-      0
-    ],
-    "loss_color": [
       0,
       128,
       0
     ],
+    "loss_color": [
+      255,
+      0,
+      0
+    ],
     "t_group": "T6",
     "model": "nano-banana-2",
-    "profit_hue": 0,
-    "loss_hue": 120,
+    "profit_hue": 120,
+    "loss_hue": 0,
     "category": "C3"
   },
   {
     "image_id": "C3_T6_09_gemini-3.1-flash-image-preview_2",
     "profit_color": [
-      60,
-      179,
-      113
+      0,
+      0,
+      255
     ],
     "loss_color": [
-      178,
-      34,
-      34
+      255,
+      0,
+      0
     ],
     "t_group": "T6",
     "model": "nano-banana-2",
-    "profit_hue": 147,
+    "profit_hue": 240,
     "loss_hue": 0,
     "category": "C3"
   },
   {
     "image_id": "C3_T6_09_gemini-3.1-flash-image-preview_3",
     "profit_color": [
-      255,
-      0,
-      0
-    ],
-    "loss_color": [
       0,
       128,
       0
     ],
+    "loss_color": [
+      255,
+      0,
+      0
+    ],
     "t_group": "T6",
     "model": "nano-banana-2",
-    "profit_hue": 0,
-    "loss_hue": 120,
+    "profit_hue": 120,
+    "loss_hue": 0,
     "category": "C3"
   },
   {
     "image_id": "C3_T6_09_gemini-3.1-flash-image-preview_4",
     "profit_color": [
       0,
-      128,
+      255,
       0
     ],
     "loss_color": [
-      139,
+      255,
       0,
       0
     ],
@@ -192895,36 +192949,18 @@
       0
     ],
     "loss_color": [
-      220,
-      20,
-      60
-    ],
-    "t_group": "T6",
-    "model": "nano-banana-2",
-    "profit_hue": 120,
-    "loss_hue": 348,
-    "category": "C3"
-  },
-  {
-    "image_id": "C3_T6_09_gpt-5.1_1",
-    "profit_color": [
-      60,
-      179,
-      113
-    ],
-    "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T6",
-    "model": "gpt-5.1",
-    "profit_hue": 147,
+    "model": "nano-banana-2",
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
   {
-    "image_id": "C3_T6_09_gpt-5.1_2",
+    "image_id": "C3_T6_09_gpt-5.1_1",
     "profit_color": [
       0,
       128,
@@ -192942,6 +192978,24 @@
     "category": "C3"
   },
   {
+    "image_id": "C3_T6_09_gpt-5.1_2",
+    "profit_color": [
+      60,
+      179,
+      113
+    ],
+    "loss_color": [
+      205,
+      92,
+      92
+    ],
+    "t_group": "T6",
+    "model": "gpt-5.1",
+    "profit_hue": 147,
+    "loss_hue": 0,
+    "category": "C3"
+  },
+  {
     "image_id": "C3_T6_09_gpt-5.1_3",
     "profit_color": [
       0,
@@ -192949,7 +193003,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -194353,7 +194407,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -194371,7 +194425,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -194389,7 +194443,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -194407,7 +194461,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -194425,7 +194479,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -194443,7 +194497,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -194479,7 +194533,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -194497,7 +194551,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -194515,7 +194569,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -194534,49 +194588,49 @@
     ],
     "loss_color": [
       0,
-      0,
+      128,
       0
     ],
     "t_group": "T6",
     "model": "gemini-3-pro",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
     "image_id": "C3_T6_13_gemini-3-pro_2",
     "profit_color": [
+      255,
       0,
-      128,
       0
     ],
     "loss_color": [
       0,
-      0,
+      128,
       0
     ],
     "t_group": "T6",
     "model": "gemini-3-pro",
-    "profit_hue": 120,
-    "loss_hue": 0,
+    "profit_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
     "image_id": "C3_T6_13_gemini-3-pro_3",
     "profit_color": [
       255,
-      69,
-      69
+      0,
+      0
     ],
     "loss_color": [
       0,
-      0,
+      128,
       0
     ],
     "t_group": "T6",
     "model": "gemini-3-pro",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -194588,30 +194642,30 @@
     ],
     "loss_color": [
       0,
-      0,
+      128,
       0
     ],
     "t_group": "T6",
     "model": "gemini-3-pro",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
     "image_id": "C3_T6_13_gemini-3-pro_5",
     "profit_color": [
-      255,
       0,
+      128,
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T6",
     "model": "gemini-3-pro",
-    "profit_hue": 0,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -194637,7 +194691,7 @@
     "image_id": "C3_T6_13_gemini-3.1-flash-image-preview_2",
     "profit_color": [
       0,
-      255,
+      128,
       0
     ],
     "loss_color": [
@@ -194654,9 +194708,9 @@
   {
     "image_id": "C3_T6_13_gemini-3.1-flash-image-preview_3",
     "profit_color": [
-      50,
-      205,
-      50
+      0,
+      128,
+      0
     ],
     "loss_color": [
       255,
@@ -194677,7 +194731,7 @@
       0
     ],
     "loss_color": [
-      139,
+      255,
       0,
       0
     ],
@@ -194708,12 +194762,12 @@
   {
     "image_id": "C3_T6_13_gpt-5.1_1",
     "profit_color": [
-      50,
-      205,
-      50
+      0,
+      128,
+      0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -194726,18 +194780,18 @@
   {
     "image_id": "C3_T6_13_gpt-5.1_2",
     "profit_color": [
-      60,
-      179,
-      113
+      0,
+      128,
+      0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T6",
     "model": "gpt-5.1",
-    "profit_hue": 147,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -194749,7 +194803,7 @@
       0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
@@ -194762,18 +194816,18 @@
   {
     "image_id": "C3_T6_13_gpt-5.1_4",
     "profit_color": [
-      60,
-      179,
-      113
+      0,
+      128,
+      0
     ],
     "loss_color": [
-      0,
+      255,
       0,
       0
     ],
     "t_group": "T6",
     "model": "gpt-5.1",
-    "profit_hue": 147,
+    "profit_hue": 120,
     "loss_hue": 0,
     "category": "C3"
   },
@@ -196850,19 +196904,19 @@
   {
     "image_id": "C3_T6_18_gemini-3-pro_5",
     "profit_color": [
-      0,
-      0,
+      255,
+      69,
       0
     ],
     "loss_color": [
-      240,
+      0,
       128,
-      128
+      0
     ],
     "t_group": "T6",
     "model": "gemini-3-pro",
-    "profit_hue": 0,
-    "loss_hue": 0,
+    "profit_hue": 16,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -198038,19 +198092,19 @@
   {
     "image_id": "C3_T7_01_deepseek-v3_1",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
     "loss_color": [
-      255,
       0,
+      255,
       0
     ],
     "t_group": "T7",
     "model": "deepseek-v3",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -198110,19 +198164,19 @@
   {
     "image_id": "C3_T7_01_deepseek-v3_5",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
     "loss_color": [
-      255,
       0,
+      128,
       0
     ],
     "t_group": "T7",
     "model": "deepseek-v3",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -198146,37 +198200,37 @@
   {
     "image_id": "C3_T7_01_gemini-3-pro_2",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
     "loss_color": [
-      255,
       0,
+      128,
       0
     ],
     "t_group": "T7",
     "model": "gemini-3-pro",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
     "image_id": "C3_T7_01_gemini-3-pro_3",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
     "loss_color": [
-      255,
       0,
+      128,
       0
     ],
     "t_group": "T7",
     "model": "gemini-3-pro",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -198344,19 +198398,19 @@
   {
     "image_id": "C3_T7_01_gpt-5.1_3",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
     "loss_color": [
-      255,
       0,
+      128,
       0
     ],
     "t_group": "T7",
     "model": "gpt-5.1",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -198368,31 +198422,31 @@
     ],
     "loss_color": [
       0,
-      0,
+      128,
       0
     ],
     "t_group": "T7",
     "model": "gpt-5.1",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
     "image_id": "C3_T7_01_gpt-5.1_5",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
     "loss_color": [
-      255,
       0,
+      128,
       0
     ],
     "t_group": "T7",
     "model": "gpt-5.1",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -200594,19 +200648,19 @@
   {
     "image_id": "C3_T7_06_gpt-5.1_3",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
     "loss_color": [
-      255,
       0,
+      128,
       0
     ],
     "t_group": "T7",
     "model": "gpt-5.1",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -202844,19 +202898,19 @@
   {
     "image_id": "C3_T7_11_gpt-5.1_3",
     "profit_color": [
-      0,
+      255,
       0,
       0
     ],
     "loss_color": [
-      255,
       0,
+      128,
       0
     ],
     "t_group": "T7",
     "model": "gpt-5.1",
     "profit_hue": 0,
-    "loss_hue": 0,
+    "loss_hue": 120,
     "category": "C3"
   },
   {
@@ -207344,19 +207398,19 @@
   {
     "image_id": "C3_T8_01_gpt-5.1_3",
     "profit_color": [
-      0,
-      0,
-      255
+      218,
+      165,
+      32
     ],
     "loss_color": [
       0,
       0,
-      0
+      139
     ],
     "t_group": "T8",
     "model": "gpt-5.1",
-    "profit_hue": 240,
-    "loss_hue": 0,
+    "profit_hue": 43,
+    "loss_hue": 240,
     "category": "C3"
   },
   {
@@ -214742,9 +214796,9 @@
   {
     "image_id": "C3_T8_18_deepseek-v3_4",
     "profit_color": [
-      0,
-      0,
-      0
+      173,
+      216,
+      230
     ],
     "loss_color": [
       165,
@@ -214753,7 +214807,7 @@
     ],
     "t_group": "T8",
     "model": "deepseek-v3",
-    "profit_hue": 0,
+    "profit_hue": 195,
     "loss_hue": 0,
     "category": "C3"
   },
