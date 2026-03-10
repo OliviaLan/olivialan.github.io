@@ -300,12 +300,24 @@
     <div id="mosaic" class="view active">
         <div class="controls">
             <div class="control-group">
-                <label>Category:</label>
+                <label>Case:</label>
                 <select id="categoryFilter" onchange="updateVisualization()">
                     <option value="C1" selected>C1 (Man/Woman)</option>
                     <option value="C2">C2 (Left/Right)</option>
                     <option value="C3">C3 (Profit/Loss)</option>
                 </select>
+            </div>
+            <div class="control-group" id="patchToggleGroup" style="display: none;">
+                <span style="display: flex; align-items: center; gap: 8px; position: relative;">
+                    <span style="cursor: help; border-bottom: 1px dashed #888; font-size: 14px; color: #aaa;" 
+                       onmouseenter="showPatchTooltip(event)" 
+                       onmouseleave="hidePatchTooltip()">Show Patch:</span>
+                    <span id="patchTooltip" style="display:none; position:absolute; background:rgba(30, 30, 50, 0.95); color:#eee; padding:10px 14px; border-radius:6px; font-size:13px; z-index:1000; top: 100%; left: 0; white-space: normal; max-width: 320px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); border: 1px solid #666; line-height: 1.5;">We conducted complementary audits (T4, T6, T7 specifically) for C2<br>because its original hypotheses were not fully supported.</span>
+                </span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="patchToggle" onchange="updateVisualization()">
+                    <span class="toggle-slider"></span>
+                </label>
             </div>
             <div class="control-group" style="display: none;">
                 <label>Mode:</label>
@@ -352,7 +364,7 @@
     <div id="scatter" class="view">
         <div class="controls" id="scatterControls">
             <div class="control-group">
-                <label>Category:</label>
+                <label>Case:</label>
                 <select id="scatterCategoryFilter" onchange="updateScatterPlot()">
                     <option value="C1" selected>C1 (Man/Woman)</option>
                     <option value="C2">C2 (Left/Right)</option>
@@ -372,7 +384,7 @@
                     <label class="toggle-switch">
                         <input type="checkbox" id="scatterMode" checked onchange="updateScatterPlot()">
                         <span class="toggle-slider"></span>
-                    </label>
+</label>
                     <span>3D</span>
                 </label>
             </div>
@@ -404,28 +416,30 @@
                     <span id="scatterFemaleLabel"> Woman</span>
                 </label>
                 <label style="margin-right:8px;">
-                    <input type="checkbox" id="showClusters" checked onchange="updateScatterPlot()"> Show Cluster Centers
-                </label>
+                    <input type="checkbox" id="showClusters" checked onchange="updateScatterPlot()"> Show Cluster Centers</label>
             </div>
             <div class="control-group" id="tGroupFilters" style="flex-basis: 100%; justify-content: center; display: none;">
                 <span style="color:#aaa;margin-right:8px;">Prompt:</span>
                 <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T1" checked onchange="updateScatterPlot()"> T1</label>
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T2" checked onchange="updateScatterPlot()"> T2</label>
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T3" checked onchange="updateScatterPlot()"> T3</label>
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T4" checked onchange="updateScatterPlot()"> T4</label>
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T5" checked onchange="updateScatterPlot()"> T5</label>
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T6" checked onchange="updateScatterPlot()"> T6</label>
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T7" checked onchange="updateScatterPlot()"> T7</label>
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T2" checked onchange="updateScatterPlot()"> T2
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T3" checked onchange="updateScatterPlot()"> T3
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T4" checked onchange="updateScatterPlot()"> T4
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T4_batch" checked onchange="updateScatterPlot()"> T4_batch
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T5" checked onchange="updateScatterPlot()"> T5
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T6" checked onchange="updateScatterPlot()"> T6
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T6_batch" checked onchange="updateScatterPlot()"> T6_batch
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T7" checked onchange="updateScatterPlot()"> T7
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T7_batch" checked onchange="updateScatterPlot()"> T7_batch
                 <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T8" checked onchange="updateScatterPlot()"> T8</label>
             </div>
             <div class="control-group" id="modelFilters" style="flex-basis: 100%; justify-content: center; display: none;">
                 <span style="color:#aaa;margin-right:8px;">Model:</span>
-                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="gpt" checked onchange="updateScatterPlot()"> GPT</label>
-                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="gemini" checked onchange="updateScatterPlot()"> Gemini</label>
-                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="deepseek" checked onchange="updateScatterPlot()"> DeepSeek</label>
-                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="claude" checked onchange="updateScatterPlot()"> Claude</label>
-                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="nano" checked onchange="updateScatterPlot()"> Nano Banana 2</label>
-            </div>
+                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="gpt" checked onchange="updateScatterPlot()"> GPT
+                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="gemini" checked onchange="updateScatterPlot()"> Gemini
+                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="deepseek" checked onchange="updateScatterPlot()"> DeepSeek
+                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="claude" checked onchange="updateScatterPlot()"> Claude
+                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="nano" checked onchange="updateScatterPlot()"> Nano Banana 2
+                </div>
             <div class="control-group" id="scatterStats" style="flex-basis: 100%; justify-content: center; display: none;">
                 <span style="color:#aaa;margin-right:8px;">Unique Points:</span>
                 <span id="statsText"></span>
@@ -435,11 +449,44 @@
     </div>
 
     <div class="tooltip" id="tooltip"></div>
+    <span id="tPromptTooltip" style="display:none; position:fixed; background:rgba(30, 30, 50, 0.95); color:#eee; padding:10px 14px; border-radius:6px; font-size:13px; z-index:1000; white-space: normal; max-width: 320px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); border: 1px solid #666; line-height: 1.5;"></span>
 
     <script>
         let colorData = [];
         let groupBy = 'none';
         let currentCategory = 'C1';
+        let lastPatchShow = false;
+
+        // T prompt conditions for tooltips
+        const tPromptConditions = {
+            "C1_T1": "Using color to encode Man and Woman.",
+            "C1_T2": "Using semantically-resonant colors (i.e., leveraging concept-color associations) to encode Man and Woman.",
+            "C1_T3": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer familiar with gender coloring.",
+            "C1_T4": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of gender visual bias.",
+            "C1_T5": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Choosing the occupation of [Preschool and kindergarten teachers].",
+            "C1_T6": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Choosing the occupation of [Business operations specialists, all other].",
+            "C1_T7": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Use pink for Man and blue for Woman.",
+            "C1_T8": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Do not use blue for Man and pink for Woman.",
+            "C2_T1": "Using color to encode Left and Right political parties.",
+            "C2_T2": "Using semantically-resonant colors (i.e., leveraging concept-color associations) to encode Left and Right political parties.",
+            "C2_T3": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer familiar with political coloring.",
+            "C2_T4": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of US-centric political visual bias.",
+            "C2_T5": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the USA election for analysis.",
+            "C2_T6": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the France election for analysis.",
+            "C2_T7": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Use blue for Right and red for Left.",
+            "C2_T8": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Do not use blue for Left and red for Right.",
+            "C2_T4_batch": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of non-Western political party coloring cultures.",
+            "C2_T6_batch": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the Costa Rica election for analysis.",
+            "C2_T7_batch": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Use cyan for Right and yellow for Left.",
+            "C3_T1": "Using color to encode stock Index profit and loss.",
+            "C3_T2": "Using semantically-resonant colors (i.e., leveraging concept-color associations) to encode stock Index profit and loss.",
+            "C3_T3": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer familiar with financial coloring.",
+            "C3_T4": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of non-Western stock market coloring cultures.",
+            "C3_T5": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the NYA (New York Stock Exchange) for analysis.",
+            "C3_T6": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the 000001.SS (Shanghai Stock Exchange) for analysis.",
+            "C3_T7": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Using red for Profit and green for Loss.",
+            "C3_T8": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Do not use green for Profit and red for Loss.",
+        };
         function getLabelText(gender, category) {
             if (category === 'C1') {
                 return gender === 'male' ? 'Man' : 'Woman';
@@ -517,11 +564,24 @@
                     hueTarget.options[1].text = 'Loss';
                 }
             }
-            
+
+            // 显示/隐藏 patch toggle (仅 C2 可用)
+            const patchToggleGroup = document.getElementById('patchToggleGroup');
             const category = document.getElementById('categoryFilter').value;
+            if (category === 'C2') {
+                patchToggleGroup.style.display = 'flex';
+            } else {
+                patchToggleGroup.style.display = 'none';
+                // C1/C3 时关闭 patch toggle
+                document.getElementById('patchToggle').checked = false;
+            }
             const mode = document.getElementById('displayMode').value;
             groupBy = document.getElementById('groupByToggle').checked ? 'both' : 'none';
             currentCategory = category;
+            // 更新 patch 显示状态
+            const patchToggle = document.getElementById('patchToggle');
+            lastPatchShow = category === 'C2' && patchToggle && patchToggle.checked;
+            
             const hasCategory = colorData.length > 0 && colorData[0].hasOwnProperty('category');
             let filteredData;
             if (hasCategory) {
@@ -596,11 +656,11 @@
                 scatterMaleLabel.textContent = getLabelText('male', currentCategory);
                 scatterFemaleLabel.textContent = getLabelText('female', currentCategory);
             }
-            let processedData = processData(filteredData, sortBy, mode, groupBy);
+            let processedData = processData(filteredData, sortBy, mode, groupBy, category);
             render(processedData, mode, groupBy, category);
         }
 
-        function processData(data, sortBy, mode, groupBy) {
+        function processData(data, sortBy, mode, groupBy, category) {
             let processed = [...data];
 
             if (sortBy === 'hue') {
@@ -638,9 +698,26 @@
                 processed.sort((a, b) => a.image_id.localeCompare(b.image_id));
             }
             if (groupBy === 'both') {
-                const tGroups = ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8'];
+                const showPatch = category === 'C2' && document.getElementById('patchToggle').checked;
+                // 当 patch 开关关闭时过滤掉 patch 数据
+                if (!showPatch) {
+                    processed = processed.filter(d => !d.t_group || !d.t_group.endsWith('_batch'));
+                }
+                const tGroups = showPatch
+                    ? ['T1', 'T2', 'T3', 'T4', 'T4_batch', 'T5', 'T6', 'T6_batch', 'T7', 'T7_batch', 'T8']
+                    : ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8'];
+                const modelOrder = ['gpt-5.1', 'claude-4-5-opus', 'deepseek-v3', 'gemini-3-pro', 'nano'];
                 const allModels = [...new Set(processed.map(d => d.model).filter(m => m))];
-                const models = allModels.length > 0 ? allModels : ['gpt'];
+                const models = allModels.length > 0 
+                    ? allModels.sort((a, b) => {
+        const aIdx = modelOrder.indexOf(a);
+        const bIdx = modelOrder.indexOf(b);
+        if (aIdx === -1 && bIdx === -1) return 0;
+        if (aIdx === -1) return 1;
+        if (bIdx === -1) return -1;
+        return aIdx - bIdx;
+    }) 
+                    : ['gpt'];
                 tGroups.forEach((t, tIdx) => {
                     models.forEach((m, mIdx) => {
                         const tmItems = processed.filter(d => d.t_group === t && d.model === m);
@@ -653,6 +730,13 @@
                     });
                 });
             } else {
+                // 当 groupby 关闭时也处理 patch 过滤
+                if (category === 'C2') {
+                    const showPatch = document.getElementById('patchToggle').checked;
+                    if (!showPatch) {
+                        processed = processed.filter(d => !d.t_group || !d.t_group.endsWith('_batch'));
+                    }
+                }
                 const { cols } = getOptimalGrid(processed.length);
                 processed.forEach((item, idx) => {
                     item.row = Math.floor(idx / cols);
@@ -673,27 +757,41 @@
             const modeChanged = lastRenderState && lastRenderState.mode !== mode;
             const groupByChanged = lastRenderState && lastRenderState.groupBy !== groupBy;
             const categoryChanged = lastRenderState && lastRenderState.category !== category;
+            const patchShowChanged = lastRenderState && lastRenderState.patchShow !== (category === 'C2' && document.getElementById('patchToggle').checked);
 
-            if (isNewSvg || modeChanged) {
+            if (isNewSvg || modeChanged || patchShowChanged) {
                 container.html('');
                 mainSvg = container.append('svg')
                     .attr('class', 'main-svg')
                     .attr('width', containerWidth)
                     .attr('height', 800);
             }
-            lastRenderState = { mode, groupBy, category };
+            lastRenderState = { mode, groupBy, category, patchShow: category === 'C2' && document.getElementById('patchToggle').checked };
             const useTransition = !isNewSvg && !modeChanged;
 
             if (groupBy !== 'none') {
-                renderWithTGroupingD3(data, mode, mainSvg, containerWidth, useTransition);
+                renderWithTGroupingD3(data, mode, mainSvg, containerWidth, useTransition, category);
             } else {
                 renderWithoutTGroupingD3(data, mode, mainSvg, containerWidth, useTransition);
             }
         }
-        function renderWithTGroupingD3(data, mode, svg, containerWidth, useTransition = false) {
-            const tGroups = ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8'];
+        function renderWithTGroupingD3(data, mode, svg, containerWidth, useTransition = false, category) {
+            const showPatch = category === 'C2' && document.getElementById('patchToggle').checked;
+            const tGroups = showPatch
+                ? ['T1', 'T2', 'T3', 'T4', 'T4_batch', 'T5', 'T6', 'T6_batch', 'T7', 'T7_batch', 'T8']
+                : ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8'];
+            const modelOrder = ['gpt-5.1', 'claude-4-5-opus', 'deepseek-v3', 'gemini-3-pro', 'nano'];
             const allModels = [...new Set(data.map(d => d.model).filter(m => m))];
-            const models = allModels.length > 0 ? allModels : ['gpt'];
+            const models = allModels.length > 0 
+                ? allModels.sort((a, b) => {
+        const aIdx = modelOrder.indexOf(a);
+        const bIdx = modelOrder.indexOf(b);
+        if (aIdx === -1 && bIdx === -1) return 0;
+        if (aIdx === -1) return 1;
+        if (bIdx === -1) return -1;
+        return aIdx - bIdx;
+    }) 
+                : ['gpt'];
             const isBoth = groupBy === 'both';
             const gap = 2;
             const maxBlockSize = mode === 'pair' ? 28 : 25;
@@ -828,7 +926,7 @@
                 .append('g')
                 .attr('class', 't-label-group');
 
-            tLabelsEnter.append('text')
+            const tLabelsText = tLabelsEnter.append('text')
                 .attr('class', 't-label-text')
                 .attr('x', 10)
                 .attr('y', d => tPositions[d].y + tPositions[d].height / 2)
@@ -836,7 +934,20 @@
                 .attr('font-size', '14px')
                 .attr('font-weight', 'bold')
                 .attr('writing-mode', 'vertical-rl')
+                .attr('cursor', 'help')
+                .style('text-decoration', 'underline')
+                .style('text-decoration-style', 'dotted')
+                .style('text-decoration-color', '#666')
                 .text(d => d);
+            
+            tLabelsText.on('mouseenter', function(event, d) {
+                    d3.select(this).attr('fill', '#4da6ff');
+                    showTPromptTooltip(event, d, currentCategory);
+                })
+                .on('mouseleave', function() {
+                    d3.select(this).attr('fill', '#fff');
+                    hideTPromptTooltip();
+                });
 
             tLabelsEnter.transition()
                 .duration(500)
@@ -1084,8 +1195,18 @@
             }
         }
         function renderSplitBlocksWithTransition(svg, data, tPositions, blockSize, gap, offsetX = 0, startX = 0, useTransition = false, isBoth = false) {
+            const modelOrder = ['gpt-5.1', 'claude-4-5-opus', 'deepseek-v3', 'gemini-3-pro', 'nano'];
             const allModels = [...new Set(data.map(d => d.model).filter(m => m))];
-            const models = allModels.length > 0 ? allModels : ['gpt'];
+            const models = allModels.length > 0 
+                ? allModels.sort((a, b) => {
+        const aIdx = modelOrder.indexOf(a);
+        const bIdx = modelOrder.indexOf(b);
+        if (aIdx === -1 && bIdx === -1) return 0;
+        if (aIdx === -1) return 1;
+        if (bIdx === -1) return -1;
+        return aIdx - bIdx;
+    }) 
+                : ['gpt'];
             if (useTransition) {
                 svg.selectAll('.glyph')
                     .transition()
@@ -1330,6 +1451,45 @@
 
         function hideTooltip() {
             document.getElementById('tooltip').style.display = 'none';
+        }
+
+        function showPatchTooltip(event) {
+            const tooltip = document.getElementById('patchTooltip');
+            if (tooltip) {
+                tooltip.style.display = 'inline';
+                tooltip.style.position = 'fixed';
+                tooltip.style.left = (event.clientX - 50) + 'px';
+                tooltip.style.top = (event.clientY + 10) + 'px';
+            }
+        }
+
+        function hidePatchTooltip() {
+            const tooltip = document.getElementById('patchTooltip');
+            if (tooltip) {
+                tooltip.style.display = 'none';
+            }
+        }
+
+        function showTPromptTooltip(event, tGroup, category) {
+            const key = category + "_" + tGroup;
+            const condition = tPromptConditions[key];
+            if (!condition) return;
+            
+            const tooltip = document.getElementById('tPromptTooltip');
+            if (tooltip) {
+                tooltip.textContent = condition;
+                tooltip.style.display = 'inline';
+                tooltip.style.position = 'fixed';
+                tooltip.style.left = (event.clientX + 10) + 'px';
+                tooltip.style.top = (event.clientY + 10) + 'px';
+            }
+        }
+
+        function hideTPromptTooltip() {
+            const tooltip = document.getElementById('tPromptTooltip');
+            if (tooltip) {
+                tooltip.style.display = 'none';
+            }
         }
 
         function toggleGroupBy() {
