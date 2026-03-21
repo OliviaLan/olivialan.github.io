@@ -295,6 +295,7 @@
     <div class="tabs">
         <button class="tab-btn active" onclick="switchTab('mosaic', event)">Mosaic View</button>
         <button class="tab-btn" onclick="switchTab('scatter', event)">Scatter Plot</button>
+        
     </div>
 
     <div id="mosaic" class="view active">
@@ -406,6 +407,7 @@
                 <label>Point Size:</label>
                 <input type="range" id="scatterPointSize" min="3" max="15" value="4" onchange="updateScatterPlot()" style="vertical-align: middle;">
             </div>
+
             <div class="control-group" style="flex-basis: 100%; justify-content: center;">
                 <label style="margin-right:8px;">
                     <input type="checkbox" id="scatterShowMale" checked onchange="updateScatterPlot()">
@@ -420,17 +422,17 @@
             </div>
             <div class="control-group" id="tGroupFilters" style="flex-basis: 100%; justify-content: center; display: none;">
                 <span style="color:#aaa;margin-right:8px;">Prompt:</span>
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T1" checked onchange="updateScatterPlot()"> T1</label>
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T2" checked onchange="updateScatterPlot()"> T2
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T3" checked onchange="updateScatterPlot()"> T3
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T4" checked onchange="updateScatterPlot()"> T4
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T4_batch" checked onchange="updateScatterPlot()"> T4_batch
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T5" checked onchange="updateScatterPlot()"> T5
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T6" checked onchange="updateScatterPlot()"> T6
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T6_batch" checked onchange="updateScatterPlot()"> T6_batch
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T7" checked onchange="updateScatterPlot()"> T7
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T7_batch" checked onchange="updateScatterPlot()"> T7_batch
-                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="T8" checked onchange="updateScatterPlot()"> T8</label>
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S1" checked onchange="updateScatterPlot()"> T1</label>
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S2" checked onchange="updateScatterPlot()"> T2
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S3" checked onchange="updateScatterPlot()"> T3
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S4" checked onchange="updateScatterPlot()"> T4
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S4_batch" checked onchange="updateScatterPlot()"> S4_batch
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S5" checked onchange="updateScatterPlot()"> T5
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S6" checked onchange="updateScatterPlot()"> T6
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S6_batch" checked onchange="updateScatterPlot()"> S6_batch
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S7" checked onchange="updateScatterPlot()"> T7
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S7_batch" checked onchange="updateScatterPlot()"> S7_batch
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S8" checked onchange="updateScatterPlot()"> T8</label>
             </div>
             <div class="control-group" id="modelFilters" style="flex-basis: 100%; justify-content: center; display: none;">
                 <span style="color:#aaa;margin-right:8px;">Model:</span>
@@ -438,12 +440,13 @@
                 <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="gemini" checked onchange="updateScatterPlot()"> Gemini
                 <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="deepseek" checked onchange="updateScatterPlot()"> DeepSeek
                 <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="claude" checked onchange="updateScatterPlot()"> Claude
-                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="nano" checked onchange="updateScatterPlot()"> Nano Banana 2
+                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="nano-banana-2" checked onchange="updateScatterPlot()"> Nano Banana 2
                 </div>
             <div class="control-group" id="scatterStats" style="flex-basis: 100%; justify-content: center; display: none;">
                 <span style="color:#aaa;margin-right:8px;">Unique Points:</span>
                 <span id="statsText"></span>
             </div>
+
         </div>
         <div id="scatterContainer"></div>
     </div>
@@ -459,33 +462,33 @@
 
         // T prompt conditions for tooltips
         const tPromptConditions = {
-            "C1_T1": "Using color to encode Man and Woman.",
-            "C1_T2": "Using semantically-resonant colors (i.e., leveraging concept-color associations) to encode Man and Woman.",
-            "C1_T3": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer familiar with gender coloring.",
-            "C1_T4": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of gender visual bias.",
-            "C1_T5": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Choosing the occupation of [Preschool and kindergarten teachers].",
-            "C1_T6": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Choosing the occupation of [Business operations specialists, all other].",
-            "C1_T7": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Use pink for Man and blue for Woman.",
-            "C1_T8": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Do not use blue for Man and pink for Woman.",
-            "C2_T1": "Using color to encode Left and Right political parties.",
-            "C2_T2": "Using semantically-resonant colors (i.e., leveraging concept-color associations) to encode Left and Right political parties.",
-            "C2_T3": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer familiar with political coloring.",
-            "C2_T4": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of US-centric political visual bias.",
-            "C2_T5": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the USA election for analysis.",
-            "C2_T6": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the France election for analysis.",
-            "C2_T7": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Use blue for Right and red for Left.",
-            "C2_T8": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Do not use blue for Left and red for Right.",
-            "C2_T4_batch": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of non-Western political party coloring cultures.",
-            "C2_T6_batch": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the Costa Rica election for analysis.",
-            "C2_T7_batch": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Use cyan for Right and yellow for Left.",
-            "C3_T1": "Using color to encode stock Index profit and loss.",
-            "C3_T2": "Using semantically-resonant colors (i.e., leveraging concept-color associations) to encode stock Index profit and loss.",
-            "C3_T3": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer familiar with financial coloring.",
-            "C3_T4": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of non-Western stock market coloring cultures.",
-            "C3_T5": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the NYA (New York Stock Exchange) for analysis.",
-            "C3_T6": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the 000001.SS (Shanghai Stock Exchange) for analysis.",
-            "C3_T7": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Using red for Profit and green for Loss.",
-            "C3_T8": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Do not use green for Profit and red for Loss.",
+            "C1_S1": "Using color to encode Man and Woman.",
+            "C1_S2": "Using semantically-resonant colors (i.e., leveraging concept-color associations) to encode Man and Woman.",
+            "C1_S3": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer familiar with gender coloring.",
+            "C1_S4": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of gender visual bias.",
+            "C1_S5": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Choosing the occupation of [Preschool and kindergarten teachers].",
+            "C1_S6": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Choosing the occupation of [Business operations specialists, all other].",
+            "C1_S7": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Use pink for Man and blue for Woman.",
+            "C1_S8": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Do not use blue for Man and pink for Woman.",
+            "C2_S1": "Using color to encode Left and Right political parties.",
+            "C2_S2": "Using semantically-resonant colors (i.e., leveraging concept-color associations) to encode Left and Right political parties.",
+            "C2_S3": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer familiar with political coloring.",
+            "C2_S4": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of the cultural specificity of political color associations.",
+            "C2_S5": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the France election for analysis.",
+            "C2_S6": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the USA election for analysis.",
+            "C2_S7": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Use blue for Left and red for Right.",
+            "C2_S8": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Do not use red for Left and blue for Right.",
+            "C2_S4_batch": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of non-Western political party coloring cultures.",
+            "C2_S6_batch": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the Costa Rica election for analysis.",
+            "C2_S7_batch": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Use cyan for Right and yellow for Left.",
+            "C3_S1": "Using color to encode stock Index profit and loss.",
+            "C3_S2": "Using semantically-resonant colors (i.e., leveraging concept-color associations) to encode stock Index profit and loss.",
+            "C3_S3": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer familiar with financial coloring.",
+            "C3_S4": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of non-Western stock market coloring cultures.",
+            "C3_S5": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the NYA (New York Stock Exchange) for analysis.",
+            "C3_S6": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the 000001.SS (Shanghai Stock Exchange) for analysis.",
+            "C3_S7": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Using red for Profit and green for Loss.",
+            "C3_S8": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Do not use green for Profit and red for Loss.",
         };
         function getLabelText(gender, category) {
             if (category === 'C1') {
@@ -532,6 +535,7 @@
             }
             return { h: h * 360, s: s * 100, v: v * 100 };
         }
+
         async function loadData() {
             try {
                 const response = await fetch('data_merged.json');
@@ -612,7 +616,7 @@
                             female_hue: d.right_hue || femaleHsv[0],
                             female_sat: femaleHsv[1],
                             female_val: femaleHsv[2],
-                            t_group: d.t_group,
+                            s_group: d.s_group,
                             model: d.model
                         };
                     } else if (category === 'C3') {
@@ -626,7 +630,7 @@
                             female_hue: d.loss_hue || femaleHsv[0],
                             female_sat: femaleHsv[1],
                             female_val: femaleHsv[2],
-                            t_group: d.t_group,
+                            s_group: d.s_group,
                             model: d.model
                         };
                     }
@@ -701,12 +705,12 @@
                 const showPatch = category === 'C2' && document.getElementById('patchToggle').checked;
                 // 当 patch 开关关闭时过滤掉 patch 数据
                 if (!showPatch) {
-                    processed = processed.filter(d => !d.t_group || !d.t_group.endsWith('_batch'));
+                    processed = processed.filter(d => !d.s_group || !d.s_group.endsWith('_batch'));
                 }
-                const tGroups = showPatch
-                    ? ['T1', 'T2', 'T3', 'T4', 'T4_batch', 'T5', 'T6', 'T6_batch', 'T7', 'T7_batch', 'T8']
-                    : ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8'];
-                const modelOrder = ['gpt-5.1', 'claude-4-5-opus', 'deepseek-v3', 'gemini-3-pro', 'nano'];
+                const sGroups = showPatch
+                    ? ['S1', 'S2', 'S3', 'S4', 'S4_batch', 'S5', 'S6', 'S6_batch', 'S7', 'S7_batch', 'S8']
+                    : ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8'];
+                const modelOrder = ['gpt-5.4', 'claude-4-5-opus', 'deepseek-v3', 'gemini-3.1-pro-preview', 'nano-banana-2'];
                 const allModels = [...new Set(processed.map(d => d.model).filter(m => m))];
                 const models = allModels.length > 0 
                     ? allModels.sort((a, b) => {
@@ -718,9 +722,9 @@
         return aIdx - bIdx;
     }) 
                     : ['gpt'];
-                tGroups.forEach((t, tIdx) => {
+                sGroups.forEach((t, tIdx) => {
                     models.forEach((m, mIdx) => {
-                        const tmItems = processed.filter(d => d.t_group === t && d.model === m);
+                        const tmItems = processed.filter(d => d.s_group === t && d.model === m);
                         tmItems.forEach((item, idx) => {
                             item.row = tIdx;
                             item.col = mIdx;
@@ -734,7 +738,7 @@
                 if (category === 'C2') {
                     const showPatch = document.getElementById('patchToggle').checked;
                     if (!showPatch) {
-                        processed = processed.filter(d => !d.t_group || !d.t_group.endsWith('_batch'));
+                        processed = processed.filter(d => !d.s_group || !d.s_group.endsWith('_batch'));
                     }
                 }
                 const { cols } = getOptimalGrid(processed.length);
@@ -777,10 +781,10 @@
         }
         function renderWithTGroupingD3(data, mode, svg, containerWidth, useTransition = false, category) {
             const showPatch = category === 'C2' && document.getElementById('patchToggle').checked;
-            const tGroups = showPatch
-                ? ['T1', 'T2', 'T3', 'T4', 'T4_batch', 'T5', 'T6', 'T6_batch', 'T7', 'T7_batch', 'T8']
-                : ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8'];
-            const modelOrder = ['gpt-5.1', 'claude-4-5-opus', 'deepseek-v3', 'gemini-3-pro', 'nano'];
+            const sGroups = showPatch
+                ? ['S1', 'S2', 'S3', 'S4', 'S4_batch', 'S5', 'S6', 'S6_batch', 'S7', 'S7_batch', 'S8']
+                : ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8'];
+            const modelOrder = ['gpt-5.4', 'claude-4-5-opus', 'deepseek-v3', 'gemini-3.1-pro-preview', 'nano-banana-2'];
             const allModels = [...new Set(data.map(d => d.model).filter(m => m))];
             const models = allModels.length > 0 
                 ? allModels.sort((a, b) => {
@@ -801,8 +805,8 @@
             let currentY = 50;
             const tPositions = {};
 
-            tGroups.forEach(t => {
-                const tData = data.filter(d => d.t_group === t);
+            sGroups.forEach(t => {
+                const tData = data.filter(d => d.s_group === t);
                 if (tData.length === 0) {
                     tPositions[t] = { y: -1, height: 0 };
                     return;
@@ -920,7 +924,7 @@
                 centerStartX = Math.max(20, (containerWidth - maxTotalWidth - tLabelWidth) / 2);
             }
             const tLabels = svg.selectAll('.t-label-group')
-                .data(tGroups.filter(t => tPositions[t].y >= 0), d => d);
+                .data(sGroups.filter(t => tPositions[t].y >= 0), d => d);
 
             const tLabelsEnter = tLabels.enter()
                 .append('g')
@@ -964,7 +968,7 @@
 
                 svg.selectAll('.model-label').remove();
 
-                const firstTWithData = tGroups.find(t => tPositions[t] && tPositions[t].y >= 0);
+                const firstTWithData = sGroups.find(t => tPositions[t] && tPositions[t].y >= 0);
                 const mPosMap = firstTWithData ? tPositions[firstTWithData].modelPositions : null;
                 const firstTData = firstTWithData ? tPositions[firstTWithData] : null;
                 const labelBlockSize = firstTData ? firstTData.blockSize : actualBlockSize;
@@ -1112,7 +1116,7 @@
                 if (pos.useAllData) {
                     tData = data;
                 } else {
-                    tData = data.filter(d => d.t_group === t);
+                    tData = data.filter(d => d.s_group === t);
                 }
 
                 tData.forEach((d, i) => {
@@ -1195,7 +1199,7 @@
             }
         }
         function renderSplitBlocksWithTransition(svg, data, tPositions, blockSize, gap, offsetX = 0, startX = 0, useTransition = false, isBoth = false) {
-            const modelOrder = ['gpt-5.1', 'claude-4-5-opus', 'deepseek-v3', 'gemini-3-pro', 'nano'];
+            const modelOrder = ['gpt-5.4', 'claude-4-5-opus', 'deepseek-v3', 'gemini-3.1-pro-preview', 'nano-banana-2'];
             const allModels = [...new Set(data.map(d => d.model).filter(m => m))];
             const models = allModels.length > 0 
                 ? allModels.sort((a, b) => {
@@ -1226,7 +1230,7 @@
                 if (pos.useAllData) {
                     tData = data;
                 } else {
-                    tData = data.filter(d => d.t_group === t);
+                    tData = data.filter(d => d.s_group === t);
                 }
 
                 const numItems = tData.length;
@@ -1302,7 +1306,7 @@
                 if (pos.useAllData) {
                     tData = data;
                 } else {
-                    tData = data.filter(d => d.t_group === t);
+                    tData = data.filter(d => d.s_group === t);
                 }
 
                 const numItems = tData.length;
@@ -1829,7 +1833,7 @@
                             image_id: d.image_id,
                             male_color: d.left_color,
                             female_color: d.right_color,
-                            t_group: d.t_group,
+                            s_group: d.s_group,
                             model: d.model
                         };
                     } else if (scatterCategory === 'C3') {
@@ -1837,7 +1841,7 @@
                             image_id: d.image_id,
                             male_color: d.profit_color,
                             female_color: d.loss_color,
-                            t_group: d.t_group,
+                            s_group: d.s_group,
                             model: d.model
                         };
                     }
@@ -1845,7 +1849,7 @@
                 });
             }
             const checkedTGroups = Array.from(document.querySelectorAll('.t-group-checkbox:checked')).map(cb => cb.value);
-            scatterData = scatterData.filter(d => checkedTGroups.includes(d.t_group));
+            scatterData = scatterData.filter(d => checkedTGroups.includes(d.s_group));
             const checkedModels = Array.from(document.querySelectorAll('.model-checkbox:checked')).map(cb => cb.value);
             scatterData = scatterData.filter(d => checkedModels.some(m => d.model.startsWith(m)));
             
@@ -1866,7 +1870,7 @@
                 ).join(' | ');
                 statsText.innerHTML = statsHtml;
             }
-            
+
             const malePoints = [];
             const femalePoints = [];
 
@@ -1969,6 +1973,7 @@
 
             const g = svg.append('g')
                 .attr('transform', `translate(${margin.left},${margin.top})`);
+            
             const defaultAngleX = -0.5;
             const defaultAngleY = 0.8;
             let angleX = defaultAngleX;
@@ -2524,6 +2529,27 @@
             } else {
                 drawAxes();
                 renderPoints();
+                g.append('text')
+                    .attr('x', innerWidth)
+                    .attr('y', 20)
+                    .attr('text-anchor', 'end')
+                    .attr('fill', '#666')
+                    .attr('font-size', '12px')
+                    .text('Drag to rotate');
+                const resetBtn = g.append('text')
+                    .attr('x', innerWidth)
+                    .attr('y', 36)
+                    .attr('text-anchor', 'end')
+                    .attr('fill', '#4a90d9')
+                    .attr('font-size', '12px')
+                    .attr('cursor', 'pointer')
+                    .attr('text-decoration', 'underline')
+                    .text('Reset View')
+                    .on('click', resetScatterView)
+                    .on('mouseover', function() { d3.select(this).attr('fill', '#6ba3e0'); })
+                    .on('mouseout', function() { d3.select(this).attr('fill', '#4a90d9'); });
+                
+                // Add drag-to-rotate for 3D mode
                 svg.on('mousedown', function(event) {
                     isDragging = true;
                     lastMouseX = event.clientX;
@@ -2558,25 +2584,6 @@
                     isDragging = false;
                     d3.select(this).attr('cursor', 'grab');
                 });
-                g.append('text')
-                    .attr('x', innerWidth)
-                    .attr('y', 20)
-                    .attr('text-anchor', 'end')
-                    .attr('fill', '#666')
-                    .attr('font-size', '12px')
-                    .text('Drag to rotate');
-                const resetBtn = g.append('text')
-                    .attr('x', innerWidth)
-                    .attr('y', 36)
-                    .attr('text-anchor', 'end')
-                    .attr('fill', '#4a90d9')
-                    .attr('font-size', '12px')
-                    .attr('cursor', 'pointer')
-                    .attr('text-decoration', 'underline')
-                    .text('Reset View')
-                    .on('click', resetScatterView)
-                    .on('mouseover', function() { d3.select(this).attr('fill', '#6ba3e0'); })
-                    .on('mouseout', function() { d3.select(this).attr('fill', '#4a90d9'); });
             }
         }
         function resetScatterView() {
