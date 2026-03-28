@@ -284,6 +284,13 @@
             z-index: 1000;
             display: none;
         }
+
+        /* Multicolor border */
+        .multicolor-border {
+            stroke: #ffd700;
+            stroke-width: 2;
+            fill: none;
+        }
     </style>
 </head>
 <body>
@@ -535,6 +542,31 @@
             }
             return { h: h * 360, s: s * 100, v: v * 100 };
         }
+        function hsvToRgb(h, s, v) {
+            // h: 0-360, s: 0-100, v: 0-100
+            h = h / 360;
+            s = s / 100;
+            v = v / 100;
+            let r, g, b;
+            const i = Math.floor(h * 6);
+            const f = h * 6 - i;
+            const p = v * (1 - s);
+            const q = v * (1 - f * s);
+            const t = v * (1 - (1 - f) * s);
+            switch (i % 6) {
+                case 0: r = v; g = t; b = p; break;
+                case 1: r = q; g = v; b = p; break;
+                case 2: r = p; g = v; b = t; break;
+                case 3: r = p; g = q; b = v; break;
+                case 4: r = t; g = p; b = v; break;
+                case 5: r = v; g = p; b = q; break;
+            }
+            return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+        }
+        function hsvToCss(h, s, v) {
+            const rgb = hsvToRgb(h, s, v);
+            return `rgb(${rgb.join(',')})`;
+        }
 
         async function loadData() {
             try {
@@ -590,48 +622,53 @@
             let filteredData;
             if (hasCategory) {
                 filteredData = colorData.filter(d => d.category === category).map(d => {
-                    const maleRgb = d.male_color || d.left_color || d.profit_color || [0,0,0];
-                    const maleHsv = rgbToHsv(maleRgb[0], maleRgb[1], maleRgb[2]);
-                    const femaleRgb = d.female_color || d.right_color || d.loss_color || [0,0,0];
-                    const femaleHsv = rgbToHsv(femaleRgb[0], femaleRgb[1], femaleRgb[2]);
+                    // 新数据格式直接存储HSV: male_hsv, female_hsv (C1) 或 left_hsv, right_hsv (C2) 或 profit_hsv, loss_hsv (C3)
+                    let maleHsv, femaleHsv;
 
                     if (category === 'C1') {
+                        maleHsv = d.male_hsv || [0, 0, 0];
+                        femaleHsv = d.female_hsv || [0, 0, 0];
                         return {
                             ...d,
-                            male_hue: d.male_hue || maleHsv[0],
+                            male_hue: maleHsv[0],
                             male_sat: maleHsv[1],
                             male_val: maleHsv[2],
-                            female_hue: d.female_hue || femaleHsv[0],
+                            female_hue: femaleHsv[0],
                             female_sat: femaleHsv[1],
                             female_val: femaleHsv[2]
                         };
                     } else if (category === 'C2') {
+                        maleHsv = d.left_hsv || [0, 0, 0];
+                        femaleHsv = d.right_hsv || [0, 0, 0];
                         return {
                             image_id: d.image_id,
-                            male_color: d.left_color,
-                            female_color: d.right_color,
-                            male_hue: d.left_hue || maleHsv[0],
+                            male_hsv: maleHsv,
+                            female_hsv: femaleHsv,
+                            male_hue: maleHsv[0],
                             male_sat: maleHsv[1],
                             male_val: maleHsv[2],
-                            female_hue: d.right_hue || femaleHsv[0],
+                            female_hue: femaleHsv[0],
                             female_sat: femaleHsv[1],
                             female_val: femaleHsv[2],
                             s_group: d.s_group,
                             model: d.model
                         };
                     } else if (category === 'C3') {
+                        maleHsv = d.profit_hsv || [0, 0, 0];
+                        femaleHsv = d.loss_hsv || [0, 0, 0];
                         return {
                             image_id: d.image_id,
-                            male_color: d.profit_color,
-                            female_color: d.loss_color,
-                            male_hue: d.profit_hue || maleHsv[0],
+                            male_hsv: maleHsv,
+                            female_hsv: femaleHsv,
+                            male_hue: maleHsv[0],
                             male_sat: maleHsv[1],
                             male_val: maleHsv[2],
-                            female_hue: d.loss_hue || femaleHsv[0],
+                            female_hue: femaleHsv[0],
                             female_sat: femaleHsv[1],
                             female_val: femaleHsv[2],
                             s_group: d.s_group,
-                            model: d.model
+                            model: d.model,
+                            tooltip: d.tooltip || null
                         };
                     }
                     return d;
@@ -1159,18 +1196,18 @@
                     .attr('class', 'color-block male')
                     .attr('x', 0).attr('y', 0)
                     .attr('width', blockSize / 2).attr('height', blockSize)
-                    .attr('fill', `rgb(${d.male_color.join(',')})`);
+                    .attr('fill', `rgb(${hsvToRgb(...d.male_hsv).join(',')})`);
                 g.append('rect')
                     .attr('class', 'color-block female')
                     .attr('x', blockSize / 2).attr('y', 0)
                     .attr('width', blockSize / 2).attr('height', blockSize)
-                    .attr('fill', `rgb(${d.female_color.join(',')})`);
+                    .attr('fill', `rgb(${hsvToRgb(...d.female_hsv).join(',')})`);
             });
             glyphsEnter.selectAll('.color-block')
                 .on('mouseenter', function(e, d) {
                     const isMale = d3.select(this).classed('male');
                     showTooltip(e, getLabelText(isMale ? 'male' : 'female', currentCategory),
-                        isMale ? `rgb(${d.male_color.join(',')})` : `rgb(${d.female_color.join(',')})`,
+                        isMale ? `rgb(${hsvToRgb(...d.male_hsv).join(',')})` : `rgb(${hsvToRgb(...d.female_hsv).join(',')})`,
                         d.image_id);
                 })
                 .on('mouseleave', hideTooltip);
@@ -1367,15 +1404,36 @@
                 .attr('width', blockSize)
                 .attr('height', blockSize)
                 .attr('fill', d => d.gender === 'male' ?
-                    `rgb(${d.male_color.join(',')})` :
-                    `rgb(${d.female_color.join(',')})`)
+                    `rgb(${hsvToRgb(...d.male_hsv).join(',')})` :
+                    `rgb(${hsvToRgb(...d.female_hsv).join(',')})`)
+                .attr('stroke', d => d.tooltip && d.tooltip.length > 0 ? '#ffd700' : 'none')
+                .attr('stroke-width', d => d.tooltip && d.tooltip.length > 0 ? 2 : 0)
                 .attr('opacity', 0);
 
             blocksEnter
                 .on('mouseenter', function(e, d) {
-                    const colorInfo = d.gender === 'male'
-                        ? `HSV: H=${Math.round(d.male_hue || 0)}° S=${Math.round(d.male_sat || 0)}% V=${Math.round(d.male_val || 0)}%`
-                        : `HSV: H=${Math.round(d.female_hue || 0)}° S=${Math.round(d.female_sat || 0)}% V=${Math.round(d.female_val || 0)}%`;
+                    let colorInfo;
+                    if (d.tooltip && d.tooltip.length > 0) {
+                        // Multicolor: show tooltip details with color swatches
+                        const parseHsv = (hsvStr) => {
+                            if (!hsvStr || !hsvStr.startsWith('hsv(')) return null;
+                            const match = hsvStr.match(/hsv\((\d+),\s*(\d+),\s*(\d+)\)/);
+                            if (match) return [parseInt(match[1]), parseInt(match[2]), parseInt(match[3])];
+                            return null;
+                        };
+                        const details = d.tooltip.map(t => {
+                            const profitHsv = parseHsv(t.profit);
+                            const lossHsv = parseHsv(t.loss);
+                            const profitColor = profitHsv ? `rgb(${hsvToRgb(...profitHsv).join(',')})` : '#888';
+                            const lossColor = lossHsv ? `rgb(${hsvToRgb(...lossHsv).join(',')})` : '#888';
+                            return `${t.target}: <span style="background:${profitColor};display:inline-block;width:14px;height:14px;vertical-align:middle;border:1px solid #fff;"></span> ${t.profit || 'N/A'} / <span style="background:${lossColor};display:inline-block;width:14px;height:14px;vertical-align:middle;border:1px solid #fff;"></span> ${t.loss || 'N/A'}`;
+                        }).join('<br>');
+                        colorInfo = `HSV: H=${Math.round(d.male_hue || 0)}° S=${Math.round(d.male_sat || 0)}% V=${Math.round(d.male_val || 0)}%<br>${details}`;
+                    } else {
+                        colorInfo = d.gender === 'male'
+                            ? `HSV: H=${Math.round(d.male_hue || 0)}° S=${Math.round(d.male_sat || 0)}% V=${Math.round(d.male_val || 0)}%`
+                            : `HSV: H=${Math.round(d.female_hue || 0)}° S=${Math.round(d.female_sat || 0)}% V=${Math.round(d.female_val || 0)}%`;
+                    }
                     showTooltip(e, getLabelText(d.gender, currentCategory), colorInfo, d.image_id);
                     svg.selectAll('.color-block-split')
                         .transition()
@@ -1411,8 +1469,8 @@
                         .transition()
                         .duration(150)
                         .attr('opacity', 1)
-                        .attr('stroke', 'none')
-                        .attr('stroke-width', 0)
+                        .attr('stroke', block => block.tooltip && block.tooltip.length > 0 ? '#ffd700' : 'none')
+                        .attr('stroke-width', block => block.tooltip && block.tooltip.length > 0 ? 2 : 0)
                         .style('filter', 'none');
                 });
 
@@ -1428,10 +1486,14 @@
                 blocks.transition()
                     .duration(500)
                     .attr('x', d => d.targetX)
-                    .attr('y', d => d.targetY);
+                    .attr('y', d => d.targetY)
+                    .attr('stroke', d => d.tooltip && d.tooltip.length > 0 ? '#ffd700' : 'none')
+                    .attr('stroke-width', d => d.tooltip && d.tooltip.length > 0 ? 2 : 0);
             } else {
                 blocks.attr('x', d => d.targetX)
-                    .attr('y', d => d.targetY);
+                    .attr('y', d => d.targetY)
+                    .attr('stroke', d => d.tooltip && d.tooltip.length > 0 ? '#ffd700' : 'none')
+                    .attr('stroke-width', d => d.tooltip && d.tooltip.length > 0 ? 2 : 0);
             }
 
             if (useTransition) {
@@ -1831,16 +1893,16 @@
                     } else if (scatterCategory === 'C2') {
                         return {
                             image_id: d.image_id,
-                            male_color: d.left_color,
-                            female_color: d.right_color,
+                            male_hsv: d.left_hsv || [0, 0, 0],
+                            female_hsv: d.right_hsv || [0, 0, 0],
                             s_group: d.s_group,
                             model: d.model
                         };
                     } else if (scatterCategory === 'C3') {
                         return {
                             image_id: d.image_id,
-                            male_color: d.profit_color,
-                            female_color: d.loss_color,
+                            male_hsv: d.profit_hsv || [0, 0, 0],
+                            female_hsv: d.loss_hsv || [0, 0, 0],
                             s_group: d.s_group,
                             model: d.model
                         };
@@ -1862,10 +1924,10 @@
                 scatterData.forEach(d => {
                     const model = d.model;
                     if (!modelCounts[model]) modelCounts[model] = new Set();
-                    if (d.male_color) modelCounts[model].add(d.male_color.join(','));
-                    if (d.female_color) modelCounts[model].add(d.female_color.join(','));
+                    if (d.male_hsv) modelCounts[model].add(d.male_hsv.join(','));
+                    if (d.female_hsv) modelCounts[model].add(d.female_hsv.join(','));
                 });
-                const statsHtml = Object.entries(modelCounts).map(([m, s]) => 
+                const statsHtml = Object.entries(modelCounts).map(([m, s]) =>
                     `${m}: <b>${s.size}</b>`
                 ).join(' | ');
                 statsText.innerHTML = statsHtml;
@@ -1875,56 +1937,54 @@
             const femalePoints = [];
 
             if (colorSpace === 'hsv') {
+                // HSV模式：直接使用存储的HSV值
                 scatterData.forEach(item => {
                     if (showMale) {
-                        const [h, s, v] = rgbToHsv(...item.male_color);
+                        const [h, s, v] = item.male_hsv || [0, 0, 0];
                         const rad = h * Math.PI / 180;
                         malePoints.push({
                             hue: h, saturation: s, value: v,
                             x: s * Math.cos(rad),
                             y: s * Math.sin(rad),
                             z: v,
-                            color: `rgb(${item.male_color.join(',')})`,
+                            color: `rgb(${hsvToRgb(h, s, v).join(',')})`,
                             id: item.image_id
                         });
                     }
 
                     if (showFemale) {
-                        const [fh, fs, fv] = rgbToHsv(...item.female_color);
+                        const [fh, fs, fv] = item.female_hsv || [0, 0, 0];
                         const frad = fh * Math.PI / 180;
                         femalePoints.push({
                             hue: fh, saturation: fs, value: fv,
                             x: fs * Math.cos(frad),
                             y: fs * Math.sin(frad),
                             z: fv,
-                            color: `rgb(${item.female_color.join(',')})`,
+                            color: `rgb(${hsvToRgb(fh, fs, fv).join(',')})`,
                             id: item.image_id
                         });
                     }
                 });
             } else {
+                // RGB模式：将HSV转换为RGB
                 scatterData.forEach(item => {
                     if (showMale) {
+                        const [h, s, v] = item.male_hsv || [0, 0, 0];
+                        const rgb = hsvToRgb(h, s, v);
                         malePoints.push({
-                            r: item.male_color[0],
-                            g: item.male_color[1],
-                            b: item.male_color[2],
-                            x: item.male_color[0],
-                            y: item.male_color[1],
-                            z: item.male_color[2],
-                            color: `rgb(${item.male_color.join(',')})`,
+                            r: rgb[0], g: rgb[1], b: rgb[2],
+                            x: rgb[0], y: rgb[1], z: rgb[2],
+                            color: `rgb(${rgb.join(',')})`,
                             id: item.image_id
                         });
                     }
                     if (showFemale) {
+                        const [fh, fs, fv] = item.female_hsv || [0, 0, 0];
+                        const rgb = hsvToRgb(fh, fs, fv);
                         femalePoints.push({
-                            r: item.female_color[0],
-                            g: item.female_color[1],
-                            b: item.female_color[2],
-                            x: item.female_color[0],
-                            y: item.female_color[1],
-                            z: item.female_color[2],
-                            color: `rgb(${item.female_color.join(',')})`,
+                            r: rgb[0], g: rgb[1], b: rgb[2],
+                            x: rgb[0], y: rgb[1], z: rgb[2],
+                            color: `rgb(${rgb.join(',')})`,
                             id: item.image_id
                         });
                     }
