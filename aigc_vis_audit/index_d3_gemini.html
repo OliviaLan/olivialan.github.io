@@ -1,0 +1,2655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When AI Chooses Colors: An Audit of Color Inclusivity and Prompting Strategies in Data Visualization Generation</title>
+    <script src="d3.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            padding: 20px;
+        }
+
+        /* Toggle Switch */
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.3s;
+            border-radius: 24px;
+        }
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.3s;
+            border-radius: 50%;
+        }
+        .toggle-switch input:checked + .toggle-slider {
+            background-color: #4a90d9;
+        }
+        .toggle-switch input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .tab-btn {
+            padding: 12px 30px;
+            border: none;
+            background: #16213e;
+            color: #aaa;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            background: #e94560;
+            color: #fff;
+        }
+
+        .tab-btn:hover:not(.active) {
+            background: #1f3460;
+        }
+
+        .view {
+            display: none;
+        }
+
+        .view.active {
+            display: block;
+        }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 10;
+        }
+
+        .controls br {
+            flex-basis: 100%;
+            height: 0;
+            content: "";
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.3s ease, max-height 0.3s ease;
+        }
+
+        .control-group label {
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        select, input {
+            padding: 8px 12px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background: #16213e;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        /* Switch */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 48px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #333;
+            transition: 0.3s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: #aaa;
+            transition: 0.3s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #e94560;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(24px);
+            background-color: #fff;
+        }
+
+        /* Mosaic Container */
+        #mosaicContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .t-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .t-label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #888;
+            letter-spacing: 2px;
+        }
+
+        .t-row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 15px;
+            background: #2a2a4a;
+            border-radius: 8px;
+        }
+
+        .t-label-vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+
+        /* Color blocks */
+        .color-block {
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .color-block:hover {
+            transform: scale(1.15);
+            z-index: 10;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        /* No T grouping row */
+        .no-t-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            padding: 20px;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        #scatterContainer {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: fixed;
+            background: rgba(0,0,0,0.9);
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            pointer-events: none;
+            z-index: 1000;
+            display: none;
+        }
+
+        /* Multicolor border */
+        .multicolor-border {
+            stroke: #ffd700;
+            stroke-width: 2;
+            fill: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>When AI Chooses Colors</h1>
+    <h2 style="text-align:center; margin-bottom:30px; color:#888; font-size:16px; font-weight:normal;">
+        An Audit of Color Inclusivity and Prompting Strategies in Data Visualization Generation
+    </h2>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('mosaic', event)">Mosaic View</button>
+        <button class="tab-btn" onclick="switchTab('scatter', event)">Scatter Plot</button>
+        
+    </div>
+
+    <div id="mosaic" class="view active">
+        <div class="controls">
+            <div class="control-group">
+                <label>Case:</label>
+                <select id="categoryFilter" onchange="updateVisualization()">
+                    <option value="C1" selected>C1 (Man/Woman)</option>
+                    <option value="C2">C2 (Left/Right)</option>
+                    <option value="C3">C3 (Profit/Loss)</option>
+                </select>
+            </div>
+            <div class="control-group" id="patchToggleGroup" style="display: none;">
+                <span style="display: flex; align-items: center; gap: 8px; position: relative;">
+                    <span style="cursor: help; border-bottom: 1px dashed #888; font-size: 14px; color: #aaa;" 
+                       onmouseenter="showPatchTooltip(event)" 
+                       onmouseleave="hidePatchTooltip()">Show Patch:</span>
+                    <span id="patchTooltip" style="display:none; position:absolute; background:rgba(30, 30, 50, 0.95); color:#eee; padding:10px 14px; border-radius:6px; font-size:13px; z-index:1000; top: 100%; left: 0; white-space: normal; max-width: 320px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); border: 1px solid #666; line-height: 1.5;">We conducted complementary audits (T4, T6, T7 specifically) for C2<br>because its original hypotheses were not fully supported.</span>
+                </span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="patchToggle" onchange="updateVisualization()">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="control-group" style="display: none;">
+                <label>Mode:</label>
+                <select id="displayMode" onchange="updateVisualization()">
+                    <option value="split" selected>Split</option>
+                    <option value="pair">Pair</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Sort:</label>
+                <select id="sortBy" onchange="updateVisualization()">
+                    <option value="id">By ID</option>
+                    <option value="hue">By HSV</option>
+                </select>
+                <span id="hueTargetSpan" style="display:none;">
+                    <select id="hueTarget" onchange="updateVisualization()" style="margin-left:4px;">
+                        <option value="first">Man/Left/Profit</option>
+                        <option value="second">Woman/Right/Loss</option>
+                    </select>
+                </span>
+            </div>
+            <div class="control-group">
+                <label style="margin-right:8px;">Group by Tested Conditions & Models:</label>
+                <label class="switch">
+                    <input type="checkbox" id="groupByToggle" onchange="toggleGroupBy()">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        <div class="legend" id="mosaicLegend" style="display:none;">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #4da6ff;"></div>
+                <span>Man</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ff6b9d;"></div>
+                <span>Woman</span>
+            </div>
+        </div>
+        <div id="mosaicContainer"></div>
+    </div>
+
+    <!-- Scatter Plot View -->
+    <div id="scatter" class="view">
+        <div class="controls" id="scatterControls">
+            <div class="control-group">
+                <label>Case:</label>
+                <select id="scatterCategoryFilter" onchange="updateScatterPlot()">
+                    <option value="C1" selected>C1 (Man/Woman)</option>
+                    <option value="C2">C2 (Left/Right)</option>
+                    <option value="C3">C3 (Profit/Loss)</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Color Space:</label>
+                <select id="colorSpace" onchange="updateScatterPlot()">
+                    <option value="rgb" selected>RGB (Red, Green, Blue)</option>
+                    <option value="hsv">HSV (Hue, Saturation, Value)</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label style="display: flex; align-items: center; gap: 8px;">
+                    <span>2D</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="scatterMode" checked onchange="updateScatterPlot()">
+                        <span class="toggle-slider"></span>
+</label>
+                    <span>3D</span>
+                </label>
+            </div>
+            <div id="axisSelectorsContainer" style="display: flex; gap: 10px; opacity: 0; transition: opacity 0.5s ease;">
+                <div class="control-group axis-selector" id="axisXGroup">
+                    <label>X:</label>
+                    <select id="scatterXAxis" onchange="updateScatterPlot()"></select>
+                </div>
+                <div class="control-group axis-selector" id="axisYGroup">
+                    <label>Y:</label>
+                    <select id="scatterYAxis" onchange="updateScatterPlot()"></select>
+                </div>
+                <div class="control-group axis-selector" id="axisZGroup" style="display: none;">
+                    <label>Z:</label>
+                    <select id="scatterZAxis" onchange="updateScatterPlot()"></select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label>Point Size:</label>
+                <input type="range" id="scatterPointSize" min="3" max="15" value="4" onchange="updateScatterPlot()" style="vertical-align: middle;">
+            </div>
+
+            <div class="control-group" style="flex-basis: 100%; justify-content: center;">
+                <label style="margin-right:8px;">
+                    <input type="checkbox" id="scatterShowMale" checked onchange="updateScatterPlot()">
+                    <span id="scatterMaleLabel"> Man</span>
+                </label>
+                <label style="margin-right:8px;">
+                    <input type="checkbox" id="scatterShowFemale" checked onchange="updateScatterPlot()">
+                    <span id="scatterFemaleLabel"> Woman</span>
+                </label>
+                <label style="margin-right:8px;">
+                    <input type="checkbox" id="showClusters" checked onchange="updateScatterPlot()"> Show Cluster Centers</label>
+            </div>
+            <div class="control-group" id="tGroupFilters" style="flex-basis: 100%; justify-content: center; display: none;">
+                <span style="color:#aaa;margin-right:8px;">Prompt:</span>
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S1" checked onchange="updateScatterPlot()"> T1</label>
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S2" checked onchange="updateScatterPlot()"> T2
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S3" checked onchange="updateScatterPlot()"> T3
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S4" checked onchange="updateScatterPlot()"> T4
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S4_batch" checked onchange="updateScatterPlot()"> S4_batch
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S5" checked onchange="updateScatterPlot()"> T5
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S6" checked onchange="updateScatterPlot()"> T6
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S6_batch" checked onchange="updateScatterPlot()"> S6_batch
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S7" checked onchange="updateScatterPlot()"> T7
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S7_batch" checked onchange="updateScatterPlot()"> S7_batch
+                <label style="margin-right:6px;"><input type="checkbox" class="t-group-checkbox" value="S8" checked onchange="updateScatterPlot()"> T8</label>
+            </div>
+            <div class="control-group" id="modelFilters" style="flex-basis: 100%; justify-content: center; display: none;">
+                <span style="color:#aaa;margin-right:8px;">Model:</span>
+                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="gpt" checked onchange="updateScatterPlot()"> GPT
+                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="gemini" checked onchange="updateScatterPlot()"> Gemini
+                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="deepseek" checked onchange="updateScatterPlot()"> DeepSeek
+                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="claude" checked onchange="updateScatterPlot()"> Claude
+                <label style="margin-right:6px;"><input type="checkbox" class="model-checkbox" value="nano-banana-2" checked onchange="updateScatterPlot()"> Nano Banana 2
+                </div>
+            <div class="control-group" id="scatterStats" style="flex-basis: 100%; justify-content: center; display: none;">
+                <span style="color:#aaa;margin-right:8px;">Unique Points:</span>
+                <span id="statsText"></span>
+            </div>
+
+        </div>
+        <div id="scatterContainer"></div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+    <span id="tPromptTooltip" style="display:none; position:fixed; background:rgba(30, 30, 50, 0.95); color:#eee; padding:10px 14px; border-radius:6px; font-size:13px; z-index:1000; white-space: normal; max-width: 320px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); border: 1px solid #666; line-height: 1.5;"></span>
+
+    <script>
+        let colorData = [];
+        let groupBy = 'none';
+        let currentCategory = 'C1';
+        let lastPatchShow = false;
+
+        // T prompt conditions for tooltips
+        const tPromptConditions = {
+            "C1_S1": "Using color to encode Man and Woman.",
+            "C1_S2": "Using semantically-resonant colors (i.e., leveraging concept-color associations) to encode Man and Woman.",
+            "C1_S3": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer familiar with gender coloring.",
+            "C1_S4": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of gender visual bias.",
+            "C1_S5": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Choosing the occupation of [Preschool and kindergarten teachers].",
+            "C1_S6": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Choosing the occupation of [Business operations specialists, all other].",
+            "C1_S7": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Use pink for Man and blue for Woman.",
+            "C1_S8": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Do not use blue for Man and pink for Woman.",
+            "C2_S1": "Using color to encode Left and Right political parties.",
+            "C2_S2": "Using semantically-resonant colors (i.e., leveraging concept-color associations) to encode Left and Right political parties.",
+            "C2_S3": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer familiar with political coloring.",
+            "C2_S4": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of the cultural specificity of political color associations.",
+            "C2_S5": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the France election for analysis.",
+            "C2_S6": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the USA election for analysis.",
+            "C2_S7": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Use blue for Left and red for Right.",
+            "C2_S8": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Do not use red for Left and blue for Right.",
+            "C2_S4_batch": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of non-Western political party coloring cultures.",
+            "C2_S6_batch": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the Costa Rica election for analysis.",
+            "C2_S7_batch": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Use cyan for Right and yellow for Left.",
+            "C3_S1": "Using color to encode stock Index profit and loss.",
+            "C3_S2": "Using semantically-resonant colors (i.e., leveraging concept-color associations) to encode stock Index profit and loss.",
+            "C3_S3": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer familiar with financial coloring.",
+            "C3_S4": "Using semantically-resonant colors (i.e., leveraging concept-color associations). You are a professional visualization designer aware of non-Western stock market coloring cultures.",
+            "C3_S5": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the NYA (New York Stock Exchange) for analysis.",
+            "C3_S6": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Selecting the 000001.SS (Shanghai Stock Exchange) for analysis.",
+            "C3_S7": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Using red for Profit and green for Loss.",
+            "C3_S8": "Using semantically-resonant colors (i.e., leveraging concept-color associations). Do not use green for Profit and red for Loss.",
+        };
+        function getLabelText(gender, category) {
+            if (category === 'C1') {
+                return gender === 'male' ? 'Man' : 'Woman';
+            } else if (category === 'C2') {
+                return gender === 'male' ? 'Left' : 'Right';
+            } else if (category === 'C3') {
+                return gender === 'male' ? 'Profit' : 'Loss';
+            }
+            return gender === 'male' ? 'Man' : 'Woman';
+        }
+        function getOptimalGrid(n) {
+            const cols = Math.ceil(Math.sqrt(n));
+            const rows = Math.ceil(n / cols);
+            return { rows, cols };
+        }
+        function rgbToHue(r, g, b) {
+            r /= 255; g /= 255; b /= 255;
+            const max = Math.max(r, g, b), min = Math.min(r, g, b);
+            let h = 0;
+            if (max !== min) {
+                const d = max - min;
+                switch (max) {
+                    case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+                    case g: h = ((b - r) / d + 2) / 6; break;
+                    case b: h = ((r - g) / d + 4) / 6; break;
+                }
+            }
+            return h * 360;
+        }
+        function rgbToHsv(r, g, b) {
+            r /= 255; g /= 255; b /= 255;
+            const max = Math.max(r, g, b), min = Math.min(r, g, b);
+            let h = 0, s = 0, v = max;
+            const d = max - min;
+            s = max === 0 ? 0 : d / max;
+
+            if (max !== min) {
+                switch (max) {
+                    case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+                    case g: h = ((b - r) / d + 2) / 6; break;
+                    case b: h = ((r - g) / d + 4) / 6; break;
+                }
+            }
+            return { h: h * 360, s: s * 100, v: v * 100 };
+        }
+        function hsvToRgb(h, s, v) {
+            // h: 0-360, s: 0-100, v: 0-100
+            h = h / 360;
+            s = s / 100;
+            v = v / 100;
+            let r, g, b;
+            const i = Math.floor(h * 6);
+            const f = h * 6 - i;
+            const p = v * (1 - s);
+            const q = v * (1 - f * s);
+            const t = v * (1 - (1 - f) * s);
+            switch (i % 6) {
+                case 0: r = v; g = t; b = p; break;
+                case 1: r = q; g = v; b = p; break;
+                case 2: r = p; g = v; b = t; break;
+                case 3: r = p; g = q; b = v; break;
+                case 4: r = t; g = p; b = v; break;
+                case 5: r = v; g = p; b = q; break;
+            }
+            return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+        }
+        function hsvToCss(h, s, v) {
+            const rgb = hsvToRgb(h, s, v);
+            return `rgb(${rgb.join(',')})`;
+        }
+
+        async function loadData() {
+            try {
+                const response = await fetch('data_merged_gemini.json');
+                if (!response.ok) throw new Error('Failed to load data');
+                colorData = await response.json();
+                updateVisualization();
+            } catch (err) {
+                document.body.innerHTML = `<h2 style="color:red;padding:20px;">加载数据失败: ${err.message}</h2>`;
+            }
+        }
+
+        function updateVisualization() {
+            // 显示/隐藏 hue target 选择器
+            const sortBy = document.getElementById('sortBy').value;
+            const hueTargetSpan = document.getElementById('hueTargetSpan');
+            hueTargetSpan.style.display = sortBy === 'hue' ? 'inline' : 'none';
+            
+            // 更新 hue target 选项
+            if (sortBy === 'hue') {
+                const cat = document.getElementById('categoryFilter').value;
+                const hueTarget = document.getElementById('hueTarget');
+                if (cat === 'C1') {
+                    hueTarget.options[0].text = 'Man';
+                    hueTarget.options[1].text = 'Woman';
+                } else if (cat === 'C2') {
+                    hueTarget.options[0].text = 'Left';
+                    hueTarget.options[1].text = 'Right';
+                } else if (cat === 'C3') {
+                    hueTarget.options[0].text = 'Profit';
+                    hueTarget.options[1].text = 'Loss';
+                }
+            }
+
+            // 显示/隐藏 patch toggle (仅 C2 可用)
+            const patchToggleGroup = document.getElementById('patchToggleGroup');
+            const category = document.getElementById('categoryFilter').value;
+            if (category === 'C2') {
+                patchToggleGroup.style.display = 'flex';
+            } else {
+                patchToggleGroup.style.display = 'none';
+                // C1/C3 时关闭 patch toggle
+                document.getElementById('patchToggle').checked = false;
+            }
+            const mode = document.getElementById('displayMode').value;
+            groupBy = document.getElementById('groupByToggle').checked ? 'both' : 'none';
+            currentCategory = category;
+            // 更新 patch 显示状态
+            const patchToggle = document.getElementById('patchToggle');
+            lastPatchShow = category === 'C2' && patchToggle && patchToggle.checked;
+            
+            const hasCategory = colorData.length > 0 && colorData[0].hasOwnProperty('category');
+            let filteredData;
+            if (hasCategory) {
+                filteredData = colorData.filter(d => d.category === category).map(d => {
+                    // 新数据格式直接存储HSV: male_hsv, female_hsv (C1) 或 left_hsv, right_hsv (C2) 或 profit_hsv, loss_hsv (C3)
+                    let maleHsv, femaleHsv;
+
+                    if (category === 'C1') {
+                        maleHsv = d.male_hsv || [0, 0, 0];
+                        femaleHsv = d.female_hsv || [0, 0, 0];
+                        return {
+                            ...d,
+                            male_hue: maleHsv[0],
+                            male_sat: maleHsv[1],
+                            male_val: maleHsv[2],
+                            female_hue: femaleHsv[0],
+                            female_sat: femaleHsv[1],
+                            female_val: femaleHsv[2]
+                        };
+                    } else if (category === 'C2') {
+                        maleHsv = d.left_hsv || [0, 0, 0];
+                        femaleHsv = d.right_hsv || [0, 0, 0];
+                        return {
+                            image_id: d.image_id,
+                            male_hsv: maleHsv,
+                            female_hsv: femaleHsv,
+                            male_hue: maleHsv[0],
+                            male_sat: maleHsv[1],
+                            male_val: maleHsv[2],
+                            female_hue: femaleHsv[0],
+                            female_sat: femaleHsv[1],
+                            female_val: femaleHsv[2],
+                            s_group: d.s_group,
+                            model: d.model
+                        };
+                    } else if (category === 'C3') {
+                        maleHsv = d.profit_hsv || [0, 0, 0];
+                        femaleHsv = d.loss_hsv || [0, 0, 0];
+                        return {
+                            image_id: d.image_id,
+                            male_hsv: maleHsv,
+                            female_hsv: femaleHsv,
+                            male_hue: maleHsv[0],
+                            male_sat: maleHsv[1],
+                            male_val: maleHsv[2],
+                            female_hue: femaleHsv[0],
+                            female_sat: femaleHsv[1],
+                            female_val: femaleHsv[2],
+                            s_group: d.s_group,
+                            model: d.model,
+                            tooltip: d.tooltip || null
+                        };
+                    }
+                    return d;
+                });
+            } else {
+                filteredData = [...colorData];
+            }
+            const legend = document.getElementById('mosaicLegend');
+            if (legend) {
+                const label1 = getLabelText('male', currentCategory);
+                const label2 = getLabelText('female', currentCategory);
+                legend.innerHTML = `
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #4da6ff;"></div>
+                        <span>${label1}</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #ff6b9d;"></div>
+                        <span>${label2}</span>
+                    </div>
+                `;
+            }
+            const scatterMaleLabel = document.getElementById('scatterMaleLabel');
+            const scatterFemaleLabel = document.getElementById('scatterFemaleLabel');
+            if (scatterMaleLabel && scatterFemaleLabel) {
+                scatterMaleLabel.textContent = getLabelText('male', currentCategory);
+                scatterFemaleLabel.textContent = getLabelText('female', currentCategory);
+            }
+            let processedData = processData(filteredData, sortBy, mode, groupBy, category);
+            render(processedData, mode, groupBy, category);
+        }
+
+        function processData(data, sortBy, mode, groupBy, category) {
+            let processed = [...data];
+
+            if (sortBy === 'hue') {
+                const hueTarget = document.getElementById('hueTarget').value;
+                const getHue = (d) => {
+                    if (hueTarget === 'first') {
+                        return d.male_hue || d.left_hue || d.profit_hue || 0;
+                    } else {
+                        return d.female_hue || d.right_hue || d.loss_hue || 0;
+                    }
+                };
+                const getSat = (d) => {
+                    if (hueTarget === 'first') {
+                        return d.male_sat || d.left_sat || d.profit_sat || 0;
+                    } else {
+                        return d.female_sat || d.right_sat || d.loss_sat || 0;
+                    }
+                };
+                const getVal = (d) => {
+                    if (hueTarget === 'first') {
+                        return d.male_val || d.left_val || d.profit_val || 0;
+                    } else {
+                        return d.female_val || d.right_val || d.loss_val || 0;
+                    }
+                };
+                processed.sort((a, b) => {
+                    const ha = getHue(a), hb = getHue(b);
+                    const sa = getSat(a), sb = getSat(b);
+                    const va = getVal(a), vb = getVal(b);
+                    if (ha !== hb) return ha - hb;
+                    if (sa !== sb) return sa - sb;
+                    return va - vb;
+                });
+            } else {
+                processed.sort((a, b) => a.image_id.localeCompare(b.image_id));
+            }
+            if (groupBy === 'both') {
+                const showPatch = category === 'C2' && document.getElementById('patchToggle').checked;
+                // 当 patch 开关关闭时过滤掉 patch 数据
+                if (!showPatch) {
+                    processed = processed.filter(d => !d.s_group || !d.s_group.endsWith('_batch'));
+                }
+                const sGroups = showPatch
+                    ? ['S1', 'S2', 'S3', 'S4', 'S4_batch', 'S5', 'S6', 'S6_batch', 'S7', 'S7_batch', 'S8']
+                    : ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8'];
+                const modelOrder = ['gpt-5.4', 'claude-4-5-opus', 'deepseek-v3', 'gemini-3.1-pro-preview', 'nano-banana-2'];
+                const allModels = [...new Set(processed.map(d => d.model).filter(m => m))];
+                const models = allModels.length > 0 
+                    ? allModels.sort((a, b) => {
+        const aIdx = modelOrder.indexOf(a);
+        const bIdx = modelOrder.indexOf(b);
+        if (aIdx === -1 && bIdx === -1) return 0;
+        if (aIdx === -1) return 1;
+        if (bIdx === -1) return -1;
+        return aIdx - bIdx;
+    }) 
+                    : ['gpt'];
+                sGroups.forEach((t, tIdx) => {
+                    models.forEach((m, mIdx) => {
+                        const tmItems = processed.filter(d => d.s_group === t && d.model === m);
+                        tmItems.forEach((item, idx) => {
+                            item.row = tIdx;
+                            item.col = mIdx;
+                            item.groupName = `${t} - ${m}`;
+                            item.groupCols = models.length;
+                        });
+                    });
+                });
+            } else {
+                // 当 groupby 关闭时也处理 patch 过滤
+                if (category === 'C2') {
+                    const showPatch = document.getElementById('patchToggle').checked;
+                    if (!showPatch) {
+                        processed = processed.filter(d => !d.s_group || !d.s_group.endsWith('_batch'));
+                    }
+                }
+                const { cols } = getOptimalGrid(processed.length);
+                processed.forEach((item, idx) => {
+                    item.row = Math.floor(idx / cols);
+                    item.col = idx % cols;
+                    item.groupCols = cols;
+                });
+            }
+
+            return processed;
+        }
+        let lastRenderState = null;
+
+        function render(data, mode, groupBy, category) {
+            const container = d3.select('#mosaicContainer');
+            const containerWidth = window.innerWidth - 80;
+            let mainSvg = container.select('svg.main-svg');
+            const isNewSvg = mainSvg.empty();
+            const modeChanged = lastRenderState && lastRenderState.mode !== mode;
+            const groupByChanged = lastRenderState && lastRenderState.groupBy !== groupBy;
+            const categoryChanged = lastRenderState && lastRenderState.category !== category;
+            const patchShowChanged = lastRenderState && lastRenderState.patchShow !== (category === 'C2' && document.getElementById('patchToggle').checked);
+
+            if (isNewSvg || modeChanged || patchShowChanged) {
+                container.html('');
+                mainSvg = container.append('svg')
+                    .attr('class', 'main-svg')
+                    .attr('width', containerWidth)
+                    .attr('height', 800);
+            }
+            lastRenderState = { mode, groupBy, category, patchShow: category === 'C2' && document.getElementById('patchToggle').checked };
+            const useTransition = !isNewSvg && !modeChanged;
+
+            if (groupBy !== 'none') {
+                renderWithTGroupingD3(data, mode, mainSvg, containerWidth, useTransition, category);
+            } else {
+                renderWithoutTGroupingD3(data, mode, mainSvg, containerWidth, useTransition);
+            }
+        }
+        function renderWithTGroupingD3(data, mode, svg, containerWidth, useTransition = false, category) {
+            const showPatch = category === 'C2' && document.getElementById('patchToggle').checked;
+            const sGroups = showPatch
+                ? ['S1', 'S2', 'S3', 'S4', 'S4_batch', 'S5', 'S6', 'S6_batch', 'S7', 'S7_batch', 'S8']
+                : ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8'];
+            const modelOrder = ['gpt-5.4', 'claude-4-5-opus', 'deepseek-v3', 'gemini-3.1-pro-preview', 'nano-banana-2'];
+            const allModels = [...new Set(data.map(d => d.model).filter(m => m))];
+            const models = allModels.length > 0 
+                ? allModels.sort((a, b) => {
+        const aIdx = modelOrder.indexOf(a);
+        const bIdx = modelOrder.indexOf(b);
+        if (aIdx === -1 && bIdx === -1) return 0;
+        if (aIdx === -1) return 1;
+        if (bIdx === -1) return -1;
+        return aIdx - bIdx;
+    }) 
+                : ['gpt'];
+            const isBoth = groupBy === 'both';
+            const gap = 2;
+            const maxBlockSize = mode === 'pair' ? 28 : 25;
+            const tLabelWidth = 30;
+            const tGap = 30;
+            let centerOffset = 0;
+            let currentY = 50;
+            const tPositions = {};
+
+            sGroups.forEach(t => {
+                const tData = data.filter(d => d.s_group === t);
+                if (tData.length === 0) {
+                    tPositions[t] = { y: -1, height: 0 };
+                    return;
+                }
+
+                if (isBoth) {
+                    const modelDataMap = {};
+                    models.forEach(m => {
+                        modelDataMap[m] = tData.filter(d => d.model === m);
+                    });
+                    let modelStartX = 0;
+                    const modelPositions = {};
+                    let maxRows = 0;
+                    let maxModelWidth = 0;
+                    const isSplitMode = (mode === 'split');
+                    const colsPerModel = isSplitMode ? 2 : 1;
+                    const baseModelGap = 60;
+                    const minBlockSize = 10;
+                    const baseGap = 2;
+                    const gap = baseGap;
+                    let maxCols = 0;
+                    models.forEach(m => {
+                        const mData = modelDataMap[m];
+                        const dataForCols = isSplitMode ? Math.ceil(mData.length / 2) : mData.length;
+                        maxCols = Math.max(maxCols, Math.ceil(Math.sqrt(dataForCols)));
+                    });
+                    const totalCols = models.length * colsPerModel * maxCols;
+                    const availableWidth = containerWidth - tLabelWidth - 40;
+                    let calculatedBlockSize = maxBlockSize;
+                    const minGap = 2;
+                    const minModelGap = 40;
+                    let usedGap = 2;
+                    let usedModelGap = baseModelGap;
+                    let totalNeededWidth = (maxCols * colsPerModel * (maxBlockSize + usedGap) + usedModelGap) * models.length;
+                    while (totalNeededWidth > availableWidth && calculatedBlockSize > minBlockSize) {
+                        calculatedBlockSize -= 1;
+                        usedGap = 2;
+                        usedModelGap = Math.max(minModelGap, Math.floor(baseModelGap * calculatedBlockSize / maxBlockSize));
+                        totalNeededWidth = (maxCols * colsPerModel * (calculatedBlockSize + usedGap) + usedModelGap) * models.length;
+                    }
+                    calculatedBlockSize = Math.max(minBlockSize, Math.min(maxBlockSize, calculatedBlockSize));
+                    usedGap = 2;
+                    usedModelGap = Math.max(minModelGap, Math.floor(baseModelGap * calculatedBlockSize / maxBlockSize));
+                    modelStartX = 0;
+                    models.forEach(m => {
+                        const mData = modelDataMap[m];
+                        const dataForCols = isSplitMode ? Math.ceil(mData.length / 2) : mData.length;
+                        const mCols = Math.ceil(Math.sqrt(dataForCols));
+                        const mRows = Math.ceil(mData.length / mCols);
+                        const mWidth = mCols * colsPerModel * (calculatedBlockSize + usedGap);
+
+                        modelPositions[m] = {
+                            x: modelStartX,
+                            cols: mCols,
+                            colsPerModel: colsPerModel,
+                            rows: mRows,
+                            width: mWidth,
+                            blockSize: calculatedBlockSize
+                        };
+                        modelStartX += mWidth + usedModelGap;
+                        maxRows = Math.max(maxRows, mRows);
+                        maxModelWidth = Math.max(maxModelWidth, mWidth);
+                    });
+
+                    const gridHeight = maxRows * (calculatedBlockSize + usedGap);
+                    const totalWidth = modelStartX;
+                    tPositions[t] = {
+                        y: currentY,
+                        height: gridHeight,
+                        cols: models.length,
+                        modelPositions: modelPositions,
+                        maxRows: maxRows,
+                        totalWidth: totalWidth,
+                        blockSize: calculatedBlockSize,
+                        gap: usedGap,
+                        modelGap: usedModelGap
+                    };
+                    currentY += gridHeight + tGap + 30;
+                } else {
+                    const cols = Math.ceil(Math.sqrt(tData.length));
+                    const rows = Math.ceil(tData.length / cols);
+                    const minBlockSize = 8;
+                    const calculatedBlockSize = Math.max(minBlockSize, Math.min(maxBlockSize,
+                        (containerWidth - tLabelWidth - 40 - (cols - 1) * gap) / cols
+                    ));
+                    const gridWidth = cols * (calculatedBlockSize + gap);
+                    const gridHeight = rows * (calculatedBlockSize + gap);
+                    tPositions[t] = { y: currentY, height: gridHeight, cols, blockSize: calculatedBlockSize };
+                    currentY += gridHeight + tGap + 30;
+                }
+            });
+            const totalHeight = currentY + 20;
+            svg.attr('height', Math.max(totalHeight, 800));
+            let maxCols = 0;
+            Object.values(tPositions).forEach(p => {
+                if (p.cols > 0) maxCols = Math.max(maxCols, p.cols);
+            });
+            let actualBlockSize = maxBlockSize;
+            let actualGap = gap;
+            const firstT = Object.keys(tPositions).find(t => tPositions[t] && tPositions[t].y >= 0);
+            if (firstT && tPositions[firstT].blockSize) {
+                actualBlockSize = tPositions[firstT].blockSize;
+            }
+            if (false && firstT && tPositions[firstT].gap !== undefined) {
+                actualGap = tPositions[firstT].gap;
+            }
+            let centerStartX = 0;
+            if (isBoth) {
+                let maxTotalWidth = 0;
+                Object.values(tPositions).forEach(p => {
+                    if (p.totalWidth && p.totalWidth > maxTotalWidth) {
+                        maxTotalWidth = p.totalWidth;
+                    }
+                });
+                centerStartX = Math.max(20, (containerWidth - maxTotalWidth - tLabelWidth) / 2);
+            }
+            const tLabels = svg.selectAll('.t-label-group')
+                .data(sGroups.filter(t => tPositions[t].y >= 0), d => d);
+
+            const tLabelsEnter = tLabels.enter()
+                .append('g')
+                .attr('class', 't-label-group');
+
+            const tLabelsText = tLabelsEnter.append('text')
+                .attr('class', 't-label-text')
+                .attr('x', 10)
+                .attr('y', d => tPositions[d].y + tPositions[d].height / 2)
+                .attr('fill', '#fff')
+                .attr('font-size', '14px')
+                .attr('font-weight', 'bold')
+                .attr('writing-mode', 'vertical-rl')
+                .attr('cursor', 'help')
+                .style('text-decoration', 'underline')
+                .style('text-decoration-style', 'dotted')
+                .style('text-decoration-color', '#666')
+                .text(d => d);
+            
+            tLabelsText.on('mouseenter', function(event, d) {
+                    d3.select(this).attr('fill', '#4da6ff');
+                    showTPromptTooltip(event, d, currentCategory);
+                })
+                .on('mouseleave', function() {
+                    d3.select(this).attr('fill', '#fff');
+                    hideTPromptTooltip();
+                });
+
+            tLabelsEnter.transition()
+                .duration(500)
+                .attr('opacity', 1);
+
+            tLabels.exit()
+                .transition()
+                .duration(300)
+                .attr('opacity', 0)
+                .remove();
+            if (isBoth) {
+                const modelLabelY = 18;
+                const modelLabelXStart = tLabelWidth + 30;
+
+                svg.selectAll('.model-label').remove();
+
+                const firstTWithData = sGroups.find(t => tPositions[t] && tPositions[t].y >= 0);
+                const mPosMap = firstTWithData ? tPositions[firstTWithData].modelPositions : null;
+                const firstTData = firstTWithData ? tPositions[firstTWithData] : null;
+                const labelBlockSize = firstTData ? firstTData.blockSize : actualBlockSize;
+                const labelUsedGap = gap;
+
+                models.forEach((m) => {
+                    if (!mPosMap || !mPosMap[m]) return;
+
+                    const mPos = mPosMap[m];
+                    let labelX;
+                    if (mode === 'split') {
+                        const singleGridWidth = mPos.cols * (labelBlockSize + labelUsedGap);
+                        const totalWidth = singleGridWidth * 2 + 10;
+                        labelX = modelLabelXStart + mPos.x + totalWidth / 2;
+                    } else {
+                        labelX = modelLabelXStart + mPos.x + (mPos.cols * (labelBlockSize + labelUsedGap)) / 2;
+                    }
+                    svg.append('text')
+                        .attr('class', 'model-label')
+                        .attr('x', labelX)
+                        .attr('y', modelLabelY)
+                        .attr('text-anchor', 'middle')
+                        .attr('fill', '#fff')
+                        .attr('font-size', '14px')
+                        .attr('font-weight', 'bold')
+                        .attr('opacity', 0)
+                        .text(m.toUpperCase())
+                        .transition()
+                        .duration(500)
+                        .attr('opacity', 1);
+                });
+            }
+            if (mode === 'pair') {
+                renderPairBlocksWithTransition(svg, data, tPositions, actualBlockSize, actualGap, tLabelWidth, 0, useTransition, isBoth);
+            } else {
+                renderSplitBlocksWithTransition(svg, data, tPositions, actualBlockSize, actualGap, tLabelWidth, centerStartX, useTransition, isBoth);
+            }
+        }
+        function renderWithoutTGroupingD3(data, mode, svg, containerWidth, useTransition = false) {
+            svg.selectAll('.model-label').remove();
+
+            const gap = 2;
+            const numItems = data.length;
+
+            let blockSize, cols, rows, startX, startY;
+
+            if (mode === 'pair') {
+                const minBlockSize = 8;
+                const maxBlockSizePair = 28;
+                cols = Math.min(Math.ceil(Math.sqrt(numItems)),
+                    Math.floor((containerWidth - 40) / (minBlockSize + gap)));
+                rows = Math.ceil(numItems / cols);
+                const neededWidth = cols * (maxBlockSizePair + gap);
+                if (neededWidth > containerWidth - 40) {
+                    blockSize = Math.max(minBlockSize, (containerWidth - 40 - (cols - 1) * gap) / cols);
+                } else {
+                    blockSize = maxBlockSizePair;
+                }
+                startY = 50;
+                const actualContentWidth = cols * (blockSize + gap);
+                startX = Math.max(20, (containerWidth - actualContentWidth) / 2);
+                svg.attr('height', startY + rows * (blockSize + gap) + 50);
+            } else {
+                const itemsPerGender = Math.ceil(numItems / 2);
+                cols = Math.ceil(Math.sqrt(itemsPerGender));
+                rows = Math.ceil(itemsPerGender / cols);
+                const minBlockSize = 10;
+                const maxBlockSizeSplit = 25;
+                const singleGridWidth = cols * (maxBlockSizeSplit + gap);
+                const totalNeededWidth = singleGridWidth * 2 + 40;
+
+                if (totalNeededWidth > containerWidth - 40) {
+                    const availableWidth = containerWidth - 40 - 40;
+                    blockSize = Math.max(minBlockSize, availableWidth / (cols * 2) - gap);
+                } else {
+                    blockSize = maxBlockSizeSplit;
+                }
+                startY = 50;
+                const actualGridWidth = cols * (blockSize + gap);
+                const totalContentWidth = actualGridWidth * 2 + 40;
+                svg.attr('width', containerWidth);
+                startX = (containerWidth - totalContentWidth) / 2;
+                const womanOffset = startX + actualGridWidth + 40;
+                const neededHeight = startY + rows * 2 * (blockSize + gap) + 100;
+                svg.attr('height', Math.max(neededHeight, 800));
+                svg.selectAll('.gender-label').remove();
+                svg.append('text')
+                    .attr('class', 'gender-label')
+                    .attr('x', startX + (cols * (blockSize + gap)) / 2)
+                    .attr('y', 30)
+                    .attr('text-anchor', 'middle')
+                    .attr('fill', '#fff')
+                    .attr('font-size', '16px')
+                    .attr('font-weight', 'bold')
+                    .text(getLabelText('male', currentCategory));
+                svg.append('text')
+                    .attr('class', 'gender-label')
+                    .attr('x', womanOffset + (cols * (blockSize + gap)) / 2)
+                    .attr('y', 30)
+                    .attr('text-anchor', 'middle')
+                    .attr('fill', '#fff')
+                    .attr('font-size', '16px')
+                    .attr('font-weight', 'bold')
+                    .text(getLabelText('female', currentCategory));
+            }
+            svg.selectAll('.t-label-group')
+                .transition()
+                .duration(300)
+                .attr('opacity', 0)
+                .remove();
+            const tPositions = {
+                'all': { y: startY, cols, x: startX, useAllData: true }
+            };
+
+            if (mode === 'pair') {
+                renderPairBlocksWithTransition(svg, data, tPositions, blockSize, gap, 0, startX, useTransition, false);
+            } else {
+                renderSplitBlocksWithTransition(svg, data, tPositions, blockSize, gap, 0, startX, useTransition, false);
+            }
+        }
+        function renderPairBlocksWithTransition(svg, data, tPositions, blockSize, gap, offsetX = 0, startX = 0, useTransition = false, isBoth = false) {
+            if (useTransition) {
+                svg.selectAll('.color-block-split')
+                    .transition()
+                    .duration(200)
+                    .attr('opacity', 0)
+                    .remove();
+            } else {
+                svg.selectAll('.color-block-split').remove();
+            }
+            if (useTransition) {
+                svg.selectAll('.gender-label')
+                    .transition()
+                    .duration(200)
+                    .attr('opacity', 0)
+                    .remove();
+            } else {
+                svg.selectAll('.gender-label').remove();
+            }
+
+            const allGlyphs = [];
+            Object.entries(tPositions).forEach(([t, pos]) => {
+                if (pos.y < 0) return;
+                let tData;
+                if (pos.useAllData) {
+                    tData = data;
+                } else {
+                    tData = data.filter(d => d.s_group === t);
+                }
+
+                tData.forEach((d, i) => {
+                    let xOffset, row;
+                    if (isBoth && pos.modelPositions) {
+                        const mPos = pos.modelPositions[d.model] || { x: 0, cols: 1 };
+                        const modelData = tData.filter(dt => dt.model === d.model);
+                        const modelIdx = modelData.indexOf(d);
+                        xOffset = mPos.x + (modelIdx % mPos.cols) * (blockSize + gap);
+                        row = Math.floor(modelIdx / mPos.cols);
+                    } else {
+                        xOffset = (i % pos.cols) * (blockSize + gap);
+                        row = Math.floor(i / pos.cols);
+                    }
+                    allGlyphs.push({
+                        ...d,
+                        targetX: offsetX + (startX || 30) + xOffset,
+                        targetY: pos.y + row * (blockSize + gap),
+                        t
+                    });
+                });
+            });
+            const glyphs = svg.selectAll('.glyph')
+                .data(allGlyphs, d => d.image_id);
+            const glyphsEnter = glyphs.enter()
+                .append('g')
+                .attr('class', 'glyph')
+                .attr('transform', d => `translate(${d.targetX}, ${d.targetY})`)
+                .attr('opacity', 0);
+            glyphsEnter.each(function(d) {
+                const g = d3.select(this);
+                g.append('rect')
+                    .attr('class', 'glyph-border')
+                    .attr('x', -1).attr('y', -1)
+                    .attr('width', blockSize + 2).attr('height', blockSize + 2)
+                    .attr('fill', 'none')
+                    .attr('stroke', '#444')
+                    .attr('stroke-width', 1);
+                g.append('rect')
+                    .attr('class', 'color-block male')
+                    .attr('x', 0).attr('y', 0)
+                    .attr('width', blockSize / 2).attr('height', blockSize)
+                    .attr('fill', `rgb(${hsvToRgb(...d.male_hsv).join(',')})`);
+                g.append('rect')
+                    .attr('class', 'color-block female')
+                    .attr('x', blockSize / 2).attr('y', 0)
+                    .attr('width', blockSize / 2).attr('height', blockSize)
+                    .attr('fill', `rgb(${hsvToRgb(...d.female_hsv).join(',')})`);
+            });
+            glyphsEnter.selectAll('.color-block')
+                .on('mouseenter', function(e, d) {
+                    const isMale = d3.select(this).classed('male');
+                    showTooltip(e, getLabelText(isMale ? 'male' : 'female', currentCategory),
+                        isMale ? `rgb(${hsvToRgb(...d.male_hsv).join(',')})` : `rgb(${hsvToRgb(...d.female_hsv).join(',')})`,
+                        d.image_id);
+                })
+                .on('mouseleave', hideTooltip);
+            if (useTransition) {
+                glyphsEnter.transition()
+                    .duration(500)
+                    .attr('opacity', 1);
+            } else {
+                glyphsEnter.attr('opacity', 1);
+            }
+            if (useTransition) {
+                glyphs.transition()
+                    .duration(500)
+                    .attr('transform', d => `translate(${d.targetX}, ${d.targetY})`);
+            } else {
+                glyphs.attr('transform', d => `translate(${d.targetX}, ${d.targetY})`);
+            }
+            if (useTransition) {
+                glyphs.exit()
+                    .transition()
+                    .duration(300)
+                    .attr('opacity', 0)
+                    .remove();
+            } else {
+                glyphs.exit().remove();
+            }
+        }
+        function renderSplitBlocksWithTransition(svg, data, tPositions, blockSize, gap, offsetX = 0, startX = 0, useTransition = false, isBoth = false) {
+            const modelOrder = ['gpt-5.4', 'claude-4-5-opus', 'deepseek-v3', 'gemini-3.1-pro-preview', 'nano-banana-2'];
+            const allModels = [...new Set(data.map(d => d.model).filter(m => m))];
+            const models = allModels.length > 0 
+                ? allModels.sort((a, b) => {
+        const aIdx = modelOrder.indexOf(a);
+        const bIdx = modelOrder.indexOf(b);
+        if (aIdx === -1 && bIdx === -1) return 0;
+        if (aIdx === -1) return 1;
+        if (bIdx === -1) return -1;
+        return aIdx - bIdx;
+    }) 
+                : ['gpt'];
+            if (useTransition) {
+                svg.selectAll('.glyph')
+                    .transition()
+                    .duration(200)
+                    .attr('opacity', 0)
+                    .remove();
+            } else {
+                svg.selectAll('.glyph').remove();
+            }
+            svg.selectAll('.gender-label').remove();
+            const actualStartX = offsetX + (startX || 30);
+
+            Object.entries(tPositions).forEach(([t, pos]) => {
+                if (pos.y < 0) return;
+
+                let tData;
+                if (pos.useAllData) {
+                    tData = data;
+                } else {
+                    tData = data.filter(d => d.s_group === t);
+                }
+
+                const numItems = tData.length;
+                const cols = pos.cols || Math.ceil(Math.sqrt(numItems));
+                const labelY = pos.y - 8;
+
+                if (isBoth && pos.modelPositions) {
+                    models.forEach(m => {
+                        const mPos = pos.modelPositions[m];
+                        if (!mPos) return;
+                        svg.append('text')
+                            .attr('class', 'gender-label')
+                            .attr('x', actualStartX + mPos.x + (mPos.cols * (blockSize + gap)) / 2)
+                            .attr('y', labelY)
+                            .attr('text-anchor', 'middle')
+                            .attr('fill', '#fff')
+                            .attr('font-size', '10px')
+                            .attr('font-weight', 'bold')
+                            .attr('opacity', 0)
+                            .text(getLabelText('male', currentCategory))
+                            .transition()
+                            .duration(500)
+                            .attr('opacity', 1);
+                        svg.append('text')
+                            .attr('class', 'gender-label')
+                            .attr('x', actualStartX + mPos.x + mPos.cols * (blockSize + gap) + 10 + (mPos.cols * (blockSize + gap)) / 2)
+                            .attr('y', labelY)
+                            .attr('text-anchor', 'middle')
+                            .attr('fill', '#fff')
+                            .attr('font-size', '10px')
+                            .attr('font-weight', 'bold')
+                            .attr('opacity', 0)
+                            .text(getLabelText('female', currentCategory))
+                            .transition()
+                            .duration(500)
+                            .attr('opacity', 1);
+                    });
+                } else {
+                    svg.append('text')
+                        .attr('class', 'gender-label')
+                        .attr('x', actualStartX + (cols * (blockSize + gap)) / 2)
+                        .attr('y', labelY)
+                        .attr('text-anchor', 'middle')
+                        .attr('fill', '#fff')
+                        .attr('font-size', '12px')
+                        .attr('font-weight', 'bold')
+                        .attr('opacity', 0)
+                        .text(getLabelText('male', currentCategory))
+                        .transition()
+                        .duration(500)
+                        .attr('opacity', 1);
+                svg.append('text')
+                    .attr('class', 'gender-label')
+                    .attr('x', actualStartX + cols * (blockSize + gap) + 40 + (cols * (blockSize + gap)) / 2)
+                    .attr('y', labelY)
+                    .attr('text-anchor', 'middle')
+                    .attr('fill', '#fff')
+                    .attr('font-size', '12px')
+                    .attr('font-weight', 'bold')
+                    .attr('opacity', 0)
+                    .text(getLabelText('female', currentCategory))
+                    .transition()
+                    .duration(500)
+                    .attr('opacity', 1);
+                }
+            });
+
+            const allBlocks = [];
+
+            Object.entries(tPositions).forEach(([t, pos]) => {
+                if (pos.y < 0) return;
+                let tData;
+                if (pos.useAllData) {
+                    tData = data;
+                } else {
+                    tData = data.filter(d => d.s_group === t);
+                }
+
+                const numItems = tData.length;
+                const cols = pos.cols || Math.ceil(Math.sqrt(numItems));
+
+                tData.forEach((d, i) => {
+                    let maleXOffset, maleRow, femaleXOffset, femaleRow, maleCols;
+                    if (isBoth && pos.modelPositions) {
+                        const mPos = pos.modelPositions[d.model] || { x: 0, cols: 1 };
+                        const modelData = tData.filter(dt => dt.model === d.model);
+                        const maleData = modelData;
+                        const femaleData = modelData;
+                        const maleIdx = maleData.indexOf(d);
+                        const femaleIdx = femaleData.indexOf(d);
+                        const gridCols = mPos.cols;
+                        const gridRows = mPos.rows;
+                        maleXOffset = mPos.x + (maleIdx % gridCols) * (blockSize + gap);
+                        maleRow = Math.floor(maleIdx / gridCols);
+                        maleCols = gridCols;
+                        femaleXOffset = mPos.x + mPos.cols * (blockSize + gap) + 10 + (femaleIdx % gridCols) * (blockSize + gap);
+                        femaleRow = Math.floor(femaleIdx / gridCols);
+                    } else {
+                        const halfCols = Math.ceil(Math.sqrt(numItems / 2));
+                        const halfRows = Math.ceil(numItems / 2 / halfCols);
+                        const manGridWidth = halfCols * (blockSize + gap);
+                        maleXOffset = (i % halfCols) * (blockSize + gap);
+                        maleRow = Math.floor(i / halfCols);
+                        femaleXOffset = (i % halfCols) * (blockSize + gap) + manGridWidth + 40;
+                        femaleRow = Math.floor(i / halfCols);
+
+                        maleCols = halfCols;
+                    }
+                    allBlocks.push({
+                        ...d,
+                        gender: 'male',
+                        targetX: offsetX + (startX || 30) + maleXOffset,
+                        targetY: pos.y + maleRow * (blockSize + gap),
+                        t
+                    });
+                    allBlocks.push({
+                        ...d,
+                        gender: 'female',
+                        targetX: offsetX + (startX || 30) + femaleXOffset,
+                        targetY: pos.y + femaleRow * (blockSize + gap),
+                        t
+                    });
+                });
+            });
+
+            const blocks = svg.selectAll('.color-block-split')
+                .data(allBlocks, d => d.image_id + '-' + d.gender);
+
+            const blocksEnter = blocks.enter()
+                .append('rect')
+                .attr('class', 'color-block-split')
+                .attr('x', d => d.targetX)
+                .attr('y', d => d.targetY)
+                .attr('width', blockSize)
+                .attr('height', blockSize)
+                .attr('fill', d => d.gender === 'male' ?
+                    `rgb(${hsvToRgb(...d.male_hsv).join(',')})` :
+                    `rgb(${hsvToRgb(...d.female_hsv).join(',')})`)
+                .attr('stroke', d => d.tooltip && d.tooltip.length > 0 ? '#ffd700' : 'none')
+                .attr('stroke-width', d => d.tooltip && d.tooltip.length > 0 ? 2 : 0)
+                .attr('opacity', 0);
+
+            blocksEnter
+                .on('mouseenter', function(e, d) {
+                    let colorInfo;
+                    if (d.tooltip && d.tooltip.length > 0) {
+                        // Multicolor: show tooltip details with color swatches
+                        const parseHsv = (hsvStr) => {
+                            if (!hsvStr || !hsvStr.startsWith('hsv(')) return null;
+                            const match = hsvStr.match(/hsv\((\d+),\s*(\d+),\s*(\d+)\)/);
+                            if (match) return [parseInt(match[1]), parseInt(match[2]), parseInt(match[3])];
+                            return null;
+                        };
+                        const details = d.tooltip.map(t => {
+                            const profitHsv = parseHsv(t.profit);
+                            const lossHsv = parseHsv(t.loss);
+                            const profitColor = profitHsv ? `rgb(${hsvToRgb(...profitHsv).join(',')})` : '#888';
+                            const lossColor = lossHsv ? `rgb(${hsvToRgb(...lossHsv).join(',')})` : '#888';
+                            return `${t.target}: <span style="background:${profitColor};display:inline-block;width:14px;height:14px;vertical-align:middle;border:1px solid #fff;"></span> ${t.profit || 'N/A'} / <span style="background:${lossColor};display:inline-block;width:14px;height:14px;vertical-align:middle;border:1px solid #fff;"></span> ${t.loss || 'N/A'}`;
+                        }).join('<br>');
+                        colorInfo = `HSV: H=${Math.round(d.male_hue || 0)}° S=${Math.round(d.male_sat || 0)}% V=${Math.round(d.male_val || 0)}%<br>${details}`;
+                    } else {
+                        colorInfo = d.gender === 'male'
+                            ? `HSV: H=${Math.round(d.male_hue || 0)}° S=${Math.round(d.male_sat || 0)}% V=${Math.round(d.male_val || 0)}%`
+                            : `HSV: H=${Math.round(d.female_hue || 0)}° S=${Math.round(d.female_sat || 0)}% V=${Math.round(d.female_val || 0)}%`;
+                    }
+                    showTooltip(e, getLabelText(d.gender, currentCategory), colorInfo, d.image_id);
+                    svg.selectAll('.color-block-split')
+                        .transition()
+                        .duration(150)
+                        .attr('opacity', block => {
+                            if (block.image_id === d.image_id) {
+                                return 1;
+                            }
+                            return 0.2;
+                        })
+                        .attr('stroke', block => {
+                            if (block.image_id === d.image_id) {
+                                return '#fff';
+                            }
+                            return 'none';
+                        })
+                        .attr('stroke-width', block => {
+                            if (block.image_id === d.image_id) {
+                                return 2;
+                            }
+                            return 0;
+                        })
+                        .style('filter', block => {
+                            if (block.image_id === d.image_id) {
+                                return 'drop-shadow(0 0 6px rgba(255,255,255,0.9))';
+                            }
+                            return 'none';
+                        });
+                })
+                .on('mouseleave', function(e, d) {
+                    hideTooltip();
+                    svg.selectAll('.color-block-split')
+                        .transition()
+                        .duration(150)
+                        .attr('opacity', 1)
+                        .attr('stroke', block => block.tooltip && block.tooltip.length > 0 ? '#ffd700' : 'none')
+                        .attr('stroke-width', block => block.tooltip && block.tooltip.length > 0 ? 2 : 0)
+                        .style('filter', 'none');
+                });
+
+            if (useTransition) {
+                blocksEnter.transition()
+                    .duration(500)
+                    .attr('opacity', 1);
+            } else {
+                blocksEnter.attr('opacity', 1);
+            }
+
+            if (useTransition) {
+                blocks.transition()
+                    .duration(500)
+                    .attr('x', d => d.targetX)
+                    .attr('y', d => d.targetY)
+                    .attr('stroke', d => d.tooltip && d.tooltip.length > 0 ? '#ffd700' : 'none')
+                    .attr('stroke-width', d => d.tooltip && d.tooltip.length > 0 ? 2 : 0);
+            } else {
+                blocks.attr('x', d => d.targetX)
+                    .attr('y', d => d.targetY)
+                    .attr('stroke', d => d.tooltip && d.tooltip.length > 0 ? '#ffd700' : 'none')
+                    .attr('stroke-width', d => d.tooltip && d.tooltip.length > 0 ? 2 : 0);
+            }
+
+            if (useTransition) {
+                blocks.exit()
+                    .transition()
+                    .duration(300)
+                    .attr('opacity', 0)
+                    .remove();
+            } else {
+                blocks.exit().remove();
+            }
+        }
+        function showTooltip(event, gender, color, imageId = '') {
+            const tooltip = document.getElementById('tooltip');
+            const idText = imageId ? `<br><strong>${imageId}</strong>` : '';
+            tooltip.innerHTML = `<strong>${gender}</strong>${idText}<br>${color}`;
+            tooltip.style.display = 'block';
+            tooltip.style.left = event.clientX + 15 + 'px';
+            tooltip.style.top = event.clientY + 15 + 'px';
+        }
+
+        function hideTooltip() {
+            document.getElementById('tooltip').style.display = 'none';
+        }
+
+        function showPatchTooltip(event) {
+            const tooltip = document.getElementById('patchTooltip');
+            if (tooltip) {
+                tooltip.style.display = 'inline';
+                tooltip.style.position = 'fixed';
+                tooltip.style.left = (event.clientX - 50) + 'px';
+                tooltip.style.top = (event.clientY + 10) + 'px';
+            }
+        }
+
+        function hidePatchTooltip() {
+            const tooltip = document.getElementById('patchTooltip');
+            if (tooltip) {
+                tooltip.style.display = 'none';
+            }
+        }
+
+        function showTPromptTooltip(event, tGroup, category) {
+            const key = category + "_" + tGroup;
+            const condition = tPromptConditions[key];
+            if (!condition) return;
+            
+            const tooltip = document.getElementById('tPromptTooltip');
+            if (tooltip) {
+                tooltip.textContent = condition;
+                tooltip.style.display = 'inline';
+                tooltip.style.position = 'fixed';
+                tooltip.style.left = (event.clientX + 10) + 'px';
+                tooltip.style.top = (event.clientY + 10) + 'px';
+            }
+        }
+
+        function hideTPromptTooltip() {
+            const tooltip = document.getElementById('tPromptTooltip');
+            if (tooltip) {
+                tooltip.style.display = 'none';
+            }
+        }
+
+        function toggleGroupBy() {
+            groupBy = document.getElementById('groupByToggle').checked ? 'both' : 'none';
+            updateVisualization();
+        }
+
+        function switchTab(tabId, event) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.view').forEach(view => view.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+            if (tabId === 'scatter' && colorData.length > 0) {
+                updateScatterPlot();
+            }
+        }
+        function rgbToHsv(r, g, b) {
+            r /= 255; g /= 255; b /= 255;
+            const max = Math.max(r, g, b), min = Math.min(r, g, b);
+            let h, s, v = max;
+            const d = max - min;
+            s = max === 0 ? 0 : d / max;
+
+            if (max === min) {
+                h = 0;
+            } else {
+                switch (max) {
+                    case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                    case g: h = (b - r) / d + 2; break;
+                    case b: h = (r - g) / d + 4; break;
+                }
+                h /= 6;
+            }
+            return [h * 360, s * 100, v * 100];
+        }
+        function hsvToRgb(h, s, v) {
+            h = h / 360;
+            s = s / 100;
+            v = v / 100;
+            let r, g, b;
+            const i = Math.floor(h * 6);
+            const f = h * 6 - i;
+            const p = v * (1 - s);
+            const q = v * (1 - f * s);
+            const t = v * (1 - (1 - f) * s);
+            switch (i % 6) {
+                case 0: r = v; g = t; b = p; break;
+                case 1: r = q; g = v; b = p; break;
+                case 2: r = p; g = v; b = t; break;
+                case 3: r = p; g = q; b = v; break;
+                case 4: r = t; g = p; b = v; break;
+                case 5: r = v; g = p; b = q; break;
+            }
+            return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+        }
+
+        function getAxisValue(color, axis) {
+            const [r, g, b] = color;
+            const [h, s, v] = rgbToHsv(r, g, b);
+
+            switch (axis) {
+                case 'hue': return h;
+                case 'saturation': return s;
+                case 'value': return v;
+                case 'r': return r;
+                case 'g': return g;
+                case 'b': return b;
+                default: return h;
+            }
+        }
+
+        function getAxisValueFromArray(colorArray, axis) {
+            switch (axis) {
+                case 'hue': return colorArray[0];
+                case 'saturation': return colorArray[1];
+                case 'value': return colorArray[2];
+                case 'r': return colorArray[0];
+                case 'g': return colorArray[1];
+                case 'b': return colorArray[2];
+                default: return colorArray[0];
+            }
+        }
+        function kMeansClustering(points, k = 2, maxIterations = 20) {
+            if (points.length < k) {
+                return { clusters: [], centers: [] };
+            }
+            const isRgb = points[0].hasOwnProperty('r');
+            let centers = points.slice(0, k).map(p => isRgb ? {
+                r: p.r || 0,
+                g: p.g || 0,
+                b: p.b || 0
+            } : {
+                hue: p.hue || 0,
+                saturation: p.saturation || 0,
+                value: p.value || 0
+            });
+
+            let assignments = new Array(points.length).fill(0);
+            // k=1 时统一用 RGB 计算平均值
+            if (k === 1) {
+                if (isRgb) {
+                    centers[0] = {
+                        r: points.reduce((sum, p) => sum + (p.r || 0), 0) / points.length,
+                        g: points.reduce((sum, p) => sum + (p.g || 0), 0) / points.length,
+                        b: points.reduce((sum, p) => sum + (p.b || 0), 0) / points.length
+                    };
+                } else {
+                    const sinSum = points.reduce((sum, p) => sum + Math.sin((p.hue || 0) * Math.PI / 180), 0);
+                    const cosSum = points.reduce((sum, p) => sum + Math.cos((p.hue || 0) * Math.PI / 180), 0);
+                    let meanHue = Math.atan2(sinSum, cosSum) * 180 / Math.PI;
+                    if (meanHue < 0) meanHue += 360;
+
+                    centers[0] = {
+                        hue: meanHue,
+                        saturation: points.reduce((sum, p) => sum + (p.saturation || 0), 0) / points.length,
+                        value: points.reduce((sum, p) => sum + (p.value || 0), 0) / points.length
+                    };
+                }
+            } else {
+                for (let iter = 0; iter < maxIterations; iter++) {
+                    let changed = false;
+                    for (let i = 0; i < points.length; i++) {
+                        const p = points[i];
+                        let minDist = Infinity;
+                        let clusterIdx = 0;
+                        for (let c = 0; c < k; c++) {
+                            let dist;
+                            if (isRgb) {
+                                dist = Math.sqrt(
+                                    Math.pow(p.r - centers[c].r, 2) +
+                                    Math.pow(p.g - centers[c].g, 2) +
+                                    Math.pow(p.b - centers[c].b, 2)
+                                );
+                            } else {
+                                const hueDiff = Math.abs(p.hue - centers[c].hue);
+                                const hueDist = Math.min(hueDiff, 360 - hueDiff);
+                                dist = Math.sqrt(
+                                    Math.pow(hueDist, 2) +
+                                    Math.pow(p.saturation - centers[c].saturation, 2) +
+                                    Math.pow(p.value - centers[c].value, 2)
+                                );
+                            }
+                            if (dist < minDist) {
+                                minDist = dist;
+                                clusterIdx = c;
+                            }
+                        }
+                        if (assignments[i] !== clusterIdx) {
+                            assignments[i] = clusterIdx;
+                            changed = true;
+                        }
+                    }
+
+                    if (!changed) break;
+                    for (let c = 0; c < k; c++) {
+                        const clusterPoints = points.filter((_, i) => assignments[i] === c);
+                        if (clusterPoints.length > 0) {
+                            if (isRgb) {
+                                centers[c] = {
+                                    r: clusterPoints.reduce((sum, p) => sum + (p.r || 0), 0) / clusterPoints.length,
+                                    g: clusterPoints.reduce((sum, p) => sum + (p.g || 0), 0) / clusterPoints.length,
+                                    b: clusterPoints.reduce((sum, p) => sum + (p.b || 0), 0) / clusterPoints.length
+                                };
+                            } else {
+                                const sinSum = clusterPoints.reduce((sum, p) => sum + Math.sin((p.hue || 0) * Math.PI / 180), 0);
+                                const cosSum = clusterPoints.reduce((sum, p) => sum + Math.cos((p.hue || 0) * Math.PI / 180), 0);
+                                let meanHue = Math.atan2(sinSum, cosSum) * 180 / Math.PI;
+                                if (meanHue < 0) meanHue += 360;
+
+                                centers[c] = {
+                                    hue: meanHue,
+                                    saturation: clusterPoints.reduce((sum, p) => sum + (p.saturation || 0), 0) / clusterPoints.length,
+                                    value: clusterPoints.reduce((sum, p) => sum + (p.value || 0), 0) / clusterPoints.length
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+            const ranges = [];
+            for (let c = 0; c < k; c++) {
+                const clusterPoints = points.filter((_, i) => assignments[i] === c);
+                if (clusterPoints.length > 0) {
+                    let stdDev;
+                    if (isRgb) {
+                        const meanR = centers[c].r;
+                        const meanG = centers[c].g;
+                        const meanB = centers[c].b;
+                        stdDev = {
+                            r: Math.sqrt(clusterPoints.reduce((sum, p) => sum + Math.pow(p.r - meanR, 2), 0) / clusterPoints.length) || 5,
+                            g: Math.sqrt(clusterPoints.reduce((sum, p) => sum + Math.pow(p.g - meanG, 2), 0) / clusterPoints.length) || 5,
+                            b: Math.sqrt(clusterPoints.reduce((sum, p) => sum + Math.pow(p.b - meanB, 2), 0) / clusterPoints.length) || 5
+                        };
+                    } else {
+                        const meanH = centers[c].hue;
+                        const meanS = centers[c].saturation;
+                        const meanV = centers[c].value;
+                        const calcCircularStd = (meanAngle, values) => {
+                            const sinSum = values.reduce((sum, v) => sum + Math.sin((v - meanAngle) * Math.PI / 180), 0);
+                            const cosSum = values.reduce((sum, v) => sum + Math.cos((v - meanAngle) * Math.PI / 180), 0);
+                            return Math.sqrt(2 * (1 - Math.sqrt(sinSum * sinSum + cosSum * cosSum) / values.length)) * 180 / Math.PI || 5;
+                        };
+                        const hueValues = clusterPoints.map(p => p.hue || 0);
+                        stdDev = {
+                            hue: calcCircularStd(meanH, hueValues),
+                            saturation: Math.sqrt(clusterPoints.reduce((sum, p) => sum + Math.pow(p.saturation - meanS, 2), 0) / clusterPoints.length) || 5,
+                            value: Math.sqrt(clusterPoints.reduce((sum, p) => sum + Math.pow(p.value - meanV, 2), 0) / clusterPoints.length) || 5
+                        };
+                    }
+                    ranges.push({ stdDev, count: clusterPoints.length });
+                } else {
+                    ranges.push({ stdDev: isRgb ? {r:5, g:5, b:5} : {hue:5, saturation:5, value:5}, count: 0 });
+                }
+            }
+
+            return { assignments, centers, ranges, isRgb };
+        }
+
+        let lastColorSpace = null;
+
+        function updateAxisOptions(colorSpace, isColorSpaceChange = false) {
+            const xAxis = document.getElementById('scatterXAxis');
+            const yAxis = document.getElementById('scatterYAxis');
+            const zAxis = document.getElementById('scatterZAxis');
+
+            const options = colorSpace === 'hsv'
+                ? [
+                    { value: 'hue', label: 'Hue' },
+                    { value: 'saturation', label: 'Saturation' },
+                    { value: 'value', label: 'Value' }
+                ]
+                : [
+                    { value: 'r', label: 'Red' },
+                    { value: 'g', label: 'Green' },
+                    { value: 'b', label: 'Blue' }
+                ];
+            if (isColorSpaceChange || lastColorSpace !== colorSpace) {
+                [xAxis, yAxis, zAxis].forEach(axis => {
+                    axis.innerHTML = options.map(opt =>
+                        `<option value="${opt.value}">${opt.label}</option>`
+                    ).join('');
+                });
+                lastColorSpace = colorSpace;
+                xAxis.value = colorSpace === 'hsv' ? 'hue' : 'r';
+                yAxis.value = colorSpace === 'hsv' ? 'saturation' : 'g';
+                zAxis.value = colorSpace === 'hsv' ? 'value' : 'b';
+            }
+        }
+
+        function currentXAxis(colorSpace) {
+            return colorSpace === 'hsv' ? 'hue' : 'r';
+        }
+
+        function currentYAxis(colorSpace) {
+            return colorSpace === 'hsv' ? 'saturation' : 'g';
+        }
+
+        function currentZAxis(colorSpace) {
+            return colorSpace === 'hsv' ? 'value' : 'b';
+        }
+
+        function getAxisLabel(axis) {
+            switch (axis) {
+                case 'hue': return 'Hue';
+                case 'saturation': return 'Saturation';
+                case 'value': return 'Value';
+                case 'r': return 'Red';
+                case 'g': return 'Green';
+                case 'b': return 'Blue';
+                default: return axis;
+            }
+        }
+
+        function updateScatterPlot() {
+            const container = d3.select('#scatterContainer');
+            container.html('');
+            const scatterCategory = document.getElementById('scatterCategoryFilter').value;
+            const scatterMaleLabel = document.getElementById('scatterMaleLabel');
+            const scatterFemaleLabel = document.getElementById('scatterFemaleLabel');
+            if (scatterMaleLabel && scatterFemaleLabel) {
+                scatterMaleLabel.textContent = getLabelText('male', scatterCategory);
+                scatterFemaleLabel.textContent = getLabelText('female', scatterCategory);
+            }
+
+            const colorSpace = document.getElementById('colorSpace').value;
+            const scatterModeEl = document.getElementById('scatterMode');
+            const scatterMode = scatterModeEl.checked ? '3d' : '2d';
+            const isColorSpaceChange = window._lastColorSpace !== colorSpace && window._lastColorSpace !== undefined;
+            window._lastColorSpace = colorSpace;
+            const axisSelectorsContainer = document.getElementById('axisSelectorsContainer');
+            const axisZGroup = document.getElementById('axisZGroup');
+
+            if (scatterMode === '2d') {
+                axisSelectorsContainer.style.display = 'flex';
+                requestAnimationFrame(() => {
+                    axisSelectorsContainer.style.opacity = '1';
+                });
+            } else {
+                axisSelectorsContainer.style.display = 'none';
+                axisSelectorsContainer.style.opacity = '0';
+            }
+            axisZGroup.style.display = 'none';
+            updateAxisOptions(colorSpace, isColorSpaceChange);
+            const xAxisEl = document.getElementById('scatterXAxis');
+            const yAxisEl = document.getElementById('scatterYAxis');
+            const zAxisEl = document.getElementById('scatterZAxis');
+            let xAxisName = xAxisEl.value || (colorSpace === 'hsv' ? 'hue' : 'r');
+            let yAxisName = yAxisEl.value || (colorSpace === 'hsv' ? 'saturation' : 'g');
+            let zAxisName = zAxisEl.value || (colorSpace === 'hsv' ? 'value' : 'b');
+
+            const width = Math.min(1000, window.innerWidth - 100);
+            const height = 650;
+            const margin = { top: 30, right: 30, bottom: 50, left: 60 };
+            const innerWidth = width - margin.left - margin.right;
+            const innerHeight = height - margin.top - margin.bottom;
+
+            const basePointSize = parseInt(document.getElementById('scatterPointSize').value);
+            const showMale = document.getElementById('scatterShowMale')?.checked ?? true;
+            const showFemale = document.getElementById('scatterShowFemale')?.checked ?? true;
+            const hasCategory = colorData.length > 0 && colorData[0].hasOwnProperty('category');
+            const tGroupFilters = document.getElementById('tGroupFilters');
+            const modelFilters = document.getElementById('modelFilters');
+            if (tGroupFilters) {
+                tGroupFilters.style.display = hasCategory ? 'flex' : 'none';
+            }
+            if (modelFilters) {
+                modelFilters.style.display = hasCategory ? 'flex' : 'none';
+            }
+
+            let scatterData = colorData;
+            if (hasCategory) {
+                scatterData = colorData.filter(d => d.category === scatterCategory).map(d => {
+                    if (scatterCategory === 'C1') {
+                        return { ...d };
+                    } else if (scatterCategory === 'C2') {
+                        return {
+                            image_id: d.image_id,
+                            male_hsv: d.left_hsv || [0, 0, 0],
+                            female_hsv: d.right_hsv || [0, 0, 0],
+                            s_group: d.s_group,
+                            model: d.model
+                        };
+                    } else if (scatterCategory === 'C3') {
+                        return {
+                            image_id: d.image_id,
+                            male_hsv: d.profit_hsv || [0, 0, 0],
+                            female_hsv: d.loss_hsv || [0, 0, 0],
+                            s_group: d.s_group,
+                            model: d.model
+                        };
+                    }
+                    return d;
+                });
+            }
+            const checkedTGroups = Array.from(document.querySelectorAll('.t-group-checkbox:checked')).map(cb => cb.value);
+            scatterData = scatterData.filter(d => checkedTGroups.includes(d.s_group));
+            const checkedModels = Array.from(document.querySelectorAll('.model-checkbox:checked')).map(cb => cb.value);
+            scatterData = scatterData.filter(d => checkedModels.some(m => d.model.startsWith(m)));
+            
+            // 更新统计
+            const statsDiv = document.getElementById('scatterStats');
+            const statsText = document.getElementById('statsText');
+            if (statsDiv && statsText) {
+                statsDiv.style.display = hasCategory ? 'flex' : 'none';
+                const modelCounts = {};
+                scatterData.forEach(d => {
+                    const model = d.model;
+                    if (!modelCounts[model]) modelCounts[model] = new Set();
+                    if (d.male_hsv) modelCounts[model].add(d.male_hsv.join(','));
+                    if (d.female_hsv) modelCounts[model].add(d.female_hsv.join(','));
+                });
+                const statsHtml = Object.entries(modelCounts).map(([m, s]) =>
+                    `${m}: <b>${s.size}</b>`
+                ).join(' | ');
+                statsText.innerHTML = statsHtml;
+            }
+
+            const malePoints = [];
+            const femalePoints = [];
+
+            if (colorSpace === 'hsv') {
+                // HSV模式：直接使用存储的HSV值
+                scatterData.forEach(item => {
+                    if (showMale) {
+                        const [h, s, v] = item.male_hsv || [0, 0, 0];
+                        const rad = h * Math.PI / 180;
+                        malePoints.push({
+                            hue: h, saturation: s, value: v,
+                            x: s * Math.cos(rad),
+                            y: s * Math.sin(rad),
+                            z: v,
+                            color: `rgb(${hsvToRgb(h, s, v).join(',')})`,
+                            id: item.image_id
+                        });
+                    }
+
+                    if (showFemale) {
+                        const [fh, fs, fv] = item.female_hsv || [0, 0, 0];
+                        const frad = fh * Math.PI / 180;
+                        femalePoints.push({
+                            hue: fh, saturation: fs, value: fv,
+                            x: fs * Math.cos(frad),
+                            y: fs * Math.sin(frad),
+                            z: fv,
+                            color: `rgb(${hsvToRgb(fh, fs, fv).join(',')})`,
+                            id: item.image_id
+                        });
+                    }
+                });
+            } else {
+                // RGB模式：将HSV转换为RGB
+                scatterData.forEach(item => {
+                    if (showMale) {
+                        const [h, s, v] = item.male_hsv || [0, 0, 0];
+                        const rgb = hsvToRgb(h, s, v);
+                        malePoints.push({
+                            r: rgb[0], g: rgb[1], b: rgb[2],
+                            x: rgb[0], y: rgb[1], z: rgb[2],
+                            color: `rgb(${rgb.join(',')})`,
+                            id: item.image_id
+                        });
+                    }
+                    if (showFemale) {
+                        const [fh, fs, fv] = item.female_hsv || [0, 0, 0];
+                        const rgb = hsvToRgb(fh, fs, fv);
+                        femalePoints.push({
+                            r: rgb[0], g: rgb[1], b: rgb[2],
+                            x: rgb[0], y: rgb[1], z: rgb[2],
+                            color: `rgb(${rgb.join(',')})`,
+                            id: item.image_id
+                        });
+                    }
+                });
+            }
+            const showClusters = document.getElementById('showClusters')?.checked ?? false;
+            let maleClusters = null;
+            let femaleClusters = null;
+
+            if (showClusters) {
+                if (malePoints.length >= 1) {
+                    maleClusters = kMeansClustering(malePoints, 1);
+                    malePoints.forEach((p, i) => {
+                        p.cluster = 0;
+                    });
+                }
+                if (femalePoints.length >= 1) {
+                    femaleClusters = kMeansClustering(femalePoints, 1);
+                    femalePoints.forEach((p, i) => {
+                        p.cluster = 0;
+                    });
+                }
+            }
+            let xMin, xMax, yMin, yMax, zMin, zMax;
+
+            if (colorSpace === 'hsv') {
+                xMin = -100; xMax = 100;
+                yMin = -100; yMax = 100;
+                zMin = 0; zMax = 100;
+            } else {
+                const allX = [...malePoints.map(p => p.x), ...femalePoints.map(p => p.x)];
+                const allY = [...malePoints.map(p => p.y), ...femalePoints.map(p => p.y)];
+                const allZ = [...malePoints.map(p => p.z), ...femalePoints.map(p => p.z)];
+                xMin = 0; xMax = 255;
+                yMin = 0; yMax = 255;
+                zMin = 0; zMax = 255;
+            }
+
+            const xPadding = 10;
+            const yPadding = 10;
+            const zPadding = 5;
+            const svg = container.append('svg')
+                .attr('width', width)
+                .attr('height', height)
+                .attr('cursor', scatterMode === '3d' ? 'grab' : 'default');
+
+            const g = svg.append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+            
+            const defaultAngleX = -0.5;
+            const defaultAngleY = 0.8;
+            let angleX = defaultAngleX;
+            let angleY = defaultAngleY;
+            let isDragging = false;
+            let lastMouseX = 0;
+            let lastMouseY = 0;
+            const xScale = d3.scaleLinear()
+                .domain([xMin - xPadding, xMax + xPadding])
+                .range([0, innerWidth]);
+
+            const yScale = d3.scaleLinear()
+                .domain([yMin - yPadding, yMax + yPadding])
+                .range([innerHeight, 0]);
+            const cx = innerWidth / 2;
+            const cy = innerHeight / 2;
+            const scale = Math.min(innerWidth, innerHeight) * 0.35;
+            window._scatterAngleX = angleX;
+            window._scatterAngleY = angleY;
+            window._scatterDrawAxes = drawAxes;
+            window._scatterRenderPoints = renderPoints;
+            window._scatterCx = cx;
+            window._scatterCy = cy;
+            window._scatterScale = scale;
+            window._scatterG = g;
+            window._scatterInnerWidth = innerWidth;
+            window._scatterInnerHeight = innerHeight;
+            window._scatterColorSpace = colorSpace;
+            window._scatterScatterMode = scatterMode;
+            window._scatterXAxisName = xAxisName;
+            window._scatterYAxisName = yAxisName;
+            window._scatterZAxisName = zAxisName;
+            window._scatterBasePointSize = basePointSize;
+            function project3D(x, y, z) {
+                const nx = (x - (xMin + xMax) / 2) / ((xMax - xMin) / 2);
+                const ny = (y - (yMin + yMax) / 2) / ((yMax - yMin) / 2);
+                const nz = (z - (zMin + zMax) / 2) / ((zMax - zMin) / 2);
+                const cosX = Math.cos(angleX), sinX = Math.sin(angleX);
+                const y1 = ny * cosX - nz * sinX;
+                const z1 = ny * sinX + nz * cosX;
+                const cosY = Math.cos(angleY), sinY = Math.sin(angleY);
+                const x2 = nx * cosY - z1 * sinY;
+                const z2 = nx * sinY + z1 * cosY;
+
+                return { x: x2, y: y1, z: z2 };
+            }
+            function drawAxes() {
+                g.selectAll('.axis-3d').remove();
+
+                if (colorSpace === 'hsv') {
+                    [25, 50, 75, 100].forEach(s => {
+                        const points = [];
+                        for (let h = 0; h <= 360; h += 15) {
+                            const rad = h * Math.PI / 180;
+                            const px = s * Math.cos(rad);
+                            const py = s * Math.sin(rad);
+                            const proj = project3D(px, py, 0);
+                            points.push(`${cx + proj.x * scale},${cy - proj.y * scale}`);
+                        }
+                        g.append('polygon')
+                            .attr('class', 'axis-3d')
+                            .attr('points', points.join(' '))
+                            .attr('fill', 'none')
+                            .attr('stroke', '#fff')
+                            .attr('stroke-width', 2)
+                            .attr('stroke-dasharray', '3,3')
+                            .attr('opacity', 0.8);
+                    });
+                    [25, 50, 75, 100].forEach(v => {
+                        const points = [];
+                        for (let h = 0; h <= 360; h += 15) {
+                            const rad = h * Math.PI / 180;
+                            const px = 100 * Math.cos(rad);
+                            const py = 100 * Math.sin(rad);
+                            const proj = project3D(px, py, v);
+                            points.push(`${cx + proj.x * scale},${cy - proj.y * scale}`);
+                        }
+                        g.append('polygon')
+                            .attr('class', 'axis-3d')
+                            .attr('points', points.join(' '))
+                            .attr('fill', 'none')
+                            .attr('stroke', '#fff')
+                            .attr('stroke-width', 2)
+                            .attr('stroke-dasharray', '3,3')
+                            .attr('opacity', 0.6);
+                    });
+                    const vBottom = project3D(0, 0, 0);
+                    const vTop = project3D(0, 0, 100);
+                    g.append('line')
+                        .attr('class', 'axis-3d')
+                        .attr('x1', cx + vBottom.x * scale)
+                        .attr('y1', cy - vBottom.y * scale)
+                        .attr('x2', cx + vTop.x * scale)
+                        .attr('y2', cy - vTop.y * scale)
+                        .attr('stroke', '#fff')
+                        .attr('stroke-width', 2);
+                    const vLabelPos = project3D(0, 0, 110);
+                    g.append('text')
+                        .attr('class', 'axis-3d')
+                        .attr('x', cx + vLabelPos.x * scale)
+                        .attr('y', cy - vLabelPos.y * scale)
+                        .attr('fill', '#fff')
+                        .attr('font-size', '14px')
+                        .attr('font-weight', 'bold')
+                        .attr('text-anchor', 'middle')
+                        .text('Value');
+                    for (let h = 0; h < 360; h += 45) {
+                        const rad = h * Math.PI / 180;
+                        const px = 110 * Math.cos(rad);
+                        const py = 110 * Math.sin(rad);
+                        const proj = project3D(px, py, 0);
+                        g.append('text')
+                            .attr('class', 'axis-3d')
+                            .attr('x', cx + proj.x * scale)
+                            .attr('y', cy - proj.y * scale + 4)
+                            .attr('fill', '#fff')
+                            .attr('font-size', '10px')
+                            .attr('text-anchor', 'middle')
+                            .text(h + '°');
+                    }
+
+                } else {
+                    const cubeCorners = [
+                        [0, 0, 0], [255, 0, 0], [255, 255, 0], [0, 255, 0],
+                        [0, 0, 255], [255, 0, 255], [255, 255, 255], [0, 255, 255]
+                    ];
+                    const edges = [
+                        [0,1], [1,2], [2,3], [3,0],
+                        [4,5], [5,6], [6,7], [7,4],
+                        [0,4], [1,5], [2,6], [3,7]
+                    ];
+
+                    edges.forEach(([a, b]) => {
+                        const p1 = project3D(...cubeCorners[a]);
+                        const p2 = project3D(...cubeCorners[b]);
+                        g.append('line')
+                            .attr('class', 'axis-3d')
+                            .attr('x1', cx + p1.x * scale)
+                            .attr('y1', cy - p1.y * scale)
+                            .attr('x2', cx + p2.x * scale)
+                            .attr('y2', cy - p2.y * scale)
+                            .attr('stroke', '#fff')
+                            .attr('stroke-width', 2)
+                            .attr('opacity', 0.3);
+                    });
+                    const rEnd = project3D(255, 0, 0);
+                    g.append('line')
+                        .attr('class', 'axis-3d')
+                        .attr('x1', cx)
+                        .attr('y1', cy)
+                        .attr('x2', cx + rEnd.x * scale)
+                        .attr('y2', cy - rEnd.y * scale)
+                        .attr('stroke', '#ff6b6b')
+                        .attr('stroke-width', 3);
+                    const rLabel = project3D(270, 0, 0);
+                    g.append('text')
+                        .attr('class', 'axis-3d')
+                        .attr('x', cx + rLabel.x * scale)
+                        .attr('y', cy - rLabel.y * scale)
+                        .attr('fill', '#ff6b6b')
+                        .attr('font-size', '14px')
+                        .attr('font-weight', 'bold')
+                        .text('R');
+                    const gEnd = project3D(0, 255, 0);
+                    g.append('line')
+                        .attr('class', 'axis-3d')
+                        .attr('x1', cx)
+                        .attr('y1', cy)
+                        .attr('x2', cx + gEnd.x * scale)
+                        .attr('y2', cy - gEnd.y * scale)
+                        .attr('stroke', '#51cf66')
+                        .attr('stroke-width', 3);
+                    const gLabel = project3D(0, 270, 0);
+                    g.append('text')
+                        .attr('class', 'axis-3d')
+                        .attr('x', cx + gLabel.x * scale)
+                        .attr('y', cy - gLabel.y * scale)
+                        .attr('fill', '#51cf66')
+                        .attr('font-size', '14px')
+                        .attr('font-weight', 'bold')
+                        .text('G');
+                    const bEnd = project3D(0, 0, 255);
+                    g.append('line')
+                        .attr('class', 'axis-3d')
+                        .attr('x1', cx)
+                        .attr('y1', cy)
+                        .attr('x2', cx + bEnd.x * scale)
+                        .attr('y2', cy - bEnd.y * scale)
+                        .attr('stroke', '#4dabf7')
+                        .attr('stroke-width', 3);
+                    const bLabel = project3D(0, 0, 270);
+                    g.append('text')
+                        .attr('class', 'axis-3d')
+                        .attr('x', cx + bLabel.x * scale)
+                        .attr('y', cy - bLabel.y * scale)
+                        .attr('fill', '#4dabf7')
+                        .attr('font-size', '14px')
+                        .attr('font-weight', 'bold')
+                        .text('B');
+                }
+            }
+            const allPoints3D = [];
+            malePoints.forEach(p => allPoints3D.push({ ...p, gender: 'male' }));
+            femalePoints.forEach(p => allPoints3D.push({ ...p, gender: 'female' }));
+
+            function renderPoints() {
+                allPoints3D.forEach(p => {
+                    const proj = project3D(p.x, p.y, p.z);
+                    p.depth = proj.z;
+                });
+                allPoints3D.sort((a, b) => a.depth - b.depth);
+                const getPointSize = () => basePointSize;
+                g.selectAll('.point').remove();
+                g.selectAll('.cluster-center').remove();
+                g.selectAll('.point')
+                    .data(allPoints3D)
+                    .enter()
+                    .append('circle')
+                    .attr('class', 'point')
+                    .attr('cx', d => {
+                        const proj = project3D(d.x, d.y, d.z);
+                        return cx + proj.x * scale;
+                    })
+                    .attr('cy', d => {
+                        const proj = project3D(d.x, d.y, d.z);
+                        return cy - proj.y * scale;
+                    })
+                    .attr('r', basePointSize)
+                    .attr('fill', d => d.color)
+                    .attr('opacity', 0.7)
+                    .on('mouseenter', function(e, d) {
+                        d3.select(this).attr('opacity', 1).attr('r', basePointSize + 3);
+                        const oppositeGender = d.gender === 'male' ? '.female-point' : '.male-point';
+                        g.selectAll('.point').filter(function() {
+                            return d3.select(this).classed('male-point') || d3.select(this).classed('female-point');
+                        }).attr('opacity', 0.1);
+                        showTooltip(e, getLabelText(d.gender, currentCategory), d.color, d.id);
+                    })
+                    .on('mouseleave', function() {
+                        d3.select(this).attr('opacity', 0.7).attr('r', basePointSize);
+                        g.selectAll('.point').attr('opacity', 0.7);
+                        hideTooltip();
+                    });
+                if (showClusters) {
+                    if (maleClusters && maleClusters.centers.length > 0) {
+                        const center = maleClusters.centers[0];
+                        const isRgbCluster = maleClusters.isRgb;
+                        let colorStr, x, y, z, tooltipText;
+
+                        if (isRgbCluster) {
+                            colorStr = `rgb(${Math.round(center.r)},${Math.round(center.g)},${Math.round(center.b)})`;
+                            x = center.r;
+                            y = center.g;
+                            z = center.b;
+                            tooltipText = `RGB: R=${Math.round(center.r)}, G=${Math.round(center.g)}, B=${Math.round(center.b)}`;
+                        } else {
+                            // HSV 空间：直接用 HSV 平均值计算颜色
+                            const hNorm = center.hue / 360;
+                            const sNorm = center.saturation / 100;
+                            const vNorm = center.value / 100;
+                            // 用 HSV 直接算 RGB
+                            const i = Math.floor(hNorm * 6);
+                            const f = hNorm * 6 - i;
+                            const p = vNorm * (1 - sNorm);
+                            const q = vNorm * (1 - f * sNorm);
+                            const t = vNorm * (1 - (1 - f) * sNorm);
+                            let r, g, b;
+                            switch (i % 6) {
+                                case 0: r = vNorm; g = t; b = p; break;
+                                case 1: r = q; g = vNorm; b = p; break;
+                                case 2: r = p; g = vNorm; b = t; break;
+                                case 3: r = p; g = q; b = vNorm; break;
+                                case 4: r = t; g = p; b = vNorm; break;
+                                case 5: r = vNorm; g = p; b = q; break;
+                            }
+                            colorStr = `rgb(${Math.round(r*255)},${Math.round(g*255)},${Math.round(b*255)})`;
+                            const rad = center.hue * Math.PI / 180;
+                            x = center.saturation * Math.cos(rad);
+                            y = center.saturation * Math.sin(rad);
+                            z = center.value;
+                            tooltipText = `HSV: H=${Math.round(center.hue)}°, S=${Math.round(center.saturation)}%, V=${Math.round(center.value)}%`;
+                        }
+                        const proj = project3D(x, y, z);
+                        const fillColor = colorStr;
+
+                        g.append('circle')
+                            .attr('cx', cx + proj.x * scale)
+                            .attr('cy', cy - proj.y * scale)
+                            .attr('r', 12)
+                            .attr('fill', fillColor)
+                            .attr('stroke', '#fff')
+                            .attr('stroke-width', 3)
+                            .attr('class', 'cluster-center')
+                            .on('mouseenter', function(e) {
+                                const label = getLabelText('male', scatterCategory);
+                                showTooltip(e, `${label} Cluster Center`, tooltipText, '');
+                            })
+                            .on('mouseleave', function() {
+                                hideTooltip();
+                            });
+                    }
+                    if (femaleClusters && femaleClusters.centers.length > 0) {
+                        const center = femaleClusters.centers[0];
+                        const isRgbCluster = femaleClusters.isRgb;
+                        let colorStr, x, y, z, tooltipText;
+
+                        if (isRgbCluster) {
+                            colorStr = `rgb(${Math.round(center.r)},${Math.round(center.g)},${Math.round(center.b)})`;
+                            x = center.r;
+                            y = center.g;
+                            z = center.b;
+                            tooltipText = `RGB: R=${Math.round(center.r)}, G=${Math.round(center.g)}, B=${Math.round(center.b)}`;
+                        } else {
+                            // HSV 空间：直接用 HSV 平均值计算颜色
+                            const hNorm = center.hue / 360;
+                            const sNorm = center.saturation / 100;
+                            const vNorm = center.value / 100;
+                            // 用 HSV 直接算 RGB
+                            const i = Math.floor(hNorm * 6);
+                            const f = hNorm * 6 - i;
+                            const p = vNorm * (1 - sNorm);
+                            const q = vNorm * (1 - f * sNorm);
+                            const t = vNorm * (1 - (1 - f) * sNorm);
+                            let r, g, b;
+                            switch (i % 6) {
+                                case 0: r = vNorm; g = t; b = p; break;
+                                case 1: r = q; g = vNorm; b = p; break;
+                                case 2: r = p; g = vNorm; b = t; break;
+                                case 3: r = p; g = q; b = vNorm; break;
+                                case 4: r = t; g = p; b = vNorm; break;
+                                case 5: r = vNorm; g = p; b = q; break;
+                            }
+                            colorStr = `rgb(${Math.round(r*255)},${Math.round(g*255)},${Math.round(b*255)})`;
+                            const rad = center.hue * Math.PI / 180;
+                            x = center.saturation * Math.cos(rad);
+                            y = center.saturation * Math.sin(rad);
+                            z = center.value;
+                            tooltipText = `HSV: H=${Math.round(center.hue)}°, S=${Math.round(center.saturation)}%, V=${Math.round(center.value)}%`;
+                        }
+                        const proj = project3D(x, y, z);
+
+                        g.append('circle')
+                            .attr('cx', cx + proj.x * scale)
+                            .attr('cy', cy - proj.y * scale)
+                            .attr('r', 12)
+                            .attr('fill', colorStr)
+                            .attr('stroke', '#fff')
+                            .attr('stroke-width', 3)
+                            .attr('class', 'cluster-center')
+                            .on('mouseenter', function(e) {
+                                const label = getLabelText('female', scatterCategory);
+                                showTooltip(e, `${label} Cluster Center`, tooltipText, '');
+                            })
+                            .on('mouseleave', function() {
+                                hideTooltip();
+                            });
+                    }
+                }
+            }
+            if (scatterMode === '2d') {
+                const getXValue = (d) => {
+                    if (colorSpace === 'hsv') {
+                        switch(xAxisName) {
+                            case 'hue': return d.hue;
+                            case 'saturation': return d.saturation;
+                            case 'value': return d.value;
+                        }
+                    } else {
+                        switch(xAxisName) {
+                            case 'r': return d.r;
+                            case 'g': return d.g;
+                            case 'b': return d.b;
+                        }
+                    }
+                    return d.x;
+                };
+                const getYValue = (d) => {
+                    if (colorSpace === 'hsv') {
+                        switch(yAxisName) {
+                            case 'hue': return d.hue;
+                            case 'saturation': return d.saturation;
+                            case 'value': return d.value;
+                        }
+                    } else {
+                        switch(yAxisName) {
+                            case 'r': return d.r;
+                            case 'g': return d.g;
+                            case 'b': return d.b;
+                        }
+                    }
+                    return d.y;
+                };
+                const xVals = allPoints3D.map(getXValue);
+                const yVals = allPoints3D.map(getYValue);
+                const xMin2d = Math.min(...xVals), xMax2d = Math.max(...xVals);
+                const yMin2d = Math.min(...yVals), yMax2d = Math.max(...yVals);
+
+                const xScale2d = d3.scaleLinear()
+                    .domain([xMin2d - (xMax2d - xMin2d) * 0.05, xMax2d + (xMax2d - xMin2d) * 0.05])
+                    .range([0, innerWidth]);
+                const yScale2d = d3.scaleLinear()
+                    .domain([yMin2d - (yMax2d - yMin2d) * 0.05, yMax2d + (yMax2d - yMin2d) * 0.05])
+                    .range([innerHeight, 0]);
+
+                const xAxisD3 = d3.axisBottom(xScale2d);
+                const yAxisD3 = d3.axisLeft(yScale2d);
+
+                g.append('g')
+                    .attr('transform', `translate(0,${innerHeight})`)
+                    .call(xAxisD3)
+                    .attr('color', '#fff');
+
+                g.append('g')
+                    .call(yAxisD3)
+                    .attr('color', '#fff');
+
+                g.append('text')
+                    .attr('x', innerWidth / 2)
+                    .attr('y', innerHeight + 40)
+                    .attr('text-anchor', 'middle')
+                    .attr('fill', '#fff')
+                    .attr('font-size', '14px')
+                    .text(getAxisLabel(xAxisName));
+
+                g.append('text')
+                    .attr('transform', 'rotate(-90)')
+                    .attr('x', -innerHeight / 2)
+                    .attr('y', -45)
+                    .attr('text-anchor', 'middle')
+                    .attr('fill', '#fff')
+                    .attr('font-size', '14px')
+                    .text(getAxisLabel(yAxisName));
+                g.selectAll('.point')
+                    .data(allPoints3D)
+                    .enter()
+                    .append('circle')
+                    .attr('class', 'point')
+                    .attr('cx', d => xScale2d(getXValue(d)))
+                    .attr('cy', d => yScale2d(getYValue(d)))
+                    .attr('r', basePointSize)
+                    .attr('fill', d => d.color)
+                    .attr('opacity', 0.7)
+                    .on('mouseenter', function(e, d) {
+                        d3.select(this).attr('opacity', 1).attr('r', basePointSize + 3);
+                        g.selectAll('.point')
+                            .filter(p => p.gender !== d.gender)
+                            .attr('opacity', 0.1);
+                        showTooltip(e, getLabelText(d.gender, currentCategory), d.color, d.id);
+                    })
+                    .on('mouseleave', function() {
+                        d3.select(this).attr('opacity', 0.7).attr('r', basePointSize);
+                        g.selectAll('.point').attr('opacity', 0.7);
+                        hideTooltip();
+                    });
+                if (showClusters) {
+                    const xAxisEl = document.getElementById('scatterXAxis');
+                    const yAxisEl = document.getElementById('scatterYAxis');
+                    const xAxis = xAxisEl?.value || (colorSpace === 'hsv' ? 'hue' : 'r');
+                    const yAxis = yAxisEl?.value || (colorSpace === 'hsv' ? 'saturation' : 'g');
+                    if (maleClusters && maleClusters.centers.length > 0) {
+                        const center = maleClusters.centers[0];
+                        const stdDev = maleClusters.ranges[0]?.stdDev;
+                        let colorStr, cxVal, cyVal, xStd, yStd, tooltipText;
+                        const isRgbCluster = maleClusters.isRgb;
+                        const colorArray = isRgbCluster
+                            ? [center.r || 0, center.g || 0, center.b || 0]
+                            : [center.hue || 0, center.saturation || 0, center.value || 0];
+                        cxVal = getAxisValueFromArray(colorArray, xAxis);
+                        cyVal = getAxisValueFromArray(colorArray, yAxis);
+                        xStd = stdDev?.[xAxis] || 10;
+                        yStd = stdDev?.[yAxis] || 10;
+
+                        if (isRgbCluster) {
+                            colorStr = `rgb(${Math.round(center.r)},${Math.round(center.g)},${Math.round(center.b)})`;
+                            tooltipText = `RGB: R=${Math.round(center.r)}, G=${Math.round(center.g)}, B=${Math.round(center.b)}`;
+                        } else {
+                            const rgb = hsvToRgb(center.hue, center.saturation, center.value);
+                            colorStr = `rgb(${rgb.join(',')})`;
+                            tooltipText = `HSV: H=${Math.round(center.hue)}°, S=${Math.round(center.saturation)}%, V=${Math.round(center.value)}%`;
+                        }
+                        g.append('ellipse')
+                            .attr('cx', xScale2d(cxVal))
+                            .attr('cy', yScale2d(cyVal))
+                            .attr('rx', xStd * 2)
+                            .attr('ry', yStd * 2)
+                            .attr('fill', colorStr)
+                            .attr('opacity', 0.15)
+                            .attr('stroke', colorStr)
+                            .attr('stroke-width', 1)
+                            .attr('stroke-dasharray', '4,4');
+                        g.append('circle')
+                            .attr('cx', xScale2d(cxVal))
+                            .attr('cy', yScale2d(cyVal))
+                            .attr('r', 10)
+                            .attr('fill', colorStr)
+                            .attr('stroke', '#fff')
+                            .attr('stroke-width', 2)
+                            .on('mouseenter', function(e) {
+                                const label = getLabelText('male', scatterCategory);
+                                showTooltip(e, `${label} Cluster Center`, tooltipText, '');
+                            })
+                            .on('mouseleave', function() {
+                                hideTooltip();
+                            });
+                    }
+                    if (femaleClusters && femaleClusters.centers.length > 0) {
+                        const center = femaleClusters.centers[0];
+                        const stdDev = femaleClusters.ranges[0]?.stdDev;
+                        let colorStr, cxVal, cyVal, xStd, yStd, tooltipText;
+                        const isRgbCluster = femaleClusters.isRgb;
+                        const colorArray = isRgbCluster
+                            ? [center.r || 0, center.g || 0, center.b || 0]
+                            : [center.hue || 0, center.saturation || 0, center.value || 0];
+                        cxVal = getAxisValueFromArray(colorArray, xAxis);
+                        cyVal = getAxisValueFromArray(colorArray, yAxis);
+                        xStd = stdDev?.[xAxis] || 10;
+                        yStd = stdDev?.[yAxis] || 10;
+
+                        if (isRgbCluster) {
+                            colorStr = `rgb(${Math.round(center.r)},${Math.round(center.g)},${Math.round(center.b)})`;
+                            tooltipText = `RGB: R=${Math.round(center.r)}, G=${Math.round(center.g)}, B=${Math.round(center.b)}`;
+                        } else {
+                            const rgb = hsvToRgb(center.hue, center.saturation, center.value);
+                            colorStr = `rgb(${rgb.join(',')})`;
+                            tooltipText = `HSV: H=${Math.round(center.hue)}°, S=${Math.round(center.saturation)}%, V=${Math.round(center.value)}%`;
+                        }
+                        g.append('ellipse')
+                            .attr('cx', xScale2d(cxVal))
+                            .attr('cy', yScale2d(cyVal))
+                            .attr('rx', xStd * 2)
+                            .attr('ry', yStd * 2)
+                            .attr('fill', colorStr)
+                            .attr('opacity', 0.15)
+                            .attr('stroke', colorStr)
+                            .attr('stroke-width', 1)
+                            .attr('stroke-dasharray', '4,4');
+                        g.append('circle')
+                            .attr('cx', xScale2d(cxVal))
+                            .attr('cy', yScale2d(cyVal))
+                            .attr('r', 10)
+                            .attr('fill', colorStr)
+                            .attr('stroke', '#fff')
+                            .attr('stroke-width', 2)
+                            .on('mouseenter', function(e) {
+                                const label = getLabelText('female', scatterCategory);
+                                showTooltip(e, `${label} Cluster Center`, tooltipText, '');
+                            })
+                            .on('mouseleave', function() {
+                                hideTooltip();
+                            });
+                    }
+                }
+            } else {
+                drawAxes();
+                renderPoints();
+                g.append('text')
+                    .attr('x', innerWidth)
+                    .attr('y', 20)
+                    .attr('text-anchor', 'end')
+                    .attr('fill', '#666')
+                    .attr('font-size', '12px')
+                    .text('Drag to rotate');
+                const resetBtn = g.append('text')
+                    .attr('x', innerWidth)
+                    .attr('y', 36)
+                    .attr('text-anchor', 'end')
+                    .attr('fill', '#4a90d9')
+                    .attr('font-size', '12px')
+                    .attr('cursor', 'pointer')
+                    .attr('text-decoration', 'underline')
+                    .text('Reset View')
+                    .on('click', resetScatterView)
+                    .on('mouseover', function() { d3.select(this).attr('fill', '#6ba3e0'); })
+                    .on('mouseout', function() { d3.select(this).attr('fill', '#4a90d9'); });
+                
+                // Add drag-to-rotate for 3D mode
+                svg.on('mousedown', function(event) {
+                    isDragging = true;
+                    lastMouseX = event.clientX;
+                    lastMouseY = event.clientY;
+                    d3.select(this).attr('cursor', 'grabbing');
+                });
+
+                svg.on('mousemove', function(event) {
+                    if (!isDragging) return;
+
+                    const dx = event.clientX - lastMouseX;
+                    const dy = event.clientY - lastMouseY;
+
+                    angleY += dx * 0.01;
+                    angleX += dy * 0.01;
+                    window._scatterAngleX = angleX;
+                    window._scatterAngleY = angleY;
+
+                    lastMouseX = event.clientX;
+                    lastMouseY = event.clientY;
+
+                    drawAxes();
+                    renderPoints();
+                });
+
+                svg.on('mouseup', function() {
+                    isDragging = false;
+                    d3.select(this).attr('cursor', 'grab');
+                });
+
+                svg.on('mouseleave', function() {
+                    isDragging = false;
+                    d3.select(this).attr('cursor', 'grab');
+                });
+            }
+        }
+        function resetScatterView() {
+            updateScatterPlot();
+        }
+        loadData();
+    </script>
+</body>
+</html>
